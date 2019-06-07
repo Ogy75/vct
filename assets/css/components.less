@@ -1,0 +1,159 @@
+
+@mainTransition: all .12s linear;
+@basecolorDarkest:#42423c;
+@basetextColor:#42423c;
+@basecolorLighter:#696964;
+@basecolorLightest:#7c7c78;
+@highlightColor:#ed6b61;
+
+//Vacation status element
+.vacation-status-primary{
+    .vct-days__remaining{
+        background: lighten(@highlightColor, 5%);
+        height: 500px;
+        .vacation-status-no{
+            text-align: center;
+            font-size: 128px;
+            line-height: 128px;
+            color:white;
+            font-weight: 700;
+        }
+        .vacation-status-no-label{
+            text-align: center;
+            font-size: 14px;
+            color:white;
+            font-weight: normal;
+        }
+    }
+}
+.vacation-status-secondary{
+    text-align: center;
+    .vacation-status-no{
+        font-size:42px;
+        line-height: 42px;
+        font-weight: 700;
+        color:white;
+    }
+    @media(max-width:992px){
+        .vacation-status-no{
+            font-size:28px;
+            line-height: 28px;
+        }
+        .vacation-status-no-label{
+            font-size:12px;
+        }
+    }
+    .vacation-status-no-label{
+        font-size: 12px;
+        color:white;
+    }
+    .vct-days__unused{
+        background:@basecolorDarkest;
+    }
+    .vct-days__new{
+        background:@basecolorLighter;
+    }
+    .vct-days__total{
+        background:@basecolorLightest;
+    }
+    .vct-days__used{
+        background: darken(@highlightColor, 10%);
+    }
+}
+.vct-element-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin:5px 0;
+    text-transform: uppercase; 
+    letter-spacing: 1px;   
+}
+
+//Vacation log element
+.vacation-log-element{
+    overflow: auto;
+    border-top:1px solid lighten(@basetextColor, 60%);
+    border-bottom: 1px solid lighten(@basetextColor, 60%);
+table.vct-vacation-log{
+    tr:nth-child(even){
+        background-color: lighten(@basecolorLightest, 45%);
+    }
+    td{
+        font-size: 14px;
+        border-bottom:1px solid lighten(@basetextColor, 60%);
+        padding: 10px;
+        &:first-child{
+            text-align: left;
+            &:first-child:before{
+                content:url(/assets/images/ico-cal.svg);
+                float: left;
+                width:24px;
+                margin-right:15px;
+            }
+        }
+        &:last-child{
+            text-align: right;
+        }
+    }
+}
+}
+
+//Team time lists
+.vct-team-member-name{
+    font-size: 18px;
+    font-weight: 700;
+}
+.vct-team-data-bar{
+    border-top:1px dashed @basecolorLightest;
+    border-bottom:1px dashed @basecolorLightest;
+}
+.vct-team-location{
+    height: 31px;
+    background: @basecolorDarkest;
+    p{
+        color: white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 31px;
+        margin: 0;
+        font-size: 12px;
+    }
+}
+.vct-team-member-block{
+    &:nth-child(odd){
+        background:#E8E8E8;
+    }
+}
+
+//Total toggle
+.vct-total-toggle{
+    position: fixed;
+        bottom:0;
+        right:0;
+        z-index: 100;
+        .vct-total-toggle-wrapper{
+            display: none;
+        }
+    .vct-total-toggle-card{
+        height: 24px;
+        line-height: 24px;
+        background: @highlightColor;
+        position: absolute;
+        top:0px;
+        left:50%;
+        transform: translate(-50%);
+        margin-top:-24px;
+        z-index: 101;
+        a{
+            padding:10px;
+            text-decoration: none;
+            color:white;
+        }
+    }
+    .vct-totals-total{
+        p{
+            font-weight: 700;
+            color: @highlightColor;
+        }
+    }
+}

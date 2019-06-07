@@ -1,0 +1,136 @@
+.vacation-status-primary .vct-days__remaining {
+  background: #f08078;
+  height: 500px;
+}
+.vacation-status-primary .vct-days__remaining .vacation-status-no {
+  text-align: center;
+  font-size: 128px;
+  line-height: 128px;
+  color: white;
+  font-weight: 700;
+}
+.vacation-status-primary .vct-days__remaining .vacation-status-no-label {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  font-weight: normal;
+}
+.vacation-status-secondary {
+  text-align: center;
+}
+.vacation-status-secondary .vacation-status-no {
+  font-size: 42px;
+  line-height: 42px;
+  font-weight: 700;
+  color: white;
+}
+@media (max-width: 992px) {
+  .vacation-status-secondary .vacation-status-no {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .vacation-status-secondary .vacation-status-no-label {
+    font-size: 12px;
+  }
+}
+.vacation-status-secondary .vacation-status-no-label {
+  font-size: 12px;
+  color: white;
+}
+.vacation-status-secondary .vct-days__unused {
+  background: #42423c;
+}
+.vacation-status-secondary .vct-days__new {
+  background: #696964;
+}
+.vacation-status-secondary .vct-days__total {
+  background: #7c7c78;
+}
+.vacation-status-secondary .vct-days__used {
+  background: #e84033;
+}
+.vct-element-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.vacation-log-element {
+  overflow: auto;
+  border-top: 1px solid #dadad6;
+  border-bottom: 1px solid #dadad6;
+}
+.vacation-log-element table.vct-vacation-log tr:nth-child(even) {
+  background-color: #ededec;
+}
+.vacation-log-element table.vct-vacation-log td {
+  font-size: 14px;
+  border-bottom: 1px solid #dadad6;
+  padding: 10px;
+}
+.vacation-log-element table.vct-vacation-log td:first-child {
+  text-align: left;
+}
+.vacation-log-element table.vct-vacation-log td:first-child:first-child:before {
+  content: url(/assets/images/ico-cal.svg);
+  float: left;
+  width: 24px;
+  margin-right: 15px;
+}
+.vacation-log-element table.vct-vacation-log td:last-child {
+  text-align: right;
+}
+.vct-team-member-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+.vct-team-data-bar {
+  border-top: 1px dashed #7c7c78;
+  border-bottom: 1px dashed #7c7c78;
+}
+.vct-team-location {
+  height: 31px;
+  background: #42423c;
+}
+.vct-team-location p {
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 31px;
+  margin: 0;
+  font-size: 12px;
+}
+.vct-team-member-block:nth-child(odd) {
+  background: #E8E8E8;
+}
+.vct-total-toggle {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+.vct-total-toggle .vct-total-toggle-wrapper {
+  display: none;
+}
+.vct-total-toggle .vct-total-toggle-card {
+  height: 24px;
+  line-height: 24px;
+  background: #ed6b61;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: -24px;
+  z-index: 101;
+}
+.vct-total-toggle .vct-total-toggle-card a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+.vct-total-toggle .vct-totals-total p {
+  font-weight: 700;
+  color: #ed6b61;
+}
