@@ -26,6 +26,11 @@ body {
   background: #e84033;
   color: white;
 }
+.btn-highlight:disabled {
+  background: #7c7c78;
+  color: white;
+  cursor: not-allowed;
+}
 .vct-icon {
   color: #696964;
   transition: all 0.12s linear;
@@ -36,13 +41,13 @@ body {
 }
 label {
   display: block;
-  width: 100%;
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 0;
   margin-top: 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #919186;
 }
 textarea,
 input[type=text],
@@ -58,24 +63,24 @@ input[type=number] {
   border-radius: 2px;
   -webkit-transition: width 0.4s linear;
   transition: width 0.4s linear;
+  resize: none;
 }
 textarea:focus,
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=number]:focus {
-  border: 1px solid #ed6b61;
+  border: 1px solid #1E90FF;
+}
+textarea {
+  border: 1px solid #959592;
 }
 input[name=total] {
-  background: #42423c;
-  color: white;
-}
-.positive-value {
-  background: #006838;
-  color: white;
+  font-weight: 700;
 }
 .negative-value {
-  background: #be1e2d;
+  background: #be1e2d !important;
   color: white;
+  border-bottom: 1px solid white !important;
 }
 .nav-down {
   transition: all 0.2s linear;
@@ -83,6 +88,41 @@ input[name=total] {
 .nav-up {
   margin-top: -48px !important;
   transition: all 0.2s linear;
+}
+.tooltip .tooltip-inner {
+  text-align: left;
+  font-family: 'Noto Sans', sans-serif;
+}
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #42423c;
+  text-shadow: none;
+  opacity: .5;
+}
+.close:hover {
+  color: #ed6b61;
+}
+.text-highlight {
+  color: #ed6b61;
+}
+.vct-notification {
+  display: none;
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 14px;
+  line-height: 14px;
+  padding: 4px 10px;
+  background-color: #ed6b61;
+  color: white;
+  z-index: 10000;
+  border-radius: 4px;
+  max-width: 280px;
+  text-align: center;
 }
 * {
   box-sizing: border-box;
@@ -142,6 +182,11 @@ input[name=total] {
 .vct-top-nav .vct-user-menu .vct-user-profile-image img {
   width: 32px;
 }
+a.vct-back {
+  text-decoration: none;
+  font-weight: 400;
+  color: #42423c;
+}
 .vct-left-nav {
   position: fixed;
   background: #42423c;
@@ -176,7 +221,7 @@ ul.vct-nav-menu a {
   width: 100%;
   padding: 15px 30px;
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: 400;
   text-decoration: none;
@@ -209,13 +254,10 @@ ul.vct-nav-menu ul.vct-nav-level1 li a {
   background: #f08078;
   padding-left: 60px;
   text-transform: none;
-  font-size: 14px;
+  font-size: 13px;
 }
 ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
   background: #e84033;
-}
-.button-highlight {
-  background: #ed6b61;
 }
 .vct-left-nav-toggle {
   position: absolute;

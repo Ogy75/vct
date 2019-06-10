@@ -12,6 +12,337 @@
 </head>
 
 <body>
+    <!--notification pop-out-->
+    <div class="vct-notification shadow">Action Confirmation / Error</div>
+
+    <!--Vacation modal-->
+    <div class="modal fade" id="holidays" tabindex="-1" role="dialog" aria-labelledby="holidays" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h4 class="font-weight-bold m-0">Ime i Prezime</h4>
+                        <small>vacation</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <select>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                        <option selected>2019</option>
+                                    </select>
+                                    <p class="vct-element-title d-inline-block ml-2">Vacation status</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="vacation-status-primary col-7 pr-0">
+                                    <div
+                                        class="vct-days__remaining d-flex h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">21</div>
+                                            <div class="col-12 vacation-status-no-label">days remaining</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vacation-status-secondary col-5 pl-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div
+                                                class="vct-days__unused p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">2</div>
+                                                    <div class="col-12 vacation-status-no-label">2018. days remaining
+                                                        <small class="d-block">valid until 31.7.2019</small>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div
+                                                class="vct-days__new p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">21</div>
+                                                    <div class="col-12 vacation-status-no-label">2019. days remaining
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <div
+                                                class="vct-days__total p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">23</div>
+                                                    <div class="col-12 vacation-status-no-label">total days remaining
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <div
+                                                class="vct-days__used p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">2</div>
+                                                    <div class="col-12 vacation-status-no-label">days spent</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Vacation log</p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip"
+                                        data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 days used</td>
+                                        <td>01.01.2019 - 05.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sickness modal-->
+    <div class="modal fade" id="sickness" tabindex="-1" role="dialog" aria-labelledby="sickness" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h4 class="font-weight-bold m-0">Ime i Prezime</h4>
+                        <small>sickness</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block ml-2">Vacation status / <span>June
+                                            2019.</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="vacation-status-primary col-12">
+                                    <div
+                                        class="vct-days__remaining d-flex p-3 h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">7</div>
+                                            <div class="col-12 vacation-status-no-label">sickness days</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Sickness log / <span>June 2019.</span>
+                                    </p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip"
+                                        data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 days </td>
+                                        <td>01.01.2019 - 05.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--DaysOff modal-->
+    <div class="modal fade" id="daysOff" tabindex="-1" role="dialog" aria-labelledby="daysOff" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h4 class="font-weight-bold m-0">Ime i Prezime</h4>
+                        <small>Days off</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block ml-2">Vacation status / <span>June
+                                            2019.</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="vacation-status-primary col-12">
+                                    <div
+                                        class="vct-days__remaining d-flex p-3 h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">3</div>
+                                            <div class="col-12 vacation-status-no-label">days off</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--vacation log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Days off log / <span>June 2019.</span>
+                                    </p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip"
+                                        data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                        <td><textarea placeholder="description">Babi se pokvario daljinski</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                        <td><textarea
+                                                placeholder="description">Komsiji iznad se otopio zamrzivac</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                        <td><textarea placeholder="description">Tetka ceka lek</textarea></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--left nav-->
     <div class="vct-left-nav">
         <div class="vct-left-nav-wrapper">
@@ -24,16 +355,11 @@
             <ul class="vct-nav-menu">
                 <li><a href="javascript:void(0)"><i class="ti-shine mr-3"></i>Vacation</a></li>
                 <li><a href="javascript:void(0)"><i class="ti-calendar mr-3"></i>Calendar</a></li>
-                <li><a class="has-level1" href="javascript:void(0)"><i class="ti-timer mr-3"></i>Time report</a>
+                <li><a href="javascript:void(0)"><i class="ti-timer mr-3"></i>Time report</a></li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>2 levels</a>
                     <ul class="vct-nav-level1">
-                        <li><a href="#">Lorem</a></li>
-                        <li><a href="#">Ipsum Dolor</a></li>
-                    </ul>
-                </li>
-                <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>Else</a>
-                    <ul class="vct-nav-level1">
-                        <li><a href="#">Lorem</a></li>
-                        <li><a href="#">Ipsum Dolor</a></li>
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
                     </ul>
                 </li>
             </ul>
@@ -60,1025 +386,576 @@
     </div>
 
     <!--Panel Content-->
-    <div class="vct-content">
+    <div class="vct-content mb-5">
         <div class="container position-relative">
             <!--team time list element-->
             <div class="row">
+                <div class="col-12">
+                    <a href="#" class="vct-back"><i class="ti-angle-left mr-1 py-3"></i>back</a>
+                </div>
                 <div class="col-12 mt-3">
                     <div class="p-2 vct-team-data-bar align-items-center">
-                        <span class="h5">Swiss Basel</span>
-                        <span class="float-right">June 2019</span>
+                        <span class="h5 font-weight-bold">Swiss Basel</span>
+                        <span class="float-right text-highlight">June 2019</span>
                     </div>
                 </div>
             </div>
 
             <!--Team member entry 1-->
-            <div class="p-3 border-bottom vct-team-member-block">
+            <div class="p-2 vct-team-member-block">
                 <div class="row">
                     <div class="col-12 vct-team-member-name">
-                        <span>Vesna Kaplarević Babić</span>
-                        <small class="d-block float-sm-right">Senior Software Developer</small>
+                        <span>Ime I prezime clana tima</span>
+                        <small class="d-block">Pozicija</small>
                     </div>
-
                 </div>
                 <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">Belgrade</p>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-3 col-lg-2 align-self-end">
+                                <div class="d-flex align-items-center vct-team-location">
+                                    <p class="w-100 text-center">Belgrade</p>
+                                </div>
+                            </div>
+                            <div class="col-3 col-lg-1 position-relative">
+                                <label for="normal" data-toggle="tooltip" data-placement="top"
+                                    title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                <input type="text" value="0" name="normal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="travel" data-toggle="tooltip" data-placement="top"
+                                    title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                <input type="text" value="0" name="travel">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="totalWork">Total work</label>
+                                <input type="text" value="0" name="totalWork">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="overtime" data-toggle="tooltip" data-placement="top"
+                                    title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                <input type="text" value="0" name="overtime">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="eiInternal" data-toggle="tooltip" data-placement="top"
+                                    title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                    internal</label>
+                                <input type="text" value="0" name="eiInternal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="free" data-toggle="tooltip" data-placement="top"
+                                    title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                <input type="text" value="0" name="free">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="holidays" data-toggle="tooltip" data-placement="top"
+                                    title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                <input type="text" value="0" name="holidays">
+                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal"
+                                    data-target="#holidays"></i>
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="sickness" data-toggle="tooltip" data-placement="top"
+                                    title="Sickness - bolovanja">Sickness</label>
+                                <input type="text" value="0" name="sickness">
+                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal"
+                                    data-target="#sickness"></i>
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="daysOff" data-toggle="tooltip" data-placement="top"
+                                    title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                    Off</label>
+                                <input type="text" value="0" name="daysOff">
+                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal"
+                                    data-target="#daysOff"></i>
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="total">Total</label>
+                                <input type="text" value="0" name="total" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 col-lg-2 align-self-end">
+                                <div class="d-flex align-items-center vct-team-location">
+                                    <p class="w-100 text-center">On-site</p>
+                                </div>
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="normal" data-toggle="tooltip" data-placement="top"
+                                    title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                <input type="text" value="0" name="normal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="travel" data-toggle="tooltip" data-placement="top"
+                                    title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                <input type="text" value="0" name="travel">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="totalWork">Total work</label>
+                                <input type="text" value="0" name="totalWork">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="overtime" data-toggle="tooltip" data-placement="top"
+                                    title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                <input type="text" value="0" name="overtime">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="eiInternal" data-toggle="tooltip" data-placement="top"
+                                    title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                    internal</label>
+                                <input type="text" value="0" name="eiInternal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="free" data-toggle="tooltip" data-placement="top"
+                                    title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                <input type="text" value="0" name="free">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="holidays" data-toggle="tooltip" data-placement="top"
+                                    title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                <input type="text" value="0" name="holidays">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="sickness" data-toggle="tooltip" data-placement="top"
+                                    title="Sickness - bolovanja">Sickness</label>
+                                <input type="text" value="0" name="sickness">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="daysOff" data-toggle="tooltip" data-placement="top"
+                                    title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                    Off</label>
+                                <input type="text" value="0" name="daysOff">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="total">Total</label>
+                                <input type="text" value="0" name="total" readonly>
+                            </div>
                         </div>
                     </div>
                     <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
+                        <label for="deviation" data-toggle="tooltip" data-placement="top"
+                            title="Odsutupanje od potrebnog vremena">Deviation</label>
                         <input class="deviation" type="number" value="-1" name="deviation" readonly>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">On-site</p>
-                        </div>
+
+
+                <div class="row align-items-end mb-3">
+                    <div class="col-12 col-md-7">
+                        <label for="notes">Notes</label>
+                        <textarea name="notes" rows="3"></textarea>
                     </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="text" value="0" name="deviation" readonly>
+                    <div class="col-12 col-md-5 mt-2 text-left text-md-right">
+                        <button type="button" class="btn btn-highlight px-4" disabled>Save</button>
                     </div>
                 </div>
             </div>
 
-            <!--Team member entry-->
-            <div class="p-3 border-bottom vct-team-member-block">
+            <!--Team member entry 2-->
+            <div class="p-2 vct-team-member-block">
                 <div class="row">
                     <div class="col-12 vct-team-member-name">
-                        <span>Team Member Name</span>
-                        <small class="d-block float-sm-right">Professional Role</small>
+                        <span>Ime I prezime clana tima</span>
+                        <small class="d-block">Pozicija</small>
                     </div>
-
                 </div>
                 <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">Belgrade</p>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-3 col-lg-2 align-self-end">
+                                <div class="d-flex align-items-center vct-team-location">
+                                    <p class="w-100 text-center">Belgrade</p>
+                                </div>
+                            </div>
+                            <div class="col-3 col-lg-1 position-relative">
+                                <label for="normal" data-toggle="tooltip" data-placement="top"
+                                    title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                <input type="text" value="0" name="normal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="travel" data-toggle="tooltip" data-placement="top"
+                                    title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                <input type="text" value="0" name="travel">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="totalWork">Total work</label>
+                                <input type="text" value="0" name="totalWork">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="overtime" data-toggle="tooltip" data-placement="top"
+                                    title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                <input type="text" value="0" name="overtime">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="eiInternal" data-toggle="tooltip" data-placement="top"
+                                    title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                    internal</label>
+                                <input type="text" value="0" name="eiInternal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="free" data-toggle="tooltip" data-placement="top"
+                                    title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                <input type="text" value="0" name="free">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="holidays" data-toggle="tooltip" data-placement="top"
+                                    title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                <input type="text" value="0" name="holidays">
+                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal"
+                                    data-target="#holidays"></i>
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="sickness" data-toggle="tooltip" data-placement="top"
+                                    title="Sickness - bolovanja">Sickness</label>
+                                <input type="text" value="0" name="sickness">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="daysOff" data-toggle="tooltip" data-placement="top"
+                                    title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                    Off</label>
+                                <input type="text" value="0" name="daysOff">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="total">Total</label>
+                                <input type="text" value="0" name="total" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 col-lg-2 align-self-end">
+                                <div class="d-flex align-items-center vct-team-location">
+                                    <p class="w-100 text-center">On-site</p>
+                                </div>
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="normal" data-toggle="tooltip" data-placement="top"
+                                    title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                <input type="text" value="0" name="normal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="travel" data-toggle="tooltip" data-placement="top"
+                                    title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                <input type="text" value="0" name="travel">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="totalWork">Total work</label>
+                                <input type="text" value="0" name="totalWork">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="overtime" data-toggle="tooltip" data-placement="top"
+                                    title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                <input type="text" value="0" name="overtime">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="eiInternal" data-toggle="tooltip" data-placement="top"
+                                    title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                    internal</label>
+                                <input type="text" value="0" name="eiInternal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="free" data-toggle="tooltip" data-placement="top"
+                                    title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                <input type="text" value="0" name="free">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="holidays" data-toggle="tooltip" data-placement="top"
+                                    title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                <input type="text" value="0" name="holidays">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="sickness" data-toggle="tooltip" data-placement="top"
+                                    title="Sickness - bolovanja">Sickness</label>
+                                <input type="text" value="0" name="sickness">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="daysOff" data-toggle="tooltip" data-placement="top"
+                                    title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                    Off</label>
+                                <input type="text" value="0" name="daysOff">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="total">Total</label>
+                                <input type="text" value="0" name="total" readonly>
+                            </div>
                         </div>
                     </div>
                     <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
+                        <label for="deviation" data-toggle="tooltip" data-placement="top"
+                            title="Odsutupanje od potrebnog vremena">Deviation</label>
                         <input class="deviation" type="number" value="0" name="deviation" readonly>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">On-site</p>
-                        </div>
+
+
+                <div class="row align-items-end mb-3">
+                    <div class="col-12 col-md-7">
+                        <label for="notes">Notes</label>
+                        <textarea name="notes" rows="3"></textarea>
                     </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="text" value="0" name="deviation" readonly>
+                    <div class="col-12 col-md-5 mt-2 text-left text-md-right">
+                        <button type="button" class="btn btn-highlight px-4">Save</button>
                     </div>
                 </div>
             </div>
 
-            <!--Team member entry-->
-            <div class="p-3 border-bottom vct-team-member-block">
+            <!--Team member entry 3-->
+            <div class="p-2 vct-team-member-block">
                 <div class="row">
                     <div class="col-12 vct-team-member-name">
-                        <span>Team Member Name</span>
-                        <small class="d-block float-sm-right">Professional Role</small>
+                        <span>Ime I prezime clana tima</span>
+                        <small class="d-block">Pozicija</small>
                     </div>
-
                 </div>
                 <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">Belgrade</p>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-3 col-lg-2 align-self-end">
+                                <div class="d-flex align-items-center vct-team-location">
+                                    <p class="w-100 text-center">Belgrade</p>
+                                </div>
+                            </div>
+                            <div class="col-3 col-lg-1 position-relative">
+                                <label for="normal" data-toggle="tooltip" data-placement="top"
+                                    title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                <input type="text" value="0" name="normal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="travel" data-toggle="tooltip" data-placement="top"
+                                    title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                <input type="text" value="0" name="travel">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="totalWork">Total work</label>
+                                <input type="text" value="0" name="totalWork">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="overtime" data-toggle="tooltip" data-placement="top"
+                                    title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                <input type="text" value="0" name="overtime">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="eiInternal" data-toggle="tooltip" data-placement="top"
+                                    title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                    internal</label>
+                                <input type="text" value="0" name="eiInternal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="free" data-toggle="tooltip" data-placement="top"
+                                    title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                <input type="text" value="0" name="free">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="holidays" data-toggle="tooltip" data-placement="top"
+                                    title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                <input type="text" value="0" name="holidays">
+                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal"
+                                    data-target="#holidays"></i>
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="sickness" data-toggle="tooltip" data-placement="top"
+                                    title="Sickness - bolovanja">Sickness</label>
+                                <input type="text" value="0" name="sickness">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="daysOff" data-toggle="tooltip" data-placement="top"
+                                    title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                    Off</label>
+                                <input type="text" value="0" name="daysOff">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="total">Total</label>
+                                <input type="text" value="0" name="total" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 col-lg-2 align-self-end">
+                                <div class="d-flex align-items-center vct-team-location">
+                                    <p class="w-100 text-center">On-site</p>
+                                </div>
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="normal" data-toggle="tooltip" data-placement="top"
+                                    title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                <input type="text" value="0" name="normal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="travel" data-toggle="tooltip" data-placement="top"
+                                    title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                <input type="text" value="0" name="travel">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="totalWork">Total work</label>
+                                <input type="text" value="0" name="totalWork">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="overtime" data-toggle="tooltip" data-placement="top"
+                                    title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                <input type="text" value="0" name="overtime">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="eiInternal" data-toggle="tooltip" data-placement="top"
+                                    title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                    internal</label>
+                                <input type="text" value="0" name="eiInternal">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="free" data-toggle="tooltip" data-placement="top"
+                                    title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                <input type="text" value="0" name="free">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="holidays" data-toggle="tooltip" data-placement="top"
+                                    title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                <input type="text" value="0" name="holidays">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="sickness" data-toggle="tooltip" data-placement="top"
+                                    title="Sickness - bolovanja">Sickness</label>
+                                <input type="text" value="0" name="sickness">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="daysOff" data-toggle="tooltip" data-placement="top"
+                                    title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                    Off</label>
+                                <input type="text" value="0" name="daysOff">
+                            </div>
+                            <div class="col-3 col-lg-1">
+                                <label for="total">Total</label>
+                                <input type="text" value="0" name="total" readonly>
+                            </div>
                         </div>
                     </div>
                     <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
+                        <label for="deviation" data-toggle="tooltip" data-placement="top"
+                            title="Odsutupanje od potrebnog vremena">Deviation</label>
                         <input class="deviation" type="number" value="0" name="deviation" readonly>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">On-site</p>
-                        </div>
+
+
+                <div class="row align-items-end mb-3">
+                    <div class="col-12 col-md-7">
+                        <label for="notes">Notes</label>
+                        <textarea name="notes" rows="3"></textarea>
                     </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="text" value="0" name="deviation" readonly>
+                    <div class="col-12 col-md-5 mt-2 text-left text-md-right">
+                        <button type="button" class="btn btn-highlight px-4">Save</button>
                     </div>
                 </div>
             </div>
 
-            <!--Team member entry-->
-            <div class="p-3 border-bottom vct-team-member-block">
-                <div class="row">
-                    <div class="col-12 vct-team-member-name">
-                        <span>Team Member Name</span>
-                        <small class="d-block float-sm-right">Professional Role</small>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">Belgrade</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="number" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">On-site</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="text" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-            </div>
-
-            <!--Team member entry-->
-            <div class="p-3 border-bottom vct-team-member-block">
-                <div class="row">
-                    <div class="col-12 vct-team-member-name">
-                        <span>Team Member Name</span>
-                        <small class="d-block float-sm-right">Professional Role</small>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">Belgrade</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="number" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">On-site</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="text" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-            </div>
-
-            <!--Team member entry-->
-            <div class="p-3 border-bottom vct-team-member-block">
-                <div class="row">
-                    <div class="col-12 vct-team-member-name">
-                        <span>Team Member Name</span>
-                        <small class="d-block float-sm-right">Professional Role</small>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">Belgrade</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="number" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">On-site</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="text" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-            </div>
-
-            <!--Team member entry-->
-            <div class="p-3 border-bottom vct-team-member-block">
-                <div class="row">
-                    <div class="col-12 vct-team-member-name">
-                        <span>Team Member Name</span>
-                        <small class="d-block float-sm-right">Professional Role</small>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">Belgrade</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="number" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">On-site</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="text" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-            </div>
-
-            <!--Team member entry-->
-            <div class="p-3 border-bottom vct-team-member-block">
-                <div class="row">
-                    <div class="col-12 vct-team-member-name">
-                        <span>Team Member Name</span>
-                        <small class="d-block float-sm-right">Professional Role</small>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">Belgrade</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="number" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3 col-lg-1 align-self-end">
-                        <div class="d-flex align-items-center vct-team-location">
-                            <p class="w-100 text-center">On-site</p>
-                        </div>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="normal">Normal</label>
-                        <input type="text" value="0" name="normal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="travel">Travel</label>
-                        <input type="text" value="0" name="travel">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="totalWork">Total work</label>
-                        <input type="text" value="0" name="totalWork">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="overtime">Overtime*</label>
-                        <input type="text" value="0" name="overtime">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="eiInternal">Ei internal</label>
-                        <input type="text" value="0" name="eiInternal">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="free">Free</label>
-                        <input type="text" value="0" name="free">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="holidays">Holidays</label>
-                        <input type="text" value="0" name="holidays">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="sickness">Sickness</label>
-                        <input type="text" value="0" name="sickness">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="daysOff">Days Off</label>
-                        <input type="text" value="0" name="daysOff">
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="total">Total</label>
-                        <input type="text" value="0" name="total" readonly>
-                    </div>
-                    <div class="col-3 col-lg-1">
-                        <label for="deviation">Deviation</label>
-                        <input class="deviation" type="text" value="0" name="deviation" readonly>
-                    </div>
-                </div>
-            </div>
 
             <!--Total toggle-->
             <div class="row">
                 <div class="col-12">
-                    <div class="w-100 bg-white vct-total-toggle shadow">
-                        <div class="vct-total-toggle-card position-absolute">
-                            <a href="javascript:void(0)">TOTALS</a>
+                    <div class="w-100 bg-white vct-total-toggle shadow-lg">
+                        <div class="vct-total-toggle-card position-absolute shadow-sm">
+                            <a href="javascript:void(0)">TOTALS <i class="ti-angle-down ti-angle-up ml-2"></i></a>
                         </div>
                         <div class="w-100 vct-total-toggle-wrapper">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-3 col-lg-1">
-                                        <strong>Belgrade</strong>
-                                    </div>
-                                    <div class="col-3 col-lg-1">
-                                        <small>Normal</small>
-                                        <p>168</p>
-                                    </div>
-                                    <div class="col-3 col-lg-1">
-                                        <small>Travel</small>
-                                        <p>168</p>
-                                    </div>
-                                    <div class="col-3 col-lg-1">
-                                        <small>Total work</small>
-                                        <p>168</p>
-                                    </div>
-                                    <div class="col-3 col-lg-1">
-                                        <small>Overtime*</small>
-                                        <p>168</p>
-                                    </div>
-                                    <div class="col-3 col-lg-1">
-                                        <small>Ei internal</small>
-                                        <p>168</p>
-                                    </div>
-                                    <div class="col-3 col-lg-1">
-                                        <small>Free</small>
-                                        <p>168</p>
-                                    </div>
-                                    <div class="col-3 col-lg-1">
-                                        <small>Holidays</small>
-                                        <p>168</p>
-                                    </div>
-                                    <div class="col-3 col-lg-1">
-                                        <small>Sickness</small>
-                                        <p>168</p>
-                                    </div>
-                                    <div class="col-3 col-lg-1">
-                                        <small>Days Off</small>
-                                        <p>168</p>
-                                    </div>
-                                    <div class="col-3 col-lg-1 vct-totals-total">
-                                        <small>Total</small>
-                                        <p>1680</p>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                        <div class="col-3 col-lg-1">
-                                            <strong>On-site</strong>
-                                        </div>
-                                        <div class="col-3 col-lg-1">
-                                            <small>Normal</small>
-                                            <p>168</p>
-                                        </div>
-                                        <div class="col-3 col-lg-1">
-                                            <small>Travel</small>
-                                            <p>168</p>
-                                        </div>
-                                        <div class="col-3 col-lg-1">
-                                            <small>Total work</small>
-                                            <p>168</p>
-                                        </div>
-                                        <div class="col-3 col-lg-1">
-                                            <small>Overtime*</small>
-                                            <p>168</p>
-                                        </div>
-                                        <div class="col-3 col-lg-1">
-                                            <small>Ei internal</small>
-                                            <p>168</p>
-                                        </div>
-                                        <div class="col-3 col-lg-1">
-                                            <small>Free</small>
-                                            <p>168</p>
-                                        </div>
-                                        <div class="col-3 col-lg-1">
-                                            <small>Holidays</small>
-                                            <p>168</p>
-                                        </div>
-                                        <div class="col-3 col-lg-1">
-                                            <small>Sickness</small>
-                                            <p>168</p>
-                                        </div>
-                                        <div class="col-3 col-lg-1">
-                                            <small>Days Off</small>
-                                            <p>168</p>
-                                        </div>
-                                        <div class="col-3 col-lg-1 vct-totals-total">
-                                            <small>Total</small>
-                                            <p>1680</p>
-                                        </div>
-                                        <div class="col-12 col-lg-1 text-center">
-                                                <button type="button" class="w-100 btn btn-highlight">Approve</button>
+                                    <div class="col-12 col-md-10">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-2">
+                                                <strong class="text-highlight">Belgrade</strong>
                                             </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Normal</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Travel</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Total work</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Overtime</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Ei internal</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Free</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Holidays</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Sickness</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Days Off</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1 vct-totals-total">
+                                                <small>Total</small>
+                                                <p>1680</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-lg-2">
+                                                <strong class="text-highlight">On-site</strong>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Normal</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Travel</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Total work</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Overtime</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Ei internal</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Free</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Holidays</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Sickness</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1">
+                                                <small>Days Off</small>
+                                                <p>168</p>
+                                            </div>
+                                            <div class="col-3 col-lg-1 vct-totals-total">
+                                                <small>Total</small>
+                                                <p>1680</p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="col-12 col-md-2 pt-4 pt-lg-0">
+                                        <div class="col-12 vct-totals-total text-center">
+                                            <small>Grand total</small>
+                                            <h5 class="font-weight-bold">1680</h5>
+                                        </div>
+                                        <div class="col-12 text-center">
+                                            <button type="button" class="w-100 btn btn-highlight">Approve</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

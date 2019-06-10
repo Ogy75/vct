@@ -58,8 +58,6 @@
 }
 .vacation-log-element {
   overflow: auto;
-  border-top: 1px solid #dadad6;
-  border-bottom: 1px solid #dadad6;
 }
 .vacation-log-element table.vct-vacation-log tr:nth-child(even) {
   background-color: #ededec;
@@ -102,8 +100,8 @@
   margin: 0;
   font-size: 12px;
 }
-.vct-team-member-block:nth-child(odd) {
-  background: #E8E8E8;
+.vct-team-member-block {
+  border-bottom: 1px dashed #7c7c78;
 }
 .vct-total-toggle {
   position: fixed;
@@ -113,24 +111,40 @@
 }
 .vct-total-toggle .vct-total-toggle-wrapper {
   display: none;
+  background: black;
+  color: white;
+}
+.vct-total-toggle .vct-total-toggle-wrapper p {
+  font-size: 16px;
 }
 .vct-total-toggle .vct-total-toggle-card {
-  height: 24px;
-  line-height: 24px;
+  height: 36px;
+  line-height: 36px;
   background: #ed6b61;
   position: absolute;
   top: 0px;
   left: 50%;
   transform: translate(-50%);
-  margin-top: -24px;
+  margin-top: -36px;
   z-index: 101;
+  border-radius: 4px 4px 0 0;
 }
 .vct-total-toggle .vct-total-toggle-card a {
-  padding: 10px;
+  padding: 10px 20px;
   text-decoration: none;
   color: white;
 }
 .vct-total-toggle .vct-totals-total p {
   font-weight: 700;
+  color: #ed6b61;
+}
+.info-modal-trigger {
+  right: 20px;
+  bottom: 8px;
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+}
+.info-modal-trigger:hover {
   color: #ed6b61;
 }

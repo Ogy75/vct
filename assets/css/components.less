@@ -5,6 +5,7 @@
 @basecolorLighter:#696964;
 @basecolorLightest:#7c7c78;
 @highlightColor:#ed6b61;
+@focusColor: #1E90FF;
 
 //Vacation status element
 .vacation-status-primary{
@@ -71,8 +72,8 @@
 //Vacation log element
 .vacation-log-element{
     overflow: auto;
-    border-top:1px solid lighten(@basetextColor, 60%);
-    border-bottom: 1px solid lighten(@basetextColor, 60%);
+    //border-top:1px solid lighten(@basetextColor, 60%);
+    //border-bottom: 1px solid lighten(@basetextColor, 60%);
 table.vct-vacation-log{
     tr:nth-child(even){
         background-color: lighten(@basecolorLightest, 45%);
@@ -120,9 +121,7 @@ table.vct-vacation-log{
     }
 }
 .vct-team-member-block{
-    &:nth-child(odd){
-        background:#E8E8E8;
-    }
+    border-bottom: 1px dashed @basecolorLightest;
 }
 
 //Total toggle
@@ -133,19 +132,25 @@ table.vct-vacation-log{
         z-index: 100;
         .vct-total-toggle-wrapper{
             display: none;
+            background: black;
+            color:white;
+            p{
+                font-size: 16px;
+            }
         }
     .vct-total-toggle-card{
-        height: 24px;
-        line-height: 24px;
+        height: 36px;
+        line-height: 36px;
         background: @highlightColor;
         position: absolute;
         top:0px;
         left:50%;
         transform: translate(-50%);
-        margin-top:-24px;
+        margin-top:-36px;
         z-index: 101;
+        border-radius: 4px 4px 0 0;
         a{
-            padding:10px;
+            padding:10px 20px;
             text-decoration: none;
             color:white;
         }
@@ -155,5 +160,17 @@ table.vct-vacation-log{
             font-weight: 700;
             color: @highlightColor;
         }
+    }
+}
+
+//more-info-trigger
+.info-modal-trigger{
+    right:20px;
+    bottom:8px;
+    font-size: 14px;
+    line-height: 14px;
+    cursor: pointer;
+    &:hover{
+        color:@highlightColor;
     }
 }

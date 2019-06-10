@@ -11,7 +11,6 @@ $(function () {
         contentExpand.addClass('expanded').addClass('vct-content');
     }
     menuToggleButton.on('click', function () {
-        //menuToggleButtonIcon.toggleClass('ti-arrow-left');
         menuPanel.toggleClass('hide-left');
         contentExpand.toggleClass('expanded');
         if (windowWidth < 1281) {
@@ -49,16 +48,10 @@ $(function () {
         document.fullScreenElement && null !== document.fullScreenElement || !document.mozFullScreen && !document.webkitIsFullScreen ? document.documentElement.requestFullScreen ? document.documentElement.requestFullScreen() : document.documentElement.mozRequestFullScreen ? document.documentElement.mozRequestFullScreen() : document.documentElement.webkitRequestFullScreen && document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT) : document.cancelFullScreen ? document.cancelFullScreen() : document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen && document.webkitCancelFullScreen()
     });
 
-    //log height adjustment
-    var statusHeight = $('.vct-days__remaining').height();
-    var log = $('.vacation-log-element');
-    log.height(statusHeight);
-
     //deviation value
     $('.deviation').each(function (i, e) {
             var el = $(e);
-            el.addClass(parseInt(el.val()) < 0 ? 'negative-value' : 'positive-value');
-            
+            el.addClass(parseInt(el.val()) < 0 ? 'negative-value' : '');
     });
 
     //scroll hide
@@ -79,8 +72,23 @@ $(function () {
 
     card.on('click', function(){
         totalPanel.slideToggle(100);
+        card.find('i').toggleClass('ti-angle-up');
     });
 
+    //tooltip ini
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+
+    //notification badge
+      setTimeout(function(){
+        $('.vct-notification').show();
+      }, 3000);
+
+    //back btn
+    $('.vct-back').on('click', function(){
+        window.history.back();
+    });
 });
 
 

@@ -5,6 +5,7 @@
 @basecolorLighter:#696964;
 @basecolorLightest:#7c7c78;
 @highlightColor:#ed6b61;
+@focusColor: #1E90FF;
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
 
@@ -38,6 +39,11 @@ body{
           background: darken(@highlightColor,10%);
           color:white;
       }
+      &:disabled{
+        background: @basecolorLightest;
+        color:white;
+        cursor: not-allowed;
+      }
   }
 .vct-icon{
     color: @basecolorLighter;
@@ -49,13 +55,13 @@ body{
 }
 label{
     display:block;
-    width:100%;
-    font-size: 12px;
+    font-size: 11px;
     margin-bottom: 0;
     margin-top:8px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: lighten(@basecolorDarkest, 30%);
 }
 textarea, input[type=text], input[type=email], input[type=number]{
         display:block;
@@ -68,21 +74,21 @@ textarea, input[type=text], input[type=email], input[type=number]{
         border-radius: 2px;
         -webkit-transition: width 0.4s linear;
         transition: width 0.4s linear;
+        resize: none;
         &:focus{
-            border:1px solid @highlightColor;
+            border:1px solid @focusColor;
         }
 }
-input[name=total]{
-    background: @basecolorDarkest;
-    color:white;
+textarea{
+    border:1px solid lighten(@basecolorLightest, 10%);
 }
-.positive-value{
-    background: #006838;
-    color:white;
+input[name=total]{
+    font-weight: 700;
 }
 .negative-value{
-    background:#be1e2d;
+    background: #be1e2d !important;
     color:white;
+    border-bottom:1px solid white !important;
 }
 .nav-down {
     transition: all 0.2s linear;
@@ -92,6 +98,43 @@ input[name=total]{
     margin-top: -48px !important;
     transition: all 0.2s linear;
 }
+.tooltip{
+    .tooltip-inner{
+        text-align: left;
+        font-family: 'Noto Sans',sans-serif;
+    }
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color:@basecolorDarkest;
+    text-shadow: none;
+    opacity: .5;
+    &:hover{
+        color:@highlightColor;
+    }   
+  }
+  .text-highlight{
+      color:@highlightColor;
+  }
+  .vct-notification{
+      display: none;
+      position: fixed;
+      top: 32px;
+      left:50%;
+      transform: translate(-50%;);
+      font-size: 14px;
+      line-height: 14px;
+      padding:4px 10px;
+      background-color: @highlightColor;
+      color:white;
+      z-index: 10000;
+      border-radius: 4px;
+      max-width: 280px;
+      text-align: center;
+  }
 
 //Top nav
 *{
@@ -155,6 +198,11 @@ input[name=total]{
     
     }
 }
+a.vct-back{
+    text-decoration: none;
+    font-weight: 400;
+    color: @basecolorDarkest;
+}
 
 //Left nav
 .vct-left-nav{
@@ -190,7 +238,7 @@ padding: 0;
             width:100%;
             padding:15px 30px;
             color:white;
-            font-size: 13px;
+            font-size: 12px;
             text-transform: uppercase;
             font-weight: 400;
             text-decoration: none;
@@ -227,7 +275,7 @@ padding: 0;
                 background: lighten(@highlightColor, 5%);
                 padding-left: 60px;
                 text-transform: none;
-                font-size: 14px;
+                font-size: 13px;
 
                 &:hover{
                     background: darken(@highlightColor, 10%);
@@ -236,9 +284,6 @@ padding: 0;
         }
     }
 
-}
-.button-highlight{
-    background:@highlightColor;
 }
 .vct-left-nav-toggle{
     position: absolute;
