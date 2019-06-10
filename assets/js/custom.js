@@ -80,10 +80,14 @@ $(function () {
         $('[data-toggle="tooltip"]').tooltip();
       });
 
-    //notification badge
+    //notification badge demo
       setTimeout(function(){
-        $('.vct-notification').show();
-      }, 3000);
+        $('.vct-notification').show().delay(5000).queue(function(n) {
+            $(this).hide(); n();
+          });
+      }, 1500);
+
+      
 
     //back btn
     $('.vct-back').on('click', function(){
