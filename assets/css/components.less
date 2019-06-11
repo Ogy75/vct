@@ -179,21 +179,19 @@ table.vct-vacation-log{
 a.vct-team{
     text-decoration: none;
     color: @basecolorDarkest;
+    .vct-team-wrapper{
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        &:hover{
+            box-shadow: none !important;
+        }
+    }
     .vct-team-block {
         position: relative;
         transition: @mainTransition;
         border-radius: 2px;
         border: 1px solid lighten(@basecolorLightest, 48%);
-        &:hover{
-            background: #f8f9fa;
-            box-shadow: none !important;
-        }
         .vct-client-logo{
             border-radius: 2px;
-            background: #f8f9fa;
-            &:hover{
-                background: white !important;
-            }
         }
         .vct-team-block-data{
             color:@basecolorLightest;

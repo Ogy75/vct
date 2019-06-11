@@ -23,7 +23,7 @@ $(function () {
     var subMenuItem = $('.vct-nav-level1');
     subMenuButton.on('click', function (ev) {
         var trigger = $(ev.target);
-        trigger.toggleClass('button-highlight');
+        trigger.toggleClass('btn-highlight');
         trigger.next(subMenuItem).slideToggle(200);
         trigger.toggleClass('has-level1-t');
     });

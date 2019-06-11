@@ -152,22 +152,20 @@ a.vct-team {
   text-decoration: none;
   color: #42423c;
 }
+a.vct-team .vct-team-wrapper {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+a.vct-team .vct-team-wrapper:hover {
+  box-shadow: none !important;
+}
 a.vct-team .vct-team-block {
   position: relative;
   transition: all 0.12s linear;
   border-radius: 2px;
   border: 1px solid #f5f5f4;
 }
-a.vct-team .vct-team-block:hover {
-  background: #f8f9fa;
-  box-shadow: none !important;
-}
 a.vct-team .vct-team-block .vct-client-logo {
   border-radius: 2px;
-  background: #f8f9fa;
-}
-a.vct-team .vct-team-block .vct-client-logo:hover {
-  background: white !important;
 }
 a.vct-team .vct-team-block .vct-team-block-data {
   color: #7c7c78;
