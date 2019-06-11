@@ -174,3 +174,50 @@ table.vct-vacation-log{
         color:@highlightColor;
     }
 }
+
+//team overview components
+a.vct-team{
+    text-decoration: none;
+    color: @basecolorDarkest;
+    .vct-team-block {
+        position: relative;
+        transition: @mainTransition;
+        border-radius: 2px;
+        border: 1px solid lighten(@basecolorLightest, 48%);
+        &:hover{
+            background: #f8f9fa;
+            box-shadow: none !important;
+        }
+        .vct-client-logo{
+            border-radius: 2px;
+            background: #f8f9fa;
+            &:hover{
+                background: white !important;
+            }
+        }
+        .vct-team-block-data{
+            color:@basecolorLightest;
+            line-height: 20px;
+        }
+    }
+    .vct-team-block-hours:before{
+        font-family: 'Themify';
+        content:"\e72b";
+        margin-right:4px;
+
+    }
+    .vct-team-block-status-done:before{
+        font-family: 'Themify';
+        content:"\e64d";
+        margin-right:4px;
+        font-size: 12px;
+        
+    }
+    .vct-team-block-status-notdone:before{
+        font-family: 'Themify';
+        content:"\e6c5";
+        color: red;
+        margin-right:4px;
+        
+    }
+}

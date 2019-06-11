@@ -1,0 +1,807 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Vacation</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+</head>
+
+<body>
+    <!--notification pop-out-->
+    <div class="vct-notification shadow">Action Confirmation / Error</div>
+
+    <!--Vacation modal-->
+    <div class="modal fade" id="holidays" tabindex="-1" role="dialog" aria-labelledby="holidays" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h4 class="font-weight-bold m-0">Ime i Prezime</h4>
+                        <small>vacation</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <select>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                        <option selected>2019</option>
+                                    </select>
+                                    <p class="vct-element-title d-inline-block ml-2">Vacation status</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="vacation-status-primary col-7 pr-0">
+                                    <div
+                                        class="vct-days__remaining d-flex h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">21</div>
+                                            <div class="col-12 vacation-status-no-label">days remaining</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vacation-status-secondary col-5 pl-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div
+                                                class="vct-days__unused p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">2</div>
+                                                    <div class="col-12 vacation-status-no-label">2018. days remaining
+                                                        <small class="d-block">valid until 31.7.2019</small>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div
+                                                class="vct-days__new p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">21</div>
+                                                    <div class="col-12 vacation-status-no-label">2019. days remaining
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <div
+                                                class="vct-days__total p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">23</div>
+                                                    <div class="col-12 vacation-status-no-label">total days remaining
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <div
+                                                class="vct-days__used p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">2</div>
+                                                    <div class="col-12 vacation-status-no-label">days spent</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Vacation log</p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip"
+                                        data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 days used</td>
+                                        <td>01.01.2019 - 05.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sickness modal-->
+    <div class="modal fade" id="sickness" tabindex="-1" role="dialog" aria-labelledby="sickness" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h4 class="font-weight-bold m-0">Ime i Prezime</h4>
+                        <small>sickness</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block ml-2">Vacation status / <span>June
+                                            2019.</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="vacation-status-primary col-12">
+                                    <div
+                                        class="vct-days__remaining d-flex p-3 h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">7</div>
+                                            <div class="col-12 vacation-status-no-label">sickness days</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Sickness log / <span>June 2019.</span>
+                                    </p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip"
+                                        data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 days </td>
+                                        <td>01.01.2019 - 05.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--DaysOff modal-->
+    <div class="modal fade" id="daysOff" tabindex="-1" role="dialog" aria-labelledby="daysOff" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h4 class="font-weight-bold m-0">Ime i Prezime</h4>
+                        <small>Days off</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block ml-2">Vacation status / <span>June
+                                            2019.</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="vacation-status-primary col-12">
+                                    <div
+                                        class="vct-days__remaining d-flex p-3 h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">3</div>
+                                            <div class="col-12 vacation-status-no-label">days off</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--vacation log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Days off log / <span>June 2019.</span>
+                                    </p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip"
+                                        data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                        <td><textarea placeholder="description">Babi se pokvario daljinski</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                        <td><textarea
+                                                placeholder="description">Komsiji iznad se otopio zamrzivac</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                        <td><textarea placeholder="description">Tetka ceka lek</textarea></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+
+            <div class="vct-logo w-100 text-left text-white">Label logo</div>
+
+            <ul class="vct-nav-menu">
+                <li><a href="javascript:void(0)"><i class="ti-shine mr-3"></i>Vacation</a></li>
+                <li><a href="javascript:void(0)"><i class="ti-calendar mr-3"></i>Calendar</a></li>
+                <li><a href="javascript:void(0)"><i class="ti-timer mr-3"></i>Time report</a></li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>2 levels</a>
+                    <ul class="vct-nav-level1">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav bg-white border-bottom shadow-sm">
+        <div class="vct-user-menu float-right">
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
+                    class="ti-fullscreen full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li><a href="#">Profile settings</a></li>
+                    <li><a href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content mb-5">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12 mt-3">
+                    <div class="p-2 vct-team-data-bar align-items-center">
+                        <span class="h5 font-weight-bold">June 2019</span>
+                    </div>
+                </div>
+            </div>
+            <!--team time list element-->
+            <div class="row">
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-edelweiss.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">.Net 3</h5>
+                                <p class="small text-left text-nowrap text-truncate">Cloud solution</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-notdone text-nowrap text-truncate">tbd</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-edelweiss.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">.Net 4</h5>
+                                <p class="small text-left text-nowrap text-truncate">Internet Booking Engine</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-swiss.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">.Net 2</h5>
+                                <p class="small text-left text-nowrap text-truncate">Swiss Zurich</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-swiss.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">.Net 2</h5>
+                                <p class="small text-left text-nowrap text-truncate">Swiss Basel</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-crealogix.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Tream name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-vontobel.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-exlibris.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-swisscom.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-spilgames.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-chaviation.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-manor.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-realgarant.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-pasmedia.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-pearson.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-infominds.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-guidle.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-ifolor.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                <!--team block-->
+                <a href="javascript:void(0)" class="vct-team col-6 col-lg-4 col-xl-3 mt-3">
+                        <div class="shadow-sm">
+                            <img class="vct-client-logo bg-light" src="assets/images/logo-pritlead.svg" alt="client logo">
+                            <div class="vct-team-block p-4 text-center">
+                                <h5 class="text-left text-nowrap text-truncate">Team name</h5>
+                                <p class="small text-left text-nowrap text-truncate">Project description</p>
+                                <div class="row mt-4 bg-light m-0">
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-hours text-nowrap text-truncate">1680</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 vct-team-block-data">
+                                        <div class="p-2">
+                                            <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <script src="assets/vendor/jquery341/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
