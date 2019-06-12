@@ -1,4 +1,7 @@
 @import "variables";
+
+@basecolorDarkerShade: darken(@basecolorDarkest, 15%);
+
 .vct-login{
     height: 100vh;
     background-image: url("/assets/images/brand-bg.jpg");
@@ -7,7 +10,7 @@
     background-repeat: no-repeat;
     .vct-login-bg{
         height: 100vh;
-        background: fade(black, 85%);
+        background: fade(@basecolorDarkerShade, 95%);
     }
     .vct-login-img{
         height: 100vh;
@@ -24,7 +27,7 @@
       font-size: 14px;
       line-height: 14px;
       padding:6px 10px;
-      background-color: @highlightColor;
+      background-color: @warningColor;
       color:white;
       z-index: 10000;
       border-radius: 4px;

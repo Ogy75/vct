@@ -1,5 +1,5 @@
 .vacation-status-primary .vct-days__remaining {
-  background: #f08078;
+  background: #389dff;
   height: 500px;
 }
 .vacation-status-primary .vct-days__remaining .vacation-status-no {
@@ -47,7 +47,7 @@
   background: #7c7c78;
 }
 .vacation-status-secondary .vct-days__used {
-  background: #e84033;
+  background: #0077ea;
 }
 .vct-element-title {
   font-size: 14px;
@@ -111,7 +111,7 @@
 }
 .vct-total-toggle .vct-total-toggle-wrapper {
   display: none;
-  background: black;
+  background: #272724;
   color: white;
 }
 .vct-total-toggle .vct-total-toggle-wrapper p {
@@ -120,7 +120,7 @@
 .vct-total-toggle .vct-total-toggle-card {
   height: 36px;
   line-height: 36px;
-  background: #ed6b61;
+  background: #1E90FF;
   position: absolute;
   top: 0px;
   left: 50%;
@@ -136,7 +136,7 @@
 }
 .vct-total-toggle .vct-totals-total p {
   font-weight: 700;
-  color: #ed6b61;
+  color: #1E90FF;
 }
 .info-modal-trigger {
   right: 20px;
@@ -146,7 +146,7 @@
   cursor: pointer;
 }
 .info-modal-trigger:hover {
-  color: #ed6b61;
+  color: #1E90FF;
 }
 a.vct-team {
   text-decoration: none;

@@ -7,7 +7,7 @@
 }
 .vct-login .vct-login-bg {
   height: 100vh;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(26, 26, 24, 0.95);
 }
 .vct-login .vct-login-img {
   height: 100vh;
@@ -25,7 +25,7 @@
   font-size: 14px;
   line-height: 14px;
   padding: 6px 10px;
-  background-color: #ed6b61;
+  background-color: #EA5145;
   color: white;
   z-index: 10000;
   border-radius: 4px;

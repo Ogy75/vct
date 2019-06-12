@@ -19,11 +19,11 @@ body {
   border-radius: 2px;
 }
 .btn-highlight {
-  background: #ed6b61;
+  background: #1E90FF;
   color: white;
 }
 .btn-highlight:hover {
-  background: #e84033;
+  background: #0077ea;
   color: white;
 }
 .btn-highlight:disabled {
@@ -105,10 +105,10 @@ input[name=total] {
   opacity: .5;
 }
 .close:hover {
-  color: #ed6b61;
+  color: #1E90FF;
 }
 .text-highlight {
-  color: #ed6b61;
+  color: #1E90FF;
 }
 .vct-notification {
   display: none;
@@ -119,7 +119,7 @@ input[name=total] {
   font-size: 14px;
   line-height: 14px;
   padding: 6px 10px;
-  background-color: #ed6b61;
+  background-color: #EA5145;
   color: white;
   z-index: 10000;
   border-radius: 4px;
@@ -196,7 +196,6 @@ a.vct-back {
   height: 100vh;
   z-index: 2;
   display: block;
-  transition: all 0.12s linear;
 }
 .vct-left-nav .vct-logo {
   font-size: 18px;
@@ -230,7 +229,7 @@ ul.vct-nav-menu a {
   transition: all 0.12s linear;
 }
 ul.vct-nav-menu a:hover {
-  background: #ed6b61;
+  background: #1E90FF;
 }
 ul.vct-nav-menu a i {
   color: white;
@@ -253,13 +252,13 @@ ul.vct-nav-menu ul.vct-nav-level1 {
   padding: 0;
 }
 ul.vct-nav-menu ul.vct-nav-level1 li a {
-  background: #f08078;
+  background: #389dff;
   padding-left: 60px;
   text-transform: none;
   font-size: 13px;
 }
 ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
-  background: #e84033;
+  background: #0077ea;
 }
 .vct-left-nav-toggle {
   position: absolute;
@@ -276,7 +275,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
   transition: all 0.12s linear;
 }
 .vct-left-nav-toggle:hover {
-  color: #ed6b61;
+  color: #1E90FF;
 }
 .vct-content {
   position: absolute;
