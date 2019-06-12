@@ -154,6 +154,7 @@ a.vct-team {
 }
 a.vct-team .vct-team-wrapper {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: all 0.12s linear;
 }
 a.vct-team .vct-team-wrapper:hover {
   box-shadow: none !important;
