@@ -52,7 +52,8 @@ label {
 textarea,
 input[type=text],
 input[type=email],
-input[type=number] {
+input[type=number],
+input[type=password] {
   display: block;
   width: 100%;
   padding: 4px;
@@ -68,7 +69,8 @@ input[type=number] {
 textarea:focus,
 input[type=text]:focus,
 input[type=email]:focus,
-input[type=number]:focus {
+input[type=number]:focus,
+input[type=password]:focus {
   border: 1px solid #1E90FF;
 }
 textarea {
@@ -116,7 +118,7 @@ input[name=total] {
   transform: translate(-50%);
   font-size: 14px;
   line-height: 14px;
-  padding: 4px 10px;
+  padding: 6px 10px;
   background-color: #ed6b61;
   color: white;
   z-index: 10000;

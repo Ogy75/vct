@@ -1,0 +1,41 @@
+@import "variables";
+.vct-login{
+    height: 100vh;
+    background-image: url("/assets/images/brand-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    .vct-login-bg{
+        height: 100vh;
+        background: fade(black, 85%);
+    }
+    .vct-login-img{
+        height: 100vh;
+        background: fade(@focusColor, 95%);
+    }
+    label{
+        margin-bottom:5px;
+    }
+    input[type=email], input[type=password]{
+        border-bottom: 1px solid transparent;
+        padding:8px;
+    }
+    .alert {
+      font-size: 14px;
+      line-height: 14px;
+      padding:6px 10px;
+      background-color: @highlightColor;
+      color:white;
+      z-index: 10000;
+      border-radius: 4px;
+      max-width: 280px;
+      text-align: center;
+      border:none;
+    }
+    .login-notification{
+        position: absolute;
+        top:3%;
+        left:50%;
+        transform: translate(-50%);
+    }
+}
