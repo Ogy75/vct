@@ -10,10 +10,10 @@
   position: relative;
 }
 .easy-autocomplete input {
-  font-size: 14px;
+  font-size: 15px;
   display: block;
   width: 100%;
-  padding: 4px;
+  padding: 6px;
   box-sizing: border-box;
   outline: none;
   border: 1px solid #959592;

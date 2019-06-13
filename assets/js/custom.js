@@ -108,7 +108,7 @@ $(function () {
         });
 
 
-    //add memeber autocomplete
+    //add member autocomplete
     var options = {
         url: "/employees.json",
         getValue: "name",
