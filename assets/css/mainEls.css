@@ -17,6 +17,7 @@ body {
 }
 .btn {
   border-radius: 2px;
+  font-size: 14px;
 }
 .btn-highlight {
   background: #1E90FF;
@@ -27,6 +28,19 @@ body {
   color: white;
 }
 .btn-highlight:disabled {
+  background: #7c7c78;
+  color: white;
+  cursor: not-allowed;
+}
+.btn-alert {
+  background: #EA5145;
+  color: white;
+}
+.btn-alert:hover {
+  background: #e2281a;
+  color: white;
+}
+.btn-alert:disabled {
   background: #7c7c78;
   color: white;
   cursor: not-allowed;

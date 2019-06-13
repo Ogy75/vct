@@ -156,42 +156,42 @@
 .info-modal-trigger:hover {
   color: #1E90FF;
 }
-a.vct-team {
+.vct-team {
   text-decoration: none;
   color: #42423c;
 }
-a.vct-team .vct-team-wrapper {
+.vct-team .vct-team-wrapper {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   transition: all 0.12s linear;
 }
-a.vct-team .vct-team-wrapper:hover {
+.vct-team .vct-team-wrapper:hover {
   box-shadow: none !important;
 }
-a.vct-team .vct-team-block {
+.vct-team .vct-team-block {
   position: relative;
   transition: all 0.12s linear;
   border-radius: 2px;
   border: 1px solid #f5f5f4;
 }
-a.vct-team .vct-team-block .vct-client-logo {
+.vct-team .vct-team-block .vct-client-logo {
   border-radius: 2px;
 }
-a.vct-team .vct-team-block .vct-team-block-data {
+.vct-team .vct-team-block .vct-team-block-data {
   color: #7c7c78;
   line-height: 20px;
 }
-a.vct-team .vct-team-block-hours:before {
+.vct-team .vct-team-block-hours:before {
   font-family: 'Themify';
   content: "\e72b";
   margin-right: 4px;
 }
-a.vct-team .vct-team-block-status-done:before {
+.vct-team .vct-team-block-status-done:before {
   font-family: 'Themify';
   content: "\e64d";
   margin-right: 4px;
   font-size: 12px;
 }
-a.vct-team .vct-team-block-status-notdone:before {
+.vct-team .vct-team-block-status-notdone:before {
   font-family: 'Themify';
   content: "\e6c5";
   color: red;

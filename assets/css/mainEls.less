@@ -33,7 +33,8 @@ body{
 }
 .btn {
     border-radius: 2px;
-  }
+    font-size: 14px;
+}
   .btn-highlight{
       background: @highlightColor;
       color:white;
@@ -46,7 +47,21 @@ body{
         color:white;
         cursor: not-allowed;
       }
-  }
+    }
+    .btn-alert{
+        background: @warningColor;
+        color:white;
+        &:hover{
+            background: darken(@warningColor,10%);
+            color:white;
+        }
+        &:disabled{
+          background: @basecolorLightest;
+          color:white;
+          cursor: not-allowed;
+        }
+      }
+
 .vct-icon{
     color: @basecolorLighter;
     transition: @mainTransition;
@@ -333,4 +348,3 @@ padding: 0;
     width: 100%;
     left:0;
 }
-
