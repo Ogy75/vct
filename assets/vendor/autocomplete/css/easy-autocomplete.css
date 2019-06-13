@@ -322,7 +322,7 @@ font-size: 12px;
   font-weight: bold;
 }
 .easy-autocomplete-container ul .eac-category {
-  font-color: #aaa;
+  color: #aaa;
   font-style: italic;
 }
 .eac-description .eac-item span {
