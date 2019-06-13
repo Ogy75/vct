@@ -139,7 +139,11 @@ input[name=total]{
   }
   .remove-team-member{
       font-size: 20px;
+      transition: @mainTransition;
       cursor: pointer;
+      &:hover{
+          color:@highlightColor;
+      }
   }
 
 //Top nav
