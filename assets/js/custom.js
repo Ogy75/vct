@@ -119,5 +119,8 @@ $(function () {
         }
     };
     $('#employees').easyAutocomplete(options);
+
+    //nice select ini
+        $('select').niceSelect();
 });
 

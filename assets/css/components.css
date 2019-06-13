@@ -84,8 +84,16 @@
   font-weight: 700;
 }
 .vct-team-data-bar {
+  padding: 10px 0;
+  height: 62px;
   border-top: 1px dashed #7c7c78;
   border-bottom: 1px dashed #7c7c78;
+}
+.vct-team-data-bar span.h5 {
+  line-height: 42px;
+}
+.vct-team-data-bar span.float-right {
+  line-height: 42px;
 }
 .vct-team-location {
   height: 31px;
