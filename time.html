@@ -397,9 +397,13 @@
                 <div class="col-6">
                     <a href="#" class="vct-back"><i class="ti-angle-left mr-1 py-3"></i>back</a>
                 </div>
-                <div class="col-12 mt-3">
+                <div class="col-12 mt-3 bg-light">
                     <div class="p-2 vct-team-data-bar align-items-center">
-                        <span class="h5 font-weight-bold">Swiss Basel</span>
+                            <span>
+                                    <select>
+                                        <option>Swiss Basel</option>
+                                    </select>
+                                </span>
                         <span class="float-right text-highlight">June 2019</span>
                     </div>
                 </div>
@@ -850,15 +854,21 @@
 
                 <!--Additional Team member entry 4-->
                 <div class="p-2 vct-team-member-block">
-                    <div class="row mb-3">
-                        <div class="col-8 col-lg-4 vct-team-member-name font-weight-normal">
-                            <label for="employees">employee name</label>
-                            <input class="w-100" id="employees" placeholder="enter name" />
-                        </div>
-                        <div class="col-4 col-lg-8">
-                            <i class="ti-close remove-team-member float-right mt-2"></i>
-                        </div>
-                    </div>
+                        <div class="row mb-2">
+                                <div class="col-4 vct-team-member-name font-weight-normal">
+                                    <label for="employees">employee name</label>
+                                    <input class="w-100" id="employees" placeholder="enter name" value="" />
+                                </div>
+                                <div class="col-4 vct-team-member-name font-weight-normal">
+                                    <label for="employees">position</label>
+                                    <input class="w-100" id="position" placeholder="find position" value="" />
+                                </div>
+                                <div class="col-4">
+                                    <div class="d-flex align-items-center justify-content-end h-100">
+                                            <button class="btn ti-close btn-action remove-team-member p-0" data-toggle="tooltip" data-placement="top" title="Remove Team Member"></button>
+                                    </div>
+                                </div>
+                            </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="row">

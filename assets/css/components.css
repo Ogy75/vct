@@ -197,3 +197,10 @@
   color: red;
   margin-right: 4px;
 }
+input.vct-new-team {
+  padding: 8px;
+  border: 1px solid #7c7c78;
+}
+input.vct-new-team:focus {
+  border: 1px solid #1E90FF;
+}

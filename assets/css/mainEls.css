@@ -38,12 +38,19 @@ body {
 }
 .btn-alert:hover {
   background: #e2281a;
-  color: white;
+  color: white !important;
 }
 .btn-alert:disabled {
   background: #7c7c78;
   color: white;
   cursor: not-allowed;
+}
+.btn-action {
+  color: #42423c;
+  transition: all 0.12s linear;
+}
+.btn-action:hover {
+  color: #1E90FF;
 }
 .vct-icon {
   color: #696964;
@@ -141,7 +148,6 @@ input[name=total] {
   text-align: center;
 }
 .remove-team-member {
-  font-size: 20px;
   transition: all 0.12s linear;
   cursor: pointer;
 }

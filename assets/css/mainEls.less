@@ -53,13 +53,20 @@ body{
         color:white;
         &:hover{
             background: darken(@warningColor,10%);
-            color:white;
+            color:white !important;
         }
         &:disabled{
           background: @basecolorLightest;
           color:white;
           cursor: not-allowed;
         }
+      }
+      .btn-action{
+          color:@basecolorDarkest;
+          transition: @mainTransition;
+          &:hover{
+              color:@highlightColor;
+          }
       }
 
 .vct-icon{
@@ -153,7 +160,7 @@ input[name=total]{
       text-align: center;
   }
   .remove-team-member{
-      font-size: 20px;
+      //font-size: 20px;
       transition: @mainTransition;
       cursor: pointer;
       &:hover{
