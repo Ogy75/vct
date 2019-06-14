@@ -111,6 +111,10 @@
 .vct-team-member-block {
   border-bottom: 1px dashed #7c7c78;
 }
+.add-new-project:hover {
+  color: #1E90FF;
+  cursor: pointer;
+}
 .vct-total-toggle {
   position: fixed;
   bottom: 0;
