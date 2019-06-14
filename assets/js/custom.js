@@ -56,10 +56,10 @@ $(function () {
 
     //scroll hide
     $(window).scroll(function () {
-        if ($(window).scrollTop() > 150) {
+        if ($(window).scrollTop() > 200) {
             $('.vct-top-nav, .vct-left-nav-toggle').addClass('nav-up');
         }
-        if ($(window).scrollTop() < 151) {
+        if ($(window).scrollTop() < 201) {
             $('.vct-top-nav, .vct-left-nav-toggle').removeClass('nav-up');
             $('.vct-top-nav, .vct-left-nav-toggle').addClass('nav-down');
         }
