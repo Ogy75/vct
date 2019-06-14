@@ -154,6 +154,19 @@ $(function () {
             saveBtn.text('Save New Team');
             teamMemberBlock.remove();
             deleteTeam.hide();
+            $('.save-new-team').prop('disabled', true);
         });
+
+        //enable save button
+        var saveBtn = $('.save-new-team');
+        $('input.vct-new-team').on('keyup',function() {
+        if($(this).val() != "") {
+           saveBtn.prop('disabled', false);
+        }
+        else{
+            saveBtn.prop('disabled', true);
+        }
+     });
 });
+
 
