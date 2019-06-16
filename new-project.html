@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <!--notification pop-out-->
-    <div class="vct-notification shadow">Action Confirmation / Error</div>
+    <!--alert pop-out-->
+    <div class="alert shadow" role="alert">Alert</div>
 
     <!--left nav-->
     <div class="vct-left-nav">
@@ -29,9 +29,9 @@
             </div>
 
             <ul class="vct-nav-menu">
-                <li><a href="javascript:void(0)"><i class="ti-shine mr-3"></i>Vacation</a></li>
-                <li><a href="javascript:void(0)"><i class="ti-calendar mr-3"></i>Calendar</a></li>
-                <li><a href="teams.html"><i class="ti-timer mr-3"></i>Team Management</a></li>
+                <li><a href="vacation.html"><i class="ti-shine mr-3"></i>My Vacation</a></li>
+
+                <li><a class="selected" href="teams.html"><i class="ti-timer mr-3"></i>Project management</a></li>
                 <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>2 levels</a>
                     <ul class="vct-nav-level1">
                         <li><a href="#">Item 1</a></li>
@@ -46,8 +46,7 @@
     <!--top-nav-->
     <div class="vct-top-nav bg-white border-bottom shadow-sm">
         <div class="vct-user-menu float-right">
-            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
-                    class="ti-fullscreen full-view"></i></div>
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="ti-fullscreen full-view"></i></div>
             <div class="d-inline-block vct-user-profile-image position-relative">
                 <img src="assets/images/user.jpg" alt="user name">
             </div>
@@ -67,78 +66,60 @@
             <!--team time list element-->
             <div class="row">
                 <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-start h-100">
-                        <a href="#" class="vct-back"><i class="ti-angle-left mr-1 py-3"></i>back</a>
+                    <div class="d-flex align-items-center justify-content-start mb-3">
+                        <button class="btn btn-action vct-back p-0"><i class="ti-angle-left mr-1 py-3"></i>back</button>
                     </div>
                 </div>
-
-                <div class="col-10 col-lg-8 my-3">
-                    <small class="px-2">project</small>
-                    <div class=" vct-new-team p-2 px-0 font-weight-normal h-100">
-                            <input type="text" class="w-100 vct-new-team" placeholder="enter new project name" value="" />
+                <!--add new project-->
+                <div class="col-12 py-3">
+                    <div class="d-flex align-items-center">
+                        <div class="d-inline-flex w-75 justify-content-start">
+                            <div class="mr-2 w-100">
+                                <label>Client</label>
+                                <input class="vct-new-team" id="employees" type="text" placeholder="Select existing or add new Client" style="display: inline-block;">
+                            </div>
+                            <div class="mr-2 w-100">
+                                <label>Project name</label>
+                                <input class="vct-new-team w-100" type="text" placeholder="Enter Project name" style="display: inline-block;">
+                            </div>
                         </div>
-                </div>
-                <div class="col-2 col-lg-4 mt-3">
-                    <div class="d-flex text-right justify-content-end align-items-center h-100 p-2">
-                        <button class="btn btn-action ti-plus add-new-team" data-toggle="tooltip" data-placement="top"
-                            title="Add New Team"></button>
-                        <!-- <button type="button" class="btn btn-highlight pl-0"><i class="ti-plus px-2"></i>Add New
-                                    team</button> -->
-                    </div>
-                </div>
-
-
-                <div class="col-12">
-                    <div class="p-2 w-100 d-inline-flex vct-team-data-bar align-items-center bg-light">
-                        <span style="display: none">
-                            <select class="vct-select-team">
-                                <option>Crealogix Team 1</option>
-                                <option>Crealogix Team 2</option>
-                                <option>Crealogix Team 3</option>
-                                <option>Crealogix Team 4</option>
-                                <option>Crealogix Team 5</option>
-                                <option>Crealogix Team 6</option>
-                                <option>Crealogix Team 7</option>
-                                <option>Crealogix Team 8</option>
-                                <option>Crealogix Team 9</option>
-                                <option>Crealogix Team 10</option>
-                            </select>
-                        </span>
-                        <div class="vct-new-team pt-1 px-0 col-4 font-weight-normal h-100">
-                            <input type="text" class="w-100 vct-new-team" placeholder="enter new team name" value="" />
+                        <div class="d-inline-flex w-25 justify-content-end">
                         </div>
-                        <div class="p-2 d-inline-flex w-100 align-items-center justify-content-end"><button class="delete-team btn btn-action ti-trash p-1" data-toggle="tooltip" data-placement="top"
-                            title="Delete Selected Team" style="display: none"></button></div>
                     </div>
-                    
+                </div>
+
+                <div class="col-12 py-3 bg-light">
+                    <div class="d-flex align-items-center">
+                        <div class="d-inline-flex w-75 justify-content-start">
+                            <div class="mr-2 w-100">
+                                <label>Team</label>
+                                <input class="vct-new-team d-block" type="text" placeholder="Enter Team name" />
+                            </div>
+                        </div>
+                        <div class="d-inline-flex w-25 justify-content-end">
+                            <button class="d-none delete-team btn btn-action ti-trash" data-toggle="tooltip" data-placement="top" title="Delete Selected Team"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="team-members">
-                
             </div>
 
             <div class="row">
-                <div class="col-6">
-                    <div class="p-2 my-3">
+                <div class="col-12 col-md-6">
+                    <div class="my-3">
                         <button type="button" class="add-team-member1 btn btn-highlight pl-0"><i
-                                class="add-new-team-btn ti-plus px-2"></i>add new team member</button>
+                                class="add-new-team-btn ti-plus px-2"></i>add team member</button>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-2 my-3 text-right">
+                <div class="col-12 col-md-6">
+                    <div class="my-3 text-md-right">
                         <button type="button" class="btn btn-alert mr-2">Cancel</button>
-                        <button type="button" class="save-new-team btn btn-highlight">Save changes</button>
+                        <button type="button" class="save-new-team btn btn-highlight">Save</button>
                     </div>
                 </div>
             </div>
-            <div class="row">
-
-            </div>
-
-
-
-
         </div>
 
     </div>
@@ -146,9 +127,9 @@
 
     <script src="assets/vendor/jquery341/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/custom.js"></script>
     <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js"></script>
     <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 
 </html>

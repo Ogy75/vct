@@ -1,5 +1,5 @@
 .vacation-status-primary .vct-days__remaining {
-  background: #389dff;
+  background: #25aadf;
   height: 500px;
 }
 .vacation-status-primary .vct-days__remaining .vacation-status-no {
@@ -47,7 +47,7 @@
   background: #7c7c78;
 }
 .vacation-status-secondary .vct-days__used {
-  background: #0077ea;
+  background: #1779a0;
 }
 .vct-element-title {
   font-size: 14px;
@@ -96,7 +96,7 @@
   line-height: 42px;
 }
 .vct-team-location {
-  height: 31px;
+  height: 39px;
   background: #aeaeac;
 }
 .vct-team-location p {
@@ -104,7 +104,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: 31px;
+  line-height: 39px;
   margin: 0;
   font-size: 12px;
 }
@@ -112,8 +112,7 @@
   border-bottom: 1px dashed #7c7c78;
 }
 .add-new-project:hover {
-  color: #1E90FF;
-  cursor: pointer;
+  color: #1E9BCC;
 }
 .vct-total-toggle {
   position: fixed;
@@ -132,7 +131,7 @@
 .vct-total-toggle .vct-total-toggle-card {
   height: 36px;
   line-height: 36px;
-  background: #1E90FF;
+  background: #1E9BCC;
   position: absolute;
   top: 0px;
   left: 50%;
@@ -148,17 +147,16 @@
 }
 .vct-total-toggle .vct-totals-total p {
   font-weight: 700;
-  color: #1E90FF;
+  color: #1E9BCC;
 }
 .info-modal-trigger {
-  right: 20px;
+  right: 23px;
   bottom: 8px;
   font-size: 14px;
-  line-height: 14px;
   cursor: pointer;
 }
 .info-modal-trigger:hover {
-  color: #1E90FF;
+  color: #1E9BCC;
 }
 .vct-team {
   text-decoration: none;
@@ -170,6 +168,9 @@
 }
 .vct-team .vct-team-wrapper:hover {
   box-shadow: none !important;
+}
+.vct-team .vct-team-wrapper a {
+  text-decoration: none;
 }
 .vct-team .vct-team-block {
   position: relative;
@@ -184,9 +185,9 @@
   color: #7c7c78;
   line-height: 20px;
 }
-.vct-team .vct-team-block-hours:before {
+.vct-team .vct-team-block-teams:before {
   font-family: 'Themify';
-  content: "\e72b";
+  content: "\e602";
   margin-right: 4px;
 }
 .vct-team .vct-team-block-status-done:before {
@@ -201,10 +202,13 @@
   color: red;
   margin-right: 4px;
 }
-input.vct-new-team {
+.vct-new-team-wrapper {
+  display: none;
+}
+.vct-new-team-wrapper input.vct-new-team {
   padding: 8px;
   border: 1px solid #7c7c78;
 }
-input.vct-new-team:focus {
-  border: 1px solid #1E90FF;
+.vct-new-team-wrapper input.vct-new-team:focus {
+  border: 1px solid #1E9BCC;
 }

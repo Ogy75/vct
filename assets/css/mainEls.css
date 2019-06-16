@@ -15,16 +15,19 @@ body {
   min-width: 100%;
   padding: 15px;
 }
+a {
+  color: #1E9BCC;
+}
 .btn {
   border-radius: 2px;
   font-size: 14px;
 }
 .btn-highlight {
-  background: #1E90FF;
+  background: #1E9BCC;
   color: white;
 }
 .btn-highlight:hover {
-  background: #0077ea;
+  background: #1779a0;
   color: white;
 }
 .btn-highlight:disabled {
@@ -50,7 +53,7 @@ body {
   transition: all 0.12s linear;
 }
 .btn-action:hover {
-  color: #1E90FF;
+  color: #1E9BCC;
 }
 .vct-icon {
   color: #696964;
@@ -59,6 +62,16 @@ body {
 }
 .vct-icon:hover {
   color: #42423c;
+}
+.vct-navi-text {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  padding: 2px 6px;
+  background: #42423c;
 }
 label {
   display: block;
@@ -70,6 +83,7 @@ label {
   white-space: nowrap;
   color: #919186;
 }
+input,
 textarea,
 input[type=text],
 input[type=email],
@@ -77,22 +91,31 @@ input[type=number],
 input[type=password] {
   display: block;
   width: 100%;
-  padding: 4px;
+  padding: 8px;
   box-sizing: border-box;
   outline: none;
-  border: 1px solid transparent;
-  border-bottom: 1px solid #959592;
+  border: 1px solid #959592;
   border-radius: 2px;
   -webkit-transition: width 0.4s linear;
   transition: width 0.4s linear;
   resize: none;
+  font-size: 14px;
 }
+input:focus,
 textarea:focus,
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=number]:focus,
 input[type=password]:focus {
-  border: 1px solid #1E90FF;
+  border: 1px solid #1E9BCC;
+}
+input::placeholder,
+textarea::placeholder,
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=number]::placeholder,
+input[type=password]::placeholder {
+  font-size: 12px;
 }
 textarea {
   border: 1px solid #959592;
@@ -100,10 +123,31 @@ textarea {
 input[name=total] {
   font-weight: 700;
 }
-.negative-value {
-  background: #be1e2d !important;
+.easy-autocomplete-container ul li.selected {
   color: white;
-  border-bottom: 1px solid white !important;
+  background: none repeat scroll 0 0 #1E9BCC;
+  cursor: pointer;
+}
+.easy-autocomplete input {
+  font-size: 14px;
+  display: block;
+  padding: 8px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #959592;
+  border-radius: 2px;
+  -webkit-transition: width 0.4s linear;
+  transition: width 0.4s linear;
+  resize: none;
+  width: 100%;
+}
+.easy-autocomplete input:focus {
+  border: 1px solid #1E9BCC;
+}
+.negative-value {
+  background: rgba(190, 30, 45, 0.1);
+  color: #be1e2d;
+  border: 1px solid #be1e2d !important;
 }
 .nav-down {
   transition: all 0.2s linear;
@@ -126,33 +170,28 @@ input[name=total] {
   opacity: .5;
 }
 .close:hover {
-  color: #1E90FF;
+  color: #1E9BCC;
 }
 .text-highlight {
-  color: #1E90FF;
-}
-.vct-notification {
-  display: none;
-  position: fixed;
-  top: 32px;
-  left: 50%;
-  transform: translate(-50%);
-  font-size: 14px;
-  line-height: 14px;
-  padding: 6px 10px;
-  background-color: #EA5145;
-  color: white;
-  z-index: 10000;
-  border-radius: 4px;
-  max-width: 280px;
-  text-align: center;
+  color: #1E9BCC;
 }
 .remove-team-member {
   transition: all 0.12s linear;
   cursor: pointer;
 }
 .remove-team-member:hover {
-  color: #1E90FF;
+  color: #1E9BCC;
+}
+.alert {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 2px 10px;
+  border-radius: 2px;
+  z-index: 1000;
+  background: #EA5145;
+  color: white;
 }
 * {
   box-sizing: border-box;
@@ -164,7 +203,7 @@ input[name=total] {
   float: left;
   width: 100%;
   height: 48px;
-  z-index: 1;
+  z-index: 2;
 }
 .vct-top-nav .vct-user-menu .vct-user-menu-block {
   display: none;
@@ -222,7 +261,7 @@ a.vct-back {
   background: #42423c;
   width: 250px;
   height: 100vh;
-  z-index: 2;
+  z-index: 3;
   display: block;
 }
 .vct-left-nav .vct-logo {
@@ -245,6 +284,9 @@ ul.vct-nav-menu {
 ul.vct-nav-menu li {
   display: block;
 }
+ul.vct-nav-menu li .selected {
+  color: #67c4e9;
+}
 ul.vct-nav-menu a {
   display: block;
   width: 100%;
@@ -257,7 +299,7 @@ ul.vct-nav-menu a {
   transition: all 0.12s linear;
 }
 ul.vct-nav-menu a:hover {
-  background: #1E90FF;
+  background: #1E9BCC;
 }
 ul.vct-nav-menu a i {
   color: white;
@@ -280,13 +322,13 @@ ul.vct-nav-menu ul.vct-nav-level1 {
   padding: 0;
 }
 ul.vct-nav-menu ul.vct-nav-level1 li a {
-  background: #389dff;
+  background: #25aadf;
   padding-left: 60px;
   text-transform: none;
   font-size: 13px;
 }
 ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
-  background: #0077ea;
+  background: #1779a0;
 }
 .vct-left-nav-toggle {
   position: absolute;
@@ -303,7 +345,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
   transition: all 0.12s linear;
 }
 .vct-left-nav-toggle:hover {
-  color: #1E90FF;
+  color: #1E9BCC;
 }
 .vct-content {
   position: absolute;
