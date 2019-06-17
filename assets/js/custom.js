@@ -83,13 +83,14 @@ $(function() {
         $('[data-toggle="tooltip"]').tooltip();
     });
 
-    //notification badge demo
+    //notification badge demo /spinner
     setTimeout(function() {
-        $('.alert').show().delay(2500).queue(function(n) {
+        $('.alert').show().delay(1500).queue(function(n) {
+            $('.lds-dual-ring-bg').fadeOut(200);
             $(this).hide();
-            n();
         });
     }, 0);
+
 
 
     //back btn
