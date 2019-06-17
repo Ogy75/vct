@@ -1,5 +1,8 @@
 $(function() {
 
+    //vacation page log height fix
+    $('.height-fix').height($('.vct-days__remaining').height());
+
     //left side menu toggle block
     var menuToggleButton = $('.vct-left-nav-toggle');
     var menuToggleButtonIcon = $('.menu-icon');
@@ -171,8 +174,4 @@ $(function() {
         var newProject = $('.add-new-project');
         newProject.css('min-height', projectHeight);
     });
-
-    // $('.delete-team').on('click', function() {
-    //     alert('are you sure you want to ...')
-    // });
 });

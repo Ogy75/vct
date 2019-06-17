@@ -59,8 +59,11 @@
 .vacation-log-element {
   overflow: auto;
 }
+.vacation-log-element table.vct-vacation-log tr {
+  background: #fafaf9;
+}
 .vacation-log-element table.vct-vacation-log tr:nth-child(even) {
-  background-color: #ededec;
+  background: #ededec;
 }
 .vacation-log-element table.vct-vacation-log td {
   font-size: 14px;
@@ -75,6 +78,7 @@
   float: left;
   width: 24px;
   margin-right: 15px;
+  line-height: 14px;
 }
 .vacation-log-element table.vct-vacation-log td:last-child {
   text-align: right;
