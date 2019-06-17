@@ -6,6 +6,15 @@
   src: url(/assets/fonts/themify.eot);
   src: url(/assets/fonts/themify.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/themify.woff) format("woff");
 }
+* {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body {
   font-family: 'Noto Sans', sans-serif;
   color: #42423c;
