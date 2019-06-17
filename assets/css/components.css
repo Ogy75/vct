@@ -57,7 +57,7 @@
   letter-spacing: 1px;
 }
 .vacation-log-element {
-  overflow: auto;
+  overflow: scroll;
 }
 .vacation-log-element table.vct-vacation-log tr {
   background: #fafaf9;
@@ -175,6 +175,7 @@
 }
 .vct-team .vct-team-wrapper a {
   text-decoration: none;
+  transition: all 0.12s linear;
 }
 .vct-team .vct-team-block {
   position: relative;

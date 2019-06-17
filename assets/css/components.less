@@ -71,7 +71,7 @@
 
 //Vacation log element
 .vacation-log-element{
-    overflow: auto;
+    overflow: scroll;
     table.vct-vacation-log{
         tr{
             background: lighten(@basecolorLightest, 50%)
@@ -201,6 +201,7 @@
         }
         a{
             text-decoration: none;
+            transition: @mainTransition;
         }
     }
     .vct-team-block {
