@@ -124,6 +124,19 @@ $(function () {
         }, 150);
     });
 
+    //add operations manager
+    var teamMember2 = '<div class="py-3 vct-team-member-block "> <div class="row mb-3 "> <div class="col-5 vct-team-member-name font-weight-normal "> <label for="employees ">Operations officer</label> <input class="w-100" id="employees " placeholder="enter name " value="" /> </div> <div class="col-5 vct-team-member-name font-weight-normal "> </div> <div class="col-2 "> <div class="d-flex align-items-end justify-content-end h-100 "> <button class="btn ti-close btn-action remove-team-member1 " data-toggle="tooltip " data-placement="top " title="Remove Operations Manager"></button> </div> </div> </div> </div>';
+
+    $(document).on('click', '.add-team-member2', function () {
+        $('.team-members').append(teamMember2);
+    });
+    $(document).on('click', '.remove-team-member2', function () {
+        $(this).closest($('.vct-team-member-block')).slideUp(200);
+        setTimeout(function () {
+            $(this).closest($('.vct-team-member-block')).remove();
+        }, 150);
+    });
+
 
     //add member autocomplete
     var employees = {

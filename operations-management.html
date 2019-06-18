@@ -35,8 +35,8 @@
 
             <ul class="vct-nav-menu">
                 <li><a href="vacation.html"><i class="ti-shine mr-3"></i>My Vacation</a></li>
-                <li><a href="operations-management.html"><i class="ti-pin mr-3"></i>Operations</a></li>
-                <li><a class="selected" href="teams.html"><i class="ti-timer mr-3"></i>Project management</a></li>
+                <li><a class="selected" href="operations-management.html"><i class="ti-pin mr-3"></i>Operations</a></li>
+                <li><a href="teams.html"><i class="ti-timer mr-3"></i>Project management</a></li>
                 <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>2 levels</a>
                     <ul class="vct-nav-level1">
                         <li><a href="#">Item 1</a></li>
@@ -71,64 +71,71 @@
             <!--team time list element-->
             <div class="row">
                 <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-start mb-3">
+                    <div class="d-inline-flex align-items-center w-50 justify-content-start mb-3 h-100">
                         <button class="btn btn-action vct-back p-0"><i class="ti-angle-left mr-1 py-3"></i>back</button>
                     </div>
-                </div>
-                <!--add new project-->
-                <div class="col-12 py-3">
-                    <div class="d-flex align-items-center">
-                        <div class="d-inline-flex w-75 justify-content-start">
-                            <div class="mr-2 w-100">
-                                <label>Client</label>
-                                <input class="vct-new-team" id="employees" type="text" placeholder="Select existing or add new Client" style="display: inline-block;">
-                            </div>
-                            <div class="mr-2 w-100">
-                                <label>Project name</label>
-                                <input class="vct-new-team w-100" type="text" placeholder="Enter Project name" style="display: inline-block;">
-                            </div>
-                        </div>
-                        <div class="d-inline-flex w-25 justify-content-end">
-                        </div>
+                    <div class="d-inline-flex align-items-center float-right mb-3 h-100">
+                        <h6 class="vct-navi-text">Manage Operations officers</h6>
                     </div>
                 </div>
-
-                <div class="col-12 py-3 bg-light">
-                    <div class="d-flex align-items-center">
-                        <div class="d-inline-flex w-75 justify-content-start">
-                            <div class="mr-2 w-100">
-                                <label>Team</label>
-                                <input class="vct-new-team d-block" type="text" placeholder="Enter Team name" />
-                            </div>
-                        </div>
-                        <div class="d-inline-flex w-25 justify-content-end">
-                            <button class="d-none delete-team btn btn-action ti-trash" data-toggle="tooltip" data-placement="top" title="Delete Selected Team"></button>
-                        </div>
-                    </div>
+                <div class="col-8 my-3">
+                    <h5 class="font-weight-bold">Operations officers</h5>
                 </div>
+ 
             </div>
 
             <div class="team-members">
-            </div>
-
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="my-3">
-                        <button type="button" class="add-team-member1 btn btn-highlight pl-0"><i
-                                class="add-new-team-btn ti-plus px-2"></i>add team member</button>
+                <!--Team member entry-->
+                <div class="py-3 vct-team-member-block">
+                    <div class="row mb-3 ">
+                        <div class="col-10 vct-team-member-name font-weight-normal">
+                            <label for="employees">Operations officer</label>
+                            <input class="w-50" id="employees " placeholder="enter name " value="Vladimir Jovanović" />
+                        </div>
+                        
+                        <div class="col-2">
+                            <div class="d-flex align-items-end justify-content-end h-100 ">
+                                <button class="btn ti-close btn-action remove-team-member2" data-toggle="tooltip " data-placement="top " title="Remove Operations Manager"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <div class="my-3 text-md-right">
-                        <button type="button" class="btn btn-alert mr-2">Cancel</button>
-                        <button type="button" class="save-new-team btn btn-highlight">Save</button>
+                <!--Team member entry-->
+                <div class="py-3 vct-team-member-block">
+                    <div class="row mb-3 ">
+                        <div class="col-10 vct-team-member-name font-weight-normal">
+                            <label for="employees">Operations officer</label>
+                            <input class="w-50" id="employees " placeholder="enter name " value="Vladimir Dikosavljević" />
+                        </div>
+                        
+                        <div class="col-2">
+                            <div class="d-flex align-items-end justify-content-end h-100 ">
+                                <button class="btn ti-close btn-action remove-team-member2" data-toggle="tooltip " data-placement="top " title="Remove Operations Manager"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-12 col-md-6 ">
+                    <div class="my-3 ">
+                        <button type="button" class="add-team-member2 btn btn-highlight pl-0 "><i
+                                class="add-new-team-btn ti-plus px-2 "></i>add team member</button>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ">
+                    <div class="my-3 text-md-right ">
+                        <button type="button " class="btn btn-alert mr-2 ">Cancel</button>
+                        <button type="button " class="save-new-team btn btn-highlight ">Save</button>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-    </div>
+
+    
 
     <script src="assets/vendor/jquery341/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
