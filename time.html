@@ -22,6 +22,66 @@
             <div class="lds-dual-ring"></div>
         </div>
 
+    <!--Free modal-->
+    <div class="modal fade" id="free" tabindex="-1" role="dialog" aria-labelledby="free" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h5 class="font-weight-bold m-0 text-nowrap text-truncate">Ime i Prezime</h5>
+                        <small>free</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block py-2">Free status / <span>June
+                                            2019.</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="vacation-status-primary col-12">
+                                    <div class="vct-days__remaining d-flex p-3 h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">7</div>
+                                            <div class="col-12 vacation-status-no-label">free days</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Free log / <span>June 2019.</span>
+                                    </p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>7 days </td>
+                                        <td>01.01.2019 - 08.01.2019</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Vacation modal-->
     <div class="modal fade" id="holidays" tabindex="-1" role="dialog" aria-labelledby="holidays" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -395,9 +455,14 @@
                         <h6 class="vct-navi-text">Time logging</h6>
                     </div>
                 </div>
-                <div class="col-12 my-3">
+                <div class="col-8 my-3">
                     <small>project</small>
                     <h5 class="font-weight-bold">Crealogix Germany</h5>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex text-right justify-content-end align-items-center h-100">
+                        <button class="btn btn-action ti-export" data-toggle="tooltip" data-placement="top" title="Export Project to Excell"></button>
+                    </div>
                 </div>
                 <div class="col-12 py-3 bg-light">
                     <div class="d-flex align-items-center">
@@ -466,6 +531,7 @@
                                 <div class="col-3 col-lg-1">
                                     <label for="free" data-toggle="tooltip" data-placement="top" title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                     <input type="text" value="0" name="free">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
                                 </div>
                                 <div class="col-3 col-lg-1">
                                     <label for="holidays" data-toggle="tooltip" data-placement="top" title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
@@ -596,6 +662,7 @@
                                 <div class="col-3 col-lg-1">
                                     <label for="free" data-toggle="tooltip" data-placement="top" title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                     <input type="text" value="0" name="free">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
                                 </div>
                                 <div class="col-3 col-lg-1">
                                     <label for="holidays" data-toggle="tooltip" data-placement="top" title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
@@ -605,11 +672,13 @@
                                 <div class="col-3 col-lg-1">
                                     <label for="sickness" data-toggle="tooltip" data-placement="top" title="Sickness - bolovanja">Sickness</label>
                                     <input type="text" value="0" name="sickness">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
                                 </div>
                                 <div class="col-3 col-lg-1">
                                     <label for="daysOff" data-toggle="tooltip" data-placement="top" title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
                                         Off</label>
                                     <input type="text" value="0" name="daysOff">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
                                 </div>
                                 <div class="col-3 col-lg-1">
                                     <label for="total">Total</label>
@@ -724,6 +793,7 @@
                                 <div class="col-3 col-lg-1">
                                     <label for="free" data-toggle="tooltip" data-placement="top" title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                     <input type="text" value="0" name="free">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
                                 </div>
                                 <div class="col-3 col-lg-1">
                                     <label for="holidays" data-toggle="tooltip" data-placement="top" title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
@@ -733,11 +803,13 @@
                                 <div class="col-3 col-lg-1">
                                     <label for="sickness" data-toggle="tooltip" data-placement="top" title="Sickness - bolovanja">Sickness</label>
                                     <input type="text" value="0" name="sickness">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
                                 </div>
                                 <div class="col-3 col-lg-1">
                                     <label for="daysOff" data-toggle="tooltip" data-placement="top" title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
                                         Off</label>
                                     <input type="text" value="0" name="daysOff">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
                                 </div>
                                 <div class="col-3 col-lg-1">
                                     <label for="total">Total</label>
@@ -971,8 +1043,12 @@
                         <div class="w-100 vct-total-toggle-wrapper">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-12">
-                                        <h5 class="text-white text-center pb-2">Swiss Basel</h5>
+                                    <div class="col-10">
+                                        <h5 class="text-white text-left pb-2">Crealogix Team 1</h5>
+                                    </div>
+                                    <div class="col-2 text-right">
+                                            <i class="vct-icon text-white ti-export float-right p-1" data-toggle="tooltip" data-placement="top"
+                                            title="Export Team Time log to excel"></i>
                                     </div>
                                     <div class="col-12 col-md-10">
                                         <div class="row">
@@ -1071,9 +1147,11 @@
                                             <small>Grand total</small>
                                             <h5 class="font-weight-bold">1680</h5>
                                         </div>
+                                    
                                         <div class="col-12 text-center">
                                             <button type="button" class="w-100 btn btn-highlight">Approve</button>
                                         </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
