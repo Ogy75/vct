@@ -112,6 +112,12 @@
   margin: 0;
   font-size: 12px;
 }
+.vct-client-checkbox {
+  height: 16px;
+  width: 16px;
+  top: 38px;
+  right: 20px;
+}
 .vct-team-member-block {
   border-bottom: 1px dashed #7c7c78;
 }
