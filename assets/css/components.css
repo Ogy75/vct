@@ -57,7 +57,9 @@
   letter-spacing: 1px;
 }
 .vacation-log-element {
+  display: block;
   overflow: scroll;
+  border: 1px #ededec solid;
 }
 .vacation-log-element table.vct-vacation-log tr {
   background: #fafaf9;
