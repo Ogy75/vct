@@ -68,7 +68,6 @@
 }
 .vacation-log-element table.vct-vacation-log td {
   font-size: 14px;
-  border-bottom: 1px solid #dadad6;
   padding: 10px;
 }
 .vacation-log-element table.vct-vacation-log td:first-child {
@@ -86,6 +85,7 @@
 }
 .vct-team-member-name {
   font-size: 18px;
+  letter-spacing: -0.3px;
   font-weight: 700;
 }
 .vct-team-data-bar {
@@ -102,12 +102,14 @@
 }
 .vct-team-location {
   height: 39px;
+  border-radius: 2px;
   background: #aeaeac;
 }
 .vct-team-location p {
   color: white;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 700;
   white-space: nowrap;
   line-height: 39px;
   margin: 0;
@@ -223,4 +225,8 @@
 }
 .vct-new-team-wrapper input.vct-new-team:focus {
   border: 1px solid #1E9BCC;
+}
+.nice-select .option:hover {
+  background-color: #1E9BCC !important;
+  color: white;
 }
