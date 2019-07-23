@@ -11,13 +11,13 @@ $(function () {
     var windowWidth = $(window).width();
     if (windowWidth < 1024) {
         menuPanel.addClass('hide-left');
-        contentExpand.addClass('expanded').addClass('vct-content');
+        contentExpand.addClass('expanded');
     }
     menuToggleButton.on('click', function () {
         menuPanel.toggleClass('hide-left');
         contentExpand.toggleClass('expanded');
         if (windowWidth < 1281) {
-            $('.vct-left-nav-wrapper').toggleClass('shadow-sm');
+            $('.vct-left-nav-wrapper').toggleClass('shadow-lg');
         }
     });
 
@@ -92,7 +92,6 @@ $(function () {
     }, 0);
 
 
-
     //back btn
     $('.vct-back').on('click', function () {
         window.history.back();
@@ -105,10 +104,7 @@ $(function () {
         $('.team-members').append(teamMember);
     });
     $(document).on('click', '.remove-team-member', function () {
-        $(this).closest($('.vct-team-member-block')).slideUp(200);
-        setTimeout(function () {
-            $(this).closest($('.vct-team-member-block')).remove();
-        }, 150);
+            $(this).closest($('.vct-team-member-block')).addClass('hide');
     });
 
     //add team member - team
@@ -118,10 +114,7 @@ $(function () {
         $('.team-members').append(teamMember1);
     });
     $(document).on('click', '.remove-team-member1', function () {
-        $(this).closest($('.vct-team-member-block')).slideUp(200);
-        setTimeout(function () {
-            $(this).closest($('.vct-team-member-block')).remove();
-        }, 150);
+        $(this).closest($('.vct-team-member-block')).addClass('hide');
     });
 
     //add operations manager
@@ -131,10 +124,7 @@ $(function () {
         $('.team-members').append(teamMember2);
     });
     $(document).on('click', '.remove-team-member2', function () {
-        $(this).closest($('.vct-team-member-block')).slideUp(200);
-        setTimeout(function () {
-            $(this).closest($('.vct-team-member-block')).remove();
-        }, 150);
+        $(this).closest($('.vct-team-member-block')).addClass('vtc-hide');
     });
 
 

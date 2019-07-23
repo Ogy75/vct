@@ -22,16 +22,7 @@
   padding: 8px;
 }
 .vct-login .alert {
-  font-size: 14px;
-  line-height: 14px;
-  padding: 6px 10px;
   background-color: #EA5145;
-  color: white;
-  z-index: 10000;
-  border-radius: 4px;
-  max-width: 280px;
-  text-align: center;
-  border: none;
 }
 .vct-login .login-notification {
   position: absolute;

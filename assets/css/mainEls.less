@@ -205,6 +205,30 @@ input[name=total]{
 .validation-summary-valid {
     display: none;
 }
+.vtc-hide{
+    animation: fadeinout .1s linear forwards;
+}
+.vtc-show{
+    animation: fadeinout .1s linear backwards;
+}
+@keyframes fadeinout {
+    50% {
+      opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes fadeinout {
+    50% {
+      opacity: 1;
+    }
+    100% {
+        opacity: 0; 
+        display: none;
+    }
+  }
 
 //Spinner
 .lds-dual-ring-bg{
