@@ -153,6 +153,7 @@ $(function () {
     var saveBtn = $('.save-new-team');
     var teamMemberBlock = $('.vct-team-member-block');
     var deleteTeam = $('.delete-team');
+    var editTeam = $('.ti-pencil');
     trigger.on('click', function () {
         teamSelect.hide();
         newTeam.show().focus();
@@ -161,6 +162,8 @@ $(function () {
         saveBtn.text('Save Team');
         teamMemberBlock.remove();
         deleteTeam.hide();
+        $('.error-message').hide();
+        editTeam.hide();
         $('.save-new-team').prop('disabled', true);
     });
 
