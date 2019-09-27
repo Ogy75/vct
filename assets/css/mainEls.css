@@ -125,6 +125,13 @@ input[type=number]::placeholder,
 input[type=password]::placeholder {
   font-size: 12px;
 }
+input:disabled {
+  background-color: #ebebeb;
+  color: #696964;
+}
+input.negative-value:disabled {
+  background-color: rgba(190, 30, 45, 0.1);
+}
 textarea {
   border: 1px solid #959592;
 }

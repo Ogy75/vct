@@ -121,6 +121,13 @@ input, textarea, input[type=text], input[type=email], input[type=number], input[
             font-size: 12px;
         }
 }
+input:disabled{
+    background-color: @readonly;
+    color:@basecolorLighter;
+}
+input.negative-value:disabled{
+    background-color: fade(#be1e2d, 10%);
+}
 textarea{
     border:1px solid lighten(@basecolorLightest, 10%);
 }
