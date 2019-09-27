@@ -211,6 +211,26 @@ input[name=total]{
 .vtc-show{
     animation: fadeinout .1s linear backwards;
 }
+.error-message{
+    font-family: 'Noto Sans',sans-serif;
+    font-size:12px;
+    line-height: 18px;
+    padding:0 4px;
+    font-weight: bold;
+    color:white;
+    background-color:@warningColor;
+    display: block;
+    clear: both;
+    margin-top:10px;
+    &::before{
+        font-family: 'Themify';
+        content: "\e6c5";
+        color:yellow;
+        margin-right: 6px;
+        line-height: 18px;
+    }
+}
+
 @keyframes fadeinout {
     50% {
       opacity: 1;
