@@ -72,18 +72,20 @@
 //Vacation log element
 .vacation-log-element{
     display: block;
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x:hidden;
+    border: 1px solid lighten(@basecolorLightest, 40%);
     table.vct-vacation-log{
         tr{
-            background: lighten(@basecolorLightest, 50%)
+            background: lighten(@basecolorLightest, 45%);
         }
         tr:nth-child(even){
-            background: lighten(@basecolorLightest, 45%);
+            background: white;
         }
         td{
             font-size: 14px;
             //border-bottom:1px solid lighten(@basetextColor, 60%);
-            padding: 10px;
+            padding: 10px 20px;
             &:first-child{
                 text-align: left;
                 &:first-child:before{
@@ -106,6 +108,9 @@
     font-size: 18px;
     letter-spacing: -.3px;
     font-weight: 700;
+    .temp-member{
+        color: @highlightColor;
+    }
 }
 .vct-team-data-bar{
     padding:10px 0;
@@ -204,7 +209,7 @@
     text-decoration: none;
     color: @basecolorDarkest;
     .vct-team-wrapper{
-        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        box-shadow: 1px 1px 4px rgba(0,0,0,0.15);
         transition: @mainTransition;
         &:hover{
             box-shadow: none !important;
@@ -218,7 +223,7 @@
         position: relative;
         transition: @mainTransition;
         border-radius: 2px;
-        border: 1px solid lighten(@basecolorLightest, 48%);
+        border: 1px solid @borderImageMatch;
         .vct-client-logo{
             border-radius: 2px;
         }
@@ -261,4 +266,26 @@ input.vct-new-team{
 .nice-select .option:hover{
     background-color: @highlightColor !important;
     color:white;
+}
+.team-status-tbd{
+    &::after{
+        font-family: 'Themify';
+        font-weight: normal;
+        content: "\e6c5";
+        color:red;
+        margin-left:6px;
+        line-height: 36px;
+        font-size: 24px;
+    }
+}
+.team-status-done{
+    &::after{
+        font-family: 'Themify';
+        font-weight: normal;
+        content: "\e64c";
+        color:green;
+        margin-left:6px;
+        line-height: 36px;
+        font-size: 24px
+    }
 }

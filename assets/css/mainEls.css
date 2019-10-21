@@ -27,6 +27,9 @@ body {
 a {
   color: #1E9BCC;
 }
+p {
+  margin-bottom: .3rem;
+}
 .btn {
   border-radius: 2px;
   font-size: 14px;
@@ -100,7 +103,7 @@ input[type=number],
 input[type=password] {
   display: block;
   width: 100%;
-  padding: 8px;
+  padding: 8px 4px;
   box-sizing: border-box;
   outline: none;
   border: 1px solid #959592;
@@ -236,6 +239,26 @@ input[name=total] {
   margin-right: 6px;
   line-height: 18px;
 }
+.warning-message {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 0 4px;
+  font-weight: bold;
+  color: white;
+  background-color: #1E9BCC;
+  display: block;
+  clear: both;
+  margin-top: 10px;
+  width: auto;
+}
+.warning-message::before {
+  font-family: 'Themify';
+  content: "\e602";
+  color: white;
+  margin-right: 6px;
+  line-height: 18px;
+}
 @keyframes fadeinout {
   50% {
     opacity: 1;
@@ -346,6 +369,9 @@ input[name=total] {
 }
 .vct-top-nav .vct-user-menu .vct-user-profile-image i {
   line-height: 32px;
+}
+.vct-top-nav .vct-user-menu .vct-user-profile-image i:hover {
+  color: #1E9BCC;
 }
 .vct-top-nav .vct-user-menu .vct-user-profile-image img {
   width: 32px;
@@ -464,4 +490,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
 .expanded {
   width: 100%;
   left: 0;
+}
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15) !important;
 }

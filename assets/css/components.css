@@ -58,17 +58,19 @@
 }
 .vacation-log-element {
   display: block;
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #e1e1df;
 }
 .vacation-log-element table.vct-vacation-log tr {
-  background: #fafaf9;
+  background: #ededec;
 }
 .vacation-log-element table.vct-vacation-log tr:nth-child(even) {
-  background: #ededec;
+  background: white;
 }
 .vacation-log-element table.vct-vacation-log td {
   font-size: 14px;
-  padding: 10px;
+  padding: 10px 20px;
 }
 .vacation-log-element table.vct-vacation-log td:first-child {
   text-align: left;
@@ -87,6 +89,9 @@
   font-size: 18px;
   letter-spacing: -0.3px;
   font-weight: 700;
+}
+.vct-team-member-name .temp-member {
+  color: #1E9BCC;
 }
 .vct-team-data-bar {
   padding: 10px 0;
@@ -176,7 +181,7 @@
   color: #42423c;
 }
 .vct-team .vct-team-wrapper {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
   transition: all 0.12s linear;
 }
 .vct-team .vct-team-wrapper:hover {
@@ -190,7 +195,7 @@
   position: relative;
   transition: all 0.12s linear;
   border-radius: 2px;
-  border: 1px solid #f5f5f4;
+  border: 1px solid #f8f9fa;
 }
 .vct-team .vct-team-block .vct-client-logo {
   border-radius: 2px;
@@ -229,4 +234,22 @@
 .nice-select .option:hover {
   background-color: #1E9BCC !important;
   color: white;
+}
+.team-status-tbd::after {
+  font-family: 'Themify';
+  font-weight: normal;
+  content: "\e6c5";
+  color: red;
+  margin-left: 6px;
+  line-height: 36px;
+  font-size: 24px;
+}
+.team-status-done::after {
+  font-family: 'Themify';
+  font-weight: normal;
+  content: "\e64c";
+  color: green;
+  margin-left: 6px;
+  line-height: 36px;
+  font-size: 24px;
 }

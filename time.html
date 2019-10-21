@@ -391,10 +391,11 @@
                                 <option>Crealogix Team 9</option>
                                 <option>Crealogix Team 10</option>
                             </select>
+                            <span class="team-status-done" data-toggle="tooltip" data-placement="top" title="Approved"></span>
+                            <span class="team-status-tbd" data-toggle="tooltip" data-placement="top" title="Not approved yet"></span>
                             </div>
                         </div>
                         <div class="d-inline-flex w-50 justify-content-end">
-                            <p class="m-0">Aug 2019<span class="ml-2 font-weight-bold">168h</span></p>
                         </div>
                     </div>
                 </div>
@@ -419,7 +420,7 @@
                                 </div>
                                 <div class="col-3 col-lg-1 position-relative">
                                     <label for="normal" data-toggle="tooltip" data-placement="top" title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
-                                    <input type="text" value="0" name="normal" class="negative-value">
+                                    <input type="text" value="0" name="normal">
                                 </div>
                                 <div class="col-3 col-lg-1">
                                     <label for="travel" data-toggle="tooltip" data-placement="top" title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
@@ -526,7 +527,7 @@
                     <div class="row align-items-end mb-3">
                         <div class="col-12 col-md-7">
                             <label for="notes">Notes</label>
-                            <textarea class="negative-value" name="notes" rows="3" placeholder="Describing internal activity hours is mandatory."></textarea>
+                            <textarea name="notes" rows="3" placeholder="Describing internal activity hours is mandatory."></textarea>
                         </div>
                         <div class="col-12 col-md-5 mt-2 text-left text-md-right">
                             <button type="button" class="btn btn-highlight px-4" disabled>Save</button>
@@ -539,7 +540,8 @@
                     <div class="row">
                         <div class="col-12 vct-team-member-name">
                             <span>Ime I prezime clana tima</span>
-
+                            <div class="warning-message">Also on: Project Name 1</div>
+                            <div class="warning-message">Also on: Project Name 2</div>
                         </div>
                     </div>
                     <div class="row">
@@ -671,7 +673,8 @@
                 <div class="py-3 vct-team-member-block">
                     <div class="row">
                         <div class="col-12 vct-team-member-name">
-                            <span>Ime I prezime clana tima</span>
+                            <span>Ime Prezime</span>
+                            <span class="temp-member">| temp. member</span>
 
                         </div>
                     </div>
@@ -803,6 +806,9 @@
                 <!--Additional Team member entry 4-->
                 <div class="py-3 vct-team-member-block">
                     <div class="row mb-2">
+                            <div class="col-12 vct-team-member-name">
+                                    <span class="temp-member">temp. member</span>
+                                </div>
                         <div class="col-5 vct-team-member-name font-weight-normal">
                             <label for="employees">employee name</label>
                             <input class="w-100" id="employees" placeholder="enter name" value="" />

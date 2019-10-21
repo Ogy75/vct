@@ -36,6 +36,9 @@ body{
 a{
     color: @highlightColor;
 }
+p{
+    margin-bottom: .3rem;
+}
 .btn {
     border-radius: 2px;
     font-size: 14px;
@@ -105,7 +108,7 @@ label{
 input, textarea, input[type=text], input[type=email], input[type=number], input[type=password]{
         display:block;
         width:100%;
-        padding:8px;
+        padding:8px 4px;
         box-sizing: border-box;
         outline: none;
         border:1px solid lighten(@basecolorLightest, 10%);
@@ -237,6 +240,26 @@ input[name=total]{
         line-height: 18px;
     }
 }
+.warning-message{
+    font-family: 'Noto Sans',sans-serif;
+    font-size:12px;
+    line-height: 18px;
+    padding:0 4px;
+    font-weight: bold;
+    color:white;
+    background-color:@highlightColor;
+    display: block;
+    clear: both;
+    margin-top:10px;
+    width: auto;
+    &::before{
+        font-family: 'Themify';
+        content: "\e602";
+        color:white;
+        margin-right: 6px;
+        line-height: 18px;
+    }
+}
 
 @keyframes fadeinout {
     50% {
@@ -354,6 +377,9 @@ input[name=total]{
                 font-size: 16px;
                 i{
                     line-height: 32px;
+                    &:hover{
+                        color: @highlightColor;
+                    }
                 }
                 img{
                     width:32px;
@@ -490,4 +516,7 @@ padding: 0;
 .expanded {
     width: 100%;
     left:0;
+}
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.15)!important;
 }
