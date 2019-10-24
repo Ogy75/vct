@@ -49,6 +49,9 @@
 .vacation-status-secondary .vct-days__used {
   background: #1779a0;
 }
+.vacation-status-secondary .vct-days__earned {
+  background: #115773;
+}
 .vct-element-title {
   font-size: 14px;
   font-weight: 700;
