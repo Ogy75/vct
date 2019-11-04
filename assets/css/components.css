@@ -288,9 +288,9 @@ span.from-title {
   font-weight: bold;
   display: block;
 }
-.Toastify__toast-success {
-  background: #115773;
+.toast-success {
+  background: #115773 !important;
 }
-.Toastify__toast-error {
-  background: #b52014;
+.toast-error {
+  background: #b52014 !important;
 }
