@@ -64,6 +64,7 @@ p {
   position: relative;
   background: #1E9BCC;
   color: white;
+  border: 0;
 }
 .btn-highlight:hover {
   background: #0f4d66;
@@ -77,6 +78,7 @@ p {
 .btn-alert {
   background: #EA5145;
   color: white;
+  border: 0;
 }
 .btn-alert:hover {
   background: #e2281a;
