@@ -1,4 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap');
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v9/o-0IIpQlx3QUlC5A4PNr5TRF.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v9/o-0NIpQlx3QUlC5A4PNjXhFVZNyE.ttf) format('truetype');
+}
 @font-face {
   font-family: "Themify";
   font-style: normal;
@@ -24,22 +37,28 @@ body {
   min-width: 100%;
   padding: 15px;
 }
+.bg-light {
+  background: #f2f2f2 !important;
+}
 a {
   color: #1E9BCC;
 }
 p {
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 .btn {
-  border-radius: 2px;
-  font-size: 14px;
+  border-radius: 1px;
+  font-size: 15px;
+  line-height: 24px;
+  min-width: 24px;
 }
 .btn-highlight {
+  position: relative;
   background: #1E9BCC;
   color: white;
 }
 .btn-highlight:hover {
-  background: #1779a0;
+  background: #0f4d66;
   color: white;
 }
 .btn-highlight:disabled {
@@ -93,7 +112,7 @@ label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #919186;
+  color: #5d5d54;
 }
 input,
 textarea,
@@ -185,7 +204,7 @@ input[name=total] {
   line-height: 1;
   color: #42423c;
   text-shadow: none;
-  opacity: .5;
+  opacity: 0.5;
 }
 .close:hover {
   color: #1E9BCC;
@@ -215,10 +234,10 @@ input[name=total] {
   display: none;
 }
 .vtc-hide {
-  animation: fadeinout .1s linear forwards;
+  animation: fadeinout 0.1s linear forwards;
 }
 .vtc-show {
-  animation: fadeinout .1s linear backwards;
+  animation: fadeinout 0.1s linear backwards;
 }
 .error-message {
   font-family: 'Noto Sans', sans-serif;
@@ -304,7 +323,7 @@ input[name=total] {
   margin: 1px;
   border-radius: 50%;
   border: 5px solid #fff;
-  border-color: #fff transparent #fff transparent;
+  border-color: #1E9BCC transparent #fff transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
@@ -393,7 +412,7 @@ a.vct-back {
 .vct-left-nav .vct-logo {
   font-size: 18px;
   font-weight: 700;
-  padding: 30px;
+  padding: 20px;
 }
 .hide-left {
   margin-left: -250px;
@@ -416,11 +435,12 @@ ul.vct-nav-menu li .selected {
 ul.vct-nav-menu a {
   display: block;
   width: 100%;
-  padding: 15px 30px;
+  padding: 15px 20px;
   color: white;
   font-size: 12px;
+  letter-spacing: -0.2px;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.12s linear;
 }

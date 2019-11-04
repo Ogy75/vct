@@ -34,7 +34,7 @@
   }
 }
 .vacation-status-secondary .vacation-status-no-label {
-  font-size: 12px;
+  font-size: 13px;
   color: white;
 }
 .vacation-status-secondary .vct-days__unused {
@@ -63,13 +63,20 @@
   display: block;
   overflow-y: auto;
   overflow-x: hidden;
+  background: #f7f7f7;
   border: 1px solid #e1e1df;
 }
 .vacation-log-element table.vct-vacation-log tr {
   background: #ededec;
 }
+.vacation-log-element table.vct-vacation-log tr:hover {
+  background: #c0e7f6;
+}
 .vacation-log-element table.vct-vacation-log tr:nth-child(even) {
   background: white;
+}
+.vacation-log-element table.vct-vacation-log tr:nth-child(even):hover {
+  background: #c0e7f6;
 }
 .vacation-log-element table.vct-vacation-log td {
   font-size: 14px;
@@ -111,14 +118,14 @@
 }
 .vct-team-location {
   height: 39px;
-  border-radius: 2px;
+  border-radius: 1px;
   background: #aeaeac;
 }
 .vct-team-location p {
   color: white;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 700;
+  font-weight: 600;
   white-space: nowrap;
   line-height: 39px;
   margin: 0;
@@ -185,11 +192,12 @@
   color: #42423c;
 }
 .vct-team .vct-team-wrapper {
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e1e1df;
   transition: all 0.12s linear;
 }
 .vct-team .vct-team-wrapper:hover {
   box-shadow: none !important;
+  border: 1px solid #1E9BCC;
 }
 .vct-team .vct-team-wrapper a {
   text-decoration: none;
@@ -256,4 +264,18 @@
   margin-left: 6px;
   line-height: 36px;
   font-size: 24px;
+}
+.modal-content {
+  border: 0;
+  border-radius: 2px;
+}
+.modal-content .modal-title {
+  font-weight: 600;
+  color: #EA5145;
+}
+.modal-content .modal-header {
+  border-bottom: 0;
+}
+.modal-content .modal-footer {
+  border-top: 0;
 }
