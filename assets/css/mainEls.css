@@ -169,6 +169,10 @@ textarea {
   line-height: 18px;
   padding: 2px 4px;
 }
+textarea:disabled {
+  background: #ebebeb;
+  color: #696964;
+}
 input[name=total] {
   font-weight: 700;
 }
