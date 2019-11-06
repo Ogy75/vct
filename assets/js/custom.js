@@ -16,9 +16,6 @@ $(function () {
     menuToggleButton.on('click', function () {
         menuPanel.toggleClass('hide-left');
         contentExpand.toggleClass('expanded');
-        if (windowWidth < 1281) {
-            $('.vct-left-nav-wrapper').toggleClass('shadow-lg');
-        }
     });
 
     //left side menu toggle navigation

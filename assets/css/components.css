@@ -294,3 +294,16 @@ span.from-title {
 .toast-error {
   background: #b52014 !important;
 }
+.time-required {
+  font-weight: 700;
+  font-size: 16px;
+  color: #EA5145;
+  display: block;
+  line-height: 16px;
+}
+.time-required::before {
+  content: "time required: ";
+  font-weight: normal;
+  color: #42423c;
+  font-size: 14px;
+}

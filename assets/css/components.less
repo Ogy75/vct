@@ -330,3 +330,16 @@ span.from-title{
 .toast-error {
     background:darken(@warningColor, 20%) !important;
   }
+  .time-required{
+      font-weight: 700;
+      font-size: 16px;
+      color: @warningColor;
+      display: block;
+      line-height: 16px;
+      &::before{
+        content: "time required: ";
+        font-weight: normal;
+        color:@basetextColor;
+        font-size: 14px;
+      }
+  }
