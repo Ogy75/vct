@@ -189,7 +189,6 @@ $(function () {
     //toggle clear btn to search
     $('.filter-projects').keyup(function(){
         var s = $(this).val();
-        console.log(s);
         if(s.length > 0){
             $('.reset-query').show();
         }
