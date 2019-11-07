@@ -307,3 +307,6 @@ span.from-title {
   color: #42423c;
   font-size: 14px;
 }
+.no-results-message {
+  display: none;
+}

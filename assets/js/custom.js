@@ -201,4 +201,20 @@ $(function () {
         $('.filter-projects').val('').focus();
         $('.reset-query').hide();
       });
+
+      //Live Search
+      $(document).ready(function(){
+        $(".filter-projects").keyup(function(){
+            $('.add-team').remove();
+            var filter = $(this).val(), count = 0;
+                $(".vct-team").each(function(){     
+                if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                    $(this).hide();     
+                } else {
+                    $(this).show();
+                    count++;
+                }
+            });
+        });
+    });
 });
