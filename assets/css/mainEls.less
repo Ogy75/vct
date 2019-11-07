@@ -153,19 +153,21 @@ input[name=total]{
 input.filter-projects{
     position: relative;
     text-align: center;
+    height: 60px;
     border-bottom: 1px solid lighten(@basecolorLightest, 20%);
     border-left:1px solid transparent;
     border-right:1px solid transparent;
     border-top:1px solid transparent;
-    &:focus{
-    border-bottom: 1px solid @highlightColor;
-    border-left:1px solid transparent;
-    border-right:1px solid transparent;
-    border-top:1px solid transparent;
-    }
-    &::placeholder{
-        text-align: center;
-    }
+    background: transparent;
+        &:focus{
+        border-bottom: 1px solid @highlightColor;
+        border-left:1px solid transparent;
+        border-right:1px solid transparent;
+        border-top:1px solid transparent;
+        }
+        &::placeholder{
+            text-align: center;
+        }
 }
 
 .easy-autocomplete-container ul li.selected {
@@ -556,4 +558,11 @@ padding: 0;
 }
 .no-results{
  color: lighten(@basecolorLightest, 25%);
+}
+.reset-query{
+    position: absolute;
+    top:6px;
+    right:6px;
+    line-height: 48px;
+    display: none;
 }

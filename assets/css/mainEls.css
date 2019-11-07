@@ -179,10 +179,12 @@ input[name=total] {
 input.filter-projects {
   position: relative;
   text-align: center;
+  height: 60px;
   border-bottom: 1px solid #aeaeac;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   border-top: 1px solid transparent;
+  background: transparent;
 }
 input.filter-projects:focus {
   border-bottom: 1px solid #1E9BCC;
@@ -549,4 +551,11 @@ ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
 }
 .no-results {
   color: #bbbbb9;
+}
+.reset-query {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  line-height: 48px;
+  display: none;
 }

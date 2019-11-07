@@ -186,5 +186,20 @@ $(function () {
         inputProj.removeClass('d-none');
     });
 
-    //Search width
+    //toggle clear btn to search
+    $('.filter-projects').keyup(function(){
+        var s = $(this).val();
+        console.log(s);
+        if(s.length > 0){
+            $('.reset-query').show();
+        }
+        else{
+            $('.reset-query').hide();
+        }
+      });
+      //Clear&focus btn fn.
+      $('.reset-query').on('click', function(){
+        $('.filter-projects').val('').focus();
+        $('.reset-query').hide();
+      });
 });
