@@ -202,6 +202,7 @@ $(function () {
         $('.reset-query').hide();
       });
 
+
       //Live Search
       $(document).ready(function(){
         $(".filter-projects").keyup(function(){
@@ -209,12 +210,17 @@ $(function () {
             var filter = $(this).val(), count = 0;
                 $(".vct-team").each(function(){     
                 if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                    $(this).hide();     
+                    $(this).hide();
                 } else {
                     $(this).show();
                     count++;
                 }
             });
+            if (count > 0) {
+                $(".no-results-message").hide();
+            } else {
+                $(".no-results-message").show();
+            }
         });
     });
 });
