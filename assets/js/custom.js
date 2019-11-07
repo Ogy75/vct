@@ -135,8 +135,6 @@ $(function () {
             }
         }
     };
-    $('#employees').easyAutocomplete(employees);
-    $('#position').easyAutocomplete(employees);
 
     //nice select ini
     $('select').niceSelect();
@@ -187,4 +185,6 @@ $(function () {
         projTitle.hide();
         inputProj.removeClass('d-none');
     });
+
+    //Search width
 });

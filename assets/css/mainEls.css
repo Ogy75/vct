@@ -176,6 +176,23 @@ textarea:disabled {
 input[name=total] {
   font-weight: 700;
 }
+input.filter-projects {
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid #aeaeac;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+input.filter-projects:focus {
+  border-bottom: 1px solid #1E9BCC;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+input.filter-projects::placeholder {
+  text-align: center;
+}
 .easy-autocomplete-container ul li.selected {
   color: white;
   background: none repeat scroll 0 0 #1E9BCC;
@@ -529,4 +546,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
 }
 .shadow-sm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15) !important;
+}
+.no-results {
+  color: #bbbbb9;
 }

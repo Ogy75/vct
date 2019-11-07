@@ -150,6 +150,24 @@ textarea{
 input[name=total]{
     font-weight: 700;
 }
+input.filter-projects{
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid lighten(@basecolorLightest, 20%);
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    border-top:1px solid transparent;
+    &:focus{
+    border-bottom: 1px solid @highlightColor;
+    border-left:1px solid transparent;
+    border-right:1px solid transparent;
+    border-top:1px solid transparent;
+    }
+    &::placeholder{
+        text-align: center;
+    }
+}
+
 .easy-autocomplete-container ul li.selected {
     color: white;
     background: none repeat scroll 0 0 @focusColor;
@@ -535,4 +553,7 @@ padding: 0;
 }
 .shadow-sm {
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.15)!important;
+}
+.no-results{
+ color: lighten(@basecolorLightest, 25%);
 }
