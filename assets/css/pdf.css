@@ -22,12 +22,16 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+@page {
+  margin-top: 2cm;
+  margin-bottom: 2cm;
+}
 .doc-container {
   position: relative;
   width: 960px;
   margin: 0 auto;
   float: none;
-  padding: 60px 30px;
+  padding: 40px;
 }
 .doc-container:after {
   display: block;
@@ -60,21 +64,32 @@ body {
 }
 .doc-container table.overview th {
   font-size: 14px;
+  line-height: 14px;
   border-left: 1px solid lightgray;
   padding: 5px 20px;
   font-weight: normal;
 }
+.doc-container table.overview th:last-of-type {
+  border-right: 1px solid lightgray;
+}
 .doc-container table.overview td {
   font-size: 14px;
+  line-height: 14px;
   border-left: 1px solid lightgray;
   padding: 5px 20px;
   font-weight: 700;
+}
+.doc-container table.overview td:last-of-type {
+  border-right: 1px solid lightgray;
 }
 .doc-container table.data {
   width: 100%;
 }
 .doc-container table.data tr {
   border-bottom: 1px solid lightgray;
+}
+.doc-container table.data tr:nth-child(even) {
+  background: #f3f3f3;
 }
 .doc-container table.data th {
   font-size: 12px;
@@ -103,4 +118,10 @@ body {
   font-size: 12px;
   margin: 0;
   line-height: 14px;
+}
+.doc-container table.data tr.total {
+  background: lightgray;
+}
+.doc-container table.data tr.total td {
+  padding: 20px 10px;
 }
