@@ -29,7 +29,14 @@ body{
 }
 .container {
     min-width:100%;
-    padding:15px;
+    width:100%;
+    padding:24px;
+}
+@media(max-width:768px){
+    .container {
+        min-width:100%;
+        padding:15px;
+    }
 }
 .bg-light{
     background: lighten(@basecolorLightest, 47%) !important;
@@ -46,6 +53,7 @@ p{
     line-height: 24px;
     min-width: 24px;
     font-weight: 700;
+    cursor: pointer;
 }
   .btn-highlight{
       position: relative;
@@ -83,7 +91,15 @@ p{
               color:@highlightColor;
           }
       }
-
+a:not([href]):not([tabindex]){
+    &:hover{
+        color:@highlightColor;
+    }
+}
+.remove-team-member1, .remove-team-member2{
+    padding-right:0;
+    padding-left:0;
+}
 .vct-icon{
     color: @basecolorLighter;
     transition: @mainTransition;
@@ -274,6 +290,7 @@ input.filter-projects{
     }
 }
 .warning-message{
+    display: block;
     font-family: 'Noto Sans',sans-serif;
     font-size:12px;
     line-height: 18px;
@@ -580,4 +597,73 @@ padding: 0;
 }
 label.btn {
     margin: 0;
+}
+
+.item-menu{
+    width:20px;
+    position: relative !important;
+    cursor: pointer;
+    text-align: center !important;
+    font-size: 16px;
+    color:fade(@basetextColor, 60%);
+        &:hover{
+            color:@highlightColor;
+    }
+    .item-menu-wrapper{
+        position: absolute;
+        top:28px;
+        right:0;
+        margin-right: -6px;
+        background: white;
+        box-shadow: 0 1px 4px 1px rgba(0,0,0,.2);
+        display: none;
+        min-width: 250px;
+        z-index: 3;
+        .arrow{
+            position: absolute;
+            top:0;
+            right:11px;
+            width:10px;
+            height:10px;
+            margin-top:-6px;
+            border-top:1px solid rgba(0,0,0,.1);
+            border-left:1px solid rgba(0,0,0,.1);
+            background: white;
+            transform: rotate(45deg);
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            .item-menu-title{
+                display: block;
+                color: fade(@basetextColor, 50%);
+                padding:14px;
+                font-family:  'Roboto', sans-serif;
+                font-weight: 300;
+                font-size: 11px;
+                text-align: right;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                cursor: default;
+            }
+            li{
+                a{
+                    display: block;
+                    width:100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    font-size: 14px;
+                    padding: 14px;
+                    text-decoration: none;
+                    font-family:  'Roboto', sans-serif;
+                    text-align: right;
+                    float: right;
+                    &:hover{
+                        color:white;
+                        background: @highlightColor;
+                    }
+                }
+            }
+        }
+    }
 }

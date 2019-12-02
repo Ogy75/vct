@@ -42,7 +42,14 @@ body {
 }
 .container {
   min-width: 100%;
-  padding: 15px;
+  width: 100%;
+  padding: 24px;
+}
+@media (max-width: 768px) {
+  .container {
+    min-width: 100%;
+    padding: 15px;
+  }
 }
 .bg-light {
   background: #f2f2f2 !important;
@@ -59,6 +66,7 @@ p {
   line-height: 24px;
   min-width: 24px;
   font-weight: 700;
+  cursor: pointer;
 }
 .btn-highlight {
   position: relative;
@@ -95,6 +103,14 @@ p {
 }
 .btn-action:hover {
   color: #1E9BCC;
+}
+a:not([href]):not([tabindex]):hover {
+  color: #1E9BCC;
+}
+.remove-team-member1,
+.remove-team-member2 {
+  padding-right: 0;
+  padding-left: 0;
 }
 .vct-icon {
   color: #696964;
@@ -573,4 +589,70 @@ ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
 }
 label.btn {
   margin: 0;
+}
+.item-menu {
+  width: 20px;
+  position: relative !important;
+  cursor: pointer;
+  text-align: center !important;
+  font-size: 16px;
+  color: rgba(66, 66, 60, 0.6);
+}
+.item-menu:hover {
+  color: #1E9BCC;
+}
+.item-menu .item-menu-wrapper {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  margin-right: -6px;
+  background: white;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.2);
+  display: none;
+  min-width: 250px;
+  z-index: 3;
+}
+.item-menu .item-menu-wrapper .arrow {
+  position: absolute;
+  top: 0;
+  right: 11px;
+  width: 10px;
+  height: 10px;
+  margin-top: -6px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  transform: rotate(45deg);
+}
+.item-menu .item-menu-wrapper ul {
+  list-style: none;
+  padding: 0;
+}
+.item-menu .item-menu-wrapper ul .item-menu-title {
+  display: block;
+  color: rgba(66, 66, 60, 0.5);
+  padding: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  text-align: right;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: default;
+}
+.item-menu .item-menu-wrapper ul li a {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  padding: 14px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  text-align: right;
+  float: right;
+}
+.item-menu .item-menu-wrapper ul li a:hover {
+  color: white;
+  background: #1E9BCC;
 }

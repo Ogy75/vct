@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/ti.css">
     <link rel="stylesheet" href="assets/css/mainEls.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
     <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
     <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
@@ -20,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
@@ -37,8 +38,8 @@
 
     <!--Spinner-->
     <div class="lds-dual-ring-bg">
-            <div class="lds-dual-ring"></div>
-        </div>
+        <div class="lds-dual-ring"></div>
+    </div>
 
     <!--left nav-->
     <div class="vct-left-nav">
@@ -68,21 +69,22 @@
 
     <!--top-nav-->
     <div class="vct-top-nav bg-white border-bottom shadow-sm">
-            <div class="vct-user-menu float-right">
-                <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="ti-fullscreen full-view"></i></div>
-                <div class="d-inline-block vct-user-profile-image position-relative mr-3">
-                    <img src="assets/images/user.jpg" alt="user name">
-                </div>
-                <div class="vct-user-menu-block position-absolute">
-                    <div class="vct-user-menu-block-arrow"></div>
-                    <ul>
-                        <li class="user-profile-name">Gina Lollobrigida</li>
-                        <li class="user-profile-position">Operations Manager</li>
-                        <li><a href="login.html">Sign out</a></li>
-                    </ul>
-                </div>
+        <div class="vct-user-menu float-right">
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
+                    class="ti-fullscreen full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mr-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
             </div>
         </div>
+    </div>
 
 
     <!--Panel Content-->
@@ -105,8 +107,17 @@
                 </div>
                 <div class="col-4">
                     <div class="d-flex text-right justify-content-end align-items-center h-100">
-                            <button class="edit-proj btn btn-action ti-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Rename Project"></button>
-                        <button class="btn delete-project btn-action ti-trash" data-toggle="tooltip" data-placement="top" title="Delete Project" onclick="return confirm('Are you sure you want to delete this project? This action can not be undone!')"></button>
+                        <div class="item-menu fas fa-ellipsis-v ">
+                            <div class="item-menu-wrapper">
+                                <div class="arrow"></div>
+                                <ul>
+                                    <span class="item-menu-title">Project options</span>
+                                    <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                    <li><a href="javascript:void(0)">Generate &amp; Download PDF</a></li>
+                                    <li><a href="javascript:void(0)">Add New Team to the Project</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -116,28 +127,41 @@
                             <div class="vct-select-team mb-3">
                                 <label>teams</label>
                                 <select>
-                                <option>Crealogix Team 1</option>
-                                <option>Crealogix Team 2</option>
-                                <option>Crealogix Team 3</option>
-                                <option>Crealogix Team 4</option>
-                                <option>Crealogix Team 5</option>
-                                <option>Crealogix Team 6</option>
-                                <option>Crealogix Team 7</option>
-                                <option>Crealogix Team 8</option>
-                                <option>Crealogix Team 9</option>
-                                <option>Crealogix Team 10</option>
-                            </select>
+                                    <option>Crealogix Team 1</option>
+                                    <option>Crealogix Team 2</option>
+                                    <option>Crealogix Team 3</option>
+                                    <option>Crealogix Team 4</option>
+                                    <option>Crealogix Team 5</option>
+                                    <option>Crealogix Team 6</option>
+                                    <option>Crealogix Team 7</option>
+                                    <option>Crealogix Team 8</option>
+                                    <option>Crealogix Team 9</option>
+                                    <option>Crealogix Team 10</option>
+                                </select>
                             </div>
                             <div class="w-100 vct-new-team-wrapper">
                                 <label>teams</label>
                                 <input class="vct-new-team mb-3" type="text" placeholder="Enter new Team name" />
-                                <div class="error-message text-center">Greska, greska, greska !!! Autodestrukcija za 10, 9, 8 ...</div>
+                                <div class="error-message text-center">Greska, greska, greska !!! Autodestrukcija za 10,
+                                    9, 8 ...</div>
                             </div>
                         </div>
                         <div class="d-inline-flex w-25 justify-content-end">
-                            <button class="btn btn-action ti-plus add-new-team" data-toggle="tooltip" data-placement="top" title="Add New Team"></button>
-                            <button class="edit-team btn btn-action ti-pencil" data-toggle="tooltip" data-placement="top" title="Rename Team"></button>
-                            <button class="delete-team btn btn-action ti-trash" data-toggle="tooltip" data-placement="top" title="Delete Selected Team" onclick="return confirm('Are you sure you want to delete selected team? This action can not be undone!')"></button>
+                            <div class="float-right h-100">
+                                <div class="item-menu fas fa-ellipsis-v">
+                                    <div class="item-menu-wrapper">
+                                        <div class="arrow"></div>
+                                        <ul>
+                                            <span class="item-menu-title">Team options</span>
+                                            <li><a href="javascript:void(0)">Export Excel file for All Team Members</a>
+                                            </li>
+                                            <li><a href="javascript:void(0)">Generate &amp; Download PDF files for All
+                                                    Team Members</a></li>
+                                            <li><a href="javascript:void(0)">Delete Selected Team</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,19 +171,28 @@
             <div class="team-members">
                 <!--Team member entry-->
                 <div class="py-3 vct-team-member-block ">
-                        <div class="error-message">Greska, greska, greska !!! Autodestrukcija za 10, 9, 8 ...</div>
+                    <div class="error-message">Greska, greska, greska !!! Autodestrukcija za 10, 9, 8 ...</div>
                     <div class="row mb-3 ">
                         <div class="col-5 vct-team-member-name font-weight-normal ">
                             <label for="employees ">employee name</label>
-                            <input class="w-100 negative-value" id="employees " placeholder="enter name " value="Paja Milojkovic " />
+                            <input class="w-100 negative-value" id="employees " placeholder="enter name "
+                                value="Paja Milojkovic " />
                         </div>
                         <div class="col-5 vct-team-member-name font-weight-normal ">
                             <label for="employees ">position</label>
                             <input class="w-100 " id="position " placeholder="find position " value="Team Lead " />
                         </div>
                         <div class="col-2 ">
-                            <div class="d-flex align-items-end justify-content-end h-100 ">
-                                <button class="btn ti-close btn-action remove-team-member1 " data-toggle="tooltip " data-placement="top " title="Remove Team Member "></button>
+                            <div class="d-flex text-right justify-content-end align-items-center h-100 mt-2">
+                                <div class="item-menu fas fa-ellipsis-v">
+                                    <div class="item-menu-wrapper">
+                                        <div class="arrow"></div>
+                                        <ul>
+                                            <span class="item-menu-title">Operations options</span>
+                                            <li><a href="javascript:void(0)">Remove Team Member</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

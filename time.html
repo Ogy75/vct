@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=2540px, initial-scale=1.33">
     <title>Team Time Log</title>
     <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/ti.css">
@@ -88,7 +89,6 @@
                                     <p class="vct-element-title d-inline-block">Free log / <span>June 2019.</span>
                                     </p>
                                     <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i>
-
                                 </div>
                             </div>
                             <div class="vacation-log-element">
@@ -412,7 +412,16 @@
                 </div>
                 <div class="col-4">
                     <div class="d-flex text-right justify-content-end align-items-center h-100">
-                        <button class="btn btn-action ti-export" data-toggle="tooltip" data-placement="top" title="Export Project to Excell"></button>
+                        <div class="item-menu fas fa-ellipsis-v">
+                            <div class="item-menu-wrapper">
+                                <div class="arrow"></div>
+                                <ul>
+                                    <span class="item-menu-title">Project options</span>
+                                    <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                    <li><a href="javascript:void(0)">Generate & Download PDF</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 py-3 bg-light">
@@ -435,6 +444,18 @@
                             </div>
                         </div>
                         <div class="d-inline-flex w-50 justify-content-end">
+                                <div class="float-right h-100">
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                    <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Team options</span>
+                                                    <li><a href="javascript:void(0)">Export Excel file for All Team Members</a></li>
+                                                    <li><a href="javascript:void(0)">Generate & Download PDF files for All Team Members</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                         </div>
                     </div>
                 </div>
@@ -446,8 +467,18 @@
                     <div class="row">
                         <div class="col-12 vct-team-member-name">
                             <span>Ime I prezime clana tima</span>
-                            <label class="btn btn-action float-right p-0 pl-3" data-toggle="tooltip" data-placement="top" title="" data-original-title="Import Team member time to Excell"><span class="ti-import mr-2"></span>import</label>
-                            <label class="btn btn-action float-right p-0" data-toggle="tooltip" data-placement="top" title="" data-original-title="Export Team member time to Excell"><span class="ti-export mr-2"></span>export</label>
+                            <div class="float-right h-100">
+                                    <div class="item-menu fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Team Member options</span>
+                                                <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                                <li><a href="javascript:void(0)">Generate & Download PDF</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                     <div class="row">
@@ -455,7 +486,151 @@
                             <div class="row">
                                 <div class="col-12 col-lg-2 align-self-end mt-3">
                                     <div class="d-flex align-items-center vct-team-location">
-                                        <p class="w-100 text-center">Belgrade</p>
+                                        <p class="w-100 text-center">Office</p>
+                                    </div>
+                                </div>
+                                <div class="col-3 col-lg-1 position-relative">
+                                    <label for="normal" data-toggle="tooltip" data-placement="top" title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                    <input type="text" value="0" name="normal">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="travel" data-toggle="tooltip" data-placement="top" title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                    <input type="text" value="0" name="travel">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="totalWork">Total work</label>
+                                    <input type="text" value="0" name="totalWork" disabled>
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="overtime" data-toggle="tooltip" data-placement="top" title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                    <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="Odobreno od strane klijenta"><input type="checkbox"></div>
+                                    <input type="text" value="16" name="overtime">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                        internal</label>
+                                    <input type="text" value="8" name="eiInternal">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="free" data-toggle="tooltip" data-placement="top" title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                    <input type="text" value="0" name="free">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="holidays" data-toggle="tooltip" data-placement="top" title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                    <input type="text" value="0" name="holidays">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="sickness" data-toggle="tooltip" data-placement="top" title="Sickness - bolovanja">Sickness</label>
+                                    <input type="text" value="0" name="sickness">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="daysOff" data-toggle="tooltip" data-placement="top" title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                        Off</label>
+                                    <input type="text" value="0" name="daysOff">
+                                    <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="total">Total</label>
+                                    <input type="text" value="0" name="total" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-2 align-self-end mt-3">
+                                    <div class="d-flex align-items-center vct-team-location">
+                                        <p class="w-100 text-center">On-site</p>
+                                    </div>
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="normal" data-toggle="tooltip" data-placement="top" title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                    <input type="text" value="0" name="normal">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="travel" data-toggle="tooltip" data-placement="top" title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                    <input type="text" value="0" name="travel">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="totalWork">Total work</label>
+                                    <input type="text" value="0" name="totalWork" disabled>
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="overtime" data-toggle="tooltip" data-placement="top" title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                    <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="Odobreno od strane klijenta"><input type="checkbox"></div>
+                                    <input type="text" value="0" name="overtime">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                        internal</label>
+                                    <input type="text" value="0" name="eiInternal">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="free" data-toggle="tooltip" data-placement="top" title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                    <input type="text" value="0" name="free">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="holidays" data-toggle="tooltip" data-placement="top" title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                    <input type="text" value="0" name="holidays">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="sickness" data-toggle="tooltip" data-placement="top" title="Sickness - bolovanja">Sickness</label>
+                                    <input type="text" value="0" name="sickness">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="daysOff" data-toggle="tooltip" data-placement="top" title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                        Off</label>
+                                    <input type="text" value="0" name="daysOff">
+                                </div>
+                                <div class="col-3 col-lg-1">
+                                    <label for="total">Total</label>
+                                    <input type="text" value="0" name="total" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-lg-1">
+                            <label for="deviation" data-toggle="tooltip" data-placement="top" title="Odsutupanje od potrebnog vremena">Deviation</label>
+                            <input class="deviation" type="text" value="-1" name="deviation" disabled>
+                        </div>
+                    </div>
+
+
+                    <div class="row align-items-end mb-3">
+                        <div class="col-12 col-md-7">
+                            <label for="notes">Notes</label>
+                            <textarea name="notes" rows="3" placeholder="Describing internal activity hours is mandatory."></textarea>
+                        </div>
+                        <div class="col-12 col-md-5 mt-2 text-left text-md-right">
+                            <button type="button" class="btn btn-highlight px-4">Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Team member entry 2-->
+                <div class="py-3 vct-team-member-block">
+                    <div class="row">
+                        <div class="col-12 vct-team-member-name">
+                            <span>Ime I prezime clana tima</span>
+                            <div class="float-right h-100">
+                                    <div class="item-menu fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Team Member options</span>
+                                                <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                                <li><a href="javascript:void(0)">Generate & Download PDF</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12 col-lg-2 align-self-end mt-3">
+                                    <div class="d-flex align-items-center vct-team-location">
+                                        <p class="w-100 text-center">Office</p>
                                     </div>
                                 </div>
                                 <div class="col-3 col-lg-1 position-relative">
@@ -575,13 +750,23 @@
                     </div>
                 </div>
 
-                <!--Team member entry 2-->
+                <!--Team member entry 3-->
                 <div class="py-3 vct-team-member-block">
                     <div class="row">
                         <div class="col-12 vct-team-member-name">
                             <span>Ime I prezime clana tima</span>
-                            <button class="btn btn-action ti-import float-right" data-toggle="tooltip" data-placement="top" title="" data-original-title="Import Team member time to Excell"></button>
-                            <button class="btn btn-action ti-export float-right" data-toggle="tooltip" data-placement="top" title="" data-original-title="Export Team member time to Excell"></button>
+                            <div class="float-right h-100">
+                                    <div class="item-menu fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Team Member options</span>
+                                                <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                                <li><a href="javascript:void(0)">Generate & Download PDF</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             <div class="warning-message">Also on: Project Name 1</div>
                             <div class="warning-message">Also on: Project Name 2</div>
                         </div>
@@ -591,7 +776,7 @@
                             <div class="row">
                                 <div class="col-12 col-lg-2 align-self-end mt-3">
                                     <div class="d-flex align-items-center vct-team-location">
-                                        <p class="w-100 text-center">Belgrade</p>
+                                        <p class="w-100 text-center">Office</p>
                                     </div>
                                 </div>
                                 <div class="col-3 col-lg-1 position-relative">
@@ -717,8 +902,18 @@
                         <div class="col-12 vct-team-member-name">
                             <span>Ime Prezime</span>
                             <span class="temp-member">| temp. member</span>
-                            <button class="btn btn-action ti-import float-right" data-toggle="tooltip" data-placement="top" title="" data-original-title="Import Team member time to Excell"></button>
-                            <button class="btn btn-action ti-export float-right" data-toggle="tooltip" data-placement="top" title="" data-original-title="Export Team member time to Excell"></button>
+                            <div class="float-right h-100">
+                                    <div class="item-menu fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Team Member options</span>
+                                                <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                                <li><a href="javascript:void(0)">Generate & Download PDF</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
 
                         </div>
                     </div>
@@ -727,7 +922,7 @@
                             <div class="row">
                                 <div class="col-12 col-lg-2 align-self-end mt-3">
                                     <div class="d-flex align-items-center vct-team-location">
-                                        <p class="w-100 text-center">Belgrade</p>
+                                        <p class="w-100 text-center">Office</p>
                                     </div>
                                 </div>
                                 <div class="col-3 col-lg-1 position-relative">
@@ -852,6 +1047,19 @@
                     <div class="row mb-2">
                             <div class="col-12 vct-team-member-name">
                                     <span class="temp-member">temp. member</span>
+                                    <div class="float-right h-100">
+                                            <div class="item-menu fas fa-ellipsis-v">
+                                                <div class="item-menu-wrapper">
+                                                        <div class="arrow"></div>
+                                                    <ul>
+                                                        <span class="item-menu-title">Team Member options</span>
+                                                        <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                                        <li><a href="javascript:void(0)">Generate & Download PDF</a></li>
+                                                        <li><a href="javascript:void(0)">Remove Temp. Team Member</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                         <div class="col-5 vct-team-member-name font-weight-normal">
                             <label for="employees">employee name</label>
@@ -861,18 +1069,13 @@
                             <label for="employees">position</label>
                             <input class="w-100" id="position" placeholder="find position" value="" />
                         </div>
-                        <div class="col-2">
-                            <div class="d-flex align-items-start justify-content-end h-100">
-                                <button class="btn ti-close btn-action remove-team-member p-0" data-toggle="tooltip" data-placement="top" title="Remove Team Member"></button>
-                            </div>
-                        </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
                                 <div class="col-12 col-lg-2 align-self-end mt-3">
                                     <div class="d-flex align-items-center vct-team-location">
-                                        <p class="w-100 text-center">Belgrade</p>
+                                        <p class="w-100 text-center">Office</p>
                                     </div>
                                 </div>
                                 <div class="col-3 col-lg-1 position-relative">
@@ -1021,7 +1224,7 @@
                                     <div class="col-12 col-md-10">
                                         <div class="row">
                                             <div class="col-12 col-lg-2">
-                                                <strong class="text-highlight">Belgrade</strong>
+                                                <strong class="text-highlight">Office</strong>
                                             </div>
                                             <div class="col-3 col-lg-1">
                                                 <small>Normal</small>
