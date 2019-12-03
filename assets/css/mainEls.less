@@ -679,3 +679,29 @@ label.btn {
         }
     }
 }
+
+.table-global{
+    th{
+        background:white;
+        padding:10px 0;
+    }
+    tr{
+        background: lighten(@basecolorLightest, 48%);
+        &:hover{
+            background: lighten(@highlightColor, 40%);
+        }
+        td:last-of-type{
+            width:40px;
+        }
+    }
+    tr:nth-child(even){
+        background: white;
+        &:hover{
+            background: lighten(@highlightColor, 40%);
+        }
+    }
+    td{
+        padding: 10px;
+    }
+    
+}

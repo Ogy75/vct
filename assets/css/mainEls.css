@@ -668,3 +668,25 @@ label.btn {
   color: white;
   background: #1E9BCC;
 }
+.table-global th {
+  background: white;
+  padding: 10px 0;
+}
+.table-global tr {
+  background: #f5f5f4;
+}
+.table-global tr:hover {
+  background: #c0e7f6;
+}
+.table-global tr td:last-of-type {
+  width: 40px;
+}
+.table-global tr:nth-child(even) {
+  background: white;
+}
+.table-global tr:nth-child(even):hover {
+  background: #c0e7f6;
+}
+.table-global td {
+  padding: 10px;
+}
