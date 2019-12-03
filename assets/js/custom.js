@@ -244,11 +244,24 @@ $(function () {
 //Generate pdf  - za potrebe simulacije
 $('.js_generate').on('click', function(ev){
     var trigger = $(ev.target);
-    var element = trigger.parents('.vct-team-member-block').find('.pdf-report');
+    var element = trigger.parents('.parent').find('.pdf-report');
     if(!element.hasClass('fa-file-pdf')){
     element.removeClass('d-none');
     element.css('background', 'url("/assets/images/micro-loader.gif")').delay(3000).queue(function(){
         element.addClass('fa-file-pdf');
+        element.css('background', 'transparent');
+        trigger.remove();
+    });
+    }
+});
+
+$('.js_generateZip').on('click', function(ev){
+    var trigger = $(ev.target);
+    var element = trigger.parents('.parent').find('.pdf-report');
+    if(!element.hasClass('fa-file-archive')){
+    element.removeClass('d-none');
+    element.css('background', 'url("/assets/images/micro-loader.gif")').delay(3000).queue(function addPdfs(){
+        element.addClass('fa-file-archive');
         element.css('background', 'transparent');
         trigger.remove();
     });

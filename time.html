@@ -417,7 +417,6 @@
                                 <ul>
                                     <span class="item-menu-title">Project options</span>
                                     <li><a href="javascript:void(0)">Export to Excel</a></li>
-                                    <li><a href="javascript:void(0)">Generate & Download PDF</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -442,15 +441,16 @@
                             </select>
                             </div>
                         </div>
-                        <div class="d-inline-flex w-50 justify-content-end">
-                                <div class="float-right h-100">
+                        <div class="d-flex w-50 justify-content-end">
+                                <div class="d-flex justify-content-center float-right h-100 parent">
+                                        <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas mr-2 pdf-report" data-toggle="tooltip" data-placement="top" title="Download Zip file containing Time reports for all Team Members"></a>
                                         <div class="item-menu fas fa-ellipsis-v">
                                             <div class="item-menu-wrapper">
                                                     <div class="arrow"></div>
                                                 <ul>
                                                     <span class="item-menu-title">Team options</span>
                                                     <li><a href="javascript:void(0)">Export Excel file for All Team Members</a></li>
-                                                    <li><a href="javascript:void(0)">Generate & Download PDF files for All Team Members</a></li>
+                                                    <li><a class="js_generateZip" href="javascript:void(0)">Generate PDF for All Team Members</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -463,11 +463,11 @@
             <div class="team-members">
                 <!--Team member entry 1-->
                 <div class="py-3 vct-team-member-block">
-                    <div class="row">
+                    <div class="row parent">
                         <div class="col-12 vct-team-member-name">
-                            <span>Ime I prezime clana tima</span>
-                            <div class="d-flex justify content-center float-right h-100">
-                                <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas mr-2 pdf-report" data-toggle="tooltip" data-placement="top" title="View pdf report"></a>
+                            <span>Ime i prezime clana tima</span>
+                            <div class="d-flex justify-content-center float-right h-100">
+                                <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas mr-2 pdf-report" data-toggle="tooltip" data-placement="top" title="View Team Member pdf report"></a>
                                     <div class="item-menu fas fa-ellipsis-v">
                                         <div class="item-menu-wrapper">
                                                 <div class="arrow"></div>
