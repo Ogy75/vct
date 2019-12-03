@@ -322,3 +322,12 @@ span.from-title {
 .no-results-message {
   display: none;
 }
+.badge {
+  font-size: 13px;
+  line-height: 13px !important;
+  font-weight: bold;
+}
+.badge-default {
+  background: #1E9BCC;
+  color: white;
+}
