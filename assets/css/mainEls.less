@@ -473,7 +473,11 @@ padding: 0;
         display: block;
         .selected{
             color: lighten(@highlightColor, 20%);
-            
+            background: darken(@basetextColor, 5%);
+            &:hover{
+                color: lighten(@highlightColor, 20%);
+            background: darken(@basetextColor, 5%);
+            }
         }
     }
         a{
@@ -524,6 +528,15 @@ padding: 0;
 
                 &:hover{
                     background: darken(@highlightColor, 10%);
+                }
+            }
+            .selected{
+                background:darken(@highlightColor, 10%);
+                color:lighten(@highlightColor, 20%);
+                &:hover{
+                    background:darken(@highlightColor, 10%);
+                    color:lighten(@highlightColor, 20%);
+                    cursor: default;
                 }
             }
         }

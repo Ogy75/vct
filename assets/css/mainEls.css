@@ -482,6 +482,11 @@ ul.vct-nav-menu li {
 }
 ul.vct-nav-menu li .selected {
   color: #67c4e9;
+  background: #353530;
+}
+ul.vct-nav-menu li .selected:hover {
+  color: #67c4e9;
+  background: #353530;
 }
 ul.vct-nav-menu a {
   display: block;
@@ -525,6 +530,15 @@ ul.vct-nav-menu ul.vct-nav-level1 li a {
 }
 ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
   background: #1779a0;
+}
+ul.vct-nav-menu ul.vct-nav-level1 li .selected {
+  background: #1779a0;
+  color: #67c4e9;
+}
+ul.vct-nav-menu ul.vct-nav-level1 li .selected:hover {
+  background: #1779a0;
+  color: #67c4e9;
+  cursor: default;
 }
 .vct-left-nav-toggle {
   position: absolute;
