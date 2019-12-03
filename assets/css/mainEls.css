@@ -514,13 +514,12 @@ ul.vct-nav-menu .has-level1-t::after {
   float: right;
 }
 ul.vct-nav-menu ul.vct-nav-level1 {
-  display: none;
   list-style: none;
   padding: 0;
 }
 ul.vct-nav-menu ul.vct-nav-level1 li a {
   background: #25aadf;
-  padding-left: 60px;
+  padding-left: 20px;
   text-transform: none;
   font-size: 13px;
 }
@@ -608,7 +607,6 @@ label.btn {
   margin-right: -6px;
   background: white;
   box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.2);
-  display: none;
   min-width: 250px;
   z-index: 3;
 }

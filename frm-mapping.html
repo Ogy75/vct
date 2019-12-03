@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Team Time Log</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
+    <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
+    <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fav-icn//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fav-icn//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fav-icn//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
+    <link rel="manifest" href="assets/fav-icn//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+</head>
+
+<body>
+    <!--alert pop-out-->
+    <div class="alert shadow" role="alert">Alert</div>
+
+    <!--Spinner-->
+    <div class="lds-dual-ring-bg">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+
+            <div class="vct-logo w-100 text-left text-white">
+                <img src="assets/images/app-h-logo.svg" alt="enjoy.ing" width="65%">
+            </div>
+
+            <ul class="vct-nav-menu">
+                <li><a href="vacation.html"><i class="ti-shine mr-3"></i>My Days</a></li>
+                <li><a class="selected" href="operations-management.html"><i class="ti-pin mr-3"></i>Operations</a></li>
+                <li><a href="teams.html"><i class="ti-timer mr-3"></i>Project management</a></li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>2 levels</a>
+                    <ul class="vct-nav-level1">
+                        <li><a href="frm-mapping.html">FRM-TM mapping</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav bg-white border-bottom shadow-sm">
+        <div class="vct-user-menu float-right">
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
+                    class="ti-fullscreen full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mr-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content mb-5">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <div class="d-inline-flex align-items-center w-50 justify-content-start mb-3 h-100"><button
+                            class="btn btn-action vct-back p-0"><i class="ti-angle-left mr-1 py-3"></i>back</button>
+                    </div>
+                    <div class="d-inline-flex align-items-center float-right mb-3 h-100">
+                        <h6 class="vct-navi-text">Manage FRM - Time Manager mappings</h6>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex align-items-center">
+                                <div class="d-inline-flex w-75 justify-content-start">
+                                    <div class="vct-select-team mb-3" style="width: 200px;"><label>enjoy.ing FRM projects</label>
+                                        <div class="team-dropdown css-2b097c-container">
+                                            <div class=" css-yk16xz-control">
+                                                <div class=" css-1hwfws3">
+                                                    <div class=" css-1uccc91-singleValue">Serbia Administration</div>
+                                                    <div class="css-1g6gooi">
+                                                        <div class="" style="display: inline-block;"><input
+                                                                autocapitalize="none" autocomplete="off"
+                                                                autocorrect="off" id="react-select-23-input"
+                                                                spellcheck="false" tabindex="0" type="text"
+                                                                aria-autocomplete="list" value=""
+                                                                style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+                                                            <div
+                                                                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 14px; font-family: Roboto, sans-serif; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" css-1wy0on6"><span
+                                                        class=" css-1okebmr-indicatorSeparator"></span>
+                                                    <div aria-hidden="true" class=" css-tlfecz-indicatorContainer"><svg
+                                                            height="20" width="20" viewBox="0 0 20 20"
+                                                            aria-hidden="true" focusable="false" class="css-19bqh2r">
+                                                            <path
+                                                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                                                            </path>
+                                                        </svg></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12"><label>Time Manager projects</label>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Swiss Business QA</td>
+                                            <td width="100px"><input type="checkbox" name="ei-136"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Derivatives</td>
+                                            <td width="100px"><input type="checkbox" name="ei-137"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Internal projects</td>
+                                            <td width="100px"><input type="checkbox" name="ei-141"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Time Manager</td>
+                                            <td width="100px"><input type="checkbox" name="ei-145"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Pearson</td>
+                                            <td width="100px"><input type="checkbox" name="ei-146"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Test Project</td>
+                                            <td width="100px"><input type="checkbox" name="ei-156"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>NoName Project</td>
+                                            <td width="100px"><input type="checkbox" name="ei-158"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-12">
+                            <div class="my-3 text-md-right float-right"><button type="submit"
+                                    class="save-new-team btn btn-highlight ">Save</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-flex align-items-center">
+                                <div class="d-inline-flex w-75 justify-content-start">
+                                    <div class="vct-select-team mb-3" style="width: 200px;"><label>youngculture FRM
+                                            projects</label>
+                                        <div class="team-dropdown css-2b097c-container">
+                                            <div class=" css-yk16xz-control">
+                                                <div class=" css-1hwfws3">
+                                                    <div class=" css-1uccc91-singleValue">Serbia Administration</div>
+                                                    <div class="css-1g6gooi">
+                                                        <div class="" style="display: inline-block;"><input
+                                                                autocapitalize="none" autocomplete="off"
+                                                                autocorrect="off" id="react-select-24-input"
+                                                                spellcheck="false" tabindex="0" type="text"
+                                                                aria-autocomplete="list" value=""
+                                                                style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;">
+                                                            <div
+                                                                style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 14px; font-family: Roboto, sans-serif; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" css-1wy0on6"><span
+                                                        class=" css-1okebmr-indicatorSeparator"></span>
+                                                    <div aria-hidden="true" class=" css-tlfecz-indicatorContainer"><svg
+                                                            height="20" width="20" viewBox="0 0 20 20"
+                                                            aria-hidden="true" focusable="false" class="css-19bqh2r">
+                                                            <path
+                                                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z">
+                                                            </path>
+                                                        </svg></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12"><label>Time Manager projects</label>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Swiss Business QA</td>
+                                            <td width="100px"><input type="checkbox" name="yc-136"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Derivatives</td>
+                                            <td width="100px"><input type="checkbox" name="yc-137"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Internal projects</td>
+                                            <td width="100px"><input type="checkbox" name="yc-141"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Time Manager</td>
+                                            <td width="100px"><input type="checkbox" name="yc-145"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Pearson</td>
+                                            <td width="100px"><input type="checkbox" name="yc-146"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>Test Project</td>
+                                            <td width="100px"><input type="checkbox" name="yc-156"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="vacation-log-element height-fix">
+                                <table class="vct-vacation-log w-100">
+                                    <tbody>
+                                        <tr>
+                                            <td>NoName Project</td>
+                                            <td width="100px"><input type="checkbox" name="yc-158"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-12">
+                            <div class="my-3 text-md-right float-right"><button type="submit"
+                                    class="save-new-team btn btn-highlight ">Save</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="assets/vendor/jquery341/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js"></script>
+    <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
