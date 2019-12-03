@@ -95,6 +95,12 @@
 .vacation-log-element table.vct-vacation-log td:last-child {
   text-align: right;
 }
+.vacation-log-element span.project-name {
+  display: block;
+  padding: 10px 20px;
+  font-weight: bold;
+  background: #c0e7f6;
+}
 .vct-team-member-name {
   display: block;
   height: 100% !important;
