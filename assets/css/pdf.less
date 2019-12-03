@@ -3,22 +3,32 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+title::after{
+    content:" Time Log"
+}
 @page {
     margin-top: 2cm;
     margin-bottom: 2cm;
  }
 .doc-container{
     position: relative;
-    width:960px;
+    max-width:960px;
     margin:0 auto;
     float: none;
     padding:40px;
-    &:after{
-        display: block;
-        content:"Report generated with Enjoy.ing Time Manager";
+
+    .signature{
+        display: inline-block;
+        position: absolute;
+        bottom:0;
+        right:20px;
+        padding: 20px;
         font-size: 11px;
         margin-top:50px;
-        text-align: right;
+        &:before{
+            display: inline-block;
+            content:"Report generated with Enjoy.ing Time Manager";
+        }
     }
 
     h1{
