@@ -12,7 +12,7 @@
 
 <body>
     <div class="doc-container">
-        <span class="signature"></span>
+        <span class="signature">9.12.2019</span>
         <div class="row">
             <div class="col-6">
                 <h2><span class="period">1.10.2019 — 31.10.2019</span></h2>
@@ -283,16 +283,6 @@
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        var name = $('table.overview').find('td:eq(0)').text();
-        var period = $('.period').text();
-        $('title').append(name + ' Time Log' + ' ' + period );
-        var fullDate = new Date()
-        var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) :(fullDate.getMonth()+1);
-        var currentDate = fullDate.getDate() + "." + twoDigitMonth + "." + fullDate.getFullYear();
-        $('.signature').prepend(" | " + currentDate);
-    </script>
-
 </body>
 
 </html>

@@ -47,7 +47,8 @@ title::after {
 }
 .doc-container .signature:before {
   display: inline-block;
-  content: "Report generated with Enjoy.ing Time Manager";
+  content: "Report generated with Enjoy.ing Time Manager | ";
+  margin-right: 4px;
 }
 .doc-container h1 {
   font-size: 22px;
