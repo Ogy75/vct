@@ -134,3 +134,19 @@ title::after {
 .doc-container table.data tr.total td {
   padding: 20px 10px;
 }
+.doc-container .period:before {
+  display: inline-table;
+  vertical-align: middle;
+  content: url("/assets/images/ico-calendar.svg");
+  height: 24px;
+  width: 24px;
+  margin-right: 6px;
+}
+.doc-container .time:before {
+  display: inline-table;
+  vertical-align: middle;
+  content: url("/assets/images/ico-clock.svg");
+  height: 24px;
+  width: 24px;
+  margin-right: 6px;
+}
