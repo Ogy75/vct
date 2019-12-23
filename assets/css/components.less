@@ -259,7 +259,6 @@ a.pdf-report{
         }
         .vct-team-block-data{
             color:@basecolorLightest;
-            line-height: 20px;
         }
     }
     .vct-team-block-teams:before{
@@ -268,20 +267,38 @@ a.pdf-report{
         margin-right:4px;
 
     }
-    .vct-team-block-status-done:before{
+    .vct-team-block-status-done{
+        color: @confirmColor;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 700;
+        &:before{
         font-family: 'Themify';
         content:"\e64d";
         margin-right:4px;
+    }
+    }.vct-team-block-status-notdone{
+        color: @warningColor;
         font-size: 12px;
-        
+        line-height: 12px;
+        font-weight: 700;
+        &:before{
+            font-family: 'Themify';
+            content:"\e6c5";
+            margin-right:4px;
+        }
     }
-    .vct-team-block-status-notdone:before{
+    .vct-team-block-status-ready{
+        color: @highlightColor;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 700;
+    &:before{
         font-family: 'Themify';
-        content:"\e6c5";
-        color: red;
-        margin-right:4px;
-        
+        content:"\e6ad";
+        margin-right:4px; 
     }
+}
 }
 .vct-new-team-wrapper{
     display: none;
