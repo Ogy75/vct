@@ -118,7 +118,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 ">
+                                        <div class="col-12">
                                             <div
                                                 class="vct-days__earned p-3 d-flex align-items-center justify-content-center">
                                                 <div class="row">
@@ -134,20 +134,21 @@
                     </div>
                     <div class="row">
                         <div class="col-12 mt-5 mb-2">
-                            <p class="vct-element-title d-inline-block">Book Vacation Period</p>
+                            <p class="vct-element-title d-inline-block">Booked Vacation</p>
                             <div class="row">
-                                <div class="col-12 col-lg-6 mb-3">
-                                    <div class="datepicker-here" data-range="true" data-language="en"></div>
-                                </div>
-                                <div class="col-12 col-lg-6">
-                                    <!--error poruka za prekoracenje slobodnih dana-->
-                                    <span class="booking-error">You have booked a period of 25 days which exceeds total amount of days you have at your disposal. Please modify your entry!</span>
-                                    <!--poruka ako je sve ok-->
-                                    <span class="booking-ok">You have booked a period of 19 days as Vacation days.</span>
-                                </div>
-                                <div class="col-12 d-flex justify-content-end">
-                                    <button type="button" class="btn btn-highlight px-4 mr-3">Save</button>
-                                    <button type="button" class="btn btn-alert px-4" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                <div class="col-12">
+                                    <div class="vacation-log-element">
+                                        <table class="vct-vacation-log w-100">
+                                            <tr>
+                                                <td>15 days</td>
+                                                <td>01.02.2020 - 15.02.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1 day</td>
+                                                <td>01.03.2020 - 02.03.2020</td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -663,8 +664,7 @@
                                             <span class="item-menu-title">Team Member options</span>
                                             <li><a href="javascript:void(0)">Export to Excel</a></li>
                                             <li><a class="js_generate" href="javascript:void(0)">Generate PDF</a></li>
-                                            <li><a data-toggle="modal" data-target="#book"
-                                                    href="javascript:void(0)">Book a Vacation period</a></li>
+                                            <li><a data-toggle="modal" data-target="#book" href="javascript:void(0)">Booked Vacations</a></li>
                                         </ul>
                                     </div>
                                 </div>

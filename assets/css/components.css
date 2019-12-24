@@ -95,6 +95,14 @@
 .vacation-log-element table.vct-vacation-log td:last-child {
   text-align: right;
 }
+.vacation-log-element table.vct-vacation-log th {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+}
+.vacation-log-element table.vct-vacation-log th:last-child {
+  text-align: right;
+}
 .vacation-log-element span.project-name {
   display: block;
   padding: 10px 20px;

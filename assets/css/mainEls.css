@@ -107,6 +107,11 @@ p {
 a:not([href]):not([tabindex]):hover {
   color: #1E9BCC;
 }
+.btn-btm-rhgt {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+}
 .remove-team-member1,
 .remove-team-member2 {
   padding-right: 0;
@@ -701,4 +706,12 @@ label.btn {
   font-size: 14px;
   font-weight: 600;
   display: block;
+}
+.less-hrs {
+  color: #d8483e;
+  font-weight: 600;
+}
+.more-hrs {
+  color: #228B22;
+  font-weight: 600;
 }

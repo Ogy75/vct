@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="assets/css/mainEls.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
-    <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
+    <!-- <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css"> -->
+    <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
@@ -20,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
@@ -52,7 +53,7 @@
             </div>
 
             <ul class="vct-nav-menu">
-                <li><a  class="selected" href="vacation.html"><i class="ti-shine mr-3"></i>My Days</a></li>
+                <li><a class="selected" href="vacation.html"><i class="ti-shine mr-3"></i>My Days</a></li>
                 <li><a href="hr-service.html"><i class="ti-user mr-3"></i>HR Service</a></li>
                 <li><a href="operations-management.html"><i class="ti-pin mr-3"></i>Operations</a></li>
                 <li><a href="teams.html"><i class="ti-timer mr-3"></i>Project management</a></li>
@@ -69,21 +70,22 @@
 
     <!--top-nav-->
     <div class="vct-top-nav bg-white border-bottom shadow-sm">
-            <div class="vct-user-menu float-right">
-                <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="ti-fullscreen full-view"></i></div>
-                <div class="d-inline-block vct-user-profile-image position-relative mr-3">
-                    <img src="assets/images/user.jpg" alt="user name">
-                </div>
-                <div class="vct-user-menu-block position-absolute">
-                    <div class="vct-user-menu-block-arrow"></div>
-                    <ul>
-                        <li class="user-profile-name">Gina Djordjevic Lollobrigida</li>
-                        <li class="user-profile-position">Operations Manager</li>
-                        <li><a href="login.html">Sign out</a></li>
-                    </ul>
-                </div>
+        <div class="vct-user-menu float-right">
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
+                    class="ti-fullscreen full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mr-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Djordjevic Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
             </div>
         </div>
+    </div>
 
     <!--Panel Content-->
     <div class="vct-content mb-5">
@@ -93,12 +95,7 @@
                 <div class="col-12 col-lg-6 mt-3">
                     <div class="row">
                         <div class="col-12 mb-2">
-                            <select>
-                                <option>2017</option>
-                                <option>2018</option>
-                                <option selected>2019</option>
-                            </select>
-                            <p class="vct-element-title d-inline-block ml-2 py-2">Vacation status</p>
+                            <p class="vct-element-title d-inline-block">Vacation status</p>
                         </div>
                     </div>
 
@@ -162,194 +159,279 @@
                         </div>
                     </div>
                 </div>
+                <!--Days off log element-->
+                <div class="col-12 col-lg-6 mt-3">
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <p class="vct-element-title d-inline-block">Book your Vacation</p>
+                        </div>
+                    </div>
+                    <div class="vacation-log-element height-fix">
+                        <div class="p-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <div class="datepicker-here mb-3" data-range="true" data-language="en">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 mb-3">
+                                            <div class="booking-message mb-3">
+                                                You have selected 15 days for your vacation. Please define how many days
+                                                you want to use from your vacation days and your earned days. When
+                                                approved your booked vacation will apear in the vacation log list.
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6 mb-3">
+                                                    <label class="w-100 mt-0">from vacation days</label>
+                                                    <select class="w-100">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option selected>10</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-6 mb-5">
+                                                    <label class="w-100 mt-0">from earned days</label>
+                                                    <select class="w-100">
+                                                        <option>0</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option selected>5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-highlight px-5">Confirm</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <!--vacation log element-->
                 <div class="col-12 col-lg-6 mt-3">
                     <div class="row">
                         <div class="col-12 mb-2">
-                            <p class="vct-element-title d-inline-block py-0 py-lg-2">Vacation log</p>
-                            <!-- <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top"
-                                title="Export to excel"></i> -->
+                            <p class="vct-element-title d-inline-block">Vacation log</p>
+                        </div>
+                    </div>
+                    <div class="vacation-log-element height-fix">
+                        <table class="vct-vacation-log w-100">
+                            <tr>
+                                <td>15 days booked</td>
+                                <td>01.02.2020 - 15.02.2020</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>4 days used</td>
+                                <td>01.01.2019 - 05.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--Free log element-->
+                <div class="col-12 col-lg-6 mt-3">
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <p class="vct-element-title d-inline-block">Free log</p>
+                            <!-- <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i> -->
 
                         </div>
                     </div>
                     <div class="vacation-log-element  height-fix">
                         <table class="vct-vacation-log w-100">
                             <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
                                 <td>4 days used</td>
                                 <td>01.01.2019 - 05.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
                             </tr>
                         </table>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <!--Days off log element-->
                 <div class="col-12 col-lg-6 mt-3">
-                        <div class="row">
-                                <div class="col-12 mb-2">
-                                    <p class="vct-element-title d-inline-block"><span>June 2019 - </span>Free log</p>
-                                    <!-- <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i> -->
-
-                                </div>
-                            </div>
-                    <div class="vacation-log-element  height-fix">
-                        <table class="vct-vacation-log w-100">
-                            <tr>
-                                <td>4 days used</td>
-                                <td>01.01.2019 - 05.01.2019</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6 mt-3">
-                        <div class="row">
-                                <div class="col-12 mb-2">
-                                    <p class="vct-element-title d-inline-block"><span>June 2019 - </span>Days off log</p>
-                                    <!-- <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i> -->
-
-                                </div>
-                            </div>
-                            <div class="vacation-log-element  height-fix">
+                    <div class="row">
+                        <div class="col-12 mb-2">
+                            <p class="vct-element-title d-inline-block">Total work hours <span>2019</span> <span class="less-hrs">(-2 hrs)</span></p>
+                        </div>
+                        <div class="col-12">
+                            <div class="vacation-log-element">
+                                <div class="vacation-log-element height-fix">
                                 <table class="vct-vacation-log w-100">
                                     <tr>
-                                        <td>1 day </td>
-                                        <td>01.01.2019</td>
-                                        <td><textarea placeholder disabled>Babi se pokvario daljinski</textarea>
-                                        </td>
+                                        <th>month</th>
+                                        <th>reqired</th>
+                                        <th>worked</th>
+                                        <th>difference</th>
                                     </tr>
                                     <tr>
-                                        <td>1 day </td>
-                                        <td>01.01.2019</td>
-                                        <td><textarea placeholder="description" disabled>Komsiji iznad se otopio zamrzivac</textarea>
-                                        </td>
+                                        <td>January</td>
+                                        <td>168</td>
+                                        <td class="more-hrs">174</td>
+                                        <td class="more-hrs">6</td>
                                     </tr>
                                     <tr>
-                                        <td>1 day </td>
-                                        <td>01.01.2019</td>
-                                        <td><textarea placeholder="description">Tetka ceka lek</textarea></td>
+                                        <td>February</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>March</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>April</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>May</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>June</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>July</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>August</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>September</td>
+                                        <td>168</td>
+                                        <td class="less-hrs">160</td>
+                                        <td class="less-hrs">-8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>October</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>November</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>December</td>
+                                        <td>168</td>
+                                        <td>168</td>
+                                        <td></td>
                                     </tr>
                                 </table>
                             </div>
-                </div>
-            </div>
-            
-            <div class="row">
-                    <!--Days off log element-->
-                    <div class="col-12 col-lg-6 mt-3">
-                            <div class="row">
-                                    <div class="col-12 mb-2">
-                                        <p class="vct-element-title d-inline-block"><span>June 2019 - </span>Sickness days log</p>
-                                        <!-- <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i> -->
-    
-                                    </div>
-                                </div>
-                        <div class="vacation-log-element  height-fix">
-                            <table class="vct-vacation-log w-100">
-                                <tr>
-                                    <td>3 days used</td>
-                                    <td>6.01.2019 - 9.01.2019</td>
-                                </tr>
-                                <tr>
-                                        <td>2 days used</td>
-                                        <td>11.01.2019 - 13.01.2019</td>
-                                    </tr>
-                                    <tr>
-                                            <td>4 days used</td>
-                                            <td>20.01.2019 - 24.01.2019</td>
-                                        </tr>
-                            </table>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-lg-6 mt-3">
-                        <div class="row">
-                                <div class="col-12 mb-2">
-                                    <p class="vct-element-title d-inline-block"><span>June 2019 - </span>Empty log</p>
-                                    <!-- <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i> -->
-                                </div>
-                            </div>
-                    <div class="vacation-log-element  height-fix">
-                        <div class="d-flex h-100 align-items-center justify-content-center">
-                            <span>There are no records yet</span>
-                        </div> 
-                    </div>
                 </div>
+            </div>
         </div>
     </div>
+    </div>
+
 
     <script src="assets/vendor/jquery341/jquery.min.js "></script>
     <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js "></script>
     <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js "></script>
-    <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js "></script>
+    <!-- <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js "></script> -->
     <script src="assets/js/custom.js "></script>
+    <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
 </body>
 
 </html>
