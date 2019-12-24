@@ -690,3 +690,15 @@ label.btn {
 .table-global td {
   padding: 10px;
 }
+.booking-error {
+  color: #d8483e;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+}
+.booking-ok {
+  color: #42423c;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+}
