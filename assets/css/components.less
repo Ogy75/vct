@@ -261,11 +261,19 @@ a.pdf-report{
             color:@basecolorLightest;
         }
     }
-    .vct-team-block-teams:before{
-        font-family: 'Themify';
-        content:"\e602";
-        margin-right:4px;
+    .vct-team-block-teams{
+        color: lighten(@basetextColor, 21%);
+        font-size: 12px;
+        font-weight: 700;
+        &:before{
+            font-family: 'Font Awesome 5 Free';
+            content:"\f500";
+            font-weight: 600 !important;
+            font-size: 12px;
+            line-height: 12px;
+            margin-right:4px;
 
+        }
     }
     .vct-team-block-status-done{
         color: @confirmColor;
@@ -273,8 +281,9 @@ a.pdf-report{
         line-height: 12px;
         font-weight: 700;
         &:before{
-        font-family: 'Themify';
-        content:"\e64d";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        content:"\f253";
         margin-right:4px;
     }
     }.vct-team-block-status-notdone{
@@ -283,20 +292,22 @@ a.pdf-report{
         line-height: 12px;
         font-weight: 700;
         &:before{
-            font-family: 'Themify';
-            content:"\e6c5";
+            font-family: 'Font Awesome 5 Free';
+            content:"\f251";
+            font-weight: 600;
             margin-right:4px;
         }
     }
     .vct-team-block-status-ready{
-        color: @highlightColor;
+        color: @progressColor;
         font-size: 12px;
         line-height: 12px;
         font-weight: 700;
     &:before{
-        font-family: 'Themify';
-        content:"\e6ad";
-        margin-right:4px; 
+        font-family: 'Font Awesome 5 Free';
+        content:"\f252";
+        font-weight: 600;
+        margin-right:4px;
     }
 }
 }

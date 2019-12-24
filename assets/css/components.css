@@ -233,9 +233,17 @@ a.pdf-report {
 .vct-team .vct-team-block .vct-team-block-data {
   color: #7c7c78;
 }
+.vct-team .vct-team-block-teams {
+  color: #7a7a6f;
+  font-size: 12px;
+  font-weight: 700;
+}
 .vct-team .vct-team-block-teams:before {
-  font-family: 'Themify';
-  content: "\e602";
+  font-family: 'Font Awesome 5 Free';
+  content: "\f500";
+  font-weight: 600 !important;
+  font-size: 12px;
+  line-height: 12px;
   margin-right: 4px;
 }
 .vct-team .vct-team-block-status-done {
@@ -245,30 +253,33 @@ a.pdf-report {
   font-weight: 700;
 }
 .vct-team .vct-team-block-status-done:before {
-  font-family: 'Themify';
-  content: "\e64d";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 600;
+  content: "\f253";
   margin-right: 4px;
 }
 .vct-team .vct-team-block-status-notdone {
-  color: #EA5145;
+  color: #d8483e;
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
 }
 .vct-team .vct-team-block-status-notdone:before {
-  font-family: 'Themify';
-  content: "\e6c5";
+  font-family: 'Font Awesome 5 Free';
+  content: "\f251";
+  font-weight: 600;
   margin-right: 4px;
 }
 .vct-team .vct-team-block-status-ready {
-  color: #1E9BCC;
+  color: #ff7300;
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
 }
 .vct-team .vct-team-block-status-ready:before {
-  font-family: 'Themify';
-  content: "\e6ad";
+  font-family: 'Font Awesome 5 Free';
+  content: "\f252";
+  font-weight: 600;
   margin-right: 4px;
 }
 .vct-new-team-wrapper {
@@ -309,7 +320,7 @@ a.pdf-report {
 }
 .modal-content .modal-title {
   font-weight: 600;
-  color: #EA5145;
+  color: #d8483e;
 }
 .modal-content .modal-header {
   border-bottom: 0;
@@ -330,12 +341,12 @@ span.from-title {
   background: #115773 !important;
 }
 .toast-error {
-  background: #b52014 !important;
+  background: #92251e !important;
 }
 .time-required {
   font-weight: 700;
   font-size: 16px;
-  color: #EA5145;
+  color: #d8483e;
   display: block;
   line-height: 16px;
 }
