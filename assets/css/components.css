@@ -80,10 +80,14 @@
 }
 .vacation-log-element table.vct-vacation-log td {
   font-size: 14px;
+  width: 25%;
   padding: 10px 20px;
 }
 .vacation-log-element table.vct-vacation-log td:first-child {
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .vacation-log-element table.vct-vacation-log td:first-child:first-child:before {
   content: url(/assets/images/ico-cal.svg);
@@ -94,6 +98,9 @@
 }
 .vacation-log-element table.vct-vacation-log td:last-child {
   text-align: right;
+}
+.vacation-log-element table.vct-vacation-log td p {
+  text-align: left;
 }
 .vacation-log-element table.vct-vacation-log th {
   font-size: 14px;
