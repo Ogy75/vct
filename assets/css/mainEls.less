@@ -90,6 +90,10 @@ p{
               color:@highlightColor;
           }
       }
+      .btn-idle{
+          background:@basecolorLighter;
+          transition: @mainTransition;
+      }
 a:not([href]):not([tabindex]){
     &:hover{
         color:@highlightColor;
@@ -731,4 +735,22 @@ label.btn {
 .more-hrs{
     color:@confirmColor;
     font-weight: 600;
+}
+.booking{
+    display:none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    span{
+        display: block;
+        font-size: 12px;
+        font-weight: normal;
+        color: @basetextColor;
+    }
+}
+.confirmation{
+    color:@confirmColor; 
+}
+.error{
+    color:@warningColor; 
 }

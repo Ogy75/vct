@@ -269,3 +269,13 @@ $('.js_generateZip').on('click', function(ev){
     });
     }
 });
+
+document.querySelector('.js_forDemoPurposesOnly').addEventListener('click', function(){
+    document.querySelector('.booking.confirmation').classList.add('d-block');
+});
+
+var cancelBooking = document.querySelector('.js_forDemoPurposesOnly1');
+cancelBooking.addEventListener('click', function(){
+    cancelBooking.classList.add('btn-idle');
+    cancelBooking.outerHTML = ('<p class="text-right">canceled</p>');
+})

@@ -104,6 +104,10 @@ p {
 .btn-action:hover {
   color: #1E9BCC;
 }
+.btn-idle {
+  background: #696964;
+  transition: all 0.12s linear;
+}
 a:not([href]):not([tabindex]):hover {
   color: #1E9BCC;
 }
@@ -714,4 +718,22 @@ label.btn {
 .more-hrs {
   color: #228B22;
   font-weight: 600;
+}
+.booking {
+  display: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.booking span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #42423c;
+}
+.confirmation {
+  color: #228B22;
+}
+.error {
+  color: #d8483e;
 }
