@@ -1,7 +1,9 @@
 $(function () {
 
     //vacation page log height fix
+    if($(window).width() > 640){
     $('.height-fix').height($('.vct-days__remaining').height());
+};
 
     //left side menu toggle block
     var menuToggleButton = $('.vct-left-nav-toggle');
