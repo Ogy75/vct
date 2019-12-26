@@ -101,6 +101,8 @@
 }
 .vacation-log-element table.vct-vacation-log td p {
   text-align: left;
+  margin: 0;
+  line-height: 14px;
 }
 .vacation-log-element table.vct-vacation-log .vacation-icon:first-child:first-child::before {
   content: url(/assets/images/ico-cal-v.svg);

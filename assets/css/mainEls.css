@@ -36,7 +36,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #42423c;
   font-size: 14px;
 }
@@ -151,10 +151,10 @@ label {
 }
 input,
 textarea,
-input[type=text],
-input[type=email],
-input[type=number],
-input[type=password] {
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
   display: block;
   width: 100%;
   padding: 8px 4px;
@@ -168,18 +168,18 @@ input[type=password] {
 }
 input:focus,
 textarea:focus,
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=number]:focus,
-input[type=password]:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
   border: 1px solid #1E9BCC;
 }
 input::placeholder,
 textarea::placeholder,
-input[type=text]::placeholder,
-input[type=email]::placeholder,
-input[type=number]::placeholder,
-input[type=password]::placeholder {
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder {
   font-size: 12px;
 }
 input:disabled {
@@ -198,7 +198,7 @@ textarea:disabled {
   background: #ebebeb;
   color: #42423c;
 }
-input[name=total] {
+input[name="total"] {
   font-weight: 700;
 }
 input.filter-projects {
@@ -255,7 +255,7 @@ input.filter-projects::placeholder {
 }
 .tooltip .tooltip-inner {
   text-align: left;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 .close {
   float: right;
@@ -300,7 +300,7 @@ input.filter-projects::placeholder {
   animation: fadeinout 0.1s linear backwards;
 }
 .error-message {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 12px;
   line-height: 18px;
   padding: 0 4px;
@@ -312,14 +312,14 @@ input.filter-projects::placeholder {
   margin-top: 10px;
 }
 .error-message::before {
-  font-family: 'Themify';
+  font-family: "Themify";
   content: "\e6c5";
   color: yellow;
   margin-right: 6px;
   line-height: 18px;
 }
 .warning-message {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   font-size: 12px;
   line-height: 18px;
   padding: 0 4px;
@@ -332,7 +332,7 @@ input.filter-projects::placeholder {
   width: auto;
 }
 .warning-message::before {
-  font-family: 'Themify';
+  font-family: "Themify";
   content: "\e602";
   color: white;
   margin-right: 6px;
@@ -653,7 +653,7 @@ label.btn {
   display: block;
   color: rgba(66, 66, 60, 0.5);
   padding: 14px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 11px;
   text-align: right;
@@ -669,7 +669,7 @@ label.btn {
   font-size: 14px;
   padding: 14px;
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: right;
   float: right;
 }
@@ -711,14 +711,6 @@ label.btn {
   font-weight: 600;
   display: block;
 }
-.less-hrs {
-  color: #d8483e;
-  font-weight: 600;
-}
-.more-hrs {
-  color: #228B22;
-  font-weight: 600;
-}
 .booking {
   display: none;
   font-size: 16px;
@@ -736,4 +728,22 @@ label.btn {
 }
 .error {
   color: #d8483e;
+}
+.hrs {
+  display: block;
+  width: 24px;
+  height: 24px;
+  float: right;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+.more {
+  background: #228B22;
+  color: white;
+}
+.less {
+  background: #d8483e;
+  color: white;
 }
