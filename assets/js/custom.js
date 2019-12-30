@@ -270,12 +270,18 @@ $('.js_generateZip').on('click', function(ev){
     }
 });
 
-document.querySelector('.js_forDemoPurposesOnly').addEventListener('click', function(){
-    document.querySelector('.booking.confirmation').classList.add('d-block');
-});
+// document.querySelector('.js_forDemoPurposesOnly').addEventListener('click', function(){
+//     document.querySelector('.booking.confirmation').classList.add('d-block');
+// });
 
-var cancelBooking = document.querySelector('.js_forDemoPurposesOnly1');
-cancelBooking.addEventListener('click', function(){
-    cancelBooking.classList.add('btn-idle');
-    cancelBooking.outerHTML = ('<p class="text-right">canceled</p>');
-})
+// var cancelBooking = document.querySelector('.js_forDemoPurposesOnly1');
+// cancelBooking.addEventListener('click', function(){
+//     cancelBooking.classList.add('btn-idle');
+//     cancelBooking.outerHTML = ('<p class="text-right">canceled</p>');
+// })
+
+//Show on site row
+$('.js_onSite').on('click', function(){
+    var parent = this.closest('.vct-team-member-block');
+    $(parent).find('.on-site').removeClass('d-none');
+});

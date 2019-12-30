@@ -63,8 +63,11 @@
   display: block;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #f7f7f7;
+  background: white;
   border: 1px solid #e1e1df;
+}
+.vacation-log-element table.vct-vacation-log thead tr {
+  background: white;
 }
 .vacation-log-element table.vct-vacation-log tr {
   background: #ededec;
@@ -237,6 +240,9 @@ a.uploaded-file {
 .vct-team .vct-team-wrapper {
   border: 1px solid #e1e1df;
   transition: all 0.12s linear;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .vct-team .vct-team-wrapper:hover {
   box-shadow: none !important;

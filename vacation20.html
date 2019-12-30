@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Team Overview</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
+    <!-- <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css"> -->
+    <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fav-icn//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fav-icn//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fav-icn//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
+    <link rel="manifest" href="assets/fav-icn//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+</head>
+
+<body>
+    <!--alert pop-out-->
+    <div class="alert shadow" role="alert">Alert</div>
+
+    <!--Spinner-->
+    <div class="lds-dual-ring-bg">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+
+            <div class="vct-logo w-100 text-left text-white">
+                <img src="assets/images/app-h-logo.svg" alt="enjoy.ing" width="65%">
+            </div>
+
+            <ul class="vct-nav-menu">
+                <li><a class="selected" href="vacation.html"><i class="ti-shine mr-3"></i>My Days</a></li>
+                <li><a href="hr-service.html"><i class="ti-user mr-3"></i>HR Service</a></li>
+                <li><a href="operations-management.html"><i class="ti-pin mr-3"></i>Operations</a></li>
+                <li><a href="teams.html"><i class="ti-timer mr-3"></i>Project management</a></li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>2 levels</a>
+                    <ul class="vct-nav-level1">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav bg-white border-bottom shadow-sm">
+        <div class="vct-user-menu float-right">
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
+                    class="ti-fullscreen full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mr-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Djordjevic Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="vacation-log-element">
+                        <table class="vct-vacation-log w-100">
+                            <tr>
+                                <td class="vacation-icon">15 days booked</td>
+                                <td>01.02.2020 - 15.02.2020</td>
+                                <td><button class="btn-alert px-3 js_forDemoPurposesOnly1">cancel</button></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4 days used</td>
+                                <td>01.01.2019 - 05.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1 day used</td>
+                                <td>01.01.2019</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="assets/vendor/jquery341/jquery.min.js "></script>
+    <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js "></script>
+    <!-- <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js "></script> -->
+    <script src="assets/js/custom.js "></script>
+    <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<script>
+var canvas = document.getElementById("barChart");
+var ctx = canvas.getContext('2d');
+
+// Global Options:
+ Chart.defaults.global.defaultFontColor = 'black';
+ Chart.defaults.global.defaultFontSize = 12;
+
+var data = {
+    labels: ["She returns it ", "She keeps it", 'else'],
+      datasets: [
+        {
+            fill: true,
+            backgroundColor: [
+                'black',
+                'white',
+                'red'],
+            data: [5, 90, 5],
+// Notice the borderColor 
+            borderColor:	['black', 'black', 'black'],
+            borderWidth: [0,0,0]
+        }
+    ]
+};
+
+// Notice the rotation from the documentation.
+var options = {
+        title: {
+                  display: true,
+                  text: 'What happens when you lend your favorite t-shirt to a girl ?',
+                  position: 'top'
+              },
+        rotation: -0.7 * Math.PI
+};
+
+
+// Chart declaration:
+var myBarChart = new Chart(ctx, {
+    type: 'pie',
+    data: data,
+    options: options
+});
+
+
+</script>
+
+</body>
+
+</html>
