@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="assets/css/ti.css">
     <link rel="stylesheet" href="assets/css/mainEls.css">
     <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
+    <link rel="stylesheet" href="assets/css/v20Style.css">
     <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
-    <!-- <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css"> -->
     <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
@@ -91,170 +92,158 @@
     <div class="vct-content mb-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6">
-                    <canvas id="barChart"></canvas>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="vacation-log-element">
-                        <table class="vct-vacation-log w-100">
-                            <tr>
-                                <td class="vacation-icon">15 days booked</td>
-                                <td>01.02.2020 - 15.02.2020</td>
-                                <td><button class="btn-alert px-3 js_forDemoPurposesOnly1">cancel</button></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>4 days used</td>
-                                <td>01.01.2019 - 05.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>1 day used</td>
-                                <td>01.01.2019</td>
-                                <td></td>
-                            </tr>
-                        </table>
+                <!-- MODULE TAB START -->
+                <div class="col-12 col-lg-8 left-items">
+                    <div class="row">
+
+                        <div class="col-4 col-xl-3">
+                            <div class="time-module" id="days-remaining" data-toggle="tooltip" data-placement="top"
+                                title="Currently avaliable vacation days including this year assigned vacation days, remaining previous year vacation days and earned days.">
+                                <span class="module-label">vacation days available</span>
+                                <span class="module-icon"><i class="far fa-calendar"></i></span>
+                                <span class="module-data">23</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-4 col-xl-3">
+                            <div class="time-module" id="days-assigned" data-toggle="tooltip" data-placement="top"
+                                title="This years vacation day quota.">
+                                <span class="module-label">2020. vacation days assigned</span>
+                                <span class="module-icon"><i class="far fa-calendar-plus"></i></span>
+                                <span class="module-data">21</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-4 col-xl-3">
+                            <div class="time-module" id="days-previous" data-toggle="tooltip" data-placement="top"
+                                title="Remaining vacation days from previous years quota. NOTE: These days are valid until 31.5 of the current year.">
+                                <span class="module-label">previous year vacation days</span>
+                                <span class="module-icon"><i class="far fa-calendar-check"></i></span>
+                                <span class="module-data">3</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-4 col-xl-3">
+                            <div class="time-module selected" id="days-spent" data-toggle="tooltip" data-placement="top"
+                                title="Days off in current year.">
+                                <span class="module-label">2020. vacation days spent</span>
+                                <span class="module-icon"><i class="far fa-calendar-minus"></i></span>
+                                <span class="module-data">2</span>
+                                <div class="module-status active"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-4 col-xl-3">
+                            <div class="time-module" id="days-earned" data-toggle="tooltip" data-placement="top"
+                                title="Earned">
+                                <span class="module-label">earned hours / days</span>
+                                <a href="javascript:void(0)"><span
+                                        class="badge badge-success float-left">manage</span></a>
+                                <span class="module-data">15 / 1</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-4 col-xl-3">
+                            <div class="time-module" id="days-earned">
+                                <span class="module-label">Sickleave days</span>
+                                <span class="module-icon"><i class="far fa-calendar-times"></i></span>
+                                <span class="module-data">3</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="panel-container" id="days-spent-data">
+                                <table class="panel-table">
+                                    <div class="table-title">2020 Vacation days spent log</div>
+                                    <div class="d-flex text-right justify-content-end align-items-center h-100">
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                                <ul><span class="item-menu-title">Log options</span>
+                                                    <li><a href="# ">Generate & Download PDF</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <thead>
+                                        <tr>
+                                            <th><i class="far fa-calendar-alt"></i> Period</th>
+                                            <th><i class="far fa-calendar"></i> No. of Days</th>
+                                            <th><i class="far fa-calendar-minus"></i> Deducted from</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>8.1.2020 - 10.1.2020</td>
+                                            <td>2</td>
+                                            <td>earned days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14.1.2020</td>
+                                            <td>1</td>
+                                            <td>vacation days</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="panel-container" id="days-previous-data">
+                                <table class="panel-table">
+                                    <div class="table-title">Previous year</div>
+                                    <div class="d-flex text-right justify-content-end align-items-center h-100">
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                                <ul><span class="item-menu-title">Log options</span>
+                                                    <li><a href="# ">Generate & Download PDF</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <thead>
+                                        <tr>
+                                            <th><i class="far fa-calendar-alt"></i> Period</th>
+                                            <th><i class="far fa-calendar"></i> No. of Days</th>
+                                            <th><i class="far fa-calendar-minus"></i> Deducted from</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>8.1.2020 - 10.1.2020</td>
+                                            <td>2</td>
+                                            <td>earned days</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14.1.2020</td>
+                                            <td>1</td>
+                                            <td>vacation days</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </div>
-    </div>
     </div>
 
 
     <script src="assets/vendor/jquery341/jquery.min.js "></script>
     <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js "></script>
     <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js "></script>
-    <!-- <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js "></script> -->
     <script src="assets/js/custom.js "></script>
+    <script src="assets/js/tmv20.js "></script>
     <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-
-<script>
-var canvas = document.getElementById("barChart");
-var ctx = canvas.getContext('2d');
-
-// Global Options:
- Chart.defaults.global.defaultFontColor = 'black';
- Chart.defaults.global.defaultFontSize = 12;
-
-var data = {
-    labels: ["She returns it ", "She keeps it", 'else'],
-      datasets: [
-        {
-            fill: true,
-            backgroundColor: [
-                'black',
-                'white',
-                'red'],
-            data: [5, 90, 5],
-// Notice the borderColor 
-            borderColor:	['black', 'black', 'black'],
-            borderWidth: [0,0,0]
-        }
-    ]
-};
-
-// Notice the rotation from the documentation.
-var options = {
-        title: {
-                  display: true,
-                  text: 'What happens when you lend your favorite t-shirt to a girl ?',
-                  position: 'top'
-              },
-        rotation: -0.7 * Math.PI
-};
-
-
-// Chart declaration:
-var myBarChart = new Chart(ctx, {
-    type: 'pie',
-    data: data,
-    options: options
-});
-
-
-</script>
 
 </body>
 
