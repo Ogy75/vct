@@ -2,8 +2,9 @@ $(function () {
 
     //vacation page log height fix
     if($(window).width() > 640){
-    $('.height-fix').height($('.vct-days__remaining').height());
-};
+        var mainEl = $('.js_height').height();
+    $('.height-fix').height(mainEl);
+}
 
     //left side menu toggle block
     var menuToggleButton = $('.vct-left-nav-toggle');
@@ -139,7 +140,7 @@ $(function () {
     };
 
     //nice select ini
-    $('select').niceSelect();
+    //$('select').niceSelect();
 
     //add new team to existing project
     var trigger = $('.add-new-team');
@@ -285,3 +286,48 @@ $('.js_onSite').on('click', function(){
     var parent = this.closest('.vct-team-member-block');
     $(parent).find('.on-site').removeClass('d-none');
 });
+
+
+$('.select-all').on('click', function(){
+    var parent = this.closest('.employees-overtime.selection');
+    $(parent).find('input[type=checkbox]').attr('checked', 'checked');
+});
+
+
+$('.js_generate').on('click',function(){
+    var parent = $(this).parents('.generate-list');
+    $(parent).find('.input-table').addClass('d-none');
+    $(parent).find('.input').hide();
+    $(parent).find('.generated').removeClass('d-none');
+    $(this).hide();
+});
+
+$('.js_cancel').on('click',function(){
+    var parent = $(this).parents('.generate-list');
+    $(parent).find('.input-table').removeClass('d-none');
+    $(parent).find('.input').show();
+    $(parent).find('.generated').addClass('d-none');
+    $(parent).find('.js_generate').show();
+});
+
+$('.js_finish').on('click', function(){
+    $(this).removeClass('btn-highlight');
+    $(this).addClass('badge-success');
+    $(this).html('Done');
+});
+
+$('.js_cancel').on('click',function () {
+    $(this).removeClass('btn-highlight');
+    $(this).removeClass('btn-alert');
+    $(this).addClass('badge-secondary');
+    $(this).html('Canceled');
+    $(this).parents('.container').find('.vacation-status-no').html('46');
+});
+$('.js_cancel01').on('click',function () {
+    $(this).removeClass('btn-highlight');
+    $(this).removeClass('btn-alert');
+    $(this).addClass('badge-secondary');
+    $(this).html('Canceled');
+});
+
+$('#overtime').modal('show');

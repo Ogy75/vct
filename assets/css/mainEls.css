@@ -748,3 +748,12 @@ label.btn {
   background: #d8483e;
   color: white;
 }
+.inquiry-confirm {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 36px;
+  background-color: transparent !important;
+}
+.finish-payoff {
+  cursor: pointer;
+}

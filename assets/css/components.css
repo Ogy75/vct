@@ -69,6 +69,9 @@
 .vacation-log-element table.vct-vacation-log thead tr {
   background: white;
 }
+.vacation-log-element table.vct-vacation-log thead tr th {
+  font-weight: bold;
+}
 .vacation-log-element table.vct-vacation-log tr {
   background: #ededec;
 }
@@ -86,32 +89,12 @@
   width: 25%;
   padding: 10px 20px;
 }
-.vacation-log-element table.vct-vacation-log td:first-child {
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.vacation-log-element table.vct-vacation-log td:first-child:first-child:before {
-  content: url(/assets/images/ico-cal.svg);
-  float: left;
-  width: 24px;
-  margin-right: 15px;
-  line-height: 14px;
-}
 .vacation-log-element table.vct-vacation-log td:last-child {
   text-align: right;
 }
 .vacation-log-element table.vct-vacation-log td p {
   text-align: left;
   margin: 0;
-  line-height: 14px;
-}
-.vacation-log-element table.vct-vacation-log .vacation-icon:first-child:first-child::before {
-  content: url(/assets/images/ico-cal-v.svg);
-  float: left;
-  width: 24px;
-  margin-right: 15px;
   line-height: 14px;
 }
 .vacation-log-element table.vct-vacation-log th {
@@ -121,6 +104,70 @@
 }
 .vacation-log-element table.vct-vacation-log th:last-child {
   text-align: right;
+}
+.vacation-log-element .employees-overtime thead tr {
+  background: white;
+}
+.vacation-log-element .employees-overtime thead tr th {
+  font-weight: bold;
+}
+.vacation-log-element .employees-overtime tr {
+  background: #ededec;
+}
+.vacation-log-element .employees-overtime tr:hover {
+  background: #c0e7f6;
+}
+.vacation-log-element .employees-overtime tr.selected {
+  background: #1E9BCC !important;
+  color: white;
+}
+.vacation-log-element .employees-overtime tr:nth-child(even) {
+  background: white;
+}
+.vacation-log-element .employees-overtime tr:nth-child(even):hover {
+  background: #c0e7f6;
+}
+.vacation-log-element .employees-overtime td {
+  font-size: 14px;
+  width: 25%;
+  padding: 10px 20px;
+}
+.vacation-log-element .employees-overtime td:first-child {
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.vacation-log-element .employees-overtime td:first-child:first-child:before {
+  float: left;
+  width: 24px;
+  margin-right: 15px;
+  line-height: 14px;
+}
+.vacation-log-element .employees-overtime td:last-child {
+  text-align: right;
+}
+.vacation-log-element .employees-overtime td p {
+  text-align: left;
+  margin: 0;
+  line-height: 14px;
+}
+.vacation-log-element .employees-overtime .vacation-icon:first-child:first-child::before {
+  float: left;
+  width: 24px;
+  margin-right: 15px;
+  line-height: 14px;
+}
+.vacation-log-element .employees-overtime th {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 20px;
+}
+.vacation-log-element .employees-overtime th:last-child {
+  text-align: right;
+}
+.vacation-log-element .employees-overtime .select-all {
+  cursor: pointer;
 }
 .vacation-log-element span.project-name {
   display: block;
