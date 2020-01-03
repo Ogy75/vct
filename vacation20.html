@@ -454,12 +454,13 @@
                                                 </div>
                                                 <div
                                                     class="col-12 d-flex align-items-center justify-content-center justify-content-sm-start order-4 order-sm-4">
-                                                    <button class="btn btn-alert border border-white px-5 my-3">Book</button>
+                                                    <button
+                                                        class="btn btn-alert border border-white px-5 my-3 js_book">Book</button>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-12 col-sm-8">
+                                        <div class="col-12 col-sm-8 js_bookingMessage d-none">
                                             <div class="badge badge-success my-3">Request sucessfuly sent</div>
                                             <div class="badge badge-danger my-3 d-none">Something went wrong. Please try
                                                 again later.</div>
@@ -495,8 +496,10 @@
                                             <tr>
                                                 <td>23.3.2020 - 30.3.2020</td>
                                                 <td>5</td>
-                                                <td><span class="badge btn-alert finish-payoff js_cancel">Cancel
-                                                        booking</span></td>
+                                                <td>
+                                                    <span class="badge btn-alert finish-payoff js_cancel">Cancel
+                                                        booking</span>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>

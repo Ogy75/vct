@@ -67,3 +67,7 @@ $('#days-sickleave').click(function () {
     panelContainer.hide();
     $(this).parents('.left-items').find('#days-sickleave-data').show();
 });
+
+$('.js_book').on('click', function(){
+    $('.js_bookingMessage').removeClass('d-none');
+});
