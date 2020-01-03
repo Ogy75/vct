@@ -4,6 +4,10 @@ body{
     background: #f5f6fa !important;
 }
 
+.btn{
+    border-radius: 4px;
+}
+
 .time-module{
     display: block;
     width:100%;
@@ -29,7 +33,7 @@ body{
     &.selected{
         box-shadow: none;
         border:1px solid lighten(@basetextColor, 55%);
-        background: rgba(255,255,255, 0.3);
+        background: lighten(@highlightColor,50%);
     }
     .module-label{
         display: block;
@@ -68,7 +72,7 @@ body{
         margin-bottom: -3px;
         &.active{
             background: @highlightColor;
-            background-image: linear-gradient(90deg, darken(@highlightColor, 20%), @highlightColor);
+            background-image: linear-gradient(90deg, darken(@highlightColor, 10%), lighten(@highlightColor, 20%), darken(@highlightColor, 10%));
         }
     }
 }
@@ -78,7 +82,7 @@ body{
     padding:24px;
     border-radius: 4px;
     border:1px solid lighten(@basetextColor, 67%);
-    padding-bottom: 100px;
+    //padding-bottom: 100px;
     min-height: 300px;
     .table-title{
         display: block;
@@ -125,11 +129,20 @@ body{
         }
         tfoot{
             tr{
-                background: lighten(@confirmColor,60%);
+                background: lighten(@highlightColor,50%);
+                font-weight: 600;
                 td{
                     padding: 8px 5px;
                 }
             }
+        }
+    }
+    .tab-title{
+        font-size: 20px;
+        font-weight: 600;
+        span{
+            font-weight: 600;
+            font-size: 20px !important;
         }
     }
 }
@@ -139,6 +152,20 @@ body{
     margin-right:-6px;
 }
 
-#days-free-data, #days-previous-data, #days-earned-data, #days-assigned-data, #days-available-data, #days-sickleave-data{
+#days-free-data,
+#days-previous-data,
+#days-earned-data,
+#days-assigned-data,
+#days-sickleave-data,
+#days-spent-data{
     display: none;
+}
+
+.booking-wrapper{
+    background-image: url('../images/vacation.jpg');
+    background-size: cover;
+    background-position: center center;
+    color:white;
+    margin-top:30px;
+    border-radius: 4px;
 }

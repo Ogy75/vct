@@ -1,6 +1,9 @@
 body {
   background: #f5f6fa !important;
 }
+.btn {
+  border-radius: 4px;
+}
 .time-module {
   display: block;
   width: 100%;
@@ -27,7 +30,7 @@ body {
 .time-module.selected {
   box-shadow: none;
   border: 1px solid #cecec9;
-  background: rgba(255, 255, 255, 0.3);
+  background: #edf8fc;
 }
 .time-module .module-label {
   display: block;
@@ -66,14 +69,13 @@ body {
 }
 .time-module .module-status.active {
   background: #1E9BCC;
-  background-image: linear-gradient(90deg, #115773, #1E9BCC);
+  background-image: linear-gradient(90deg, #1779a0, #67c4e9, #1779a0);
 }
 .panel-container {
   background: white;
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #ebebe9;
-  padding-bottom: 100px;
   min-height: 300px;
 }
 .panel-container .table-title {
@@ -117,10 +119,19 @@ body {
   width: 20%;
 }
 .panel-container table.panel-table tfoot tr {
-  background: #e6f9e6;
+  background: #edf8fc;
+  font-weight: 600;
 }
 .panel-container table.panel-table tfoot tr td {
   padding: 8px 5px;
+}
+.panel-container .tab-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.panel-container .tab-title span {
+  font-weight: 600;
+  font-size: 20px !important;
 }
 .item-menu {
   font-size: 14px;
@@ -130,7 +141,15 @@ body {
 #days-previous-data,
 #days-earned-data,
 #days-assigned-data,
-#days-available-data,
-#days-sickleave-data {
+#days-sickleave-data,
+#days-spent-data {
   display: none;
+}
+.booking-wrapper {
+  background-image: url('../images/vacation.jpg');
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  margin-top: 30px;
+  border-radius: 4px;
 }

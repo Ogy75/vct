@@ -97,7 +97,7 @@
                     <div class="row">
 
                         <div class="col-4 col-xl-3">
-                            <div class="time-module" id="days-available" >
+                            <div class="time-module selected" id="days-available">
                                 <span class="module-label">vacation days available</span>
                                 <span class="module-icon"><i class="far fa-calendar"></i></span>
                                 <span class="module-data">23</span>
@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="col-4 col-xl-3">
-                            <div class="time-module selected" id="days-spent">
+                            <div class="time-module" id="days-spent">
                                 <span class="module-label">2020. vacation days spent</span>
                                 <span class="module-icon"><i class="far fa-calendar-minus"></i></span>
                                 <span class="module-data">3</span>
@@ -178,7 +178,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="d-block w-100 mb-4 float-left text-left">Days spent in current year deducted form vacation days or earned days.</div>
+                                    <div class="d-block w-100 mb-4 float-left text-left">Days spent in current year
+                                        deducted form vacation days or earned days.</div>
                                     <thead>
                                         <tr>
                                             <th><i class="far fa-calendar-alt"></i> Period</th>
@@ -200,15 +201,15 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                          <td>Total</td>
-                                          <td>3</td>
-                                          <td></td>
+                                            <td>Total</td>
+                                            <td>3</td>
+                                            <td></td>
                                         </tr>
-                                      </tfoot>
+                                    </tfoot>
                                 </table>
                             </div>
 
-                            
+
 
                             <!-- PREVIOUS YEAR -->
                             <div class="panel-container" id="days-previous-data">
@@ -223,7 +224,9 @@
                                                 </ul>
                                             </div>
                                         </div> -->
-                                        <div class="d-block w-100 mb-4 float-left text-left">Vacation days which were not used in previous year get reansfered to current year and can be used untill 31.6 of the current year.</div>
+                                    <div class="d-block w-100 mb-4 float-left text-left">Vacation days which were not
+                                        used in previous year get reansfered to current year and can be used untill 31.6
+                                        of the current year.</div>
                                     <thead>
                                         <tr>
                                             <th><i class="far fa-calendar-alt"></i> Assigned in previous year</th>
@@ -240,11 +243,11 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                          <td>Total</td>
-                                          <td>3</td>
-                                          <td></td>
+                                            <td>Total</td>
+                                            <td>3</td>
+                                            <td></td>
                                         </tr>
-                                      </tfoot>
+                                    </tfoot>
                                 </table>
                             </div>
 
@@ -262,7 +265,8 @@
                                             </div>
                                         </div>
                                     </div> -->
-                                    <div class="d-block w-100 mb-4 float-left text-left">Free days which are assigned to you.</div>
+                                    <div class="d-block w-100 mb-4 float-left text-left">Free days which are assigned to
+                                        you.</div>
                                     <thead>
                                         <tr>
                                             <th><i class="far fa-calendar-alt"></i> Period</th>
@@ -279,11 +283,11 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                          <td>Total</td>
-                                          <td>1</td>
-                                          <td></td>
+                                            <td>Total</td>
+                                            <td>1</td>
+                                            <td></td>
                                         </tr>
-                                      </tfoot>
+                                    </tfoot>
                                 </table>
                             </div>
 
@@ -339,11 +343,11 @@
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                          <td>Total</td>
-                                          <td>15</td>
-                                          <td></td>
+                                            <td>Total</td>
+                                            <td>15</td>
+                                            <td></td>
                                         </tr>
-                                      </tfoot>
+                                    </tfoot>
                                 </table>
                             </div>
 
@@ -379,19 +383,124 @@
                                             <td>1</td>
                                         </tr>
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>3</td>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
 
                             <!-- ASSIGNED DAYS -->
                             <div class="panel-container" id="days-assigned-data">
-                                <h5 class="w-75">You have a quota of 21 days assigned for 2020.</h5>
-                                <p class="w-75">These days can be used untill 31.6 next year. Before booking your vacation days please consult with your Team Leader. </p>
+                                <span class="tab-title">You have a quota of <span class="badge badge-success">21</span>
+                                    days assigned for 2020.</span>
+                                <p>These days can be used untill 31.6 next year. Before booking your vacation days
+                                    please consult with your Team Leader. </p>
                             </div>
 
                             <!-- AVAILABLE DAYS -->
                             <div class="panel-container" id="days-available-data">
-                                <h5 class="w-75">You have a total of 23 days available at your disposal.</h5>
-                                <p class="w-75">Total number of days you have available is a sum of this years assigned vacation days, unused previous year vacattion days and earned hours (converted to days). </p>
+                                <span class="tab-title">You have a total of <span class="badge badge-success">23</span>
+                                    days available at your disposal.</span>
+                                <p>This is a sum of this years assigned vacation days, unused previous year vacation
+                                    days and earned hours (converted to days). </p>
+                                <!-- HOLIDAY BOOKING -->
+                                <div class="booking-wrapper p-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="w-100">
+                                                <h4>Book my holidays</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-7 col-xl-6">
+                                            <p><span class="badge badge-success mr-1 mt-3 px-2">step 1</span>Period</p>
+                                            <div class="datepicker-here mb-3" data-range="true" data-language="en">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-5 col-xl-6">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-6 order-2 order-sm-1">
+                                                    <p><span class="badge badge-success mr-1 mt-3 px-2">step
+                                                            2</span>Earned days</p>
+                                                    <select class="w-100">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option selected>3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12 col-xl-6 order-3 order-sm-2">
+                                                    <p><span class="badge badge-success mr-1 mt-3 px-2">step
+                                                            3</span>Vacation days</p>
+                                                    <select class="w-100">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option selected>10</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12 order-1 order-sm-3">
+                                                    <p class="font-weight-bold mt-3">You have selected <span
+                                                            class="badge badge-dark">13</span> days in total. Please
+                                                        define how many days you want to use from your vacation days and
+                                                        your earned days.</p>
+                                                </div>
+                                                <div
+                                                    class="col-12 d-flex align-items-center justify-content-center justify-content-sm-start order-4 order-sm-4">
+                                                    <button class="btn btn-alert border border-white px-5 my-3">Book</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-8">
+                                            <div class="badge badge-success my-3">Request sucessfuly sent</div>
+                                            <div class="badge badge-danger my-3 d-none">Something went wrong. Please try
+                                                again later.</div>
+                                            <p>As soon as your request gets approved it will appear in the Vacation
+                                                Booking Log below. You can cancel your vacation booking at any time
+                                                before it's start date.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="mt-5">
+                                    <table class="panel-table">
+                                        <div class="table-title">Booked Vacation Days</div>
+                                        <div class="d-flex text-right justify-content-end align-items-center h-100">
+                                            <div class="item-menu fas fa-ellipsis-v">
+                                                <div class="item-menu-wrapper">
+                                                    <div class="arrow"></div>
+                                                    <ul><span class="item-menu-title">Log options</span>
+                                                        <li><a href="# ">Generate & Download PDF</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Period</th>
+                                                <th><i class="far fa-calendar"></i> Days</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>23.3.2020 - 30.3.2020</td>
+                                                <td>5</td>
+                                                <td><span class="badge btn-alert finish-payoff js_cancel">Cancel
+                                                        booking</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
 
                         </div>

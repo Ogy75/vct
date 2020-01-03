@@ -633,6 +633,7 @@ label.btn {
   box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.2);
   min-width: 250px;
   z-index: 3;
+  display: none;
 }
 .item-menu .item-menu-wrapper .arrow {
   position: absolute;
