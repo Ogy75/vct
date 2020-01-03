@@ -50,8 +50,11 @@ body{
         float: left;
         width:50%;
         text-align: left;
-        color: lighten(@basetextColor, 65%);
+        color: lighten(@basetextColor, 55%);
         font-size: 24px;
+        &.selected{
+            color:@highlightColor
+        }
     }
     .module-data{
         display: inline-flex;
@@ -72,7 +75,7 @@ body{
         margin-bottom: -3px;
         &.active{
             background: @highlightColor;
-            background-image: linear-gradient(90deg, darken(@highlightColor, 10%), lighten(@highlightColor, 20%), darken(@highlightColor, 10%));
+            background-image: linear-gradient(90deg, lighten(@highlightColor, 10%), darken(@highlightColor, 10%));
         }
     }
 }
@@ -82,7 +85,6 @@ body{
     padding:24px;
     border-radius: 4px;
     border:1px solid lighten(@basetextColor, 67%);
-    //padding-bottom: 100px;
     min-height: 300px;
     .table-title{
         display: block;
@@ -90,13 +92,15 @@ body{
         font-size: 14px;
         line-height: 14px;
         letter-spacing: 1px;
-        font-weight: 300;
+        font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 30px;
-        color:lighten(@basetextColor, 10%);
+        color:@basetextColor;
     }
     table.panel-table{
-        min-width: 100%;
+        width: 100%;
+        min-width: 280px !important;
+        overflow: scroll;
         thead{
             tr{
                 border-bottom: 1px solid lighten(@basetextColor, 30%);

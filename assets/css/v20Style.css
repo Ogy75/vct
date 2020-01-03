@@ -47,8 +47,11 @@ body {
   float: left;
   width: 50%;
   text-align: left;
-  color: #e6e6e4;
+  color: #cecec9;
   font-size: 24px;
+}
+.time-module .module-icon.selected {
+  color: #1E9BCC;
 }
 .time-module .module-data {
   display: inline-flex;
@@ -69,7 +72,7 @@ body {
 }
 .time-module .module-status.active {
   background: #1E9BCC;
-  background-image: linear-gradient(90deg, #1779a0, #67c4e9, #1779a0);
+  background-image: linear-gradient(90deg, #3bb3e2, #1779a0);
 }
 .panel-container {
   background: white;
@@ -84,13 +87,15 @@ body {
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 1px;
-  font-weight: 300;
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 30px;
-  color: #5d5d54;
+  color: #42423c;
 }
 .panel-container table.panel-table {
-  min-width: 100%;
+  width: 100%;
+  min-width: 280px !important;
+  overflow: scroll;
 }
 .panel-container table.panel-table thead tr {
   border-bottom: 1px solid #919186;
