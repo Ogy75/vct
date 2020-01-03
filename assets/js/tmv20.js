@@ -32,3 +32,38 @@ $('#days-previous').click(function () {
     panelContainer.hide();
     $(this).parents('.left-items').find('#days-previous-data').show();
 });
+
+$('#days-free').click(function () {
+    var timeModule = $('.time-module');
+    var panelContainer = $('.panel-container');
+    panelContainer.hide();
+    $(this).parents('.left-items').find('#days-free-data').show();
+});
+
+$('#days-earned').click(function () {
+    var timeModule = $('.time-module');
+    var panelContainer = $('.panel-container');
+    panelContainer.hide();
+    $(this).parents('.left-items').find('#days-earned-data').show();
+});
+
+$('#days-assigned').click(function () {
+    var timeModule = $('.time-module');
+    var panelContainer = $('.panel-container');
+    panelContainer.hide();
+    $(this).parents('.left-items').find('#days-assigned-data').show();
+});
+
+$('#days-available').click(function () {
+    var timeModule = $('.time-module');
+    var panelContainer = $('.panel-container');
+    panelContainer.hide();
+    $(this).parents('.left-items').find('#days-available-data').show();
+});
+
+$('#days-sickleave').click(function () {
+    var timeModule = $('.time-module');
+    var panelContainer = $('.panel-container');
+    panelContainer.hide();
+    $(this).parents('.left-items').find('#days-sickleave-data').show();
+});

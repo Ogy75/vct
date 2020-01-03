@@ -66,7 +66,7 @@ body {
 }
 .time-module .module-status.active {
   background: #1E9BCC;
-  background-image: linear-gradient(90deg, #d8483e, #1E9BCC);
+  background-image: linear-gradient(90deg, #115773, #1E9BCC);
 }
 .panel-container {
   background: white;
@@ -74,7 +74,7 @@ body {
   border-radius: 4px;
   border: 1px solid #ebebe9;
   padding-bottom: 100px;
-  min-height: 400px;
+  min-height: 300px;
 }
 .panel-container .table-title {
   display: block;
@@ -116,7 +116,21 @@ body {
   text-overflow: ellipsis;
   width: 20%;
 }
+.panel-container table.panel-table tfoot tr {
+  background: #e6f9e6;
+}
+.panel-container table.panel-table tfoot tr td {
+  padding: 8px 5px;
+}
 .item-menu {
   font-size: 14px;
   margin-right: -6px;
+}
+#days-free-data,
+#days-previous-data,
+#days-earned-data,
+#days-assigned-data,
+#days-available-data,
+#days-sickleave-data {
+  display: none;
 }
