@@ -573,6 +573,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li .selected:hover {
   left: 250px;
   width: calc(100% - 250px);
   display: block;
+  max-width: 1920px;
   transition: all 0.12s linear;
 }
 @media (max-width: 1024px) {

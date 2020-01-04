@@ -182,6 +182,12 @@ input {
   padding: 16px;
   border: 1px solid #ebebe9;
 }
+.vct-content .vct-teams {
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 30px;
+  z-index: 10;
+}
 .vct-content .project-logo img {
   height: 40px;
 }
@@ -200,16 +206,22 @@ input {
   margin-right: 8px;
   font-weight: 700;
 }
-.vct-content .vct-team-name-wrapper .toggle {
+.vct-content i {
+  color: #1E9BCC;
+}
+.vct-content i:hover {
+  color: #115773;
+}
+.vct-content .toggle {
   font-size: 15px;
   line-height: 15px;
   margin-right: 10px;
   color: #1E9BCC;
 }
-.vct-content .vct-team-name-wrapper .toggle:hover {
+.vct-content .toggle:hover {
   color: #115773;
 }
-.vct-content .vct-team-name-wrapper .team-name {
+.vct-content .team-name {
   display: block;
   font-size: 16px;
   float: left;
@@ -221,18 +233,34 @@ input {
   transition: all 0.12s linear;
   text-decoration: none;
 }
-.vct-content .vct-team-name-wrapper .team-name:before {
+.vct-content .team-name:before {
+  content: "\f077";
+  font-family: 'Font Awesome 5 Free';
+  margin-right: 8px;
+}
+.vct-content .team-name:after {
+  content: "Team";
+}
+.vct-content .team-name.visible:before {
   content: "\f078";
   font-family: 'Font Awesome 5 Free';
   margin-right: 8px;
 }
-.vct-content .vct-team-name-wrapper .team-name:after {
-  content: " team";
+.vct-content .pin {
+  font-size: 17px;
+  line-height: 17px;
+  transform: rotate(45deg);
+  color: rgba(66, 66, 60, 0.6);
 }
-.vct-content .vct-team-name-wrapper .team-name.visible:before {
-  content: "\f077";
-  font-family: 'Font Awesome 5 Free';
-  margin-right: 8px;
+.vct-content .pin.pin-pinned {
+  transform: rotate(0deg);
+  color: #d8483e;
+}
+.vct-content .pinned {
+  box-shadow: none;
+  position: relative;
+  top: 0;
+  z-index: initial;
 }
 .vct-content .team-list {
   display: flex;
@@ -289,9 +317,20 @@ input {
 .vct-content .team-data .toggle-onsite {
   height: 33px;
   line-height: 33px;
+  font-size: 15px;
+  color: rgba(66, 66, 60, 0.5);
+}
+.vct-content .team-data .toggle-onsite:hover {
   color: #1E9BCC;
 }
 .vct-content .team-data .comment {
   height: 33px;
   padding: 6px 4px;
+}
+.vct-content .reset-input {
+  position: absolute;
+  top: 0px;
+  right: 8px;
+  line-height: 33px;
+  display: none;
 }

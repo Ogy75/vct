@@ -86,7 +86,7 @@
         <div class="container position-relative">
             <div class="row">
                 <div class="col-6 d-flex align-items-center justify-content-start">
-                    <button class="btn btn-highlight">All projects</button>
+                    <button class="btn btn-highlight">all projects</button>
                 </div>
                 <div class="col-6 project-logo d-flex align-items-center justify-content-end">
                     <img src="assets/images/logo-edelweiss-s.svg">
@@ -115,29 +115,33 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <span class="badge badge-success"><span>April </span>Time required <span>160h</span></span>
+                        </div>
+                    </div>
                     <!-- TEAMS -->
                     <div class="vct-teams mt-3">
                         <div class="row">
                             <div class="col-12">
-                                <div class="vct-team-name-wrapper">
-                                    <a href="javascript:void(0)" class="team-name h-100 m-0">Some Name</a>
-                                    <div class="d-flex justify-content-end align-items-center h-100">
-                                        <div class="item-menu fas fa-ellipsis-v">
-                                            <div class="item-menu-wrapper" style="display: none;">
-                                                <div class="arrow"></div>
-                                                <ul>
-                                                    <span class="item-menu-title">Team options</span>
-                                                    <li><a href="javascript:void(0)">Export Excel file for All Team Members</a>
-                                                    </li>
-                                                    <li><a class="js_generateZip" href="javascript:void(0)">Generate PDF for All
-                                                    Team Members</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-start">
+                                        <a href="javascript:void(0)" class="team-name h-100 m-0">Some Name</a>
+                                    </div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <select>
+                                            <option>January</option>
+                                            <option>February</option>
+                                            <option selected>March</option>
+                                        </select>
+                                        <i class="fas fa-thumbtack ml-3 pin pin-pinned"></i>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <!-- TEAM LIST -->
                         <div class="row pt-3 team-list">
                             <div class="col-12 col-md-6 col-xl-3">
@@ -258,6 +262,24 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- FIND TEAM MEMBER -->
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-8 col-md-8 col-lg-4">
+                            <div class="position-relative">
+                                <input class="filter-members" placeholder="Find team member" type="text">
+                                <span class="reset-input ti-close"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NO RESULTS MESSAGE -->
+                    <div class="row no-results-message justify-content-center align-items-center" style="display: none;">
+                        <div class="no-results col-12 h-100 p-5 text-center no-results">
+                            <h4>There are no results matching your criteria</h4>
+                            <p>Please modify your query</p>
+                        </div>
+                    </div>
+
                     <!-- TEAM DATA -->
                     <div class="row">
                         <!-- TEAM MEMBER -->
@@ -268,9 +290,9 @@
                                         <div class="team-member-image">
                                             <img src="assets/images/profile-1.jpg" />
                                         </div>
-                                        <div class="team-member-name">Petar Petrovic</div>
+                                        <div class="team-member-name">Mirko Mirkovic</div>
                                     </div>
-                                    <div class="d-flex justify-content-center float-right h-100">
+                                    <div class="d-flex justify-content-end">
                                         <a href="javascript:void(0)" target="_blank" class="fas mr-2 fa-file-alt uploaded-file" data-toggle="tooltip" data-placement="top" title="" data-original-title="Attached report"></a>
                                         <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas mr-2 pdf-report" data-toggle="tooltip" data-placement="top" title="" data-original-title="Team Member PDF report"></a>
                                         <div class="item-menu fas fa-ellipsis-v">
@@ -297,6 +319,7 @@
                                     <div class="col-3 col-xl-1 position-relative">
                                         <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
                                         <input type="text" value="0" name="normal">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#normal"></i>
                                     </div>
                                     <div class="col-3 col-xl-1">
                                         <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
@@ -381,6 +404,103 @@
                                     <div class="col-3 col-xl-1">
                                         <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                         <input type="text" value="0" name="free">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                        <input type="text" value="0" name="holidays">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                        <input type="text" value="0" name="sickness">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                        Off</label>
+                                        <input type="text" value="0" name="daysOff">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="total">Total</label>
+                                        <input type="text" value="0" name="total" disabled>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-xl-1 align-self-end mt-3">
+                                        <div class="d-flex align-items-center vct-team-location">
+                                            <p class="w-100">deviation</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-1 position-relative">
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Razlika u odnosu na potrebno vreme.">Deviation value</label>
+                                        <input type="text" value="0" name="normal">
+                                    </div>
+                                    <div class="col-9">
+                                        <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment is mandatory of deviation exists">Comment</label>
+                                        <textarea class="comment" name="comment"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TEAM MEMBER -->
+                        <div class="col-12">
+                            <div class="team-data mt-3 parent">
+                                <div class="d-flex justify-content-between align-items-center pb-3 border-bottom">
+                                    <div class="d-flex justify-content-start">
+                                        <div class="team-member-image">
+                                            <img src="assets/images/profile-3.jpg" />
+                                        </div>
+                                        <div class="team-member-name">Petar Petrovic</div>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="javascript:void(0)" target="_blank" class="fas mr-2 fa-file-alt uploaded-file" data-toggle="tooltip" data-placement="top" title="" data-original-title="Attached report"></a>
+                                        <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas mr-2 pdf-report" data-toggle="tooltip" data-placement="top" title="" data-original-title="Team Member PDF report"></a>
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                                    <li><a class="js_generate" href="javascript:void(0)">Generate PDF</a></li>
+                                                    <li><a data-toggle="modal" data-target="#book" href="javascript:void(0)">Booked Vacations</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- OFFICE -->
+                                <div class="row mt-2 parent">
+                                    <div class="col-12 col-xl-1 align-self-end mt-3">
+                                        <div class="d-flex align-items-center vct-team-location">
+                                            <p class="w-100">office</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-1 position-relative">
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                        <input type="text" value="0" name="normal">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#normal"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                        <input type="text" value="0" name="travel">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="totalWork">Total work</label>
+                                        <input type="text" value="0" name="totalWork" disabled>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                        <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                        </div>
+                                        <input type="text" value="16" name="overtime">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                        internal</label>
+                                        <input type="text" value="8" name="eiInternal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                        <input type="text" value="0" name="free">
                                         <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
                                     </div>
                                     <div class="col-3 col-xl-1">
@@ -403,6 +523,63 @@
                                         <label for="total">Total</label>
                                         <input type="text" value="0" name="total" disabled>
                                     </div>
+                                    <div class="col-6 col-xl-1 align-self-end">
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <i class="fas fa-chevron-down toggle-onsite"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ON SITE -->
+                                <div class="row on-site-row d-none">
+                                    <div class="col-12 col-xl-1 align-self-end mt-3">
+                                        <div class="d-flex align-items-center vct-team-location">
+                                            <p class="w-100">on site</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-1 position-relative">
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                        <input type="text" value="0" name="normal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                        <input type="text" value="0" name="travel">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="totalWork">Total work</label>
+                                        <input type="text" value="0" name="totalWork" disabled>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                        <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                        </div>
+                                        <input type="text" value="16" name="overtime">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                        internal</label>
+                                        <input type="text" value="8" name="eiInternal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                        <input type="text" value="0" name="free">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                        <input type="text" value="0" name="holidays">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                        <input type="text" value="0" name="sickness">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                        Off</label>
+                                        <input type="text" value="0" name="daysOff">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="total">Total</label>
+                                        <input type="text" value="0" name="total" disabled>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-xl-1 align-self-end mt-3">
@@ -411,11 +588,11 @@
                                         </div>
                                     </div>
                                     <div class="col-3 col-xl-1 position-relative">
-                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Deviation value</label>
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Razlika u odnosu na potrebno vreme.">Deviation value</label>
                                         <input type="text" value="0" name="normal">
                                     </div>
                                     <div class="col-9">
-                                        <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment if there is a difference">Comment</label>
+                                        <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment is mandatory of deviation exists">Comment</label>
                                         <textarea class="comment" name="comment"></textarea>
                                     </div>
                                 </div>
@@ -431,7 +608,7 @@
                                         </div>
                                         <div class="team-member-name">Dejan Jovanovic</div>
                                     </div>
-                                    <div class="d-flex justify-content-center float-right h-100">
+                                    <div class="d-flex justify-content-end">
                                         <a href="javascript:void(0)" target="_blank" class="fas mr-2 fa-file-alt uploaded-file" data-toggle="tooltip" data-placement="top" title="" data-original-title="Attached report"></a>
                                         <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas mr-2 pdf-report" data-toggle="tooltip" data-placement="top" title="" data-original-title="Team Member PDF report"></a>
                                         <div class="item-menu fas fa-ellipsis-v">
@@ -464,6 +641,7 @@
                                     <div class="col-3 col-xl-1 position-relative">
                                         <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
                                         <input type="text" value="0" name="normal">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#normal"></i>
                                     </div>
                                     <div class="col-3 col-xl-1">
                                         <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
@@ -548,23 +726,19 @@
                                     <div class="col-3 col-xl-1">
                                         <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                         <input type="text" value="0" name="free">
-                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
                                     </div>
                                     <div class="col-3 col-xl-1">
                                         <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
                                         <input type="text" value="0" name="holidays">
-                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
                                     </div>
                                     <div class="col-3 col-xl-1">
                                         <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
                                         <input type="text" value="0" name="sickness">
-                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
                                     </div>
                                     <div class="col-3 col-xl-1">
                                         <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
                                         Off</label>
                                         <input type="text" value="0" name="daysOff">
-                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
                                     </div>
                                     <div class="col-3 col-xl-1">
                                         <label for="total">Total</label>
@@ -578,11 +752,11 @@
                                         </div>
                                     </div>
                                     <div class="col-3 col-xl-1 position-relative">
-                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Deviation value</label>
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Razlika u odnosu na potrebno vreme.">Deviation value</label>
                                         <input type="text" value="0" name="normal">
                                     </div>
                                     <div class="col-9">
-                                        <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment if there is a difference">Comment</label>
+                                        <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment is mandatory of deviation exists">Comment</label>
                                         <textarea class="comment" name="comment"></textarea>
                                     </div>
                                 </div>
@@ -604,4 +778,4 @@
     <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
 </body>
 
-</htm
+</html>
