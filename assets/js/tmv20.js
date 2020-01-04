@@ -139,4 +139,5 @@ $(document).ready(function() {
         $(this).parents('.vct-teams').toggleClass('pinned');
         $(this).toggleClass('pin-pinned');
     });
+
 });
