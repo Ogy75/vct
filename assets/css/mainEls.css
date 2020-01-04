@@ -158,7 +158,7 @@ input[type="number"],
 input[type="password"] {
   display: block;
   width: 100%;
-  padding: 8px 4px;
+  padding: 6px 4px;
   box-sizing: border-box;
   outline: none;
   border: 1px solid #959592;
@@ -625,6 +625,7 @@ label.btn {
   color: #1E9BCC;
 }
 .item-menu .item-menu-wrapper {
+  display: none;
   position: absolute;
   top: 28px;
   right: 0;
@@ -633,7 +634,6 @@ label.btn {
   box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.2);
   min-width: 250px;
   z-index: 3;
-  display: none;
 }
 .item-menu .item-menu-wrapper .arrow {
   position: absolute;

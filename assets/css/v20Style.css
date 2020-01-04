@@ -3,6 +3,18 @@ body {
 }
 .btn {
   border-radius: 4px;
+  font-size: 13px;
+}
+input {
+  font-size: 13px !important;
+  font-weight: 500;
+}
+.item-menu-wrapper a {
+  font-size: 12px !important;
+}
+.badge {
+  font-size: 12px !important;
+  line-height: 12px;
 }
 .time-module {
   display: block;
@@ -139,7 +151,7 @@ body {
   font-size: 20px !important;
 }
 .item-menu {
-  font-size: 14px;
+  font-size: 15px;
   margin-right: -6px;
 }
 #days-free-data,
@@ -161,4 +173,125 @@ body {
   background: #1E9BCC;
   color: white;
   border-radius: 4px;
+}
+.vct-content .vct-project,
+.vct-content .vct-teams,
+.vct-content .team-data {
+  background: white;
+  border-radius: 4px;
+  padding: 16px;
+  border: 1px solid #ebebe9;
+}
+.vct-content .project-logo img {
+  height: 40px;
+}
+.vct-content .vct-project-name-wrapper {
+  text-align: left;
+  border-radius: 4px;
+  width: 95%;
+  float: left;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.vct-content .vct-project-name-wrapper .client-name {
+  margin-right: 8px;
+  font-weight: 700;
+}
+.vct-content .vct-team-name-wrapper .toggle {
+  font-size: 15px;
+  line-height: 15px;
+  margin-right: 10px;
+  color: #1E9BCC;
+}
+.vct-content .vct-team-name-wrapper .toggle:hover {
+  color: #115773;
+}
+.vct-content .vct-team-name-wrapper .team-name {
+  display: block;
+  font-size: 16px;
+  float: left;
+  width: auto;
+  line-height: 16px;
+  font-weight: 700;
+  color: #1E9BCC;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  text-decoration: none;
+}
+.vct-content .vct-team-name-wrapper .team-name:before {
+  content: "\f078";
+  font-family: 'Font Awesome 5 Free';
+  margin-right: 8px;
+}
+.vct-content .vct-team-name-wrapper .team-name:after {
+  content: " team";
+}
+.vct-content .vct-team-name-wrapper .team-name.visible:before {
+  content: "\f077";
+  font-family: 'Font Awesome 5 Free';
+  margin-right: 8px;
+}
+.vct-content .team-list {
+  display: flex;
+}
+.vct-content .team-list .team-item {
+  width: 100%;
+  background: #f5f6fa;
+  border-radius: 4px;
+  padding: 10px 16px;
+  border: 1px solid #ebebe9;
+  margin-bottom: 8px;
+  transition: all 0.12s linear;
+  cursor: pointer;
+}
+.vct-content .team-list .team-item.selected {
+  background: #67c4e9;
+  color: white;
+}
+.vct-content .team-list .team-item:hover {
+  background: #67c4e9;
+  color: white;
+}
+.vct-content .team-list .team-item .team-item-name {
+  font-size: 12px;
+  font-weight: 600;
+}
+.vct-content .team-data .team-member-image {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.vct-content .team-data .team-member-image img {
+  width: 46px;
+  height: 46px;
+}
+.vct-content .team-data .team-member-name {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 46px;
+  height: 46px;
+  font-weight: 600;
+}
+.vct-content .team-data .vct-team-location {
+  background: transparent;
+}
+.vct-content .team-data .vct-team-location p {
+  color: #42423c;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.vct-content .team-data .toggle-onsite {
+  height: 33px;
+  line-height: 33px;
+  color: #1E9BCC;
+}
+.vct-content .team-data .comment {
+  height: 33px;
+  padding: 6px 4px;
 }

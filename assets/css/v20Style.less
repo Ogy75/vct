@@ -6,6 +6,20 @@ body{
 
 .btn{
     border-radius: 4px;
+    font-size: 13px;
+}
+input{
+    font-size: 13px !important;
+    font-weight: 500;
+}
+.item-menu-wrapper{
+    a{
+        font-size: 12px !important;
+    }
+}
+.badge{
+    font-size: 12px !important;
+    line-height: 12px;
 }
 
 .time-module{
@@ -152,7 +166,7 @@ body{
 }
 
 .item-menu{
-    font-size: 14px;
+    font-size: 15px;
     margin-right:-6px;
 }
 
@@ -176,4 +190,140 @@ body{
     background:@highlightColor;
     color:white;
     border-radius: 4px;
+}
+
+.vct-content{
+    .vct-project, .vct-teams, .team-data{
+        background: white;
+        border-radius: 4px;
+        padding: 16px;
+        border:1px solid lighten(@basetextColor, 67%);
+    }
+    .project-logo{
+        img{
+            height:40px;
+        }
+    }
+    .vct-project-name-wrapper{
+        text-align: left;
+        border-radius: 4px;
+        width:95%;
+        float: left;
+        font-size: 16px;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        .client-name{
+            margin-right:8px;
+            font-weight: 700;
+        }
+    }
+    .vct-team-name-wrapper{
+        .toggle{
+            font-size: 15px;
+            line-height: 15px;
+            margin-right: 10px;
+            color: @highlightColor;
+            &:hover{
+                color: darken(@highlightColor, 20%);
+            }
+        }
+        .team-name{
+            display: block;
+            font-size: 16px;
+            float: left;
+            width:auto;
+            line-height: 16px;
+            font-weight: 700;
+            color: @highlightColor;
+            cursor: pointer;
+            transition: @mainTransition;
+            text-decoration: none;
+            &:before{
+                content: "\f078";
+                font-family: 'Font Awesome 5 Free';
+                margin-right: 8px;
+            }
+            &:after{
+                content:" team";
+            }
+            &.visible{
+                &:before{
+                
+                content: "\f077";
+                font-family: 'Font Awesome 5 Free';
+                margin-right: 8px;
+                }
+            }
+        }
+    }
+    .team-list {
+        display: flex;
+        .team-item{
+            width: 100%;
+            background: #f5f6fa;
+            border-radius: 4px;
+            padding: 10px 16px;
+            border:1px solid lighten(@basetextColor, 67%);
+            margin-bottom: 8px;
+            transition: @mainTransition;
+            cursor: pointer;
+            &.selected{
+                background: lighten(@highlightColor,20%);
+                    color:white;
+            }
+            &:hover{
+                    background: lighten(@highlightColor,20%);
+                    color:white;
+                }
+            .team-item-name{
+                font-size: 12px;
+                font-weight: 600;
+                //width: auto;
+            }
+        }
+    }
+    .team-data{
+        .team-member-image{
+            display: inline-block;
+            width:46px;
+            height:46px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+            
+            img{
+                width:46px;
+                height: 46px;
+            }
+        }
+        .team-member-name{
+            display: inline-block;
+            font-size: 16px;
+            line-height: 46px;
+            height: 46px;
+            font-weight: 600;
+        }
+        .vct-team-location{
+            background: transparent;
+            //border:1px solid lighten(@basetextColor, 67%);
+            //line-height: 33px;
+            p{
+                color:@basetextColor;
+                text-transform: uppercase;
+                font-size: 14px;
+                
+            }
+        }
+        .toggle-onsite{
+            height: 33px;
+            line-height: 33px;
+            color: @highlightColor;
+        }
+        .comment{
+            height:33px;
+            padding:6px 4px;
+        }
+    }
 }

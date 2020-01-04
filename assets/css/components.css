@@ -216,7 +216,7 @@
 .vct-client-checkbox {
   height: 16px;
   width: 16px;
-  top: 38px;
+  top: 36px;
   right: 20px;
 }
 .vct-team-member-block {
@@ -273,7 +273,7 @@ a.uploaded-file {
 }
 .info-modal-trigger {
   right: 23px;
-  bottom: 8px;
+  bottom: 6px;
   font-size: 14px;
   cursor: pointer;
 }

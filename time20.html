@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Team Time Log</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
+    <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
+    <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
+    <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/v20Style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fav-icn//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fav-icn//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fav-icn//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
+    <link rel="manifest" href="assets/fav-icn//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+</head>
+
+<body>
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+
+            <div class="vct-logo w-100 text-left text-white">
+                <img src="assets/images/app-h-logo.svg" alt="enjoy.ing" width="65%">
+            </div>
+
+            <ul class="vct-nav-menu">
+                <li><a href="vacation.html"><i class="ti-shine mr-3"></i>My Days</a></li>
+                <li><a href="hr-service.html"><i class="ti-user mr-3"></i>HR Service</a></li>
+                <li><a href="operations-management.html"><i class="ti-pin mr-3"></i>Operations</a></li>
+                <li><a class="selected" href="teams.html"><i class="ti-timer mr-3"></i>Project management</a></li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>2 levels</a>
+                    <ul class="vct-nav-level1">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav bg-white border-bottom shadow-sm">
+        <div class="vct-user-menu float-right">
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="ti-fullscreen full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mr-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content mb-5">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-6 d-flex align-items-center justify-content-start">
+                    <button class="btn btn-highlight">All projects</button>
+                </div>
+                <div class="col-6 project-logo d-flex align-items-center justify-content-end">
+                    <img src="assets/images/logo-edelweiss-s.svg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <!-- PROJECT -->
+                    <div class="vct-project mt-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="vct-project-name-wrapper">
+                                    <div class="h-100 project-name m-0"><span class="client-name">Edelweiss</span>Internet Booking Engine</div>
+                                </div>
+                                <div class="d-flex justify-content-end align-items-center h-100">
+                                    <div class="item-menu fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TEAMS -->
+                    <div class="vct-teams mt-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="vct-team-name-wrapper">
+                                    <a href="javascript:void(0)" class="team-name h-100 m-0">Some Name</a>
+                                    <div class="d-flex justify-content-end align-items-center h-100">
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper" style="display: none;">
+                                                <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Team options</span>
+                                                    <li><a href="javascript:void(0)">Export Excel file for All Team Members</a>
+                                                    </li>
+                                                    <li><a class="js_generateZip" href="javascript:void(0)">Generate PDF for All
+                                                    Team Members</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TEAM LIST -->
+                        <div class="row pt-3 team-list">
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 1</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center selected">
+                                    <div class="team-item-name">Some Name</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-warning ml-2">waiting for approval</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 3</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-danger ml-2">to be done</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 4</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-danger ml-2">to be done</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 5</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 6</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 7</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 8</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 9</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 10</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 11</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 12</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 13</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 14</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 15</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 16</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 17</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                                <div class="team-item d-flex justify-content-between align-items-center">
+                                    <div class="team-item-name">Team Name 18</div>
+                                    <div class="d-flex justify-content-end align-items-center">
+                                        <div class="badge badge-success ml-2">approved</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TEAM DATA -->
+                    <div class="row">
+                        <!-- TEAM MEMBER -->
+                        <div class="col-12">
+                            <div class="team-data mt-3 parent">
+                                <div class="d-flex justify-content-between align-items-center pb-3 border-bottom">
+                                    <div class="d-flex justify-content-start">
+                                        <div class="team-member-image">
+                                            <img src="assets/images/profile-1.jpg" />
+                                        </div>
+                                        <div class="team-member-name">Petar Petrovic</div>
+                                    </div>
+                                    <div class="d-flex justify-content-center float-right h-100">
+                                        <a href="javascript:void(0)" target="_blank" class="fas mr-2 fa-file-alt uploaded-file" data-toggle="tooltip" data-placement="top" title="" data-original-title="Attached report"></a>
+                                        <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas mr-2 pdf-report" data-toggle="tooltip" data-placement="top" title="" data-original-title="Team Member PDF report"></a>
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                                    <li><a class="js_generate" href="javascript:void(0)">Generate PDF</a></li>
+                                                    <li><a data-toggle="modal" data-target="#book" href="javascript:void(0)">Booked Vacations</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- OFFICE -->
+                                <div class="row mt-2 parent">
+                                    <div class="col-12 col-xl-1 align-self-end mt-3">
+                                        <div class="d-flex align-items-center vct-team-location">
+                                            <p class="w-100">office</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-1 position-relative">
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                        <input type="text" value="0" name="normal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                        <input type="text" value="0" name="travel">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="totalWork">Total work</label>
+                                        <input type="text" value="0" name="totalWork" disabled>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                        <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                        </div>
+                                        <input type="text" value="16" name="overtime">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                        internal</label>
+                                        <input type="text" value="8" name="eiInternal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                        <input type="text" value="0" name="free">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                        <input type="text" value="0" name="holidays">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                        <input type="text" value="0" name="sickness">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                        Off</label>
+                                        <input type="text" value="0" name="daysOff">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="total">Total</label>
+                                        <input type="text" value="0" name="total" disabled>
+                                    </div>
+                                    <div class="col-6 col-xl-1 align-self-end">
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <i class="fas fa-chevron-down toggle-onsite"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ON SITE -->
+                                <div class="row on-site-row d-none">
+                                    <div class="col-12 col-xl-1 align-self-end mt-3">
+                                        <div class="d-flex align-items-center vct-team-location">
+                                            <p class="w-100">on site</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-1 position-relative">
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                        <input type="text" value="0" name="normal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                        <input type="text" value="0" name="travel">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="totalWork">Total work</label>
+                                        <input type="text" value="0" name="totalWork" disabled>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                        <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                        </div>
+                                        <input type="text" value="16" name="overtime">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                        internal</label>
+                                        <input type="text" value="8" name="eiInternal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                        <input type="text" value="0" name="free">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                        <input type="text" value="0" name="holidays">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                        <input type="text" value="0" name="sickness">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                        Off</label>
+                                        <input type="text" value="0" name="daysOff">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="total">Total</label>
+                                        <input type="text" value="0" name="total" disabled>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-xl-1 align-self-end mt-3">
+                                        <div class="d-flex align-items-center vct-team-location">
+                                            <p class="w-100">deviation</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-1 position-relative">
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Deviation value</label>
+                                        <input type="text" value="0" name="normal">
+                                    </div>
+                                    <div class="col-9">
+                                        <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment if there is a difference">Comment</label>
+                                        <textarea class="comment" name="comment"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TEAM MEMBER -->
+                        <div class="col-12">
+                            <div class="team-data mt-3 parent">
+                                <div class="d-flex justify-content-between align-items-center pb-3 border-bottom">
+                                    <div class="d-flex justify-content-start">
+                                        <div class="team-member-image">
+                                            <img src="assets/images/profile-2.jpg" />
+                                        </div>
+                                        <div class="team-member-name">Dejan Jovanovic</div>
+                                    </div>
+                                    <div class="d-flex justify-content-center float-right h-100">
+                                        <a href="javascript:void(0)" target="_blank" class="fas mr-2 fa-file-alt uploaded-file" data-toggle="tooltip" data-placement="top" title="" data-original-title="Attached report"></a>
+                                        <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas mr-2 pdf-report" data-toggle="tooltip" data-placement="top" title="" data-original-title="Team Member PDF report"></a>
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <li><a href="javascript:void(0)">Export to Excel</a></li>
+                                                    <li><a class="js_generate" href="javascript:void(0)">Generate PDF</a></li>
+                                                    <li><a data-toggle="modal" data-target="#book" href="javascript:void(0)">Booked Vacations</a></li>
+                                                    <li><a href="javascript:void(0)">Remove Team Member</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-1">
+                                    <div class="col-12">
+                                        <span class="badge badge-warning">Temporary member</span>
+                                        <span class="badge badge-info">Shared with <span class="client-name">Swiss</span> - <span class="project-name">project name</span></span>
+                                    </div>
+                                </div>
+                                <!-- OFFICE -->
+                                <div class="row mt-2 parent">
+                                    <div class="col-12 col-xl-1 align-self-end mt-3">
+                                        <div class="d-flex align-items-center vct-team-location">
+                                            <p class="w-100">office</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-1 position-relative">
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                        <input type="text" value="0" name="normal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                        <input type="text" value="0" name="travel">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="totalWork">Total work</label>
+                                        <input type="text" value="0" name="totalWork" disabled>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                        <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                        </div>
+                                        <input type="text" value="16" name="overtime">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                        internal</label>
+                                        <input type="text" value="8" name="eiInternal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                        <input type="text" value="0" name="free">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                        <input type="text" value="0" name="holidays">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                        <input type="text" value="0" name="sickness">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                        Off</label>
+                                        <input type="text" value="0" name="daysOff">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="total">Total</label>
+                                        <input type="text" value="0" name="total" disabled>
+                                    </div>
+                                    <div class="col-6 col-xl-1 align-self-end">
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <i class="fas fa-chevron-down toggle-onsite"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ON SITE -->
+                                <div class="row on-site-row d-none">
+                                    <div class="col-12 col-xl-1 align-self-end mt-3">
+                                        <div class="d-flex align-items-center vct-team-location">
+                                            <p class="w-100">on site</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-1 position-relative">
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                        <input type="text" value="0" name="normal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                        <input type="text" value="0" name="travel">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="totalWork">Total work</label>
+                                        <input type="text" value="0" name="totalWork" disabled>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                        <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                        </div>
+                                        <input type="text" value="16" name="overtime">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci, godisnji  razgovori, itd.)">Ei
+                                        internal</label>
+                                        <input type="text" value="8" name="eiInternal">
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time dopunimo vreme  (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
+                                        <input type="text" value="0" name="free">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                        <input type="text" value="0" name="holidays">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                        <input type="text" value="0" name="sickness">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                        Off</label>
+                                        <input type="text" value="0" name="daysOff">
+                                        <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
+                                    </div>
+                                    <div class="col-3 col-xl-1">
+                                        <label for="total">Total</label>
+                                        <input type="text" value="0" name="total" disabled>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-xl-1 align-self-end mt-3">
+                                        <div class="d-flex align-items-center vct-team-location">
+                                            <p class="w-100">deviation</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-1 position-relative">
+                                        <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Deviation value</label>
+                                        <input type="text" value="0" name="normal">
+                                    </div>
+                                    <div class="col-9">
+                                        <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment if there is a difference">Comment</label>
+                                        <textarea class="comment" name="comment"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="assets/vendor/jquery341/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js"></script>
+    <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/tmv20.js"></script>
+    <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
+</body>
+
+</htm
