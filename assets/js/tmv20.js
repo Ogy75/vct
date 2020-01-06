@@ -149,4 +149,21 @@ $(document).ready(function() {
         $(this).toggleClass('pin-pinned');
     });
 
+    //CHANGE BOOKING IMAGE BY SEASON
+    var currentTime = new Date();
+    var month = currentTime.getMonth() + 1;
+    var total = month;
+    var container = $('.booking-wrapper');
+    if (total >= 6 && total <= 8) {
+        container.css('background-image', 'url("assets/images/summer.jpg")');
+    } else if (total >= 9 && total <= 11) {
+        container.css('background-image', 'url("assets/images/autumn.jpg")');
+    } else if (total == 12 || total == 1 || total == 2) {
+        container.css('background-image', 'url("assets/images/winter.jpg")');
+    } else if (total >= 2 && total <= 6) {
+        container.css('background-image', 'url("assets/images/spring.jpg")');
+    } else {
+        container.css('background-image', 'url("assets/images/summer.jpg")');
+    }
+
 });
