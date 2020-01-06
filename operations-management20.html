@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Team Management</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
+    <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
+    <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
+    <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/v20Style.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fav-icn//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fav-icn//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fav-icn//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
+    <link rel="manifest" href="assets/fav-icn//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+</head>
+
+<body>
+
+    <!-- **************************************************MODALS START************************************************** -->
+
+    <!--Operations Officer Modal Start -->
+    <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg" />
+                            </div>
+                            <div class="team-member-name">Petar Petrovic</div>
+                        </div>
+                        <div class="p-4">
+                            <!-- <div class="row">
+                                <div class="col-12">
+                                    <span class="d-block modal-title mb-4">normal hours</span>
+                                </div>
+                            </div> -->
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="d-block data-title">started at Enjoy.ing</span>
+                                    <span class="d-block tm-data-value">21.4.2018</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="panel-container border-0 p-0">
+                                <!-- <span class="d-block modal-title mb-4">Time Manager work hours log</span> -->
+                                <div class="table-wrapper">
+                                    <table class="panel-table text-left">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="modal-table-project" colspan="2">GENERAL DATA</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Year of Birth</td>
+                                                <td>1980</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Genre</td>
+                                                <td>Male</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="modal-table-project" colspan="2">JOB DATA</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Employment status</td>
+                                                <td>
+                                                    <span class="badge badge-success">Active</span>
+                                                    <!-- <span class="badge badge-secondary">Not Active</span> -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Contract Type</td>
+                                                <td>Permanent</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Team Name</td>
+                                                <td>Edelweiss - Internet Booking Engine</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Team Location</td>
+                                                <td>Belgrade</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Job Title</td>
+                                                <td>Operations Officer</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="modal-table-project" colspan="2">GENERAL TIME DATA</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Vacation days remaining (current year)</td>
+                                                <td>23</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vacation days assigned (current year)</td>
+                                                <td>22</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vacation days spent (current year)</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sickleave days (current year)</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Earned time</td>
+                                                <td>2 (19 hrs)</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="modal-table-project" colspan="2">BOOKED VACATIONS</th>
+                                            </tr>
+                                            <tr>
+                                                <td>21.6.2020 - 30.6.2020</td>
+                                                <td>5 days</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21.9.2020 - 30.9.2020</td>
+                                                <td>7 days</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Operations Officer Modal End -->
+
+    <!-- Delete Operations Officer Dialog Start -->
+    <div class="modal fade" id="deleteMember" tabindex="-1" role="dialog" aria-labelledby="deleteMember" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="team-member-name">Are you sure you want to remove selected Operations Officer?</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-cancel m-1">Remove</button>
+                            <button class="btn btn-highlight m-1" class="close" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Operations Officer Dialog End -->
+
+    <!-- Add Operations Officer Start -->
+    <div class="modal fade" id="addMember" tabindex="-1" role="dialog" aria-labelledby="addMember" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="team-member-name">Add Operations Officer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="px-5 pt-3 pb-5 text-left">
+                            <label for="team-name" class="mt-3">Operations Officer Name</label>
+                            <input type="text" name="team-name" placeholder="Enter Name">
+                            <!-- <div class="d-flex mt-2 team-member-item">
+                                <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                                <span class="checkbox-label ml-2">Team Lead</span>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Add Operations Officer</button>
+                            <button class="btn btn-cancel m-1" class="close" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Operations Officer End -->
+
+    <!-- **************************************************MODALS END************************************************** -->
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+
+            <div class="vct-logo w-100 text-left text-white">
+                <img src="assets/images/app-h-logo.svg" alt="enjoy.ing" width="65%">
+            </div>
+
+            <ul class="vct-nav-menu">
+                <li><a href="vacation.html"><i class="ti-shine mr-3"></i>My Days</a></li>
+                <li><a href="hr-service.html"><i class="ti-user mr-3"></i>HR Service</a></li>
+                <li><a class="selected" href="operations-management.html"><i class="ti-pin mr-3"></i>Operations</a class="selected"></li>
+                <li><a href="teams.html"><i class="ti-timer mr-3"></i>Project management</a></li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>2 levels</a>
+                    <ul class="vct-nav-level1">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav bg-white border-bottom shadow-sm">
+        <div class="vct-user-menu float-right">
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="ti-fullscreen full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mr-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content mb-5">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-6 d-flex align-items-center justify-content-start">
+                    <button class="btn btn-highlight" onClick="javascript:history.go(-1)">Back</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row mt-3">
+                        <!-- TEAM MEMBER -->
+                        <div class="col-12 col-xl-6 mt-3">
+                            <div class="team-data">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-start align-items-center">
+                                        <div class="team-member-image">
+                                            <img src="assets/images/profile-1.jpg">
+                                        </div>
+                                        <div class="team-member-name">Mirko Mirkovic</div>
+                                        <span class="badge badge-success ml-3">Operations Officer</span>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Operations Officer Details</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TEAM MEMBER -->
+                        <div class="col-12 col-xl-6 mt-3">
+                            <div class="team-data">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-start align-items-center">
+                                        <div class="team-member-image">
+                                            <img src="assets/images/profile-2.jpg">
+                                        </div>
+                                        <div class="team-member-name">Petar Petrovic</div>
+                                        <span class="badge badge-success ml-3">Operations Officer</span>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Operations Officer Details</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TEAM MEMBER -->
+                        <div class="col-12 col-xl-6 mt-3">
+                            <div class="team-data">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-start align-items-center">
+                                        <div class="team-member-image">
+                                            <img src="assets/images/profile-3.jpg">
+                                        </div>
+                                        <div class="team-member-name">Dejan Jovanovic</div>
+                                        <span class="badge badge-success ml-3">Operations Officer</span>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Operations Officer Details</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TEAM MEMBER -->
+                        <div class="col-12 col-xl-6 mt-3">
+                            <div class="team-data">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-start align-items-center">
+                                        <div class="team-member-image">
+                                            <img src="assets/images/profile-1.jpg">
+                                        </div>
+                                        <div class="team-member-name">Paja Pajic</div>
+                                        <span class="badge badge-success ml-3">Operations Officer</span>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper">
+                                                <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Operations Officer Details</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <div class="row vct-actions">
+                                <div class="col-6">
+                                    <button class="btn btn-highlight" data-toggle="modal" data-target="#addMember">Add Operations Officer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/vendor/jquery341/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js"></script>
+    <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/tmv20.js"></script>
+    <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
+</body>
+
+</html>

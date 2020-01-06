@@ -71,6 +71,12 @@ $(document).ready(function() {
         panelContainer.hide();
         $(this).parents('.left-items').find('#days-sickleave-data').fadeIn();
     });
+    $('#total-work-hours').click(function() {
+        var timeModule = $('.time-module');
+        var panelContainer = $('.panel-container');
+        panelContainer.hide();
+        $(this).parents('.left-items').find('#total-work-hours-data').fadeIn();
+    });
 
     $('.js_book').on('click', function() {
         $('.js_bookingMessage').removeClass('d-none');
@@ -112,6 +118,7 @@ $(document).ready(function() {
         $('.reset-input').hide();
         $('.team-data').show();
         $('.no-results-message').hide();
+        $('.vct-actions').show();
     });
 
     //Team member search
@@ -121,16 +128,18 @@ $(document).ready(function() {
             count = 0;
         $('.team-data').each(function() {
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                $(this).hide();
+                $(this).fadeOut(100);
             } else {
-                $(this).show();
+                $(this).fadeIn(100);
                 count++;
             }
         });
         if (count > 0) {
             $('.no-results-message').hide();
+            $('.vct-actions').show();
         } else {
             $('.no-results-message').show();
+            $('.vct-actions').hide();
         }
     });
 

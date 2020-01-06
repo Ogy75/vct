@@ -1,16 +1,33 @@
 @import "variables";
 
 body{
-    background: #f5f6fa !important;
+    background: #f0f2f7 !important;
 }
 
 .btn{
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    min-width: 120px;
+    text-transform: uppercase;
+    &.btn-cancel{
+        background: lighten(@basetextColor, 68%);
+        &:hover{
+            background: @warningColor;
+            color:white;
+        }
+    }
 }
 input{
     font-size: 13px !important;
-    font-weight: 500;
+    &:disabled{
+        background:#f0f2f7;
+        font-weight: 700;
+    }
+    &.filter-members{
+        border:1px solid lighten(@basetextColor, 67%);
+    }
 }
 .item-menu-wrapper{
     a{
@@ -28,9 +45,9 @@ input{
     background: white;
     border-radius: 4px;
     padding: 8px;
-    margin-bottom:24px;
+    margin-bottom:15px;
     text-align: right;
-    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.1);
     transition: @mainTransition;
     border:1px solid transparent;
     cursor: pointer;
@@ -41,8 +58,9 @@ input{
         }
     }
     &:hover{
-        box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0);
         border:1px solid lighten(@basetextColor, 60%);
+        background: fade(white, 20%);
     }
     &.selected{
         box-shadow: none;
@@ -64,10 +82,18 @@ input{
         float: left;
         width:50%;
         text-align: left;
-        color: lighten(@basetextColor, 55%);
         font-size: 24px;
+        i{
+            color: lighten(@basetextColor, 45%);
+            &:hover{
+                color: lighten(@basetextColor, 45%);
+            }
+        }
         &.selected{
-            color:@highlightColor
+            color:@highlightColor;
+            i{
+            color: @highlightColor;
+            }
         }
     }
     .module-data{
@@ -94,7 +120,8 @@ input{
     }
 }
 
-.panel-container{
+.panel-container,
+.widget-container{
     background: white;
     padding:24px;
     border-radius: 4px;
@@ -104,53 +131,59 @@ input{
         display: block;
         float: left;
         font-size: 14px;
-        line-height: 14px;
+        line-height: 20px;
         letter-spacing: 1px;
         font-weight: 700;
         text-transform: uppercase;
-        margin-bottom: 30px;
         color:@basetextColor;
     }
-    table.panel-table{
-        width: 100%;
-        min-width: 280px !important;
-        overflow: scroll;
-        thead{
-            tr{
-                border-bottom: 1px solid lighten(@basetextColor, 30%);
-                padding-bottom: 8px;
-            }
-            th{
-                padding: 8px 5px;
-                white-space: nowrap;
-                overflow: hidden;
-                font-weight: 400;
-                text-overflow: ellipsis;
-                color:lighten(@basetextColor, 30%);
-            }
-        }
-        tbody{
-            tr{
-                border-bottom: 1px dashed lighten(@basetextColor, 15%);
-                transition: @mainTransition;
-                &:hover{
-                    background: lighten(@basetextColor, 70%);
+    .table-wrapper{
+        max-width: 100%;
+        overflow: auto;
+        table.panel-table{
+            width: 100%;
+            //min-width: 200px !important;
+            //overflow: scroll;
+            thead{
+                tr{
+                    border-bottom: 1px solid lighten(@basetextColor, 30%);
+                    padding-bottom: 8px;
                 }
-                td{
+                th{
                     padding: 8px 5px;
                     white-space: nowrap;
                     overflow: hidden;
+                    font-weight: 400;
                     text-overflow: ellipsis;
-                    width:20%;
+                    color:lighten(@basetextColor, 30%);
+                    i{
+                        color:lighten(@basetextColor,45%);
+                    }
                 }
             }
-        }
-        tfoot{
-            tr{
-                background: lighten(@highlightColor,50%);
-                font-weight: 600;
-                td{
-                    padding: 8px 5px;
+            tbody{
+                tr{
+                    border-bottom: 1px dashed lighten(@basetextColor, 50%);
+                    transition: @mainTransition;
+                    &:hover{
+                        background: lighten(@basetextColor, 70%);
+                    }
+                    td{
+                        padding: 8px 5px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width:20%;
+                    }
+                }
+            }
+            tfoot{
+                tr{
+                    background: lighten(@highlightColor,50%);
+                    font-weight: 600;
+                    td{
+                        padding: 8px 5px;
+                    }
                 }
             }
         }
@@ -175,7 +208,8 @@ input{
 #days-earned-data,
 #days-assigned-data,
 #days-sickleave-data,
-#days-spent-data{
+#days-spent-data,
+#total-work-hours-data{
     display: none;
 }
 
@@ -214,7 +248,7 @@ input{
     }
     .project-logo{
         img{
-            height:40px;
+            height:36px;
         }
     }
     .vct-project-name-wrapper{
@@ -258,13 +292,16 @@ input{
             cursor: pointer;
             transition: @mainTransition;
             text-decoration: none;
+            &:hover{
+                color: darken(@highlightColor, 20%);
+            }
             &:before{
                 content: "\f077";
                 font-family: 'Font Awesome 5 Free';
                 margin-right: 8px;
             }
             &:after{
-                content: "Team";
+                content: " Team";
             }
             &.visible{
                 &:before{
@@ -363,4 +400,135 @@ input{
             line-height: 33px;
             display: none;
         }
+}
+
+.modal-style{
+    text-align: center;
+    .image-background{
+        background: @highlightColor;
+    }
+    .team-member-image{
+        margin:0 auto;
+        width:64px;
+        height: 64px;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+            width:64px;
+            height: 64px;
+        }
+    }
+    .modal-title{
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: @basetextColor;
+    }
+    .team-member-name{
+        font-size: 18px;
+        font-weight: 500;
+        color:white;
+    }
+    .data-title{
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    .data-value{
+        font-size: 28px;
+        font-weight: 300;
+    }
+    .tm-data-value{
+        font-size: 28px;
+        font-weight: 300;
+        color:@highlightColor;
+    }
+    .modal-table-project{
+        background: lighten(@highlightColor, 20%);
+        color:white !important;
+        padding: 8px 5px;
+        text-align: left;
+        border:none;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    .close-modal{
+        position: absolute;
+        top:6px;
+        right:25px;
+        color:white;
+        font-size: 20px;
+        &:hover{
+            color: fade(white, 60%);
+        }
+    }
+    input{
+        border:1px solid lighten(@basetextColor, 57%)
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 18px;
+        border-radius: 2px;
+        margin:0;
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: lighten(@basetextColor, 60%);
+        -webkit-transition: .4s;
+        transition: .4s;
+        &:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            border-radius: 1px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+    input:checked + .slider {
+    background-color:@confirmColor;
+    }
+
+    input:focus + .slider {
+    box-shadow: 0 0 1px @confirmColor;
+    }
+    input:checked + .slider:before {
+    -webkit-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    transform: translateX(12px);
+    }
+    .checkbox-label{
+        line-height: 18px;
+        font-size: 12px;
+    }
+}
+
+.vct-total-toggle-card{
+    a{
+        font-weight: 600;
+    }
+    i{
+        color:white;
+    }
+}
+.add-member{
+    margin:7px 0px;
+    min-width: 300px;
 }

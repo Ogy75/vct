@@ -75,7 +75,7 @@ $(function() {
 
     card.on('click', function() {
         totalPanel.slideToggle(100);
-        card.find('i').toggleClass('ti-angle-up');
+        card.find('i').toggleClass('fa-chevron-up');
     });
 
     //tooltip ini
