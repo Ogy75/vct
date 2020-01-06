@@ -1,5 +1,9 @@
+html {
+  overflow-y: scroll ;
+}
 body {
   background: #f0f2f7 !important;
+  min-height: 100vh;
 }
 .btn {
   border-radius: 4px;
@@ -150,6 +154,7 @@ input.filter-members {
   padding: 8px 5px;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 12px;
   font-weight: 400;
   text-overflow: ellipsis;
   color: #919186;
@@ -160,7 +165,7 @@ input.filter-members {
 }
 .panel-container .table-wrapper table.panel-table tbody tr,
 .widget-container .table-wrapper table.panel-table tbody tr {
-  border-bottom: 1px dashed #c2c2bb;
+  border-bottom: 1px dotted #919186;
   transition: all 0.12s linear;
 }
 .panel-container .table-wrapper table.panel-table tbody tr:hover,
@@ -235,6 +240,10 @@ input.filter-members {
 }
 .vct-content .vct-teams.pinned {
   position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   top: 15px;
   z-index: 1;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
