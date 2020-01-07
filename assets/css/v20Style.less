@@ -351,7 +351,6 @@ input{
             .team-item-name{
                 font-size: 12px;
                 font-weight: 600;
-                //width: auto;
             }
         }
     }
@@ -378,8 +377,6 @@ input{
         }
         .vct-team-location{
             background: transparent;
-            //border:1px solid lighten(@basetextColor, 67%);
-            //line-height: 33px;
             p{
                 color:@basetextColor;
                 text-transform: uppercase;
@@ -403,7 +400,7 @@ input{
     }
     .reset-input {
             position: absolute;
-            top: 0px;
+            top: 0px; 
             right: 8px;
             line-height: 33px;
             display: none;
@@ -417,13 +414,14 @@ input{
     }
     .team-member-image{
         margin:0 auto;
-        width:64px;
-        height: 64px;
+        width:92px;
+        height: 92px;
         border-radius: 50%;
         overflow: hidden;
+        margin-bottom: 8px;
         img{
-            width:64px;
-            height: 64px;
+            width:92px;
+            height: 92px;
         }
     }
     .modal-title{
@@ -539,4 +537,10 @@ input{
 .add-member{
     margin:7px 0px;
     min-width: 300px;
+}
+.vct-team{
+    background: transparent !important;
+}
+.vct-team-block{
+    border:none !important;
 }

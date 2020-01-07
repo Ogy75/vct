@@ -12,7 +12,7 @@ $(function() {
     var menuPanel = $('.vct-left-nav');
     var contentExpand = $('.vct-content');
     var windowWidth = $(window).width();
-    if (windowWidth < 1024) {
+    if (windowWidth < 1200) {
         menuPanel.addClass('hide-left');
         contentExpand.addClass('expanded');
     }
@@ -83,10 +83,10 @@ $(function() {
         $('[data-toggle="tooltip"]').tooltip();
     });
 
-    //notification badge demo /spinner
+    //notification badge demo / spinner
     setTimeout(function() {
-        $('.alert').show().delay(1000).queue(function(n) {
-            $('.lds-dual-ring-bg').fadeOut(200);
+        $('.lds-dual-ring-bg').show().delay(1000).queue(function(n) {
+            $(this).fadeOut(200);
             $(this).hide();
         });
     }, 0);

@@ -1,0 +1,1139 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Team Overview</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
+    <link rel="stylesheet" href="assets/css/v20Style.css">
+    <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fav-icn//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fav-icn//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fav-icn//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
+    <link rel="manifest" href="assets/fav-icn//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+</head>
+
+<body>
+
+    <!--Spinner-->
+    <!-- <div class="lds-dual-ring-bg">
+        <div class="lds-dual-ring"></div>
+    </div> -->
+
+    <!--Vacation modal-->
+    <div class="modal fade" id="holidays" tabindex="-1" role="dialog" aria-labelledby="holidays" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h5 class="font-weight-bold m-0 text-nowrap text-truncate">Ime i Prezime</h5>
+                        <small>vacation</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <select>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                        <option selected>2019</option>
+                                    </select>
+                                    <p class="vct-element-title d-inline-block ml-2 py-2">Vacation status</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="vacation-status-primary col-7 pr-0">
+                                    <div class="vct-days__remaining d-flex h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">21</div>
+                                            <div class="col-12 vacation-status-no-label">days remaining</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vacation-status-secondary col-5 pl-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="vct-days__unused p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">2</div>
+                                                    <div class="col-12 vacation-status-no-label">2018. days remaining
+                                                        <small class="d-block">valid until 31.7.2019</small>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="vct-days__new p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">21</div>
+                                                    <div class="col-12 vacation-status-no-label">2019. days remaining
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <div class="vct-days__total p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">23</div>
+                                                    <div class="col-12 vacation-status-no-label">total days remaining
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 ">
+                                            <div class="vct-days__used p-3 d-flex align-items-center justify-content-center">
+                                                <div class="row">
+                                                    <div class="col-12 vacation-status-no">2</div>
+                                                    <div class="col-12 vacation-status-no-label">days spent</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Vacation log</p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 days used</td>
+                                        <td>01.01.2019 - 05.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day used</td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sickness modal-->
+    <div class="modal fade" id="sickness" tabindex="-1" role="dialog" aria-labelledby="sickness" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h5 class="font-weight-bold m-0 text-nowrap text-truncate">Ime i Prezime</h5>
+                        <small>sickness</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block py-2">Vacation status / <span>June
+                                            2019.</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="vacation-status-primary col-12">
+                                    <div class="vct-days__remaining d-flex p-3 h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">7</div>
+                                            <div class="col-12 vacation-status-no-label">sickness days</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Sickness log / <span>June 2019.</span>
+                                    </p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 days </td>
+                                        <td>01.01.2019 - 05.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--DaysOff modal-->
+    <div class="modal fade" id="daysOff" tabindex="-1" role="dialog" aria-labelledby="daysOff" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div>
+                        <h5 class="font-weight-bold m-0 text-nowrap text-truncate">Ime i Prezime</h5>
+                        <small>Days off</small>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="ti-close" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <!--status element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block py-2">Vacation status / <span>June
+                                            2019.</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="vacation-status-primary col-12">
+                                    <div class="vct-days__remaining d-flex p-3 h-100 align-items-center justify-content-center">
+                                        <div class="row">
+                                            <div class="col-12 vacation-status-no">3</div>
+                                            <div class="col-12 vacation-status-no-label">days off</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--vacation log element-->
+                        <div class="col-12 mt-3">
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <p class="vct-element-title d-inline-block">Days off log / <span>June 2019.</span>
+                                    </p>
+                                    <i class="vct-icon ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="Export to excel"></i>
+
+                                </div>
+                            </div>
+                            <div class="vacation-log-element h-100">
+                                <table class="vct-vacation-log w-100">
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                        <td><textarea placeholder="description">Babi se pokvario daljinski</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                        <td><textarea placeholder="description">Komsiji iznad se otopio zamrzivac</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 day </td>
+                                        <td>01.01.2019</td>
+                                        <td><textarea placeholder="description">Tetka ceka lek</textarea></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+
+            <div class="vct-logo w-100 text-left text-white">
+                <img src="assets/images/app-h-logo.svg" alt="enjoy.ing" width="65%">
+            </div>
+
+            <ul class="vct-nav-menu">
+                <li><a href="vacation.html"><i class="ti-shine mr-3"></i>My Days</a></li>
+                <li><a href="hr-service.html"><i class="ti-user mr-3"></i>HR Service</a></li>
+                <li><a href="operations-management.html"><i class="ti-pin mr-3"></i>Operations</a></li>
+                <li><a class="selected" href="teams.html"><i class="ti-timer mr-3"></i>Project management</a></li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="ti-star mr-3"></i>2 levels</a>
+                    <ul class="vct-nav-level1">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav bg-white border-bottom shadow-sm">
+        <div class="vct-user-menu float-right">
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="ti-fullscreen full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mr-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Djordjevic Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content mb-5">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex text-right justify-content-end align-items-center h-100">
+                        <!--OVDE JE PROMENA BLOKA-->
+                        <div class=" item-menu fas fa-ellipsis-v">
+                            <div class="item-menu-wrapper">
+                                <div class="arrow"></div>
+                                <ul>
+                                    <span class="item-menu-title">All Projects options</span>
+                                    <li><a href="javascript:void(0)">Export All Project Time Logs to Excel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8 col-md-8 col-lg-4 pb-3">
+                    <div class="position-relative">
+                        <input class="filter-projects" placeholder="Find project" type="text">
+                        <span class="reset-query ti-close"></span>
+                    </div>
+                </div>
+            </div>
+            <!--team time list element-->
+            <div class="row">
+                <!--add project block-->
+                <div class="vct-team add-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-3">
+                    <div class="vct-team-wrapper add-new-project d-flex align-items-center w-100 h-100 justify-content-center">
+                        <a href="new-project.html" class="d-block text-center w-100 p-5">
+                            <div class="w-100">
+                                <h1 class="ti-plus"></h1>
+                            </div>
+                            <div class="w-100">
+                                <p>add new project</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-edelweiss.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Cloud solution</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-ready text-nowrap text-truncate">ready</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button>
+                                <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil" data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-edelweiss.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Internet Booking Engine</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-notdone text-nowrap text-truncate">tbd</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-swiss.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">.Net 2</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-swiss.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Staff Travel</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-swiss.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Connection Manager</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-swiss.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Swiss Basel</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-crealogix.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Digital banking</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">5 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-crealogix.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Crealogix Germany</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-comparis.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-crealogix.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-vontobel.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-exlibris.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-swisscom.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-spilgames.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-chaviation.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-manor.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-realgarant.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-pasmedia.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-pearson.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-pearson.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-infominds.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-guidle.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-ifolor.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-ifolor.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-pritlead.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--team block-->
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper">
+                        <img class="vct-client-logo" src="assets/images/logo-enjoying.svg" alt="client logo">
+                        <div class="vct-team-block p-4 text-center">
+                            <h5 class="text-center text-nowrap text-truncate">Project</h5>
+                            <div class="row mt-3 m-0">
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-teams text-nowrap text-truncate">10 teams</small>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 vct-team-block-data">
+                                    <div class="p-2">
+                                        <small class="vct-team-block-status-done text-nowrap text-truncate">done</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="d-inline-block btn btn-highlight py-1 mr-2 ti-time" data-toggle="tooltip" data-placement="top" title="Edit time log" onclick="window.location.href='time20.html'"></button> <button class="d-inline-block btn btn-alert py-1 mr-2 ti-pencil"
+                                    data-toggle="tooltip" data-placement="top" title="Edit project" onclick="window.location.href='existing-project-teams20.html'"></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--no results message-->
+            <div class="row no-results-message justify-content-center align-items-center">
+                <div class="no-results col-12 h-100 p-5 text-center no-results">
+                    <h4>There are no results matching your criteria</h4>
+                    <p>Please modify your query</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/vendor/jquery341/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/tmv20.js"></script>
+</body>
+
+</html>

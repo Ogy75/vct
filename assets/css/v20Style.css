@@ -400,14 +400,15 @@ input.filter-members {
 }
 .modal-style .team-member-image {
   margin: 0 auto;
-  width: 64px;
-  height: 64px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   overflow: hidden;
+  margin-bottom: 8px;
 }
 .modal-style .team-member-image img {
-  width: 64px;
-  height: 64px;
+  width: 92px;
+  height: 92px;
 }
 .modal-style .modal-title {
   font-size: 14px;
@@ -517,4 +518,10 @@ input.filter-members {
 .add-member {
   margin: 7px 0px;
   min-width: 300px;
+}
+.vct-team {
+  background: transparent !important;
+}
+.vct-team-block {
+  border: none !important;
 }
