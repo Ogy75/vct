@@ -104,7 +104,7 @@ $(document).ready(function() {
     });
 
     //toggle clear btn to search
-    $('.filter-members').keyup(function() {
+    $('.find-member').keyup(function() {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
@@ -114,16 +114,25 @@ $(document).ready(function() {
     });
     //Clear&focus btn fn.
     $('.reset-input').on('click', function() {
-        $('.filter-members').val('').focus();
+        $('.find-member').val('').focus();
+        $('.find-project').val('').focus();
         $('.reset-input').hide();
         $('.team-data').show();
         $('.no-results-message').hide();
         $('.vct-actions').show();
     });
 
+    //toggle clear btn to search
+    $('.find-member').keyup(function() {
+        var s = $(this).val();
+        if (s.length > 0) {
+            $('.reset-input').show();
+        } else {
+            $('.reset-input').hide();
+        }
+    });
     //Team member search
-    $('.filter-members').keyup(function() {
-        //$('.add-team').remove();
+    $('.find-member').keyup(function() {
         var filter = $(this).val(),
             count = 0;
         $('.team-data').each(function() {
@@ -140,6 +149,85 @@ $(document).ready(function() {
         } else {
             $('.no-results-message').show();
             $('.vct-actions').hide();
+        }
+    });
+
+
+
+
+    //toggle clear btn to search
+    $('.find-project').keyup(function() {
+        var s = $(this).val();
+        if (s.length > 0) {
+            $('.reset-input').show();
+        } else {
+            $('.reset-input').hide();
+        }
+    });
+
+    //Clear&focus btn fn.
+    $('.reset-input').on('click', function() {
+        $('.find-project').val('').focus();
+        $('.reset-input').hide();
+        $('.vct-team').show();
+        $('.no-results-message').hide();
+    });
+
+    //Project search
+    $('.find-project').keyup(function() {
+        var filter = $(this).val(),
+            count = 0;
+        $('.vct-team').each(function() {
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut(100);
+            } else {
+                $(this).fadeIn(100);
+                count++;
+            }
+        });
+        if (count > 0) {
+            $('.no-results-message').hide();
+        } else {
+            $('.no-results-message').show();
+        }
+    });
+
+
+
+    //toggle clear btn to search
+    $('.find-employees').keyup(function() {
+        var s = $(this).val();
+        if (s.length > 0) {
+            $('.reset-input').show();
+        } else {
+            $('.reset-input').hide();
+        }
+    });
+
+    //Clear&focus btn fn.
+    $('.reset-input').on('click', function() {
+        $('.find-employees').val('').focus();
+        $('.reset-input').hide();
+        $('.team-member').show();
+        $('.no-results-message').hide();
+    });
+
+    //Project search
+    $('.find-employees').keyup(function() {
+        var filter = $(this).val(),
+            count = 0;
+        $('.team-member').each(function() {
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut(100);
+            } else {
+                $(this).fadeIn(100);
+                count++;
+            }
+        });
+        if (count > 0) {
+            $('.no-results-message').hide();
+        } else {
+            $('.no-results-message').show();
         }
     });
 
@@ -166,4 +254,23 @@ $(document).ready(function() {
         container.css('background-image', 'url("assets/images/summer.jpg")');
     }
 
+    //PROJECT TABS
+$('#tab-projects').on('click',function(){
+    if($('.vct-project-tab').hasClass('d-none')){
+        $('.vct-project-tab').removeClass('d-none');
+        $('.vct-employees-tab').addClass('d-none');
+        $(this).toggleClass('selected');
+        $('#tab-employees').toggleClass('selected');
+    }
 });
+$('#tab-employees').on('click',function(){
+    if($('.vct-employees-tab').hasClass('d-none')){
+        $('.vct-project-tab').addClass('d-none');
+        $('.vct-employees-tab').removeClass('d-none');
+        $(this).toggleClass('selected');
+        $('#tab-projects').toggleClass('selected');
+    }
+});
+
+});
+

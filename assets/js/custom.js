@@ -177,7 +177,7 @@ $(function() {
         //new project button height adjustment
         var projectHeight = $('.vct-team-wrapper').height();
         var newProject = $('.add-new-project');
-        newProject.css('min-height', projectHeight);
+        newProject.css('height', projectHeight);
     });
 
     //Rename project

@@ -363,6 +363,10 @@ input.filter-members {
   line-height: 46px;
   height: 46px;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75%;
 }
 .vct-content .team-data .vct-team-location {
   background: transparent;
@@ -524,4 +528,30 @@ input.filter-members {
 }
 .vct-team-block {
   border: none !important;
+}
+.vct-team .vct-team-wrapper {
+  text-align: center;
+}
+.vct-team .vct-team-wrapper img.vct-client-logo {
+  width: 80%;
+  margin-top: 20px;
+}
+.tab-button {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #919186;
+  transition: all 0.12s linear;
+}
+.tab-button:focus {
+  outline: none;
+}
+.tab-button.selected {
+  border-bottom: 3px solid #1E9BCC;
+  color: #1779a0;
 }

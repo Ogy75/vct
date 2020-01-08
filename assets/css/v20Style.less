@@ -374,6 +374,10 @@ input{
             line-height: 46px;
             height: 46px;
             font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 75%;
         }
         .vct-team-location{
             background: transparent;
@@ -543,4 +547,34 @@ input{
 }
 .vct-team-block{
     border:none !important;
+}
+
+.vct-team{
+    .vct-team-wrapper{
+        text-align: center;
+        img.vct-client-logo{
+                width:80%;
+                margin-top:20px;
+        }
+    }
+}
+
+.tab-button{
+    display: inline-block;
+    background:transparent;
+    border:none;
+    border-bottom: 3px solid transparent;
+    padding:10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color:lighten(@basetextColor, 30%);
+    transition: @mainTransition;
+    &:focus{
+        outline: none;
+    }
+    &.selected{
+        border-bottom: 3px solid @highlightColor;
+        color: darken(@highlightColor, 10%);
+    }
 }
