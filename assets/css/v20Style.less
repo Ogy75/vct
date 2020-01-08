@@ -579,3 +579,21 @@ input{
         color: darken(@highlightColor, 10%);
     }
 }
+
+.badge{
+    &.badge-info{
+        background: @highlightColor
+    }
+    &.badge-success{
+        background: @confirmColor
+    }
+    &.badge-danger{
+        background: @warningColor
+    }
+    &.badge-secondary{
+        background: @basecolorLighter
+    }
+    &.badge-warning{
+        background:@progressColor;
+    }
+}

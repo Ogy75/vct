@@ -556,3 +556,18 @@ input.filter-members {
   border-bottom: 3px solid #1E9BCC;
   color: #1779a0;
 }
+.badge.badge-info {
+  background: #1E9BCC;
+}
+.badge.badge-success {
+  background: #228B22;
+}
+.badge.badge-danger {
+  background: #d8483e;
+}
+.badge.badge-secondary {
+  background: #696964;
+}
+.badge.badge-warning {
+  background: #ffc400;
+}
