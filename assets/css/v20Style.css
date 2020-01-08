@@ -448,6 +448,7 @@ input.filter-members {
   border: none;
   font-size: 12px;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 .modal-style .close-modal {
   position: absolute;
