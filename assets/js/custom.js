@@ -85,7 +85,7 @@ $(function() {
 
     //notification badge demo / spinner
     setTimeout(function() {
-        $('.lds-dual-ring-bg').show().delay(1000).queue(function(n) {
+        $('.lds-dual-ring-bg').show().delay(500).queue(function(n) {
             $(this).fadeOut(200);
             $(this).hide();
         });
