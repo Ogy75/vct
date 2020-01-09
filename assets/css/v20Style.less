@@ -633,18 +633,6 @@ input{
 .campaign-input{
     height:57px;
 }
-.nav-icon{
-    width:20px;
-    font-size: 16px;
-    text-align: center;
-    line-height: 24px;
-}
-ul.vct-nav-menu a{
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: .25px;
-}
 
 #go-top{
     display: none;
@@ -666,3 +654,177 @@ ul.vct-nav-menu a{
         opacity: .9;
     }
 }
+
+
+
+
+
+//Left nav
+.vct-left-nav {
+    position: fixed;
+    background: darken(@basetextColor, 7%);
+    width: 250px;
+    height: 100vh;
+    z-index: 3;
+    display: block;
+    transition: @mainTransition;
+    .vct-logo {
+      background: black;
+      height: 48px;
+      padding: 10px 22px;
+      img{
+          height: 20px;
+      }
+    }
+  }
+  .hide-left {
+    margin-left: -250px;
+  }
+  .vct-left-nav-wrapper {
+    width: 250px;
+    height: 100vh;
+    overflow: auto;
+  }
+  ul.vct-nav-menu {
+      margin-top:24px;
+    list-style: none;
+    padding: 0;
+    li {
+      display: block;
+      a{
+          .nav-icon{
+              width:18px;
+              height: 18px;
+              text-align:center;
+              font-size: 16px;
+              line-height: 18px;
+          }
+      }
+      .selected {
+        color: @highlightColor;
+        background: transparent;
+        i{
+            color: @highlightColor
+        }
+        &:hover {
+            &:after{
+                color:white;
+            }
+          color: white;
+          background: transparent;
+          i{
+            color: white;
+        }
+        }
+      }
+    }
+    a {
+      display: block;
+      width: 100%;
+      padding: 15px 20px;
+      color: white;
+      font-size: 12px;
+      letter-spacing: -0.2px;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-decoration: none;
+      transition: @mainTransition;
+      &:hover {
+        background: transparent;
+        color:@highlightColor;
+        &:after{
+            color:@highlightColor;
+        }
+        i{
+            color: @highlightColor;
+        }
+      }
+      i {
+        color: white;
+      }
+    }
+    .has-level1 {
+      &::after {
+        font-family: "Themify";
+        content: "\e64b";
+        color: white;
+        float: right;
+      }
+      &.selected{
+          &:after{
+            color:@highlightColor;
+          }
+          color:@highlightColor;
+          i{
+              color:@highlightColor;
+          }
+      }
+    }
+    .has-level1-t {
+      &::after {
+        font-family: "Themify";
+        content: "\e648";
+        color: white;
+        float: right;
+      }
+      &.selected{
+        &:after{
+          color:@highlightColor;
+        }
+        color:@highlightColor;
+        i{
+            color:@highlightColor;
+        }
+    }
+    }
+    ul.vct-nav-level1 {
+      list-style: none;
+      padding: 0;
+      li {
+        a {
+          background: transparent !important;
+          padding-left: 20px;
+          text-transform: none;
+          font-size: 13px;
+          text-transform: uppercase;
+          padding-left:70px;
+          &:hover {
+            background: transparent;
+          }
+        &.selected {
+          background: darken(@basetextColor, 15%) !important;
+          color: @highlightColor;
+          &:hover {
+            background: transparent;
+            color: white;
+            cursor: default;
+          }
+        }
+    }
+      }
+    }
+  }
+
+
+  ul.vct-nav-menu li .selected .has-level1{
+      color:white !important;
+  }
+  
+  
+  .vct-left-nav-toggle {
+    position: absolute;
+    top: 8px;
+    right: -40px;
+    width: 32px;
+    height: 32px;
+    transition: @mainTransition;
+    cursor: pointer;
+    i {
+      font-size: 18px;
+      line-height: 32px;
+      transition: @mainTransition;
+    }
+    &:hover {
+      color: @highlightColor;
+    }
+  }

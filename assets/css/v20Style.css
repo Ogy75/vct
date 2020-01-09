@@ -606,18 +606,6 @@ input.filter-members {
 .campaign-input {
   height: 57px;
 }
-.nav-icon {
-  width: 20px;
-  font-size: 16px;
-  text-align: center;
-  line-height: 24px;
-}
-ul.vct-nav-menu a {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.25px;
-}
 #go-top {
   display: none;
   position: fixed;
@@ -637,4 +625,160 @@ ul.vct-nav-menu a {
 #go-top:hover {
   background: #d8483e;
   opacity: 0.9;
+}
+.vct-left-nav {
+  position: fixed;
+  background: #2f2f2b;
+  width: 250px;
+  height: 100vh;
+  z-index: 3;
+  display: block;
+  transition: all 0.12s linear;
+}
+.vct-left-nav .vct-logo {
+  background: black;
+  height: 48px;
+  padding: 10px 22px;
+}
+.vct-left-nav .vct-logo img {
+  height: 20px;
+}
+.hide-left {
+  margin-left: -250px;
+}
+.vct-left-nav-wrapper {
+  width: 250px;
+  height: 100vh;
+  overflow: auto;
+}
+ul.vct-nav-menu {
+  margin-top: 24px;
+  list-style: none;
+  padding: 0;
+}
+ul.vct-nav-menu li {
+  display: block;
+}
+ul.vct-nav-menu li a .nav-icon {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 18px;
+}
+ul.vct-nav-menu li .selected {
+  color: #1E9BCC;
+  background: transparent;
+}
+ul.vct-nav-menu li .selected i {
+  color: #1E9BCC;
+}
+ul.vct-nav-menu li .selected:hover {
+  color: white;
+  background: transparent;
+}
+ul.vct-nav-menu li .selected:hover:after {
+  color: white;
+}
+ul.vct-nav-menu li .selected:hover i {
+  color: white;
+}
+ul.vct-nav-menu a {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.12s linear;
+}
+ul.vct-nav-menu a:hover {
+  background: transparent;
+  color: #1E9BCC;
+}
+ul.vct-nav-menu a:hover:after {
+  color: #1E9BCC;
+}
+ul.vct-nav-menu a:hover i {
+  color: #1E9BCC;
+}
+ul.vct-nav-menu a i {
+  color: white;
+}
+ul.vct-nav-menu .has-level1::after {
+  font-family: "Themify";
+  content: "\e64b";
+  color: white;
+  float: right;
+}
+ul.vct-nav-menu .has-level1.selected {
+  color: #1E9BCC;
+}
+ul.vct-nav-menu .has-level1.selected:after {
+  color: #1E9BCC;
+}
+ul.vct-nav-menu .has-level1.selected i {
+  color: #1E9BCC;
+}
+ul.vct-nav-menu .has-level1-t::after {
+  font-family: "Themify";
+  content: "\e648";
+  color: white;
+  float: right;
+}
+ul.vct-nav-menu .has-level1-t.selected {
+  color: #1E9BCC;
+}
+ul.vct-nav-menu .has-level1-t.selected:after {
+  color: #1E9BCC;
+}
+ul.vct-nav-menu .has-level1-t.selected i {
+  color: #1E9BCC;
+}
+ul.vct-nav-menu ul.vct-nav-level1 {
+  list-style: none;
+  padding: 0;
+}
+ul.vct-nav-menu ul.vct-nav-level1 li a {
+  background: transparent !important;
+  padding-left: 20px;
+  text-transform: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding-left: 70px;
+}
+ul.vct-nav-menu ul.vct-nav-level1 li a:hover {
+  background: transparent;
+}
+ul.vct-nav-menu ul.vct-nav-level1 li a.selected {
+  background: #1a1a18 !important;
+  color: #1E9BCC;
+}
+ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
+  background: transparent;
+  color: white;
+  cursor: default;
+}
+ul.vct-nav-menu li .selected .has-level1 {
+  color: white !important;
+}
+.vct-left-nav-toggle {
+  position: absolute;
+  top: 8px;
+  right: -40px;
+  width: 32px;
+  height: 32px;
+  transition: all 0.12s linear;
+  cursor: pointer;
+}
+.vct-left-nav-toggle i {
+  font-size: 18px;
+  line-height: 32px;
+  transition: all 0.12s linear;
+}
+.vct-left-nav-toggle:hover {
+  color: #1E9BCC;
 }
