@@ -272,5 +272,14 @@ $('#tab-employees').on('click',function(){
     }
 });
 
+$('.js_launch').on('click', function(){
+    $(this).html('cancel Campaign').addClass('btn-alert');
+    $('.js_input').hide();
+    $('.js_message').removeClass('d-none');
+    $('.js_active').addClass('d-none');
+    $('.js_inactive').removeClass('d-none');
+
+})
+
 });
 
