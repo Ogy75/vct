@@ -763,23 +763,3 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   color: white;
   cursor: default;
 }
-ul.vct-nav-menu li .selected .has-level1 {
-  color: white !important;
-}
-.vct-left-nav-toggle {
-  position: absolute;
-  top: 8px;
-  right: -40px;
-  width: 32px;
-  height: 32px;
-  transition: all 0.12s linear;
-  cursor: pointer;
-}
-.vct-left-nav-toggle i {
-  font-size: 18px;
-  line-height: 32px;
-  transition: all 0.12s linear;
-}
-.vct-left-nav-toggle:hover {
-  color: #1E9BCC;
-}
