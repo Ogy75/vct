@@ -612,3 +612,26 @@ input.filter-members {
   text-align: center;
   line-height: 24px;
 }
+ul.vct-nav-menu a {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.25px;
+}
+#go-top {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 10;
+  background: #1E9BCC;
+  color: white;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  transition: all 0.12s linear;
+}
+#go-top:hover {
+  background: #d8483e;
+}

@@ -255,31 +255,47 @@ $(document).ready(function() {
     }
 
     //PROJECT TABS
-$('#tab-projects').on('click',function(){
-    if($('.vct-project-tab').hasClass('d-none')){
-        $('.vct-project-tab').removeClass('d-none');
-        $('.vct-employees-tab').addClass('d-none');
-        $(this).toggleClass('selected');
-        $('#tab-employees').toggleClass('selected');
-    }
-});
-$('#tab-employees').on('click',function(){
-    if($('.vct-employees-tab').hasClass('d-none')){
-        $('.vct-project-tab').addClass('d-none');
-        $('.vct-employees-tab').removeClass('d-none');
-        $(this).toggleClass('selected');
-        $('#tab-projects').toggleClass('selected');
-    }
-});
+    $('#tab-projects').on('click',function(){
+        if($('.vct-project-tab').hasClass('d-none')){
+            $('.vct-project-tab').removeClass('d-none');
+            $('.vct-employees-tab').addClass('d-none');
+            $(this).toggleClass('selected');
+            $('#tab-employees').toggleClass('selected');
+        }
+    });
+    $('#tab-employees').on('click',function(){
+        if($('.vct-employees-tab').hasClass('d-none')){
+            $('.vct-project-tab').addClass('d-none');
+            $('.vct-employees-tab').removeClass('d-none');
+            $(this).toggleClass('selected');
+            $('#tab-projects').toggleClass('selected');
+        }
+    });
 
-$('.js_launch').on('click', function(){
-    $(this).html('cancel Campaign').addClass('btn-alert');
-    $('.js_input').hide();
-    $('.js_message').removeClass('d-none');
-    $('.js_active').addClass('d-none');
-    $('.js_inactive').removeClass('d-none');
+    $('.js_launch').on('click', function(){
+        $(this).html('cancel Campaign').addClass('btn-alert');
+        $('.js_input').hide();
+        $('.js_message').removeClass('d-none');
+        $('.js_active').addClass('d-none');
+        $('.js_inactive').removeClass('d-none');
 
-})
+    });
+
+    //Scroll to top
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#go-top').fadeIn(100);
+        } else {
+            $('#go-top').fadeOut(100);
+        }
+    });
+        $('#go-top').click(function(event) {
+            event.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            return false;
+        });
+    
 
 });
 
