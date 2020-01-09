@@ -43,6 +43,7 @@ body {
 }
 input {
   font-size: 13px !important;
+  border-radius: 4px !important;
 }
 input:disabled {
   background: #f0f2f7;
