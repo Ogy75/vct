@@ -12,7 +12,7 @@ $(function() {
     var menuPanel = $('.vct-left-nav');
     var contentExpand = $('.vct-content');
     var windowWidth = $(window).width();
-    if (windowWidth < 1200) {
+    if (windowWidth < 1280) {
         menuPanel.addClass('hide-left');
         contentExpand.addClass('expanded');
     }

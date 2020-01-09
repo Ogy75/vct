@@ -14,7 +14,7 @@ body{
     font-size: 12px;
     font-weight: 900;
     letter-spacing: .5px;
-    min-width: 120px;
+    min-width: 100px;
     text-transform: uppercase;
     &.btn-cancel{
         background: lighten(@basetextColor, 68%);
@@ -22,6 +22,25 @@ body{
             background: @warningColor;
             color:white;
         }
+    }
+    &.btn-project-time, &.btn-project-edit{
+        font-size: 16px;
+        min-width: 50px !important;
+        background-color: @highlightColor;
+        color:white;
+        padding: 10px;
+        line-height: 30px;
+        &:hover{
+            background: darken(@highlightColor, 15%);
+        }
+    }
+    &.btn-project-edit{
+        background-color: @warningColor;
+        color:white;
+        &:hover{
+            background:darken(@warningColor, 15%) ;
+        }
+
     }
 }
 input{
@@ -553,9 +572,17 @@ input{
 .vct-team{
     .vct-team-wrapper{
         text-align: center;
+        position: relative;
         img.vct-client-logo{
                 width:80%;
                 margin-top:20px;
+        }
+        .status{
+            position: absolute;
+            right:0;
+            top:0;
+            padding: 8px;
+            line-height: 12px;
         }
     }
 }
