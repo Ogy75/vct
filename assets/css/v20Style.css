@@ -144,7 +144,7 @@ input.filter-members {
 }
 .time-module .module-status.active {
   background: #1E9BCC;
-  background-image: linear-gradient(90deg, #3bb3e2, #1779a0);
+  background-image: linear-gradient(90deg, #1E9BCC, #0e475d);
 }
 .panel-container,
 .widget-container {
@@ -576,23 +576,24 @@ input.filter-members {
   line-height: 12px;
 }
 .tab-button {
-  display: inline-block;
+  display: block;
   background: transparent;
   border: none;
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid #caced3;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: #1E9BCC;
+  color: #caced3;
   transition: all 0.12s linear;
+  float: left;
 }
 .tab-button:focus {
   outline: none;
 }
 .tab-button.selected {
-  border-bottom: 3px solid #1779a0;
-  color: #115773;
+  border-bottom: 3px solid #1E9BCC;
+  color: #1E9BCC;
 }
 .badge.badge-info {
   background: #1E9BCC;

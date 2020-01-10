@@ -149,7 +149,7 @@ input{
         margin-bottom: -3px;
         &.active{
             background: @highlightColor;
-            background-image: linear-gradient(90deg, lighten(@highlightColor, 10%), darken(@highlightColor, 10%));
+            background-image: linear-gradient(90deg, @highlightColor, darken(@highlightColor, 25%));
         }
     }
 }
@@ -598,22 +598,23 @@ input{
 }
 
 .tab-button{
-    display: inline-block;
+    display: block;
     background:transparent;
     border:none;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #caced3;
     padding:10px 20px;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 2px;
-    color:@highlightColor;
+    color:#caced3;
     transition: @mainTransition;
+    float: left;
     &:focus{
         outline: none;
     }
     &.selected{
-        border-bottom: 3px solid darken(@highlightColor, 10%);
-        color: darken(@highlightColor, 20%);
+        border-bottom: 3px solid @highlightColor;
+        color: @highlightColor;
     }
 }
 
