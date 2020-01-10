@@ -2,7 +2,7 @@ html {
   overflow-y: scroll ;
 }
 body {
-  background: #f0f2f7 !important;
+  background: #EBF0F5 !important;
   min-height: 100vh;
 }
 .btn {
@@ -253,6 +253,19 @@ input.filter-members {
   border-radius: 4px;
   padding: 16px;
   border: 1px solid #ebebe9;
+}
+.vct-content i {
+  color: #1E9BCC;
+  width: 30px;
+  height: 33px;
+}
+.vct-content .info-modal-trigger {
+  right: 15px;
+  bottom: 0px;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 33px;
+  text-align: center;
 }
 .vct-content .vct-teams {
   position: relative;
@@ -571,12 +584,12 @@ input.filter-members {
   display: inline-block;
   background: transparent;
   border: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 3px solid white;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: #919186;
+  color: #42423c;
   transition: all 0.12s linear;
 }
 .tab-button:focus {
