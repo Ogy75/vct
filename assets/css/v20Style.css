@@ -5,6 +5,14 @@ body {
   background: #EBF0F5 !important;
   min-height: 100vh;
 }
+body ::-moz-selection {
+  color: white;
+  background: black;
+}
+body ::selection {
+  color: white;
+  background: black;
+}
 .btn {
   border-radius: 4px;
   font-size: 12px;
@@ -576,15 +584,15 @@ input.filter-members {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;
-  color: #42423c;
+  color: #1E9BCC;
   transition: all 0.12s linear;
 }
 .tab-button:focus {
   outline: none;
 }
 .tab-button.selected {
-  border-bottom: 3px solid #1E9BCC;
-  color: #1779a0;
+  border-bottom: 3px solid #1779a0;
+  color: #115773;
 }
 .badge.badge-info {
   background: #1E9BCC;
@@ -600,6 +608,36 @@ input.filter-members {
 }
 .badge.badge-warning {
   background: #ffc400;
+}
+.text-info {
+  color: #1E9BCC !important;
+}
+.text-success {
+  color: #228B22 !important;
+}
+.text-danger {
+  color: #d8483e !important;
+}
+.text-secondary {
+  color: #696964 !important;
+}
+.text-warning {
+  color: #ffc400 !important;
+}
+.bg-info {
+  background: #1E9BCC !important;
+}
+.bg-success {
+  background: #228B22 !important;
+}
+.bg-danger {
+  background: #d8483e !important;
+}
+.bg-secondary {
+  background: #696964 !important;
+}
+.bg-warning {
+  background: #ffc400 !important;
 }
 .vct-nav-level1 {
   display: none;

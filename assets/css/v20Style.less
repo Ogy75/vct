@@ -7,6 +7,14 @@ html{
 body{
     background: #EBF0F5 !important;
     min-height: 100vh;
+    ::-moz-selection {
+        color: white;
+        background: black;
+      }
+      ::selection {
+        color: white;
+        background: black;
+      }
 }
 
 .btn{
@@ -598,14 +606,14 @@ input{
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 2px;
-    color:@basetextColor;
+    color:@highlightColor;
     transition: @mainTransition;
     &:focus{
         outline: none;
     }
     &.selected{
-        border-bottom: 3px solid @highlightColor;
-        color: darken(@highlightColor, 10%);
+        border-bottom: 3px solid darken(@highlightColor, 10%);
+        color: darken(@highlightColor, 20%);
     }
 }
 
@@ -626,6 +634,18 @@ input{
         background:@progressColor;
     }
 }
+
+.text-info{color: @highlightColor !important}
+.text-success{color: @confirmColor !important}
+.text-danger{color: @warningColor !important}
+.text-secondary{color: @basecolorLighter !important}
+.text-warning{color:@progressColor !important}
+
+.bg-info{background: @highlightColor !important}
+.bg-success{background: @confirmColor !important}
+.bg-danger{background: @warningColor !important}
+.bg-secondary{background: @basecolorLighter !important}
+.bg-warning{background:@progressColor !important}
 
 .vct-nav-level1{
     display: none;
