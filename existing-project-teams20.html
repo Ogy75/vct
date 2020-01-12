@@ -120,6 +120,14 @@
                                                 <td>Senior Software Developer</td>
                                             </tr>
                                             <tr>
+                                                <td>Team Lead</td>
+                                                <td><input type="checkbox" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Team Operator</td>
+                                                <td><input type="checkbox" checked></td>
+                                            </tr>
+                                            <tr>
                                                 <th class="modal-table-project" colspan="2">GENERAL TIME DATA</th>
                                             </tr>
                                             <tr>
@@ -541,24 +549,36 @@
                             </div>
                         </div>
                     </div>
+                    <!-- TEAM MEMBERS -->
+
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-8 col-md-8 col-lg-4">
+                            <div class="position-relative">
+                                <input class="filter-members find-employees" placeholder="Find Team Member" type="text">
+                                <span class="reset-input ti-close"></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row mt-3">
-                        <!-- TEAM MEMBER -->
-                        <div class="col-12 col-xl-6 mt-3">
-                            <div class="team-data">
+
+                        <!-- EMPLOYEE NEW -->
+                        <div class="team-member col-12 col-lg-6 col-xl-4 mt-4">
+                            <div class="team-data h-100">
+                                <span class="no-frm-data">No FRM Data!</span>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-start align-items-center">
+                                    <div class="d-flex justify-content-start align-items-center overflow-hidden">
                                         <div class="team-member-image">
-                                            <img src="assets/images/profile-1.jpg">
+                                            <img src="assets/images/profile-2.jpg">
                                         </div>
-                                        <div class="team-member-name">Mirko Mirkovic</div>
-                                        <span class="badge badge-success ml-3">Team Lead</span>
+                                        <div class="team-member-name">Dejan Dejanovic</div>
+                                        <!-- <span class="fas fa-eye-slash ml-2" data-toggle="tooltip" data-placement="top" title="Not visible to lower roles"></span> -->
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <div class="item-menu fas fa-ellipsis-v">
-                                            <div class="item-menu-wrapper">
+                                            <div class="item-menu-wrapper" style="display: none;">
                                                 <div class="arrow"></div>
                                                 <ul>
-                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <span class="item-menu-title">Employee options</span>
                                                     <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
                                                     <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
                                                 </ul>
@@ -566,125 +586,196 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- TEAM MEMBER -->
-                        <div class="col-12 col-xl-6 mt-3">
-                            <div class="team-data">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-start">
-                                        <div class="team-member-image">
-                                            <img src="assets/images/profile-2.jpg">
-                                        </div>
-                                        <div class="team-member-name">Petar Petrovic</div>
-                                    </div>
-                                    <div class="d-flex justify-content-end">
-                                        <div class="item-menu fas fa-ellipsis-v">
-                                            <div class="item-menu-wrapper">
-                                                <div class="arrow"></div>
-                                                <ul>
-                                                    <span class="item-menu-title">Team Member options</span>
-                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
-                                                    <li><a class="js_generate" href="javascript:void(0)">Assign Team Lead position</a></li>
-                                                </ul>
-                                            </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="border-top mt-2">
+                                            <span class="badge badge-success mt-2">Team Lead</span>
+                                            <span class="badge badge-secondary mt-2">Team Operator</span>
+                                            <span class="badge badge-info mt-2">Senior Software Engineer</span>
+                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                            <a href="existing-project-teams20.html" target="_new" class="badge badge-light mt-2">Enjoying - Time Manager</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- TEAM MEMBER -->
-                        <div class="col-12 col-xl-6 mt-3">
-                            <div class="team-data">
+
+                        <!-- EMPLOYEE NEW -->
+                        <div class="team-member col-12 col-lg-6 col-xl-4 mt-4">
+                            <div class="team-data h-100">
+                                <!-- <span class="no-frm-data badge badge-danger"><i class="fas fa-exclamation-triangle mr-2"></i>No FRM Data</span> -->
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-start">
+                                    <div class="d-flex justify-content-start align-items-center overflow-hidden">
                                         <div class="team-member-image">
                                             <img src="assets/images/profile-3.jpg">
                                         </div>
-                                        <div class="team-member-name">Dejan Jovanovic</div>
+                                        <div class="team-member-name">Bogdan Petrovic Bogdanovic</div>
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <div class="item-menu fas fa-ellipsis-v">
-                                            <div class="item-menu-wrapper">
+                                            <div class="item-menu-wrapper" style="display: none;">
                                                 <div class="arrow"></div>
                                                 <ul>
-                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <span class="item-menu-title">Employee options</span>
                                                     <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
-                                                    <li><a class="js_generate" href="javascript:void(0)">Assign Team Lead position</a></li>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="border-top mt-2">
+                                            <span class="badge badge-secondary mt-2">Team Operator</span>
+                                            <span class="badge badge-info mt-2">Senior Software Engineer</span>
+                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                            <!-- <span class="badge badge-info mt-2">Enjoying - Time Manager</span> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- TEAM MEMBER -->
-                        <div class="col-12 col-xl-6 mt-3">
-                            <div class="team-data">
+
+                        <!-- EMPLOYEE NEW -->
+                        <div class="team-member col-12 col-lg-6 col-xl-4 mt-4">
+                            <div class="team-data h-100">
+                                <!-- <span class="no-frm-data badge badge-danger"><i class="fas fa-exclamation-triangle mr-2"></i>No FRM Data</span> -->
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-start">
+                                    <div class="d-flex justify-content-start align-items-center overflow-hidden">
                                         <div class="team-member-image">
                                             <img src="assets/images/profile-1.jpg">
                                         </div>
-                                        <div class="team-member-name">Paja Pajic</div>
+                                        <div class="team-member-name">Mirko Mirkovic</div>
+                                        <!-- <span class="fas fa-eye-slash ml-2" data-toggle="tooltip" data-placement="top" title="Not visible to lower roles"></span> -->
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <div class="item-menu fas fa-ellipsis-v">
-                                            <div class="item-menu-wrapper">
+                                            <div class="item-menu-wrapper" style="display: none;">
                                                 <div class="arrow"></div>
                                                 <ul>
-                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <span class="item-menu-title">Employee options</span>
                                                     <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
-                                                    <li><a class="js_generate" href="javascript:void(0)">Assign Team Lead position</a></li>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
                                                 </ul>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="border-top mt-2">
+                                            <span class="badge badge-info mt-2">Medior Software Engineer</span>
+                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                            <!-- <span class="badge badge-info mt-2">Enjoying - Time Manager</span> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- TEAM MEMBER -->
-                        <div class="col-12 col-xl-6 mt-3">
-                            <div class="team-data">
+
+                        <!-- EMPLOYEE NEW -->
+                        <div class="team-member col-12 col-lg-6 col-xl-4 mt-4">
+                            <div class="team-data h-100">
+                                <!-- <span class="no-frm-data badge badge-danger"><i class="fas fa-exclamation-triangle mr-2"></i>No FRM Data</span> -->
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="d-flex justify-content-start">
+                                    <div class="d-flex justify-content-start align-items-center overflow-hidden">
                                         <div class="team-member-image">
-                                            <img src="assets/images/profile-2.jpg">
+                                            <img src="assets/images/profile-3.jpg">
                                         </div>
-                                        <div class="team-member-name">Bojan Bojanic</div>
+                                        <div class="team-member-name">Bosko Boskov</div>
+                                        <!-- <span class="fas fa-eye-slash ml-2" data-toggle="tooltip" data-placement="top" title="Not visible to lower roles"></span> -->
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <div class="item-menu fas fa-ellipsis-v">
-                                            <div class="item-menu-wrapper">
+                                            <div class="item-menu-wrapper" style="display: none;">
                                                 <div class="arrow"></div>
                                                 <ul>
-                                                    <span class="item-menu-title">Team Member options</span>
+                                                    <span class="item-menu-title">Employee options</span>
                                                     <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
-                                                    <li><a class="js_generate" href="javascript:void(0)">Assign Team Lead position</a></li>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="border-top mt-2">
+                                            <span class="badge badge-warning mt-2">not Active</span>
+                                            <span class="badge badge-info mt-2">Medior Software Engineer</span>
+                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                            <!-- <span class="badge badge-info mt-2">Enjoying - Time Manager</span> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+
+                        <!-- EMPLOYEE NEW -->
+                        <div class="team-member col-12 col-lg-6 col-xl-4 mt-4">
+                            <div class="team-data h-100">
+                                <!-- <span class="no-frm-data badge badge-danger"><i class="fas fa-exclamation-triangle mr-2"></i>No FRM Data</span> -->
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex justify-content-start align-items-center overflow-hidden">
+                                        <div class="team-member-image">
+                                            <img src="assets/images/profile-3.jpg">
+                                        </div>
+                                        <div class="team-member-name">Marko Markovic</div>
+                                        <!-- <span class="fas fa-eye-slash ml-2" data-toggle="tooltip" data-placement="top" title="Not visible to lower roles"></span> -->
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <div class="item-menu fas fa-ellipsis-v">
+                                            <div class="item-menu-wrapper" style="display: none;">
+                                                <div class="arrow"></div>
+                                                <ul>
+                                                    <span class="item-menu-title">Employee options</span>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
+                                                    <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="border-top mt-2">
+                                            <!-- <span class="badge badge-danger mt-2">not Active</span> -->
+                                            <span class="badge badge-info mt-2">Senior QA Engineer</span>
+                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                            <!-- <span class="badge badge-info mt-2">Enjoying - Time Manager</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--no results message-->
+                    <div class="row no-results-message justify-content-center align-items-center">
+                        <div class="no-results col-12 h-100 p-5 text-center no-results">
+                            <h4>There are no results matching your criteria</h4>
+                            <p>Please modify your query</p>
                         </div>
                     </div>
+
                 </div>
-                    
-                        <div class="col-12 my-5">
-                            <div class="row vct-actions">
-                                <div class="col-6">
-                                    <button class="btn btn-highlight" data-toggle="modal" data-target="#addMember">Add Team Member</button>
-                                </div>
-                                <div class="col-6 d-flex justify-content-end">
-                                    <button class="btn btn-highlight">Save Team</button>
-                                </div>
-                            </div>
-                        </div>
-                    
-                
             </div>
+
+
+            <div class="row vct-actions mt-5">
+                <div class="col-6">
+                    <button class="btn btn-highlight" data-toggle="modal" data-target="#addMember">Add Team Member</button>
+                </div>
+                <div class="col-6 d-flex justify-content-end">
+                    <button class="btn btn-highlight">Save Team</button>
+                </div>
+            </div>
+
+
+
         </div>
+    </div>
 
     </div>
 

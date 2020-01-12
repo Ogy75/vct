@@ -266,6 +266,25 @@ input{
         padding: 16px;
         border:1px solid lighten(@basetextColor, 67%);
     }
+    .team-data{
+        position: relative;
+        display: block;
+        .no-frm-data{
+            position: absolute;
+            top:0px;
+            right:0px;
+            background: darken(red, 5%);
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: 700;
+            color:white;
+            padding: 5px 8px;
+            border-radius: 0px 4px 0px 4px;
+            i{
+                color: yellow;
+            }
+        }
+    }
     .vct-teams{
         position: relative;
         top:0;
@@ -293,7 +312,7 @@ input{
         border-radius: 4px;
         width:95%;
         float: left;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 400;
         white-space: nowrap;
         overflow: hidden;
@@ -406,7 +425,7 @@ input{
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 75%;
+            max-width: 100%;
         }
         .vct-team-location{
             background: transparent;
@@ -602,12 +621,13 @@ input{
     background:transparent;
     border:none;
     border-bottom: 3px solid #caced3;
-    padding:10px 20px;
+    padding: 0px 20px 10px 20px;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 2px;
     color:#caced3;
     transition: @mainTransition;
+    text-transform: uppercase;
     float: left;
     &:focus{
         outline: none;
@@ -634,6 +654,9 @@ input{
     &.badge-warning{
         background:@progressColor;
     }
+    &.badge-light{
+        background:lighten(@basetextColor, 65%)
+    }
 }
 
 .text-info{color: @highlightColor !important}
@@ -641,12 +664,14 @@ input{
 .text-danger{color: @warningColor !important}
 .text-secondary{color: @basecolorLighter !important}
 .text-warning{color:@progressColor !important}
+.text-light{color:lighten(@basetextColor, 65%)}
 
 .bg-info{background: @highlightColor !important}
 .bg-success{background: @confirmColor !important}
 .bg-danger{background: @warningColor !important}
 .bg-secondary{background: @basecolorLighter !important}
 .bg-warning{background:@progressColor !important}
+.bg-light{background:lighten(@basetextColor, 65%)}
 
 .vct-nav-level1{
     display: none;
@@ -671,9 +696,9 @@ input{
     text-align: center;
     transition: @mainTransition;
     opacity: .4;
+    cursor: pointer;
     &:hover{
-        background: @warningColor;
-        opacity: .9;
+        opacity: 1;
     }
 }
 
