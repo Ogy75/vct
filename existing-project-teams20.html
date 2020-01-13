@@ -46,7 +46,7 @@
     <!-- **************************************************MODALS START************************************************** -->
 
     <!--memberDetails Modal Start -->
-    <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails" aria-hidden="true">
+    <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails" aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
@@ -121,11 +121,22 @@
                                             </tr>
                                             <tr>
                                                 <td>Team Lead</td>
-                                                <td><input type="checkbox" checked></td>
+                                                <td>
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                        <span class="slider"></span>
+                                                    </label>
+                                                    
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>Team Operator</td>
-                                                <td><input type="checkbox" checked></td>
+                                                <td>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                        <span class="slider"></span>
+                                                    </label>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th class="modal-table-project" colspan="2">GENERAL TIME DATA</th>

@@ -42,7 +42,7 @@
     </div>
 
     <!--memberDetails Modal Start -->
-    <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails" aria-hidden="true">
+    <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails" aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
@@ -79,22 +79,6 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th class="modal-table-project" colspan="2">Settings</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Set Employee Visibility</td>
-                                                <td>
-                                                    <select>
-                                                        <option selected>
-                                                            Visible
-                                                        </option>
-                                                        <option>
-                                                            Hidden
-                                                        </option>
-                                                    </select>
-                                                </td>
-                                            </tr>
-                                            <tr>
                                                 <th class="modal-table-project" colspan="2">GENERAL DATA</th>
                                             </tr>
                                             <tr>
@@ -130,6 +114,25 @@
                                             <tr>
                                                 <td>Job Title</td>
                                                 <td>Senior Software Developer</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Team Lead</td>
+                                                <td>
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                        <span class="slider"></span>
+                                                    </label>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Team Operator</td>
+                                                <td>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                        <span class="slider"></span>
+                                                    </label>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th class="modal-table-project" colspan="2">GENERAL TIME DATA</th>
