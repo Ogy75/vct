@@ -858,3 +858,23 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   color: white;
   cursor: default;
 }
+.error-message-wrapper .error-img {
+  display: block;
+  width: 250px;
+  float: none;
+  margin: 0 auto;
+}
+.error-message-wrapper .error-title {
+  display: block;
+  font-size: 42px;
+  font-weight: 300;
+  margin-top: 30px;
+}
+.error-message-wrapper .error-msg {
+  display: block;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
