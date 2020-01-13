@@ -293,4 +293,15 @@ $(document).ready(function() {
         $(this).attr('disabled', true).html('Payout started');
     });
 
+    //Checkbox sim
+    $('#responsibility').on('change', function(){
+        if($(this).is(':checked')){
+            $('.js_book').attr('disabled', false);
+        }
+        else {
+            $('.js_book').attr('disabled', true);
+        }
+    });
+    
+
 });
