@@ -210,6 +210,10 @@ input.filter-members {
   text-overflow: ellipsis;
   width: 20%;
 }
+.panel-container .table-wrapper table.panel-table tbody tr td.log-comment,
+.widget-container .table-wrapper table.panel-table tbody tr td.log-comment {
+  white-space: initial !important;
+}
 .panel-container .table-wrapper table.panel-table tfoot tr,
 .widget-container .table-wrapper table.panel-table tfoot tr {
   background: #edf8fc;
@@ -494,7 +498,7 @@ input.filter-members {
   color: white !important;
   padding: 8px 5px;
   text-align: left;
-  border: none;
+  border-bottom: 1px solid transparent;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;

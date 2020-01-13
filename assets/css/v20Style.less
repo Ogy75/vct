@@ -208,6 +208,9 @@ input{
                         overflow: hidden;
                         text-overflow: ellipsis;
                         width:20%;
+                        &.log-comment{
+                            white-space: initial !important;
+                        }
                     }
                 }
             }
@@ -508,7 +511,7 @@ input{
         color:white !important;
         padding: 8px 5px;
         text-align: left;
-        border:none;
+        border-bottom:1px solid transparent;
         font-size: 12px;
         letter-spacing: 2px;
         text-transform: uppercase;

@@ -317,7 +317,6 @@ $('.js_finish').on('click', function() {
     $(this).html('Done');
     $(this).parents('tr').removeClass('bg-warning');
     $('.js_payout').attr('disabled', false);
-    $('.js_doc').removeClass('d-none');
     $('.na-status').addClass('d-none');
     $('.end-date').removeClass('d-none');
     $('.js_payout').html('Start Payout');

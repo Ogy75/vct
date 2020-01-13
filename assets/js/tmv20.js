@@ -82,6 +82,10 @@ $(document).ready(function() {
         $('.js_bookingMessage').removeClass('d-none');
     });
 
+    $('.js_request').on('click', function() {
+        $('.js_requestMessage').removeClass('d-none');
+    });
+
     //team toggle menu
     $('.team-name').on('click', function() {
         $(this).parents('.vct-teams').find('.team-list').toggle();
