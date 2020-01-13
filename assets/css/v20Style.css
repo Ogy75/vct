@@ -258,6 +258,12 @@ input.filter-members {
   color: white;
   border-radius: 4px;
 }
+a.vct-team {
+  text-decoration: none;
+}
+a.vct-team:hover {
+  color: inherit;
+}
 .vct-content .vct-project,
 .vct-content .vct-teams,
 .vct-content .team-data {
@@ -620,11 +626,11 @@ input:checked + .slider:before {
   background: transparent;
   border: none;
   border-bottom: 3px solid #caced3;
-  padding: 0px 20px 10px 20px;
+  padding: 10px 20px;
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #caced3;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #a1a3a8;
   transition: all 0.12s linear;
   text-transform: uppercase;
   float: left;
@@ -633,8 +639,8 @@ input:checked + .slider:before {
   outline: none;
 }
 .tab-button.selected {
-  border-bottom: 3px solid #1E9BCC;
-  color: #1E9BCC;
+  border-bottom: 3px solid #1779a0;
+  color: #1779a0;
 }
 .badge.badge-info {
   background: #1E9BCC;
