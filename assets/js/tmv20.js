@@ -82,14 +82,6 @@ $(document).ready(function() {
         $('.js_bookingMessage').removeClass('d-none');
     });
 
-    //todays date
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
-    today = dd + '.' + mm + '.' + yyyy;
-    //document.querySelector('.action-date').innerHTML = today;
-
     //team toggle menu
     $('.team-name').on('click', function() {
         $(this).parents('.vct-teams').find('.team-list').toggle();
@@ -255,16 +247,16 @@ $(document).ready(function() {
     }
 
     //PROJECT TABS
-    $('#tab-projects').on('click',function(){
-        if($('.vct-project-tab').hasClass('d-none')){
+    $('#tab-projects').on('click', function() {
+        if ($('.vct-project-tab').hasClass('d-none')) {
             $('.vct-project-tab').removeClass('d-none');
             $('.vct-employees-tab').addClass('d-none');
             $(this).toggleClass('selected');
             $('#tab-employees').toggleClass('selected');
         }
     });
-    $('#tab-employees').on('click',function(){
-        if($('.vct-employees-tab').hasClass('d-none')){
+    $('#tab-employees').on('click', function() {
+        if ($('.vct-employees-tab').hasClass('d-none')) {
             $('.vct-project-tab').addClass('d-none');
             $('.vct-employees-tab').removeClass('d-none');
             $(this).toggleClass('selected');
@@ -272,13 +264,12 @@ $(document).ready(function() {
         }
     });
 
-    $('.js_launch').on('click', function(){
+    $('.js_launch').on('click', function() {
         $(this).html('cancel Campaign').addClass('btn-alert');
         $('.js_input').hide();
         $('.js_message').removeClass('d-none');
         $('.js_active').addClass('d-none');
         $('.js_inactive').removeClass('d-none');
-
     });
 
     //Scroll to top
@@ -290,12 +281,16 @@ $(document).ready(function() {
             $('#go-top').fadeOut(100);
         }
     });
-        $('#go-top').click(function(event) {
-            event.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, 'slow');
-            return false;
-        });
-    
+    $('#go-top').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        return false;
+    });
+
+    //PAYOUT Process
+    $('.js_payout').on('click', function() {
+        $('.js_payout-data').removeClass('d-none');
+        $(this).attr('disabled', true).html('Payout started');
+    });
 
 });
-
