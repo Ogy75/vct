@@ -310,21 +310,24 @@ $(document).ready(function () {
 
     //Booking validacija
     var selectedNo = $('.vacation-total').text();
-    var earned = 0;
-    var vacation = 0;
     var valueChk = 0;
     var earnedDays = $('.earned-days').text();
-            for (i = 0; i <= earnedDays; i++)
-                $('.earned-val').append('<option value=' + i + '>' + i + '</option>');
-            $('.earned-val').change(function () {
-                earnedVal = $('.earned-val').val();
-                valueChk = selectedNo - earnedVal;
-                $('.vacation-val').find('option').remove().end();
-                for (j = valueChk; j <= valueChk; j++) {
-                    $('.vacation-val').append('<option value=' + j + '>' + j + '</option>');
-                }
-            });
-            $('.vacation-val').change(function () {
-                valueChk = parseInt($('.earned-val').val()) + parseInt($('.vacation-val').val());
-            });
+    for (i = 0; i <= earnedDays; i++)
+        $('.earned-val').append('<option value=' + i + '>' + i + '</option>');
+    $(document).on('change', '.earned-val', function () {
+        init();
+    });
+    $(document).on('change', '.vacation-val', function () {
+        valueChk = parseInt($('.earned-val').val()) + parseInt($('.vacation-val').val());
+    });
+
+    function init(){
+        earnedVal = $('.earned-val').val();
+        valueChk = selectedNo - earnedVal;
+        $('.vacation-val').find('option').remove().end();
+        for (j = valueChk; j <= valueChk; j++) {
+            $('.vacation-val').append('<option value=' + j + '>' + j + '</option>');
+        }
+    };
+    init();
 });

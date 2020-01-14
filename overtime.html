@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
     <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
     <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/v20Style.css">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
@@ -93,167 +94,466 @@
         <div class="container position-relative">
             <!--team time list element-->
             <div class="row">
-                <div class="col-12 mb-5">
-                    <div class="d-inline-flex align-items-center w-50 justify-content-start mb-3 h-100">
-                        <button class="btn btn-action vct-back p-0"><i class="ti-angle-left mr-1 py-3"></i>back</button>
-                    </div>
-                    <div class="d-inline-flex align-items-center float-right mb-3 h-100">
-                        <h6 class="vct-navi-text">Manage Overtime</h6>
-                    </div>
+                <div class="col-12 d-flex align-items-center justify-content-start">
+                    <h6 class="mt-3">Payout Campaigns</h6>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-12 col-xl-6 generate-list">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row">
-                                <div class="col-4 mb-3 input">
-                                    <label class="mt-0" for="minHours" data-toggle="tooltip" data-placement="top" title=""
-                                        data-original-title="Min. number of hours that can qualify for payoff.">Min.
-                                        hours required</label>
-                                    <input type="text" value="10" name="minHours">
-                                </div>
-                                <div class="col-4 mb-3 input">
-                                    <label class="mt-0" for="endDate" data-toggle="tooltip" data-placement="top" title=""
-                                        data-original-title="Min. number of hours that can qualify for payoff.">Set End
-                                        date</label>
-                                    <input type='text' class='datepicker-here' data-language='en' name="endDate" />
-                                </div>
-                                <div class="col-4 d-flex align-items-end justify-content-center">
-                                    <button type="button" class="btn btn-highlight mb-3 w-100 js_generate">Launch
-                                        Inquiry</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="vacation-log-element bg-transparent">
-                                <div class="input-table">
-                                    <table class="employees-overtime w-100">
-                                        <thead>
-                                            <tr>
-                                                <th><span class="select-all">Select All</span></th>
-                                                <th>Employee</th>
-                                                <th>Overtime (hrs)</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><input type="checkbox" checked /></td>
-                                                <td>Dejan Boskovic</td>
-                                                <td class="overtime">134</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox" /></td>
-                                                <td>Marija Leraca</td>
-                                                <td class="overtime">15</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox" checked /></td>
-                                                <td>Dmitar Karaklajic</td>
-                                                <td class="overtime">122</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox" /></td>
-                                                <td>Bojan Antic</td>
-                                                <td class="overtime">12</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox" /></td>
-                                                <td>Dusan Pregorac</td>
-                                                <td class="overtime">7</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="checkbox" checked /></td>
-                                                <td>Martin Bozic</td>
-                                                <td class="overtime">192</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="generated mt-3 d-none">
-                                    <div class="row">
-                                        <div class="col-8 mb-3 d-flex align-items-center justify-content-start">
-                                            <div class="inquiry-confirm">Inquiry launched. Due date is 28.1.2020</div>
-                                        </div>
-                                        <div class="col-4 mb-3 d-flex align-items-end justify-content-center">
-                                            <button type="button" class="btn btn-alert w-100 js_cancel">Cancel Inquiry</button>
-                                        </div>
-                                    </div>
-                                    <table class="employees-overtime w-100">
-                                        <thead>
-                                            <tr>
-                                                <th>Employee</th>
-                                                <th>Hours for payout</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Dejan Boskovic</td>
-                                                <td class="payout">134</td>
-                                                <td><span class="badge badge-light">Idle</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Dmitar Karaklajic</td>
-                                                <td class="payout">122</td>
-                                                <td><span class="badge badge-light">Idle</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Martin Bozic</td>
-                                                <td class="payout">72</td>
-                                                <td><span class="badge badge-success">Payment</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row mt-3">
                 <div class="col-12 col-xl-6 mt-3">
-                    <div class="row">
-                        <div class="col-8 mb-3 d-flex align-items-center justify-content-start">
-                            <div class="inquiry-confirm">Inquiry History</div>
+                    <div class="panel-container">
+
+                        <div class="vct-project-person-switch d-flex justify-content-center mb-4">
+                            <button class="tab-button selected" id="tab-projects">Campaign</button>
+                            <button class="tab-button" id="tab-employees">Payout</button>
+                        </div>
+
+                        <div class="vct-project-tab">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="table-title">Employees earned hours conversion campaign</div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="js_message d-none mb-2">
+                                    <h4 class="w-100 pr-3">Camapaign is started.</h4>
+                                    <span>Campaign is valid till <span class="badge badge-warning">25.4.2020</span></span>
+                                </div>
+                                <div class="w-100 pr-3 js_input">
+                                    <label for="min-hours">Min. hours</label>
+                                    <input type="text" name="min-hours" />
+                                </div>
+                                <div class="w-100 js_input">
+                                    <label for="end-date">Campaign end date</label>
+                                    <input type="text" name="end-date" />
+                                </div>
+                            </div>
+                            <div class="w-100 d-flex justify-content-start">
+                                <button class="btn btn-highlight js_launch mb-5">Launch Campaign</button>
+                            </div>
+                            <div class="table-wrapper">
+                                <table class="panel-table js_active">
+                                    <thead>
+                                        <tr>
+                                            <th><span class="badge btn-success">Select All</span></th>
+                                            <th><i class="fas fa-user"></i> Employee</th>
+                                            <th><i class="fas fa-clock"></i> Earned Hours</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" checked /></td>
+                                            <td>Milan Milanovic</td>
+                                            <td>64</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>Dejan Dejanovic</td>
+                                            <td>19</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" checked /></td>
+                                            <td>Bogden Bogdanovic</td>
+                                            <td>92</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>Marko Markovic</td>
+                                            <td>38</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" checked /></td>
+                                            <td>Branko Brankovic</td>
+                                            <td>18</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="border-bottom">
+                                            <td>Selected</td>
+                                            <td>3</td>
+                                            <td>174</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>5</td>
+                                            <td>231</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <table class="panel-table js_inactive d-none">
+                                    <thead>
+                                        <tr>
+                                            <th><i class="fas fa-user"></i> Employee</th>
+                                            <th><i class="fas fa-clock"></i> Earned Hours</th>
+                                            <th>Employee Response</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Milan Milanovic</td>
+                                            <td>64</td>
+                                            <td><span class="badge badge-success">40</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bogden Bogdanovic</td>
+                                            <td>92</td>
+                                            <td><span class="badge badge-secondary">no response</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Branko Brankovic</td>
+                                            <td>18</td>
+                                            <td><span class="badge badge-secondary">no response</span></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>174</td>
+                                            <td>40</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="vct-employees-tab d-none">
+                            <div class="mb-3">
+                                <div class="table-title w-100 mb-3">Employees complete payout</div>
+                                <p>Select employees form the list to be included in the payout of all earned hours. When you launch payment process you wont be able to initiate another before you conclude the current in the payment history log.</p>
+                            </div>
+                            <div class="w-100 d-flex justify-content-start">
+                                <button class="btn btn-highlight mb-5 js_payout">Start Payout</button>
+                            </div>
+                            <div class="table-wrapper">
+                                <table class="panel-table">
+                                    <thead>
+                                        <tr>
+                                            <th><span class="badge btn-success">Select All</span></th>
+                                            <th><i class="fas fa-user"></i> Employee</th>
+                                            <th><i class="fas fa-clock"></i> Earned Hours</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" checked /></td>
+                                            <td>Milan Milanovic</td>
+                                            <td>64</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>Dejan Dejanovic</td>
+                                            <td>19</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" checked /></td>
+                                            <td>Bogden Bogdanovic</td>
+                                            <td>92</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>Marko Markovic</td>
+                                            <td>38</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" checked /></td>
+                                            <td>Branko Brankovic</td>
+                                            <td>18</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="border-bottom">
+                                            <td>Selected</td>
+                                            <td>3</td>
+                                            <td>174</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>5</td>
+                                            <td>231</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <table class="panel-table js_inactive d-none">
+                                    <thead>
+                                        <tr>
+                                            <th><i class="fas fa-user"></i> Employee</th>
+                                            <th><i class="fas fa-clock"></i> Earned Hours</th>
+                                            <th>Employee Response</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Milan Milanovic</td>
+                                            <td>64</td>
+                                            <td><span class="badge badge-success">40</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bogden Bogdanovic</td>
+                                            <td>92</td>
+                                            <td><span class="badge badge-secondary">no response</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Branko Brankovic</td>
+                                            <td>18</td>
+                                            <td><span class="badge badge-secondary">no response</span></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td>174</td>
+                                            <td>40</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    <div class="vacation-log-element bg-transparent">
-                    <table class="employees-overtime w-100">
-                        <thead>
-                            <tr>
-                                <th>Report</th>
-                                <th>Date locked</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="javascript:void(0)"><i class="far fa-file-pdf text-danger"></i></a></td>
-                                <td>20.6.2020</td>
-                                <td><span class="badge btn-highlight finish-payoff js_finish">Payout Finished</span></td>
-                            </tr>
-                            <tr>
-                                <td><a href="javascript:void(0)"><i class="far fa-file-pdf text-danger"></i></a></td>
-                                <td class="payout">19.5.2020</td>
-                                <td><span class="badge badge-success">Done</span></td>
-                            </tr>
-                            <tr>
-                                <td><a href="javascript:void(0)"><i class="far fa-file-pdf text-danger"></i></a></td>
-                                <td class="payout">20.4.2020</td>
-                                <td><span class="badge badge-success">Done</span></td>
-                            </tr>
-                            <tr>
-                                <td><a href="javascript:void(0)"><i class="far fa-file-pdf text-danger"></i></a></td>
-                                <td class="payout">21.3.2020</td>
-                                <td><span class="badge badge-success">Done</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
+
+                <div class="col-12 col-xl-6 mt-3">
+                    <div class="panel-container">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="table-title">Payment History</div>
+                            <select>
+                                    <option selected>2020</option>
+                                    <option>2019</option>
+                                    <option>2018</option>
+                                </select>
+                        </div>
+                        <div class="table-wrapper">
+                            <table class="panel-table mt-5">
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Start date</th>
+                                        <th>End Date</th>
+                                        <th>
+                                            </i>Report</th>
+                                        <th>
+                                            </i>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="d-none js_payout-data bg-warning">
+                                        <td>Payout</td>
+                                        <td><span class="start-date">start date</span></td>
+                                        <td><span class="end-date d-none">end date</span></td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge btn-danger finish-payoff js_finish">Payment Done?</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>05.4.2020</td>
+                                        <td>20.4.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-warning">In progress</span></td>
+                                    </tr>
+                                    <tr class="bg-warning">
+                                        <td>Campaign</td>
+                                        <td>20.3.2020</td>
+                                        <td>25.3.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge btn-danger finish-payoff js_finish">Payment Done?</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Payout</td>
+                                        <td>26.1.2020</td>
+                                        <td>26.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campaign</td>
+                                        <td>19.1.2020</td>
+                                        <td>25.1.2020</td>
+                                        <td>
+                                            <a href="javascript:void(0)" target="_new" class="far fa-file-excel text-success"></a>
+                                        </td>
+                                        <td><span class="badge badge-success">done</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
