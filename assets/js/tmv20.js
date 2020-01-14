@@ -78,6 +78,13 @@ $(document).ready(function () {
         $(this).parents('.left-items').find('#total-work-hours-data').fadeIn();
     });
 
+    $('#work-from-home').click(function () {
+        var timeModule = $('.time-module');
+        var panelContainer = $('.panel-container');
+        panelContainer.hide();
+        $(this).parents('.left-items').find('#work-from-home-data').fadeIn();
+    });
+
     $('.js_book').on('click', function () {
         $('.js_bookingMessage').removeClass('d-none');
     });
@@ -312,8 +319,9 @@ $(document).ready(function () {
     var selectedNo = $('.vacation-total').text();
     var valueChk = 0;
     var earnedDays = $('.earned-days').text();
-    for (i = 0; i <= earnedDays; i++)
+    for (i = 0; i <= earnedDays; i++){
         $('.earned-val').append('<option value=' + i + '>' + i + '</option>');
+    }
     $(document).on('change', '.earned-val', function () {
         init();
     });
@@ -330,4 +338,13 @@ $(document).ready(function () {
         }
     };
     init();
+
+    //ADD HOME OFFICE DATE DEMO SCRIPT
+    $('.js_addDate').on('click', function(){
+        $('.js_addDateMessage').removeClass('d-none');
+        $(this).attr('disabled', true);
+        $('.add-date').removeClass('d-none');
+        $('.home-days').attr('disabled', true);
+        $('.js_noDays').addClass('badge-danger').text('4');
+    });
 });
