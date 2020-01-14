@@ -18,13 +18,17 @@ body{
 }
 
 .btn{
-    border-radius: 4px;
+    border-radius: 2px;
     font-size: 12px;
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing: .5px;
     min-width: 100px;
     text-transform: uppercase;
     line-height: 21px;
+    padding: 6px 20px;
+    white-space: nowrap;
+    
+    
     &.btn-cancel{
         background: lighten(@basetextColor, 68%);
         &:hover{
@@ -65,7 +69,10 @@ input{
 }
 .item-menu-wrapper{
     a{
-        font-size: 12px !important;
+        font-size: 13px !important;
+        font-weight: 500;
+        color:darken(@highlightColor, 5%);
+        transition:@mainTransition;
     }
 }
 .badge{
@@ -134,7 +141,7 @@ input{
         display: inline-flex;
         text-transform: uppercase;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 900;
         letter-spacing: -.3px;
         line-height: 20px;
         text-align: right;
@@ -145,7 +152,7 @@ input{
         height:4px;
         border-radius: 2px;
         background:transparent;
-        margin-top:10px;
+        margin-top:8px;
         margin-bottom: -3px;
         &.active{
             background: @highlightColor;
@@ -238,6 +245,7 @@ input{
 .item-menu{
     font-size: 15px;
     margin-right:-6px;
+    color:@basetextColor;
 }
 
 #days-free-data,
@@ -265,10 +273,11 @@ input{
 a.vct-team{
     text-decoration:none;
     &:hover{
-        color:inherit;
+        color:@highlightColor;
     }
 }
 .vct-content{
+    margin-bottom: 80px;
     .vct-project, .vct-teams, .team-data{
         background: white;
         border-radius: 4px;
@@ -398,7 +407,7 @@ a.vct-team{
             transition: @mainTransition;
             cursor: pointer;
             &.selected{
-                background: lighten(@highlightColor,20%);
+                background: @highlightColor;
                     color:white;
             }
             &:hover{
@@ -430,7 +439,7 @@ a.vct-team{
             font-size: 16px;
             line-height: 46px;
             height: 46px;
-            font-weight: 600;
+            font-weight: 700;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -635,7 +644,7 @@ transform: translateX(12px);
         text-align: center;
         position: relative;
         img.vct-client-logo{
-                width:80%;
+                width:70%;
                 margin-top:20px;
         }
         .status{
@@ -655,8 +664,8 @@ transform: translateX(12px);
     border-bottom: 3px solid #caced3;
     padding: 10px 20px;
     font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-weight: 500;
+    letter-spacing: .25px;
     color:#a1a3a8;
     transition: @mainTransition;
     text-transform: uppercase;
@@ -671,6 +680,7 @@ transform: translateX(12px);
 }
 
 .badge{
+    font-weight: 500;
     &.badge-info{
         background: @highlightColor
     }
@@ -688,6 +698,9 @@ transform: translateX(12px);
     }
     &.badge-light{
         background:lighten(@basetextColor, 65%)
+    }
+    &.badge-dark{
+        background:darken(@basetextColor,10%)
     }
 }
 
@@ -716,7 +729,7 @@ transform: translateX(12px);
 #go-top{
     display: none;
     position: fixed;
-    bottom:12px;
+    bottom:16px;
     right: 24px;
     z-index: 10;
     background: @highlightColor;
@@ -771,6 +784,8 @@ transform: translateX(12px);
     li {
       display: block;
       a{
+          font-weight: 500;
+          letter-spacing: .25px;
           .nav-icon{
               width:18px;
               height: 18px;
@@ -893,16 +908,16 @@ transform: translateX(12px);
       }
       .error-title{
           display: block;
-          font-size: 42px;
+          font-size: 38px;
           font-weight: 300;
           margin-top:30px;
       }
       .error-msg{
         display: block;
-        font-size: 18px;
+        font-size: 16px;
         text-transform: uppercase;
         letter-spacing: 10px;
-        font-weight: 300;
+        font-weight: 400;
         margin-bottom:30px;
       }
   }

@@ -14,13 +14,15 @@ body ::selection {
   background: black;
 }
 .btn {
-  border-radius: 4px;
+  border-radius: 2px;
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: 0.5px;
   min-width: 100px;
   text-transform: uppercase;
   line-height: 21px;
+  padding: 6px 20px;
+  white-space: nowrap;
 }
 .btn.btn-cancel {
   background: #ededec;
@@ -61,7 +63,10 @@ input.filter-members {
   border: 1px solid #ebebe9;
 }
 .item-menu-wrapper a {
-  font-size: 12px !important;
+  font-size: 13px !important;
+  font-weight: 500;
+  color: #1b8ab6;
+  transition: all 0.12s linear;
 }
 .badge {
   font-size: 12px !important;
@@ -129,7 +134,7 @@ input.filter-members {
   display: inline-flex;
   text-transform: uppercase;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 900;
   letter-spacing: -0.3px;
   line-height: 20px;
   text-align: right;
@@ -139,7 +144,7 @@ input.filter-members {
   height: 4px;
   border-radius: 2px;
   background: transparent;
-  margin-top: 10px;
+  margin-top: 8px;
   margin-bottom: -3px;
 }
 .time-module .module-status.active {
@@ -236,6 +241,7 @@ input.filter-members {
 .item-menu {
   font-size: 15px;
   margin-right: -6px;
+  color: #42423c;
 }
 #days-free-data,
 #days-previous-data,
@@ -262,7 +268,10 @@ a.vct-team {
   text-decoration: none;
 }
 a.vct-team:hover {
-  color: inherit;
+  color: #1E9BCC;
+}
+.vct-content {
+  margin-bottom: 80px;
 }
 .vct-content .vct-project,
 .vct-content .vct-teams,
@@ -393,7 +402,7 @@ a.vct-team:hover {
   cursor: pointer;
 }
 .vct-content .team-list .team-item.selected {
-  background: #67c4e9;
+  background: #1E9BCC;
   color: white;
 }
 .vct-content .team-list .team-item:hover {
@@ -421,7 +430,7 @@ a.vct-team:hover {
   font-size: 16px;
   line-height: 46px;
   height: 46px;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -611,7 +620,7 @@ input:checked + .slider:before {
   position: relative;
 }
 .vct-team .vct-team-wrapper img.vct-client-logo {
-  width: 80%;
+  width: 70%;
   margin-top: 20px;
 }
 .vct-team .vct-team-wrapper .status {
@@ -628,8 +637,8 @@ input:checked + .slider:before {
   border-bottom: 3px solid #caced3;
   padding: 10px 20px;
   font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 0.25px;
   color: #a1a3a8;
   transition: all 0.12s linear;
   text-transform: uppercase;
@@ -641,6 +650,9 @@ input:checked + .slider:before {
 .tab-button.selected {
   border-bottom: 3px solid #1779a0;
   color: #1779a0;
+}
+.badge {
+  font-weight: 500;
 }
 .badge.badge-info {
   background: #1E9BCC;
@@ -659,6 +671,9 @@ input:checked + .slider:before {
 }
 .badge.badge-light {
   background: #e6e6e4;
+}
+.badge.badge-dark {
+  background: #272724;
 }
 .text-info {
   color: #1E9BCC !important;
@@ -705,7 +720,7 @@ input:checked + .slider:before {
 #go-top {
   display: none;
   position: fixed;
-  bottom: 12px;
+  bottom: 16px;
   right: 24px;
   z-index: 10;
   background: #1E9BCC;
@@ -754,6 +769,10 @@ ul.vct-nav-menu {
 }
 ul.vct-nav-menu li {
   display: block;
+}
+ul.vct-nav-menu li a {
+  font-weight: 500;
+  letter-spacing: 0.25px;
 }
 ul.vct-nav-menu li a .nav-icon {
   width: 18px;
@@ -866,15 +885,15 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
 }
 .error-message-wrapper .error-title {
   display: block;
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 300;
   margin-top: 30px;
 }
 .error-message-wrapper .error-msg {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 10px;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 30px;
 }
