@@ -77,8 +77,8 @@ input.filter-members {
   width: 100%;
   background: white;
   border-radius: 4px;
-  padding: 8px;
-  margin-bottom: 15px;
+  padding: 6px;
+  margin-bottom: 12px;
   text-align: right;
   box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.12s linear;
@@ -116,7 +116,8 @@ input.filter-members {
   float: left;
   width: 50%;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 20px;
 }
 .time-module .module-icon i {
   color: #b5b5ae;
@@ -144,7 +145,7 @@ input.filter-members {
   height: 4px;
   border-radius: 2px;
   background: transparent;
-  margin-top: 8px;
+  margin-top: 4px;
   margin-bottom: -3px;
 }
 .time-module .module-status.active {
@@ -249,7 +250,8 @@ input.filter-members {
 #days-assigned-data,
 #days-sickleave-data,
 #days-spent-data,
-#total-work-hours-data {
+#total-work-hours-data,
+#work-from-home-data {
   display: none;
 }
 .booking-wrapper {
