@@ -527,8 +527,19 @@ a.vct-team{
         text-align: left;
         border-bottom:1px solid transparent;
         font-size: 12px;
+        font-weight: 500 !important;
         letter-spacing: 2px;
         text-transform: uppercase;
+        &:hover{
+            background-color: @highlightColor;
+        }
+        i{
+            text-align: center;
+            line-height: 32px;
+            width:32px;
+            height:32px;
+            color:white !important;
+        }
     }
     .close-modal{
         position: absolute;
@@ -920,4 +931,7 @@ transform: translateX(12px);
         font-weight: 400;
         margin-bottom:30px;
       }
+  }
+  .pointer{
+      cursor: pointer;
   }

@@ -347,4 +347,15 @@ $(document).ready(function () {
         $('.home-days').attr('disabled', true);
         $('.js_noDays').addClass('badge-danger').text('4');
     });
+
+    //TABLE ACCORDION
+    $('.js_tableToggle').on('click',function () {
+        $(this).parents('.table-wrapper').find($('.js_bodyToggle')).addClass('d-none');
+        $(this).parents('.panel-table').find('.js_bodyToggle').removeClass('d-none');
+        $(this).parents('.table-wrapper').find('i').removeClass('fa-chevron-up');
+        $(this).parents('.table-wrapper').find('i').addClass('fa-chevron-down');
+        $(this).find('i').addClass('fa-chevron-up');
+        $(this).parents('.table-wrapper').find('.js_tableToggle').removeClass('bg-info');
+        $(this).addClass('bg-info');
+    });
 });
