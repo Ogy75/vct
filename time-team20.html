@@ -414,6 +414,60 @@
     </div>
     <!-- Normal Modal End -->
 
+    <!--Home-Office Modal Start -->
+    <div class="modal fade" id="home-office" tabindex="-1" role="dialog" aria-labelledby="home-office" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg" />
+                            </div>
+                            <div class="team-member-name">Petar Petrovic</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="d-block modal-title">Home Office Days Log</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="panel-container border-0 p-0">
+                                <div class="table-wrapper">
+                                    <table class="panel-table text-left">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>    
+                                            <tr>
+                                                <td>7.4.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14.4.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>21.4.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>28.4.2020</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Home-Office Modal End -->
+
     <!-- Save Dialog Start -->
     <div class="modal fade" id="saveDialog" tabindex="-1" role="dialog" aria-labelledby="saveDialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -806,8 +860,22 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="on-site-row d-none">
+                                    <!-- HOME OFFICE -->
+                                    <div class="row mt-2 parent">
+                                        <div class="col-12 col-xl-1 align-self-end mt-3">
+                                            <div class="d-flex align-items-center vct-team-location">
+                                                <p class="w-100">Home Office</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-3 col-xl-1 position-relative">
+                                            <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">No. of Days</label>
+                                            <input type="text" value="4" name="normal">
+                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#home-office"></i>
+                                        </div>
+                                    </div>
                                     <!-- ON SITE -->
-                                    <div class="row on-site-row d-none">
+                                    <div class="row">
                                         <div class="col-12 col-xl-1 align-self-end mt-3">
                                             <div class="d-flex align-items-center vct-team-location">
                                                 <p class="w-100">on site</p>
@@ -860,6 +928,8 @@
                                             <input type="text" value="0" name="total" disabled>
                                         </div>
                                     </div>
+                                </div>
+
                                     <div class="row">
                                         <div class="col-12 col-xl-1 align-self-end mt-3">
                                             <div class="d-flex align-items-center vct-team-location">
@@ -976,8 +1046,23 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="on-site-row d-none">
+                                        <!-- HOME OFFICE -->
+                                        <div class="row mt-2 parent">
+                                            <div class="col-12 col-xl-1 align-self-end mt-3">
+                                                <div class="d-flex align-items-center vct-team-location">
+                                                    <p class="w-100">Home Office</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-3 col-xl-1 position-relative">
+                                                <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">No. of Days</label>
+                                                <input type="text" value="4" name="normal">
+                                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#home-office"></i>
+                                            </div>
+                                        </div>
                                     <!-- ON SITE -->
-                                    <div class="row on-site-row d-none">
+                                    <div class="row">
                                         <div class="col-12 col-xl-1 align-self-end mt-3">
                                             <div class="d-flex align-items-center vct-team-location">
                                                 <p class="w-100">on site</p>
@@ -1029,6 +1114,7 @@
                                             <label for="total">Total</label>
                                             <input type="text" value="0" name="total" disabled>
                                         </div>
+                                    </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 col-xl-1 align-self-end mt-3">
@@ -1148,8 +1234,23 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="on-site-row d-none">
+                                        <!-- HOME OFFICE -->
+                                        <div class="row mt-2 parent">
+                                            <div class="col-12 col-xl-1 align-self-end mt-3">
+                                                <div class="d-flex align-items-center vct-team-location">
+                                                    <p class="w-100">Home Office</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 col-md-3 col-xl-1 position-relative">
+                                                <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">No. of Days</label>
+                                                <input type="text" value="4" name="normal">
+                                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#home-office"></i>
+                                            </div>
+                                        </div>
                                     <!-- ON SITE -->
-                                    <div class="row on-site-row d-none">
+                                    <div class="row">
                                         <div class="col-12 col-xl-1 align-self-end mt-3">
                                             <div class="d-flex align-items-center vct-team-location">
                                                 <p class="w-100">on site</p>
@@ -1202,6 +1303,7 @@
                                             <input type="text" value="0" name="total" disabled>
                                         </div>
                                     </div>
+                                </div>
                                     <div class="row">
                                         <div class="col-12 col-xl-1 align-self-end mt-3">
                                             <div class="d-flex align-items-center vct-team-location">
@@ -1217,6 +1319,7 @@
                                             <textarea class="comment" name="comment"></textarea>
                                         </div>
                                     </div>
+                                    
                                 </div>
                             </div>
                             <div class="col-12 mt-5">

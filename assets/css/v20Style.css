@@ -146,7 +146,7 @@ input.filter-members {
   border-radius: 2px;
   background: transparent;
   margin-top: 4px;
-  margin-bottom: -3px;
+  margin-bottom: -2px;
 }
 .time-module .module-status.active {
   background: #1E9BCC;
