@@ -1,15 +1,13 @@
-$(document).ready(function () {
-    $('.time-module').on('click', function () {
+$(window).on('load', function() {
+    $('.lds-dual-ring-bg').fadeOut(800);
+});
+
+$(document).ready(function() {
+    $('.time-module').on('click', function() {
         $(this).addClass('selected');
-        //$('.time-module').hasClass('selected').not($(this)).removeClass('selected');  
     });
 
-    // $('.time-module').click(function() {
-    //     $(this).addClass('selected');
-    //     $(this).parents('.row').siblings().removeClass('selected');
-    //   });
-
-    $('.time-module').click(function (event) {
+    $('.time-module').click(function(event) {
         var timeModule = $('.time-module');
         var moduleStatus = $('.module-status');
         var moduleIcon = $('.module-icon');
@@ -23,91 +21,98 @@ $(document).ready(function () {
     });
 
 
-    $('#days-spent').click(function () {
+    $('#days-spent').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
         $(this).parents('.left-items').find('#days-spent-data').fadeIn();
     });
 
-    $('#days-previous').click(function () {
+    $('#days-previous').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
         $(this).parents('.left-items').find('#days-previous-data').fadeIn();
     });
 
-    $('#days-free').click(function () {
+    $('#days-free').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
         $(this).parents('.left-items').find('#days-free-data').fadeIn();
     });
 
-    $('#days-earned').click(function () {
+    $('#days-earned').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
         $(this).parents('.left-items').find('#days-earned-data').fadeIn();
     });
 
-    $('#days-assigned').click(function () {
+    $('#days-assigned').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
         $(this).parents('.left-items').find('#days-assigned-data').fadeIn();
     });
 
-    $('#days-available').click(function () {
+    $('#days-available').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
         $(this).parents('.left-items').find('#days-available-data').fadeIn();
     });
 
-    $('#days-sickleave').click(function () {
+    $('#days-sickleave').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
         $(this).parents('.left-items').find('#days-sickleave-data').fadeIn();
     });
-    $('#total-work-hours').click(function () {
+    $('#total-work-hours').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
         $(this).parents('.left-items').find('#total-work-hours-data').fadeIn();
     });
 
-    $('#work-from-home').click(function () {
+    $('#work-from-home').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
         $(this).parents('.left-items').find('#work-from-home-data').fadeIn();
     });
 
-    $('.js_book').on('click', function () {
+    $('#daily-time-tracking').click(function() {
+        var timeModule = $('.time-module');
+        var panelContainer = $('.panel-container');
+        panelContainer.hide();
+        $(this).parents('.left-items').find('#daily-time-tracking-data').fadeIn();
+    });
+
+    $('.js_book').on('click', function() {
         $('.js_bookingMessage').removeClass('d-none');
     });
 
-    $('.js_request').on('click', function () {
+    $('.js_request').on('click', function() {
         $('.js_requestMessage').removeClass('d-none');
     });
 
     //team toggle menu
-    $('.team-name').on('click', function () {
-        $(this).parents('.vct-teams').find('.team-list').toggle();
+    $('.team-name').on('click', function() {
+        $(this).parents('.vct-teams').find('.team-list').slideToggle(150);
         $(this).toggleClass('visible');
     });
 
     //on site toggle
-    $('.toggle-onsite').on('click', function (ev) {
+    $('.toggle-onsite').on('click', function(ev) {
         var trigger = $(ev.target);
         trigger.parents('.parent').find('.on-site-row').toggleClass('d-none');
         trigger.toggleClass('fa-chevron-up');
     });
 
     //toggle clear btn to search
-    $('.find-member').keyup(function () {
+    $('.find-member').keyup(function() {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
@@ -116,7 +121,7 @@ $(document).ready(function () {
         }
     });
     //Clear&focus btn fn.
-    $('.reset-input').on('click', function () {
+    $('.reset-input').on('click', function() {
         $('.find-member').val('').focus();
         $('.find-project').val('').focus();
         $('.reset-input').hide();
@@ -126,7 +131,7 @@ $(document).ready(function () {
     });
 
     //toggle clear btn to search
-    $('.find-member').keyup(function () {
+    $('.find-member').keyup(function() {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
@@ -135,10 +140,10 @@ $(document).ready(function () {
         }
     });
     //Team member search
-    $('.find-member').keyup(function () {
+    $('.find-member').keyup(function() {
         var filter = $(this).val(),
             count = 0;
-        $('.team-data').each(function () {
+        $('.team-data').each(function() {
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                 $(this).fadeOut(100);
             } else {
@@ -159,7 +164,7 @@ $(document).ready(function () {
 
 
     //toggle clear btn to search
-    $('.find-project').keyup(function () {
+    $('.find-project').keyup(function() {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
@@ -169,7 +174,7 @@ $(document).ready(function () {
     });
 
     //Clear&focus btn fn.
-    $('.reset-input').on('click', function () {
+    $('.reset-input').on('click', function() {
         $('.find-project').val('').focus();
         $('.reset-input').hide();
         $('.vct-team').show();
@@ -177,10 +182,10 @@ $(document).ready(function () {
     });
 
     //Project search
-    $('.find-project').keyup(function () {
+    $('.find-project').keyup(function() {
         var filter = $(this).val(),
             count = 0;
-        $('.vct-team').each(function () {
+        $('.vct-team').each(function() {
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                 $(this).fadeOut(100);
             } else {
@@ -198,7 +203,7 @@ $(document).ready(function () {
 
 
     //toggle clear btn to search
-    $('.find-employees').keyup(function () {
+    $('.find-employees').keyup(function() {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
@@ -208,7 +213,7 @@ $(document).ready(function () {
     });
 
     //Clear&focus btn fn.
-    $('.reset-input').on('click', function () {
+    $('.reset-input').on('click', function() {
         $('.find-employees').val('').focus();
         $('.reset-input').hide();
         $('.team-member').show();
@@ -216,10 +221,10 @@ $(document).ready(function () {
     });
 
     //Project search
-    $('.find-employees').keyup(function () {
+    $('.find-employees').keyup(function() {
         var filter = $(this).val(),
             count = 0;
-        $('.team-member').each(function () {
+        $('.team-member').each(function() {
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                 $(this).fadeOut(100);
             } else {
@@ -235,7 +240,7 @@ $(document).ready(function () {
     });
 
     //Pinning team list
-    $('.pin').on('click', function () {
+    $('.pin').on('click', function() {
         $(this).parents('.vct-teams').toggleClass('pinned');
         $(this).toggleClass('pin-pinned');
     });
@@ -258,7 +263,7 @@ $(document).ready(function () {
     }
 
     //PROJECT TABS
-    $('#tab-projects').on('click', function () {
+    $('#tab-projects').on('click', function() {
         if ($('.vct-project-tab').hasClass('d-none')) {
             $('.vct-project-tab').removeClass('d-none');
             $('.vct-employees-tab').addClass('d-none');
@@ -266,7 +271,7 @@ $(document).ready(function () {
             $('#tab-employees').toggleClass('selected');
         }
     });
-    $('#tab-employees').on('click', function () {
+    $('#tab-employees').on('click', function() {
         if ($('.vct-employees-tab').hasClass('d-none')) {
             $('.vct-project-tab').addClass('d-none');
             $('.vct-employees-tab').removeClass('d-none');
@@ -275,7 +280,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.js_launch').on('click', function () {
+    $('.js_launch').on('click', function() {
         $(this).html('cancel Campaign').addClass('btn-alert');
         $('.js_input').hide();
         $('.js_message').removeClass('d-none');
@@ -284,7 +289,7 @@ $(document).ready(function () {
     });
 
     //Scroll to top
-    $(window).scroll(function () {
+    $(window).scroll(function() {
         var height = $(window).scrollTop();
         if (height > 100) {
             $('#go-top').fadeIn(100);
@@ -292,24 +297,23 @@ $(document).ready(function () {
             $('#go-top').fadeOut(100);
         }
     });
-    $('#go-top').click(function (event) {
+    $('#go-top').click(function(event) {
         event.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         return false;
     });
 
     //PAYOUT Process
-    $('.js_payout').on('click', function () {
+    $('.js_payout').on('click', function() {
         $('.js_payout-data').removeClass('d-none');
         $(this).attr('disabled', true).html('Payout started');
     });
 
     //Checkbox sim
-    $('#responsibility').on('change', function () {
+    $('#responsibility').on('change', function() {
         if ($(this).is(':checked')) {
             $('.js_book').attr('disabled', false);
-        }
-        else {
+        } else {
             $('.js_book').attr('disabled', true);
         }
     });
@@ -319,17 +323,17 @@ $(document).ready(function () {
     var selectedNo = $('.vacation-total').text();
     var valueChk = 0;
     var earnedDays = $('.earned-days').text();
-    for (i = 0; i <= earnedDays; i++){
+    for (i = 0; i <= earnedDays; i++) {
         $('.earned-val').append('<option value=' + i + '>' + i + '</option>');
     }
-    $(document).on('change', '.earned-val', function () {
+    $(document).on('change', '.earned-val', function() {
         init();
     });
-    $(document).on('change', '.vacation-val', function () {
+    $(document).on('change', '.vacation-val', function() {
         valueChk = parseInt($('.earned-val').val()) + parseInt($('.vacation-val').val());
     });
 
-    function init(){
+    function init() {
         earnedVal = $('.earned-val').val();
         valueChk = selectedNo - earnedVal;
         $('.vacation-val').find('option').remove().end();
@@ -340,7 +344,7 @@ $(document).ready(function () {
     init();
 
     //ADD HOME OFFICE DATE DEMO SCRIPT
-    $('.js_addDate').on('click', function(){
+    $('.js_addDate').on('click', function() {
         $('.js_addDateMessage').removeClass('d-none');
         $(this).attr('disabled', true);
         $('.add-date').removeClass('d-none');
@@ -349,13 +353,11 @@ $(document).ready(function () {
     });
 
     //TABLE ACCORDION
-    $('.js_tableToggle').on('click',function () {
-        $(this).parents('.table-wrapper').find($('.js_bodyToggle')).addClass('d-none');
-        $(this).parents('.panel-table').find('.js_bodyToggle').removeClass('d-none');
-        $(this).parents('.table-wrapper').find('i').removeClass('fa-chevron-up');
+    $('.js_tableToggle').on('click', function() {
+        $(this).parents('.panel-table').find('.js_bodyToggle').toggleClass('d-none');
         $(this).parents('.table-wrapper').find('i').addClass('fa-chevron-down');
-        $(this).find('i').addClass('fa-chevron-up');
+        $(this).find('i').toggleClass('fa-chevron-up');
         $(this).parents('.table-wrapper').find('.js_tableToggle').removeClass('bg-info');
-        $(this).addClass('bg-info');
+        $(this).toggleClass('bg-info');
     });
 });

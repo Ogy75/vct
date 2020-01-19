@@ -1,4 +1,4 @@
-@import "variables";
+@import "variables.less";
 
 html{
     overflow-y: scroll ;
@@ -11,10 +11,16 @@ body{
         color: white;
         background: black;
       }
-      ::selection {
+    ::selection {
         color: white;
         background: black;
       }
+    &.modal-open{
+        .vct-content {
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+    }
 }
 
 .btn{
@@ -256,7 +262,8 @@ input{
 #days-sickleave-data,
 #days-spent-data,
 #total-work-hours-data,
-#work-from-home-data{
+#work-from-home-data,
+#daily-time-tracking-data{
     display: none;
 }
 
@@ -532,6 +539,7 @@ a.vct-team{
         font-weight: 500 !important;
         letter-spacing: 2px;
         text-transform: uppercase;
+        transition: @mainTransition;
         &:hover{
             background-color: @highlightColor;
         }
@@ -765,9 +773,9 @@ transform: translateX(12px);
 
 
 //Left nav
-.vct-left-nav {
+.vct-left-nav{
     position: fixed;
-    background: darken(@basetextColor, 7%);
+    background: darken(@basetextColor, 10%);
     width: 250px;
     height: 100vh;
     z-index: 3;
@@ -936,4 +944,7 @@ transform: translateX(12px);
   }
   .pointer{
       cursor: pointer;
+  }
+  .vct-user-menu-block{
+      right:12px !important;
   }

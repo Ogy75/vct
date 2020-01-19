@@ -47,7 +47,7 @@
     <!-- **************************************************MODALS START************************************************** -->
 
     <!--memberDetails Modal Start -->
-    <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails" aria-hidden="true">
+    <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails" aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
@@ -75,17 +75,15 @@
                         <div class="p-4">
                             <div class="panel-container border-0 p-0">
                                 <div class="table-wrapper">
+
+                                    <!-- PERSONAL DATA -->
                                     <table class="panel-table text-left">
                                         <thead>
                                             <tr>
-                                                <th></th>
-                                                <th></th>
+                                                <th class="modal-table-project pointer js_tableToggle" colspan="2"><i class="fas fa-chevron-down"></i>PERSONAL DATA</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th class="modal-table-project" colspan="2">GENERAL DATA</th>
-                                            </tr>
+                                        <tbody class="js_bodyToggle d-none">
                                             <tr>
                                                 <td>Year of Birth</td>
                                                 <td>1980</td>
@@ -94,14 +92,21 @@
                                                 <td>Genre</td>
                                                 <td>Male</td>
                                             </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- JOB DATA -->
+                                    <table class="panel-table text-left">
+                                        <thead>
                                             <tr>
-                                                <th class="modal-table-project" colspan="2">JOB DATA</th>
+                                                <th class="modal-table-project pointer js_tableToggle bg-info" colspan="2"><i class="fas fa-chevron-up"></i>JOB DATA</th>
                                             </tr>
+                                        </thead>
+                                        <tbody class="js_bodyToggle">
                                             <tr>
                                                 <td>Employment status</td>
                                                 <td>
                                                     <span class="badge badge-success">Active</span>
-                                                    <!-- <span class="badge badge-secondary">Not Active</span> -->
                                                 </td>
                                             </tr>
                                             <tr>
@@ -109,7 +114,7 @@
                                                 <td>Permanent</td>
                                             </tr>
                                             <tr>
-                                                <td>Team Name</td>
+                                                <td>Current Team Name</td>
                                                 <td>Edelweiss - Internet Booking Engine</td>
                                             </tr>
                                             <tr>
@@ -121,8 +126,176 @@
                                                 <td>Senior Software Developer</td>
                                             </tr>
                                             <tr>
-                                                <th class="modal-table-project" colspan="2">GENERAL TIME DATA</th>
+                                                <td>Team Lead</td>
+                                                <td>
+                                                    <label class="switch">
+                                                        <input type="checkbox">
+                                                        <span class="slider"></span>
+                                                    </label>
+
+                                                </td>
                                             </tr>
+                                            <tr>
+                                                <td>Team Operator</td>
+                                                <td>
+                                                    <label class="switch">
+                                                        <input type="checkbox" checked>
+                                                        <span class="slider"></span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- PREVIOUS PROJECTS -->
+                                    <table class="panel-table text-left">
+                                        <thead>
+                                            <tr>
+                                                <th class="modal-table-project pointer js_tableToggle" colspan="2"><i class="fas fa-chevron-down"></i>PREVIOUS PROJECTS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="js_bodyToggle d-none">
+                                            <tr>
+                                                <td>Crealogix - Germany</td>
+                                                <td>1.3.2018 - 1.9.2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Swiss - Business QA</td>
+                                                <td>1.9.2019 - 1.12.2019</td>
+                                            </tr>
+                                            <tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- FINANCIAL DATA -->
+                                    <table class="panel-table text-left">
+                                        <thead>
+                                            <tr>
+                                                <th class="modal-table-project pointer js_tableToggle" colspan="2"><i class="fas fa-chevron-down"></i>FINANCIAL DATA</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="js_bodyToggle d-none">
+                                            <tr>
+                                                <td>Financial month</td>
+                                                <td>
+                                                    <select>
+                                                        <option>January</option>
+                                                        <option>February</option>
+                                                        <option>March</option>
+                                                        <option>April</option>
+                                                        <option selected>May</option>
+                                                        <option>June</option>
+                                                        <option>July</option>
+                                                        <option>August</option>
+                                                        <option>September</option>
+                                                        <option>October</option>
+                                                        <option>November</option>
+                                                        <option>December</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- TIME TRACKING -->
+                                    <table class="panel-table text-left">
+                                        <thead>
+                                            <tr>
+                                                <th class="modal-table-project pointer js_tableToggle" colspan="2"><i class="fas fa-chevron-down"></i>TIME TRACKING</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="js_bodyToggle d-none">
+                                            <tr>
+                                                <th colspan="5" class="p-3">
+                                                    <select>
+                                                        <option selected>April</option>
+                                                        <option>March</option>
+                                                        <option>February</option>
+                                                        <option>January</option>
+                                                    </select>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td class="p-3">
+
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Date</th>
+                                                                <th>First entry</th>
+                                                                <th>Last exit</th>
+                                                                <th>Total</th>
+                                                                <th>Net</th>
+                                                                <th>Difference</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>02.04.2020</td>
+                                                                <td>09:20</td>
+                                                                <td>17:00</td>
+                                                                <td>7:30</td>
+                                                                <td>7:00</td>
+                                                                <td><span class="badge badge-danger">-1:00</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>03.04.2020</td>
+                                                                <td>09:00</td>
+                                                                <td>17:00</td>
+                                                                <td>8:00</td>
+                                                                <td>7:30</td>
+                                                                <td><span class="badge badge-danger">-0:30</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>04.04.2020</td>
+                                                                <td>09:00</td>
+                                                                <td>17:30</td>
+                                                                <td>8:30</td>
+                                                                <td>8:00</td>
+                                                                <td><span class="badge badge-success"></span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>05.04.2020</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td><span class="badge badge-warning">N/A</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>06.04.2020</td>
+                                                                <td>09:00</td>
+                                                                <td>18:30</td>
+                                                                <td>9:30</td>
+                                                                <td>9:00</td>
+                                                                <td><span class="badge badge-success">+1:00</span></td>
+                                                            </tr>
+                                                        </tbody>
+                                                        <tfoot>
+                                                            <tr>
+                                                                <td>Total</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td><span class="badge badge-danger">-0:30</span></td>
+                                                            </tr>
+                                                        </tfoot>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- GENERAL TIME DATA -->
+                                    <table class="panel-table text-left">
+                                        <thead>
+                                            <tr>
+                                                <th class="modal-table-project pointer js_tableToggle" colspan="2"><i class="fas fa-chevron-down"></i>GENERAL TIME DATA</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="js_bodyToggle d-none">
                                             <tr>
                                                 <td>Vacation days remaining (current year)</td>
                                                 <td>23</td>
@@ -143,9 +316,17 @@
                                                 <td>Earned time</td>
                                                 <td>2 (19 hrs)</td>
                                             </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <!-- BOOKED VACATIONS -->
+                                    <table class="panel-table text-left">
+                                        <thead>
                                             <tr>
-                                                <th class="modal-table-project" colspan="2">BOOKED VACATIONS</th>
+                                                <th class="modal-table-project pointer js_tableToggle" colspan="2"><i class="fas fa-chevron-down"></i>BOOKED VACATIONS</th>
                                             </tr>
+                                        </thead>
+                                        <tbody class="js_bodyToggle d-none">
                                             <tr>
                                                 <td>21.6.2020 - 30.6.2020</td>
                                                 <td>5 days</td>
@@ -156,6 +337,7 @@
                                             </tr>
                                         </tbody>
                                     </table>
+
                                 </div>
                             </div>
                         </div>
@@ -215,7 +397,8 @@
                                             <tr>
                                                 <td>2.3.2020</td>
                                                 <td>8</td>
-                                                <td class="log-comment">Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+                                                <td class="log-comment">Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                                    ex ea commodo consequat.</td>
                                             </tr>
                                             <tr>
                                                 <td>3.3.2020</td>
@@ -377,7 +560,7 @@
     </div>
 
     <!--top-nav-->
-    <div class="vct-top-nav bg-white border-bottom shadow-sm">
+    <div class="vct-top-nav bg-white border-bottom">
         <div class="vct-user-menu float-right">
             <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="fas fa-expand full-view"></i></div>
             <div class="d-inline-block vct-user-profile-image position-relative mr-3">

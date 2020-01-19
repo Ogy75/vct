@@ -325,7 +325,7 @@ a.uploaded-file {
   margin-right: 4px;
 }
 .vct-team .vct-team-block-status-done {
-  color: #228B22;
+  color: #1e86cc;
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
@@ -349,7 +349,7 @@ a.uploaded-file {
   margin-right: 4px;
 }
 .vct-team .vct-team-block-status-ready {
-  color: #ff7300;
+  color: #ffc400;
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;

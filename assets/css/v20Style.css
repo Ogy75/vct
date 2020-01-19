@@ -13,6 +13,10 @@ body ::selection {
   color: white;
   background: black;
 }
+body.modal-open .vct-content {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
 .btn {
   border-radius: 2px;
   font-size: 12px;
@@ -86,7 +90,7 @@ input.filter-members {
   cursor: pointer;
 }
 .time-module .badge-success {
-  background: #228B22;
+  background: #1f9c26;
 }
 .time-module .badge-success:hover {
   background: #1E9BCC;
@@ -251,7 +255,8 @@ input.filter-members {
 #days-sickleave-data,
 #days-spent-data,
 #total-work-hours-data,
-#work-from-home-data {
+#work-from-home-data,
+#daily-time-tracking-data {
   display: none;
 }
 .booking-wrapper {
@@ -520,6 +525,7 @@ a.vct-team:hover {
   font-weight: 500 !important;
   letter-spacing: 2px;
   text-transform: uppercase;
+  transition: all 0.12s linear;
 }
 .modal-style .modal-table-project:hover {
   background-color: #1E9BCC;
@@ -598,10 +604,10 @@ a.vct-team:hover {
   transition: 0.4s;
 }
 input:checked + .slider {
-  background-color: #228B22;
+  background-color: #1f9c26;
 }
 input:focus + .slider {
-  box-shadow: 0 0 1px #228B22;
+  box-shadow: 0 0 1px #1f9c26;
 }
 input:checked + .slider:before {
   -webkit-transform: translateX(12px);
@@ -671,7 +677,7 @@ input:checked + .slider:before {
   background: #1E9BCC;
 }
 .badge.badge-success {
-  background: #228B22;
+  background: #1f9c26;
 }
 .badge.badge-danger {
   background: #d8483e;
@@ -692,7 +698,7 @@ input:checked + .slider:before {
   color: #1E9BCC !important;
 }
 .text-success {
-  color: #228B22 !important;
+  color: #1f9c26 !important;
 }
 .text-danger {
   color: #d8483e !important;
@@ -710,7 +716,7 @@ input:checked + .slider:before {
   background: #1E9BCC !important;
 }
 .bg-success {
-  background: #228B22 !important;
+  background: #1f9c26 !important;
 }
 .bg-danger {
   background: #d8483e !important;
@@ -752,7 +758,7 @@ input:checked + .slider:before {
 }
 .vct-left-nav {
   position: fixed;
-  background: #2f2f2b;
+  background: #272724;
   width: 250px;
   height: 100vh;
   z-index: 3;
@@ -912,4 +918,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
 }
 .pointer {
   cursor: pointer;
+}
+.vct-user-menu-block {
+  right: 12px !important;
 }

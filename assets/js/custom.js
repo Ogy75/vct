@@ -83,15 +83,6 @@ $(function() {
         $('[data-toggle="tooltip"]').tooltip();
     });
 
-    //notification badge demo / spinner
-    setTimeout(function() {
-        $('.lds-dual-ring-bg').show().delay(500).queue(function(n) {
-            $(this).fadeOut(200);
-            $(this).hide();
-        });
-    }, 0);
-
-
     //back btn
     $('.vct-back').on('click', function() {
         window.history.back();
