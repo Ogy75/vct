@@ -962,9 +962,9 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   right: 12px !important;
 }
 .primary-title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(66, 66, 60, 0.8);
+  letter-spacing: 5px;
+  color: rgba(66, 66, 60, 0.7);
 }
