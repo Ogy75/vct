@@ -145,7 +145,7 @@ $(document).ready(function() {
             count = 0;
         $('.team-data').each(function() {
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
-                $(this).fadeOut(100);
+                $(this).fadeOut(80);
             } else {
                 $(this).fadeIn(100);
                 count++;
