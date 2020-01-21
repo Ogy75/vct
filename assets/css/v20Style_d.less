@@ -85,7 +85,7 @@ body{
 .vct-top-nav{
     background: darken(@basetextColor,10%);
     border-bottom: none !important;
-    color:white !important;
+    color:@darkModeText !important;
 }
 input{
     font-size: 13px !important;
@@ -121,13 +121,12 @@ input{
 .time-module{
     display: block;
     width:100%;
-    background: fade(black, 20%);
+    background: darken(@basetextColor, 10%) !important;
     color:white !important;
     border-radius: 4px;
     padding:6px;
     margin-bottom:15px;
     text-align: right;
-    //box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.1);
     transition: @mainTransition;
     border:1px solid transparent;
     cursor: pointer;
@@ -139,13 +138,13 @@ input{
     }
     &:hover{
         box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0);
-        border:1px solid fade(@basetextColor, 20%);
+        background: darken(@basetextColor, 25%) !important;
         background: fade(black, 60%);
     }
     &.selected{
         box-shadow: none;
         border:1px solid black;
-        background: black;
+        background: darken(@basetextColor, 25%) !important;
     }
     .module-label{
         display: block;
@@ -203,7 +202,7 @@ input{
 
 .panel-container,
 .widget-container{
-    background: fade(black, 80%);
+    background: darken(@basetextColor, 15%) !important;
     padding:24px;
     border-radius: 4px;
     border:1px solid lighten(black, 27%);
@@ -247,7 +246,7 @@ input{
                     border-bottom: 1px dotted lighten(@basetextColor, 30%);
                     transition: @mainTransition;
                     &:hover{
-                        background: lighten(@basetextColor, 5%);
+                        background: darken(@basetextColor, 25%);
                     }
                     td{
                         padding: 8px 5px;
@@ -322,10 +321,13 @@ a.vct-team{
 .vct-content{
     margin-bottom: 80px;
     .vct-project, .vct-teams, .team-data{
-        background: fade(black, 90%);
+        background: darken(@basetextColor, 15%) !important;
         border-radius: 4px;
         padding: 16px;
         border:1px solid lighten(black, 27%);
+    }
+    .vct-teams{
+        background: fade(black, 90%) !important;
     }
     .team-data{
         position: relative;
@@ -741,7 +743,7 @@ transform: translateX(12px);
     .vct-team-wrapper{
         text-align: center;
         position: relative;
-        background: fade(black, 80%);
+        background: darken(@basetextColor, 15%);
         border:1px solid lighten(black, 27%);
         //box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
         color: @darkModeText;
