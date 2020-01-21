@@ -1005,3 +1005,6 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   letter-spacing: 5px;
   color: rgba(255, 255, 255, 0.7);
 }
+.no-results {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
