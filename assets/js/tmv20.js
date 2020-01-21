@@ -360,4 +360,14 @@ $(document).ready(function() {
         $(this).parents('.table-wrapper').find('.js_tableToggle').removeClass('bg-info');
         $(this).toggleClass('bg-info');
     });
+
+    //Switch DARK MODE
+    var styleSwitch = 1;
+    $('.js_darkMode').on('click', function(){
+        styleSwitch *= -1;
+            var colorMode = styleSwitch > 0 ? 'assets/css/v20Style.css' : 'assets/css/v20Style_d.css';
+            $('#colorMode[rel=stylesheet]').attr('href', colorMode);
+            $(this).toggleClass('fa-moon');
+            $(this).toggleClass('fa-lightbulb');
+    });
 });

@@ -5,8 +5,9 @@ html{
 }
 
 body{
-    background: #EBF0F5 !important;
+    background: darken(@basetextColor, 5%)!important;
     min-height: 100vh;
+    color:white;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale !important;
@@ -40,7 +41,7 @@ body{
     line-height: 21px;
     padding: 6px 20px;
     white-space: nowrap;
-    
+ 
     &.btn-cancel{
         background: lighten(@basetextColor, 68%);
         &:hover{
@@ -69,7 +70,9 @@ body{
     }
 }
 .vct-top-nav{
-    background: white;
+    background: darken(@basetextColor,20%);
+    border-bottom: none !important;
+    color:white !important;
 }
 input{
     font-size: 13px !important;
@@ -95,12 +98,13 @@ input{
 .time-module{
     display: block;
     width:100%;
-    background: white;
+    background: fade(black, 20%);
+    color:white !important;
     border-radius: 4px;
     padding:6px;
     margin-bottom:15px;
     text-align: right;
-    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.1);
+    //box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.1);
     transition: @mainTransition;
     border:1px solid transparent;
     cursor: pointer;
@@ -112,13 +116,13 @@ input{
     }
     &:hover{
         box-shadow: 0 0 0px 0px rgba(0, 0, 0, 0);
-        border:1px solid lighten(@basetextColor, 60%);
-        background: fade(white, 20%);
+        border:1px solid fade(@basetextColor, 20%);
+        background: fade(black, 60%);
     }
     &.selected{
         box-shadow: none;
-        border:1px solid lighten(@basetextColor, 55%);
-        background: lighten(@highlightColor,50%);
+        border:1px solid black;
+        background: black;
     }
     .module-label{
         display: block;
@@ -128,7 +132,7 @@ input{
         font-weight: 500;
         line-height: 12px;
         height: 24px;
-        color:lighten(@basetextColor, 10%);
+        color:white;
     }
     .module-icon{
         display: inline-flex;
@@ -176,10 +180,10 @@ input{
 
 .panel-container,
 .widget-container{
-    background: white;
+    background: black;
     padding:24px;
     border-radius: 4px;
-    border:1px solid lighten(@basetextColor, 67%);
+    border:1px solid lighten(black, 27%);
     min-height: 300px;
     .table-title{
         display: block;
@@ -189,7 +193,7 @@ input{
         letter-spacing: 1px;
         font-weight: 700;
         text-transform: uppercase;
-        color:@basetextColor;
+        color:white !important;
     }
     .table-wrapper{
         max-width: 100%;
@@ -236,7 +240,7 @@ input{
             }
             tfoot{
                 tr{
-                    background: lighten(@highlightColor,50%);
+                    background: lighten(black,20%);
                     font-weight: 600;
                     td{
                         padding: 8px 5px;
@@ -248,6 +252,7 @@ input{
     .tab-title{
         font-size: 20px;
         font-weight: 600;
+        color: white;
         span{
             font-weight: 600;
             font-size: 20px !important;
