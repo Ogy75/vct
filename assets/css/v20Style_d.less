@@ -31,6 +31,11 @@ body{
     padding-bottom: 100px;
 }
 
+.modal-content{
+    background: lighten(black, 18%);
+    border:1px solid lighten(black, 27%);
+}
+
 .btn{
     border-radius: 2px;
     font-size: 12px;
@@ -83,12 +88,22 @@ input{
     }
 }
 .item-menu-wrapper{
+    background: lighten(@basetextColor, 60%) !important;
     a{
         font-size: 13px !important;
         font-weight: 500;
-        color:darken(@highlightColor, 5%);
+        color:@basetextColor !important;
         transition:@mainTransition;
+        &:hover{
+            color:white !important;
+        }
     }
+    .arrow{
+        background: lighten(@basetextColor, 60%) !important;
+    }
+}
+.item-menu{
+    color:white !important;
 }
 .badge{
     font-size: 12px !important;
@@ -173,14 +188,14 @@ input{
         margin-bottom: -2px;
         &.active{
             background: @highlightColor;
-            background-image: linear-gradient(90deg, @highlightColor, darken(@highlightColor, 25%));
+            background-image: @highlightColor;
         }
     }
 }
 
 .panel-container,
 .widget-container{
-    background: black;
+    background: fade(black, 80%);
     padding:24px;
     border-radius: 4px;
     border:1px solid lighten(black, 27%);
@@ -299,14 +314,16 @@ a.vct-team{
 .vct-content{
     margin-bottom: 80px;
     .vct-project, .vct-teams, .team-data{
-        background: white;
+        background: fade(black, 80%);
         border-radius: 4px;
         padding: 16px;
-        border:1px solid lighten(@basetextColor, 67%);
+        border:1px solid lighten(black, 27%);
     }
     .team-data{
         position: relative;
         display: block;
+        background: black;
+        color:white;
         .no-frm-data{
             position: absolute;
             top:0px;
@@ -409,7 +426,7 @@ a.vct-team{
             font-size: 17px;
             line-height: 17px; 
             transform: rotate(45deg);
-            color: fade(@basetextColor, 60%);
+            color: white;
             &.pin-pinned{
                 transform: rotate(0deg);
                 color: @warningColor;
@@ -419,7 +436,7 @@ a.vct-team{
         display: flex;
         .team-item{
             width: 100%;
-            background: #f5f6fa;
+            background: fade(@basetextColor, 50%);
             border-radius: 4px;
             padding: 10px 16px;
             //border:1px solid lighten(@basetextColor, 67%);
@@ -431,7 +448,7 @@ a.vct-team{
                     color:white;
             }
             &:hover{
-                    background: lighten(@highlightColor,20%);
+                    background: @highlightColor;
                     color:white;
                 }
             .team-item-name{
@@ -468,7 +485,7 @@ a.vct-team{
         .vct-team-location{
             background: transparent;
             p{
-                color:@basetextColor;
+                color:white;
                 text-transform: uppercase;
                 font-size: 14px;
                 
@@ -478,7 +495,7 @@ a.vct-team{
             height: 33px;
             line-height: 33px;
             font-size: 15px;
-            color: fade(@basetextColor, 50%);
+            color: white;
             &:hover{
                 color:@highlightColor;
             }
@@ -574,13 +591,13 @@ a.vct-team{
         color:@highlightColor;
     }
     .modal-table-project{
-        background: lighten(@highlightColor, 20%);
-        color:white !important;
+        background: lighten(@highlightColor, 10%);
+        color:@basetextColor !important;
         padding: 8px 5px;
         text-align: left;
         border-bottom:1px solid transparent;
         font-size: 12px;
-        font-weight: 500 !important;
+        font-weight: 700 !important;
         letter-spacing: 2px;
         text-transform: uppercase;
         transition: @mainTransition;
@@ -592,7 +609,7 @@ a.vct-team{
             line-height: 32px;
             width:32px;
             height:32px;
-            color:white !important;
+            color:@basetextColor !important;
         }
     }
     .close-modal{
@@ -626,10 +643,13 @@ a.vct-team{
         padding-left: 10px;
         line-height: 18px;
         overflow: auto;
-        color:white !important;
+        color:fade(white, 80%);
         text-overflow:initial;
         white-space: unset;
     }
+}
+label{
+    color:fade(white, 80%);
 }
 
 
@@ -1000,6 +1020,11 @@ transform: translateX(12px);
   }
   .vct-user-menu-block{
       right:12px !important;
+      background: lighten(@basetextColor, 60%) !important;
+      color:white;
+      .vct-user-menu-block-arrow{
+        background: lighten(@basetextColor, 60%) !important;
+      }
   }
   .primary-title{
       font-size: 12px;

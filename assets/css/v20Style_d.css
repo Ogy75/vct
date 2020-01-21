@@ -24,6 +24,10 @@ body.modal-open .vct-content {
 .container {
   padding-bottom: 100px;
 }
+.modal-content {
+  background: #2e2e2e;
+  border: 1px solid #454545;
+}
 .btn {
   border-radius: 2px;
   font-size: 12px;
@@ -75,11 +79,23 @@ input:disabled {
   background: #f0f2f7;
   font-weight: 700;
 }
+.item-menu-wrapper {
+  background: #dadad6 !important;
+}
 .item-menu-wrapper a {
   font-size: 13px !important;
   font-weight: 500;
-  color: #1b8ab6;
+  color: #42423c !important;
   transition: all 0.12s linear;
+}
+.item-menu-wrapper a:hover {
+  color: white !important;
+}
+.item-menu-wrapper .arrow {
+  background: #dadad6 !important;
+}
+.item-menu {
+  color: white !important;
 }
 .badge {
   font-size: 12px !important;
@@ -163,11 +179,11 @@ input:disabled {
 }
 .time-module .module-status.active {
   background: #1E9BCC;
-  background-image: linear-gradient(90deg, #1E9BCC, #0e475d);
+  background-image: #1E9BCC;
 }
 .panel-container,
 .widget-container {
-  background: black;
+  background: rgba(0, 0, 0, 0.8);
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #454545;
@@ -293,14 +309,16 @@ a.vct-team:hover {
 .vct-content .vct-project,
 .vct-content .vct-teams,
 .vct-content .team-data {
-  background: white;
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 4px;
   padding: 16px;
-  border: 1px solid #ebebe9;
+  border: 1px solid #454545;
 }
 .vct-content .team-data {
   position: relative;
   display: block;
+  background: black;
+  color: white;
 }
 .vct-content .team-data .no-frm-data {
   position: absolute;
@@ -399,7 +417,7 @@ a.vct-team:hover {
   font-size: 17px;
   line-height: 17px;
   transform: rotate(45deg);
-  color: rgba(66, 66, 60, 0.6);
+  color: white;
 }
 .vct-content .pin.pin-pinned {
   transform: rotate(0deg);
@@ -410,7 +428,7 @@ a.vct-team:hover {
 }
 .vct-content .team-list .team-item {
   width: 100%;
-  background: #f5f6fa;
+  background: rgba(66, 66, 60, 0.5);
   border-radius: 4px;
   padding: 10px 16px;
   margin-bottom: 8px;
@@ -422,7 +440,7 @@ a.vct-team:hover {
   color: white;
 }
 .vct-content .team-list .team-item:hover {
-  background: #67c4e9;
+  background: #1E9BCC;
   color: white;
 }
 .vct-content .team-list .team-item .team-item-name {
@@ -456,7 +474,7 @@ a.vct-team:hover {
   background: transparent;
 }
 .vct-content .team-data .vct-team-location p {
-  color: #42423c;
+  color: white;
   text-transform: uppercase;
   font-size: 14px;
 }
@@ -464,7 +482,7 @@ a.vct-team:hover {
   height: 33px;
   line-height: 33px;
   font-size: 15px;
-  color: rgba(66, 66, 60, 0.5);
+  color: white;
 }
 .vct-content .team-data .toggle-onsite:hover {
   color: #1E9BCC;
@@ -558,13 +576,13 @@ a.vct-team:hover {
   color: #1E9BCC;
 }
 .modal-style .modal-table-project {
-  background: #67c4e9;
-  color: white !important;
+  background: #3bb3e2;
+  color: #42423c !important;
   padding: 8px 5px;
   text-align: left;
   border-bottom: 1px solid transparent;
   font-size: 12px;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: all 0.12s linear;
@@ -577,7 +595,7 @@ a.vct-team:hover {
   line-height: 32px;
   width: 32px;
   height: 32px;
-  color: white !important;
+  color: #42423c !important;
 }
 .modal-style .close-modal {
   position: absolute;
@@ -607,9 +625,12 @@ a.vct-team:hover {
   padding-left: 10px;
   line-height: 18px;
   overflow: auto;
-  color: white !important;
+  color: rgba(255, 255, 255, 0.8);
   text-overflow: initial;
   white-space: unset;
+}
+label {
+  color: rgba(255, 255, 255, 0.8);
 }
 .switch {
   position: relative;
@@ -971,6 +992,11 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
 }
 .vct-user-menu-block {
   right: 12px !important;
+  background: #dadad6 !important;
+  color: white;
+}
+.vct-user-menu-block .vct-user-menu-block-arrow {
+  background: #dadad6 !important;
 }
 .primary-title {
   font-size: 12px;
