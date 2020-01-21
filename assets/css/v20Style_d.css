@@ -607,10 +607,6 @@ a.vct-team:hover {
 .modal-style .close-modal:hover {
   color: rgba(255, 255, 255, 0.6);
 }
-.modal-style input {
-  border: 1px solid #d3d3ce;
-  background-color: #cccccc !important;
-}
 .booking-responsibility input {
   width: 16px;
   height: 16px;
@@ -722,12 +718,12 @@ input:checked + .slider:before {
   display: block;
   background: transparent;
   border: none;
-  border-bottom: 2px solid #caced3;
+  border-bottom: 2px solid #c2c2bb;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.25px;
-  color: #a1a3a8;
+  color: #c2c2bb;
   transition: all 0.12s linear;
   text-transform: uppercase;
   float: left;
@@ -736,8 +732,8 @@ input:checked + .slider:before {
   outline: none;
 }
 .tab-button.selected {
-  border-bottom: 2px solid #1779a0;
-  color: #1779a0;
+  border-bottom: 2px solid #1E9BCC;
+  color: #1E9BCC;
 }
 .badge {
   font-weight: 500;
@@ -761,7 +757,7 @@ input:checked + .slider:before {
   background: #e6e6e4;
 }
 .badge.badge-dark {
-  background: #272724;
+  background: #42423c;
 }
 .text-info {
   color: #1E9BCC !important;

@@ -623,8 +623,8 @@ a.vct-team{
         }
     }
     input{
-        border:1px solid lighten(@basetextColor, 57%);
-        background-color:darken(white, 20%) !important;
+        //border:1px solid lighten(@basetextColor, 57%);
+        //background-color:darken(white, 20%) !important;
     }
 }
 
@@ -753,12 +753,12 @@ transform: translateX(12px);
     display: block;
     background:transparent;
     border:none;
-    border-bottom: 2px solid #caced3;
+    border-bottom: 2px solid lighten(@basetextColor, 50%);
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: .25px;
-    color:#a1a3a8;
+    color:lighten(@basetextColor, 50%);
     transition: @mainTransition;
     text-transform: uppercase;
     float: left;
@@ -766,8 +766,8 @@ transform: translateX(12px);
         outline: none;
     }
     &.selected{
-        border-bottom: 2px solid darken(@highlightColor, 10%);
-        color: darken(@highlightColor, 10%);
+        border-bottom: 2px solid @highlightColor;
+        color: @highlightColor;
     }
 }
 
@@ -792,7 +792,7 @@ transform: translateX(12px);
         background:lighten(@basetextColor, 65%)
     }
     &.badge-dark{
-        background:darken(@basetextColor,10%)
+        background:@basetextColor;
     }
 }
 
