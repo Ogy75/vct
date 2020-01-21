@@ -1,4 +1,4 @@
-@import "variables.less";
+@import "variables-d.less";
 
 html{
     overflow-y: scroll ;
@@ -7,16 +7,16 @@ html{
 body{
     background: darken(@basetextColor, 5%)!important;
     min-height: 100vh;
-    color:white;
+    color:@darkModeText;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale !important;
     ::-moz-selection {
-        color: white;
+        color: @darkModeText;
         background: black;
       }
     ::selection {
-        color: white;
+        color: @darkModeText;
         background: black;
       }
     &.modal-open{
@@ -95,7 +95,7 @@ input{
         color:@basetextColor !important;
         transition:@mainTransition;
         &:hover{
-            color:white !important;
+            color:@darkModeText !important;
         }
     }
     .arrow{
@@ -267,7 +267,7 @@ input{
     .tab-title{
         font-size: 20px;
         font-weight: 600;
-        color: white;
+        color: @darkModeText;
         span{
             font-weight: 600;
             font-size: 20px !important;
@@ -426,7 +426,7 @@ a.vct-team{
             font-size: 17px;
             line-height: 17px; 
             transform: rotate(45deg);
-            color: white;
+            color: @darkModeText;
             &.pin-pinned{
                 transform: rotate(0deg);
                 color: @warningColor;
@@ -481,6 +481,7 @@ a.vct-team{
             overflow: hidden;
             text-overflow: ellipsis;
             max-width: 100%;
+            color: @darkModeText;
         }
         .vct-team-location{
             background: transparent;
@@ -495,7 +496,7 @@ a.vct-team{
             height: 33px;
             line-height: 33px;
             font-size: 15px;
-            color: white;
+            color: @darkModeText;
             &:hover{
                 color:@highlightColor;
             }
@@ -574,7 +575,7 @@ a.vct-team{
     .team-member-name{
         font-size: 18px;
         font-weight: 500;
-        color:white;
+        color:@darkModeText;
     }
     .data-title{
         font-size: 11px;
@@ -592,7 +593,7 @@ a.vct-team{
     }
     .modal-table-project{
         background: lighten(@highlightColor, 10%);
-        color:@basetextColor !important;
+        color:@darkModeText !important;
         padding: 8px 5px;
         text-align: left;
         border-bottom:1px solid transparent;
@@ -609,7 +610,7 @@ a.vct-team{
             line-height: 32px;
             width:32px;
             height:32px;
-            color:@basetextColor !important;
+            color:@darkModeText !important;
         }
     }
     .close-modal{
@@ -720,7 +721,7 @@ transform: translateX(12px);
 }
 .vct-team-block{
     border:none !important;
-    color: white;
+    color: @darkModeText;
 }
 
 .vct-team{
@@ -730,7 +731,7 @@ transform: translateX(12px);
         background: fade(black, 80%);
         border:1px solid lighten(black, 27%);
         //box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
-        color: white;
+        color: @darkModeText;
         img.vct-client-logo{
                 width:70%;
                 margin-top:20px;
@@ -770,25 +771,28 @@ transform: translateX(12px);
 .badge{
     font-weight: 500;
     &.badge-info{
-        background: @highlightColor
+        background: @highlightColor;
+        color:@darkModeText;
     }
     &.badge-success{
-        background: @confirmColor
+        background: @confirmColor;
     }
     &.badge-danger{
-        background: @warningColor
+        background: @warningColor;
+        color:@darkModeText;
     }
     &.badge-secondary{
-        background: @basecolorLighter
+        background: @basecolorLighter;
     }
     &.badge-warning{
         background:@progressColor;
     }
     &.badge-light{
-        background:lighten(@basetextColor, 65%)
+        background:lighten(@basetextColor, 65%);
     }
     &.badge-dark{
         background:@basetextColor;
+        color:@darkModeText;
     }
 }
 
@@ -821,7 +825,7 @@ transform: translateX(12px);
     right: 24px;
     z-index: 10;
     background: @highlightColor;
-    color: white;
+    color: @darkModeText;
     width:48px;
     height: 48px;
     border-radius: 50%;
@@ -894,10 +898,10 @@ transform: translateX(12px);
             &:after{
                 color:white;
             }
-          color: white;
+          color: @darkModeText;
           background: transparent;
           i{
-            color: white;
+            color: @darkModeText;
         }
         }
       }
@@ -906,7 +910,7 @@ transform: translateX(12px);
       display: block;
       width: 100%;
       padding: 15px 20px;
-      color: white;
+      color: @darkModeText;
       font-size: 12px;
       letter-spacing: -0.2px;
       text-transform: uppercase;
@@ -924,14 +928,14 @@ transform: translateX(12px);
         }
       }
       i {
-        color: white;
+        color: @darkModeText;
       }
     }
     .has-level1 {
       &::after {
         font-family: "Themify";
         content: "\e64b";
-        color: white;
+        color: @darkModeText;
         float: right;
       }
       &.selected{
@@ -948,7 +952,7 @@ transform: translateX(12px);
       &::after {
         font-family: "Themify";
         content: "\e648";
-        color: white;
+        color: @darkModeText;
         float: right;
       }
       &.selected{
@@ -980,7 +984,7 @@ transform: translateX(12px);
           color: @highlightColor;
           &:hover {
             background: transparent;
-            color: white;
+            color: @darkModeText;
             cursor: default;
           }
         }
