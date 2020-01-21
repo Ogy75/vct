@@ -156,13 +156,13 @@ a:not([href]):not([tabindex]):hover {
 }
 label {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   margin-bottom: 0;
   margin-top: 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #5d5d54;
+  color: #919186;
 }
 input,
 textarea,

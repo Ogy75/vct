@@ -219,7 +219,7 @@ input:disabled {
 }
 .panel-container .table-wrapper table.panel-table tbody tr:hover,
 .widget-container .table-wrapper table.panel-table tbody tr:hover {
-  background: #f2f2f1;
+  background: #4f4f48;
 }
 .panel-container .table-wrapper table.panel-table tbody tr td,
 .widget-container .table-wrapper table.panel-table tbody tr td {
@@ -591,6 +591,7 @@ a.vct-team:hover {
 }
 .modal-style input {
   border: 1px solid #d3d3ce;
+  background-color: #cccccc !important;
 }
 .booking-responsibility input {
   width: 16px;
@@ -606,6 +607,7 @@ a.vct-team:hover {
   padding-left: 10px;
   line-height: 18px;
   overflow: auto;
+  color: white !important;
   text-overflow: initial;
   white-space: unset;
 }
@@ -675,10 +677,14 @@ input:checked + .slider:before {
 }
 .vct-team-block {
   border: none !important;
+  color: white;
 }
 .vct-team .vct-team-wrapper {
   text-align: center;
   position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #454545;
+  color: white;
 }
 .vct-team .vct-team-wrapper img.vct-client-logo {
   width: 70%;
@@ -971,5 +977,5 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: rgba(66, 66, 60, 0.7);
+  color: rgba(255, 255, 255, 0.7);
 }

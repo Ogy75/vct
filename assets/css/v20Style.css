@@ -604,6 +604,7 @@ a.vct-team:hover {
   overflow: auto;
   text-overflow: initial;
   white-space: unset;
+  color: white !important;
 }
 .switch {
   position: relative;
