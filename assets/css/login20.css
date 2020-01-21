@@ -1,0 +1,29 @@
+.vct-login {
+  height: 100vh;
+  background-image: url("/assets/images/brand-bg20.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.vct-login .vct-login-bg {
+  height: 100vh;
+  background: rgba(26, 26, 24, 0.93);
+}
+.vct-login .vct-login-img {
+  height: 100vh;
+  background: rgba(30, 155, 204, 0.93);
+}
+.vct-login label {
+  margin-bottom: 5px;
+}
+.vct-login input[type=email],
+.vct-login input[type=password] {
+  border-bottom: 1px solid transparent;
+  padding: 8px;
+}
+.vct-login .login-notification {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%);
+}
