@@ -4,6 +4,14 @@ html{
     overflow-y: scroll ;
 }
 
+input, textarea{
+    background-color:@darkModeText !important;
+    &:disabled{
+        background-color:darken(@darkModeText, 35%) !important;
+        color:@basetextColor !important;
+    }
+}
+
 body{
     background: darken(@basetextColor, 5%)!important;
     min-height: 100vh;
@@ -75,7 +83,7 @@ body{
     }
 }
 .vct-top-nav{
-    background: darken(@basetextColor,20%);
+    background: darken(@basetextColor,10%);
     border-bottom: none !important;
     color:white !important;
 }
@@ -88,7 +96,7 @@ input{
     }
 }
 .item-menu-wrapper{
-    background: lighten(@basetextColor, 60%) !important;
+    background: @darkModeText !important;
     a{
         font-size: 13px !important;
         font-weight: 500;
@@ -99,7 +107,7 @@ input{
         }
     }
     .arrow{
-        background: lighten(@basetextColor, 60%) !important;
+        background: @darkModeText !important;
     }
 }
 .item-menu{
@@ -208,7 +216,7 @@ input{
         letter-spacing: 1px;
         font-weight: 700;
         text-transform: uppercase;
-        color:white !important;
+        color:@darkModeText !important;
     }
     .table-wrapper{
         max-width: 100%;
@@ -278,7 +286,7 @@ input{
 .item-menu{
     font-size: 15px;
     margin-right:-6px;
-    color:@basetextColor;
+    color:@darkModeText !important;
 }
 
 #days-free-data,
@@ -314,7 +322,7 @@ a.vct-team{
 .vct-content{
     margin-bottom: 80px;
     .vct-project, .vct-teams, .team-data{
-        background: fade(black, 80%);
+        background: fade(black, 90%);
         border-radius: 4px;
         padding: 16px;
         border:1px solid lighten(black, 27%);
@@ -323,7 +331,7 @@ a.vct-team{
         position: relative;
         display: block;
         background: black;
-        color:white;
+        color:@darkModeText;
         .no-frm-data{
             position: absolute;
             top:0px;
@@ -332,7 +340,7 @@ a.vct-team{
             font-size: 12px;
             line-height: 12px;
             font-weight: 700;
-            color:white;
+            color:@darkModeText;
             padding: 5px 8px;
             border-radius: 0px 4px 0px 4px;
             i{
@@ -404,7 +412,7 @@ a.vct-team{
             transition: @mainTransition;
             text-decoration: none;
             &:hover{
-                color: darken(@highlightColor, 20%);
+                color: lighten(@highlightColor, 20%);
             }
             &:before{
                 content: "\f077";
@@ -427,9 +435,12 @@ a.vct-team{
             line-height: 17px; 
             transform: rotate(45deg);
             color: @darkModeText;
+            &:hover{
+                color: @highlightColor;
+            }
             &.pin-pinned{
                 transform: rotate(0deg);
-                color: @warningColor;
+                color: @highlightColor;
             }
         }
     .team-list {
@@ -636,6 +647,7 @@ a.vct-team{
         width:80%;
         display: block;
         font-size: 14px;
+        font-weight: 700;
         margin-bottom: 0;
         padding-left: 10px;
         line-height: 18px;
@@ -647,6 +659,7 @@ a.vct-team{
 }
 label{
     color:fade(white, 80%);
+    font-weight: 700;
 }
 
 
@@ -750,12 +763,12 @@ transform: translateX(12px);
     display: block;
     background:transparent;
     border:none;
-    border-bottom: 2px solid lighten(@basetextColor, 50%);
+    border-bottom: 2px solid @darkModeText;
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: .25px;
-    color:lighten(@basetextColor, 50%);
+    color:@darkModeText;
     transition: @mainTransition;
     text-transform: uppercase;
     float: left;
@@ -788,7 +801,7 @@ transform: translateX(12px);
         background:@progressColor;
     }
     &.badge-light{
-        background:lighten(@basetextColor, 65%);
+        background:@darkModeText;
     }
     &.badge-dark{
         background:@basetextColor;
@@ -1023,7 +1036,7 @@ transform: translateX(12px);
       background: lighten(@basetextColor, 60%) !important;
       color:white;
       .vct-user-menu-block-arrow{
-        background: lighten(@basetextColor, 60%) !important;
+        background: @darkModeText !important;
       }
   }
   .primary-title{

@@ -1,6 +1,15 @@
 html {
   overflow-y: scroll ;
 }
+input,
+textarea {
+  background-color: #d5d5d5 !important;
+}
+input:disabled,
+textarea:disabled {
+  background-color: #7c7c7c !important;
+  color: #42423c !important;
+}
 body {
   background: #353530 !important;
   min-height: 100vh;
@@ -67,7 +76,7 @@ body.modal-open .vct-content {
   background: #a82b22;
 }
 .vct-top-nav {
-  background: #0d0d0b;
+  background: #272724;
   border-bottom: none !important;
   color: white !important;
 }
@@ -80,7 +89,7 @@ input:disabled {
   font-weight: 700;
 }
 .item-menu-wrapper {
-  background: #dadad6 !important;
+  background: #d5d5d5 !important;
 }
 .item-menu-wrapper a {
   font-size: 13px !important;
@@ -92,7 +101,7 @@ input:disabled {
   color: #d5d5d5 !important;
 }
 .item-menu-wrapper .arrow {
-  background: #dadad6 !important;
+  background: #d5d5d5 !important;
 }
 .item-menu {
   color: white !important;
@@ -198,7 +207,7 @@ input:disabled {
   letter-spacing: 1px;
   font-weight: 700;
   text-transform: uppercase;
-  color: white !important;
+  color: #d5d5d5 !important;
 }
 .panel-container .table-wrapper,
 .widget-container .table-wrapper {
@@ -272,7 +281,7 @@ input:disabled {
 .item-menu {
   font-size: 15px;
   margin-right: -6px;
-  color: #42423c;
+  color: #d5d5d5 !important;
 }
 #days-free-data,
 #days-previous-data,
@@ -309,7 +318,7 @@ a.vct-team:hover {
 .vct-content .vct-project,
 .vct-content .vct-teams,
 .vct-content .team-data {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 4px;
   padding: 16px;
   border: 1px solid #454545;
@@ -318,7 +327,7 @@ a.vct-team:hover {
   position: relative;
   display: block;
   background: black;
-  color: white;
+  color: #d5d5d5;
 }
 .vct-content .team-data .no-frm-data {
   position: absolute;
@@ -328,7 +337,7 @@ a.vct-team:hover {
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
-  color: white;
+  color: #d5d5d5;
   padding: 5px 8px;
   border-radius: 0px 4px 0px 4px;
 }
@@ -398,7 +407,7 @@ a.vct-team:hover {
   text-decoration: none;
 }
 .vct-content .team-name:hover {
-  color: #0a303e;
+  color: #34b0e0;
 }
 .vct-content .team-name:before {
   content: "\f077";
@@ -419,9 +428,12 @@ a.vct-team:hover {
   transform: rotate(45deg);
   color: #d5d5d5;
 }
+.vct-content .pin:hover {
+  color: #177397;
+}
 .vct-content .pin.pin-pinned {
   transform: rotate(0deg);
-  color: #d8483e;
+  color: #177397;
 }
 .vct-content .team-list {
   display: flex;
@@ -618,6 +630,7 @@ a.vct-team:hover {
   width: 80%;
   display: block;
   font-size: 14px;
+  font-weight: 700;
   margin-bottom: 0;
   padding-left: 10px;
   line-height: 18px;
@@ -628,6 +641,7 @@ a.vct-team:hover {
 }
 label {
   color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
 }
 .switch {
   position: relative;
@@ -719,12 +733,12 @@ input:checked + .slider:before {
   display: block;
   background: transparent;
   border: none;
-  border-bottom: 2px solid #c2c2bb;
+  border-bottom: 2px solid #d5d5d5;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.25px;
-  color: #c2c2bb;
+  color: #d5d5d5;
   transition: all 0.12s linear;
   text-transform: uppercase;
   float: left;
@@ -757,7 +771,7 @@ input:checked + .slider:before {
   background: #ffc400;
 }
 .badge.badge-light {
-  background: #e6e6e4;
+  background: #d5d5d5;
 }
 .badge.badge-dark {
   background: #42423c;
@@ -996,7 +1010,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   color: white;
 }
 .vct-user-menu-block .vct-user-menu-block-arrow {
-  background: #dadad6 !important;
+  background: #d5d5d5 !important;
 }
 .primary-title {
   font-size: 12px;
