@@ -306,6 +306,7 @@ $(document).ready(function() {
     //PAYOUT Process
     $('.js_payout').on('click', function() {
         $('.js_payout-data').removeClass('d-none');
+        $('.js_payout-data').addClass('blink-warning');
         $(this).attr('disabled', true).html('Payout started');
     });
 

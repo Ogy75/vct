@@ -997,3 +997,16 @@ transform: translateX(12px);
       letter-spacing:5px;
       color:fade(@basetextColor, 70%);
   }
+  .blink-warning{
+    background: @warningColor;
+    animation: blink 2s ease-in-out 2;
+  }
+  @keyframes blink{
+    0%{opacity: 1;}
+    16.66%{opacity: 0.5;}
+    33.33%{opacity: 1;}
+    49.98%{opacity: 0.5;}
+    66.64%{opacity: 1;}
+    83.3%{opacity: 0.5;}
+    100%{opacity: 1;}
+    }
