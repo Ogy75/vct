@@ -35,7 +35,7 @@ body.modal-open .vct-content {
   white-space: nowrap;
 }
 .btn.btn-cancel {
-  background: #ededec;
+  background: transparent;
 }
 .btn.btn-cancel:hover {
   background: #d8483e;

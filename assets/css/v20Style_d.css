@@ -49,11 +49,12 @@ body.modal-open .vct-content {
   white-space: nowrap;
 }
 .btn.btn-cancel {
-  background: #ededec;
+  background: transparent;
+  color: #d5d5d5;
 }
 .btn.btn-cancel:hover {
   background: #d8483e;
-  color: white;
+  color: #d5d5d5;
 }
 .btn.btn-project-time,
 .btn.btn-project-edit {

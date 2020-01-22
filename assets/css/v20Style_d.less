@@ -56,10 +56,11 @@ body{
     white-space: nowrap;
  
     &.btn-cancel{
-        background: lighten(@basetextColor, 68%);
+        background: transparent;
+        color:@darkModeText;
         &:hover{
             background: @warningColor;
-            color:white;
+            color:@darkModeText;
         }
     }
     &.btn-project-time, &.btn-project-edit{
