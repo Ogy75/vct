@@ -765,6 +765,7 @@ input:checked + .slider:before {
 }
 .bg-warning {
   background: #ffc400 !important;
+  color: #42423c !important;
 }
 .bg-light {
   background: #e6e6e4;
@@ -972,6 +973,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
 }
 .blink-warning {
   background: #d8483e;
+  color: #42423c !important;
   animation: blink 2s ease-in-out 2;
 }
 @keyframes blink {

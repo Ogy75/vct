@@ -776,7 +776,10 @@ transform: translateX(12px);
 .bg-success{background: @confirmColor !important}
 .bg-danger{background: @warningColor !important}
 .bg-secondary{background: @basecolorLighter !important}
-.bg-warning{background:@progressColor !important}
+.bg-warning{
+    background:@progressColor !important;
+    color:@basetextColor !important;
+}
 .bg-light{background:lighten(@basetextColor, 65%)}
 
 .vct-nav-level1{
@@ -999,6 +1002,7 @@ transform: translateX(12px);
   }
   .blink-warning{
     background: @warningColor;
+    color:@basetextColor !important;
     animation: blink 2s ease-in-out 2;
   }
   @keyframes blink{
