@@ -1059,8 +1059,8 @@ transform: translateX(12px);
     background: @warningColor;
     color:@basetextColor !important;
     animation: blink 2s ease-in-out 2;
-  }
-  @keyframes blink{
+}
+    @keyframes blink{
     0%{opacity: 1;}
     16.66%{opacity: 0.5;}
     33.33%{opacity: 1;}
@@ -1068,4 +1068,7 @@ transform: translateX(12px);
     66.64%{opacity: 1;}
     83.3%{opacity: 0.5;}
     100%{opacity: 1;}
-    }
+}
+.border-top{
+    border-top: 1px solid darken(@darkModeText, 65%) !important;
+}

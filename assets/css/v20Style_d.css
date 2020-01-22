@@ -1055,3 +1055,6 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
     opacity: 1;
   }
 }
+.border-top {
+  border-top: 1px solid #2f2f2f !important;
+}
