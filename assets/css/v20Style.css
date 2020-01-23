@@ -1,8 +1,8 @@
 html {
-  overflow-y: scroll ;
+  overflow-y: scroll;
 }
 body {
-  background: #EBF0F5 !important;
+  background: #ebf0f5 !important;
   min-height: 100vh;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -266,7 +266,7 @@ input:disabled {
   display: none;
 }
 .booking-wrapper {
-  background-image: url('../images/vacation.jpg');
+  background-image: url("../images/vacation.jpg");
   background-size: cover;
   background-position: center center;
   color: white;
@@ -380,7 +380,7 @@ a.vct-team:hover {
 }
 .vct-content .team-name:before {
   content: "\f077";
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   margin-right: 8px;
 }
 .vct-content .team-name:after {
@@ -388,7 +388,7 @@ a.vct-team:hover {
 }
 .vct-content .team-name.visible:before {
   content: "\f078";
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   margin-right: 8px;
 }
 .vct-content .pin {
@@ -998,4 +998,10 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   100% {
     opacity: 1;
   }
+}
+.border-top {
+  border-top: 1px solid #d8d8d8 !important;
+}
+.border-bottom {
+  border-bottom: 1px solid #d8d8d8 !important;
 }

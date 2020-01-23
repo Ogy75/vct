@@ -244,7 +244,7 @@ a.uploaded-file {
 }
 .vct-total-toggle .vct-total-toggle-wrapper {
   display: none;
-  background: #272724;
+  background: black;
   color: white;
 }
 .vct-total-toggle .vct-total-toggle-wrapper p {
@@ -325,7 +325,7 @@ a.uploaded-file {
   margin-right: 4px;
 }
 .vct-team .vct-team-block-status-done {
-  color: #1e86cc;
+  color: #1f9c26;
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
