@@ -7,8 +7,16 @@ html{
 input, textarea{
     background-color:@darkModeText !important;
     &:disabled{
-        background-color:darken(@darkModeText, 35%) !important;
-        color:@basetextColor !important;
+        background-color:darken(@darkModeText, 25%) !important;
+    }
+}
+input{
+    font-size: 13px !important;
+    border-radius: 4px !important;
+    &:disabled{
+        background:#f0f2f7;
+        font-weight: 700;
+        color:@basetextColor;
     }
 }
 
@@ -88,15 +96,6 @@ body{
     border-bottom: none !important;
     color:@darkModeText !important;
 }
-input{
-    font-size: 13px !important;
-    border-radius: 4px !important;
-    &:disabled{
-        background:#f0f2f7;
-        font-weight: 700;
-        color:white !important;
-    }
-}
 .item-menu-wrapper{
     background: @darkModeText !important;
     a{
@@ -124,7 +123,7 @@ input{
     display: block;
     width:100%;
     background: darken(@basetextColor, 10%) !important;
-    color:white !important;
+    color:@darkModeText !important;
     border-radius: 4px;
     padding:6px;
     margin-bottom:15px;
@@ -326,7 +325,7 @@ input{
     background-image: url('../images/vacation.jpg');
     background-size: cover;
     background-position: center center;
-    color:white;
+    color:@darkModeText;
     border-radius: 4px;
 }
 .converter-wrapper{
@@ -649,7 +648,7 @@ a.vct-team{
         position: absolute;
         top:6px;
         right:25px;
-        color:white;
+        color:@darkModeText;
         font-size: 20px;
         &:hover{
             color: fade(white, 60%);
@@ -673,7 +672,6 @@ a.vct-team{
         padding-left: 10px;
         line-height: 18px;
         overflow: auto;
-        color:fade(white, 80%);
         text-overflow:initial;
         white-space: unset;
     }
@@ -806,14 +804,14 @@ transform: translateX(12px);
     font-weight: 500;
     &.badge-info{
         background: @highlightColor;
-        color:@darkModeText;
+        color:white;
     }
     &.badge-success{
         background: @confirmColor;
     }
     &.badge-danger{
         background: @warningColor;
-        color:@darkModeText;
+        color:white;
     }
     &.badge-secondary{
         background: @basecolorLighter;
@@ -826,7 +824,7 @@ transform: translateX(12px);
     }
     &.badge-dark{
         background:@basetextColor;
-        color:@darkModeText;
+        color:white;
     }
 }
 

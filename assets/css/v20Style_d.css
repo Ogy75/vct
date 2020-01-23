@@ -7,8 +7,16 @@ textarea {
 }
 input:disabled,
 textarea:disabled {
-  background-color: #7c7c7c !important;
-  color: #42423c !important;
+  background-color: #959595 !important;
+}
+input {
+  font-size: 13px !important;
+  border-radius: 4px !important;
+}
+input:disabled {
+  background: #f0f2f7;
+  font-weight: 700;
+  color: #42423c;
 }
 body {
   background: #353530 !important;
@@ -81,15 +89,6 @@ body.modal-open .vct-content {
   border-bottom: none !important;
   color: #d5d5d5 !important;
 }
-input {
-  font-size: 13px !important;
-  border-radius: 4px !important;
-}
-input:disabled {
-  background: #f0f2f7;
-  font-weight: 700;
-  color: white !important;
-}
 .item-menu-wrapper {
   background: #d5d5d5 !important;
 }
@@ -116,7 +115,7 @@ input:disabled {
   display: block;
   width: 100%;
   background: #272724 !important;
-  color: white !important;
+  color: #d5d5d5 !important;
   border-radius: 4px;
   padding: 6px;
   margin-bottom: 15px;
@@ -319,7 +318,7 @@ input:disabled {
   background-image: url('../images/vacation.jpg');
   background-size: cover;
   background-position: center center;
-  color: white;
+  color: #d5d5d5;
   border-radius: 4px;
 }
 .converter-wrapper {
@@ -634,7 +633,7 @@ a.vct-team:hover {
   position: absolute;
   top: 6px;
   right: 25px;
-  color: white;
+  color: #d5d5d5;
   font-size: 20px;
 }
 .modal-style .close-modal:hover {
@@ -655,7 +654,6 @@ a.vct-team:hover {
   padding-left: 10px;
   line-height: 18px;
   overflow: auto;
-  color: rgba(255, 255, 255, 0.8);
   text-overflow: initial;
   white-space: unset;
 }
@@ -775,14 +773,14 @@ input:checked + .slider:before {
 }
 .badge.badge-info {
   background: #177397;
-  color: #d5d5d5;
+  color: white;
 }
 .badge.badge-success {
   background: #1f9c26;
 }
 .badge.badge-danger {
   background: #d8483e;
-  color: #d5d5d5;
+  color: white;
 }
 .badge.badge-secondary {
   background: #696964;
@@ -795,7 +793,7 @@ input:checked + .slider:before {
 }
 .badge.badge-dark {
   background: #42423c;
-  color: #d5d5d5;
+  color: white;
 }
 .text-info {
   color: #177397 !important;
