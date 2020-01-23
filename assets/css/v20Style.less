@@ -588,7 +588,7 @@ a.vct-team {
     color: @highlightColor;
   }
   .modal-table-project {
-    //background: lighten(@highlightColor, 20%);
+    background: @highlightColor;
     color: white !important;
     padding: 8px 5px;
     text-align: left;
@@ -605,6 +605,18 @@ a.vct-team {
       height: 32px;
       color: white !important;
     }
+  }
+  .modal-table-item{
+    background: none;
+    color: white !important;
+    padding: 8px 5px;
+    text-align: left;
+    border-bottom: 1px solid transparent;
+    font-size: 12px;
+    font-weight: 500 !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: @mainTransition;
   }
   .close-modal {
     position: absolute;

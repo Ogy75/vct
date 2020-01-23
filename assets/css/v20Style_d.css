@@ -3,18 +3,13 @@ html {
 }
 input,
 textarea {
+  font-size: 13px !important;
+  border-radius: 4px !important;
   background-color: #d5d5d5 !important;
 }
 input:disabled,
 textarea:disabled {
   background-color: #959595 !important;
-}
-input {
-  font-size: 13px !important;
-  border-radius: 4px !important;
-}
-input:disabled {
-  background: #f0f2f7;
   font-weight: 700;
   color: #42423c;
 }
@@ -590,7 +585,7 @@ a.vct-team:hover {
   font-weight: 300;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #42423c;
+  color: #d5d5d5;
 }
 .modal-style .team-member-name {
   font-size: 18px;
@@ -612,6 +607,7 @@ a.vct-team:hover {
   color: #177397;
 }
 .modal-style .modal-table-project {
+  background: #177397;
   color: #d5d5d5 !important;
   padding: 8px 5px;
   text-align: left;
@@ -628,6 +624,18 @@ a.vct-team:hover {
   width: 32px;
   height: 32px;
   color: #d5d5d5 !important;
+}
+.modal-style .modal-table-item {
+  background: none;
+  color: #d5d5d5 !important;
+  padding: 8px 5px;
+  text-align: left;
+  border-bottom: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 700 !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.12s linear;
 }
 .modal-style .close-modal {
   position: absolute;

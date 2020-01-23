@@ -574,6 +574,7 @@ a.vct-team:hover {
   color: #1E9BCC;
 }
 .modal-style .modal-table-project {
+  background: #1E9BCC;
   color: white !important;
   padding: 8px 5px;
   text-align: left;
@@ -590,6 +591,18 @@ a.vct-team:hover {
   width: 32px;
   height: 32px;
   color: white !important;
+}
+.modal-style .modal-table-item {
+  background: none;
+  color: white !important;
+  padding: 8px 5px;
+  text-align: left;
+  border-bottom: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 500 !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.12s linear;
 }
 .modal-style .close-modal {
   position: absolute;

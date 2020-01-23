@@ -5,16 +5,11 @@ html{
 }
 
 input, textarea{
+    font-size: 13px !important;
+    border-radius: 4px !important;
     background-color:@darkModeText !important;
     &:disabled{
         background-color:darken(@darkModeText, 25%) !important;
-    }
-}
-input{
-    font-size: 13px !important;
-    border-radius: 4px !important;
-    &:disabled{
-        background:#f0f2f7;
         font-weight: 700;
         color:@basetextColor;
     }
@@ -604,7 +599,7 @@ a.vct-team{
         font-weight: 300;
         letter-spacing: 4px;
         text-transform: uppercase;
-        color: @basetextColor;
+        color: @darkModeText;
     }
     .team-member-name{
         font-size: 18px;
@@ -626,7 +621,7 @@ a.vct-team{
         color:@highlightColor;
     }
     .modal-table-project{
-        //background: lighten(@highlightColor, 10%);
+        background: @highlightColor;
         color:@darkModeText !important;
         padding: 8px 5px;
         text-align: left;
@@ -643,6 +638,18 @@ a.vct-team{
             height:32px;
             color:@darkModeText !important;
         }
+    }
+    .modal-table-item{
+        background: none;
+        color:@darkModeText !important;
+        padding: 8px 5px;
+        text-align: left;
+        border-bottom:1px solid transparent;
+        font-size: 12px;
+        font-weight: 700 !important;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: @mainTransition;
     }
     .close-modal{
         position: absolute;
