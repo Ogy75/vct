@@ -239,6 +239,26 @@ input:disabled {
 .widget-container .table-wrapper table.panel-table tfoot tr td {
   padding: 8px 5px;
 }
+.panel-container .table-toggle,
+.widget-container .table-toggle {
+  background: #1E9BCC;
+  color: white;
+  border-bottom: 2px solid white;
+  transition: all 0.12s linear;
+}
+.panel-container .table-toggle:hover,
+.widget-container .table-toggle:hover {
+  background: #1779a0;
+}
+.panel-container .panel-table,
+.widget-container .panel-table {
+  background: white;
+  padding: 15px !important;
+}
+.panel-container .panel-table td,
+.widget-container .panel-table td {
+  color: #42423c;
+}
 .panel-container .tab-title,
 .widget-container .tab-title {
   font-size: 20px;
@@ -554,7 +574,6 @@ a.vct-team:hover {
   color: #1E9BCC;
 }
 .modal-style .modal-table-project {
-  background: #67c4e9;
   color: white !important;
   padding: 8px 5px;
   text-align: left;
@@ -564,9 +583,6 @@ a.vct-team:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: all 0.12s linear;
-}
-.modal-style .modal-table-project:hover {
-  background-color: #1E9BCC;
 }
 .modal-style .modal-table-project i {
   text-align: center;
@@ -1000,8 +1016,18 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   }
 }
 .border-top {
-  border-top: 1px solid #d8d8d8 !important;
+  border-top: 1px solid #d5d5d5 !important;
 }
 .border-bottom {
-  border-bottom: 1px solid #d8d8d8 !important;
+  border-bottom: 1px solid #d5d5d5 !important;
+}
+table.overview {
+  width: 100%;
+}
+table.overview th,
+table.overview td {
+  width: 80px;
+}
+.overflow-visible {
+  overflow: visible;
 }

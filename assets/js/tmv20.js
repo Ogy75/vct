@@ -355,11 +355,12 @@ $(document).ready(function() {
 
     //TABLE ACCORDION
     $('.js_tableToggle').on('click', function() {
-        $(this).parents('.panel-table').find('.js_bodyToggle').toggleClass('d-none');
-        $(this).parents('.table-wrapper').find('i').addClass('fa-chevron-down');
-        $(this).find('i').toggleClass('fa-chevron-up');
-        $(this).parents('.table-wrapper').find('.js_tableToggle').removeClass('bg-info');
-        $(this).toggleClass('bg-info');
+        $(this).parents('.table-toggle').find('.panel-table').fadeToggle(200);
+        $(this).parents('.table-toggle').find('i').addClass('fa-chevron-down');
+        $(this).parents('.table-toggle').find('i').toggleClass('fa-chevron-up');
+        //$('.table-toggle').removeClass('highlight');
+        //$(this).parents('.table-toggle').addClass('highlight');
+        
     });
 
     //Switch DARK MODE

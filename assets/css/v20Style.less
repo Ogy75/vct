@@ -198,7 +198,6 @@ input {
   .table-wrapper {
     max-width: 100%;
     overflow: auto;
-    //max-height: calc(100vh - 250px);
     table.panel-table {
       width: 100%;
       thead {
@@ -247,6 +246,22 @@ input {
           }
         }
       }
+    }
+  }
+  .table-toggle {
+    background: @highlightColor;
+    color: white;
+    border-bottom: 2px solid white;
+    transition: @mainTransition;
+    &:hover{
+        background: darken(@highlightColor, 10%);
+    }
+  }
+  .panel-table {
+    background: white;
+    padding: 15px !important;
+    td {
+      color: @basetextColor;
     }
   }
   .tab-title {
@@ -573,7 +588,7 @@ a.vct-team {
     color: @highlightColor;
   }
   .modal-table-project {
-    background: lighten(@highlightColor, 20%);
+    //background: lighten(@highlightColor, 20%);
     color: white !important;
     padding: 8px 5px;
     text-align: left;
@@ -583,9 +598,6 @@ a.vct-team {
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: @mainTransition;
-    &:hover {
-      background-color: @highlightColor;
-    }
     i {
       text-align: center;
       line-height: 32px;
@@ -1054,4 +1066,14 @@ ul.vct-nav-menu {
 }
 .border-bottom {
   border-bottom: 1px solid @darkModeText !important;
+}
+table.overview {
+  width: 100%;
+  th,
+  td {
+    width: 80px;
+  }
+}
+.overflow-visible {
+  overflow: visible;
 }

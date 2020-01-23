@@ -88,6 +88,7 @@ input {
 input:disabled {
   background: #f0f2f7;
   font-weight: 700;
+  color: white !important;
 }
 .item-menu-wrapper {
   background: #d5d5d5 !important;
@@ -193,7 +194,7 @@ input:disabled {
 }
 .panel-container,
 .widget-container {
-  background: #1a1a18 !important;
+  background: #1a1a18;
   padding: 24px;
   border-radius: 4px;
   border: 1px solid #454545;
@@ -278,6 +279,25 @@ input:disabled {
 .widget-container .tab-title span {
   font-weight: 600;
   font-size: 20px !important;
+}
+.table-toggle {
+  background: #177397;
+  border-bottom: 2px solid #2e2e2e;
+  transition: all 0.12s linear;
+}
+.table-toggle:hover {
+  background: #10516b;
+}
+.table-toggle.highlight {
+  background: #10516b;
+}
+.panel-table {
+  background: #2e2e2e;
+  color: #d5d5d5;
+  padding: 15px !important;
+}
+.panel-table td {
+  color: #d5d5d5;
 }
 .item-menu {
   font-size: 15px;
@@ -593,7 +613,6 @@ a.vct-team:hover {
   color: #177397;
 }
 .modal-style .modal-table-project {
-  background: #1e95c3;
   color: #d5d5d5 !important;
   padding: 8px 5px;
   text-align: left;
@@ -603,9 +622,6 @@ a.vct-team:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: all 0.12s linear;
-}
-.modal-style .modal-table-project:hover {
-  background-color: #177397;
 }
 .modal-style .modal-table-project i {
   text-align: center;
@@ -1060,4 +1076,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
 }
 .border-bottom {
   border-bottom: 1px solid #3c3c3c !important;
+}
+.overflow-visible {
+  overflow: visible;
 }

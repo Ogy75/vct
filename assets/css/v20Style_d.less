@@ -94,6 +94,7 @@ input{
     &:disabled{
         background:#f0f2f7;
         font-weight: 700;
+        color:white !important;
     }
 }
 .item-menu-wrapper{
@@ -203,7 +204,7 @@ input{
 
 .panel-container,
 .widget-container{
-    background: darken(@basetextColor, 15%) !important;
+    background: darken(@basetextColor, 15%);
     padding:24px;
     border-radius: 4px;
     border:1px solid lighten(black, 27%);
@@ -281,6 +282,26 @@ input{
             font-size: 20px !important;
         }
     }
+}
+
+.table-toggle{
+    background: @highlightColor;
+    border-bottom:2px solid lighten(black, 18%);
+    transition: @mainTransition;
+    &:hover{
+        background: darken(@highlightColor, 10%);
+    }
+    &.highlight{
+        background: darken(@highlightColor, 10%);
+}
+}
+.panel-table{
+  background:lighten(black, 18%);
+  color:@darkModeText;
+  padding: 15px !important;
+      td{
+        color:@darkModeText;
+      }
 }
 
 .item-menu{
@@ -606,7 +627,7 @@ a.vct-team{
         color:@highlightColor;
     }
     .modal-table-project{
-        background: lighten(@highlightColor, 10%);
+        //background: lighten(@highlightColor, 10%);
         color:@darkModeText !important;
         padding: 8px 5px;
         text-align: left;
@@ -616,9 +637,6 @@ a.vct-team{
         letter-spacing: 2px;
         text-transform: uppercase;
         transition: @mainTransition;
-        &:hover{
-            background-color: @highlightColor;
-        }
         i{
             text-align: center;
             line-height: 32px;
@@ -1074,4 +1092,7 @@ transform: translateX(12px);
 }
 .border-bottom{
     border-bottom: 1px solid darken(@darkModeText, 60%) !important;
+}
+.overflow-visible{
+    overflow: visible;
 }
