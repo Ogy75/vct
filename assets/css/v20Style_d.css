@@ -292,9 +292,6 @@ body.modal-open .vct-content {
   color: #d5d5d5;
   padding: 15px !important;
 }
-.panel-table td {
-  color: #d5d5d5;
-}
 .item-menu {
   font-size: 15px;
   margin-right: -6px;
@@ -1051,7 +1048,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 .blink-warning {
-  background: #d8483e;
+  background: #ffc400;
   color: #42423c !important;
   animation: blink 2s ease-in-out 2;
 }
