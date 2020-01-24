@@ -38,7 +38,7 @@ body.modal-open .vct-content {
   background: transparent;
 }
 .btn.btn-cancel:hover {
-  background: #d8483e;
+  background: #ffc400;
   color: white;
 }
 .btn.btn-project-time,
@@ -55,11 +55,11 @@ body.modal-open .vct-content {
   background: #146889;
 }
 .btn.btn-project-edit {
-  background-color: #d8483e;
+  background-color: #ffc400;
   color: white;
 }
 .btn.btn-project-edit:hover {
-  background: #a82b22;
+  background: #b38900;
 }
 .vct-top-nav {
   background: white;
@@ -245,6 +245,8 @@ input:disabled {
   color: white;
   border-bottom: 2px solid white;
   transition: all 0.12s linear;
+  border-radius: 4px;
+  margin-bottom: 6px;
 }
 .panel-container .table-toggle:hover,
 .widget-container .table-toggle:hover {
@@ -419,7 +421,7 @@ a.vct-team:hover {
 }
 .vct-content .pin.pin-pinned {
   transform: rotate(0deg);
-  color: #d8483e;
+  color: #ffc400;
 }
 .vct-content .team-list {
   display: flex;
@@ -521,13 +523,13 @@ a.vct-team:hover {
   background-color: transparent;
   display: none;
   text-align: center;
-  color: #d8483e;
+  color: #ffc400;
   z-index: 100;
   cursor: pointer;
   transition: all 0.12s linear;
 }
 .vct-content .reset-input:hover {
-  color: #92251e;
+  color: #997600;
 }
 .modal-style {
   text-align: center;
@@ -747,7 +749,7 @@ input:checked + .slider:before {
   background: #1f9c26;
 }
 .badge.badge-danger {
-  background: #d8483e;
+  background: #ffc400;
 }
 .badge.badge-secondary {
   background: #696964;
@@ -768,7 +770,7 @@ input:checked + .slider:before {
   color: #1f9c26 !important;
 }
 .text-danger {
-  color: #d8483e !important;
+  color: #ffc400 !important;
 }
 .text-secondary {
   color: #696964 !important;
@@ -786,7 +788,7 @@ input:checked + .slider:before {
   background: #1f9c26 !important;
 }
 .bg-danger {
-  background: #d8483e !important;
+  background: #ffc400 !important;
 }
 .bg-secondary {
   background: #696964 !important;
@@ -1000,7 +1002,6 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   color: rgba(66, 66, 60, 0.7);
 }
 .blink-warning {
-  background: #d8483e;
   color: #42423c !important;
   animation: blink 2s ease-in-out 2;
 }

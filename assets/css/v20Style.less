@@ -253,6 +253,8 @@ input {
     color: white;
     border-bottom: 2px solid white;
     transition: @mainTransition;
+    border-radius: 4px;
+    margin-bottom: 6px;
     &:hover{
         background: darken(@highlightColor, 10%);
     }
@@ -1046,7 +1048,6 @@ ul.vct-nav-menu {
   color: fade(@basetextColor, 70%);
 }
 .blink-warning {
-  background: @warningColor;
   color: @basetextColor !important;
   animation: blink 2s ease-in-out 2;
 }

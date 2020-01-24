@@ -281,13 +281,15 @@ body{
 .table-toggle{
     background: @highlightColor;
     border-bottom:2px solid lighten(black, 18%);
+    border-radius: 4px;
+    margin-bottom: 6px;
     transition: @mainTransition;
     &:hover{
         background: darken(@highlightColor, 10%);
     }
     &.highlight{
         background: darken(@highlightColor, 10%);
-}
+    }
 }
 .panel-table{
   background:lighten(black, 18%);

@@ -277,6 +277,8 @@ body.modal-open .vct-content {
 .table-toggle {
   background: #177397;
   border-bottom: 2px solid #2e2e2e;
+  border-radius: 4px;
+  margin-bottom: 6px;
   transition: all 0.12s linear;
 }
 .table-toggle:hover {
