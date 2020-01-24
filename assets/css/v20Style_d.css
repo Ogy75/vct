@@ -655,7 +655,7 @@ a.vct-team:hover {
   width: 80%;
   display: block;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 0;
   padding-left: 10px;
   line-height: 18px;
@@ -665,7 +665,6 @@ a.vct-team:hover {
 }
 label {
   color: rgba(255, 255, 255, 0.8);
-  font-weight: 700;
 }
 .switch {
   position: relative;
