@@ -37,8 +37,8 @@ body.modal-open .vct-content {
   padding-bottom: 100px;
 }
 .modal-content {
-  background: #2e2e2e;
-  border: 1px solid #454545;
+  background: #1a1a18;
+  border: 1px solid #333333;
 }
 .btn {
   border-radius: 2px;
@@ -288,7 +288,7 @@ body.modal-open .vct-content {
   background: #10516b;
 }
 .panel-table {
-  background: #2e2e2e;
+  background: #1a1a18;
   color: #d5d5d5;
   padding: 15px !important;
 }
