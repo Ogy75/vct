@@ -310,7 +310,7 @@ body.modal-open .vct-content {
   display: none;
 }
 .booking-wrapper {
-  background-image: url('../images/vacation.jpg');
+  background-image: url('/assets/images/vacation.jpg');
   background-size: cover;
   background-position: center center;
   color: #d5d5d5;

@@ -286,7 +286,7 @@ input:disabled {
   display: none;
 }
 .booking-wrapper {
-  background-image: url("../images/vacation.jpg");
+  background-image: url("/assets/images/vacation.jpg");
   background-size: cover;
   background-position: center center;
   color: white;
