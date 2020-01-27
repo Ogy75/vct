@@ -311,7 +311,7 @@
                         </div>
                         <div class="p-4">
                             <div class="panel-container bg-none border-0 p-0">
-                                <div class="table-wrapper">
+                                <div class="table-wrapper overflow-hidden">
 
                                     <!-- DAY entry -->
                                     <div class="container table-toggle p-0 pointer">
@@ -324,11 +324,11 @@
                                                     <thead>
                                                         <tr>
                                                             <th>date</th>
-                                                            <th>entry</th>
-                                                            <th>exit</th>
+                                                            <th>first</th>
+                                                            <th>last</th>
                                                             <th>total</th>
                                                             <th>net</th>
-                                                            <th>difference</th>
+                                                            <th>diff.</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -347,24 +347,32 @@
                                         <table class="panel-table time-tracking-log text-left" style="display: none;">
                                             <thead>
                                                 <tr>
-                                                    <th>entry</th>
-                                                    <th>exit</th>
-                                                    <th>Period</th>
+                                                    <th colspan="6">Entry log</th>
+                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><input type="text" value="9:22"/></td>
-                                                    <td><input type="text" value="10:22"/></td>
-                                                    <td>1:00</td>
+                                                    <td>9:22</td>
+                                                    <td>10:22</td>
+                                                    <td>14:22</td>
+                                                    <td>15:20</td>
+                                                    <td>15:35</td>
+                                                    <td>16:01</td>
+                                                </tr>
+                                                <tr class="js_entry">
+                                                    <td>16:23</td>
+                                                    <td>16:50</td>
+                                                    <td>17:22</td>
+                                                    
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="text" value="14:22"/></td>
-                                                    <td><input type="text" value="15:20"/></td>
-                                                    <td>0:58</td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3"><button class="btn btn-highlight">save</button></td>
+                                                    <td colspan="6">
+                                                        <input class="w-25 d-inline-block js_entryInput" placeholder="add entry (hh:mm)" type="text" value=""/>
+                                                        <button class="btn btn-highlight js_addEntry"><span class="fas fa-plus"></button>
+                                                        </td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -385,7 +393,7 @@
                                                             <th>exit</th>
                                                             <th>total</th>
                                                             <th>net</th>
-                                                            <th>difference</th>
+                                                            <th>diff.</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -499,7 +507,7 @@
                                                             <th>exit</th>
                                                             <th>total</th>
                                                             <th>net</th>
-                                                            <th>difference</th>
+                                                            <th>diff.</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>

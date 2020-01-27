@@ -378,4 +378,12 @@ $(document).ready(function() {
             $(this).toggleClass('fa-moon');
             $(this).toggleClass('fa-lightbulb');
     });
+
+    $('.js_addEntry').on('click', function(){
+    var timeValue = $('.js_entryInput').val();
+    var addLog = $('.js_entry');
+    $(addLog).append('<td>'+ timeValue +'</td>');
+    $('.js_entryInput').val('');
+    $('.js_entryInput').focus();
+    });
 });
