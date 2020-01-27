@@ -313,12 +313,11 @@ $('.js_finish').on('click', function() {
     $(this).removeClass('btn-highlight');
     $(this).addClass('badge-success');
     $(this).html('Done');
-    $(this).parents('tr').removeClass('bg-warning');
+    $(this).closest('.blink-warning').removeClass('blink-warning');
     $('.js_payout').attr('disabled', false);
     $('.na-status').addClass('d-none');
     $('.end-date').removeClass('d-none');
     $('.js_payout').html('Start Payout');
-    $('.js_payout-data').removeClass('blink-warning');
 });
 
 $('.js_cancel').on('click', function() {
