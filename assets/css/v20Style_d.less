@@ -106,9 +106,6 @@ body{
         background: @darkModeText !important;
     }
 }
-.item-menu{
-    color:white !important;
-}
 .badge{
     font-size: 12px !important;
     line-height: 12px;
@@ -300,8 +297,42 @@ body{
 .item-menu{
     font-size: 15px;
     margin-right:-6px;
+    width:24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
     color:@darkModeText !important;
+    &:hover{
+        background:@highlightColor;
+    }
 }
+
+@keyframes loader-rotation {
+    0%   {transform: rotate(0deg)}
+    25%  {transform: rotate(90deg)}
+    50%  {transform: rotate(180deg)}
+    100% {transform: rotate(360deg)}
+  }
+  .loader{
+    display: none;
+    width:24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    text-align: center;
+    animation-name: loader-rotation;
+    animation-duration: .6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: @darkModeText;
+  }
+  .pdf-report{
+    line-height: 24px;
+    width:24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 
 #days-free-data,
 #days-previous-data,

@@ -240,13 +240,20 @@ $(function() {
 $('.js_generate').on('click', function(ev) {
     var trigger = $(ev.target);
     var element = trigger.parents('.parent').find('.pdf-report');
+    var loader = trigger.parents('.parent').find('.loader');
     if (!element.hasClass('fa-file-pdf')) {
-        element.removeClass('d-none');
-        element.css('background', 'url("/assets/images/micro-loader.gif")').delay(3000).queue(function() {
+        loader.show();
+        setTimeout(function() {
+            element.removeClass('d-none');
             element.addClass('fa-file-pdf');
             element.css('background', 'transparent');
             trigger.remove();
-        });
+            loader.hide();
+        }, 2000);
+        
+        // loader.show().delay(3000).queue(function() {
+            
+        // });
     }
 });
 
