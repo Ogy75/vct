@@ -282,7 +282,7 @@ input:disabled {
 }
 .item-menu:hover {
   background: #e6e6e4;
-  color: #1E9BCC;
+  color: #42423c;
 }
 @keyframes loader-rotation {
   0% {
