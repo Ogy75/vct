@@ -21,7 +21,8 @@ body{
     color:@darkModeText;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-	-moz-osx-font-smoothing: grayscale !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    letter-spacing: -.2px;
     ::-moz-selection {
         color: @darkModeText;
         background: black;
@@ -437,6 +438,7 @@ a.vct-team{
         width:95%;
         float: left;
         font-size: 20px;
+        letter-spacing: -.24px;
         font-weight: 400;
         white-space: nowrap;
         overflow: hidden;
@@ -526,6 +528,7 @@ a.vct-team{
             .team-item-name{
                 font-size: 12px;
                 font-weight: 600;
+                letter-spacing: -.2px;
             }
         }
     }
@@ -554,6 +557,7 @@ a.vct-team{
             text-overflow: ellipsis;
             max-width: 100%;
             color: @darkModeText;
+            letter-spacing: -0.24px;
         }
         .vct-team-location{
             background: transparent;
@@ -851,6 +855,7 @@ transform: translateX(12px);
 
 .badge{
     font-weight: 500;
+    letter-spacing: -.2px;
     &.badge-info{
         background: @highlightColor;
         color:white;
