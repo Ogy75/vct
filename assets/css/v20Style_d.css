@@ -1136,6 +1136,13 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
 .border-bottom {
   border-bottom: 1px solid #3c3c3c !important;
 }
+table.overview {
+  width: 100%;
+}
+table.overview th,
+table.overview td {
+  width: 80px;
+}
 .overflow-visible {
   overflow: visible;
 }
