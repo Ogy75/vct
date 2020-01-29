@@ -88,7 +88,7 @@ body{
     }
 }
 .vct-top-nav{
-    background: darken(@basetextColor,10%);
+    background: fade(black,70%);
     border-bottom: none !important;
     color:@darkModeText !important;
 }
@@ -470,12 +470,12 @@ a.vct-team{
             width:auto;
             line-height: 16px;
             font-weight: 700;
-            color: @highlightColor;
+            color: @darkModeText;
             cursor: pointer;
             transition: @mainTransition;
             text-decoration: none;
             &:hover{
-                color: lighten(@highlightColor, 20%);
+                color: @highlightColor;
             }
             &:before{
                 content: "\f077";

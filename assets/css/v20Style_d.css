@@ -81,7 +81,7 @@ body.modal-open .vct-content {
   background: #a82b22;
 }
 .vct-top-nav {
-  background: #272724;
+  background: rgba(0, 0, 0, 0.7);
   border-bottom: none !important;
   color: #d5d5d5 !important;
 }
@@ -471,13 +471,13 @@ a.vct-team:hover {
   width: auto;
   line-height: 16px;
   font-weight: 700;
-  color: #177397;
+  color: #d5d5d5;
   cursor: pointer;
   transition: all 0.12s linear;
   text-decoration: none;
 }
 .vct-content .team-name:hover {
-  color: #34b0e0;
+  color: #177397;
 }
 .vct-content .team-name:before {
   content: "\f077";
