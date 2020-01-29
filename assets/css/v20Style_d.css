@@ -1146,3 +1146,6 @@ table.overview td {
 .overflow-visible {
   overflow: visible;
 }
+.modal-backdrop {
+  background: #42423c !important;
+}
