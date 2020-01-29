@@ -361,7 +361,7 @@ $(document).ready(function() {
 
     //TABLE ACCORDION
     $('.js_tableToggle').on('click', function() {
-        $(this).parents('.table-toggle').find('.panel-table').fadeToggle(200);
+        $(this).parents('.table-toggle').find('.panel-table').fadeToggle(100);
         $(this).parents('.table-toggle').find('i').addClass('fa-chevron-down');
         $(this).parents('.table-toggle').find('i').toggleClass('fa-chevron-up');
         //$('.table-toggle').removeClass('highlight');
