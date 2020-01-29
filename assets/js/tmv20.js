@@ -153,7 +153,7 @@ $(document).ready(function() {
         });
         if (count > 0) {
             $('.no-results-message').hide();
-            $('.vct-actions').show();
+            $('.vct-actions').hide();
         } else {
             $('.no-results-message').show();
             $('.vct-actions').hide();
@@ -234,8 +234,10 @@ $(document).ready(function() {
         });
         if (count > 0) {
             $('.no-results-message').hide();
+            $('.vct-actions').hide();
         } else {
             $('.no-results-message').show();
+            $('.vct-actions').hide();
         }
     });
 
