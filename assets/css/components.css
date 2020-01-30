@@ -455,3 +455,23 @@ span.from-title {
   background: #1E9BCC;
   color: white;
 }
+.DayPicker {
+  background: rgba(255, 255, 255, 0.85) !important;
+  width: 100%;
+  color: #42423c;
+  border-radius: 4px;
+  min-height: 350px;
+}
+.DayPicker-Month {
+  width: 100%;
+}
+.DayPicker-Weekday abbr[title] {
+  color: rgba(66, 66, 60, 0.8);
+}
+.DayPicker-Day--disabled {
+  color: rgba(66, 66, 60, 0.45);
+  cursor: default;
+}
+.DayPicker-Day {
+  border-radius: 0 !important;
+}

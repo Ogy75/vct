@@ -502,3 +502,27 @@ span.from-title{
       background:@focusColor;
       color:white;
   }
+
+
+  //DATEPICKER OVERRIDE
+
+.DayPicker {
+    background: rgba(255,255,255,0.85)!important;
+    width: 100%;
+    color:@basetextColor;
+    border-radius:4px;
+    min-height: 350px;
+}
+.DayPicker-Month{
+    width:100%;
+}
+.DayPicker-Weekday abbr[title]{
+    color:fade(@basetextColor, 80%);
+}
+.DayPicker-Day--disabled {
+    color: fade(@basetextColor, 45%);
+    cursor: default;
+}
+.DayPicker-Day{
+    border-radius: 0 !important;
+}
