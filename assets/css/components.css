@@ -460,14 +460,18 @@ span.from-title {
   width: 100%;
   color: #42423c;
   border-radius: 4px;
-  min-height: 345px;
+  min-height: 310px;
 }
 .DayPicker-Month {
   width: 100%;
 }
-.DayPicker-Weekday abbr[title] {
-  color: #1E9BCC;
-  font-weight: 600;
+.DayPicker-Day {
+  font-size: 14px;
+  font-weight: 500;
+}
+.DayPicker-Weekday {
+  color: #42423c;
+  font-size: 12px;
 }
 .DayPicker-Day--disabled {
   color: rgba(66, 66, 60, 0.45);

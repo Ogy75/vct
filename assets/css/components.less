@@ -511,14 +511,18 @@ span.from-title{
     width: 100%;
     color:@basetextColor;
     border-radius:4px;
-    min-height: 345px;
+    min-height: 310px;
 }
 .DayPicker-Month{
     width:100%;
 }
-.DayPicker-Weekday abbr[title]{
-    color:@highlightColor;
-    font-weight: 600;
+.DayPicker-Day {
+    font-size: 14px;
+    font-weight: 500;
+}
+.DayPicker-Weekday {
+    color: @basetextColor;
+    font-size: 12px;
 }
 .DayPicker-Day--disabled {
     color: fade(@basetextColor, 45%);
