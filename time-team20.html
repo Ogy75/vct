@@ -697,6 +697,29 @@
     </div>
     <!-- Save Dialog End -->
 
+    <!-- Save Dialog Start -->
+    <div class="modal fade" id="deleteMember" tabindex="-1" role="dialog" aria-labelledby="deleteMember" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="team-member-name">Are you sure you want to remove selected member?</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">yes</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Save Dialog End -->
     <!-- **************************************************MODALS END************************************************** -->
 
     <!--left nav-->
@@ -1370,7 +1393,7 @@
                                                         <li><a data-toggle="modal" data-target="#book" href="javascript:void(0)">Booked Vacations</a></li>
                                                         <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
                                                         <li><a data-toggle="modal" data-target="#memberDetails" href="javascript:void(0)">Team Member Details</a></li>
-                                                        <li><a href="javascript:void(0)">Remove Team Member</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
