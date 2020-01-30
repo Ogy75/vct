@@ -511,13 +511,14 @@ span.from-title{
     width: 100%;
     color:@basetextColor;
     border-radius:4px;
-    min-height: 350px;
+    min-height: 345px;
 }
 .DayPicker-Month{
     width:100%;
 }
 .DayPicker-Weekday abbr[title]{
-    color:fade(@basetextColor, 80%);
+    color:@highlightColor;
+    font-weight: 600;
 }
 .DayPicker-Day--disabled {
     color: fade(@basetextColor, 45%);
@@ -525,4 +526,14 @@ span.from-title{
 }
 .DayPicker-Day{
     border-radius: 0 !important;
+}
+.DayPicker:not(.DayPicker--interactionDisabled) .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+    background-color: white;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+    background-color: @highlightColor;
+    color: white;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+    background-color:darken(@highlightColor, 20%);
 }
