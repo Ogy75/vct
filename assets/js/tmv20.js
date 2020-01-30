@@ -357,8 +357,10 @@ $(document).ready(function() {
         $('.js_addDateMessage').removeClass('d-none');
         //$(this).attr('disabled', true);
         $('.add-date').removeClass('d-none');
-        //$('.home-days').attr('disabled', true);
-        $('.js_noDays').text('4');
+        var noS = $('.js_noDays').text();
+        noS++;
+        noS = $('.js_noDays').text(noS);
+        
     });
 
     //TABLE ACCORDION
