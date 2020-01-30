@@ -368,8 +368,8 @@ body{
     border-radius: 4px;
 }
 .converter-wrapper{
-    background:@highlightColor;
-    color:white;
+    background-image: linear-gradient(210deg, @highlightColor, darken(@highlightColor,25%) 85%);
+    color:@darkModeText;
     border-radius: 4px;
 }
 a.vct-team{
@@ -1159,3 +1159,6 @@ table.overview {
 .modal-backdrop{
     background:@basecolorDarkest !important;
 }
+.element-header{
+    background-image: linear-gradient(210deg, @highlightColor, darken(@highlightColor,25%) 85%);
+  }

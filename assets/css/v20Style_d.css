@@ -368,8 +368,8 @@ body.modal-open .vct-content {
   border-radius: 4px;
 }
 .converter-wrapper {
-  background: #177397;
-  color: white;
+  background-image: linear-gradient(210deg, #177397, #061f28 85%);
+  color: #d5d5d5;
   border-radius: 4px;
 }
 a.vct-team {
@@ -1149,4 +1149,7 @@ table.overview td {
 }
 .modal-backdrop {
   background: #42423c !important;
+}
+.element-header {
+  background-image: linear-gradient(210deg, #177397, #061f28 85%);
 }

@@ -355,10 +355,10 @@ $(document).ready(function() {
     //ADD HOME OFFICE DATE DEMO SCRIPT
     $('.js_addDate').on('click', function() {
         $('.js_addDateMessage').removeClass('d-none');
-        $(this).attr('disabled', true);
+        //$(this).attr('disabled', true);
         $('.add-date').removeClass('d-none');
-        $('.home-days').attr('disabled', true);
-        $('.js_noDays').addClass('badge-danger').text('4');
+        //$('.home-days').attr('disabled', true);
+        $('.js_noDays').text('4');
     });
 
     //TABLE ACCORDION
