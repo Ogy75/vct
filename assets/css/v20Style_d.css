@@ -797,8 +797,9 @@ input:checked + .slider:before {
   color: #d5d5d5;
 }
 .vct-team .vct-team-wrapper img.vct-client-logo {
-  width: 70%;
-  margin-top: 20px;
+  height: 42px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 .vct-team .vct-team-wrapper .status {
   position: absolute;
