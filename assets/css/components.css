@@ -495,3 +495,6 @@ span.from-title {
 .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
   background-color: #115773;
 }
+.modal-body {
+  padding: 0;
+}
