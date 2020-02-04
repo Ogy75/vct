@@ -894,9 +894,6 @@ input:checked + .slider:before {
 .bg-light {
   background: #e6e6e4;
 }
-.vct-nav-level1 {
-  display: none;
-}
 .campaign-input {
   height: 57px;
 }
