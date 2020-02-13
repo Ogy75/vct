@@ -23,70 +23,70 @@ $(document).ready(function() {
 
     $('#days-spent').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#days-spent-data').fadeIn();
     });
 
     $('#days-previous').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#days-previous-data').fadeIn();
     });
 
     $('#days-free').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#days-free-data').fadeIn();
     });
 
     $('#days-earned').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#days-earned-data').fadeIn();
     });
 
     $('#days-assigned').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#days-assigned-data').fadeIn();
     });
 
     $('#vacation').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#vacation-data').fadeIn();
     });
 
     $('#days-sickleave').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#days-sickleave-data').fadeIn();
     });
     $('#total-work-hours').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#total-work-hours-data').fadeIn();
     });
 
     $('#work-from-home').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#work-from-home-data').fadeIn();
     });
 
     $('#daily-time-tracking').click(function() {
         var timeModule = $('.time-module');
-        var panelContainer = $('.panel-container');
-        panelContainer.hide();
+        var panelData = $('.panel-data');
+        panelData.hide();
         $(this).parents('.left-items').find('#daily-time-tracking-data').fadeIn();
     });
 
