@@ -1,0 +1,993 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Time</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
+    <link rel="stylesheet" id="colorMode" href="assets/css/v20Style.css">
+    <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
+    <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fav-icn//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fav-icn//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fav-icn//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
+    <link rel="manifest" href="assets/fav-icn//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+</head>
+
+<body>
+
+    <!-- spentDays Modal Start -->
+    <div class="modal fade" id="spentDays" tabindex="-1" role="dialog" aria-labelledby="spentDays" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg" />
+                            </div>
+                            <div class="team-member-name">Mirko Mirkovic</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="d-block modal-title mb-4">Spent Vacation Days Log</span>
+                                    <div class="tm-data-value">2020</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="panel-container bg-none border-0 p-0 text-left">
+                                <div class="table-wrapper">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Period</th>
+                                                <th>no. of days</th>
+                                                <th>from earned</th>
+                                                <th>from vacation</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>10.1.2020 - 11.1.2020</td>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9.4.2020 - 10.4.2020</td>
+                                                <td>2</td>
+                                                <td>-</td>
+                                                <td>2</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>4</td>
+                                                <td>2</td>
+                                                <td>2</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- spentDays Modal End -->
+
+
+    <!-- SCROLL TOP -->
+    <a href="javascript:void(0)" id="go-top"><i class="fas fa-chevron-up"></i></a>
+
+    <!--Spinner-->
+    <div class="lds-dual-ring-bg">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+
+            <div class="vct-logo w-100 text-left text-white">
+                <img src="assets/images/app-v2-logo.svg" alt="enjoy.ing">
+            </div>
+
+            <ul class="vct-nav-menu">
+                <li><a class="selected" href="404.html"><i class="nav-icon far fa-calendar-alt mr-3"></i>My
+                        Days</a></li>
+                <li><a href="teams20-b.html"><i class="nav-icon fas fa-user-friends mr-3"></i>Project management</a>
+                </li>
+                <li><a href="overtime20.html"><i class="nav-icon fas fa-dollar-sign mr-3"></i>Finance management</a>
+                </li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-tags mr-3"></i>Manage
+                        Roles</a>
+                    <ul class="vct-nav-level1">
+                        <li><a href="operations-management20.html">Operation</a></li>
+                        <li><a href="finance-management20.html">Finance</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav">
+        <div class="vct-user-menu float-right">
+            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i class="far fa-moon pointer js_darkMode"></i></div>
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="fas fa-expand full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mx-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Djordjevic Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content">
+        <div class="container">
+            <div class="row">
+                <!-- MODULE TAB START -->
+                <div class="col-12 col-xl-8 left-items">
+                    <div class="row">
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module selected" id="vacation">
+                                <span class="module-label">vacation days available</span>
+                                <span class="module-icon selected"><i class="far fa-calendar-alt"></i></span>
+                                <span class="module-data">28</span>
+                                <div class="module-status active"></div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-6 col-sm-3">
+                            <div class="time-module" id="days-assigned">
+                                <span class="module-label">2020. vacation days assigned</span>
+                                <span class="module-icon"><i class="far fa-calendar-plus"></i></span>
+                                <span class="module-data">21</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module" id="days-previous">
+                                <span class="module-label">previous year vacation days</span>
+                                <span class="module-icon"><i class="far fa-calendar-check"></i></span>
+                                <span class="module-data">3</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module" id="days-spent">
+                                <span class="module-label">2020. vacation days spent</span>
+                                <span class="module-icon"><i class="far fa-calendar-minus"></i></span>
+                                <span class="module-data">3</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div> -->
+
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module" id="days-earned">
+                                <span class="module-label">earned hours&nbsp;/&nbsp;days</span>
+                                <a href="javascript:void(0)">
+                                    <span class="module-icon"><i class="far fa-calendar-plus"></i></span>
+                                </a>
+                                <span class="module-data">74/<span class="earned-days">9</span></span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module" id="days-sickleave">
+                                <span class="module-label">Sickleave days</span>
+                                <span class="module-icon"><i class="far fa-calendar-times"></i></span>
+                                <span class="module-data">3</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module" id="days-free">
+                                <span class="module-label">Free days</span>
+                                <span class="module-icon"><i class="far fa-calendar-check"></i></span>
+                                <span class="module-data">1</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module" id="total-work-hours">
+                                <span class="module-label">Total Work (h)</span>
+                                <span class="module-icon"><i class="far fa-clock"></i></span>
+                                <span class="module-data text-success">+8</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module" id="work-from-home">
+                                <span class="module-label">Work from Home days</span>
+                                <span class="module-icon"><i class="far fa-calendar-plus"></i></span>
+                                <span class="module-data">3</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module" id="daily-time-tracking">
+                                <span class="module-label">daily Time tracking (h)</span>
+                                <span class="module-icon"><i class="far fa-clock"></i></span>
+                                <span class="module-data text-danger">-0:30</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- SPENT DAYS -->
+                            <div class="panel-container" id="days-spent-data">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="table-title mb-2">2020 Vacation days spent log</div>
+                                        <div class="d-block w-100 float-left text-left">You have <span class="badge badge-success">0</span> spent days logged in current year.</div>
+                                        <div class="d-block w-100 mb-4 float-left text-left"><b>PLEASE NOTE:</b> This is the sum od days spent in current year deducted form vacation days or earned days.</div>
+                                    </div>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Period</th>
+                                                <th><i class="far fa-calendar"></i> No. of Days</th>
+                                                <th><i class="far fa-calendar-minus"></i> Deducted from</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>8.1.2020 - 10.1.2020</td>
+                                                <td>2</td>
+                                                <td>earned days</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14.1.2020</td>
+                                                <td>1</td>
+                                                <td>vacation days</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>3</td>
+                                                <td></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+                            <!-- PREVIOUS YEAR -->
+                            <div class="panel-container" id="days-previous-data">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="table-title">Previous year vacation days</div>
+                                        <div class="d-block w-100 mb-4 float-left text-left">Vacation days which were not used in previous year get transfered to current year and can be used untill <span class="badge badge-warning">31.6</span> of the current year.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Assigned in previous year</th>
+                                                <th><i class="far fa-calendar"></i> Spent in previous year</th>
+                                                <th><i class="far fa-calendar-minus"></i> Remaining</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>20</td>
+                                                <td>17</td>
+                                                <td>3</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>3</td>
+                                                <td></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- FREE DAYS -->
+                            <div class="panel-container" id="days-free-data">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="table-title mb-2">Free days</div>
+                                        <div class="d-block w-100 float-left text-left">Free days are slava, child birth days, family death case days.</div>
+                                        <div class="d-block w-100 mb-4 float-left text-left">You have <span class="badge badge-success">1</span> free days logged in current year.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Period</th>
+                                                <th><i class="far fa-calendar"></i> No. of Days</th>
+                                                <th><i class="far fa-calendar"></i> Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>19.12.2020</td>
+                                                <td>1</td>
+                                                <td>Slava</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+
+                            <!-- EARNED DAYS -->
+                            <div class="panel-container" id="days-earned-data">
+                                <span class="tab-title">You have a total of <span class="badge badge-success">15</span> earned hours at your disposal</span>
+                                <p>This is a total amount of remaining earned hours.</p>
+                                <!-- EARNED HOURS PAYOFF -->
+                                <div class="converter-wrapper mt-4 p-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="w-100">
+                                                <h4>Do you want to convert your earned hours to payment?</h4>
+                                                <p>This query will be available until <span class="badge badge-warning">31.4.2020.</span> After this date you won't be able to choose until the next quarterly query.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-5 col-xl-6">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-8 mt-3">
+                                                    <p>No. of hours for payment (min.<span> 10 </span> hours)</p>
+                                                    <input type="text" />
+                                                </div>
+                                                <div class="col-12 d-flex align-items-center justify-content-center justify-content-sm-start order-4 order-sm-4">
+                                                    <button class="btn btn-alert border border-white my-3 js_request">Request
+                                                        payment</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="table-title mb-2">Earned Hours/Days Log</div>
+                                            <div class="d-block w-100 mb-4 float-left text-left">Remaining earned hours and booking log.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-wrapper">
+                                        <table class="panel-table">
+                                            <thead>
+                                                <tr>
+                                                    <th><i class="far fa-calendar-alt"></i> Date</th>
+                                                    <th><i class="far fa-calendar"></i> No. of Hours</th>
+                                                    <th><i class="far fa-calendar"></i> Description</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>5.1.2020</td>
+                                                    <td>-10</td>
+                                                    <td>Payment requested</td>
+                                                    <td><span class="badge btn-alert finish-payoff js_cancel">Cancel
+                                                            request</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.10.2020</td>
+                                                    <td>4</td>
+                                                    <td>Travel</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3.9.2019</td>
+                                                    <td>4</td>
+                                                    <td>Travel</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.4.2019</td>
+                                                    <td>3</td>
+                                                    <td>On-Site Overtime</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12.11.2018</td>
+                                                    <td>4</td>
+                                                    <td>Office Overtime</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1.4.2017</td>
+                                                    <td>2</td>
+                                                    <td>Office Overtime</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr class="border-bottom">
+                                                    <td>+ Total Work Hours</td>
+                                                    <td><span class="text-success">+8</span></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total available</td>
+                                                    <td>15</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- SICKLEAVE DAYS -->
+                            <div class="panel-container" id="days-sickleave-data">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="table-title mb-2">Sickleave Days</div>
+                                        <div class="d-block w-100 mb-4 float-left text-left">You have <span class="badge badge-success">0</span> sickleave days logged in current year.</div>
+                                    </div>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Period</th>
+                                                <th><i class="far fa-calendar"></i> Days</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>6.1.2020 - 8.1.2020</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11.1.2020</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>3</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+                            
+
+                            <!-- AVAILABLE DAYS -->
+                            <div id="vacation-data">
+                                <div class="panel-container">
+                                    <span class="tab-title">You have a total of <span class="badge badge-success">28</span> days available at your disposal.</span>
+                                    <p>This is a sum of this years assigned vacation days, unused previous year vacation days and earned hours (converted to days). Before booking your vacation days please consult with your Team Leader. </p>
+                                    <!-- HOLIDAY BOOKING -->
+                                    <div class="booking-wrapper mt-4 p-4">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="w-100">
+                                                    <h4>Book my Vacation</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-7 col-xl-6">
+                                                <p class="mb-3"><span class="badge badge-info mr-1 mt-3 px-2">step
+                                                        1</span>Select Period</p>
+                                                <div class="datepicker-here mb-3" data-range="true" data-language="en">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-5 col-xl-6">
+                                                <div class="row">
+                                                    <div class="col-12 col-xl-6 order-2 order-sm-1">
+                                                        <p class="mb-3"><span class="badge badge-info mr-1 mt-3 px-2">step
+                                                                2</span>Earned days</p>
+                                                        <select class="earned-val w-100">
+
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 col-xl-6 order-3 order-sm-2">
+                                                        <p class="mb-3"><span class="badge badge-info mr-1 mt-3 px-2">step
+                                                                3</span>Vacation days</p>
+                                                        <select class=" vacation-val w-100">
+
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 order-1 order-sm-3">
+                                                        <p class="font-weight-bold mt-3">You have selected <span class="badge badge-info px-2 vacation-total">13</span> days in total. Please define how many days you want to use from your earned days.</p>
+                                                    </div>
+                                                    <div class="col-12 order-4 my-3">
+                                                        <div class="booking-responsibility w-100">
+                                                            <input type="checkbox" id="responsibility" name="responsibility" class="w-auto" />
+                                                            <label for="responsibility">Before booking my
+                                                                Vacation I have consulted my Team Lead and relevant person
+                                                                on Client side and they aprooved this period.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 d-flex align-items-center justify-content-center justify-content-sm-start order-4 order-sm-4">
+                                                        <button class="btn btn-alert border border-white px-5 my-3 js_book" disabled>Book</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-sm-8 js_bookingMessage d-none">
+                                                <div class="badge badge-success my-3">Request sucessful</div>
+                                                <div class="badge badge-danger my-3 d-none">Something went wrong. Please try again later.</div>
+                                                <p>You can view your request in the Vacation Booking Log below. Request can be canceled at any time before vacation start date.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-5">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="table-title mb-2">Booked Vacation Days</div>
+                                            </div>
+                                        </div>
+                                        <div class="table-wrapper">
+                                            <table class="panel-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th><i class="far fa-calendar-alt"></i> Period</th>
+                                                        <th><i class="far fa-calendar"></i> Days</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>23.3.2020 - 30.3.2020</td>
+                                                        <td>5</td>
+                                                        <td>
+                                                            <span class="badge btn-alert finish-payoff js_cancel">Cancel
+                                                                booking</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ASSIGNED DAYS -->
+                                <!-- <div class="panel-container mt-4">
+                                    <span class="tab-title">You have a quota of <span class="badge badge-success">21</span> days assigned for 2020.</span>
+                                    <p>These days can be used untill 31.6 next year. Before booking your vacation days please consult with your Team Leader. </p>
+                                </div> -->
+
+                                <!-- PREVIOUS YEAR -->
+                                <div class="panel-container mt-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="table-title mb-2">VACATION OVERVIEW</div>
+                                            <!-- <div class="d-block w-100 mb-4 float-left text-left">Vacation days which were not used in previous year get transfered to current year and can be used untill <span class="badge badge-warning">31.6</span> of the current year.
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="table-wrapper">
+                                        <table class="panel-table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Vacation days assigned in this year</td>
+                                                    <td>21</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>* Vacation days remaining from previous year</td>
+                                                    <td>2</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Earned days (days / hours)</td>
+                                                    <td>9 / 74</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Days spent in this year</td>
+                                                    <td>-4</td>
+                                                    <td><span class="badge badge-warning pointer" data-toggle="modal" data-target="#spentDays">show log</span></td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td>Total available</td>
+                                                    <td>28</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <div class="w-100 text-left mt-5">* Vacation days from previous year must be spent until <span class="badge badge-warning">31.6</span> in currrent year.</div>
+                                </div>
+
+                            </div>
+
+                            <!-- TOTAL WORK HOURS -->
+                            <div class="panel-container" id="total-work-hours-data">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="table-title">Total Work Hours</div>
+                                            <div class="d-flex justify-content-end">
+                                                <select>
+                                                    <option selected>2020</option>
+                                                    <option>2019</option>
+                                                    <option>2018</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="d-block w-100 mb-4 float-left text-left">2020 status of required work hours vs. logged work hours.</br><b>PLEASE NOTE:</b> These hours are automatically added/removed from your earned hours bank monthly.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Month</th>
+                                                <th><i class="far fa-calendar"></i> Hours required</th>
+                                                <th><i class="fas fa-list"></i> Hours logged</th>
+                                                <th><i class="far fa-clock"></i> Difference</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2019 transfer</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="badge badge-success">+6</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>January</td>
+                                                <td>140</td>
+                                                <td>140</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>February</td>
+                                                <td>152</td>
+                                                <td>150</td>
+                                                <td><span class="badge badge-danger">-2</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>April</td>
+                                                <td>160</td>
+                                                <td>164</td>
+                                                <td><span class="badge badge-success">+4</span></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>452</td>
+                                                <td>454</td>
+                                                <td><span class="badge badge-success">+8</span></td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- WORK FROM HOME -->
+                            <div class="panel-container" id="work-from-home-data">
+                                <span class="tab-title">You have logged <span
+                                        class="badge badge-success js_noDays">3</span> days as home office days this month.
+                                </span>
+                                <div class="converter-wrapper mt-4 p-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="w-100">
+                                                <h4>Add Home Office date</h4>
+                                                <p>Please log each day you've spent at your Home Office.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-5 col-xl-6">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-8 mt-3">
+                                                    <p>Select date</p>
+                                                    <input class="home-days" type="text">
+                                                </div>
+                                                <div class="col-12 d-flex align-items-center justify-content-center justify-content-sm-start order-4 order-sm-4">
+                                                    <button class="btn btn-alert border border-white my-3 js_addDate">Add to log</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="mt-5">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="table-title">Home Office dates log</div>
+                                        <div class="d-flex justify-content-end">
+                                            <select>
+                                                <option>January</option>
+                                                <option>February</option>
+                                                <option>March</option>
+                                                <option selected>April</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="table-wrapper">
+                                        <table class="panel-table">
+
+                                            <!-- <div class="d-block w-100 mb-4 float-left text-left">
+                                            Report days which you used to work from your Home Office in the current month.
+                                            <span class="d-block">
+                                                <span class="font-weight-bold">Please Note:</span>
+                                            You can use max. of 4 days per month.
+                                        </span>
+                                        </div> -->
+                                            <thead>
+                                                <tr>
+                                                    <th><i class="far fa-calendar-alt"></i> Day 1</th>
+                                                    <th><i class="far fa-calendar-alt"></i> Day 2</th>
+                                                    <th><i class="far fa-calendar-alt"></i> Day 3</th>
+                                                    <th><i class="far fa-calendar-alt"></i> Day 4</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>7.4.2020</td>
+                                                    <td>14.4.2020</td>
+                                                    <td>21.4.2020</td>
+                                                    <td><span class="add-date d-none">28.4.2020</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TIME TRACKING -->
+                            <div class="panel-container" id="daily-time-tracking-data">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="table-title">Daily Time Tracking</div>
+                                            <div class="d-flex justify-content-end">
+                                                <select>
+                                                    <option selected>April</option>
+                                                    <option>March</option>
+                                                    <option>February</option>
+                                                    <option>January</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="d-block w-100 mb-4 float-left text-left">
+                                            Log records first office entry and last office exit. 8h 30m presence is reqired during business days.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar"></i> Date</th>
+                                                <th><i class="far fa-clock"></i> First entry</th>
+                                                <th><i class="far fa-clock"></i> Last exit</th>
+                                                <th><i class="fas fa-clock"></i> Total</th>
+                                                <th><i class="fas fa-clock"></i> Net</th>
+                                                <th><i class="fas fa-clock"></i> Difference</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>02.04.2020</td>
+                                                <td>09:20</td>
+                                                <td>17:00</td>
+                                                <td>7:30</td>
+                                                <td>7:00</td>
+                                                <td><span class="badge badge-danger">-1:00</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>03.04.2020</td>
+                                                <td>09:00</td>
+                                                <td>17:00</td>
+                                                <td>8:00</td>
+                                                <td>7:30</td>
+                                                <td><span class="badge badge-danger">-0:30</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>04.04.2020</td>
+                                                <td>09:00</td>
+                                                <td>17:30</td>
+                                                <td>8:30</td>
+                                                <td>8:00</td>
+                                                <td><span class="badge badge-success"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>05.04.2020</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="badge badge-warning">N/A</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>06.04.2020</td>
+                                                <td>09:00</td>
+                                                <td>18:30</td>
+                                                <td>9:30</td>
+                                                <td>9:00</td>
+                                                <td><span class="badge badge-success">+1:00</span></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><span class="badge badge-danger">-0:30</span></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-4 mt-3 mt-xl-0">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="widget-container">
+                                <div class="d-flex element-header m-n4 py-3 px-4 rounded-top justify-content-between align-items-center">
+                                    <div class="table-title text-white">2020 Enjoy.ing dates</div>
+                                </div>
+                                <div class="table-wrapper pt-5">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Date</th>
+                                                <th><i class="fas fa-info"></i> Info</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>25 May</td>
+                                                <td>Enjoy.ing Anniversary</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Day Month</td>
+                                                <td>Event</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Day Month</td>
+                                                <td>Event</td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <div class="widget-container">
+                                <div class="d-flex element-header m-n4 py-3 px-4 rounded-top justify-content-between align-items-center">
+                                    <div class="table-title text-white">2020 Public Holidays</div>
+                                </div>
+                                <div class="table-wrapper pt-5">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Date</th>
+                                                <th><i class="fas fa-info"></i> Info</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1, 2 Jan.</td>
+                                                <td>New Year</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7 Jan.</td>
+                                                <td>Orthodox Christmas</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15, 16, 17 Feb.</td>
+                                                <td>Constitution Day</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17, 18, 19, 20 Apr.</td>
+                                                <td>Orthodox Easter (Orthodox only)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1, 2 May</td>
+                                                <td>Labour Day</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11 Nov.</td>
+                                                <td>Remembrance Day</td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <script src="assets/vendor/jquery341/jquery.min.js"></script>
+            <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js"></script>
+            <script src="assets/js/custom.js"></script>
+            <script src="assets/js/tmv20.js"></script>
+            <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+</body>
+
+</html>

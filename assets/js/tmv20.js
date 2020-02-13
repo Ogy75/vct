@@ -56,11 +56,11 @@ $(document).ready(function() {
         $(this).parents('.left-items').find('#days-assigned-data').fadeIn();
     });
 
-    $('#days-available').click(function() {
+    $('#vacation').click(function() {
         var timeModule = $('.time-module');
         var panelContainer = $('.panel-container');
         panelContainer.hide();
-        $(this).parents('.left-items').find('#days-available-data').fadeIn();
+        $(this).parents('.left-items').find('#vacation-data').fadeIn();
     });
 
     $('#days-sickleave').click(function() {

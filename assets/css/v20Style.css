@@ -210,6 +210,10 @@ input:disabled {
 .widget-container .table-wrapper table.panel-table thead th i {
   color: #b5b5ae;
 }
+.panel-container .table-wrapper table.panel-table thead th:last-child,
+.widget-container .table-wrapper table.panel-table thead th:last-child {
+  text-align: right;
+}
 .panel-container .table-wrapper table.panel-table tbody tr,
 .widget-container .table-wrapper table.panel-table tbody tr {
   border-bottom: 1px dotted #919186;
@@ -231,6 +235,10 @@ input:disabled {
 .widget-container .table-wrapper table.panel-table tbody tr td.log-comment {
   white-space: initial !important;
 }
+.panel-container .table-wrapper table.panel-table tbody tr td:last-child,
+.widget-container .table-wrapper table.panel-table tbody tr td:last-child {
+  text-align: right;
+}
 .panel-container .table-wrapper table.panel-table tfoot tr,
 .widget-container .table-wrapper table.panel-table tfoot tr {
   background: #edf8fc;
@@ -239,6 +247,10 @@ input:disabled {
 .panel-container .table-wrapper table.panel-table tfoot tr td,
 .widget-container .table-wrapper table.panel-table tfoot tr td {
   padding: 8px 5px;
+}
+.panel-container .table-wrapper table.panel-table tfoot tr td:last-child,
+.widget-container .table-wrapper table.panel-table tfoot tr td:last-child {
+  text-align: right;
 }
 .panel-container .table-toggle,
 .widget-container .table-toggle {
