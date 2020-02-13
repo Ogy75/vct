@@ -29,7 +29,7 @@ body{
       }
     ::selection {
         color: @darkModeText;
-        background: black;
+        background: @warningColor;
       }
     &.modal-open{
         .vct-content {
@@ -900,9 +900,7 @@ transform: translateX(12px);
 }
 .bg-light{background:lighten(@basetextColor, 65%)}
 
-.vct-nav-level1{
-    //display: none;
-}
+
 
 .campaign-input{
     height:57px;
@@ -1163,7 +1161,7 @@ table.overview {
     background-image: linear-gradient(210deg, @highlightColor, darken(@highlightColor,25%) 85%);
   }
 
-  
+
 //FIXES
 .react-autosuggest__suggestions-container--open {
     border: 1px solid @basecolorDarkest;

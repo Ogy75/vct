@@ -28,7 +28,7 @@ body ::-moz-selection {
 }
 body ::selection {
   color: #d5d5d5;
-  background: black;
+  background: #d8483e;
 }
 body.modal-open .vct-content {
   -webkit-filter: grayscale(1);
