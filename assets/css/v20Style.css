@@ -1110,3 +1110,7 @@ table.overview td {
 .element-header {
   background-image: linear-gradient(210deg, #1E9BCC, #0e475d 85%);
 }
+.react-autosuggest__suggestions-container--open {
+  max-height: 164px;
+  overflow-y: auto;
+}
