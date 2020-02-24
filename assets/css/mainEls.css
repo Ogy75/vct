@@ -378,7 +378,7 @@ input.filter-projects::placeholder {
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
   transition: all 0.12s linear;
-  z-index: 1070;
+  z-index: 2070 !important;
 }
 .lds-dual-ring-bg .lds-dual-ring {
   position: fixed;
