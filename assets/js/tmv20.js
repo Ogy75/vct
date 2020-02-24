@@ -392,4 +392,8 @@ $(document).ready(function() {
     $('.js_entryInput').val('');
     $('.js_entryInput').focus();
     });
+
+    $('.js_removeEntry').on('click', function(){
+        $(this).parents('tr').remove();
+    });
 });
