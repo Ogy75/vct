@@ -619,6 +619,80 @@
     </div>
     <!-- Normal Modal End -->
 
+    <!--Holidays Modal Start -->
+    <div class="modal fade" id="holidays" tabindex="-1" role="dialog" aria-labelledby="holidays" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg" />
+                            </div>
+                            <div class="team-member-name">Petar Petrovic</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="d-block modal-title mb-4">Holidays</span>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <!-- <div class="col-6">
+                                    <span class="d-block data-title">Time Manager</span>
+                                    <span class="d-block tm-data-value">160</span>
+                                </div> -->
+                                <div class="col-3">
+                                    <span class="d-block data-title">Harvest</span>
+                                    <span class="d-block data-value">9</span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="d-block data-title">FRM</span>
+                                    <span class="d-block data-value">10</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="panel-container bg-transparent border-0 p-0">
+                                <!-- <span class="d-block modal-title mb-4">Time Manager work hours log</span> -->
+                                <div class="table-wrapper">
+                                    <table class="panel-table text-left">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Period</th>
+                                                <th><i class="far fa-calendar"></i> No. of days</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="modal-table-project bg-info" colspan="3">Harvest</th>
+                                            </tr>
+                                            <tr>
+                                                <td>20.3.2020 - 1.4.2020</td>
+                                                <td>9</td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <th class="modal-table-project bg-info" colspan="3">FRM</th>
+                                            </tr>
+                                            <tr>
+                                                <td>20.3.2020 - 2.4.2020</td>
+                                                <td>10</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Holidays Modal End -->
+
     <!--Home-Office Modal Start -->
     <div class="modal fade" id="home-office" tabindex="-1" role="dialog" aria-labelledby="home-office" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -1074,7 +1148,7 @@
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
                                             <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
-                                            <input type="text" value="0" name="holidays">
+                                            <input type="text" value="10" name="holidays" class="negative-value">
                                             <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
