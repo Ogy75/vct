@@ -261,10 +261,6 @@ body.modal-open .vct-content {
 .widget-container .table-wrapper table.panel-table tfoot tr td {
   padding: 8px 5px;
 }
-.panel-container .table-wrapper table.panel-table tfoot tr td:last-child,
-.widget-container .table-wrapper table.panel-table tfoot tr td:last-child {
-  text-align: right;
-}
 .panel-container .tab-title,
 .widget-container .tab-title {
   font-size: 20px;
