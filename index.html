@@ -631,11 +631,12 @@
 
                                 <!-- PREVIOUS YEAR -->
                                 <div class="panel-container mt-4">
-                                    <div class="row">
+                                    <div class="row justify-content-center">
                                         <div class="col-12">
-                                            <div class="table-title mb-2">VACATION OVERVIEW</div>
-                                            <!-- <div class="d-block w-100 mb-4 float-left text-left">Vacation days which were not used in previous year get transfered to current year and can be used untill <span class="badge badge-warning">31.6</span> of the current year.
-                                            </div> -->
+                                            <div class="table-title mb-2 w-100">VACATION OVERVIEW</div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <canvas id="myVacation" width="100" height="100" class="my-3"></canvas>
                                         </div>
                                     </div>
                                     <div class="table-wrapper">
@@ -1003,6 +1004,28 @@
             <script src="assets/js/tmv20.js"></script>
             <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<script>
+    //DOUGHNUT CHART
+var ctx = document.getElementById('myVacation').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Assigned Vacation Days', 'Previous year vacation days remaining', 'Earned days', 'Days Spent'],
+        datasets: [{
+            label: '# of Votes',
+            data: [21, 2, 9, 4],
+            backgroundColor: [
+                '#1E9BCC',
+                '#4CAFD6',
+                '#6EBEDD',
+                '#d8483e'
+            ],
+            borderWidth: 0
+        }]
+    }
+})
+</script>
 
 </body>
 
