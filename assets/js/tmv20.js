@@ -271,6 +271,7 @@ $(document).ready(function() {
             $('.vct-employees-tab').addClass('d-none');
             $(this).toggleClass('selected');
             $('#tab-employees').toggleClass('selected');
+            $('.export-all').show();
         }
     });
     $('#tab-employees').on('click', function() {
@@ -279,6 +280,7 @@ $(document).ready(function() {
             $('.vct-employees-tab').removeClass('d-none');
             $(this).toggleClass('selected');
             $('#tab-projects').toggleClass('selected');
+            $('.export-all').hide();
         }
     });
 
