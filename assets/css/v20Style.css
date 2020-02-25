@@ -702,6 +702,7 @@ a.vct-team:hover {
   height: 18px;
   border-radius: 2px;
   margin: 0;
+  vertical-align: middle;
 }
 .switch input {
   opacity: 0;
@@ -1145,6 +1146,12 @@ table.overview td {
   text-align: center;
   font-size: 12px;
   line-height: 14px;
+}
+.switch-label {
+  height: 18px;
+  display: inline-block;
+  line-height: 18px;
+  margin-right: 4px;
 }
 .react-autosuggest__suggestions-container--open {
   max-height: 164px;

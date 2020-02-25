@@ -728,6 +728,7 @@ label {
   height: 18px;
   border-radius: 2px;
   margin: 0;
+  vertical-align: middle;
 }
 .switch input {
   opacity: 0;
@@ -741,7 +742,7 @@ label {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #dadad6;
+  background-color: #919186;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -1185,6 +1186,12 @@ table.overview td {
   text-align: center;
   font-size: 12px;
   line-height: 14px;
+}
+.switch-label {
+  height: 18px;
+  display: inline-block;
+  line-height: 18px;
+  margin-right: 4px;
 }
 .react-autosuggest__suggestions-container--open {
   border: 1px solid #42423c;
