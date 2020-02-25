@@ -1173,6 +1173,27 @@ table.overview {
 .element-header{
   background-image: linear-gradient(210deg, @highlightColor, darken(@highlightColor,25%) 85%);
 }
+.chart-total-days{
+  position: absolute;
+  display: block;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  .days-no{
+    color: @highlightColor;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3rem;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+  .unit{
+    color: @basetextColor;
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 
 //FIXES
 .react-autosuggest__suggestions-container--open {

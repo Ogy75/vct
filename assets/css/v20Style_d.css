@@ -1165,6 +1165,27 @@ table.overview td {
 .element-header {
   background-image: linear-gradient(210deg, #177397, #061f28 85%);
 }
+.chart-total-days {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.chart-total-days .days-no {
+  color: #d5d5d5;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-align: center;
+  letter-spacing: -1px;
+}
+.chart-total-days .unit {
+  color: #d5d5d5;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+}
 .react-autosuggest__suggestions-container--open {
   border: 1px solid #42423c;
   background-color: #696964;

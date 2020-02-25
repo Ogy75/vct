@@ -635,7 +635,11 @@
                                         <div class="col-12">
                                             <div class="table-title mb-2 w-100">VACATION OVERVIEW</div>
                                         </div>
-                                        <div class="col-12 col-md-6">
+                                        <div class="col-12 col-md-6 position-relative">
+                                            <div class="chart-total-days">
+                                            <div class="days-no">28</div>
+                                            <div class="unit">days available</div>
+                                        </div>
                                             <canvas id="myVacation" width="100" height="100" class="my-3"></canvas>
                                         </div>
                                     </div>
@@ -1023,6 +1027,11 @@ var myChart = new Chart(ctx, {
             ],
             borderWidth: 0
         }]
+    },
+    options: {
+        legend: {
+            display: false
+        }
     }
 })
 </script>
