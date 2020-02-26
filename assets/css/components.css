@@ -307,6 +307,9 @@ a.uploaded-file:hover {
 .vct-team .vct-team-wrapper:hover .action-icon {
   color: #1E9BCC;
 }
+.vct-team .vct-team-wrapper:hover h5 {
+  color: #1E9BCC;
+}
 .vct-team .vct-team-wrapper a {
   text-decoration: none;
   transition: all 0.12s linear;
@@ -315,6 +318,11 @@ a.uploaded-file:hover {
   font-size: 42px;
   color: #c2c2bb;
   transition: all 0.12s linear;
+}
+.vct-team .vct-team-wrapper p {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
 }
 .vct-team .vct-team-block {
   position: relative;
