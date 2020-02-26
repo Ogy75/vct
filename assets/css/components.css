@@ -308,6 +308,10 @@ a.uploaded-file:hover {
   text-decoration: none;
   transition: all 0.12s linear;
 }
+.vct-team .vct-team-wrapper .action-icon {
+  font-size: 42px;
+  color: #c2c2bb;
+}
 .vct-team .vct-team-block {
   position: relative;
   transition: all 0.12s linear;
