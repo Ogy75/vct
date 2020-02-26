@@ -464,7 +464,7 @@
 
                                     <div class="vct-project-tab">
                                     <span class="tab-title">You have a total of <span
-                                            class="badge badge-success">28</span> days available at your
+                                            class="badge badge-success">23</span> days available at your
                                         disposal.</span>
                                     <p>This is a sum of this years assigned vacation days, unused previous year vacation
                                         days and earned hours (converted to days). Before booking your vacation days
@@ -605,6 +605,11 @@
                                                     <td></td>
                                                 </tr>
                                                 <tr>
+                                                    <td>Booked vacation days</td>
+                                                    <td>5</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
                                                     <td>Days spent in this year</td>
                                                     <td>4</td>
                                                     <td class="text-right"><span class="badge badge-success pointer"
@@ -615,7 +620,7 @@
                                             <tfoot>
                                                 <tr>
                                                     <td>Total available</td>
-                                                    <td>28</td>
+                                                    <td>23</td>
                                                     <td></td>
                                                 </tr>
                                             </tfoot>
@@ -977,15 +982,16 @@
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
-                        labels: ['Assigned Vacation Days', 'Previous year vacation days remaining', 'Earned days', 'Days Spent'],
+                        labels: ['Assigned Vacation Days', 'Previous year vacation days remaining', 'Earned days', 'Days Spent', 'Booked Vacation Days'],
                         datasets: [{
                             label: '# of Votes',
-                            data: [21, 2, 9, 4],
+                            data: [21, 2, 9, 4, 6],
                             backgroundColor: [
                                 '#1E9BCC',
                                 '#4CAFD6',
                                 '#6EBEDD',
-                                '#d8483e'
+                                '#d8483e',
+                                '#ffc400'
                             ],
                             borderWidth: 0
                         }]
