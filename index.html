@@ -189,33 +189,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="col-6 col-sm-3">
-                            <div class="time-module" id="days-assigned">
-                                <span class="module-label">2020. vacation days assigned</span>
-                                <span class="module-icon"><i class="far fa-calendar-plus"></i></span>
-                                <span class="module-data">21</span>
-                                <div class="module-status"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-sm-3">
-                            <div class="time-module" id="days-previous">
-                                <span class="module-label">previous year vacation days</span>
-                                <span class="module-icon"><i class="far fa-calendar-check"></i></span>
-                                <span class="module-data">3</span>
-                                <div class="module-status"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-6 col-sm-3">
-                            <div class="time-module" id="days-spent">
-                                <span class="module-label">2020. vacation days spent</span>
-                                <span class="module-icon"><i class="far fa-calendar-minus"></i></span>
-                                <span class="module-data">3</span>
-                                <div class="module-status"></div>
-                            </div>
-                        </div> -->
-
                         <div class="col-6 col-sm-3">
                             <div class="time-module" id="days-earned">
                                 <span class="module-label">earned hours&nbsp;/&nbsp;days</span>
@@ -275,84 +248,6 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <!-- SPENT DAYS -->
-                            <!-- <div class="panel-container" id="days-spent-data">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="table-title mb-2">2020 Vacation days spent log</div>
-                                        <div class="d-block w-100 float-left text-left">You have <span class="badge badge-success">0</span> spent days logged in current year.</div>
-                                        <div class="d-block w-100 mb-4 float-left text-left"><b>PLEASE NOTE:</b> This is the sum od days spent in current year deducted form vacation days or earned days.</div>
-                                    </div>
-                                </div>
-                                <div class="table-wrapper">
-                                    <table class="panel-table">
-                                        <thead>
-                                            <tr>
-                                                <th><i class="far fa-calendar-alt"></i> Period</th>
-                                                <th><i class="far fa-calendar"></i> No. of Days</th>
-                                                <th><i class="far fa-calendar-minus"></i> Deducted from</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>8.1.2020 - 10.1.2020</td>
-                                                <td>2</td>
-                                                <td>earned days</td>
-                                            </tr>
-                                            <tr>
-                                                <td>14.1.2020</td>
-                                                <td>1</td>
-                                                <td>vacation days</td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <td>Total</td>
-                                                <td>3</td>
-                                                <td></td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div> -->
-
-
-
-                            <!-- PREVIOUS YEAR -->
-                            <!-- <div class="panel-container" id="days-previous-data">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="table-title">Previous year vacation days</div>
-                                        <div class="d-block w-100 mb-4 float-left text-left">Vacation days which were not used in previous year get transfered to current year and can be used untill <span class="badge badge-warning">31.6</span> of the current year.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="table-wrapper">
-                                    <table class="panel-table">
-                                        <thead>
-                                            <tr>
-                                                <th><i class="far fa-calendar-alt"></i> Assigned in previous year</th>
-                                                <th><i class="far fa-calendar"></i> Spent in previous year</th>
-                                                <th><i class="far fa-calendar-minus"></i> Remaining</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>20</td>
-                                                <td>17</td>
-                                                <td>3</td>
-                                            </tr>
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <td>Total</td>
-                                                <td>3</td>
-                                                <td></td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div> -->
 
                             <!-- FREE DAYS -->
                             <div class="panel-data" id="days-free-data">
@@ -554,9 +449,20 @@
                             </div>
 
 
-                            <!-- AVAILABLE DAYS -->
+                            <!-- VACATION DAYS -->
                             <div class="panel-data" id="vacation-data">
+
+                                
+
                                 <div class="panel-container">
+                                    <div class="col-12">
+                                        <div class="vct-project-person-switch d-flex justify-content-center mb-4">
+                                            <button class="tab-button selected" id="tab-projects">VACATION BOOKING</button>
+                                            <button class="tab-button" id="tab-employees">VACATION OVERVIEW</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="vct-project-tab">
                                     <span class="tab-title">You have a total of <span
                                             class="badge badge-success">28</span> days available at your
                                         disposal.</span>
@@ -660,13 +566,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                
 
-                                <!-- PREVIOUS YEAR -->
-                                <div class="panel-container mt-4">
+                            <!-- VACATION OVERVIEW -->
+                                <div class="vct-employees-tab d-none">
                                     <div class="row justify-content-center">
-                                        <div class="col-12">
-                                            <div class="table-title mb-2 w-100">VACATION OVERVIEW</div>
-                                        </div>
                                         <div class="col-10 col-sm-8 col-md-5 position-relative">
                                             <div class="chart-total-days">
                                                 <div class="days-no">28</div>
@@ -720,6 +624,7 @@
                                     <div class="w-100 text-left mt-5">*Previous year vacation days are valid until <span
                                             class="badge badge-warning">31.6.2020</span></div>
                                 </div>
+                            </div>
                             </div>
 
                             <!-- TOTAL WORK HOURS -->
