@@ -201,9 +201,6 @@ input:disabled {
   background-color: #ebebeb;
   color: #696964;
 }
-input.negative-value:disabled {
-  background-color: rgba(190, 30, 45, 0.1);
-}
 textarea {
   border: 1px solid #959592;
   line-height: 18px;
@@ -257,9 +254,13 @@ input.filter-projects::placeholder {
   border: 1px solid #1E9BCC;
 }
 .negative-value {
-  background: rgba(190, 30, 45, 0.1);
+  background: #f2c1bd !important;
   color: #42423c;
-  border: 1px solid #be1e2d !important;
+  border: 1px solid #d8483e !important;
+}
+.negative-value:disabled {
+  background: #ebebeb !important;
+  color: #42423c !important;
 }
 .nav-down {
   transition: all 0.2s linear;
