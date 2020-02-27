@@ -514,3 +514,6 @@ span.from-title {
 .modal-body {
   padding: 0;
 }
+.apexcharts-menu-icon {
+  display: none;
+}
