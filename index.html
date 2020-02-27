@@ -223,7 +223,7 @@
                             <div class="time-module" id="total-work-hours">
                                 <span class="module-label">Total Work (h)</span>
                                 <span class="module-icon"><i class="far fa-clock"></i></span>
-                                <span class="module-data text-success">+8</span>
+                                <span class="module-data text-success">+28</span>
                                 <div class="module-status"></div>
                             </div>
                         </div>
@@ -661,6 +661,7 @@
                                                 work hours vs. logged work hours.</br><b>PLEASE NOTE:</b> These hours
                                                 are automatically added/removed from your earned hours bank monthly.
                                             </div>
+                                            <canvas id="work-hours-chart" class="my-3" width="400" height="200"></canvas>
                                         </div>
                                     </div>
                                     <div class="table-wrapper">
@@ -695,10 +696,10 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td>April</td>
+                                                    <td>March</td>
                                                     <td>160</td>
-                                                    <td>164</td>
-                                                    <td class="text-right"><span class="badge badge-success">+4</span>
+                                                    <td>190</td>
+                                                    <td class="text-right"><span class="badge badge-success">+30</span>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -706,8 +707,8 @@
                                                 <tr>
                                                     <td>Total</td>
                                                     <td>452</td>
-                                                    <td>454</td>
-                                                    <td class="text-right"><span class="badge badge-success">+8</span>
+                                                    <td>480</td>
+                                                    <td class="text-right"><span class="badge badge-success">+28</span>
                                                     </td>
                                                 </tr>
                                         </table>
@@ -1012,6 +1013,46 @@
                         }
                     }
                 })
+            </script>
+
+            <script>
+                var ctx = document.getElementById('work-hours-chart');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        datasets: [
+                            {
+                                label: "Logged work hours",
+                                backgroundColor: "#1E9BCC",
+                                data: [140, 150, 160],
+                                stack: 3
+                            },
+                            {
+                                label: "Overtime",
+                                backgroundColor: "#1f9c26",
+                                data: [0, 0, 30],
+                                stack: 3
+                            },
+                            {
+                                label: "Hours missing",
+                                backgroundColor: "#d8483e",
+                                data: [0, 2, 0],
+                                stack: 3
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [{
+                                stacked: true
+                            }],
+                            yAxes: [{
+                                stacked: true
+                            }]
+                        }
+                    }
+                });
             </script>
 
 </body>
