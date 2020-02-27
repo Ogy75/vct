@@ -517,3 +517,7 @@ span.from-title {
 .apexcharts-menu-icon {
   display: none;
 }
+canvas#myVacation {
+  position: relative;
+  z-index: 1;
+}
