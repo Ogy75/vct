@@ -484,9 +484,6 @@ a.vct-team:hover {
   font-family: 'Font Awesome 5 Free';
   margin-right: 8px;
 }
-.vct-content .team-name:after {
-  content: " Team";
-}
 .vct-content .team-name.visible:before {
   content: "\f078";
   font-family: 'Font Awesome 5 Free';
