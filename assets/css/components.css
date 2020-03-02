@@ -521,3 +521,6 @@ canvas#myVacation {
   position: relative;
   z-index: 1;
 }
+input[type=checkbox] {
+  width: auto !important;
+}
