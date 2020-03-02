@@ -1193,11 +1193,9 @@ table.overview td {
   border: 1px solid #42423c;
   background-color: #696964;
   font-weight: 500;
-}
-.react-autosuggest__suggestion-highlighted {
-  background-color: #42423c !important;
-}
-.react-autosuggest__suggestions-container--open {
   max-height: 164px;
   overflow-y: auto;
+}
+.react-autosuggest__suggestion--highlighted {
+  background-color: #42423c !important;
 }
