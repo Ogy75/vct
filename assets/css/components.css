@@ -524,3 +524,7 @@ canvas#myVacation {
 input[type=checkbox] {
   width: auto !important;
 }
+.weatherwidget-io {
+  border-radius: 4px;
+  overflow: hidden;
+}
