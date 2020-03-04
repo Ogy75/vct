@@ -38,7 +38,6 @@
     <script src='assets/vendor/fullcalendar-4.4.0/packages/daygrid/main.js'></script>
 
     <script>
-
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('vacation-timeline');
 
@@ -49,53 +48,50 @@
                         title: 'Dejan Dejanovic',
                         start: '2020-03-09',
                         end: '2020-03-19',
-                        color:'#086633'
+                        color: '#086633'
                     },
                     {
                         title: 'Bogdan Perovic',
                         start: '2020-03-19',
                         end: '2020-03-27',
-                        color:'#159933'
+                        color: '#159933'
                     },
                     {
                         title: 'Miodrag Borovic',
                         start: '2020-03-18',
                         end: '2020-03-26',
-                        color:'#cc0099'
+                        color: '#cc0099'
                     },
                     {
                         title: 'Marinko Trpkovic',
                         start: '2020-03-17',
                         end: '2020-03-25',
-                        color:'#022c7a'
+                        color: '#022c7a'
                     },
                     {
                         title: 'Sreten Bogdanovic',
                         start: '2020-03-16',
                         end: '2020-03-26',
-                        color:'#ee6b3b'
+                        color: '#ee6b3b'
                     },
                     {
                         title: 'Predrag Mandrakovic',
                         start: '2020-03-23',
                         end: '2020-03-28',
-                        color:'#ec0f47'
+                        color: '#ec0f47'
                     },
                     {
                         title: 'Bozidar Draganovic',
                         start: '2020-03-25',
                         end: '2020-03-28',
-                        color:'#660033'
+                        color: '#660033'
                     }
                 ],
                 weekends: false
             });
-
             calendar.render();
             calendar.setOption('height', 'auto');
-
         });
-
     </script>
 
 </head>
@@ -860,6 +856,48 @@
     </div>
     <!-- Home-Office Modal End -->
 
+    <!--UpdateProfile Modal Start -->
+    <div class="modal fade" id="updateProfile" tabindex="-1" role="dialog" aria-labelledby="updateProfile"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg" />
+                            </div>
+                            <div class="team-member-name">Petar Petrovic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="px-5 py-4 text-left">
+                            <label for="previous-username" class="mt-3">Previous Username</label>
+                            <input class="w-100" name="previous-username" placeholder="pepe1405@enjoying.rs" disabled/>
+                            <label for="new-username" class="mt-3">New Username</label>
+                            <input class="w-100" name="new-username"/>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p class="px-5 pb-4 text-left"><b>PLEASE NOTE:</b> To be able to update the profile with new personal data New Username has to be updated in the Active Directory first.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Update Profile</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- UpdateProfile Modal End -->
+
     <!-- Save Dialog Start -->
     <div class="modal fade" id="saveDialog" tabindex="-1" role="dialog" aria-labelledby="saveDialog" aria-hidden="true"
         data-backdrop="static" data-keyboard="false">
@@ -1258,12 +1296,13 @@
                                                         <li><a href="javascript:void(0)">Export to Excel</a></li>
                                                         <li><a class="js_generate" href="javascript:void(0)">Generate
                                                                 PDF</a></li>
-                                                        <li><a data-toggle="modal" data-target="#book"
-                                                                href="javascript:void(0)">Booked Vacations</a></li>
                                                         <li><a data-toggle="modal" data-target="#dailyTime"
                                                                 href="javascript:void(0)">Daily Time Tracking</a></li>
                                                         <li><a data-toggle="modal" data-target="#memberDetails"
                                                                 href="javascript:void(0)">Team Member Details</a></li>
+                                                                <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                    data-target="#updateProfile">Update Employee Profile</a>
+                                                            </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1491,12 +1530,13 @@
                                                         <li><a href="javascript:void(0)">Export to Excel</a></li>
                                                         <li><a class="js_generate" href="javascript:void(0)">Generate
                                                                 PDF</a></li>
-                                                        <li><a data-toggle="modal" data-target="#book"
-                                                                href="javascript:void(0)">Booked Vacations</a></li>
                                                         <li><a data-toggle="modal" data-target="#dailyTime"
                                                                 href="javascript:void(0)">Daily Time Tracking</a></li>
                                                         <li><a data-toggle="modal" data-target="#memberDetails"
                                                                 href="javascript:void(0)">Team Member Details</a></li>
+                                                                <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                    data-target="#updateProfile">Update Employee Profile</a>
+                                                            </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1724,14 +1764,15 @@
                                                         <li><a href="javascript:void(0)">Export to Excel</a></li>
                                                         <li><a class="js_generate" href="javascript:void(0)">Generate
                                                                 PDF</a></li>
-                                                        <li><a data-toggle="modal" data-target="#book"
-                                                                href="javascript:void(0)">Booked Vacations</a></li>
                                                         <li><a data-toggle="modal" data-target="#dailyTime"
                                                                 href="javascript:void(0)">Daily Time Tracking</a></li>
                                                         <li><a data-toggle="modal" data-target="#memberDetails"
                                                                 href="javascript:void(0)">Team Member Details</a></li>
                                                         <li><a href="javascript:void(0)" data-toggle="modal"
                                                                 data-target="#deleteMember">Remove Team Member</a></li>
+                                                                <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                    data-target="#updateProfile">Update Employee Profile</a>
+                                                            </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2295,6 +2336,9 @@
                                                         <li><a href="javascript:void(0)" data-toggle="modal"
                                                                 data-target="#memberDetails">Team Member Details</a>
                                                         </li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                            data-target="#updateProfile">Update Employee Profile</a>
+                                                    </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2340,6 +2384,9 @@
                                                         <li><a href="javascript:void(0)" data-toggle="modal"
                                                                 data-target="#memberDetails">Team Member Details</a>
                                                         </li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                            data-target="#updateProfile">Update Employee Profile</a>
+                                                    </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2384,6 +2431,9 @@
                                                         <li><a href="javascript:void(0)" data-toggle="modal"
                                                                 data-target="#memberDetails">Team Member Details</a>
                                                         </li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                            data-target="#updateProfile">Update Employee Profile</a>
+                                                    </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2427,6 +2477,9 @@
                                                         <li><a href="javascript:void(0)" data-toggle="modal"
                                                                 data-target="#memberDetails">Team Member Details</a>
                                                         </li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                            data-target="#updateProfile">Update Employee Profile</a>
+                                                    </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2471,6 +2524,9 @@
                                                         <li><a href="javascript:void(0)" data-toggle="modal"
                                                                 data-target="#memberDetails">Team Member Details</a>
                                                         </li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                            data-target="#updateProfile">Update Employee Profile</a>
+                                                    </li>
                                                     </ul>
                                                 </div>
                                             </div>
