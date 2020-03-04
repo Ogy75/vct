@@ -528,3 +528,6 @@ input[type=checkbox] {
   border-radius: 4px;
   overflow: hidden;
 }
+#vacation-timeline {
+  min-height: 400px;
+}

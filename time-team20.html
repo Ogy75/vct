@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
     <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css">
     <link rel="stylesheet" id="colorMode" href="assets/css/v20Style.css">
+    <link href='assets/vendor/fullcalendar-4.4.0/packages/core/main.css' rel='stylesheet' />
+    <link href='assets/vendor/fullcalendar-4.4.0/packages/daygrid/main.css' rel='stylesheet' />
     <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
@@ -32,6 +34,29 @@
     <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <script src='assets/vendor/fullcalendar-4.4.0/packages/core/main.js'></script>
+    <script src='assets/vendor/fullcalendar-4.4.0/packages/daygrid/main.js'></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('vacation-timeline');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['dayGrid']
+            });
+
+            calendar.render();
+            calendar.setOption('height', 500);
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['dayGrid'],
+                defaultView: 'dayGridMonth'
+            });
+        });
+
+    </script>
+
 </head>
 
 <body class="xyzz">
@@ -47,7 +72,8 @@
     <!-- **************************************************MODALS START************************************************** -->
 
     <!--memberDetails Modal Start -->
-    <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
@@ -77,13 +103,14 @@
                                 <div class="table-wrapper">
 
 
-                                    
+
 
 
                                     <!-- PERSONAL DATA -->
                                     <div class="container table-toggle p-0 pointer">
                                         <div class="text-left">
-                                            <div class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
+                                            <div
+                                                class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="d-inline-flex modal-table-project">
@@ -107,7 +134,8 @@
                                     <!-- JOB DATA -->
                                     <div class="container table-toggle p-0 pointer">
                                         <div class="text-left">
-                                            <div class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
+                                            <div
+                                                class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="d-inline-flex modal-table-project">
@@ -163,7 +191,7 @@
                                                             <input type="checkbox">
                                                             <span class="slider"></span>
                                                         </label>
-    
+
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -182,7 +210,8 @@
                                     <!-- PREVIOUS PROJECTS -->
                                     <div class="container table-toggle p-0 pointer">
                                         <div class="text-left">
-                                            <div class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
+                                            <div
+                                                class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="d-inline-flex modal-table-project">
@@ -204,11 +233,12 @@
                                         </table>
                                     </div>
 
-                                    
+
                                     <!-- FINANCIAL DATA -->
                                     <div class="container table-toggle p-0 pointer">
                                         <div class="text-left">
-                                            <div class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
+                                            <div
+                                                class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="d-inline-flex modal-table-project">
@@ -239,11 +269,12 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    
+
                                     <!-- GENERAL TIME DATA -->
                                     <div class="container table-toggle p-0 pointer">
                                         <div class="text-left">
-                                            <div class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
+                                            <div
+                                                class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="d-inline-flex modal-table-project">
@@ -275,11 +306,12 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    
+
                                     <!-- BOOKED VACATIONS-->
                                     <div class="container table-toggle p-0 pointer">
                                         <div class="text-left">
-                                            <div class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
+                                            <div
+                                                class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="d-inline-flex modal-table-project">
@@ -311,7 +343,8 @@
     <!-- memberDetails Modal End -->
 
     <!-- dailyTime Modal Start -->
-    <div class="modal fade" id="dailyTime" tabindex="-1" role="dialog" aria-labelledby="dailyTime" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal fade" id="dailyTime" tabindex="-1" role="dialog" aria-labelledby="dailyTime" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
@@ -342,8 +375,10 @@
 
                                     <!-- DAY entry -->
                                     <div class="container table-toggle p-0 pointer">
-                                        <div class="d-inline-flex align-items-center justify-content-between text-left p-3 w-100">
-                                            <div class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-between text-left p-3 w-100">
+                                            <div
+                                                class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="d-inline-flex">
@@ -397,8 +432,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td colspan="6">
-                                                        <input class="w-50 d-inline-block js_entryInput" placeholder="add new entry (hh:mm)" type="text" value="" />
-                                                        <button class="btn btn-highlight js_addEntry"><span class="fas fa-plus"></button>
+                                                        <input class="w-50 d-inline-block js_entryInput"
+                                                            placeholder="add new entry (hh:mm)" type="text" value="" />
+                                                        <button class="btn btn-highlight js_addEntry"><span
+                                                                class="fas fa-plus"></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -407,8 +444,10 @@
 
                                     <!-- DAY entry -->
                                     <div class="container table-toggle p-0 pointer">
-                                        <div class="d-inline-flex align-items-center justify-content-between text-left p-3 w-100">
-                                            <div class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
+                                        <div
+                                            class="d-inline-flex align-items-center justify-content-between text-left p-3 w-100">
+                                            <div
+                                                class="d-inline-flex align-items-center justify-content-center js_tableToggle p-3">
                                                 <i class="fas fa-chevron-down"></i>
                                             </div>
                                             <div class="d-inline-flex">
@@ -462,8 +501,10 @@
                                                 </tr>
                                                 <tr>
                                                     <td colspan="6">
-                                                        <input class="w-50 d-inline-block js_entryInput" placeholder="add new entry (hh:mm)" type="text" value="" />
-                                                        <button class="btn btn-highlight js_addEntry"><span class="fas fa-plus"></button>
+                                                        <input class="w-50 d-inline-block js_entryInput"
+                                                            placeholder="add new entry (hh:mm)" type="text" value="" />
+                                                        <button class="btn btn-highlight js_addEntry"><span
+                                                                class="fas fa-plus"></button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -531,7 +572,10 @@
                                             <tr>
                                                 <td>2.3.2020</td>
                                                 <td>8</td>
-                                                <td class="log-comment">Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                                <td class="log-comment">Lorem Ipsum dolor sit amet, consectetur
+                                                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                    exercitation ullamco laboris nisi ut aliquip
                                                     ex ea commodo consequat.</td>
                                             </tr>
                                             <tr>
@@ -694,7 +738,7 @@
                                                 <td>20.3.2020 - 1.4.2020</td>
                                                 <td>9</td>
                                             </tr>
-                                            
+
                                             <tr>
                                                 <th class="modal-table-project bg-info" colspan="3">FRM</th>
                                             </tr>
@@ -702,7 +746,7 @@
                                                 <td>20.3.2020 - 2.4.2020</td>
                                                 <td>10</td>
                                             </tr>
-                                            
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -716,7 +760,8 @@
     <!-- Holidays Modal End -->
 
     <!--Home-Office Modal Start -->
-    <div class="modal fade" id="home-office" tabindex="-1" role="dialog" aria-labelledby="home-office" aria-hidden="true">
+    <div class="modal fade" id="home-office" tabindex="-1" role="dialog" aria-labelledby="home-office"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
@@ -775,13 +820,15 @@
     <!-- Home-Office Modal End -->
 
     <!-- Save Dialog Start -->
-    <div class="modal fade" id="saveDialog" tabindex="-1" role="dialog" aria-labelledby="saveDialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal fade" id="saveDialog" tabindex="-1" role="dialog" aria-labelledby="saveDialog" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
                     <div class="col-12">
                         <div class="p-5 image-background">
-                            <div class="team-member-name">There are unsaved changes.<br>Do you want to save them now?</div>
+                            <div class="team-member-name">There are unsaved changes.<br>Do you want to save them now?
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -798,28 +845,58 @@
     </div>
     <!-- Save Dialog End -->
 
-    <!-- Remove Dialog Start -->
-    <div class="modal fade" id="deleteMember" tabindex="-1" role="dialog" aria-labelledby="deleteMember" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- Vacation Calendar Modal Start -->
+    <div class="modal fade" id="vacationCalendar" tabindex="-1" role="dialog" aria-labelledby="vacationCalendar"
+        aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
                     <div class="col-12">
                         <div class="p-5 image-background">
-                            <div class="team-member-name">Are you sure you want to remove selected member?</div>
+                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-name">[Team name] </br> vacation overview</div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="p-4">
-                            <button class="btn btn-cancel m-1">yes</button>
-                            <button class="btn btn-highlight m-1" data-dismiss="modal" aria-label="Close">cancel</button>
+                            <div id="vacation-timeline"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Vacation Calendar Modal End -->
+
+    <!-- Save Dialog Start -->
+    <div class="modal fade" id="saveDialog" tabindex="-1" role="dialog" aria-labelledby="saveDialog" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="team-member-name">There are unsaved changes.<br>Do you want to save them now?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">save</button>
+                            <button class="btn btn-cancel m-1">don't save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Save Dialog End -->
+    <!-- Vacation Modal Calendar End -->
     <!-- Remove Dialog End -->
     <!-- **************************************************MODALS END************************************************** -->
 
@@ -836,15 +913,19 @@
 
             <ul class="vct-nav-menu">
                 <li><a class="" href="index.html"><i class="nav-icon far fa-calendar-alt mr-3"></i>My Days</a></li>
-                <li><a href="teams20-b.html"><i class="nav-icon fas fa-user-friends mr-3"></i>Project management</a></li>
-                <li><a href="overtime20.html"><i class="nav-icon fas fa-dollar-sign mr-3"></i>Finance management</a></li>
-                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-tags mr-3"></i>Manage Roles</a>
+                <li><a href="teams20-b.html"><i class="nav-icon fas fa-user-friends mr-3"></i>Project management</a>
+                </li>
+                <li><a href="overtime20.html"><i class="nav-icon fas fa-dollar-sign mr-3"></i>Finance management</a>
+                </li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-tags mr-3"></i>Manage
+                        Roles</a>
                     <ul class="vct-nav-level1">
                         <li><a href="operations-management20.html">Operation</a></li>
                         <li><a href="finance-management20.html">Finance</a></li>
                     </ul>
                 </li>
-                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
+                <li><a class="has-level1" href="javascript:void(0)"><i
+                            class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
                     <ul class="vct-nav-level1">
                         <li><a href="mapping20.html">Mappings</a></li>
                         <li><a href="app-management20.html">app settings</a></li>
@@ -859,8 +940,10 @@
     <!--top-nav-->
     <div class="vct-top-nav">
         <div class="vct-user-menu float-right">
-            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i class="far fa-moon pointer js_darkMode"></i></div>
-            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="fas fa-expand full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i
+                    class="far fa-moon pointer js_darkMode"></i></div>
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
+                    class="fas fa-expand full-view"></i></div>
             <div class="d-inline-block vct-user-profile-image position-relative mx-3">
                 <img src="assets/images/user.jpg" alt="user name">
             </div>
@@ -890,7 +973,8 @@
             <div class="vct-project-tab">
                 <div class="row">
                     <div class="col-6 d-flex align-items-center justify-content-start">
-                        <button class="btn btn-highlight" onclick="window.location.href='teams20-b.html'">all projects</button>
+                        <button class="btn btn-highlight" onclick="window.location.href='teams20-b.html'">all
+                            projects</button>
                     </div>
                     <div class=" col-6 project-logo d-flex align-items-center justify-content-end">
                         <img src="assets/images/logo-edelweiss.svg">
@@ -903,7 +987,8 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="vct-project-name-wrapper">
-                                        <div class="h-100 project-name m-0"><span class="client-name">Edelweiss</span>Internet Booking Engine</div>
+                                        <div class="h-100 project-name m-0"><span
+                                                class="client-name">Edelweiss</span>Internet Booking Engine</div>
                                     </div>
                                     <div class="d-flex justify-content-end align-items-center h-100">
                                         <div class="item-menu fas fa-ellipsis-v">
@@ -923,7 +1008,8 @@
                         <!-- TIME REMINDER -->
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <span class="badge badge-warning"><span>April </span>Time required <span>160h</span></span>
+                                <span class="badge badge-warning"><span>April </span>Time required
+                                    <span>160h</span></span>
                             </div>
                         </div>
                         <!-- TEAM LIST HEADER -->
@@ -947,7 +1033,11 @@
                                                         <div class="arrow"></div>
                                                         <ul>
                                                             <span class="item-menu-title">Project options</span>
-                                                            <li><a href="javascript:void(0)">Sve opcije koje su bile i pre 2.0</a></li>
+                                                            <li><a href="javascript:void(0)">Sve opcije koje su bile i
+                                                                    pre 2.0</a></li>
+                                                            <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                    data-target="#vacationCalendar">Team Vacation
+                                                                    Calendar</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -1082,14 +1172,16 @@
                         <div class="row justify-content-center">
                             <div class="col-10 col-md-8 col-lg-6 p-4">
                                 <div class="position-relative">
-                                    <input class="filter-members find-member" placeholder="Find team member" type="text">
+                                    <input class="filter-members find-member" placeholder="Find team member"
+                                        type="text">
                                     <span class="fas fa-search search-icon"></span>
                                     <span class="reset-input far fa-times-circle"></span>
                                 </div>
                             </div>
                         </div>
                         <!-- NO RESULTS MESSAGE -->
-                        <div class="row no-results-message justify-content-center align-items-center" style="display: none;">
+                        <div class="row no-results-message justify-content-center align-items-center"
+                            style="display: none;">
                             <div class="no-results col-12 h-100 p-5 text-center no-results">
                                 <h4>No Results Match your Search Criteria</h4>
                                 <p>Please modify your query</p>
@@ -1110,8 +1202,12 @@
                                             <div class="team-member-name">Mirko Mirkovic</div>
                                         </div>
                                         <div class="d-flex justify-content-end">
-                                            <a href="javascript:void(0)" target="_blank" class="fas fa-file-alt uploaded-file" data-toggle="tooltip" data-placement="top" title="" data-original-title="Attached report"></a>
-                                            <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas pdf-report" data-toggle="tooltip" data-placement="top" title="" data-original-title="Team Member PDF report"></a>
+                                            <a href="javascript:void(0)" target="_blank"
+                                                class="fas fa-file-alt uploaded-file" data-toggle="tooltip"
+                                                data-placement="top" title="" data-original-title="Attached report"></a>
+                                            <a href="/assets/docs/test.pdf" target="_blank"
+                                                class="d-none fas pdf-report" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Team Member PDF report"></a>
                                             <div class="loader fas fa-spinner"></div>
                                             <div class="item-menu fas fa-ellipsis-v">
                                                 <div class="item-menu-wrapper">
@@ -1119,10 +1215,14 @@
                                                     <ul>
                                                         <span class="item-menu-title">Team Member options</span>
                                                         <li><a href="javascript:void(0)">Export to Excel</a></li>
-                                                        <li><a class="js_generate" href="javascript:void(0)">Generate PDF</a></li>
-                                                        <li><a data-toggle="modal" data-target="#book" href="javascript:void(0)">Booked Vacations</a></li>
-                                                        <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
-                                                        <li><a data-toggle="modal" data-target="#memberDetails" href="javascript:void(0)">Team Member Details</a></li>
+                                                        <li><a class="js_generate" href="javascript:void(0)">Generate
+                                                                PDF</a></li>
+                                                        <li><a data-toggle="modal" data-target="#book"
+                                                                href="javascript:void(0)">Booked Vacations</a></li>
+                                                        <li><a data-toggle="modal" data-target="#dailyTime"
+                                                                href="javascript:void(0)">Daily Time Tracking</a></li>
+                                                        <li><a data-toggle="modal" data-target="#memberDetails"
+                                                                href="javascript:void(0)">Team Member Details</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1133,7 +1233,8 @@
                                         <div class="col-12">
                                             <span class="badge badge-secondary">Team Reporter</span>
                                             <span class="badge badge-info mt-2">Senior QA Engineer</span>
-                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking
+                                                Engine</span>
                                         </div>
                                     </div>
 
@@ -1145,12 +1246,15 @@
                                             </div>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                            <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                            <label for="normal" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
                                             <input type="text" value="0" name="normal">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#normal"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#normal"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                            <label for="travel" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
                                             <input type="text" value="0" name="travel">
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
@@ -1158,38 +1262,51 @@
                                             <input type="text" value="0" name="totalWork" disabled>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
-                                            <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                            <label for="overtime" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                            <div class="vct-client-checkbox position-absolute" data-toggle="tooltip"
+                                                data-placement="top" title=""
+                                                data-original-title="Odobreno od strane klijenta"><input
+                                                    type="checkbox">
                                             </div>
                                             <input type="text" value="16" name="overtime">
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
+                                            <label for="eiInternal" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
                             godisnji razgovori, itd.)">Ei
-                                            internal</label>
+                                                internal</label>
                                             <input type="text" value="8" name="eiInternal">
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
+                                            <label for="free" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
                             dopunimo vreme (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                             <input type="text" value="0" name="free">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#saveDialog"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#saveDialog"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                            <label for="holidays" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
                                             <input type="text" value="10" name="holidays" class="negative-value">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#holidays"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                            <label for="sickness" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Sickness - bolovanja">Sickness</label>
                                             <input type="text" value="0" name="sickness">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#sickness"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
-                                            Off</label>
+                                            <label for="daysOff" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                                Off</label>
                                             <input type="text" value="0" name="daysOff">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#daysOff"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
                                             <label for="total">Total</label>
@@ -1210,9 +1327,12 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                                <label for="homeOffice" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dani provedeni u radu od kuce">No. of Days</label>
+                                                <label for="homeOffice" data-toggle="tooltip" data-placement="top"
+                                                    title="" data-original-title="Dani provedeni u radu od kuce">No. of
+                                                    Days</label>
                                                 <input type="text" value="4" name="homeOffice" disabled>
-                                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#home-office"></i>
+                                                <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                    data-toggle="modal" data-target="#home-office"></i>
                                             </div>
                                         </div>
                                         <!-- ON SITE -->
@@ -1223,11 +1343,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                                <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                                <label for="normal" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
                                                 <input type="text" value="0" name="normal">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                                <label for="travel" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
                                                 <input type="text" value="0" name="travel">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
@@ -1235,33 +1357,44 @@
                                                 <input type="text" value="0" name="totalWork" disabled>
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
-                                                <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                                <label for="overtime" data-toggle="tooltip" data-placement="top"
+                                                    title=""
+                                                    data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                                <div class="vct-client-checkbox position-absolute" data-toggle="tooltip"
+                                                    data-placement="top" title=""
+                                                    data-original-title="Odobreno od strane klijenta"><input
+                                                        type="checkbox">
                                                 </div>
                                                 <input type="text" value="16" name="overtime">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
+                                                <label for="eiInternal" data-toggle="tooltip" data-placement="top"
+                                                    title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
                             godisnji razgovori, itd.)">Ei
-                                            internal</label>
+                                                    internal</label>
                                                 <input type="text" value="8" name="eiInternal">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
+                                                <label for="free" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
                             dopunimo vreme (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                                 <input type="text" value="0" name="free">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                                <label for="holidays" data-toggle="tooltip" data-placement="top"
+                                                    title=""
+                                                    data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
                                                 <input type="text" value="0" name="holidays">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                                <label for="sickness" data-toggle="tooltip" data-placement="top"
+                                                    title="" data-original-title="Sickness - bolovanja">Sickness</label>
                                                 <input type="text" value="0" name="sickness">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
-                                            Off</label>
+                                                <label for="daysOff" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                                    Off</label>
                                                 <input type="text" value="0" name="daysOff">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
@@ -1278,11 +1411,14 @@
                                             </div>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                            <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Razlika u odnosu na potrebno vreme.">difference (h)</label>
+                                            <label for="normal" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Razlika u odnosu na potrebno vreme.">difference
+                                                (h)</label>
                                             <input type="text" value="0" name="normal">
                                         </div>
                                         <div class="col-12 col-md-9 col-xl-9">
-                                            <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment is mandatory of difference exists">Comment</label>
+                                            <label for="comment" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Comment is mandatory of difference exists">Comment</label>
                                             <textarea class="comment" name="comment"></textarea>
                                         </div>
                                     </div>
@@ -1299,8 +1435,12 @@
                                             <div class="team-member-name">Petar Petrovic</div>
                                         </div>
                                         <div class="d-flex justify-content-end">
-                                            <a href="javascript:void(0)" target="_blank" class="fas fa-file-alt uploaded-file" data-toggle="tooltip" data-placement="top" title="" data-original-title="Attached report"></a>
-                                            <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas pdf-report" data-toggle="tooltip" data-placement="top" title="" data-original-title="Team Member PDF report"></a>
+                                            <a href="javascript:void(0)" target="_blank"
+                                                class="fas fa-file-alt uploaded-file" data-toggle="tooltip"
+                                                data-placement="top" title="" data-original-title="Attached report"></a>
+                                            <a href="/assets/docs/test.pdf" target="_blank"
+                                                class="d-none fas pdf-report" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Team Member PDF report"></a>
                                             <div class="loader fas fa-spinner"></div>
                                             <div class="item-menu fas fa-ellipsis-v">
                                                 <div class="item-menu-wrapper">
@@ -1308,10 +1448,14 @@
                                                     <ul>
                                                         <span class="item-menu-title">Team Member options</span>
                                                         <li><a href="javascript:void(0)">Export to Excel</a></li>
-                                                        <li><a class="js_generate" href="javascript:void(0)">Generate PDF</a></li>
-                                                        <li><a data-toggle="modal" data-target="#book" href="javascript:void(0)">Booked Vacations</a></li>
-                                                        <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
-                                                        <li><a data-toggle="modal" data-target="#memberDetails" href="javascript:void(0)">Team Member Details</a></li>
+                                                        <li><a class="js_generate" href="javascript:void(0)">Generate
+                                                                PDF</a></li>
+                                                        <li><a data-toggle="modal" data-target="#book"
+                                                                href="javascript:void(0)">Booked Vacations</a></li>
+                                                        <li><a data-toggle="modal" data-target="#dailyTime"
+                                                                href="javascript:void(0)">Daily Time Tracking</a></li>
+                                                        <li><a data-toggle="modal" data-target="#memberDetails"
+                                                                href="javascript:void(0)">Team Member Details</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1322,7 +1466,8 @@
                                             <span class="badge badge-success">Team Lead</span>
                                             <span class="badge badge-secondary">Team Reporter</span>
                                             <span class="badge badge-info mt-2">Senior Software Engineer</span>
-                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking
+                                                Engine</span>
                                         </div>
                                     </div>
                                     <!-- OFFICE -->
@@ -1333,12 +1478,15 @@
                                             </div>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                            <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                            <label for="normal" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
                                             <input type="text" value="0" name="normal">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#normal"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#normal"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                            <label for="travel" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
                                             <input type="text" value="0" name="travel">
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
@@ -1346,38 +1494,51 @@
                                             <input type="text" value="0" name="totalWork" disabled>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
-                                            <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                            <label for="overtime" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                            <div class="vct-client-checkbox position-absolute" data-toggle="tooltip"
+                                                data-placement="top" title=""
+                                                data-original-title="Odobreno od strane klijenta"><input
+                                                    type="checkbox">
                                             </div>
                                             <input type="text" value="16" name="overtime">
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
+                                            <label for="eiInternal" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
                             godisnji razgovori, itd.)">Ei
-                                            internal</label>
+                                                internal</label>
                                             <input type="text" value="8" name="eiInternal">
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
+                                            <label for="free" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
                             dopunimo vreme (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                             <input type="text" value="0" name="free">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#free"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                            <label for="holidays" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
                                             <input type="text" value="0" name="holidays">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#holidays"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                            <label for="sickness" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Sickness - bolovanja">Sickness</label>
                                             <input type="text" value="0" name="sickness">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#sickness"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
-                                            Off</label>
+                                            <label for="daysOff" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                                Off</label>
                                             <input type="text" value="0" name="daysOff">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#daysOff"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
                                             <label for="total">Total</label>
@@ -1399,9 +1560,12 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                                <label for="homeOffice" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dani provedeni u radu od kuce">No. of Days</label>
+                                                <label for="homeOffice" data-toggle="tooltip" data-placement="top"
+                                                    title="" data-original-title="Dani provedeni u radu od kuce">No. of
+                                                    Days</label>
                                                 <input type="text" value="4" name="homeOffice" disabled>
-                                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#home-office"></i>
+                                                <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                    data-toggle="modal" data-target="#home-office"></i>
                                             </div>
                                         </div>
                                         <!-- ON SITE -->
@@ -1412,11 +1576,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                                <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                                <label for="normal" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
                                                 <input type="text" value="0" name="normal">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                                <label for="travel" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
                                                 <input type="text" value="0" name="travel">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
@@ -1424,33 +1590,44 @@
                                                 <input type="text" value="0" name="totalWork" disabled>
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
-                                                <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                                <label for="overtime" data-toggle="tooltip" data-placement="top"
+                                                    title=""
+                                                    data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                                <div class="vct-client-checkbox position-absolute" data-toggle="tooltip"
+                                                    data-placement="top" title=""
+                                                    data-original-title="Odobreno od strane klijenta"><input
+                                                        type="checkbox">
                                                 </div>
                                                 <input type="text" value="16" name="overtime">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
+                                                <label for="eiInternal" data-toggle="tooltip" data-placement="top"
+                                                    title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
                             godisnji razgovori, itd.)">Ei
-                                            internal</label>
+                                                    internal</label>
                                                 <input type="text" value="8" name="eiInternal">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
+                                                <label for="free" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
                             dopunimo vreme (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                                 <input type="text" value="0" name="free">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                                <label for="holidays" data-toggle="tooltip" data-placement="top"
+                                                    title=""
+                                                    data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
                                                 <input type="text" value="0" name="holidays">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                                <label for="sickness" data-toggle="tooltip" data-placement="top"
+                                                    title="" data-original-title="Sickness - bolovanja">Sickness</label>
                                                 <input type="text" value="0" name="sickness">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
-                                            Off</label>
+                                                <label for="daysOff" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                                    Off</label>
                                                 <input type="text" value="0" name="daysOff">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
@@ -1466,11 +1643,14 @@
                                             </div>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                            <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Razlika u odnosu na potrebno vreme.">difference (h)</label>
+                                            <label for="normal" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Razlika u odnosu na potrebno vreme.">difference
+                                                (h)</label>
                                             <input type="text" value="0" name="normal">
                                         </div>
                                         <div class="col-12 col-md-9 col-xl-9">
-                                            <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment is mandatory of difference exists">Comment</label>
+                                            <label for="comment" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Comment is mandatory of difference exists">Comment</label>
                                             <textarea class="comment" name="comment"></textarea>
                                         </div>
                                     </div>
@@ -1488,8 +1668,12 @@
                                             <div class="team-member-name">Slavko Slavkov</div>
                                         </div>
                                         <div class="d-flex justify-content-end">
-                                            <a href="javascript:void(0)" target="_blank" class="fas fa-file-alt uploaded-file" data-toggle="tooltip" data-placement="top" title="" data-original-title="Attached report"></a>
-                                            <a href="/assets/docs/test.pdf" target="_blank" class="d-none fas pdf-report" data-toggle="tooltip" data-placement="top" title="" data-original-title="Team Member PDF report"></a>
+                                            <a href="javascript:void(0)" target="_blank"
+                                                class="fas fa-file-alt uploaded-file" data-toggle="tooltip"
+                                                data-placement="top" title="" data-original-title="Attached report"></a>
+                                            <a href="/assets/docs/test.pdf" target="_blank"
+                                                class="d-none fas pdf-report" data-toggle="tooltip" data-placement="top"
+                                                title="" data-original-title="Team Member PDF report"></a>
                                             <div class="loader fas fa-spinner"></div>
                                             <div class="item-menu fas fa-ellipsis-v">
                                                 <div class="item-menu-wrapper">
@@ -1497,11 +1681,16 @@
                                                     <ul>
                                                         <span class="item-menu-title">Team Member options</span>
                                                         <li><a href="javascript:void(0)">Export to Excel</a></li>
-                                                        <li><a class="js_generate" href="javascript:void(0)">Generate PDF</a></li>
-                                                        <li><a data-toggle="modal" data-target="#book" href="javascript:void(0)">Booked Vacations</a></li>
-                                                        <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
-                                                        <li><a data-toggle="modal" data-target="#memberDetails" href="javascript:void(0)">Team Member Details</a></li>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
+                                                        <li><a class="js_generate" href="javascript:void(0)">Generate
+                                                                PDF</a></li>
+                                                        <li><a data-toggle="modal" data-target="#book"
+                                                                href="javascript:void(0)">Booked Vacations</a></li>
+                                                        <li><a data-toggle="modal" data-target="#dailyTime"
+                                                                href="javascript:void(0)">Daily Time Tracking</a></li>
+                                                        <li><a data-toggle="modal" data-target="#memberDetails"
+                                                                href="javascript:void(0)">Team Member Details</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#deleteMember">Remove Team Member</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -1511,8 +1700,10 @@
                                         <div class="col-12">
                                             <span class="badge badge-warning">Temp. member</span>
                                             <span class="badge badge-info mt-2">Senior Software Engineer</span>
-                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
-                                            <a href="time-team20.html" target="_new" class="badge badge-light mt-2">Vontobel - Platform Solutions</a>
+                                            <span class="badge badge-light mt-2">Edelweiss - Internet Booking
+                                                Engine</span>
+                                            <a href="time-team20.html" target="_new"
+                                                class="badge badge-light mt-2">Vontobel - Platform Solutions</a>
                                         </div>
                                     </div>
                                     <!-- OFFICE -->
@@ -1523,12 +1714,15 @@
                                             </div>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                            <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                            <label for="normal" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
                                             <input type="text" value="0" name="normal">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#normal"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#normal"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                            <label for="travel" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
                                             <input type="text" value="0" name="travel">
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
@@ -1536,38 +1730,51 @@
                                             <input type="text" value="0" name="totalWork" disabled>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
-                                            <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                            <label for="overtime" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                            <div class="vct-client-checkbox position-absolute" data-toggle="tooltip"
+                                                data-placement="top" title=""
+                                                data-original-title="Odobreno od strane klijenta"><input
+                                                    type="checkbox">
                                             </div>
                                             <input type="text" value="16" name="overtime">
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
+                                            <label for="eiInternal" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
                             godisnji razgovori, itd.)">Ei
-                                            internal</label>
+                                                internal</label>
                                             <input type="text" value="8" name="eiInternal">
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
+                                            <label for="free" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
                             dopunimo vreme (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                             <input type="text" value="0" name="free">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#free"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#free"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                            <label for="holidays" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
                                             <input type="text" value="0" name="holidays">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#holidays"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#holidays"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                            <label for="sickness" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Sickness - bolovanja">Sickness</label>
                                             <input type="text" value="0" name="sickness">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#sickness"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#sickness"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
-                                            <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
-                                            Off</label>
+                                            <label for="daysOff" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                                Off</label>
                                             <input type="text" value="0" name="daysOff">
-                                            <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#daysOff"></i>
+                                            <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                data-toggle="modal" data-target="#daysOff"></i>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1">
                                             <label for="total">Total</label>
@@ -1589,9 +1796,12 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                                <label for="homeOffice" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dani provedeni u radu od kuce">No. of Days</label>
+                                                <label for="homeOffice" data-toggle="tooltip" data-placement="top"
+                                                    title="" data-original-title="Dani provedeni u radu od kuce">No. of
+                                                    Days</label>
                                                 <input type="text" value="4" name="homeOffice" disabled>
-                                                <i class="info-modal-trigger ti-more-alt position-absolute" data-toggle="modal" data-target="#home-office"></i>
+                                                <i class="info-modal-trigger ti-more-alt position-absolute"
+                                                    data-toggle="modal" data-target="#home-office"></i>
                                             </div>
                                         </div>
                                         <!-- ON SITE -->
@@ -1602,11 +1812,13 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                                <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
+                                                <label for="normal" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Normal - vreme provedeno na komercijalnim projektima">Normal</label>
                                                 <input type="text" value="0" name="normal">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="travel" data-toggle="tooltip" data-placement="top" title="" data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
+                                                <label for="travel" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Travel - vreme provedeno u putu prilikom odlaska kod klijenta">Travel</label>
                                                 <input type="text" value="0" name="travel">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
@@ -1614,33 +1826,44 @@
                                                 <input type="text" value="0" name="totalWork" disabled>
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="overtime" data-toggle="tooltip" data-placement="top" title="" data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
-                                                <div class="vct-client-checkbox position-absolute" data-toggle="tooltip" data-placement="top" title="" data-original-title="Odobreno od strane klijenta"><input type="checkbox">
+                                                <label for="overtime" data-toggle="tooltip" data-placement="top"
+                                                    title=""
+                                                    data-original-title="Overtime - rad na projektima radnim danima posle 19h i vikendima!">Overtime</label>
+                                                <div class="vct-client-checkbox position-absolute" data-toggle="tooltip"
+                                                    data-placement="top" title=""
+                                                    data-original-title="Odobreno od strane klijenta"><input
+                                                        type="checkbox">
                                                 </div>
                                                 <input type="text" value="16" name="overtime">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="eiInternal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
+                                                <label for="eiInternal" data-toggle="tooltip" data-placement="top"
+                                                    title="" data-original-title="Ei Internal - rad na internim projektima ili overhead koji je nastao usled administrativnih obaveza (razni sastanci,
                             godisnji razgovori, itd.)">Ei
-                                            internal</label>
+                                                    internal</label>
                                                 <input type="text" value="8" name="eiInternal">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="free" data-toggle="tooltip" data-placement="top" title="" data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
+                                                <label for="free" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Free - fond sati koji dopunjuje ukupne mesecne sate - koristimo ga za nove kolege koji dodju u sred meseca pa time
                             dopunimo vreme (npr. ako je neko dosao 15-og u mesecu posle 10 radnih dana u Free ce biti upisano 80h), takodje ga koristimo za kolege koji odlaze iz firme po slicnom principu).">Free</label>
                                                 <input type="text" value="0" name="free">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="holidays" data-toggle="tooltip" data-placement="top" title="" data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
+                                                <label for="holidays" data-toggle="tooltip" data-placement="top"
+                                                    title=""
+                                                    data-original-title="Holiday - vreme / dani koji se oduzimaju od fonda godisnjeg odmora">Holidays</label>
                                                 <input type="text" value="0" name="holidays">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="sickness" data-toggle="tooltip" data-placement="top" title="" data-original-title="Sickness - bolovanja">Sickness</label>
+                                                <label for="sickness" data-toggle="tooltip" data-placement="top"
+                                                    title="" data-original-title="Sickness - bolovanja">Sickness</label>
                                                 <input type="text" value="0" name="sickness">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
-                                                <label for="daysOff" data-toggle="tooltip" data-placement="top" title="" data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
-                                            Off</label>
+                                                <label for="daysOff" data-toggle="tooltip" data-placement="top" title=""
+                                                    data-original-title="Days off - slobodni dani na ime zakonskog prava (slava, vencanje, rodjenje deteta,...)">Days
+                                                    Off</label>
                                                 <input type="text" value="0" name="daysOff">
                                             </div>
                                             <div class="col-4 col-md-3 col-xl-1">
@@ -1656,11 +1879,14 @@
                                             </div>
                                         </div>
                                         <div class="col-4 col-md-3 col-xl-1 position-relative">
-                                            <label for="normal" data-toggle="tooltip" data-placement="top" title="" data-original-title="Razlika u odnosu na potrebno vreme.">difference (h)</label>
+                                            <label for="normal" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Razlika u odnosu na potrebno vreme.">difference
+                                                (h)</label>
                                             <input type="text" value="0" name="normal">
                                         </div>
                                         <div class="col-12 col-md-9 col-xl-9">
-                                            <label for="comment" data-toggle="tooltip" data-placement="top" title="" data-original-title="Comment is mandatory of difference exists">Comment</label>
+                                            <label for="comment" data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Comment is mandatory of difference exists">Comment</label>
                                             <textarea class="comment" name="comment"></textarea>
                                         </div>
                                     </div>
@@ -1687,16 +1913,21 @@
                     <div class="col-12">
                         <div class="w-100 bg-white vct-total-toggle shadow">
                             <div class="vct-total-toggle-card position-absolute shadow-sm">
-                                <a href="javascript:void(0)">TEAM TOTALS<i class="fas fa-chevron-down fa-chevron-up ml-2"></i></a>
+                                <a href="javascript:void(0)">TEAM TOTALS<i
+                                        class="fas fa-chevron-down fa-chevron-up ml-2"></i></a>
                             </div>
                             <div class="w-100 vct-total-toggle-wrapper border-top">
                                 <div class="container pb-4">
                                     <div class="row">
                                         <div class="col-10">
-                                            <h6 class="text-white font-weight-normal text-left pb-2"><span class="font-weight-bold">Edelweiss</span> Internet Booking Engine</h6>
+                                            <h6 class="text-white font-weight-normal text-left pb-2"><span
+                                                    class="font-weight-bold">Edelweiss</span> Internet Booking Engine
+                                            </h6>
                                         </div>
                                         <div class="col-2 text-right">
-                                            <i class="vct-icon text-white ti-export float-right p-1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Export Team Time log to excel"></i>
+                                            <i class="vct-icon text-white ti-export float-right p-1"
+                                                data-toggle="tooltip" data-placement="top" title=""
+                                                data-original-title="Export Team Time log to excel"></i>
                                         </div>
                                         <div class="col-12 col-md-10">
                                             <div class="row">
@@ -1811,7 +2042,8 @@
             <div class="vct-employees-tab d-none">
                 <div class="row">
                     <div class="col-6 d-flex align-items-center justify-content-start">
-                        <button class="btn btn-highlight" onclick="window.location.href='teams20-b.html'">all projects</button>
+                        <button class="btn btn-highlight" onclick="window.location.href='teams20-b.html'">all
+                            projects</button>
                     </div>
                     <div class=" col-6 project-logo d-flex align-items-center justify-content-end">
                         <img src="assets/images/logo-edelweiss.svg">
@@ -1824,7 +2056,8 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="vct-project-name-wrapper">
-                                        <div class="h-100 project-name m-0"><span class="client-name">Edelweiss</span>Internet Booking Engine</div>
+                                        <div class="h-100 project-name m-0"><span
+                                                class="client-name">Edelweiss</span>Internet Booking Engine</div>
                                     </div>
                                     <div class="d-flex justify-content-end align-items-center h-100">
                                         <div class="item-menu fas fa-ellipsis-v">
@@ -1859,9 +2092,14 @@
                                                         <div class="arrow"></div>
                                                         <ul>
                                                             <span class="item-menu-title">TEAM OPTIONS</span>
-                                                            <li><a href="javascript:void(0)" data-toggle="modal" data-target="#renameTeam">Rename Selected Team</a></li>
-                                                            <li><a href="javascript:void(0)" data-toggle="modal" data-target="#addTeam">Add New Team</a></li>
-                                                            <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteDialog">Remove Selected Team</a></li>
+                                                            <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                    data-target="#renameTeam">Rename Selected Team</a>
+                                                            </li>
+                                                            <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                    data-target="#addTeam">Add New Team</a></li>
+                                                            <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                    data-target="#deleteDialog">Remove Selected Team</a>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -1978,7 +2216,8 @@
                         <div class="row justify-content-center">
                             <div class="col-10 col-md-8 col-lg-6 p-4">
                                 <div class="position-relative">
-                                    <input class="filter-members find-employees" placeholder="Find Team Member" type="text">
+                                    <input class="filter-members find-employees" placeholder="Find Team Member"
+                                        type="text">
                                     <span class="fas fa-search search-icon"></span>
                                     <span class="reset-input far fa-times-circle"></span>
                                 </div>
@@ -2004,9 +2243,13 @@
                                                     <div class="arrow"></div>
                                                     <ul>
                                                         <span class="item-menu-title">Employee options</span>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
-                                                        <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#deleteMember">Remove Team Member</a></li>
+                                                        <li><a data-toggle="modal" data-target="#dailyTime"
+                                                                href="javascript:void(0)">Daily Time Tracking</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#memberDetails">Team Member Details</a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2018,8 +2261,10 @@
                                                 <span class="badge badge-success mt-2">Team Lead</span>
                                                 <span class="badge badge-secondary mt-2">Team Operator</span>
                                                 <span class="badge badge-info mt-2">Senior Software Engineer</span>
-                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
-                                                <a href="existing-project-teams20.html" target="_new" class="badge badge-light mt-2">Enjoying - Time Manager</a>
+                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking
+                                                    Engine</span>
+                                                <a href="existing-project-teams20.html" target="_new"
+                                                    class="badge badge-light mt-2">Enjoying - Time Manager</a>
                                             </div>
                                         </div>
                                     </div>
@@ -2043,9 +2288,13 @@
                                                     <div class="arrow"></div>
                                                     <ul>
                                                         <span class="item-menu-title">Employee options</span>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
-                                                        <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#deleteMember">Remove Team Member</a></li>
+                                                        <li><a data-toggle="modal" data-target="#dailyTime"
+                                                                href="javascript:void(0)">Daily Time Tracking</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#memberDetails">Team Member Details</a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2056,7 +2305,8 @@
                                             <div class="border-top mt-2">
                                                 <span class="badge badge-secondary mt-2">Team Operator</span>
                                                 <span class="badge badge-info mt-2">Senior Software Engineer</span>
-                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking
+                                                    Engine</span>
                                                 <!-- <span class="badge badge-info mt-2">Enjoying - Time Manager</span> -->
                                             </div>
                                         </div>
@@ -2082,9 +2332,13 @@
                                                     <div class="arrow"></div>
                                                     <ul>
                                                         <span class="item-menu-title">Employee options</span>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
-                                                        <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#deleteMember">Remove Team Member</a></li>
+                                                        <li><a data-toggle="modal" data-target="#dailyTime"
+                                                                href="javascript:void(0)">Daily Time Tracking</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#memberDetails">Team Member Details</a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2094,7 +2348,8 @@
                                         <div class="col-12">
                                             <div class="border-top mt-2">
                                                 <span class="badge badge-info mt-2">Medior Software Engineer</span>
-                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking
+                                                    Engine</span>
                                                 <!-- <span class="badge badge-info mt-2">Enjoying - Time Manager</span> -->
                                             </div>
                                         </div>
@@ -2120,9 +2375,13 @@
                                                     <div class="arrow"></div>
                                                     <ul>
                                                         <span class="item-menu-title">Employee options</span>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
-                                                        <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#deleteMember">Remove Team Member</a></li>
+                                                        <li><a data-toggle="modal" data-target="#dailyTime"
+                                                                href="javascript:void(0)">Daily Time Tracking</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#memberDetails">Team Member Details</a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2133,7 +2392,8 @@
                                             <div class="border-top mt-2">
                                                 <span class="badge badge-warning mt-2">not Active</span>
                                                 <span class="badge badge-info mt-2">Medior Software Engineer</span>
-                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking
+                                                    Engine</span>
                                                 <!-- <span class="badge badge-info mt-2">Enjoying - Time Manager</span> -->
                                             </div>
                                         </div>
@@ -2159,9 +2419,13 @@
                                                     <div class="arrow"></div>
                                                     <ul>
                                                         <span class="item-menu-title">Employee options</span>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
-                                                        <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
-                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#deleteMember">Remove Team Member</a></li>
+                                                        <li><a data-toggle="modal" data-target="#dailyTime"
+                                                                href="javascript:void(0)">Daily Time Tracking</a></li>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                                data-target="#memberDetails">Team Member Details</a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2172,7 +2436,8 @@
                                             <div class="border-top mt-2">
                                                 <!-- <span class="badge badge-danger mt-2">not Active</span> -->
                                                 <span class="badge badge-info mt-2">Senior QA Engineer</span>
-                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking Engine</span>
+                                                <span class="badge badge-light mt-2">Edelweiss - Internet Booking
+                                                    Engine</span>
                                                 <!-- <span class="badge badge-info mt-2">Enjoying - Time Manager</span> -->
                                             </div>
                                         </div>
@@ -2193,7 +2458,8 @@
                 </div>
                 <div class="row vct-actions mt-5">
                     <div class="col-6">
-                        <button class="btn btn-highlight" data-toggle="modal" data-target="#addMember">Add Team Member</button>
+                        <button class="btn btn-highlight" data-toggle="modal" data-target="#addMember">Add Team
+                            Member</button>
                     </div>
                     <div class="col-6 d-flex justify-content-end">
                         <button class="btn btn-highlight">Save Team</button>
