@@ -551,3 +551,18 @@ input[type=checkbox] {
   background: #dadad6;
   color: #42423c;
 }
+span.fc-title {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  margin-left: 8px;
+}
+span.fc-day-number {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+}
+.fc-event {
+  border-radius: 8px;
+}

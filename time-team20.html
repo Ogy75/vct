@@ -43,16 +43,57 @@
             var calendarEl = document.getElementById('vacation-timeline');
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: ['dayGrid']
+                plugins: ['dayGrid'],
+                events: [
+                    {
+                        title: 'Dejan Dejanovic',
+                        start: '2020-03-09',
+                        end: '2020-03-19',
+                        color:'#086633'
+                    },
+                    {
+                        title: 'Bogdan Perovic',
+                        start: '2020-03-19',
+                        end: '2020-03-27',
+                        color:'#159933'
+                    },
+                    {
+                        title: 'Miodrag Borovic',
+                        start: '2020-03-18',
+                        end: '2020-03-26',
+                        color:'#cc0099'
+                    },
+                    {
+                        title: 'Marinko Trpkovic',
+                        start: '2020-03-17',
+                        end: '2020-03-25',
+                        color:'#022c7a'
+                    },
+                    {
+                        title: 'Sreten Bogdanovic',
+                        start: '2020-03-16',
+                        end: '2020-03-26',
+                        color:'#ee6b3b'
+                    },
+                    {
+                        title: 'Predrag Mandrakovic',
+                        start: '2020-03-23',
+                        end: '2020-03-28',
+                        color:'#ec0f47'
+                    },
+                    {
+                        title: 'Bozidar Draganovic',
+                        start: '2020-03-25',
+                        end: '2020-03-28',
+                        color:'#660033'
+                    }
+                ],
+                weekends: false
             });
 
             calendar.render();
-            calendar.setOption('height', 500);
+            calendar.setOption('height', 'auto');
 
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: ['dayGrid'],
-                defaultView: 'dayGridMonth'
-            });
         });
 
     </script>
@@ -854,7 +895,7 @@
                     <div class="col-12">
                         <div class="p-5 image-background">
                             <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
-                            <div class="team-member-name">[Team name] </br> vacation overview</div>
+                            <div class="team-member-name">[Team name] - vacation overview</div>
                         </div>
                     </div>
                 </div>
@@ -2101,8 +2142,8 @@
                                                                     data-target="#deleteDialog">Remove Selected Team</a>
                                                             </li>
                                                             <li><a href="javascript:void(0)" data-toggle="modal"
-                                                                data-target="#vacationCalendar">Team Vacation
-                                                                Calendar</a>
+                                                                    data-target="#vacationCalendar">Team Vacation
+                                                                    Calendar</a>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -2598,7 +2639,7 @@
                             x: 'Sickleave',
                             y: [
                                 new Date('2020-01-27').getTime(),
-                                new Date('2020-02-01').getTime()
+                                new Date('2020-03-01').getTime()
                             ],
                             fillColor: '#42423c'
                         }
