@@ -531,3 +531,23 @@ input[type=checkbox] {
 #vacation-timeline {
   min-height: 400px;
 }
+.fc-button-primary {
+  background-color: #1E9BCC;
+  border-color: #1E9BCC;
+}
+.fc-button-primary:hover {
+  background-color: #1779a0;
+  border-color: #1779a0;
+}
+.fc-button-primary:disabled {
+  background-color: #dadad6;
+  border-color: #dadad6;
+  color: #808080;
+}
+.fc-toolbar h2 {
+  color: #1E9BCC;
+}
+.fc-unthemed td.fc-today {
+  background: #dadad6;
+  color: #42423c;
+}

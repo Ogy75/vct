@@ -580,3 +580,29 @@ input[type=checkbox]{
 #vacation-timeline{
     min-height:400px;
 }
+
+// unstyled vacation Calendar overrides
+.fc-button-primary{
+    background-color: @highlightColor;
+    border-color:@highlightColor;
+    &:hover{
+        background-color: darken(@highlightColor, 10%);
+        border-color:darken(@highlightColor, 10%);
+    }
+    &:disabled{
+        background-color: lighten(@basetextColor, 60%);
+        border-color: lighten(@basetextColor, 60%);
+        color:darken(white, 50%);
+    }
+}
+.fc-toolbar {
+    h2{
+        color: @highlightColor;
+    }
+}
+.fc-unthemed {
+    td.fc-today{
+        background: lighten(@basetextColor, 60%);
+        color: @basetextColor;
+    }
+}
