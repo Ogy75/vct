@@ -600,14 +600,8 @@ input[type=checkbox]{
         color: @highlightColor;
     }
 }
-.fc-unthemed {
-    td.fc-today{
-        background: lighten(@basetextColor, 60%);
-        color: @basetextColor;
-    }
-}
 span.fc-title{
-    color:white;
+    color:@basetextColor;
     font-size: 12px;
     font-weight: 700;
     line-height: 12px;
@@ -619,5 +613,11 @@ span.fc-day-number{
     font-weight: 700;
 }
 .fc-event {
-    border-radius: 8px;
+    border-radius: 10px;
+}
+label.for-files{
+    font-weight: 500;
+}
+.fc-content{
+    padding: 2px;
 }

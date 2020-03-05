@@ -1153,3 +1153,7 @@ table.overview td {
   max-height: 164px;
   overflow-y: auto;
 }
+.fc-unthemed td.fc-today {
+  background: rgba(30, 155, 204, 0.15);
+  color: #42423c;
+}

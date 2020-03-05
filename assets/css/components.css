@@ -547,12 +547,8 @@ input[type=checkbox] {
 .fc-toolbar h2 {
   color: #1E9BCC;
 }
-.fc-unthemed td.fc-today {
-  background: #dadad6;
-  color: #42423c;
-}
 span.fc-title {
-  color: white;
+  color: #42423c;
   font-size: 12px;
   font-weight: 700;
   line-height: 12px;
@@ -564,5 +560,11 @@ span.fc-day-number {
   font-weight: 700;
 }
 .fc-event {
-  border-radius: 8px;
+  border-radius: 10px;
+}
+label.for-files {
+  font-weight: 500;
+}
+.fc-content {
+  padding: 2px;
 }

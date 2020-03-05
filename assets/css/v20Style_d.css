@@ -1199,3 +1199,7 @@ table.overview td {
 .react-autosuggest__suggestion--highlighted {
   background-color: #42423c !important;
 }
+.fc-unthemed td.fc-today {
+  background: rgba(23, 115, 151, 0.9);
+  color: #d5d5d5;
+}
