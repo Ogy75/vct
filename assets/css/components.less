@@ -621,11 +621,22 @@ label.for-files{
 .fc-content{
     padding: 2px;
 }
+.fc-toolbar {
+    h2{
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -.5px;
+    }
+}
 .legend-color{
-    display: block;
-    height:14px;
-    width:14px;
+    display: inline-block;
     border-radius: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 2px 4px;
+    margin-right:4px;
+    font-weight: 500;
+    color: @basetextColor;
     &.legend-work{
         background: #B5E3F2;
     }
@@ -644,10 +655,4 @@ label.for-files{
     &.legend-free-days{
         background: #DDDDE0;
     }
-}
-.legend-copy{
-    display: inline-block;
-    font-size: 12px;
-    height: 14px;
-    vertical-align: top;
 }
