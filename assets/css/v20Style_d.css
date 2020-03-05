@@ -357,7 +357,8 @@ body.modal-open .vct-content {
 #days-spent-data,
 #total-work-hours-data,
 #work-from-home-data,
-#daily-time-tracking-data {
+#daily-time-tracking-data,
+#timeline-data {
   display: none;
 }
 .booking-wrapper {

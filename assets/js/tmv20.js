@@ -89,6 +89,12 @@ $(document).ready(function() {
         panelData.hide();
         $(this).parents('.left-items').find('#daily-time-tracking-data').fadeIn();
     });
+    $('#timeline').click(function() {
+        var timeModule = $('.time-module');
+        var panelData = $('.panel-data');
+        panelData.hide();
+        $(this).parents('.left-items').find('#timeline-data').fadeIn();
+    });
 
     $('.js_book').on('click', function() {
         $('.js_bookingMessage').removeClass('d-none');

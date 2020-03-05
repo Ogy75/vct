@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>My Time</title>
     <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
+    <link href='assets/vendor/fullcalendar-4.4.0/packages/core/main.css' rel='stylesheet' />
+    <link href='assets/vendor/fullcalendar-4.4.0/packages/daygrid/main.css' rel='stylesheet' />
     <link rel="stylesheet" href="assets/css/ti.css">
     <link rel="stylesheet" href="assets/css/mainEls.css">
     <link rel="stylesheet" href="assets/css/components.css">
@@ -31,6 +33,93 @@
     <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <script src='assets/vendor/fullcalendar-4.4.0/packages/core/main.js'></script>
+    <script src='assets/vendor/fullcalendar-4.4.0/packages/daygrid/main.js'></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('event-timeline');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['dayGrid'],
+                nextDayThreshold: '09:00:00',
+                events: [
+                    {
+                        title: 'work',
+                        start: '2020-03-02',
+                        end: '2020-03-11',
+                        color: '#B5E3F2'
+                    },
+                    {
+                        title: 'sickleave',
+                        start: '2020-03-11',
+                        end: '2020-03-14',
+                        color: '#FFF694'
+                    },
+                    {
+                        title: 'work',
+                        start: '2020-03-16',
+                        end: '2020-03-21',
+                        color: '#B5E3F2'
+                    },
+                    {
+                        title: 'vacation',
+                        start: '2020-03-23',
+                        end: '2020-03-28',
+                        color: '#FAD0E2'
+                    },
+                    {
+                        title: 'travel',
+                        start: '2020-03-30T09:01:00',
+                        end: '2020-03-30T13:01:00',
+                        color: '#ABCADE',
+                        allDay: 'false'
+                    },
+                    {
+                        title: 'on-site work',
+                        start: '2020-03-31',
+                        end: '2020-04-02',
+                        color: '#BFE0B3'
+                    },
+                    {
+                        title: 'travel',
+                        start: '2020-04-01T18:01:00',
+                        end: '2020-04-01T22:01:00',
+                        color: '#ABCADE',
+                        allDay: 'false'
+                    },
+                    {
+                        title: 'work',
+                        start: '2020-04-02',
+                        end: '2020-04-18',
+                        color: '#B5E3F2'
+                    },
+                    {
+                        title: 'free days',
+                        start: '2020-04-20',
+                        end: '2020-04-25',
+                        color: '#DDDDE0'
+                    },
+                    {
+                        title: 'work from home',
+                        start: '2020-04-27',
+                        end: '2020-04-27',
+                        color: '#B5E3F2'
+                    },
+                    {
+                        title: 'work',
+                        start: '2020-04-28',
+                        end: '2020-05-02',
+                        color: '#B5E3F2'
+                    }
+                ],
+                weekends: false
+            });
+            calendar.render();
+            calendar.setOption('height', 'auto');
+        });
+    </script>
+
 </head>
 
 <body>
@@ -242,6 +331,15 @@
                                 <span class="module-label">daily Time tracking (h)</span>
                                 <span class="module-icon"><i class="far fa-clock"></i></span>
                                 <span class="module-data text-danger">-0:30</span>
+                                <div class="module-status"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-3">
+                            <div class="time-module" id="timeline">
+                                <span class="module-label">event timeline</span>
+                                <span class="module-icon"><i class="fas fa-history"></i></span>
+                                <span class="module-data">???</span>
                                 <div class="module-status"></div>
                             </div>
                         </div>
@@ -890,6 +988,49 @@
                                                 </tr>
                                             </tfoot>
                                         </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- EVENT TIMELINE -->
+                            <div class="panel-data" id="timeline-data">
+                                <div class="panel-container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <div class="table-title">Event timeline</div>
+                                            </div>
+                                            <!-- <div class="d-block w-100 mb-4 float-left text-left">
+                                                Presents all recorded events.
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div id="event-timeline"></div>
+                                    <div class="row mt-4">
+                                        <div class="col-2">
+                                            <div class="legend-color legend-work align-items"></div>
+                                            <span class="legend-copy">work</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="legend-color legend-sickleave"></div>
+                                            <span class="legend-copy">sickleave</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="legend-color legend-vacation"></div>
+                                            <span class="legend-copy">vacation</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="legend-color legend-travel"></div>
+                                            <span class="legend-copy">travel</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="legend-color legend-onsite-work"></div>
+                                            <span class="legend-copy">on-site</span>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="legend-color legend-free-days"></div>
+                                            <span class="legend-copy">free&nbsp;days</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
