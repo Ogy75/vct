@@ -327,11 +327,19 @@ $(document).ready(function() {
     });
 
     //Checkbox sim
-    $('#responsibility').on('change', function() {
+    // $('#responsibility').on('change', function() {
+    //     if ($(this).is(':checked')) {
+    //         $('.js_book').attr('disabled', false);
+    //     } else {
+    //         $('.js_book').attr('disabled', true);
+    //     }
+    // });
+
+    $('.responsibility').on('change', function() {
         if ($(this).is(':checked')) {
-            $('.js_book').attr('disabled', false);
+            $(this).parents('.panel-container').find($('.js_book')).attr('disabled', false);
         } else {
-            $('.js_book').attr('disabled', true);
+            $(this).parents('.panel-container').find($('.js_book')).attr('disabled', true);
         }
     });
 
