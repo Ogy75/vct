@@ -482,6 +482,11 @@ a.vct-team:hover {
 .vct-content .team-name-add:hover {
   color: #115773;
 }
+.vct-content .team-name-add:before {
+  content: "\f067";
+  font-family: 'Font Awesome 5 Free';
+  margin-right: 6px;
+}
 .vct-content .pin {
   font-size: 17px;
   line-height: 17px;
