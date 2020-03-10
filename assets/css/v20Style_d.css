@@ -489,6 +489,21 @@ a.vct-team:hover {
   font-family: 'Font Awesome 5 Free';
   margin-right: 8px;
 }
+.vct-content .team-name-add {
+  display: block;
+  font-size: 16px;
+  float: left;
+  width: auto;
+  line-height: 16px;
+  font-weight: 700;
+  color: #d5d5d5;
+  cursor: pointer;
+  transition: all 0.12s linear;
+  text-decoration: none;
+}
+.vct-content .team-name-add:hover {
+  color: #177397;
+}
 .vct-content .pin {
   font-size: 17px;
   line-height: 17px;
