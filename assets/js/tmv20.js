@@ -422,4 +422,5 @@ addTeam.on('click', function(){
     teamList.removeClass('d-none');
     $('.team-item').addClass('selected');
     $('.add-member').show();
+    $('.js_toggleItems').removeClass('d-none');
 });
