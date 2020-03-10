@@ -411,3 +411,15 @@ $(document).ready(function() {
         $(this).parents('tr').remove();
     });
 });
+
+//No teams
+var addTeam = $('.team-name-add');
+var existingTeam = $('.team-name');
+var teamList=$('.team-list');
+
+addTeam.on('click', function(){
+    $(this).hide();
+    existingTeam.removeClass('d-none');
+    teamList.removeClass('d-none');
+    $('.team-item').addClass('selected');
+});
