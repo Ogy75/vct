@@ -874,6 +874,25 @@ input:checked + .slider:before {
   &.badge-dark {
     background: darken(@basetextColor, 10%);
   }
+  &.badge-technology {
+    background: lighten(@highlightColor, 50%);
+    position: relative;
+    border: 1px solid fade(@darkModeText, 70%);
+    padding-right:22px;
+    .close-badge{
+      position: absolute;
+      font-size: 12px;
+      color:fade(@basetextColor, 50%);
+      line-height: 20px;
+      right:5px;
+      top:0;
+      transition: @mainTransition;
+      cursor:pointer;
+      &:hover{
+        color:@highlightColor;
+      }
+    }
+  }
 }
 
 .text-info {

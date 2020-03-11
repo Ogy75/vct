@@ -409,18 +409,34 @@ $(document).ready(function() {
     $('.js_removeEntry').on('click', function(){
         $(this).parents('tr').remove();
     });
+
+    //No teams
+    var addTeam = $('.team-name-add');
+    var existingTeam = $('.team-name');
+    var teamList=$('.team-list');
+
+    addTeam.on('click', function(){
+        $(this).hide();
+        existingTeam.removeClass('d-none');
+        teamList.removeClass('d-none');
+        $('.team-item').addClass('selected');
+        $('.add-member').show();
+        $('.js_toggleItems').removeClass('d-none');
+    });
+
+    //Add Competence Badge
+    var competence = $('#competence');
+    var addComp = $('.js_addComp');
+    addComp.on('click', function(){
+    if (competence.val() != ''){
+        $(this).parents('.panel-container').find('.competence-list').append('<span class="badge badge-technology mr-2 mt-2">' + competence.val() + '<i class="close-badge fas fa-window-close"></i></span>');
+        competence.val('').focus();
+    }
+    });
+    
+    //Remove competence Badge
+    $('.close-badge').on('click', function(){
+        $(this).parents('span').remove();
+    });
 });
 
-//No teams
-var addTeam = $('.team-name-add');
-var existingTeam = $('.team-name');
-var teamList=$('.team-list');
-
-addTeam.on('click', function(){
-    $(this).hide();
-    existingTeam.removeClass('d-none');
-    teamList.removeClass('d-none');
-    $('.team-item').addClass('selected');
-    $('.add-member').show();
-    $('.js_toggleItems').removeClass('d-none');
-});

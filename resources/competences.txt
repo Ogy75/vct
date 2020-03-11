@@ -1,0 +1,1386 @@
+Six Sigma
+Release management
+Strategic partnership
+API
+Business Intelligence
+Business analysis
+Change management
+Confluence
+CRM
+CSM
+CSPO
+Data Analysis
+Disaster Recovery
+ERP
+Financial analysis
+Integration
+Jira
+Kanban
+KPI
+Lean Six Sigma
+PMO
+PMI-ACP
+PMP
+Product Development
+Product marketing
+Product design
+Project Management
+Project planning
+Requirements Gathering
+Roadmapping
+SAFe
+SAP
+SDLC
+SFDC
+Waterfall Methodology
+Citrix NetScaler
+Sass
+Citrix
+Less
+AJAX
+AMP
+Angular
+Angular 2
+AngularFire
+Angular CLI
+Atom
+Aurelia
+Babel
+BabylonJS
+Backbone.js
+BEM
+Blaze
+Bootstrap
+Bourbon
+Bower
+Brackets
+Broccoli
+Browserify
+Brunch
+CanvasJS
+Chart.js
+ClojureScript
+Compass
+Core.js
+CSS
+Cypress
+D3.js
+DHTML
+Dojo
+Dust.js
+ECMAScript
+Electron
+Ember.js
+ESLint
+ExtJS
+Flexbox
+Flux
+Foundation
+GraphQL
+Grunt
+GSAP
+Gulp
+Haml
+Handlebars.js
+Highcharts
+HTML
+Hyper-V
+Immutable.js
+Infragistics
+Isomorphic apps
+JavaScript
+JavaScript frameworks
+JFace
+jQuery
+JSX
+Kendo
+Knockout
+Leaflet
+Marionette
+Masonry
+Mercury
+MobX
+Modernizr
+Mustache
+Nunjucks
+NVD3
+OOCSS
+PaperJS
+PixiJS
+Polymer
+PostCSS
+PrimeNG
+Prototype
+ReactJS
+Redux
+Relay
+RequireJS
+RxJS
+SAML
+SCSS
+Skeleton
+Socket.IO
+Spine JS
+Stylus
+Three.js
+Turret
+TyepScript
+Underscore.js
+Vanilla JS
+Vue
+Vuex
+WebdriverIO
+WebGL
+WebKit
+webpack
+WebRx
+WebSphere
+WebStorm
+WinForms
+WSDL
+XHTML
+YAML
+asm.js
+Cycle.js
+Derby
+Express.js
+Flow
+Hapi
+Koa
+MEAN
+Meteor
+Node.js
+Oracle JET
+Restify
+Sails
+Seneca
+PHP
+APC
+Bitrix Framework
+Blackfire
+CakePHP
+CMS
+Codeception
+CodeIgniter
+Composer
+Doctrine
+Drupal
+Gearman
+Guzzle
+HHVM
+Joomla
+Kohana
+LAMP
+Laravel
+Magento
+MAMP
+Memcached
+Mockery
+MODX
+MySQLi
+OpenCart
+Phalcon
+PHP frameworks
+PHP keywords
+PHP-FIG
+PHP-FPM
+phpDocumentor
+PHPSpec
+PhpStorm
+PSR
+Silex
+SilverStripe
+Slim
+Smarty
+Symfony
+Tideways
+Twig
+TYPO3
+WooCommerce
+WordPress
+XDebug
+Yii
+Zend Framework
+WEBrick
+Ruby
+Active Record
+Brakeman
+Bundler
+Capistrano
+Capybara
+Crystal
+ERB
+EventMachine
+FactoryBot
+Grape
+Jekyll
+JRuby
+Minitest
+Padrino
+Passenger
+Phoenix
+Rake
+RSpec
+RuboCop
+RubyGems
+Ruby Arrays
+Ruby deployment
+Ruby frameworks
+Ruby on Rails
+Ruby testing tools
+RVM
+Sidekiq
+Sinatra
+Watir
+Java
+Java build tools
+Java testing tools
+ActiveMQ
+ADF
+Apache Ant
+Apache Camel
+Apache MINA
+Apollo
+Burp Suite
+Cactus
+ClearTK
+CDI
+Dropwizard
+DWR
+EclipseLink
+Ehcache
+EJB
+FreeMarker
+GemFire
+GlassFish
+Google Guice
+Gradle
+Grails
+Groovy
+Guava
+GWT
+Hibernate
+Hybris
+IntelliJ IDEA
+JAAS
+Jackson
+JADE
+JAF
+JasperReports
+Java deployment
+Java EE
+Java EE frameworks
+Java ME
+Java ORM frameworks
+Java SE
+Java SE frameworks
+JavaCC
+JavaFX
+JAXB
+JAX-RS
+JAX-WS
+JBoss
+jBPM
+JDBC
+JDeferred
+JDeveloper
+JDK
+Jersey
+Jetty
+JFlex
+JFR
+JMC
+JMM
+JMock
+JMS
+JMX
+JNI
+JPA
+JPQL
+JRE
+JSF
+JSoup
+JSP
+JSTL
+JUnit
+JVM
+KeyStore
+Kotlin
+Lambda
+Launch4j
+Log4j
+Lucene
+Maven
+MeshCMS
+Netty
+OC4J
+OpenNLP
+OSGi
+PowerMock
+PrimeFaces
+ProGuard
+Resin
+RESTEasy
+RichFaces
+RoboGuice
+Seam
+Servlet
+SLF4J
+Spring
+Spring Boot
+Spring Integration
+Spring MVC
+Spring WebFlux
+STS
+Struts
+Struts 2
+Swing
+Thymeleaf
+Tomcat
+TomEE
+UIMA
+Vaadin
+WebLogic
+Wicket
+WildFly
+ZK
+ZXing
+Visual C#
+ASP.NET Web API
+ASP.NET AJAX
+.NET
+Accord.NET Framework
+ADO.NET
+ASP.NET
+ASP.NET Core
+ASP.NET MVC
+Autofac
+AutoMapper
+C#
+C# frameworks
+C# testing tools
+Chart FX
+CLR
+Entity Framework
+F#
+Kentico
+LINQ
+Log4net
+Mono
+Moq
+MsBuild
+MS Dynamics 365
+MStest
+Nancy
+.NET Core
+NHibernate
+Ninject
+NuGet
+NUnit
+Octopus
+ORM frameworks
+OWIN
+P/Invoke
+Razor
+ReSharper
+Roslyn
+SignalR
+Sitecore CMS
+SpecFlow
+SSRS
+StyleCop
+Telerik DevCraft
+Unsafe Code
+VB.Net
+WebMatrix
+WCF
+WPF
+xUnit.net
+Python
+Python frameworks
+asyncio
+BeeWare
+Bokeh
+Bottle
+Buildbot
+CherryPy
+CPython
+Dask
+Django
+Django Channels
+Docutils
+Flask
+Jinja2
+Jupyter (IPython)
+Kivy
+matplotlib
+NumPy
+Pandas
+PyBrain
+PyCharm
+PyGTK
+Pylons
+Pyparsing
+Pyramid
+Pyston
+PyTorch
+Scapy
+Scikit-Learn
+SciPy
+Seaborn
+StatsModels
+SymPy
+SQLAlchemy
+TensorFlow
+Theano
+Tornado
+Twisted
+Virtualenv
+Web2py
+web.py
+wxPython
+Socket programming
+C++ 17
+C++
+C++ frameworks
+ACE
+ASIO
+Boost
+C++ 11
+C++ 14
+Clang
+CLion
+Cppcheck
+CppDB
+GLSL
+gperf
+GStreamer
+Loki
+MFC
+OpenCL
+OpenGL Mathematics
+OpenInventor
+POCO
+PwC (contract programming)
+Qt
+Qt Creator
+RapidJSON
+Rust
+STL
+Template metaprogramming
+Valgrind
+VBA
+Visual C++
+Visual Studio
+wxWidgets
+ZeroMQ
+C language
+ANSI C
+CUDA
+Kore
+Libmicrohttpd
+Scala
+Scala frameworks
+Akka
+Akka HTTP
+Apache Kafka
+BlueEyes
+Cats
+Chaos
+Colossus
+Finatra
+Finch
+http4s
+Lift
+Lift 3.0-RC1
+Play
+Play 2.5.0
+sbt
+SBT 0.13.12
+Scalatra
+Scalaz
+Shapeless
+Slick
+Spray
+Clojure
+Elixir
+Elm
+Erlang
+Haskell
+Idris
+OCaml
+Go
+Echo
+Gin
+GoLand
+Gorilla
+Beego
+Buffalo
+Iris
+Revel
+ActionScript
+Ada
+Assembly language
+CCL
+COBOL
+CoffeeScript
+Dart
+Delphi
+Hack
+Haxe
+Lua
+Maple
+Perl
+R language
+RPG
+VBScript
+Verilog
+Xtend
+iOS frameworks
+iOS programming languages
+iOS SDK
+iOS tools
+iOS 10 Speech Recognition API
+3D Touch
+Accelerate framework
+AFNetworking
+Alamofire
+APNs
+AppCode
+Auto Layout
+ARC
+ARKit
+AVFoundation
+Bond
+Carthage
+Clean Architecture (VIPER)
+Cocoa
+Cocoa Touch
+CocoaPods
+Core Animation
+Core Bluetooth
+Core Data
+Core Graphics
+Core Location
+CoreFoundation
+CoreImage
+EventKit
+Fabric
+FastLane
+Flurry
+GCD
+HockeyApp
+MapKit
+Memory Graph Debugger
+MessageUI
+Metal
+Moya framework
+Multitasking
+Nimble
+NSOperation
+Objective-C
+POP
+Property Lists
+Quick
+QuickBlox
+Reactive code
+ReactiveCocoa
+ReactiveKit
+Realm
+RxSwift
+Stack Views
+StoreKit
+Storyboard
+Swift
+SwiftyJSON
+TestFlight
+tvOS
+Typhoon
+UIKit
+Xcode
+XCTest
+WatchKit
+watchOS
+Android keywords
+ActionBarSherlock
+adb
+ADT
+AndEngine
+Android Auto
+Android IDE
+Android N
+Android NDK
+Android SDK
+Android Studio
+Android TV
+Android Wear
+AppCompat
+ButterKnife
+Conductor
+Dagger
+DBFlow
+Espresso
+Evernote
+Fresco
+greenDAO
+gtest
+LeakCanary
+Logcat
+Mortar
+Mosby
+Picasso
+Reactive pattern
+RecyclerView
+RoboSpice
+Robotium
+Room library
+RxAndroid
+RxJava
+SpongyCastle
+Support Library
+Volley
+UI Automator
+Cross-Platform Mobile Development
+Cross-platform Mobile (mostly JavaScript)
+Apache Flex
+Bitrise
+Cordova
+Dojo Mobile
+Firebase
+Flutter
+Glide
+Hybrid app
+Ionic
+Ionic Creator
+jQuery Mobile
+Lottie
+Marmalade
+MLKit
+PhoneGap
+React Native
+Sencha
+Titanium
+Xamarin
+Xamarin Studio
+Xamarin.Forms
+SQL Server AlwaysOn
+Database development
+Database Design
+Database
+Amazon Aurora
+ArangoDB
+AWR
+Berkeley DB
+Big Table
+Cassandra
+CockroachDB
+CouchBase
+CouchDB
+CRUD
+CSV
+DB2
+Dbf
+DynamoDB
+Event Store
+Firebird
+GraphDB
+HANA
+InfluxDB
+InterBase
+Google Compute Engine
+Liquibase
+Magic keywords for DBA
+MariaDB
+MemSQL
+MongoDB
+MS Access
+MS SQL Server
+MySQL
+Navicat
+Neo4j
+NoSQL
+NoSQL databases
+Object-related mapping (ORM)
+Oracle Database
+ORD
+OTBI
+OrientDB
+Percona DB
+PervasiveSQL
+PL/SQL
+PostGIS
+PostgreSQL
+Presto
+Primary Key
+RDBMS
+RDS
+Redis
+Redshift
+Relational DB
+RethinkDB
+Riak
+RocksDB
+SAP MaxDB
+Snowflake
+Solr
+Spanner
+Sphinx
+SQL
+SQL Server
+SQLite
+Sqlmap
+SSAS
+T-SQL
+Teradata
+Toad
+Voldemort
+Elastic Search
+Sumo Logic
+Static analysis
+Sanity testing
+Dynamic analysis
+Ab Initio
+Gray-box testing
+Test case
+HP Quality Center
+Defect tracking
+Usability testing
+Manual testing
+Quality Assurance (QA)
+Types of testing
+Functional, Regression testing tools
+Load, Stress and Performance testing tools
+A/B testing
+Ad-Hoc Distribution (Mobile)
+Appium
+Arquillian
+AutoIt
+Automation Testing
+Baseline testing
+Bazel
+Behat
+Black-box testing
+BlazeMete
+Calabash
+CasperJS
+Chai
+Charles
+Codacy
+Controller
+Cross-browser testing
+Cucumber
+DbUnit
+E2E-tests
+EasyMock
+Endurance Testing
+Enzyme
+FitNesse
+Functional testing
+Galen Framework
+Gatling
+HP Performance Center
+IBM RPT
+Integration testing
+Iperf
+Jasmine
+JavaScript testing tools
+JBehave
+Jest
+JMeter
+Jtest
+Kali Linux
+Karma
+Load testing
+LoadRunner
+LoadUI
+Microsoft Test Manager
+Mocha
+Mockito
+Monkey testing
+Negative testing
+NeoLoad
+Nightwatch.js
+Nodeunit
+Nose
+Okapi Framework
+Penetration testing
+Performance testing
+PhantomJS
+PHPUnit
+Protractor
+Pytest
+QC
+qTest
+QTP
+QuickCheck
+QUnit
+Ranorex
+Regression testing
+ReportNG
+Robolectric
+Security testing
+Selenium
+Siege
+Sinon
+SoapUI
+Smoke Testing
+SpiraTest
+Spock
+STLC
+Stress testing
+Surefire
+Telerik Test Studio
+TestLink
+TestNG
+Tosca
+UAT
+UFT (Unified Functional Testing)
+Unit testing
+WAPT
+WatiN
+WebDriver
+White-box testing
+Xamarin.UITest
+XCUITest
+Zombie
+Allegro
+Autodesk Maya
+Blender
+Box2D
+Chipmunk2D
+Cocos2d-x
+Cocos Denshion
+Corona
+Game Kit
+GameSalad
+Godot
+HeroEngine
+HeroScript
+libGDX
+OGRE
+Panda3D
+Phaser
+SpriteKit
+Torque 3D
+Unity
+Unreal Engine
+BMC Remedy
+Data center
+Mac OS X
+VCP-DCV
+Oracle Linux System Administrator
+RHCE
+MCP
+RHCSA
+VLAN
+System engineering
+System administration
+Software installations and upgrades
+Servers
+Red Hat
+Hardware installation
+DevOps
+AIX
+Amazon S3
+AMQP
+Ansible
+Apache
+AppFabric
+AS2
+Bash
+BGP
+BMC Portal
+Cacti
+CDN
+CentOS
+CFEngine
+Chef
+CM tools
+Common Lisp
+Configuration Management (CM)
+CORBA
+CPU
+Debian
+DHCP
+Deployment
+DNS
+Docker
+Docker Swarm
+DOS
+Drone
+Dovecot
+ElastiCache
+Exim
+Fedora
+Filezilla
+Firewalls
+FreeBSD
+FTP
+Ganglia
+Gateway
+GNU
+Gunicorn
+HAProxy
+HP Diagnostics
+HTTP
+https
+Hyper-convergence
+Icinga
+IIS
+IM
+IMAP
+IPsec
+iptables
+ITIL
+JConsole
+Kerberos
+Kernel module
+Kubernetes
+KVM
+LDAP
+Linux
+Linux Distributions
+Linux kernel
+Linux Server
+Linux shell
+Lisp
+Load Balancer
+MCollective
+Monitoring tools
+MQTT
+MRP
+Munin
+Nagios
+Netflix OSS
+Network protocols
+New Relic
+NFS
+nginx
+Nmap
+npm
+OAuth
+OData
+OKHTTP
+OpenID Connect
+OpenSSL
+OS
+OSPF
+OTRS
+PagerDuty
+Pepper
+PerfMon
+POP3
+Postfix
+Postman
+ProFTPD
+Prometheus
+Puppet
+QNX
+RabbitMQ
+RANCID
+Raygun
+RDP
+RHEL
+RPM
+RTP
+SaltStack
+Screen
+Sensu
+Shell
+Shell script
+SIP
+SMB
+SMP
+SMTP
+SNMP
+Solaris
+Solus
+SPDY
+Spring Cloud
+SQS
+SSH
+SSIS
+SSL
+STP
+SunOS
+TCP
+TCP/IP
+Terraform
+TLS
+Ubuntu
+Ubuntu Juju
+UDP
+UNIX
+Virtualization
+Virtualization tools
+VPN
+VRRP
+VxWorks
+WAMP
+WAN
+WDS
+Web API
+Web server
+WebRTC
+WebSockets
+Wily Introscope
+Windows
+Windows Server
+Xen
+XUL
+Customer Development
+Hotjar
+Market Analysis
+Market Research
+Mixpanel
+Product Lifecycle
+Product Management
+Product Metrics
+Product Specification
+Product Strategy
+SDLC
+Sprint
+System Architecture
+Active Directory
+Anti Patterns
+Bash Script
+ESB
+Event-Driven Programming
+Event Sourcing
+Design Patterns
+Design Pattern examples
+DI
+DRY
+Fiddler
+gRPC
+HP Server
+JSON
+JWT
+Keras
+Microservices
+Mobile Design
+MS Exchange Server
+Mule
+MVC
+MVP
+MVVM
+OOD
+OpenMP
+Protobuf
+REST
+RESTful API
+RESTful web services
+Retrofit
+RRAS
+Shiny
+SOA
+SOAP
+SSOT
+Software Architecture
+SOLID
+Solution Architecture
+Swagger
+UML
+Web Application
+Web Development
+Web services
+Webservices
+WinAPI
+WML
+x86 assembly language
+XAML
+XML
+XML parser
+XMPP
+XPath
+XSL
+XSLT
+Amazon EMR
+Ambari
+Analysis
+Apache Avro
+Apache Beam
+Apache Flink
+Apache Hive
+Apache Mahout
+Apache Pig
+Apache Spark
+Apache Flume
+Apache Zeppelin
+Applied mathematics
+AWS lambda
+Bayesian statistics
+Big Data
+Big Data tools
+Caffe
+Computer vision
+Convolutional neural network
+Dataset
+Data Modeling
+Data structure
+Data visualization
+Data Warehousing
+Decision tree
+Finance
+Hadoop
+HBase
+HDFS
+HDP
+Impala
+Jaql
+Kinesis
+KSQL
+Kylin
+Logistic regression
+MapReduce
+MLlib
+MXNet
+Neural networks
+Optimization
+Pattern Recognition
+Predictive modeling
+Oozie
+QlikView
+Quantitative analytics
+Quantitative finance
+Random forest
+Samza
+SnapLogic eXtreme
+spaCy
+Spark MLlib
+Sqoop
+Statistical modeling
+Statistics
+Tableau
+Testing
+Time series analysis
+Torch AI
+User Research
+Vertica
+WEKA
+YARN
+Electrical engineer
+Systems engineer
+Agile Coach
+Application Developer
+Automation QA Engineer
+Back-end Developer
+Big Data Engineer
+Build Release Engineer
+Business Analyst
+Business Intelligence Analyst
+CPO
+CTO
+Data Scientist
+Data Warehouse Developer
+DevOps Engineer
+Front-end Developer
+Full-stack Developer
+Graphic Designer
+Interaction Designer
+Manual QA Engineer
+Mobile Developer
+Network Engineer
+Principle Software Engineer
+Product Owner
+Quality Engineer
+SalesForce Developer
+Scrum Master
+Site Reliability Engineer
+Software Architect
+Solution Architect
+System Administrator
+Technical Account Manager
+UI Designer
+UX Designer
+Web Developer
+CompTIA Network+
+CompTIA A+
+CompTIA Server+
+Switch
+Microsoft Office 365
+LAN
+Cloud storage
+Cloud Computing
+Amazon EC2
+Amazon Kinesis
+AWS
+AWS CloudFormation
+Azure
+BaaS
+BigQuery
+Cloudera CDH
+CloudFront
+CloudStack
+CloudWatch
+Cloud Foundry
+DBaaS
+DigitalOcean
+Enterprise PKI
+Fastly
+FCM
+Google Cloud Platform
+Heroku
+IaaS
+IBM Cloud
+kops
+MAAS
+NetSuite
+OpenShift
+OpenStack
+ownCloud
+PaaS
+Power BI
+Shippable
+Cisco ISE
+Cisco Certified CyberOps Associate
+Palo Alto Networks
+Cisco ASA
+Check Point Firewall
+Threat modeling
+Threat intelligence
+Dynamic Malware Analysis
+Reverse Engineering Malware
+Incident detection
+Security compliance
+Cisco Technologies
+Cisco switches
+Cisco
+MCSA
+MCSE
+SCCM
+Antivirus
+Computer Security
+Vulnerability
+Cybersecurity
+ACAS
+Access Control List
+Active Directory
+APT
+Anti-Malware
+Anti Spam Firewall
+ArcSight
+Authentication
+CCNA
+CCNP
+CEH
+CISA
+Cisco Certifications
+CISM
+CISSP
+Cloud Security
+Computer Forensics
+Cryptography
+Cyber Risk Remediation Analysis
+Digital Forensics
+DLP
+DoD 8570
+eMASS
+Encryption
+GCIA
+GCIH
+GRC
+GSEC
+HBSS
+HIPS
+Identity and Access Management
+Incident Response
+Information Assurance
+Information Security
+Intrusion Detection
+IPS
+ISO
+ITIL
+COBIT
+log analysis
+Malware
+Malware Analysis
+Nessus
+Network Address Translation
+Network Security
+Next Generation Firewall
+NIST Cybersecurity Framework
+PCI DSS
+QRadar
+Risk Management Framework
+Routing
+SANS GIAC certifications
+Security Architecture
+Security+
+SIEM
+SCAP
+SOC
+SSCP
+STIG
+Threat remediation
+TS/SCI
+TTP
+Vulnerability Assessment
+Vulnerability Management
+Web Application Firewall
+Web Proxy
+Wireless security
+OVM
+UVM
+Agile
+BDD
+DDD
+FDD
+ICONIX
+Pair programming
+Prince2
+RAD
+RUP
+TDD
+XP (extreme programming)
+V-Model
+Waterfall
+Google Web Designer
+Design layout
+Advanced Design System
+Paper prototyping
+Information design
+Heuristic evaluation
+Experience design
+Contextual inquiry
+User-centered design
+Adobe Creative Suite
+Interaction design
+Digital design
+User Interface Design
+UI Development
+Web Design
+Adobe After Effects
+Adobe Illustrator
+Adobe Photoshop
+Alignment
+Avocode
+Axure RP
+Balsamiq
+Dreamweaver
+Figma
+Flinto
+Flat UI
+Framer
+GIMP
+GUI
+ImageMagick
+InDesign
+InVision
+Justinmind
+Material Design
+Mockup
+PaintCode
+Principle
+Proto.io
+Responsive web design
+Script
+Semantic UI
+Sketch
+TrackDuck
+UI
+UXPin
+Visual Design
+Wireframe
+Zeplin
+Prototype

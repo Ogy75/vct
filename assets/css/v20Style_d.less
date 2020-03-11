@@ -908,6 +908,26 @@ transform: translateX(12px);
         background:@basetextColor;
         color:white;
     }
+    &.badge-technology {
+        background: lighten(@highlightColor, 50%);
+        position: relative;
+        color: @basetextColor;
+        border: 1px solid fade(@darkModeText, 70%);
+        padding-right:20px;
+        .close-badge{
+          position: absolute;
+          font-size: 14px;
+          color:lighten(@basetextColor, 30%);
+          line-height: 21px;
+          right:4px;
+          top:0;
+          transition: @mainTransition;
+          cursor:pointer;
+          &:hover{
+            color:@highlightColor;
+          }
+        }
+      }
 }
 
 .text-info{color: @highlightColor !important}

@@ -874,6 +874,26 @@ input:checked + .slider:before {
   background: #42423c;
   color: white;
 }
+.badge.badge-technology {
+  background: #b9e4f4;
+  position: relative;
+  color: #42423c;
+  border: 1px solid rgba(213, 213, 213, 0.7);
+  padding-right: 20px;
+}
+.badge.badge-technology .close-badge {
+  position: absolute;
+  font-size: 14px;
+  color: #919186;
+  line-height: 21px;
+  right: 4px;
+  top: 0;
+  transition: all 0.12s linear;
+  cursor: pointer;
+}
+.badge.badge-technology .close-badge:hover {
+  color: #177397;
+}
 .text-info {
   color: #177397 !important;
 }

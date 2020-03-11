@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Team Management</title>
+    <title>Team Time Log</title>
     <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/ti.css">
     <link rel="stylesheet" href="assets/css/mainEls.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/fonts/solid.css">
-    <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
-    <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
-    <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css">
     <link rel="stylesheet" id="colorMode" href="assets/css/v20Style.css">
+    <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css">
+    <!-- <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css"> -->
+    <!-- <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css"> -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
@@ -59,11 +59,11 @@
                 <li><a class="" href="myCompetence20.html"><i class="nav-icon fas fa-book-open mr-3"></i>My Competences</a></li>
                 <li><a href="teams20-b.html"><i class="nav-icon fas fa-user-friends mr-3"></i>Project management</a>
                 </li>
-                <li><a href="overtime20.html"><i class="nav-icon fas fa-dollar-sign mr-3"></i>Finance management</a>
-                </li>
-                <li><a class="has-level1-t selected" href="javascript:void(0)"><i
-                            class="nav-icon fas fa-tags mr-3"></i>Manage Roles</a>
-                    <ul class="vct-nav-level1" style="display: block;">
+                <li><a href="overtime20.html" class="selected"><i class="nav-icon fas fa-dollar-sign mr-3"></i>Finance
+                        management</a></li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-tags mr-3"></i>Manage
+                        Roles</a>
+                    <ul class="vct-nav-level1">
                         <li><a href="operations-management20.html">Operation</a></li>
                         <li><a href="finance-management20.html">Finance</a></li>
                     </ul>
@@ -72,7 +72,7 @@
                             class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
                     <ul class="vct-nav-level1">
                         <li><a href="mapping20.html">Mappings</a></li>
-                        <li><a href="app-management20.html" class="selected">app settings</a></li>
+                        <li><a href="app-management20.html">app settings</a></li>
                         <li><a href="service-data20.html">Service Data</a></li>
                     </ul>
                 </li>
@@ -95,7 +95,7 @@
                 <div class="vct-user-menu-block-arrow"></div>
                 <ul>
                     <li class="user-profile-name">Gina Lollobrigida</li>
-                    <li class="user-profile-position">Operations Manager</li>
+                    <li class="user-profile-position">Finance Manager</li>
                     <li><a href="login.html">Sign out</a></li>
                 </ul>
             </div>
@@ -107,38 +107,67 @@
         <div class="container position-relative">
             <div class="row">
                 <div class="col-12 d-flex align-items-center justify-content-start">
-                    <span class="primary-title my-3">Manage App</span>
+                    <span class="primary-title my-3">My Competences</span>
                 </div>
             </div>
             <div class="row">
-                <a class="vct-team col-6 col-sm-4 col-lg-3 col-xl-2 mt-4" href="javascript:void(0)">
-                    <div class="vct-team-wrapper">
-                        <span class="fas fa-calendar-plus mt-5 mb-4 action-icon"></span>
-                            <p class="text-center text-nowrap text-truncate mb-3 p-3">Add<br>New Period</p>
+                <div class="col-12 col-xl-6 mt-3">
+                    <div class="panel-container">
+                        <div class="vct-project-tab">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="table-title">Manage your competences</div>
+                            </div>
+                            <div class="d-block w-100 mb-4 float-left text-left">Add up to <span class="badge badge-success">10</span> competences.</br>Please state your primary (strongest) competences first.</div>
+                            <div class="d-block mb-3">
+                                <div class="w-100 pr-3">
+                                    <label for="competence">Competence or Technology Name</label>
+                                    <input type="text" id="competence" name="competence" />
+                                </div>
+                                <div class="w-100 d-block mt-3">
+                                    <button class="btn btn-highlight js_addComp mb-5">Add</button>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="table-title">My Competence List</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 competence-list">
+                                    <span class="badge badge-technology mr-2 mt-2">C#(.net)<i class="close-badge fas fa-window-close"></i></span>
+                                    <span class="badge badge-technology mr-2 mt-2">C# frameworks<i class="close-badge fas fa-window-close"></i></span>
+                                    <span class="badge badge-technology mr-2 mt-2">LINQ<i class="close-badge fas fa-window-close"></i></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <a class="vct-team col-6 col-sm-4 col-lg-3 col-xl-2 mt-4" href="javascript:void(0)">
-                    <div class="vct-team-wrapper">
-                        <span class="fas fa-archive mt-5 mb-4 action-icon"></span>
-                            <p class="text-center text-nowrap text-truncate mb-3 p-3">Archive<br>Old Period</p>
-                    </div>
-                </a>
-                <a class="vct-team col-6 col-sm-4 col-lg-3 col-xl-2 mt-4" href="javascript:void(0)">
-                    <div class="vct-team-wrapper">
-                        <span class="fas fa-sync-alt mt-5 mb-4 action-icon"></span>
-                            <p class="text-center text-nowrap text-truncate mb-3 p-3">Refresh<br>Harvest Cache</p>
-                    </div>
-                </a>
+                </div>
             </div>
         </div>
 
-        <script src="assets/vendor/jquery341/jquery.min.js"></script>
-        <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js"></script>
-        <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
-        <script src="assets/js/custom.js"></script>
-        <script src="assets/js/tmv20.js"></script>
-        <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
+    </div>
+
+    <script src="assets/vendor/jquery341/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
+    <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js"></script>
+    <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/tmv20.js"></script>
+    <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js"></script>
+    <script>
+        var options = {
+
+            url: "assets/competences.json",
+            getValue: "name",
+            list: {
+                match: {
+                    enabled: true
+                }
+            },
+            theme:"square"
+        };
+        $("#competence").easyAutocomplete(options);
+    </script>
+
 </body>
 
 </html>
