@@ -50,7 +50,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  font-family: nimbus-sans, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #42423c;
   font-size: 14px;
   background: #e3e3e3;
@@ -674,7 +674,7 @@ label.btn {
   display: block;
   color: rgba(66, 66, 60, 0.5);
   padding: 14px;
-  font-family: nimbus-sans, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 12px;
   text-align: right;
@@ -690,7 +690,7 @@ label.btn {
   font-size: 14px;
   padding: 14px;
   text-decoration: none;
-  font-family: nimbus-sans, "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: right;
   float: right;
 }
