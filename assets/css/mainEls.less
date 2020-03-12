@@ -1,5 +1,5 @@
 @import "variables";
-
+// @import url("https://use.typekit.net/yrh2lvq.css");
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
 
 @font-face {
@@ -13,7 +13,7 @@
 
 //Global
 * {
-  font-size: 100%;
+  font-size: 100% ;
   -webkit-text-size-adjust: 100%;
   font-variant-ligatures: none;
   -webkit-font-variant-ligatures: none;
@@ -22,7 +22,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: @mainFont;
   color: @basetextColor;
   font-size: 14px;
   background: #e3e3e3;
@@ -665,7 +665,7 @@ label.btn {
         display: block;
         color: fade(@basetextColor, 50%);
         padding: 14px;
-        font-family: "Roboto", sans-serif;
+        font-family: @mainFont;
         font-weight: 400;
         font-size: 12px;
         text-align: right;
@@ -682,7 +682,7 @@ label.btn {
           font-size: 14px;
           padding: 14px;
           text-decoration: none;
-          font-family: "Roboto", sans-serif;
+          font-family: @mainFont;
           text-align: right;
           float: right;
           &:hover {

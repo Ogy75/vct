@@ -95,7 +95,7 @@
                         color: '#B5E3F2'
                     },
                     {
-                        title: 'free days',
+                        title: 'days off',
                         start: '2020-04-20',
                         end: '2020-04-25',
                         color: '#BFE0B3'
@@ -302,7 +302,7 @@
 
                         <div class="col-6 col-sm-3">
                             <div class="time-module" id="days-free">
-                                <span class="module-label">Free days</span>
+                                <span class="module-label">Days Off</span>
                                 <span class="module-icon"><i class="far fa-calendar-check"></i></span>
                                 <span class="module-data">1</span>
                                 <div class="module-status"></div>
@@ -320,7 +320,7 @@
 
                         <div class="col-6 col-sm-3">
                             <div class="time-module" id="work-from-home">
-                                <span class="module-label">Work from Home days</span>
+                                <span class="module-label">Home Office days</span>
                                 <span class="module-icon"><i class="far fa-calendar-plus"></i></span>
                                 <span class="module-data">3</span>
                                 <div class="module-status"></div>
@@ -340,7 +340,7 @@
                             <div class="time-module" id="timeline">
                                 <span class="module-label">event timeline</span>
                                 <span class="module-icon"><i class="fas fa-history"></i></span>
-                                <span class="module-data">???</span>
+                                <span class="module-data"></span>
                                 <div class="module-status"></div>
                             </div>
                         </div>
@@ -354,13 +354,11 @@
                                 <div class="panel-container">
                                     <div class="row">
                                         <div class="col-12">
-                                            <div class="table-title mb-2">Free days</div>
-                                            <div class="d-block w-100 float-left text-left">Free days are slava, child
-                                                birth days, family death case days.</div>
-                                            <div class="d-block w-100 mb-4 float-left text-left">You have <span
-                                                    class="badge badge-success">1</span> free days logged in current
-                                                year.
+                                            <div class="table-title mb-2">Days off</div>
+                                            <div class="d-block w-100 mb-2 float-left text-left">
+                                                You have <span class="badge badge-success">1</span> Days off logged in current year.
                                             </div>
+                                            <div class="d-block w-100 mb-3 float-left text-left">Days Off include Slava, marriage, child birth, close family member death case, close family member illness, home relocation and if employee imminently gets struck by a natural disaster.</div>
                                         </div>
                                     </div>
                                     <div class="table-wrapper">
@@ -369,7 +367,7 @@
                                                 <tr>
                                                     <th><i class="far fa-calendar-alt"></i> Period</th>
                                                     <th><i class="far fa-calendar"></i> No. of Days</th>
-                                                    <th><i class="far fa-calendar"></i> Description</th>
+                                                    <th><i class="fas fa-align-left"></i> Description</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -396,8 +394,8 @@
                             <div class="panel-data" id="days-earned-data">
                                 <div class="panel-container">
                                     <span class="tab-title">You have a total of <span
-                                            class="badge badge-success">15</span> earned hours at your disposal</span>
-                                    <p>This is a total amount of remaining earned hours.</p>
+                                            class="badge badge-success">74</span> earned hours at your disposal</span>
+                                    <p>This is the amount of currently available earned hours.</p>
                                     <!-- EARNED HOURS PAYOFF -->
                                     <div class="converter-wrapper mt-4 p-4">
                                         <div class="row">
@@ -442,8 +440,8 @@
                                                 <thead>
                                                     <tr>
                                                         <th><i class="far fa-calendar-alt"></i> Date</th>
-                                                        <th><i class="far fa-calendar"></i> No. of Hours</th>
-                                                        <th><i class="far fa-calendar"></i> Description</th>
+                                                        <th><i class="far fa-clock"></i> No. of Hours</th>
+                                                        <th><i class="fas fa-align-left"></i> Description</th>
                                                         <th></th>
                                                     </tr>
                                                 </thead>
@@ -565,12 +563,8 @@
 
                                     <div class="vct-project-tab">
                                         <span class="tab-title">You have a total of <span
-                                                class="badge badge-success">23</span> days available at your
-                                            disposal.</span>
-                                        <p>This is a sum of this years assigned vacation days, unused previous year
-                                            vacation
-                                            days and earned hours (converted to days). Before booking your vacation days
-                                            please consult with your Team Leader. </p>
+                                                class="badge badge-success">23</span> days at your disposal</span>
+                                        <p>This is a sum of current year vacation days, remaining previous year vacation days and earned days. Before booking your vacation please consult with your Team Leader.</p>
                                         <!-- HOLIDAY BOOKING -->
                                         <div class="booking-wrapper mt-4 p-4">
                                             <div class="row">
@@ -605,21 +599,13 @@
                                                             </select>
                                                         </div> -->
                                                         <div class="col-12 order-1 order-sm-3">
-                                                            <p class="font-weight-bold mt-3">You have selected <span
-                                                                    class="badge badge-info px-2 vacation-total">13</span>
-                                                                days in total. Please define how many days you want to
-                                                                use
-                                                                from your earned days.</p>
+                                                            <p class="font-weight-bold mt-3">You have chosen a period of <span class="badge badge-info vacation-total">13</span> days for your vacation. Use 2nd Step to include Earned days in your Vacation.</p>
                                                         </div>
                                                         <div class="col-12 order-4 my-3">
                                                             <div class="booking-responsibility w-100">
                                                                 <input type="checkbox" class="responsibility"
                                                                     name="responsibility" class="w-auto" />
-                                                                <label for="responsibility">Before booking my
-                                                                    Vacation I have consulted my Team Lead and relevant
-                                                                    person
-                                                                    on Client side and they aprooved this
-                                                                    period.</label>
+                                                                <label for="responsibility">Before booking my Vacation I have consulted my Team Leader and/or Client and got the approval.</label>
                                                             </div>
                                                         </div>
                                                         <div
@@ -768,10 +754,10 @@
                                         <table class="panel-table">
                                             <thead>
                                                 <tr>
-                                                    <th><i class="far fa-calendar-alt"></i> Month</th>
-                                                    <th><i class="far fa-calendar"></i> Hours required</th>
-                                                    <th><i class="fas fa-list"></i> Hours logged</th>
-                                                    <th class="text-right"><i class="far fa-clock"></i> Difference</th>
+                                                    <th><i class="far fa-calendar-alt"></i> Period</th>
+                                                    <th><i class="fas fa-clock"></i> Hours required</th>
+                                                    <th><i class="far fa-clock"></i> Hours logged</th>
+                                                    <th class="text-right"><i class="far fa-clock"></i> Difference (h)</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -819,16 +805,13 @@
                             <!-- WORK FROM HOME -->
                             <div class="panel-data" id="work-from-home-data">
                                 <div class="panel-container">
-                                    <span class="tab-title">You have logged <span
-                                            class="badge badge-success js_noDays">3</span> days as home office days this
-                                        month.
-                                    </span>
+                                    <span class="tab-title">You have added <span class="badge badge-success js_noDays">3</span> dates as Home Office days in this month</span>
                                     <div class="converter-wrapper mt-4 p-4">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="w-100">
-                                                    <h4>Add Home Office date</h4>
-                                                    <p>Please log each day you've spent at your Home Office.</p>
+                                                    <h4>Add Home Office day</h4>
+                                                    <p>Please log each day you've spent at your Home Office Days.</p>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-sm-5 col-xl-6">
@@ -841,9 +824,7 @@
                                                         <div class="booking-responsibility w-100">
                                                             <input type="checkbox" class="responsibility"
                                                                 name="responsibility" class="w-auto">
-                                                            <label for="responsibility">Before logging my Work from Home
-                                                                day I have consulted my Team Lead and got the
-                                                                approval.</label>
+                                                            <label for="responsibility">Before logging my Home Office day I have consulted my Team Lead and got the approval.</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-12 d-flex align-items-center justify-content-center justify-content-sm-start order-4 order-sm-4">
@@ -985,7 +966,7 @@
                                             </tbody>
                                             <tfoot>
                                                 <tr>
-                                                    <td>Total</td>
+                                                    <td>Total (hh:mm)</td>
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
@@ -1007,9 +988,9 @@
                                             <div class="d-flex justify-content-between align-items-center mb-3">
                                                 <div class="table-title">Event timeline</div>
                                             </div>
-                                            <!-- <div class="d-block w-100 mb-4 float-left text-left">
-                                                Presents all recorded events.
-                                            </div> -->
+                                            <div class="d-block w-100 mb-4 float-left text-left">
+                                                Shows all available event periods since the beginning of employment.
+                                            </div>
                                         </div>
                                     </div>
                                     <div id="event-timeline"></div>
@@ -1018,8 +999,8 @@
                                         <div class="legend-color legend-sickleave">sickleave</div>
                                         <div class="legend-color legend-vacation">vacation</div>
                                         <div class="legend-color legend-travel">travel</div>
-                                        <div class="legend-color legend-onsite-work">free&nbsp;days</div>
-                                        <div class="legend-color legend-free-days">paid leave</div>
+                                        <div class="legend-color legend-daysoff">days&nbsp;off</div>
+                                        <div class="legend-color legend-paid-leave">paid leave</div>
                                     </div>
                                 </div>
                             </div>
