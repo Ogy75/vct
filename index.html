@@ -756,11 +756,10 @@
                                                 <tr>
                                                     <th>Period</th>
                                                     <th>Required(h)</th>
-                                                    <th>All Logged(h)</th>
+                                                    <th>Diff. from required(h)</th>
                                                     <th>Earned(h) to payment</th>
                                                     <th>Earned(h) to vacation</th>
-                                                    <th>Overtime(h)</th>
-                                                    <th>Undertime(h)</th>
+                                                    <th>Overtime - Undertime Saldo</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -770,37 +769,33 @@
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td><span class="badge badge-success">+32</span>
-                                                    <td class="text-right"></td>
+                                                    <td class="text-right"><span class="badge badge-success">32</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>January</td>
                                                     <td>140</td>
-                                                    <td>140</td>
+                                                    <td>0</td>
                                                     <td><span class="badge badge-earned-used">-20</span></td>
                                                     <td></td>
-                                                    <td></td>
-                                                    <td class="text-right"></td>
+                                                    <td class="text-right"><span class="badge badge-success">12</span>
                                                 </tr>
                                                 <tr>
                                                     <td>February</td>
                                                     <td>152</td>
-                                                    <td>144</td>
+                                                    <td><span class="badge badge-danger">-8</span></td>
                                                     <td></td>
                                                     <td><span class="badge badge-earned-used">-8</span></td>
-                                                    <td></td>
-                                                    <td class="text-right"><span class="badge badge-danger">-8</span>
+                                                    <td class="text-right"><span class="badge badge-danger">-4</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>March</td>
                                                     <td>160</td>
-                                                    <td>160</td>
+                                                    <td><span class="badge badge-success">30</span></td>
                                                     <td></td>
                                                     <td></td>
-                                                    <td><span class="badge badge-success">+30</span>
-                                                    <td class="text-right"></td>
+                                                    <td class="text-right"><span class="badge badge-success">26</span>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -808,11 +803,10 @@
                                                 <tr>
                                                     <td>Total</td>
                                                     <td>452</td>
-                                                    <td>444</td>
+                                                    <td><span class="badge badge-success">22</span></td>
                                                     <td><span class="badge badge-earned-used">-20</span></td>
                                                     <td><span class="badge badge-earned-used">-8</span></td>
-                                                    <td><span class="badge badge-success">+26</span>
-                                                    <td class="text-right"></td>
+                                                    <td class="text-right"><span class="badge badge-success">26</span>
                                                     </td>
                                                 </tr>
                                         </table>
@@ -1153,7 +1147,7 @@
                         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                         datasets: [
                             {
-                                label: "All logged(h)",
+                                label: "Regular logged(h)",
                                 backgroundColor: "#1E9BCC",
                                 data: [140, 136, 160],
                                 stack: 3
