@@ -904,6 +904,10 @@ input:checked + .slider:before {
 .badge.badge-technology .close-badge:hover {
   color: #177397;
 }
+.badge.badge-earned-used {
+  background: #0a303e;
+  color: #d5d5d5;
+}
 .text-info {
   color: #177397 !important;
 }
