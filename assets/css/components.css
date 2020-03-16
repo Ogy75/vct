@@ -584,7 +584,7 @@ label.for-files {
   color: #42423c;
 }
 .legend-color.legend-work {
-  background: #B5E3F2;
+  background: #B5E3FF;
 }
 .legend-color.legend-sickleave {
   background: #FFF694;
@@ -593,13 +593,19 @@ label.for-files {
   background: #FAD0E2;
 }
 .legend-color.legend-travel {
-  background: #ABCADD;
+  background: #B1CEFF;
 }
 .legend-color.legend-daysoff {
-  background: #BFE0B3;
+  background: #FAD1B3;
 }
 .legend-color.legend-paid-leave {
   background: #DDDDE0;
+}
+.legend-color.legend-home-office {
+  background: #C3F9FF;
+}
+.legend-color.legend-public-holiday {
+  background: #E6C6FF;
 }
 .error-badge {
   display: inline-block;
