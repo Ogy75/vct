@@ -110,7 +110,7 @@ input:disabled {
 .time-module.selected {
   box-shadow: none;
   border: 1px solid #cecec9;
-  background: #edf8fc;
+  background: transparent;
 }
 .time-module .module-label {
   display: block;
