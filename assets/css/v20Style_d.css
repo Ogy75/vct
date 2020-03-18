@@ -1244,6 +1244,7 @@ table.overview td {
   margin-right: 4px;
 }
 .react-autosuggest__suggestions-container--open {
+  width: 100%;
   border: 1px solid #42423c;
   background-color: #696964;
   max-height: 108px;

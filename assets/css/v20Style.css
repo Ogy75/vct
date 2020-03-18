@@ -1203,6 +1203,7 @@ table.overview td {
   margin-right: 4px;
 }
 .react-autosuggest__suggestions-container--open {
+  width: 100%;
   max-height: 108px;
   overflow-y: auto;
   font-family: "Roboto", sans-serif;
