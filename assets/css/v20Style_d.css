@@ -1246,9 +1246,15 @@ table.overview td {
 .react-autosuggest__suggestions-container--open {
   border: 1px solid #42423c;
   background-color: #696964;
-  font-weight: 500;
-  max-height: 164px;
+  max-height: 108px;
   overflow-y: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  border-radius: 2px;
+  position: absolute;
+  top: 30px;
 }
 .react-autosuggest__suggestion--highlighted {
   background-color: #42423c !important;
