@@ -370,6 +370,89 @@
                             <!-- FREE DAYS -->
                             <div class="panel-data" id="days-free-data">
                                 <div class="panel-container">
+                                    <span class="tab-title">You have <span class="badge badge-success js_noDays">1</span> Days Off dates logged</span>
+                                    <div class="converter-wrapper mt-4 p-4">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="w-100">
+                                                    <h4>Add Days Off date</h4>
+                                                    <p>Days Off include Slava, marriage, child birth, close family member death case, close family member illness, home relocation and if employee imminently gets struck by a natural disaster.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-5 col-xl-6">
+                                                <div class="row">
+                                                    <div class="col-12 col-xl-8 mt-3">
+                                                        <p>Select Days Off type</p>
+                                                        <select>
+                                                            <option>Slava - 1 day</option>
+                                                            <option>Home Relocation - 1 day</option>
+                                                            <option>Marriage - 3 days</option>
+                                                            <option>Child Birth - 5 days</option>
+                                                            <option>Death Case - 5 days</option>
+                                                            <option>Family member Illness - 5 days</option>
+                                                            <option>Natural disaster - 5 days</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-12 col-xl-8 mt-3">
+                                                        <p>Select start date</p>
+                                                        <input class="home-days" type="text">
+                                                    </div>
+                                                    <div class="col-12 order-4 my-3">
+                                                        <div class="booking-responsibility w-100">
+                                                            <input type="checkbox" class="responsibility" name="responsibility">
+                                                            <label for="responsibility">Before logging my Days Off dates I have consulted my Team Lead and got the approval.</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 d-flex align-items-center justify-content-center justify-content-sm-start order-4 order-sm-4">
+                                                        <button class="btn btn-alert border border-white my-3 js_addDate js_book" disabled="">Add date</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="mt-5">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div class="table-title">Days Off dates log</div>
+                                            <div class="d-flex justify-content-end">
+                                                <select>
+                                                    <option selected>2020</option>
+                                                    <option>2019</option>
+                                                    <option>2018</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="table-wrapper">
+                                            <table class="panel-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th><i class="far fa-calendar-alt"></i> Date</th>
+                                                        <th><i class="fas fa-align-left"></i> Description</th>
+                                                        <th><i class="far fa-calendar"></i> Days</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>19.12.2020</td>
+                                                        <td>Slava</td>
+                                                        <td>1</td>
+                                                        <td><span class="badge badge-danger float-right js_removeEntry pointer">remove
+                                                                date</span></td>
+                                                                
+                                                    </tr>
+                                                    <tr>
+                                                        <td>02.03.2020 - 06.03.2020</td>
+                                                        <td>Natural disaster</td>
+                                                        <td>5</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="panel-container">
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="table-title mb-2">Days off</div>
@@ -404,7 +487,7 @@
                                             </tfoot>
                                         </table>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
 
 
