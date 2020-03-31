@@ -438,5 +438,24 @@ $(document).ready(function() {
     $('.close-badge').on('click', function(){
         $(this).parents('span').remove();
     });
+
+    //Days off select
+    $("#days-off").on("change",function(){
+        $("option[value=" + this.value + "]", this)
+        .attr("selected", true).siblings()
+        .removeAttr("selected")
+      });
+      
+      $("#days-off").change(function(){
+        var id = $(this).find("option:selected").attr("id");
+      
+        switch (id){
+          case "other":
+            $('.js_description').removeClass('d-none');
+            break;
+            default:
+                $('.js_description').addClass('d-none');
+        }
+      });
 });
 
