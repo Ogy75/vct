@@ -234,6 +234,12 @@ input:disabled {
 .widget-container .table-wrapper table.panel-table tfoot tr {
   background: #edf8fc;
   font-weight: 600;
+  border-bottom: 1px dotted #919186;
+}
+.panel-container .table-wrapper table.panel-table tfoot tr:last-of-type,
+.widget-container .table-wrapper table.panel-table tfoot tr:last-of-type {
+  background: #c0e7f6;
+  border-bottom: none;
 }
 .panel-container .table-wrapper table.panel-table tfoot tr td,
 .widget-container .table-wrapper table.panel-table tfoot tr td {

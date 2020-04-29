@@ -248,11 +248,13 @@ input {
         tr {
           background: lighten(@highlightColor, 50%);
           font-weight: 600;
+          border-bottom: 1px dotted #919186;
+          &:last-of-type{
+            background: lighten(@highlightColor, 40%);
+            border-bottom: none;
+          }
           td {
             padding: 8px 5px;
-            // &:last-child{
-            //   text-align:right;
-            // }
           }
         }
       }
