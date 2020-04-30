@@ -224,7 +224,8 @@ input {
       }
       tbody {
         tr {
-          border-bottom: 1px dotted lighten(@basetextColor, 30%);
+          //border-bottom: 1px dotted lighten(@basetextColor, 30%);
+          border-bottom: none;
           transition: @mainTransition;
           &:hover {
             background: lighten(@basetextColor, 70%);
@@ -235,6 +236,7 @@ input {
             overflow: hidden;
             text-overflow: ellipsis;
             width: 20%;
+            border-bottom: 1px solid lighten(@basetextColor, 60%);
             &.log-comment {
               white-space: initial !important;
             }

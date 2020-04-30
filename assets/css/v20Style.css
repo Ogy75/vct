@@ -211,7 +211,7 @@ input:disabled {
 }
 .panel-container .table-wrapper table.panel-table tbody tr,
 .widget-container .table-wrapper table.panel-table tbody tr {
-  border-bottom: 1px dotted #919186;
+  border-bottom: none;
   transition: all 0.12s linear;
 }
 .panel-container .table-wrapper table.panel-table tbody tr:hover,
@@ -225,6 +225,7 @@ input:disabled {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 20%;
+  border-bottom: 1px solid #dadad6;
 }
 .panel-container .table-wrapper table.panel-table tbody tr td.log-comment,
 .widget-container .table-wrapper table.panel-table tbody tr td.log-comment {
