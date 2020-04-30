@@ -253,8 +253,13 @@ body.modal-open .vct-content {
 }
 .panel-container .table-wrapper table.panel-table tfoot tr,
 .widget-container .table-wrapper table.panel-table tfoot tr {
-  background: #333333;
+  background: #262626;
   font-weight: 600;
+}
+.panel-container .table-wrapper table.panel-table tfoot tr:last-of-type,
+.widget-container .table-wrapper table.panel-table tfoot tr:last-of-type {
+  background: #333333;
+  border-bottom: none;
 }
 .panel-container .table-wrapper table.panel-table tfoot tr td,
 .widget-container .table-wrapper table.panel-table tfoot tr td {

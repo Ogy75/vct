@@ -262,13 +262,14 @@ body{
             }
             tfoot{
                 tr{
-                    background: lighten(black,20%);
+                    background: lighten(black,15%);
                     font-weight: 600;
+                    &:last-of-type{
+                        background: lighten(black, 20%);
+                        border-bottom: none;
+                      }
                     td{
                         padding: 8px 5px;
-                        // &:last-child{
-                        //     text-align:right;
-                        //   }
                     }
                 }
             }
