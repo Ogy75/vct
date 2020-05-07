@@ -627,3 +627,6 @@ label.for-files {
   margin-right: 10px ;
   color: #ffe799;
 }
+.archived-project {
+  display: none;
+}

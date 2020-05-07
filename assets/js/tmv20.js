@@ -457,5 +457,19 @@ $(document).ready(function() {
                 $('.js_description').addClass('d-none');
         }
       });
+
+      //TOGGLE ARCHIVED PROJECTS
+      $('#archived').click(function () {
+        if ($(this).prop('checked') == true) {
+            $('.active-project').hide();
+            $('.archived-project').show();
+            $('#add-project').hide();
+        }
+        else {
+            $('.active-project').show();
+            $('.archived-project').hide();
+            $('#add-project').show();
+        }
+    });
 });
 

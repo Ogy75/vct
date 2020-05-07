@@ -615,7 +615,7 @@ a.vct-team:hover {
   background-color: transparent;
   text-align: center;
   color: #d8483e;
-  z-index: 100;
+  z-index: 0;
   cursor: pointer;
   transition: all 0.12s linear;
 }
