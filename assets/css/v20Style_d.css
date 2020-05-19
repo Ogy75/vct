@@ -1270,3 +1270,36 @@ table.overview td {
   background: rgba(23, 115, 151, 0.9);
   color: #d5d5d5;
 }
+.inv-company-wrapper {
+  transition: all 0.12s linear;
+  background: #1a1a18;
+  border: 1px solid #454545;
+  border-radius: 4px;
+  position: relative;
+}
+.inv-company-wrapper .company-logo {
+  height: 30px;
+  max-width: 190px;
+  display: block;
+  text-align: center;
+}
+.file-input {
+  opacity: 0;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+#logo-img {
+  max-height: 50px;
+  max-width: 260px;
+}
+.select-height-fix {
+  height: 33px;
+  width: 100%;
+}
+.form-title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

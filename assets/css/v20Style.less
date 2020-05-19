@@ -371,8 +371,26 @@ input {
 }
 a.vct-team {
   text-decoration: none;
+  background: transparent !important;
   &:hover {
     color: @highlightColor;
+  }
+  .vct-team-wrapper {
+    text-align: center;
+    position: relative;
+    img.vct-client-logo {
+      height: 42px;
+      margin-top: 50px;
+      margin-bottom:30px;
+      max-width: 180px;
+    }
+    .status {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 8px;
+      line-height: 12px;
+    }
   }
 }
 .vct-content {
@@ -815,33 +833,9 @@ input:checked + .slider:before {
   margin: 7px 0px;
   min-width: 300px;
 }
-.vct-team {
-  background: transparent !important;
-}
 .vct-team-block {
   border: none !important;
 }
-
-.vct-team {
-  .vct-team-wrapper {
-    text-align: center;
-    position: relative;
-    img.vct-client-logo {
-      height: 42px;
-      margin-top: 50px;
-      margin-bottom:30px;
-      max-width: 180px;
-    }
-    .status {
-      position: absolute;
-      right: 0;
-      top: 0;
-      padding: 8px;
-      line-height: 12px;
-    }
-  }
-}
-
 .tab-button {
   display: block;
   background: transparent;
@@ -1278,4 +1272,41 @@ table.overview {
       background: fade(@highlightColor, 15%);
       color: @basetextColor;
   }
+}
+
+
+//INVOICING ADDON
+.inv-company-wrapper  {
+  border: 1px solid #e1e1df;
+  transition: all 0.12s linear;
+  background: white;
+  border-radius: 4px;
+  //overflow: hidden;
+  position: relative;
+  .company-logo{
+    height:30px;
+    max-width: 190px;
+    display: block;
+    text-align: center;
+  }
+}
+.file-input{
+  opacity: 0;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+#logo-img{
+  max-height: 50px;
+  max-width:260px;
+}
+.select-height-fix{
+  height: 33px;
+  width:100%;
+}
+.form-title{
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }

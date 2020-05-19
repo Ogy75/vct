@@ -1,13 +1,13 @@
-$(window).on('load', function() {
+$(window).on('load', function () {
     $('.lds-dual-ring-bg').fadeOut(800);
 });
 
-$(document).ready(function() {
-    $('.time-module').on('click', function() {
+$(document).ready(function () {
+    $('.time-module').on('click', function () {
         $(this).addClass('selected');
     });
 
-    $('.time-module').click(function(event) {
+    $('.time-module').click(function (event) {
         var timeModule = $('.time-module');
         var moduleStatus = $('.module-status');
         var moduleIcon = $('.module-icon');
@@ -21,104 +21,104 @@ $(document).ready(function() {
     });
 
 
-    $('#days-spent').click(function() {
+    $('#days-spent').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#days-spent-data').fadeIn();
     });
 
-    $('#days-previous').click(function() {
+    $('#days-previous').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#days-previous-data').fadeIn();
     });
 
-    $('#days-free').click(function() {
+    $('#days-free').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#days-free-data').fadeIn();
     });
 
-    $('#days-earned').click(function() {
+    $('#days-earned').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#days-earned-data').fadeIn();
     });
 
-    $('#days-assigned').click(function() {
+    $('#days-assigned').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#days-assigned-data').fadeIn();
     });
 
-    $('#vacation').click(function() {
+    $('#vacation').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#vacation-data').fadeIn();
     });
 
-    $('#days-sickleave').click(function() {
+    $('#days-sickleave').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#days-sickleave-data').fadeIn();
     });
-    $('#total-work-hours').click(function() {
+    $('#total-work-hours').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#total-work-hours-data').fadeIn();
     });
 
-    $('#work-from-home').click(function() {
+    $('#work-from-home').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#work-from-home-data').fadeIn();
     });
 
-    $('#daily-time-tracking').click(function() {
+    $('#daily-time-tracking').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#daily-time-tracking-data').fadeIn();
     });
-    $('#timeline').click(function() {
+    $('#timeline').click(function () {
         var timeModule = $('.time-module');
         var panelData = $('.panel-data');
         panelData.hide();
         $(this).parents('.left-items').find('#timeline-data').fadeIn();
     });
 
-    $('.js_book').on('click', function() {
+    $('.js_book').on('click', function () {
         $('.js_bookingMessage').removeClass('d-none');
     });
 
-    $('.js_request').on('click', function() {
+    $('.js_request').on('click', function () {
         $('.js_requestMessage').removeClass('d-none');
     });
 
     //team toggle menu
-    $('.team-name').on('click', function() {
+    $('.team-name').on('click', function () {
         $(this).parents('.vct-teams').find('.team-list').slideToggle(150);
         $(this).toggleClass('visible');
     });
 
     //on site toggle
-    $('.toggle-onsite').on('click', function(ev) {
+    $('.toggle-onsite').on('click', function (ev) {
         var trigger = $(ev.target);
         trigger.parents('.parent').find('.on-site-row').toggleClass('d-none');
         trigger.toggleClass('fa-chevron-up');
     });
 
     //toggle clear btn to search
-    $('.find-member').keyup(function() {
+    $('.find-member').keyup(function () {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
@@ -127,7 +127,7 @@ $(document).ready(function() {
         }
     });
     //Clear&focus btn fn.
-    $('.reset-input').on('click', function() {
+    $('.reset-input').on('click', function () {
         $('.find-member').val('').focus();
         $('.find-project').val('').focus();
         $('.reset-input').hide();
@@ -137,7 +137,7 @@ $(document).ready(function() {
     });
 
     //toggle clear btn to search
-    $('.find-member').keyup(function() {
+    $('.find-member').keyup(function () {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
@@ -146,10 +146,10 @@ $(document).ready(function() {
         }
     });
     //Team member search
-    $('.find-member').keyup(function() {
+    $('.find-member').keyup(function () {
         var filter = $(this).val(),
             count = 0;
-        $('.team-data').each(function() {
+        $('.team-data').each(function () {
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                 $(this).fadeOut(80);
             } else {
@@ -170,7 +170,7 @@ $(document).ready(function() {
 
 
     //toggle clear btn to search
-    $('.find-project').keyup(function() {
+    $('.find-project').keyup(function () {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
@@ -180,7 +180,7 @@ $(document).ready(function() {
     });
 
     //Clear&focus btn fn.
-    $('.reset-input').on('click', function() {
+    $('.reset-input').on('click', function () {
         $('.find-project').val('').focus();
         $('.reset-input').hide();
         $('.vct-team').show();
@@ -188,10 +188,10 @@ $(document).ready(function() {
     });
 
     //Project search
-    $('.find-project').keyup(function() {
+    $('.find-project').keyup(function () {
         var filter = $(this).val(),
             count = 0;
-        $('.vct-team').each(function() {
+        $('.vct-team').each(function () {
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                 $(this).fadeOut(100);
             } else {
@@ -209,7 +209,7 @@ $(document).ready(function() {
 
 
     //toggle clear btn to search
-    $('.find-employees').keyup(function() {
+    $('.find-employees').keyup(function () {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
@@ -219,7 +219,7 @@ $(document).ready(function() {
     });
 
     //Clear&focus btn fn.
-    $('.reset-input').on('click', function() {
+    $('.reset-input').on('click', function () {
         $('.find-employees').val('').focus();
         $('.reset-input').hide();
         $('.team-member').show();
@@ -227,10 +227,10 @@ $(document).ready(function() {
     });
 
     //Project search
-    $('.find-employees').keyup(function() {
+    $('.find-employees').keyup(function () {
         var filter = $(this).val(),
             count = 0;
-        $('.team-member').each(function() {
+        $('.team-member').each(function () {
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                 $(this).fadeOut(100);
             } else {
@@ -248,7 +248,7 @@ $(document).ready(function() {
     });
 
     //Pinning team list
-    $('.pin').on('click', function() {
+    $('.pin').on('click', function () {
         $(this).parents('.vct-teams').toggleClass('pinned');
         $(this).toggleClass('pin-pinned');
     });
@@ -271,7 +271,7 @@ $(document).ready(function() {
     }
 
     //PROJECT TABS
-    $('#tab-projects').on('click', function() {
+    $('#tab-projects').on('click', function () {
         if ($('.vct-project-tab').hasClass('d-none')) {
             $('.vct-project-tab').removeClass('d-none');
             $('.vct-employees-tab').addClass('d-none');
@@ -279,7 +279,7 @@ $(document).ready(function() {
             $('#tab-employees').toggleClass('selected');
         }
     });
-    $('#tab-employees').on('click', function() {
+    $('#tab-employees').on('click', function () {
         if ($('.vct-employees-tab').hasClass('d-none')) {
             $('.vct-project-tab').addClass('d-none');
             $('.vct-employees-tab').removeClass('d-none');
@@ -289,7 +289,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.js_launch').on('click', function() {
+    $('.js_launch').on('click', function () {
         $(this).html('cancel Campaign').addClass('btn-alert');
         $('.js_input').hide();
         $('.js_message').removeClass('d-none');
@@ -298,7 +298,7 @@ $(document).ready(function() {
     });
 
     //Scroll to top
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         var height = $(window).scrollTop();
         if (height > 100) {
             $('#go-top').fadeIn(100);
@@ -306,7 +306,7 @@ $(document).ready(function() {
             $('#go-top').fadeOut(100);
         }
     });
-    $('#go-top').click(function(event) {
+    $('#go-top').click(function (event) {
         event.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 'slow');
         return false;
@@ -314,9 +314,9 @@ $(document).ready(function() {
 
     //PAYOUT Process
     $('.excel-doc').hide();
-    $('.js_payout').on('click', function() {
+    $('.js_payout').on('click', function () {
         $('.small-loader').show();
-            setTimeout(function() {
+        setTimeout(function () {
             $('.small-loader').hide();
             $('.excel-doc').show();
         }, 4000);
@@ -334,7 +334,7 @@ $(document).ready(function() {
     //     }
     // });
 
-    $('.responsibility').on('change', function() {
+    $('.responsibility').on('change', function () {
         if ($(this).is(':checked')) {
             $(this).parents('.panel-container').find($('.js_book')).attr('disabled', false);
         } else {
@@ -350,10 +350,10 @@ $(document).ready(function() {
     for (i = 0; i <= earnedDays; i++) {
         $('.earned-val').append('<option value=' + i + '>' + i + '</option>');
     }
-    $(document).on('change', '.earned-val', function() {
+    $(document).on('change', '.earned-val', function () {
         init();
     });
-    $(document).on('change', '.vacation-val', function() {
+    $(document).on('change', '.vacation-val', function () {
         valueChk = parseInt($('.earned-val').val()) + parseInt($('.vacation-val').val());
     });
 
@@ -368,54 +368,54 @@ $(document).ready(function() {
     init();
 
     //ADD HOME OFFICE DATE DEMO SCRIPT
-    $('.js_addDate').on('click', function() {
+    $('.js_addDate').on('click', function () {
         $('.js_addDateMessage').removeClass('d-none');
         //$(this).attr('disabled', true);
         $('.add-date').removeClass('d-none');
         var noS = $('.js_noDays').text();
         noS++;
         noS = $('.js_noDays').text(noS);
-        
+
     });
 
     //TABLE ACCORDION
-    $('.js_tableToggle').on('click', function() {
+    $('.js_tableToggle').on('click', function () {
         $(this).parents('.table-toggle').find('.panel-table').fadeToggle(100);
         $(this).parents('.table-toggle').find('i').addClass('fa-chevron-down');
         $(this).parents('.table-toggle').find('i').toggleClass('fa-chevron-up');
         //$('.table-toggle').removeClass('highlight');
         //$(this).parents('.table-toggle').addClass('highlight');
-        
+
     });
 
     //Switch DARK MODE
     var styleSwitch = 1;
-    $('.js_darkMode').on('click', function(){
+    $('.js_darkMode').on('click', function () {
         styleSwitch *= -1;
-            var colorMode = styleSwitch > 0 ? 'assets/css/v20Style.css' : 'assets/css/v20Style_d.css';
-            $('#colorMode[rel=stylesheet]').attr('href', colorMode);
-            $(this).toggleClass('fa-moon');
-            $(this).toggleClass('fa-lightbulb');
+        var colorMode = styleSwitch > 0 ? 'assets/css/v20Style.css' : 'assets/css/v20Style_d.css';
+        $('#colorMode[rel=stylesheet]').attr('href', colorMode);
+        $(this).toggleClass('fa-moon');
+        $(this).toggleClass('fa-lightbulb');
     });
 
-    $('.js_addEntry').on('click', function(){
-    var timeValue = $('.js_entryInput').val();
-    var addLog = $('.js_entry');
-    $(addLog).append('<td>'+ timeValue +'</td>');
-    $('.js_entryInput').val('');
-    $('.js_entryInput').focus();
+    $('.js_addEntry').on('click', function () {
+        var timeValue = $('.js_entryInput').val();
+        var addLog = $('.js_entry');
+        $(addLog).append('<td>' + timeValue + '</td>');
+        $('.js_entryInput').val('');
+        $('.js_entryInput').focus();
     });
 
-    $('.js_removeEntry').on('click', function(){
+    $('.js_removeEntry').on('click', function () {
         $(this).parents('tr').remove();
     });
 
     //No teams
     var addTeam = $('.team-name-add');
     var existingTeam = $('.team-name');
-    var teamList=$('.team-list');
+    var teamList = $('.team-list');
 
-    addTeam.on('click', function(){
+    addTeam.on('click', function () {
         $(this).hide();
         existingTeam.removeClass('d-none');
         teamList.removeClass('d-none');
@@ -427,39 +427,39 @@ $(document).ready(function() {
     //Add Competence Badge
     var competence = $('#competence');
     var addComp = $('.js_addComp');
-    addComp.on('click', function(){
-    if (competence.val() != ''){
-        $(this).parents('.panel-container').find('.competence-list').append('<span class="badge badge-technology mr-2 mt-2">' + competence.val() + '<i class="close-badge fas fa-window-close"></i></span>');
-        competence.val('').focus();
-    }
+    addComp.on('click', function () {
+        if (competence.val() != '') {
+            $(this).parents('.panel-container').find('.competence-list').append('<span class="badge badge-technology mr-2 mt-2">' + competence.val() + '<i class="close-badge fas fa-window-close"></i></span>');
+            competence.val('').focus();
+        }
     });
-    
+
     //Remove competence Badge
-    $('.close-badge').on('click', function(){
+    $('.close-badge').on('click', function () {
         $(this).parents('span').remove();
     });
 
     //Days off select
-    $("#days-off").on("change",function(){
+    $("#days-off").on("change", function () {
         $("option[value=" + this.value + "]", this)
-        .attr("selected", true).siblings()
-        .removeAttr("selected")
-      });
-      
-      $("#days-off").change(function(){
+            .attr("selected", true).siblings()
+            .removeAttr("selected")
+    });
+
+    $("#days-off").change(function () {
         var id = $(this).find("option:selected").attr("id");
-      
-        switch (id){
-          case "other":
-            $('.js_description').removeClass('d-none');
-            break;
+
+        switch (id) {
+            case "other":
+                $('.js_description').removeClass('d-none');
+                break;
             default:
                 $('.js_description').addClass('d-none');
         }
-      });
+    });
 
-      //TOGGLE ARCHIVED PROJECTS
-      $('#archived').click(function () {
+    //TOGGLE ARCHIVED PROJECTS
+    $('#archived').click(function () {
         if ($(this).prop('checked') == true) {
             $('.active-project').hide();
             $('.archived-project').show();
@@ -471,5 +471,33 @@ $(document).ready(function() {
             $('#add-project').show();
         }
     });
-});
 
+    //LOGO UPLOAD
+    $(function () {
+        $(":file").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = imageLoaded;
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+    function imageLoaded(e) {
+        $('#logo-img').attr('src', e.target.result);
+        $(".upload-logo").text('change logo');
+        $('#yourImage').attr('src', e.target.result);
+    };
+
+    //ADD BANK ACCOUNT
+    $('.js_addBankAccount').on('click', function () {
+        var allAccounts = $('.bank-accounts');
+        var singleAccount = $('#bank-account-1');
+        $(singleAccount).clone().appendTo(allAccounts);
+    });
+
+    //REMOVE BANK ACCOUNT
+    $('.js_removeBankAccount').on('click', function () {
+        $(this).parents('#bank-account-1').fadeOut();
+    });
+});
