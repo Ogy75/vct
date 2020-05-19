@@ -490,14 +490,14 @@ $(document).ready(function () {
     };
 
     //ADD BANK ACCOUNT
-    $('.js_addBankAccount').on('click', function () {
-        var allAccounts = $('.bank-accounts');
-        var singleAccount = $('#bank-account-1');
+    $('.js_addBamkAccount').on('click', function () {
+        var allAccounts = $('.bamk-accounts');
+        var singleAccount = $('#bamk-account-1');
         $(singleAccount).clone().appendTo(allAccounts);
     });
 
     //REMOVE BANK ACCOUNT
-    $('.js_removeBankAccount').on('click', function () {
-        $(this).parents('#bank-account-1').fadeOut();
+    $('.js_removeBamkAccount').on('click', function () {
+        $(this).parents('#bamk-account-1').fadeOut();
     });
 });
