@@ -39,7 +39,7 @@ body {
   min-width: 100px;
   text-transform: uppercase;
   line-height: 21px;
-  padding: 6px 20px;
+  padding: 5px 20px;
   white-space: nowrap;
 
   &.btn-cancel {
@@ -303,6 +303,9 @@ input {
     color:@basetextColor;
   }
 }
+.front{
+  z-index: 2;
+}
 
 @keyframes loader-rotation {
   0%   {transform: rotate(0deg)}
@@ -369,8 +372,7 @@ input {
   color: white;
   border-radius: 4px;
 }
-a.vct-team {
-  text-decoration: none;
+.vct-team {
   background: transparent !important;
   &:hover {
     color: @highlightColor;
@@ -380,8 +382,7 @@ a.vct-team {
     position: relative;
     img.vct-client-logo {
       height: 42px;
-      margin-top: 50px;
-      margin-bottom:30px;
+      margin-bottom:20px;
       max-width: 180px;
     }
     .status {
@@ -391,6 +392,15 @@ a.vct-team {
       padding: 8px;
       line-height: 12px;
     }
+  }
+  .vct-project-link{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
   }
 }
 .vct-content {

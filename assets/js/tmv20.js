@@ -500,4 +500,13 @@ $(document).ready(function () {
     $('.js_removeBamkAccount').on('click', function () {
         $(this).parents('#bamk-account-1').fadeOut();
     });
+
+    //ADD PERMISSION FIELD
+    $('.js_addGranted').on('click', function(){
+        $('#js_granted').clone().insertBefore('#js_addPermission');
+    });
+    //REMOVE PERMISSION FIELD
+    $('.js_removeGranted').on('click',function(){
+        $(this).parents('#js_granted').remove();
+    });
 });

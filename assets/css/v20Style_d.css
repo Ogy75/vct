@@ -49,7 +49,7 @@ body.modal-open .vct-content {
   min-width: 100px;
   text-transform: uppercase;
   line-height: 21px;
-  padding: 6px 20px;
+  padding: 5px 20px;
   white-space: nowrap;
 }
 .btn.btn-cancel {
@@ -302,6 +302,7 @@ body.modal-open .vct-content {
   line-height: 24px;
   border-radius: 12px;
   color: #d5d5d5 !important;
+  z-index: 20;
 }
 .item-menu:hover {
   background: #177397;
@@ -376,12 +377,6 @@ body.modal-open .vct-content {
   background-image: linear-gradient(210deg, #177397, #061f28 85%);
   color: #d5d5d5;
   border-radius: 4px;
-}
-a.vct-team {
-  text-decoration: none;
-}
-a.vct-team:hover {
-  color: #177397;
 }
 .vct-content {
   margin-bottom: 80px;
@@ -813,12 +808,15 @@ input:checked + .slider:before {
   margin: 7px 0px;
   min-width: 300px;
 }
-.vct-team {
-  background: transparent !important;
-}
 .vct-team-block {
   border: none !important;
   color: #d5d5d5;
+}
+.vct-team {
+  background: transparent !important;
+}
+.vct-team:hover {
+  color: #177397;
 }
 .vct-team .vct-team-wrapper {
   text-align: center;
@@ -829,8 +827,7 @@ input:checked + .slider:before {
 }
 .vct-team .vct-team-wrapper img.vct-client-logo {
   height: 42px;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   max-width: 180px;
 }
 .vct-team .vct-team-wrapper .status {
@@ -839,6 +836,15 @@ input:checked + .slider:before {
   top: 0;
   padding: 8px;
   line-height: 12px;
+}
+.vct-team .vct-project-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
 }
 .tab-button {
   display: block;

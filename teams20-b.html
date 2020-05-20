@@ -42,11 +42,6 @@
     <!-- SCROLL TOP -->
     <a href="javascript:void(0)" id="go-top"><i class="fas fa-chevron-up"></i></a>
 
-    <!--Spinner-->
-    <div class="lds-dual-ring-bg">
-        <div class="lds-dual-ring"></div>
-    </div>
-
     <!--memberDetails Modal Start -->
     <div class="modal fade" id="memberDetails" tabindex="-1" role="dialog" aria-labelledby="memberDetails"
         aria-hidden="true">
@@ -754,6 +749,50 @@
     </div>
     <!-- Export Projects to Excel end -->
 
+    <!-- Project permissions start -->
+    <div class="modal fade" id="permissions" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="permissions" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-name">Set Project permissions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 js_permissions">
+                        <div class="px-5 pt-4 text-left d-flex justify-content-between align-items-end" id="js_granted">
+                            <div class="w-100">
+                                <label for="granted-person">Grant Project rights to</label>
+                                <input type="text" name="granted-person" />
+                            </div>
+                            <button class="btn btn-highlight ml-2 js_removeGranted">remove</button>
+                        </div>
+                        <div class="px-5 py-4 text-left" id="js_addPermission">
+                            <button class="badge btn-success js_addGranted">add another</button>
+                        </div>
+                    </div>
+                    <div class="col-12 text-left">
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Save</button>
+                            <button class="btn btn-cancel m-1" class="close" data-dismiss="modal"
+                                aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project permissions end -->
+
     <!--left nav-->
     <div class="vct-left-nav">
         <div class="vct-left-nav-wrapper">
@@ -861,22 +900,31 @@
                     <!--team time list element-->
                     <div class="row mt-3">
                         <!--add project block-->
-                        <a href="javascript:void(0)" class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4"
-                            id="add-project" data-toggle="modal" data-target="#addProject">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4" id="add-project">
                             <div class="vct-team-wrapper d-flex align-items-center justify-content-center w-100 h-100">
+                                <span class="vct-project-link" data-toggle="modal" data-target="#addProject"> </span>
                                 <div class="text-center p-4">
                                     <h1 class="ti-plus"></h1>
                                     <p>add new project</p>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div  class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
+                                <div class="d-flex justify-content-between align-items-center p-3">
                                     <span class="badge badge-danger">To Do</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-edelweiss.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Edelweiss</small>
@@ -884,14 +932,23 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>1</span> team</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-warning">In Progress</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-danger">To Do</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-edelweiss.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Edelweiss</small>
@@ -899,15 +956,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>2</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-success">Done</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-danger">To Do</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-swiss.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Swiss</small>
@@ -915,15 +981,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>3</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-danger">To do</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-warning">In Progress</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-swiss.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Swiss</small>
@@ -931,15 +1006,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>4</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
+                                <div class="d-flex justify-content-between align-items-center p-3">
                                     <span class="badge badge-warning">In Progress</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-crealogix.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Crealogix</small>
@@ -947,15 +1031,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>4</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-danger">To Do</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-comparis.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Comparis</small>
@@ -963,15 +1056,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>3</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 archived-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 archived-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-secondary">Archived</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-vontobel.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Vontobel</small>
@@ -979,15 +1081,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>2</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-success">Done</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-exlibris.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Ex Libris</small>
@@ -995,15 +1106,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>1</span> team</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-success">Done</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-swisscom.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>SwissCom</small>
@@ -1011,15 +1131,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>5</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-danger">To Do</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-spilgames.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Spil Games</small>
@@ -1027,15 +1156,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>6</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-danger">To Do</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-chaviation.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>CH Aviation</small>
@@ -1043,15 +1181,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>5</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 archived-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 archived-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-secondary">Archived</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-manor.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Manor</small>
@@ -1059,15 +1206,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>7</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-warning">In Progress</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-realgarant.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Real Garant</small>
@@ -1075,15 +1231,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>8</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-success">Done</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-pasmedia.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>PAS Media</small>
@@ -1091,15 +1256,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>10</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-success">Done</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-pearson.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Pearson</small>
@@ -1107,15 +1281,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>9</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-danger">To Do</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-infominds.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Info Minds</small>
@@ -1123,15 +1306,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>6</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-warning">In Progress</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-guidle.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Guidle</small>
@@ -1139,15 +1331,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>7</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-danger">To Do</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-ifolor.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>iFolor</small>
@@ -1155,15 +1356,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>3</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-success">Done</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-pritlead.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Pritlead</small>
@@ -1171,15 +1381,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>4</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-warning">In Progress</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-enjoying.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>Enjoying</small>
@@ -1187,15 +1406,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>5</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-danger">To Do</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-youngculture.svg"
                                     alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
@@ -1204,15 +1432,24 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>8</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!--team block-->
-                        <a href="time-team20.html"
-                            class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4 active-project">
                             <div class="vct-team-wrapper">
-                                <div class="status text-right">
-                                    <span class="badge badge-success">Done</span>
+                                <div class="d-flex justify-content-between align-items-center p-3">
+                                    <span class="badge badge-success">done</span>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <span class="vct-project-link" onclick="location.href='time-team20.html';"> </span>
                                 <img class="vct-client-logo" src="assets/images/logo-nologo.svg" alt="client logo">
                                 <div class="vct-team-block px-4 pb-5 text-center">
                                     <small>New Client</small>
@@ -1220,7 +1457,7 @@
                                     <span class="badge badge-pill badge-dark mt-4"><span>7</span> teams</span>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     
                         <!--no results message-->
                         <div class="no-results-message justify-content-center align-items-center w-100">
