@@ -800,16 +800,16 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 js_permissions">
-                        <div class="px-5 pt-4 text-left d-flex justify-content-between align-items-end" id="js_granted">
+                    <div class="col-12">
+                        <div class="px-5 pt-4 text-left d-flex justify-content-between align-items-end">
                             <div class="w-100">
                                 <label for="granted-person">Grant Project rights to</label>
-                                <input type="text" name="granted-person" />
+                                <input type="text" name="granted-person" id="grant" />
                             </div>
-                            <button class="btn btn-highlight ml-2 js_removeGranted">remove</button>
+                            <button class="btn btn-highlight ml-2 js_addPermission">add</button>
                         </div>
-                        <div class="px-5 py-4 text-left" id="js_addPermission">
-                            <button class="badge btn-success js_addGranted">add another</button>
+                        <div class="w-100 px-5 pt-3 pb-4 text-left granted-list">
+                            <span class="badge badge-technology mr-2 mt-2">Vladimir Jovanovic<i class="close-badge fas fa-window-close"></i></span>
                         </div>
                     </div>
                     <div class="col-12 text-left">

@@ -509,4 +509,12 @@ $(document).ready(function () {
     $('.js_removeGranted').on('click',function(){
         $(this).parents('#js_granted').remove();
     });
+
+     //Add Project Permission
+     $('.js_addPermission').on('click', function () {
+         if ($('#grant').val() != '') {
+             $(this).parents().find('.granted-list').append('<span class="badge badge-technology mr-2 mt-2">' + $('#grant').val() + '<i class="close-badge fas fa-window-close"></i></span>');
+             $('#grant').val('').focus();
+         }
+     });
 });

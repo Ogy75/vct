@@ -1,0 +1,19 @@
+﻿@model EnjoyBooks.ViewModel.Email.VacationBookingConfirmHrDto
+
+@{
+    Layout = "__LayoutEmail.cshtml";
+}
+
+<tr>
+    <td class="title">
+        Vacation booked
+    </td>
+</tr>
+<tr>
+    <td class="body-copy"><b>@Model.FirstName @Model.LastName</b> booked a Vacation from <b>@Model.FromDate</b> until <b>@Model.ToDate</b>.</td>
+</tr>
+<tr>
+    <td class="body-copy">
+        Employee confirmed that he/she complied to company policy by consulting a team leader/client before booking a Vacation.
+    </td>
+</tr>

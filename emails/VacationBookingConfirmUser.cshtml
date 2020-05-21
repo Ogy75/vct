@@ -1,0 +1,24 @@
+﻿@model EnjoyBooks.ViewModel.Email.VacationBookingConfirmUserDto
+
+@{
+    Layout = "__LayoutEmail.cshtml";
+}
+
+<tr>
+    <td class="title">
+        Vacation booked
+    </td>
+</tr>
+<tr>
+    <td class="body-copy">Dear @Model.FirstName @Model.LastName</td>
+</tr>
+<tr>
+    <td class="body-copy">
+        You have successfully booked a Vacation from <b>@Model.FromDate</b> to <b>@Model.ToDate</b>.
+    </td>
+</tr>
+<tr>
+    <td class="body-copy">
+        You can cancel your booking anytime before the selected Vacation date. If you want to cancel your booking click <a href="@Model.LinkToFollow"><b>here</b></a>.
+    </td>
+</tr>
