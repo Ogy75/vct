@@ -393,15 +393,15 @@ input {
       line-height: 12px;
     }
   }
-  .vct-project-link{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    cursor: pointer;
-  }
+}
+.vct-project-link{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
 }
 .vct-content {
   margin-bottom: 80px;
@@ -1179,8 +1179,14 @@ ul.vct-nav-menu {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   color: fade(@basetextColor, 70%);
+  a{
+    text-decoration: none;
+    &:hover{
+      color: @basetextColor;
+    }
+  }
 }
 .blink-warning {
   background: @progressColor;
@@ -1286,7 +1292,7 @@ table.overview {
 
 
 //INVOICING ADDON
-.inv-company-wrapper  {
+.inv-block-wrapper  {
   border: 1px solid #e1e1df;
   transition: all 0.12s linear;
   background: white;
@@ -1298,6 +1304,51 @@ table.overview {
     max-width: 190px;
     display: block;
     text-align: center;
+  }
+  .contract-name{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .contract-no{
+    &:before{
+      content: "Contract No. ";
+    }
+  p{
+    margin: 0;
+  }
+  }
+  .client-no{
+    &:before{
+      content: "Client No. ";
+    }
+    p{
+      margin: 0;
+    }
+  }
+  .client-name{
+    font-size: 14px !important;
+    line-height: 14px !important;
+    padding: 3px 8px;
+  }
+  .project-name{
+    font-weight: 500;
+    //line-height: 12px;
+    &:after{
+      content:", ";
+      }
+      &:last-of-type{
+        &:after{
+          content: "";
+        }
+    }
+  }
+  &:hover{
+    box-shadow: none !important;
+    border: 1px solid @highlightColor
+  }
+  &.no-hover{
+    border: 1px solid #e1e1df !important;
   }
 }
 .file-input{

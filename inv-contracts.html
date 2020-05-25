@@ -520,9 +520,8 @@
                         <li><a href="service-data20.html">Service Data</a></li>
                     </ul>
                 </li>
-                <li><a href="inv-companies.html" class="selected"><i
-                            class="nav-icon fas fa-building mr-3"></i>My Companies</a></li>
-                <li><a href="inv-contracts.html"><i class="nav-icon fas fa-signature mr-3"></i>My Contracts</a></li>
+                <li><a href="inv-companies.html"><i class="nav-icon fas fa-building mr-3"></i>My Companies</a></li>
+                <li><a href="inv-contracts.html" class="selected"><i class="nav-icon fas fa-signature mr-3"></i>My Contracts</a></li>
             </ul>
 
         </div>
@@ -554,157 +553,65 @@
         <div class="container position-relative">
             <div class="row">
                 <div class="col-12 d-flex align-items-center justify-content-start">
-                    <span class="primary-title my-3">My Companies</span>
+                    <span class="primary-title my-3">My Contracts</span>
                 </div>
             </div>
-            <!--add company-->
-            <div class="row">
-                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                    <div class="vct-team-wrapper d-flex align-items-center justify-content-center w-100 h-100">
-                        <span class="vct-project-link" data-toggle="modal" data-target="#addCompany"> </span>
-                        <div class="text-center p-4">
-                            <h1 class="ti-plus"></h1>
-                            <p>add new company</p>
-                        </div>
-                    </div>
-                </div>
-                <!--company block-->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                    <div class="inv-block-wrapper no-hover p-3">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <span class="badge badge-secondary">Parent</span>
-                                <span class="badge badge-success">Active</span>
-                            </div>
-                            <div class="item-menu d-block fas fa-ellipsis-v">
-                                <div class="item-menu-wrapper">
-                                    <div class="arrow"></div>
-                                    <ul>
-                                        <span class="item-menu-title">Company options</span>
-                                        <li><a href="javascript:void(0)" data-toggle="modal"
-                                                data-target="#editCompany">Edit Company</a></li>
-                                    </ul>
+                
+                    <!--add company-->
+                    <div class="row">
+                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                            <div class="vct-team-wrapper d-flex align-items-center justify-content-center w-100 h-100">
+                                <span class="vct-project-link" data-toggle="modal" data-target="#addContract"> </span>
+                                <div class="text-center p-4">
+                                    <h1 class="ti-plus"></h1>
+                                    <p>add new contract</p>
                                 </div>
                             </div>
                         </div>
-                        <img class="company-logo mb-2" src="assets/images/logo-nsmeng.svg" alt="company logo">
-                        <p class="text-nowrap text-truncate small mb-4">NSM Engineering AG</p>
-                        <p>HQ: <span>Switzerland</span></p>
-                        <p>VAT ID: <span>CHE-115.136.408</span></p>
-                        <p>Tax amount: <span>7.7%</span></p>
-                    </div>
-                </div>
+                        <!--contract block-->
+                        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                            <div class="inv-block-wrapper p-3 position-relative">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div>
+                                        <span class="badge badge-success">Active</span>
+                                    </div>
+                                    <div class="item-menu front d-block fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Contract options</span>
+                                                <li><a href="javascript:void(0)" data-toggle="modal"
+                                                        data-target="#editContract">Edit Contract</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="contract-name">NSM - Crealogix</span>
+                                <p class="contract-no">0800212</p>
+                                <div class="client mt-3">
+                                    <p class="small mb-0">client</p>
+                                    <span class="client-name badge badge-success">Crealogix</span>
+                                    <p class="small mt-1 mb-0">projects</p>
+                                    <span class="project-name">Crealogix EB</span>
+                                    <span class="project-name">Crealogix E-Payment</span>
+                                </div>
+                                <div class="client mt-3">
+                                    <p class="small mt-3 mb-0">client</p>
+                                    <span class="client-name badge badge-success">Crealogix Germany</span>
+                                    <p class="small mt-1 mb-0">projects</p>
+                                    <span class="project-name">Crealogix Germany (Abaxx)</span>
+                                </div>
+                                <span class="vct-project-link" onclick="location.href='inv-clients.html';"> </span>
+                            </div>
+                        </div>
 
-                <!--company block-->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                    <div class="inv-block-wrapper no-hover p-3">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <span class="badge badge-secondary">Parent</span>
-                                <span class="badge badge-success">Active</span>
-                            </div>
-                            <div class="item-menu d-block fas fa-ellipsis-v">
-                                <div class="item-menu-wrapper">
-                                    <div class="arrow"></div>
-                                    <ul>
-                                        <span class="item-menu-title">Company options</span>
-                                        <li><a href="javascript:void(0)">Edit Company</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <img class="company-logo mb-2" src="assets/images/logo-youngculture.svg" alt="company logo">
-                        <p class="text-nowrap text-truncate small mb-4">young culture AG</p>
-                        <p>HQ: <span>Switzerland</span></p>
-                        <p>VAT ID: <span>CHE-108.543.612</span></p>
-                        <p>Tax amount: <span>7.7%</span></p>
                     </div>
                 </div>
-
-                <!--company block-->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                    <div class="inv-block-wrapper no-hover p-3">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <span class="badge badge-secondary">Child</span>
-                                <span class="badge badge-success">Active</span>
-                            </div>
-                            <div class="item-menu d-block fas fa-ellipsis-v">
-                                <div class="item-menu-wrapper">
-                                    <div class="arrow"></div>
-                                    <ul>
-                                        <span class="item-menu-title">Company options</span>
-                                        <li><a href="javascript:void(0)">Edit Company</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <img class="company-logo mb-2" src="assets/images/logo-enjoying.svg" alt="company logo">
-                        <p class="text-nowrap text-truncate small mb-4">enjoy.ing d.o.o.</p>
-                        <p>HQ: <span>Serbia</span></p>
-                        <p>VAT ID: <span>109043566</span></p>
-                        <p>Tax amount: <span>15%</span></p>
-                    </div>
-                </div>
-
-                <!--company block-->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                    <div class="inv-block-wrapper no-hover p-3">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <span class="badge badge-secondary">Child</span>
-                                <span class="badge badge-success">Active</span>
-                            </div>
-                            <div class="item-menu d-block fas fa-ellipsis-v">
-                                <div class="item-menu-wrapper">
-                                    <div class="arrow"></div>
-                                    <ul>
-                                        <span class="item-menu-title">Company options</span>
-                                        <li><a href="javascript:void(0)">Edit Company</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <img class="company-logo mb-2" src="assets/images/logo-youngculture.svg" alt="company logo">
-                        <p class="text-nowrap text-truncate small mb-4">young culture d.o.o.</p>
-                        <p>HQ: <span>Serbia</span></p>
-                        <p>VAT ID: <span>103485163</span></p>
-                        <p>Tax amount: <span>15%</span></p>
-                    </div>
-                </div>
-
-                <!--company block-->
-                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                    <div class="inv-block-wrapper no-hover p-3">
-                        <div class="d-flex justify-content-between mb-3">
-                            <div>
-                                <span class="badge badge-secondary">Child</span>
-                                <span class="badge badge-success">Active</span>
-                            </div>
-                            <div class="item-menu d-block fas fa-ellipsis-v">
-                                <div class="item-menu-wrapper">
-                                    <div class="arrow"></div>
-                                    <ul>
-                                        <span class="item-menu-title">Company options</span>
-                                        <li><a href="javascript:void(0)">Edit Company</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <img class="company-logo mb-2" src="assets/images/logo-youngculture.svg" alt="company logo">
-                        <p class="text-nowrap text-truncate small mb-4">young culture srl</p>
-                        <p>HQ: <span>Romania</span></p>
-                        <p>VAT ID: <span>31005750</span></p>
-                        <p>Tax amount: <span>22%</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="assets/vendor/jquery341/jquery.min.js"></script>
-        <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
-        <script src="assets/js/custom.js"></script>
-        <script src="assets/js/tmv20.js"></script>
+                <script src="assets/vendor/jquery341/jquery.min.js"></script>
+                <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+                <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+                <script src="assets/js/custom.js"></script>
+                <script src="assets/js/tmv20.js"></script>
 
 </body>
 

@@ -837,13 +837,13 @@ input:checked + .slider:before {
   padding: 8px;
   line-height: 12px;
 }
-.vct-team .vct-project-link {
+.vct-project-link {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 1;
   cursor: pointer;
 }
 .tab-button {
@@ -1171,8 +1171,14 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   color: rgba(255, 255, 255, 0.7);
+}
+.primary-title a {
+  text-decoration: none;
+}
+.primary-title a:hover {
+  color: #d5d5d5;
 }
 .no-results {
   color: rgba(255, 255, 255, 0.7) !important;
@@ -1276,18 +1282,56 @@ table.overview td {
   background: rgba(23, 115, 151, 0.9);
   color: #d5d5d5;
 }
-.inv-company-wrapper {
+.inv-block-wrapper {
   transition: all 0.12s linear;
   background: #1a1a18;
   border: 1px solid #454545;
   border-radius: 4px;
   position: relative;
 }
-.inv-company-wrapper .company-logo {
+.inv-block-wrapper .company-logo {
   height: 30px;
   max-width: 190px;
   display: block;
   text-align: center;
+}
+.inv-block-wrapper .contract-name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.inv-block-wrapper .contract-no:before {
+  content: "Contract No. ";
+}
+.inv-block-wrapper .contract-no p {
+  margin: 0;
+}
+.inv-block-wrapper .client-no:before {
+  content: "Client No. ";
+}
+.inv-block-wrapper .client-no p {
+  margin: 0;
+}
+.inv-block-wrapper .client-name {
+  font-size: 14px !important;
+  line-height: 14px !important;
+  padding: 3px 8px;
+}
+.inv-block-wrapper .project-name {
+  font-weight: 500;
+}
+.inv-block-wrapper .project-name:after {
+  content: ", ";
+}
+.inv-block-wrapper .project-name:last-of-type:after {
+  content: "";
+}
+.inv-block-wrapper:hover {
+  box-shadow: none !important;
+  border: 1px solid #177397;
+}
+.inv-block-wrapper.no-hover {
+  border: 1px solid #454545 !important;
 }
 .file-input {
   opacity: 0;

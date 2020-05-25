@@ -311,7 +311,7 @@ a.uploaded-file:hover {
   color: #1E9BCC;
 }
 .vct-team .vct-team-wrapper a {
-  text-decoration: none;
+  text-decoration: none !important;
   transition: all 0.12s linear;
 }
 .vct-team .vct-team-wrapper .action-icon {
