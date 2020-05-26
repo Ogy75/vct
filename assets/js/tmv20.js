@@ -539,6 +539,22 @@ $(document).ready(function () {
         }
     });
 
+    //CONTRACT STATUS
+    $('select[name="contract-status"]').change(function () {
+        var value = $(this).find('option:selected').attr('value');
+        var date = $(this).parents('.more-data').find('input[name="contract-status-from"]');
+        switch (value) {
+            case "active":
+                $(this).parents('.more-data').find('.inactive-from').hide();
+                $(this).parents('.contract-section').find('.badge-secondary').text('active');
+                break;
+            default:
+                $(this).parents('.more-data').find('.inactive-from').show();
+                $(this).parents('.contract-section').find('.badge-secondary').text('inactive from' + " " + date.val());
+                break;
+        }
+    });
+
     //ADD DISCOUNTS TO CONTRACT
     $('.js_addDiscount').on('click' ,function () {
         var value = $(this).parents('.discount-type-add').find('option:selected').attr('value');
@@ -618,6 +634,12 @@ $(document).ready(function () {
                 }
             });
         });
-    // };
+
+    //TODAYS DATE
+    var d = new Date();
+    var month = d.getMonth()+1;
+    var day = d.getDate();
+    var output = (day<10 ? '0' : '') + day + '.' + (month<10 ? '0' : '') + month + '.' + d.getFullYear();
+    $('input[name="contract-status-from"]').val(output);
 
 });

@@ -34,6 +34,7 @@ body.modal-open .vct-content {
   line-height: 21px;
   padding: 5px 20px;
   white-space: nowrap;
+  border: 1px solid transparent;
 }
 .btn.btn-short {
   padding: 1px 20px;

@@ -127,7 +127,7 @@
             </div>
 
             <!--panels-->
-            <div class="row">
+            <div class="row mt-3">
                 <!-- CONTRACT PANEL -->
                 <div class="col-12 vct-project-tab">
                     <div class="row">
@@ -140,23 +140,53 @@
                                         <div class="contract-section">
                                             <div class="row">
                                                 <div class="col-12">
-                                                    <div class="d-flex mb-4 justify-content-between align-items-center">
+                                                    <div class="d-flex justify-content-between align-items-start">
                                                         <div class="form-title">my contract company</div>
                                                         <small class="d-block text-right">* Mandatory field</small>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
-                                                        <label for="my-company-name">Select Company</label>
-                                                        <div class="select-height-fix">
-                                                            <select name="my-company-name" class="w-100">
-                                                                <option selected>NSM Engineering AG</option>
-                                                                <option>youngculture AG</option>
-                                                            </select>
-                                                        </div>
+                                                    <label for="my-company-name">Select Company</label>
+                                                    <div class="select-height-fix">
+                                                        <select name="my-company-name" class="w-100">
+                                                            <option selected>NSM Engineering AG</option>
+                                                            <option>youngculture AG</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- CONTRACT GENERAL DATA -->
+
+                                        <!-- CONTRACT STATUS -->
+                                        <div class="contract-section border-bottom pb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div
+                                                        class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                                        <div class="form-title"><span
+                                                                class="fas fa-chevron-up arrow"></span>contract status
+                                                        </div>
+                                                        <span class="badge badge-secondary">active</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data">
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-status">contract status</label>
+                                                    <div class="select-height-fix">
+                                                        <select name="contract-status" class="w-100">
+                                                            <option selected value="active">active</option>
+                                                            <option value="inactive">inactive</option>
+                                                        </select>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-12 col-sm-6 inactive-from" style="display: none;">
+                                                    <label for="contract-status-from">from date *</label>
+                                                    <input type="text" name="contract-status-from" />
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <!-- CONTRACT ID -->
                                         <div class="contract-section border-bottom pb-3">
@@ -167,18 +197,19 @@
                                                         <div class="form-title"><span
                                                                 class="fas fa-chevron-up arrow"></span>contract id
                                                         </div>
-                                                        <span class="badge badge-secondary"></span>
+                                                        <span class="badge badge-secondary">NSM - Crealogix</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row more-data">
                                                 <div class="col-12 col-sm-6">
                                                     <label for="contract-name">contract name *</label>
-                                                    <input type="text" name="contract-name" class="pronounced-data" />
+                                                    <input type="text" name="contract-name" class="pronounced-data"
+                                                        value="NSM - Crealogix" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="contract-no">contract no. *</label>
-                                                    <input type="text" name="contract-no" />
+                                                    <input type="text" name="contract-no" value="0800212" />
                                                 </div>
                                             </div>
                                         </div>
@@ -192,7 +223,7 @@
                                                         <div class="form-title"><span
                                                                 class="fas fa-chevron-up arrow"></span>contract
                                                             validity</div>
-                                                        <span class="badge badge-secondary"></span>
+                                                        <span class="badge badge-secondary">21.03.2034</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -200,13 +231,13 @@
                                                 <div class="col-12 col-sm-6">
                                                     <label for="contract-validity-start">contract validity start date
                                                         *</label>
-                                                    <input type="text" name="contract-validity-start"
-                                                        class="pronounced-data" />
+                                                    <input type="text" name="contract-validity-start" value="21.03.2014" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="contract-validity-end">contract validity end date
                                                         *</label>
-                                                    <input type="text" name="contract-validity-end" />
+                                                    <input type="text" name="contract-validity-end"
+                                                    class="pronounced-data" value="21.03.2034" />
                                                 </div>
                                             </div>
                                         </div>
@@ -220,7 +251,7 @@
                                                         <div class="form-title"><span
                                                                 class="fas fa-chevron-up arrow"></span>contract
                                                             partner</div>
-                                                        <span class="badge badge-secondary"></span>
+                                                        <span class="badge badge-secondary">Crealogix</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -228,15 +259,15 @@
                                                 <div class="col-12 col-sm-6">
                                                     <label for="contract-partner-name">contract partner name *</label>
                                                     <input type="text" name="contract-partner-name"
-                                                        class="pronounced-data" />
+                                                        class="pronounced-data" value="Crealogix" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="contract-partner-country">contract partner country
                                                         *</label>
                                                     <div class="select-height-fix">
                                                         <select name="contract-partner-country" class="w-100">
-                                                            <option selected>Select country</option>
-                                                            <option value="ch">Switzerland</option>
+                                                            <option>Select country</option>
+                                                            <option selected value="ch">Switzerland</option>
                                                             <option value="de">Germany</option>
                                                             <option value="lie">Lichtenstein</option>
                                                             <option value="uk">UK</option>
@@ -246,28 +277,33 @@
                                                 <div class="col-12 col-sm-6">
                                                     <label for="contract-partner-address">contract partner address
                                                         *</label>
-                                                    <input type="text" name="contract-partner-address" />
+                                                    <input type="text" name="contract-partner-address"
+                                                        value="Badenerstrasse 694" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="contract-partner-city">city *</label>
-                                                    <input type="text" name="contract-partner-city" />
+                                                    <input type="text" name="contract-partner-city"
+                                                        value="8048 Zürich" />
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="row">
                                                         <div class="col-12 col-sm-6">
                                                             <label for="contract-partner-person-name">contact person
                                                                 name (contract related)</label>
-                                                            <input type="text" name="contract-partner-person-name" />
+                                                            <input type="text" name="contract-partner-person-name"
+                                                                value="Max Keller" />
                                                         </div>
                                                         <div class="col-12 col-sm-6">
                                                             <label for="contract-partner-person-phone">contact person
                                                                 phone no. (contract related)</label>
-                                                            <input type="text" name="contract-partner-person-phone" />
+                                                            <input type="text" name="contract-partner-person-phone"
+                                                                value="+41 58 404 80 00" />
                                                         </div>
                                                         <div class="col-12 col-sm-6">
                                                             <label for="contract-partner-person-email">contact person
                                                                 email (contract related)</label>
-                                                            <input type="text" name="contract-partner-person-email" />
+                                                            <input type="text" name="contract-partner-person-email"
+                                                                value="max.keller@crealogix.com" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -283,22 +319,22 @@
                                                         <div class="form-title"><span
                                                                 class="fas fa-chevron-up arrow"></span>default cost
                                                             center</div>
-                                                        <span class="badge badge-secondary"></span>
+                                                        <span class="badge badge-secondary">Crealogix AG Zurich</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="row more-data">
                                                 <div class="col-12 col-sm-6">
                                                     <label for="cost-center-name">cost center partner name *</label>
-                                                    <input type="text" name="cost-center-name"
-                                                        class="pronounced-data" />
+                                                    <input type="text" name="cost-center-name" class="pronounced-data"
+                                                        value="Crealogix AG Zurich" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="contract-partner-country">cost center country *</label>
                                                     <div class="select-height-fix">
                                                         <select name="contract-partner-country" class="w-100">
-                                                            <option selected>Select country</option>
-                                                            <option value="ch">Switzerland</option>
+                                                            <option>Select country</option>
+                                                            <option selected value="ch">Switzerland</option>
                                                             <option value="de">Germany</option>
                                                             <option value="lie">Lichtenstein</option>
                                                             <option value="uk">UK</option>
@@ -307,22 +343,23 @@
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="cost-center-address">cost center address *</label>
-                                                    <input type="text" name="cost-center-address" />
+                                                    <input type="text" name="cost-center-address"
+                                                        value="Badenerstrasse 694" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="cost-center-city">cost center city *</label>
-                                                    <input type="text" name="cost-center-city" />
+                                                    <input type="text" name="cost-center-city" value="8048 Zürich" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="cost-center-vat">cost center VAT (%) *</label>
-                                                    <input type="text" name="contract-partner-address" />
+                                                    <input type="text" name="cost-center-vat" value="7,7" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="cost-center-currency">cost center currency *</label>
                                                     <div class="select-height-fix">
                                                         <select name="cost-center-currency" class="w-100">
-                                                            <option selected>Select currency</option>
-                                                            <option value="ch">CHF</option>
+                                                            <option>Select currency</option>
+                                                            <option selected value="ch">CHF</option>
                                                             <option value="de">EUR</option>
                                                             <option value="lie">RSD</option>
                                                             <option value="uk">RON</option>
@@ -335,11 +372,10 @@
                                                             <div class="row">
                                                                 <div class="col-9 col-lg-10">
                                                                     <label for="contract-partner-person-name">cost
-                                                                        center contact
-                                                                        person
-                                                                        name</label>
+                                                                        center contact person name</label>
                                                                     <input type="text"
-                                                                        name="contract-partner-person-name" />
+                                                                        name="contract-partner-person-name"
+                                                                        value="Valentina Meier" />
                                                                 </div>
                                                                 <div
                                                                     class="col-3 col-lg-2 d-flex justify-content-end align-items-end">
@@ -348,11 +384,10 @@
                                                                 </div>
                                                                 <div class="col-12 col-sm-6">
                                                                     <label for="contract-partner-person-phone">cost
-                                                                        center contact
-                                                                        person phone
-                                                                        no.</label>
+                                                                        center contact person phone no.</label>
                                                                     <input type="text"
-                                                                        name="contract-partner-person-phone" />
+                                                                        name="contract-partner-person-phone"
+                                                                        value="+41 58 404 80 00" />
                                                                 </div>
                                                                 <div class="col-12 col-sm-6">
                                                                     <label for="contract-partner-person-email">cost
@@ -360,7 +395,8 @@
                                                                         person
                                                                         email</label>
                                                                     <input type="text"
-                                                                        name="contract-partner-person-email" />
+                                                                        name="contract-partner-person-email"
+                                                                        value="valentina.meier@crealogix.com" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -384,7 +420,7 @@
                                                         <div class="form-title"><span
                                                                 class="fas fa-chevron-up arrow"></span>rate
                                                             adjustments</div>
-                                                        <span class="badge badge-secondary">not possible</span>
+                                                        <span class="badge badge-secondary">possible</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -392,7 +428,7 @@
                                                 <div class="col-12">
                                                     <div class="my-3">
                                                         <label class="switch">
-                                                            <input type="checkbox" id="rate-adjustment-possible"
+                                                            <input type="checkbox" checked id="rate-adjustment-possible"
                                                                 class="pronounced-data">
                                                             <span class="slider"></span>
                                                         </label>
@@ -402,23 +438,24 @@
                                                 <div class="col-12 col-sm-6">
                                                     <label for="rate-adjustment-first-date">first possible adjustment
                                                         date</label>
-                                                    <input type="text" name="rate-adjustment-first" disabled />
+                                                    <input type="text" name="rate-adjustment-first" value="23.3.2021" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="rate-adjustment-next-date">next possible adjustment
                                                         date</label>
-                                                    <input type="text" name="rate-adjustment-next-date" disabled />
+                                                    <input type="text" name="rate-adjustment-next-date"
+                                                        value="23.3.2023" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="rate-adjustment-extent-max">max. extent of adjustment
                                                         (%)</label>
-                                                    <input type="text" name="rate-adjustment-extent-max" disabled />
+                                                    <input type="text" name="rate-adjustment-extent-max" value="8" />
                                                 </div>
                                                 <div class="col-12">
                                                     <label for="rate-adjustment-notice-period">Notice Period
                                                         (description)</label>
-                                                    <textarea type="text" name="rate-adjustment-notice-period"
-                                                        disabled></textarea>
+                                                    <textarea type="text"
+                                                        name="rate-adjustment-notice-period">30 days ahead</textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -429,10 +466,8 @@
                                                 <div class="col-12">
                                                     <div
                                                         class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                                        <div class="form-title"><span
-                                                                class="fas fa-chevron-up arrow"></span>rate
-                                                            surcharge</div>
-                                                        <span class="badge badge-secondary">not possible</span>
+                                                        <div class="form-title"><span class="fas fa-chevron-up arrow"></span>rate surcharge</div>
+                                                        <span class="badge badge-secondary">possible</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -440,35 +475,27 @@
                                                 <div class="col-12 mt-1">
                                                     <label for="rate-surcharge-choice">rate surcharge possible *</label>
                                                     <div class="select-height-fix">
-                                                        <select name="rate-surcharge-choice"
-                                                            class="w-auto pronounced-data">
-
+                                                        <select name="rate-surcharge-choice" class="w-auto pronounced-data">
                                                             <option value="not possible">Not possible</option>
-                                                            <option value="only after written approval">Only after prior
-                                                                written
-                                                                approval</option>
+                                                            <option selected value="only after written approval">Only after prior written approval</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="rate-surcharge-overtime">overtime increase (%) *</label>
-                                                    <input type="text" name="rate-surcharge-overtime" disabled />
+                                                    <input type="text" name="rate-surcharge-overtime" value="10%" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
-                                                    <label for="rate-surcharge-weekend">weekend days increase (%)
-                                                        *</label>
-                                                    <input type="text" name="rate-surcharge-weekend" disabled />
+                                                    <label for="rate-surcharge-weekend">weekend days increase (%) *</label>
+                                                    <input type="text" name="rate-surcharge-weekend" value="24%" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
-                                                    <label for="rate-surcharge-weekday19">weekday increase after 19:00h
-                                                        (%)
-                                                        *</label>
-                                                    <input type="text" name="rate-surcharge-weekday19" disabled />
+                                                    <label for="rate-surcharge-weekday19">weekday increase after 19:00h (%) *</label>
+                                                    <input type="text" name="rate-surcharge-weekday19" value="15%" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
-                                                    <label for="rate-surcharge-pub-holiday">public holiday increase (%)
-                                                        *</label>
-                                                    <input type="text" name="rate-surcharge-pub-holiday" disabled />
+                                                    <label for="rate-surcharge-pub-holiday">public holiday increase (%) *</label>
+                                                    <input type="text" name="rate-surcharge-pub-holiday" value="30%" />
                                                 </div>
                                             </div>
                                         </div>
@@ -516,7 +543,7 @@
                                                         <div class="form-title"><span
                                                                 class="fas fa-chevron-up arrow"></span>ancilliary costs
                                                         </div>
-                                                        <span class="badge badge-secondary"></span>
+                                                        <span class="badge badge-secondary">Setup Fee Exists</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -524,57 +551,55 @@
                                                 <div class="col-12">
                                                     <div class="my-3">
                                                         <label class="switch">
-                                                            <input type="checkbox" id="ancilliary-setup-fee"
+                                                            <input type="checkbox" checked id="ancilliary-setup-fee"
                                                                 class="pronounced-data">
                                                             <span class="slider"></span>
                                                         </label>
-                                                        <span class="switch-label ml-1">Setup / Infrastructure Fee
-                                                            exists</span>
+                                                        <span class="switch-label ml-1">Setup / Infrastructure Fee exists</span>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="ancilliary-setup-fee">setup / infrastructure fee <span
                                                             class="mandatory" style="display: none;">*</span></label>
-                                                    <textarea name="ancilliary-setup-fee" rows="3"
-                                                        placeholder="description..." disabled></textarea>
+                                                    <textarea name="ancilliary-setup-fee" rows="3" placeholder="description...">New team member setup fee 1,200.00 CHF</textarea>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="ancilliary-flights">flights</label>
                                                     <textarea name="ancilliary-flights" rows="3"
-                                                        placeholder="description..."></textarea>
+                                                        placeholder="description...">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</textarea>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="ancilliary-overnight-stay">overnight stays</label>
                                                     <textarea name="ancilliary-overnight-stay" rows="3"
-                                                        placeholder="description..."></textarea>
+                                                        placeholder="description...">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid</textarea>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="ancilliary-local-transportation">local
                                                         transportation</label>
                                                     <textarea name="ancilliary-local-transportation" rows="3"
-                                                        placeholder="description..."></textarea>
+                                                        placeholder="description...">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam</textarea>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="ancilliary-onsite-services">surcharge for on-site
                                                         services</label>
                                                     <textarea name="ancilliary-onsite-services" rows="3"
-                                                        placeholder="description..."></textarea>
+                                                        placeholder="description...">none</textarea>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="ancilliary-insurance-coverage">Insurance
                                                         coverage</label>
                                                     <textarea name="ancilliary-insurance-coverage" rows="3"
-                                                        placeholder="description..."></textarea>
+                                                        placeholder="description...">Nemo enim ipsam voluptatem quia voluptas</textarea>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="ancilliary-licence-cost">Special licence cost</label>
                                                     <textarea name="ancilliary-licence-cost" rows="3"
-                                                        placeholder="description..."></textarea>
+                                                        placeholder="description...">Excepteur sint occaecat cupidatat non proident, sunt in culpa</textarea>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label for="ancilliary-note">PLEASE NOTE:</label>
                                                     <textarea name="ancilliary-note" rows="3"
-                                                        placeholder="description..."></textarea>
+                                                        placeholder="description...">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -593,11 +618,11 @@
                             </div>
                         </div>
                         <!-- CONTRACT HISTORY -->
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-6 mt-5 mt-lg-0">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="p-4 text-left panel-container contract-history">
-                                        <div class="d-flex mb-4 justify-content-between align-items-end">
+                                        <div class="d-flex mb-4 justify-content-between align-items-start">
                                             <div class="form-title">contract history</div>
                                             <select>
                                                 <option selected>All time</option>
@@ -618,7 +643,7 @@
                                                             </span>
                                                         </div>
                                                         <div class="col-4">
-                                                           4 amends
+                                                            4 amends
                                                         </div>
                                                         <div class="col-4">
                                                             Nebojsa Jovic
@@ -1436,7 +1461,7 @@
                 </div>
                 <!-- RATES PANEL -->
                 <div class="col-12 vct-employees-tab d-none">
-
+                    TBD
                 </div>
 
             </div>
