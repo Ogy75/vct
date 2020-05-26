@@ -204,7 +204,6 @@ input:disabled {
   color: #696964;
 }
 textarea {
-  border: 1px solid #959592;
   line-height: 18px;
   padding: 2px 4px;
 }

@@ -737,6 +737,12 @@ input:disabled {
 .modal-style input {
   border: 1px solid #d3d3ce;
 }
+.modal-style textarea {
+  border: 1px solid #d3d3ce;
+}
+.modal-style textarea:disabled {
+  background: #f0f2f7;
+}
 .booking-responsibility input {
   width: 16px;
   height: 16px;
@@ -1310,5 +1316,14 @@ table.overview td {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
+  transition: all 1s;
   text-transform: uppercase;
+}
+.form-title span {
+  margin-right: 10px;
+  transition: all 0.2s linear;
+}
+.form-title span.rotate {
+  transform: rotate(-180deg);
+  transition: all 0.2s linear;
 }

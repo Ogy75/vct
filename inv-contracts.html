@@ -47,211 +47,270 @@
         <div class="lds-dual-ring"></div>
     </div>
 
-    <!--add Company Modal Start -->
-    <div class="modal fade" id="addCompany" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="addCompany" aria-hidden="true">
+    <!--add Contract Modal Start -->
+    <div class="modal fade" id="addContract" tabindex="-1" role="dialog" data-backdrop="static"
+        aria-labelledby="addContract" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
                     <div class="col-12">
                         <div class="p-5 image-background">
                             <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <img id="logo-img" src="assets/images/logo-placeholder-01.png" alt="company logo">
-                                </div>
-                            </div>
-                            <div class="file btn btn-highlight position-relative upload-logo">
-                                Select Company Logo
-                                <input type="file" class="file-input" />
-                            </div>
-                            <!-- <div class="team-member-name"></div> -->
+                            <div class="team-member-name">Add New Contract</div>
                         </div>
                         <div class="p-4 text-left">
-                            <!-- COMPANY TREE STATUS -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company tree status</div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-tree">Status</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-tree" class="w-100">
-                                            <option selected>parent company</option>
-                                            <option>child company</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- GENERAL COMPANY DATA -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">general data</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-name">Company Name *</label>
-                                    <input type="text" name="company-name" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-status">Status</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-status" class="w-100">
-                                            <option>Active</option>
-                                            <option selected>Inactive</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-country">Country</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-country" class="w-100">
-                                            <option selected>Switzerland</option>
-                                            <option>Serbia</option>
-                                            <option>Romania</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-type">Company type</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-type" class="w-100">
-                                            <option>Limited Liability Company (GmbH)</option>
-                                            <option selected>Joint Stock Company (AG)</option>
-                                            <option>Branch of a foreign entity</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-vat-no">Company VAT No. *</label>
-                                    <input type="text" name="company-vat-no" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-reg-no">Commercial Register No.</label>
-                                    <input type="text" name="company-reg-no" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-currency">Currency</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-currency" class="w-100">
-                                            <option>CHF</option>
-                                            <option selected>EUR</option>
-                                            <option>RSD</option>
-                                            <option>RON</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-vat-amount">VAT amount (%) *</label>
-                                    <input type="text" name="company-vat-amount" />
-                                </div>
-                            </div>
-                            <!-- COMPANY ADDRESS -->
-                            <div class="row company-address-form">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company address</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-street">Street *</label>
-                                    <input type="text" name="company-address-street" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-street-no">Street no. *</label>
-                                    <input type="text" name="company-address-street-no" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-city">City *</label>
-                                    <input type="text" name="company-address-city" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-post-code">Post Code</label>
-                                    <input type="text" name="company-address-post-code" />
-                                </div>
-                            </div>
-                            <!-- COMPANY CONTACT DETAILS -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company contact details</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-tel1">Phone no.</label>
-                                    <input type="text" name="company-address-tel1" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-tel2">Phone no. 2</label>
-                                    <input type="text" name="company-address-tel2" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-email">E-mail *</label>
-                                    <input type="text" name="company-email" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-web">Web</label>
-                                    <input type="text" name="company-web" />
-                                </div>
-                            </div>
-                            <!-- bamk ACCOUNTS -->
-                            <div class="all-bamk-accounts">
+                            <!-- MY COMPANY -->
+                            <div class="contract-section">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="d-flex justify-content-between align-items-end mt-5">
-                                            <div class="form-title">bank accounts</div>
-                                            <small>* Mandatory field</small>
+                                        <small class="d-block text-right">* Mandatory field</small>
+                                        <div class="d-flex justify-content-between align-items-end">
+                                            <div class="form-title">my contract company</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="my-company-name">Select Company</label>
+                                        <div class="select-height-fix">
+                                            <select name="my-company-name" class="w-100">
+                                                <option selected>NSM Engineering AG</option>
+                                                <option>youngculture AG</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bamk-accounts">
-                                    <div class="border-bottom pb-3" id="bamk-account-1">
-                                        <div class="row pt-3">
-                                            <div class="col-8 col-sm-6">
-                                                <label for="company-bamk-account-name">Account name *</label>
-                                                <input type="text" class="font-weight-bold"
-                                                    name="company-bamk-account-name" />
+                            </div>
+                            <!-- CONTRACT GENERAL DATA -->
+
+                            <!-- CONTRACT ID -->
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div
+                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up"></span>contract id
                                             </div>
-                                            <div class="col-4 col-sm-6 align-self-start text-right">
-                                                <span
-                                                    class="badge badge-secondary pointer mt-2 js_removeBamkAccount">remove
-                                                    account</span>
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-bamk">bank *</label>
-                                                <input type="text" name="company-bamk-account-bamk" />
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-iban">IBAN *</label>
-                                                <input type="text" name="company-bamk-account-iban" />
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-no">Account no. *</label>
-                                                <input type="text" name="company-bamk-account-no" />
-                                            </div>
+                                            <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <span class="badge badge-secondary pointer mt-3 js_addBamkAccount">add
-                                            account</span>
+                                <div class="row more-data">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-name">contract name *</label>
+                                        <input type="text" name="contract-name" class="pronounced-data" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-no">contract no. *</label>
+                                        <input type="text" name="contract-no" />
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="mt-5 mb-3">
-                                        <button class="btn btn-highlight">Save</button>
-                                        <button class="btn btn-cancel" data-dismiss="modal"
-                                            aria-label="Close">cancel</button>
+                            <!-- CONTRACT VALIDITY -->
+                            <div class="w-100 contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div
+                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up"></span>contract
+                                                validity</div>
+                                            <span class="badge badge-secondary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-validity-start">contract validity start date *</label>
+                                        <input type="text" name="contract-validity-start" class="pronounced-data" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-validity-end">contract validity end date *</label>
+                                        <input type="text" name="contract-validity-end" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CONTRACT PARTNER -->
+                            <div class="w-100 contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div
+                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up"></span>contract
+                                                partner</div>
+                                            <span class="badge badge-secondary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-partner-name">contract partner name *</label>
+                                        <input type="text" name="contract-partner-name" class="pronounced-data" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-partner-country">contract partner country *</label>
+                                        <div class="select-height-fix">
+                                            <select name="contract-partner-country" class="w-100">
+                                                <option selected>Select country</option>
+                                                <option value="ch">Switzerland</option>
+                                                <option value="de">Germany</option>
+                                                <option value="lie">Lichtenstein</option>
+                                                <option value="uk">UK</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-partner-address">address *</label>
+                                        <input type="text" name="contract-partner-address" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-partner-city">city *</label>
+                                        <input type="text" name="contract-partner-city" />
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <label for="contract-partner-person-name">contact person name</label>
+                                                <input type="text" name="contract-partner-person-name" />
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label for="contract-partner-person-phone">contact person phone
+                                                    no.</label>
+                                                <input type="text" name="contract-partner-person-phone" />
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label for="contract-partner-person-email">contact person email</label>
+                                                <input type="text" name="contract-partner-person-email" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DEFAULT COST CENTER -->
+                            <div class="w-100 contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div
+                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up"></span>default cost
+                                                center</div>
+                                            <span class="badge badge-secondary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-name">cost center partner name *</label>
+                                        <input type="text" name="cost-center-name" class="pronounced-data" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-partner-country">cost center country *</label>
+                                        <div class="select-height-fix">
+                                            <select name="contract-partner-country" class="w-100">
+                                                <option selected>Select country</option>
+                                                <option value="ch">Switzerland</option>
+                                                <option value="de">Germany</option>
+                                                <option value="lie">Lichtenstein</option>
+                                                <option value="uk">UK</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-address">address *</label>
+                                        <input type="text" name="cost-center-address" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-city">city *</label>
+                                        <input type="text" name="cost-center-city" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-vat">VAT (%) *</label>
+                                        <input type="text" name="contract-partner-address" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-currency">currency *</label>
+                                        <div class="select-height-fix">
+                                            <select name="cost-center-currency" class="w-100">
+                                                <option selected>Select currency</option>
+                                                <option value="ch">CHF</option>
+                                                <option value="de">EUR</option>
+                                                <option value="lie">RSD</option>
+                                                <option value="uk">RON</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row js_items">
+                                            <div class="col-12 mt-4" id="js_item">
+                                                <div class="row">
+                                                    <div class="col-9 col-lg-10">
+                                                        <label for="contract-partner-person-name">contact person
+                                                            name</label>
+                                                        <input type="text" name="contract-partner-person-name" />
+                                                    </div>
+                                                    <div
+                                                        class="col-3 col-lg-2 d-flex justify-content-end align-items-end">
+                                                        <span class="btn btn-secondary js_delete">remove</span>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6">
+                                                        <label for="contract-partner-person-phone">contact person phone
+                                                            no.</label>
+                                                        <input type="text" name="contract-partner-person-phone" />
+                                                    </div>
+                                                    <div class="col-12 col-sm-6">
+                                                        <label for="contract-partner-person-email">contact person
+                                                            email</label>
+                                                        <input type="text" name="contract-partner-person-email" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <span class="btn btn-secondary my-3 js_clone">add contact person</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- RATE ADJUSTMENS -->
+                            <div class="w-100 contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div
+                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up"></span>rate
+                                                adjustments</div>
+                                            <span class="badge badge-secondary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12">
+                                        <div class="my-3">
+                                            <label class="switch">
+                                                <input type="checkbox" id="rate-adjustment-possible" class="pronounced-data">
+                                                <span class="slider"></span>
+                                            </label>
+                                            <span class="switch-label ml-1">rate adjustments possible</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="rate-adjustment-first-date">first possible adjustment date</label>
+                                        <input type="text" name="rate-adjustment-first" disabled />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="rate-adjustment-next-date">next possible adjustment date</label>
+                                        <input type="text" name="rate-adjustment-next-date" disabled />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="rate-adjustment-extent-max">max. extent of adjustment (%)</label>
+                                        <input type="text" name="rate-adjustment-extent-max" disabled />
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="rate-adjustment-notice-period">Notice Period (description)</label>
+                                        <textarea type="text" name="rate-adjustment-notice-period" disabled></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -263,228 +322,7 @@
             </div>
         </div>
     </div>
-    <!-- add Company Modal End -->
-
-    <!--edit Company Modal Start -->
-    <div class="modal fade" id="editCompany" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="editCompany" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content modal-style">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="p-5 image-background">
-                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <img id="logo-img" src="assets/images/logo-nsmeng.svg" alt="company logo">
-                                </div>
-                            </div>
-                            <div class="file btn btn-highlight position-relative upload-logo">
-                                Change Logo
-                                <input type="file" class="file-input" />
-                            </div>
-                            <!-- <div class="team-member-name"></div> -->
-                        </div>
-                        <div class="p-4 text-left">
-                            <!-- COMPANY TREE STATUS -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company tree status</div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-tree">Status</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-tree" class="w-100">
-                                            <option selected>parent company</option>
-                                            <option>child company</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- GENERAL COMPANY DATA -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">general data</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-name">Company Name *</label>
-                                    <input type="text" name="company-name" value="NSM engineering" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-status">Status</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-status" class="w-100">
-                                            <option selected>Active</option>
-                                            <option>Inactive</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-country">Country</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-country" class="w-100">
-                                            <option selected>Switzerland</option>
-                                            <option>Serbia</option>
-                                            <option>Romania</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-type">Company type</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-type" class="w-100">
-                                            <option>Limited Liability Company (GmbH)</option>
-                                            <option selected>Joint Stock Company (AG)</option>
-                                            <option>Branch of a foreign entity</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-vat-no">Company VAT No. *</label>
-                                    <input type="text" name="company-vat-no" value="CHE-141.994.256" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-reg-no">Commercial Register No.</label>
-                                    <input type="text" name="company-reg-no" value="CH-170.3.039.828-3" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-currency">Currency</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-currency" class="w-100">
-                                            <option selected>CHF</option>
-                                            <option>EUR</option>
-                                            <option>RSD</option>
-                                            <option>RON</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-vat-amount">VAT amount (%) *</label>
-                                    <input type="text" name="company-vat-amount" value="7,7" />
-                                </div>
-                            </div>
-                            <!-- COMPANY ADDRESS -->
-                            <div class="row company-address-form">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company address</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-street">Street *</label>
-                                    <input type="text" name="company-address-street" value="Blegistrasse" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-street-no">Street no. *</label>
-                                    <input type="text" name="company-address-street-no" value="17a" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-city">City *</label>
-                                    <input type="text" name="company-address-city" value="Baar" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-post-code">Post Code</label>
-                                    <input type="text" name="company-address-post-code" value="6340" />
-                                </div>
-                            </div>
-                            <!-- COMPANY CONTACT DETAILS -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company contact details</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-tel1">Phone no.</label>
-                                    <input type="text" name="company-tel1" value="+41 41 541 78 66" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-tel2">Phone no. 2</label>
-                                    <input type="text" name="company-tel2" value="+41 41 541 78 66" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-email">E-mail *</label>
-                                    <input type="text" name="company-email" value="office@nsm-engineering.com" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-web">Web</label>
-                                    <input type="text" name="company-web" value="nsm-engineering.com" />
-                                </div>
-                            </div>
-                            <!-- bamk ACCOUNTS -->
-                            <div class="all-bamk-accounts">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between align-items-end mt-5">
-                                            <div class="form-title">bank accounts</div>
-                                            <small>* Mandatory field</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bamk-accounts">
-                                    <div class="border-bottom pb-3" id="bamk-account-1">
-                                        <div class="row pt-3">
-                                            <div class="col-8 col-sm-6">
-                                                <label for="company-bamk-account-name">Account name *</label>
-                                                <input type="text" class="font-weight-bold"
-                                                    name="company-bamk-account-name" value="NSM ZKB 001" />
-                                            </div>
-                                            <div class="col-4 col-sm-6 align-self-start text-right">
-                                                <span
-                                                    class="badge badge-secondary pointer mt-2 js_removeBamkAccount">remove
-                                                    account</span>
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-bamk">bank *</label>
-                                                <input type="text" name="company-bamk-account-bamk"
-                                                    value="Zürcher Kantonalbamk" />
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-iban">IBAN *</label>
-                                                <input type="text" name="company-bamk-account-iban"
-                                                    value="CH1800700110005701947" />
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-no">Account no. *</label>
-                                                <input type="text" name="company-bamk-account-no"
-                                                    value="1100-5701.947" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <span class="badge badge-secondary pointer mt-3 js_addBamkAccount">add
-                                            account</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="mt-5 mb-3">
-                                        <button class="btn btn-highlight">Save</button>
-                                        <button class="btn btn-cancel" data-dismiss="modal"
-                                            aria-label="Close">cancel</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- edit Company Modal End -->
+    <!-- add Contract Modal End -->
 
     <!--left nav-->
     <div class="vct-left-nav">
@@ -521,7 +359,8 @@
                     </ul>
                 </li>
                 <li><a href="inv-companies.html"><i class="nav-icon fas fa-building mr-3"></i>My Companies</a></li>
-                <li><a href="inv-contracts.html" class="selected"><i class="nav-icon fas fa-signature mr-3"></i>My Contracts</a></li>
+                <li><a href="inv-contracts.html" class="selected"><i class="nav-icon fas fa-signature mr-3"></i>My
+                        Contracts</a></li>
             </ul>
 
         </div>
@@ -556,62 +395,63 @@
                     <span class="primary-title my-3">My Contracts</span>
                 </div>
             </div>
-                
-                    <!--add company-->
-                    <div class="row">
-                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                            <div class="vct-team-wrapper d-flex align-items-center justify-content-center w-100 h-100">
-                                <span class="vct-project-link" data-toggle="modal" data-target="#addContract"> </span>
-                                <div class="text-center p-4">
-                                    <h1 class="ti-plus"></h1>
-                                    <p>add new contract</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--contract block-->
-                        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                            <div class="inv-block-wrapper p-3 position-relative">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <div>
-                                        <span class="badge badge-success">Active</span>
-                                    </div>
-                                    <div class="item-menu front d-block fas fa-ellipsis-v">
-                                        <div class="item-menu-wrapper">
-                                            <div class="arrow"></div>
-                                            <ul>
-                                                <span class="item-menu-title">Contract options</span>
-                                                <li><a href="javascript:void(0)" data-toggle="modal"
-                                                        data-target="#editContract">Edit Contract</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="contract-name">NSM - Crealogix</span>
-                                <p class="contract-no">0800212</p>
-                                <div class="client mt-3">
-                                    <p class="small mb-0">client</p>
-                                    <span class="client-name badge badge-success">Crealogix</span>
-                                    <p class="small mt-1 mb-0">projects</p>
-                                    <span class="project-name">Crealogix EB</span>
-                                    <span class="project-name">Crealogix E-Payment</span>
-                                </div>
-                                <div class="client mt-3">
-                                    <p class="small mt-3 mb-0">client</p>
-                                    <span class="client-name badge badge-success">Crealogix Germany</span>
-                                    <p class="small mt-1 mb-0">projects</p>
-                                    <span class="project-name">Crealogix Germany (Abaxx)</span>
-                                </div>
-                                <span class="vct-project-link" onclick="location.href='inv-clients.html';"> </span>
-                            </div>
-                        </div>
 
+            <!--add company-->
+            <div class="row">
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper d-flex align-items-center justify-content-center w-100 h-100">
+                        <span class="vct-project-link" data-toggle="modal" data-target="#addContract"> </span>
+                        <div class="text-center p-4">
+                            <h1 class="ti-plus"></h1>
+                            <p>add new contract</p>
+                        </div>
                     </div>
                 </div>
-                <script src="assets/vendor/jquery341/jquery.min.js"></script>
-                <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
-                <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
-                <script src="assets/js/custom.js"></script>
-                <script src="assets/js/tmv20.js"></script>
+                <!--contract block-->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="inv-block-wrapper p-3 position-relative">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div>
+                                <span class="badge badge-success">Active</span>
+                            </div>
+                            <div class="item-menu front d-block fas fa-ellipsis-v">
+                                <div class="item-menu-wrapper">
+                                    <div class="arrow"></div>
+                                    <ul>
+                                        <span class="item-menu-title">Contract options</span>
+                                        <li><a href="javascript:void(0)" data-toggle="modal"
+                                                data-target="#editContract">Edit Contract</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="contract-name">NSM - Crealogix</span>
+                        <p class="contract-no">0800212</p>
+                        <p class="small">last change:</br><span>08.12.2018, </span> <span>Oliver Marjanovic</span></p>
+                        <div class="client mt-3">
+                            <p class="small mb-0">client</p>
+                            <span class="client-name badge badge-success">Crealogix</span>
+                            <p class="small mt-1 mb-0">projects</p>
+                            <span class="project-name">Crealogix EB</span>
+                            <span class="project-name">Crealogix E-Payment</span>
+                        </div>
+                        <div class="client mt-3">
+                            <p class="small mt-3 mb-0">client</p>
+                            <span class="client-name badge badge-success">Crealogix Germany</span>
+                            <p class="small mt-1 mb-0">projects</p>
+                            <span class="project-name">Crealogix Germany (Abaxx)</span>
+                        </div>
+                        <span class="vct-project-link" onclick="location.href='inv-clients.html';"> </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="assets/vendor/jquery341/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/tmv20.js"></script>
 
 </body>
 

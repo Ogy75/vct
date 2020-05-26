@@ -489,16 +489,29 @@ $(document).ready(function () {
         $('#yourImage').attr('src', e.target.result);
     };
 
-    //ADD BANK ACCOUNT
-    $('.js_addBamkAccount').on('click', function () {
-        var allAccounts = $('.bamk-accounts');
-        var singleAccount = $('#bamk-account-1');
-        $(singleAccount).clone().appendTo(allAccounts);
+    //ADD ITEM
+    $('.js_clone').on('click', function () {
+        var item = $(this).parents().find('#js_item');
+        $(item).clone().appendTo($('.js_items'));
     });
 
-    //REMOVE BANK ACCOUNT
-    $('.js_removeBamkAccount').on('click', function () {
-        $(this).parents('#bamk-account-1').fadeOut();
+    //REMOVE ITEM
+    $('.js_delete').on('click', function () {
+        $(this).parents('#js_item').remove();
+    });
+
+    //ENABLE CONTRACT RATE ADJUSTMENT
+    $('#rate-adjustment-possible').on('change', function(){
+        if ($(this).prop('checked')){
+            $(this).parents('.more-data').find('input').prop('disabled', false);
+            $(this).val('enabled');
+            $(this).parents('.more-data').find('textarea').prop('disabled', false);
+        }
+        else{
+            $(this).parents('.more-data').find('input[type=text]').prop('disabled', true);
+            $(this).val('disabled');
+            $(this).parents('.more-data').find('textarea').prop('disabled', true);
+        }
     });
 
     //ADD PERMISSION FIELD
@@ -526,4 +539,19 @@ $(document).ready(function () {
             $('#grant').val('').focus();
         }
     });
+
+    //CONTRACT SECTION TOGGLE
+    $('.contract-section-header').on('click', function(){
+        $(this).find('.form-title span').toggleClass('rotate');
+        $(this).parents().next('.more-data').slideToggle(200);
+    });
+
+    //POPULATE SECTION TAGS
+    $('.pronounced-data').on('change',function () {
+        var content = $(this).val();
+        $(this).parents('.contract-section').find('.badge-secondary').html(content);
+    });
+
+
+    $('#addContract').modal().show();
 });
