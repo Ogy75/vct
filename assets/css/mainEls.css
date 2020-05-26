@@ -211,6 +211,9 @@ textarea:disabled {
   background: #ebebeb;
   color: #42423c;
 }
+textarea::placeholder {
+  color: #a9a9a1;
+}
 input[name="total"] {
   font-weight: 700;
 }

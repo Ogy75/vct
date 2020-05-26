@@ -52,6 +52,10 @@ body.modal-open .vct-content {
   padding: 5px 20px;
   white-space: nowrap;
 }
+.btn.btn-short {
+  padding: 1px 20px;
+  line-height: 20px;
+}
 .btn.btn-cancel {
   background: transparent;
   color: #d5d5d5;
@@ -84,6 +88,17 @@ body.modal-open .vct-content {
   background: rgba(0, 0, 0, 0.7);
   border-bottom: none !important;
   color: #d5d5d5 !important;
+}
+input {
+  font-size: 13px !important;
+  border-radius: 4px !important;
+}
+input.small-input {
+  width: 42px;
+}
+input:disabled {
+  background: #f0f2f7;
+  font-weight: 700;
 }
 .item-menu-wrapper {
   background: #d5d5d5 !important;

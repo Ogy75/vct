@@ -504,15 +504,70 @@ $(document).ready(function () {
     $('#rate-adjustment-possible').on('change', function(){
         if ($(this).prop('checked')){
             $(this).parents('.more-data').find('input').prop('disabled', false);
-            $(this).val('enabled');
+            $(this).val('possible');
             $(this).parents('.more-data').find('textarea').prop('disabled', false);
         }
         else{
             $(this).parents('.more-data').find('input[type=text]').prop('disabled', true);
-            $(this).val('disabled');
+            $(this).val('not possible');
             $(this).parents('.more-data').find('textarea').prop('disabled', true);
         }
     });
+
+    //SETUP FEE POSSIBLE
+    $('#ancilliary-setup-fee').on('change', function(){
+        if ($(this).prop('checked')){
+            $(this).parents('.more-data').find('textarea[name="ancilliary-setup-fee"]').prop('disabled', false);
+            $(this).parents('.more-data').find('.mandatory').show();
+            $(this).val('Setup fee exists');
+        }
+        else{
+            $(this).parents('.more-data').find('textarea[name="ancilliary-setup-fee"]').prop('disabled', true);
+            $(this).parents('.more-data').find('.mandatory').hide();
+            $(this).val('No Setup fee');
+        }
+    });
+
+    //SURCHARGE OPTION
+    $('select[name="rate-surcharge-choice"]').change(function () {
+        var value = $(this).find('option:selected').attr('value');
+
+        switch (value) {
+            case "not possible":
+                $(this).parents('.more-data').find('input[type=text]').prop('disabled', true);
+                break;
+            default:
+                $(this).parents('.more-data').find('input').prop('disabled', false);
+                break;
+        }
+    });
+
+    //ADD DISCOUNTS TO CONTRACT
+    $('.js_addDiscount').on('click' ,function () {
+        var value = $(this).parents('.discount-type-add').find('option:selected').attr('value');
+        var overall = '<div class="col-12 mt-4 d-flex justify-content-between align-items-center discount js_overall"> <div class="d-flex align-items-center"> <input type="text" class="d-inline-block small-input" /> <p class="mx-1">% overall discount</p> </div> <button class="d-inline-block btn btn-secondary ml-2 js_removeDiscount">remove</button> </div>';
+        var teamSize = '<div class="col-12 mt-4 d-flex justify-content-between align-items-center discount"> <div class="d-flex align-items-center"> <input type="text" class="d-inline-block small-input" /> <p class="mx-1">% discount on team count over</p> <input type="text" class="d-inline-block small-input" /> </div> <button class="d-inline-block btn btn-secondary ml-2 js_removeDiscount">remove</button> </div>';
+        switch (value) {
+            case "overall":
+                $('.js_discounts').append(overall);
+                break;
+                case "team size":
+                    $('.js_discounts').append(teamSize);
+                break;
+            default:
+                break;
+        }
+        var discNo = $('.js_discounts').find('.discount').length;
+        var single = 'discount';
+        var multiple = single + "s";
+        if (discNo == 1){
+            $(this).parents('.contract-section').find('.badge-secondary').text(discNo + " " + single);
+        }
+        else {
+            $(this).parents('.contract-section').find('.badge-secondary').text(discNo + " " + multiple);
+        }
+    });
+
 
     //ADD PERMISSION FIELD
     $('.js_addGranted').on('click', function(){

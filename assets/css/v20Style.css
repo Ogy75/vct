@@ -35,6 +35,10 @@ body.modal-open .vct-content {
   padding: 5px 20px;
   white-space: nowrap;
 }
+.btn.btn-short {
+  padding: 1px 20px;
+  line-height: 20px;
+}
 .btn.btn-cancel {
   background: transparent;
 }
@@ -68,6 +72,9 @@ body.modal-open .vct-content {
 input {
   font-size: 13px !important;
   border-radius: 4px !important;
+}
+input.small-input {
+  width: 42px;
 }
 input:disabled {
   background: #f0f2f7;

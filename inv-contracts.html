@@ -282,7 +282,7 @@
                                             class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
                                             <div class="form-title"><span class="fas fa-chevron-up"></span>rate
                                                 adjustments</div>
-                                            <span class="badge badge-secondary"></span>
+                                            <span class="badge badge-secondary">not possible</span>
                                         </div>
                                     </div>
                                 </div>
@@ -290,7 +290,8 @@
                                     <div class="col-12">
                                         <div class="my-3">
                                             <label class="switch">
-                                                <input type="checkbox" id="rate-adjustment-possible" class="pronounced-data">
+                                                <input type="checkbox" id="rate-adjustment-possible"
+                                                    class="pronounced-data">
                                                 <span class="slider"></span>
                                             </label>
                                             <span class="switch-label ml-1">rate adjustments possible</span>
@@ -314,6 +315,145 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- RATE SURCHARGE -->
+                            <div class="w-100 contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div
+                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up"></span>rate
+                                                surcharge</div>
+                                            <span class="badge badge-secondary">not possible</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12 mt-1">
+                                        <label for="rate-surcharge-choice">rate surcharge possible *</label>
+                                        <div class="select-height-fix">
+                                            <select name="rate-surcharge-choice" class="w-auto pronounced-data">
+
+                                                <option value="not possible">Not possible</option>
+                                                <option value="only after written approval">Only after prior written
+                                                    approval</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="rate-surcharge-overtime">overtime increase (%) *</label>
+                                        <input type="text" name="rate-surcharge-overtime" disabled />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="rate-surcharge-weekend">weekend days increase (%) *</label>
+                                        <input type="text" name="rate-surcharge-weekend" disabled />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="rate-surcharge-weekday19">weekday increase after 19:00h (%)
+                                            *</label>
+                                        <input type="text" name="rate-surcharge-weekday19" disabled />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="rate-surcharge-pub-holiday">public holiday increase (%) *</label>
+                                        <input type="text" name="rate-surcharge-pub-holiday" disabled />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DISCOUNT -->
+                            <div class="w-100 contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div
+                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up"></span>Recurring
+                                                Discount</div>
+                                            <span class="badge badge-secondary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12">
+                                        <div class="row js_discounts">
+                                        </div>
+                                        <div class="row discount-type-add">
+                                            <div class="col-12 mt-5 d-flex justify-content-start align-items-center">
+                                                <select name="discount-type" class="m-0">
+                                                    <option value="none">select discount type</option>
+                                                    <option value="overall">overall discount</option>
+                                                    <option value="team size">discount per team size</option>
+                                                </select>
+                                                <button class="d-inline-block btn btn-secondary btn-short ml-3 js_addDiscount">add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ANCILLIARY COSTS -->
+                            <div class="w-100 contract-section">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div
+                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up"></span>ancilliary costs</div>
+                                            <span class="badge badge-secondary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12">
+                                        <div class="my-3">
+                                            <label class="switch">
+                                                <input type="checkbox" id="ancilliary-setup-fee" class="pronounced-data">
+                                                <span class="slider"></span>
+                                            </label>
+                                            <span class="switch-label ml-1">Setup / Infrastructure Fee exists</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="ancilliary-setup-fee">setup / infrastructure fee <span class="mandatory" style="display: none;">*</span></label>
+                                        <textarea name="ancilliary-setup-fee" rows="3" placeholder="description..." disabled></textarea>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="ancilliary-flights">flights</label>
+                                        <textarea name="ancilliary-flights" rows="3" placeholder="description..."></textarea>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="ancilliary-overnight-stay">overnight stays</label>
+                                        <textarea name="ancilliary-overnight-stay" rows="3" placeholder="description..."></textarea>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="ancilliary-local-transportation">local transportation</label>
+                                        <textarea name="ancilliary-local-transportation" rows="3" placeholder="description..."></textarea>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="ancilliary-onsite-services">surcharge for on-site services</label>
+                                        <textarea name="ancilliary-onsite-services" rows="3" placeholder="description..."></textarea>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="ancilliary-insurance-coverage">Insurance coverage</label>
+                                        <textarea name="ancilliary-insurance-coverage" rows="3" placeholder="description..."></textarea>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="ancilliary-licence-cost">Special licence cost</label>
+                                        <textarea name="ancilliary-licence-cost" rows="3" placeholder="description..."></textarea>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="ancilliary-note">PLEASE NOTE:</label>
+                                        <textarea name="ancilliary-note" rows="3" placeholder="description..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-12">
+                                <div class="py-4">
+                                    <button class="btn btn-highlight">Save Contract</button>
+                                    <button class="btn btn-cancel ml-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
 
                         </div>
 

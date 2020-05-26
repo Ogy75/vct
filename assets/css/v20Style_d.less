@@ -58,6 +58,10 @@ body{
     line-height: 21px;
     padding: 5px 20px;
     white-space: nowrap;
+    &.btn-short{
+        padding: 1px 20px;
+        line-height: 20px;
+      }
  
     &.btn-cancel{
         background: transparent;
@@ -92,6 +96,17 @@ body{
     border-bottom: none !important;
     color:@darkModeText !important;
 }
+input {
+    font-size: 13px !important;
+    border-radius: 4px !important;
+    &.small-input{
+      width:42px;
+    }
+    &:disabled {
+      background: #f0f2f7;
+      font-weight: 700;
+    }
+  }
 .item-menu-wrapper{
     background: @darkModeText !important;
     a{

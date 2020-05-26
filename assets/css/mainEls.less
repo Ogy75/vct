@@ -172,7 +172,11 @@ textarea {
   padding: 2px 4px;
   &:disabled {
     background: @readonly;
-    color: @basetextColor;
+    color: 
+    @basetextColor;
+  }
+  &::placeholder {
+    color: lighten(@basetextColor, 40%);
   }
 }
 input[name="total"] {
