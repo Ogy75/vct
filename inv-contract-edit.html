@@ -1,0 +1,1452 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Companies</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
+    <link rel="stylesheet" id="colorMode" href="assets/css/v20Style.css">
+    <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fav-icn//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fav-icn//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fav-icn//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
+    <link rel="manifest" href="assets/fav-icn//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+</head>
+
+<body>
+
+    <!--Spinner-->
+    <div class="lds-dual-ring-bg">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <!-- SCROLL TOP -->
+    <a href="javascript:void(0)" id="go-top"><i class="fas fa-chevron-up"></i></a>
+
+    <!--Spinner-->
+    <div class="lds-dual-ring-bg">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+
+            <div class="vct-logo w-100 text-left text-white">
+                <img src="assets/images/app-v2-logo.svg" alt="enjoy.ing">
+            </div>
+
+            <ul class="vct-nav-menu">
+                <li><a class="" href="index.html"><i class="nav-icon far fa-calendar-alt mr-3"></i>My Days</a></li>
+                <li><a class="" href="myCompetence20.html"><i class="nav-icon fas fa-book-open mr-3"></i>My
+                        Competences</a></li>
+                <li><a href="teams20-b.html"><i class="nav-icon fas fa-user-friends mr-3"></i>Project management</a>
+                </li>
+                <li><a href="overtime20.html"><i class="nav-icon fas fa-dollar-sign mr-3"></i>Finance management</a>
+                </li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-tags mr-3"></i>Manage
+                        Roles</a>
+                    <ul class="vct-nav-level1">
+                        <li><a href="operations-management20.html">Operation</a></li>
+                        <li><a href="finance-management20.html">Finance</a></li>
+                    </ul>
+                </li>
+                <li><a class="has-level1" href="javascript:void(0)"><i
+                            class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
+                    <ul class="vct-nav-level1">
+                        <li><a href="mapping20.html">Mappings</a></li>
+                        <li><a href="app-management20.html">app settings</a></li>
+                        <li><a href="service-data20.html">Service Data</a></li>
+                    </ul>
+                </li>
+                <li><a href="inv-companies.html"><i class="nav-icon fas fa-building mr-3"></i>My Companies</a></li>
+                <li><a href="inv-contracts.html" class="selected"><i class="nav-icon fas fa-signature mr-3"></i>My
+                        Contracts</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav">
+        <div class="vct-user-menu float-right">
+            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i
+                    class="far fa-moon pointer js_darkMode"></i></div>
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
+                    class="fas fa-expand full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mx-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Djordjevic Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content">
+        <div class="container position-relative">
+            <div class="col-12">
+                <div class="vct-project-person-switch d-flex justify-content-center mb-4">
+                    <button class="tab-button selected" id="tab-projects">CONTRACT</button>
+                    <button class="tab-button" id="tab-employees">RATES</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-start">
+                    <span class="primary-title my-3"><a href="inv-contracts.html">My Contracts</a> | NSM -
+                        Crealogix</span>
+                </div>
+            </div>
+
+            <!--panels-->
+            <div class="row">
+                <!-- CONTRACT PANEL -->
+                <div class="col-12 vct-project-tab">
+                    <div class="row">
+                        <!-- CONTRACT FORM -->
+                        <div class="col-12 col-lg-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="p-4 text-left panel-container">
+                                        <!-- MY COMPANY -->
+                                        <div class="contract-section">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="d-flex mb-4 justify-content-between align-items-center">
+                                                        <div class="form-title">my contract company</div>
+                                                        <small class="d-block text-right">* Mandatory field</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                        <label for="my-company-name">Select Company</label>
+                                                        <div class="select-height-fix">
+                                                            <select name="my-company-name" class="w-100">
+                                                                <option selected>NSM Engineering AG</option>
+                                                                <option>youngculture AG</option>
+                                                            </select>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- CONTRACT GENERAL DATA -->
+
+                                        <!-- CONTRACT ID -->
+                                        <div class="contract-section border-bottom pb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div
+                                                        class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                                        <div class="form-title"><span
+                                                                class="fas fa-chevron-up arrow"></span>contract id
+                                                        </div>
+                                                        <span class="badge badge-secondary"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data">
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-name">contract name *</label>
+                                                    <input type="text" name="contract-name" class="pronounced-data" />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-no">contract no. *</label>
+                                                    <input type="text" name="contract-no" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- CONTRACT VALIDITY -->
+                                        <div class="w-100 contract-section border-bottom pb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div
+                                                        class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                                        <div class="form-title"><span
+                                                                class="fas fa-chevron-up arrow"></span>contract
+                                                            validity</div>
+                                                        <span class="badge badge-secondary"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data">
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-validity-start">contract validity start date
+                                                        *</label>
+                                                    <input type="text" name="contract-validity-start"
+                                                        class="pronounced-data" />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-validity-end">contract validity end date
+                                                        *</label>
+                                                    <input type="text" name="contract-validity-end" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- CONTRACT PARTNER -->
+                                        <div class="w-100 contract-section border-bottom pb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div
+                                                        class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                                        <div class="form-title"><span
+                                                                class="fas fa-chevron-up arrow"></span>contract
+                                                            partner</div>
+                                                        <span class="badge badge-secondary"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data">
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-partner-name">contract partner name *</label>
+                                                    <input type="text" name="contract-partner-name"
+                                                        class="pronounced-data" />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-partner-country">contract partner country
+                                                        *</label>
+                                                    <div class="select-height-fix">
+                                                        <select name="contract-partner-country" class="w-100">
+                                                            <option selected>Select country</option>
+                                                            <option value="ch">Switzerland</option>
+                                                            <option value="de">Germany</option>
+                                                            <option value="lie">Lichtenstein</option>
+                                                            <option value="uk">UK</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-partner-address">contract partner address
+                                                        *</label>
+                                                    <input type="text" name="contract-partner-address" />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-partner-city">city *</label>
+                                                    <input type="text" name="contract-partner-city" />
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6">
+                                                            <label for="contract-partner-person-name">contact person
+                                                                name (contract related)</label>
+                                                            <input type="text" name="contract-partner-person-name" />
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <label for="contract-partner-person-phone">contact person
+                                                                phone no. (contract related)</label>
+                                                            <input type="text" name="contract-partner-person-phone" />
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <label for="contract-partner-person-email">contact person
+                                                                email (contract related)</label>
+                                                            <input type="text" name="contract-partner-person-email" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- DEFAULT COST CENTER -->
+                                        <div class="w-100 contract-section border-bottom pb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div
+                                                        class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                                        <div class="form-title"><span
+                                                                class="fas fa-chevron-up arrow"></span>default cost
+                                                            center</div>
+                                                        <span class="badge badge-secondary"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data">
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="cost-center-name">cost center partner name *</label>
+                                                    <input type="text" name="cost-center-name"
+                                                        class="pronounced-data" />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-partner-country">cost center country *</label>
+                                                    <div class="select-height-fix">
+                                                        <select name="contract-partner-country" class="w-100">
+                                                            <option selected>Select country</option>
+                                                            <option value="ch">Switzerland</option>
+                                                            <option value="de">Germany</option>
+                                                            <option value="lie">Lichtenstein</option>
+                                                            <option value="uk">UK</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="cost-center-address">cost center address *</label>
+                                                    <input type="text" name="cost-center-address" />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="cost-center-city">cost center city *</label>
+                                                    <input type="text" name="cost-center-city" />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="cost-center-vat">cost center VAT (%) *</label>
+                                                    <input type="text" name="contract-partner-address" />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="cost-center-currency">cost center currency *</label>
+                                                    <div class="select-height-fix">
+                                                        <select name="cost-center-currency" class="w-100">
+                                                            <option selected>Select currency</option>
+                                                            <option value="ch">CHF</option>
+                                                            <option value="de">EUR</option>
+                                                            <option value="lie">RSD</option>
+                                                            <option value="uk">RON</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row js_items">
+                                                        <div class="col-12 mt-4" id="js_item">
+                                                            <div class="row">
+                                                                <div class="col-9 col-lg-10">
+                                                                    <label for="contract-partner-person-name">cost
+                                                                        center contact
+                                                                        person
+                                                                        name</label>
+                                                                    <input type="text"
+                                                                        name="contract-partner-person-name" />
+                                                                </div>
+                                                                <div
+                                                                    class="col-3 col-lg-2 d-flex justify-content-end align-items-end">
+                                                                    <span
+                                                                        class="btn btn-secondary js_delete">remove</span>
+                                                                </div>
+                                                                <div class="col-12 col-sm-6">
+                                                                    <label for="contract-partner-person-phone">cost
+                                                                        center contact
+                                                                        person phone
+                                                                        no.</label>
+                                                                    <input type="text"
+                                                                        name="contract-partner-person-phone" />
+                                                                </div>
+                                                                <div class="col-12 col-sm-6">
+                                                                    <label for="contract-partner-person-email">cost
+                                                                        center contact
+                                                                        person
+                                                                        email</label>
+                                                                    <input type="text"
+                                                                        name="contract-partner-person-email" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <span class="btn btn-secondary my-3 js_clone">add contact
+                                                                person</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- RATE ADJUSTMENS -->
+                                        <div class="w-100 contract-section border-bottom pb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div
+                                                        class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                                        <div class="form-title"><span
+                                                                class="fas fa-chevron-up arrow"></span>rate
+                                                            adjustments</div>
+                                                        <span class="badge badge-secondary">not possible</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data">
+                                                <div class="col-12">
+                                                    <div class="my-3">
+                                                        <label class="switch">
+                                                            <input type="checkbox" id="rate-adjustment-possible"
+                                                                class="pronounced-data">
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                        <span class="switch-label ml-1">rate adjustments possible</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="rate-adjustment-first-date">first possible adjustment
+                                                        date</label>
+                                                    <input type="text" name="rate-adjustment-first" disabled />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="rate-adjustment-next-date">next possible adjustment
+                                                        date</label>
+                                                    <input type="text" name="rate-adjustment-next-date" disabled />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="rate-adjustment-extent-max">max. extent of adjustment
+                                                        (%)</label>
+                                                    <input type="text" name="rate-adjustment-extent-max" disabled />
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="rate-adjustment-notice-period">Notice Period
+                                                        (description)</label>
+                                                    <textarea type="text" name="rate-adjustment-notice-period"
+                                                        disabled></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- RATE SURCHARGE -->
+                                        <div class="w-100 contract-section border-bottom pb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div
+                                                        class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                                        <div class="form-title"><span
+                                                                class="fas fa-chevron-up arrow"></span>rate
+                                                            surcharge</div>
+                                                        <span class="badge badge-secondary">not possible</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data">
+                                                <div class="col-12 mt-1">
+                                                    <label for="rate-surcharge-choice">rate surcharge possible *</label>
+                                                    <div class="select-height-fix">
+                                                        <select name="rate-surcharge-choice"
+                                                            class="w-auto pronounced-data">
+
+                                                            <option value="not possible">Not possible</option>
+                                                            <option value="only after written approval">Only after prior
+                                                                written
+                                                                approval</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="rate-surcharge-overtime">overtime increase (%) *</label>
+                                                    <input type="text" name="rate-surcharge-overtime" disabled />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="rate-surcharge-weekend">weekend days increase (%)
+                                                        *</label>
+                                                    <input type="text" name="rate-surcharge-weekend" disabled />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="rate-surcharge-weekday19">weekday increase after 19:00h
+                                                        (%)
+                                                        *</label>
+                                                    <input type="text" name="rate-surcharge-weekday19" disabled />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="rate-surcharge-pub-holiday">public holiday increase (%)
+                                                        *</label>
+                                                    <input type="text" name="rate-surcharge-pub-holiday" disabled />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- DISCOUNT -->
+                                        <div class="w-100 contract-section border-bottom pb-3">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div
+                                                        class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                                        <div class="form-title"><span
+                                                                class="fas fa-chevron-up arrow"></span>Recurring
+                                                            Discount</div>
+                                                        <span class="badge badge-secondary"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data">
+                                                <div class="col-12">
+                                                    <div class="row js_discounts">
+                                                    </div>
+                                                    <div class="row discount-type-add">
+                                                        <div
+                                                            class="col-12 mt-5 d-flex justify-content-start align-items-center">
+                                                            <select name="discount-type" class="m-0">
+                                                                <option value="none">select discount type</option>
+                                                                <option value="overall">overall discount</option>
+                                                                <option value="team size">discount per team size
+                                                                </option>
+                                                            </select>
+                                                            <button
+                                                                class="d-inline-block btn btn-secondary btn-short ml-3 js_addDiscount">add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- ANCILLIARY COSTS -->
+                                        <div class="w-100 contract-section">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div
+                                                        class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                                        <div class="form-title"><span
+                                                                class="fas fa-chevron-up arrow"></span>ancilliary costs
+                                                        </div>
+                                                        <span class="badge badge-secondary"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data">
+                                                <div class="col-12">
+                                                    <div class="my-3">
+                                                        <label class="switch">
+                                                            <input type="checkbox" id="ancilliary-setup-fee"
+                                                                class="pronounced-data">
+                                                            <span class="slider"></span>
+                                                        </label>
+                                                        <span class="switch-label ml-1">Setup / Infrastructure Fee
+                                                            exists</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="ancilliary-setup-fee">setup / infrastructure fee <span
+                                                            class="mandatory" style="display: none;">*</span></label>
+                                                    <textarea name="ancilliary-setup-fee" rows="3"
+                                                        placeholder="description..." disabled></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="ancilliary-flights">flights</label>
+                                                    <textarea name="ancilliary-flights" rows="3"
+                                                        placeholder="description..."></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="ancilliary-overnight-stay">overnight stays</label>
+                                                    <textarea name="ancilliary-overnight-stay" rows="3"
+                                                        placeholder="description..."></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="ancilliary-local-transportation">local
+                                                        transportation</label>
+                                                    <textarea name="ancilliary-local-transportation" rows="3"
+                                                        placeholder="description..."></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="ancilliary-onsite-services">surcharge for on-site
+                                                        services</label>
+                                                    <textarea name="ancilliary-onsite-services" rows="3"
+                                                        placeholder="description..."></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="ancilliary-insurance-coverage">Insurance
+                                                        coverage</label>
+                                                    <textarea name="ancilliary-insurance-coverage" rows="3"
+                                                        placeholder="description..."></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="ancilliary-licence-cost">Special licence cost</label>
+                                                    <textarea name="ancilliary-licence-cost" rows="3"
+                                                        placeholder="description..."></textarea>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="ancilliary-note">PLEASE NOTE:</label>
+                                                    <textarea name="ancilliary-note" rows="3"
+                                                        placeholder="description..."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="pt-4">
+                                                    <button class="btn btn-highlight">Save Contract</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- CONTRACT HISTORY -->
+                        <div class="col-12 col-lg-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="p-4 text-left panel-container contract-history">
+                                        <div class="d-flex mb-4 justify-content-between align-items-end">
+                                            <div class="form-title">contract history</div>
+                                            <select>
+                                                <option selected>All time</option>
+                                                <option>Past 6 months</option>
+                                                <option>Past year</option>
+                                                <option>Past 3 years</option>
+                                            </select>
+                                        </div>
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                22.11.2019, 16:59h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                           4 amends
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Nebojsa Jovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>contract partner name</td>
+                                                                    <td>Crealogix</td>
+                                                                    <td>Crealogix AG</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>rate adjudtment possible</td>
+                                                                    <td>no</td>
+                                                                    <td>yes</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>first possible adjustment date</td>
+                                                                    <td>N/A</td>
+                                                                    <td>25.10.2021</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>max. extent of adjustment (%)</td>
+                                                                    <td>N/A</td>
+                                                                    <td>10</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>notice period (description)</td>
+                                                                    <td><span class="text-wrap">N/A</span></td>
+                                                                    <td><span class="text-wrap">Perspiciatis unde omnis
+                                                                            iste natus error sit voluptatem accusantium
+                                                                            Perspiciatis unde omnis iste natus error sit
+                                                                            voluptatem accusantium</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                09.03.2019, 19:45h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            2 amends
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center address</td>
+                                                                    <td>Brahmsstrasse 76</td>
+                                                                    <td>Zimmerlistrasse 4</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>contact person phone no. (contract related)</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                01.02.2019, 09:12h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                11.12.2018, 12:11h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- history item -->
+                                        <div class="contract-section history-item mt-2 px-3 border">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="row contract-section-header py-3 pointer">
+                                                        <div class="col-4">
+                                                            <span class="history-entry m-0">
+                                                                <span class="fas fa-chevron-down arrow"></span>
+                                                                16.09.2018, 18:33h
+                                                            </span>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            1 amend
+                                                        </div>
+                                                        <div class="col-4">
+                                                            Oliver Marjanovic
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="rrow more-data pb-3" style="display: none;">
+                                                <div class="col-12">
+                                                    <div class="table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>changed entry</th>
+                                                                    <th>old value</th>
+                                                                    <th>new value</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>cost center contact person phone no.</td>
+                                                                    <td>+41 44 400 29 40</td>
+                                                                    <td>+41 76 394 07 79</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn-secondary mt-3" id="load-more">load more</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- RATES PANEL -->
+                <div class="col-12 vct-employees-tab d-none">
+
+                </div>
+
+            </div>
+        </div>
+        <script src="assets/vendor/jquery341/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/tmv20.js"></script>
+
+</body>
+
+</html>

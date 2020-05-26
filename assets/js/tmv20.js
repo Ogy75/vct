@@ -383,9 +383,6 @@ $(document).ready(function () {
         $(this).parents('.table-toggle').find('.panel-table').fadeToggle(100);
         $(this).parents('.table-toggle').find('i').addClass('fa-chevron-down');
         $(this).parents('.table-toggle').find('i').toggleClass('fa-chevron-up');
-        //$('.table-toggle').removeClass('highlight');
-        //$(this).parents('.table-toggle').addClass('highlight');
-
     });
 
     //Switch DARK MODE
@@ -597,8 +594,9 @@ $(document).ready(function () {
 
     //CONTRACT SECTION TOGGLE
     $('.contract-section-header').on('click', function(){
-        $(this).find('.form-title span').toggleClass('rotate');
+        $(this).find('.arrow').toggleClass('rotate');
         $(this).parents().next('.more-data').slideToggle(200);
+        $(this).parents('.history-item').toggleClass('border-highlight');
     });
 
     //POPULATE SECTION TAGS
@@ -607,6 +605,19 @@ $(document).ready(function () {
         $(this).parents('.contract-section').find('.badge-secondary').html(content);
     });
 
+    //LOAD MORE
+    var contHist = $('.contract-history').find('.contract-section');
+    contHist.hide();
+        $(function () {
+            contHist.slice(0, 10).show();
+            $('#load-more').on('click', function (e) {
+                e.preventDefault();
+                $('.contract-history').find('.contract-section:hidden').slice(0, 10).show();
+                if ($('.contract-history').find('.contract-section:hidden').length == 0) {
+                    $('#load-more').hide();
+                }
+            });
+        });
+    // };
 
-    $('#addContract').modal().show();
 });

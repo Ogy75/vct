@@ -1388,26 +1388,24 @@ table.overview {
   span{
     margin-right: 10px;
     transition: all .2s linear;
-    &.rotate{
-      transform: rotate(-180deg);
-      transition: all .2s linear;
-    }
   }
-  // &.form-title-down{
-  //   transition:all 1s;
-  //   &:before{
-  //     font-family: 'Font Awesome 5 Free';
-  //     content: "\f078";
-  //     margin-right: 10px;
-  //   }
-  // }
-  // &.form-title-up{
-  //   transition:all 1s;
-  //   &:before{
-  //     transform: rotate(180deg);
-  //     font-family: 'Font Awesome 5 Free';
-  //     content: "\f078";
-  //     margin-right: 10px;
-  //   }
-  // }
+}
+.history-entry{
+  font-size: 14px;
+  font-weight: 500;
+  span{
+    margin-right: 10px;
+    transition: all .2s linear;
+  }
+}
+.rotate{
+  transform: rotate(-180deg);
+  transition: all .2s linear;
+}
+.border-highlight{
+  border-color:@highlightColor !important;
+  transition: @mainTransition;
+}
+.contract-section{
+  border-radius: 2px;
 }

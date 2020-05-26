@@ -208,8 +208,7 @@ textarea {
   padding: 2px 4px;
 }
 textarea:disabled {
-  background: #ebebeb;
-  color: #42423c;
+  background: #f0f2f7;
 }
 textarea::placeholder {
   color: #a9a9a1;

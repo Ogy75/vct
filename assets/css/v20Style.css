@@ -1330,7 +1330,22 @@ table.overview td {
   margin-right: 10px;
   transition: all 0.2s linear;
 }
-.form-title span.rotate {
+.history-entry {
+  font-size: 14px;
+  font-weight: 500;
+}
+.history-entry span {
+  margin-right: 10px;
+  transition: all 0.2s linear;
+}
+.rotate {
   transform: rotate(-180deg);
   transition: all 0.2s linear;
+}
+.border-highlight {
+  border-color: #1E9BCC !important;
+  transition: all 0.12s linear;
+}
+.contract-section {
+  border-radius: 2px;
 }

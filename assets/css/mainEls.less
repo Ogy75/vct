@@ -167,13 +167,10 @@ input:disabled {
   color: @basecolorLighter;
 }
 textarea {
-  //border: 1px solid lighten(@basecolorLightest, 10%);
   line-height: 18px;
   padding: 2px 4px;
-  &:disabled {
-    background: @readonly;
-    color: 
-    @basetextColor;
+  &:disabled{
+    background: #f0f2f7;
   }
   &::placeholder {
     color: lighten(@basetextColor, 40%);
