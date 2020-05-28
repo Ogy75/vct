@@ -1390,3 +1390,24 @@ table.overview td {
   border-color: #177397 !important;
   transition: all 0.12s linear;
 }
+.up:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  content: "\f062";
+  color: #1f9c26;
+  margin-right: 4px;
+}
+.down:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  content: "\f063";
+  color: #d8483e;
+  margin-right: 4px;
+}
+.no-change:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  content: "\f04d";
+  color: #919186;
+  margin-right: 4px;
+}

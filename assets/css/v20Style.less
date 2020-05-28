@@ -1392,8 +1392,6 @@ table.overview {
   }
 }
 .history-entry{
-  font-size: 14px;
-  font-weight: 500;
   span{
     margin-right: 10px;
     transition: all .2s linear;
@@ -1409,4 +1407,31 @@ table.overview {
 }
 .contract-section{
   border-radius: 2px;
+}
+.up{
+  &:before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    content: "\f062";
+    color:@confirmColor;
+    margin-right:4px;
+  }
+}
+.down{
+  &:before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    content: "\f063";
+    color:@warningColor;
+    margin-right:4px;
+  }
+}
+.no-change{
+  &:before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    content: "\f04d";
+    color:lighten(@basetextColor, 60%);
+    margin-right:4px;
+  }
 }

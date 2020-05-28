@@ -1425,3 +1425,30 @@ background-color: @basecolorDarkest !important;
     border-color:@highlightColor !important;
     transition: @mainTransition;
   }
+  .up{
+    &:before{
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
+      content: "\f062";
+      color:@confirmColor;
+      margin-right:4px;
+    }
+  }
+  .down{
+    &:before{
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
+      content: "\f063";
+      color:@warningColor;
+      margin-right:4px;
+    }
+  }
+  .no-change{
+    &:before{
+      font-family: 'Font Awesome 5 Free';
+      font-weight: bold;
+      content: "\f04d";
+      color:lighten(@basetextColor, 30%);
+      margin-right:4px;
+    }
+  }

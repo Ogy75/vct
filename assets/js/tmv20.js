@@ -486,15 +486,23 @@ $(document).ready(function () {
         $('#yourImage').attr('src', e.target.result);
     };
 
-    //ADD ITEM
+    //ADD/REMOVE ITEM
     $('.js_clone').on('click', function () {
         var item = $(this).parents().find('#js_item');
         $(item).clone().appendTo($('.js_items'));
-    });
+        $('.js_delete').on('click', function () {
+            $(this).parents('#js_item').remove();
+        });
+    });    
 
-    //REMOVE ITEM
-    $('.js_delete').on('click', function () {
-        $(this).parents('#js_item').remove();
+    //ADD/REMOVE RATE ITEM
+    $('.js_clone-1').on('click', function () {
+        var item = $(this).parents().find('#js_item-1');
+        var form = '<div class="col-12 js_item" id="js_item-1"> <div class="border-bottom pb-3"> <div class="row"> <div class="col-9 col-sm-10"> <label for="contract-position">contract position *</label> <input type="text" name="contract-partner-person-name"> </div><div class="col-3 col-sm-2 d-flex justify-content-end align-items-end"> <span class="btn btn-secondary js_delete-1">remove</span> </div><div class="col-12 col-sm-6"> <label for="my-company-name">commercial position *</label> <div class="select-height-fix"> <select name="my-company-name" class="w-100"> <option selected>Select Commercial position</option> <option >Team Lead</option> <option>Senior N1</option> <option>Senior N2</option> <option>Professional N1</option> <option>Professional N2</option> <option>Engineer N1</option> <option>Engineer N2</option> </select> </div></div><div class="col-12 col-sm-6"> <div class="row"> <div class="col-6"> <label for="rate">rate (CHF)</label> <input type="text" name="rate"/> </div><div class="col-6"> <label for="rate-on-site">rate on-site (CHF)</label> <input type="text" name="rate-on-site"/> </div></div></div></div></div></div>';
+        $(form).appendTo($('.js_items-1'));
+        $('.js_delete-1').on('click', function () {
+            $(this).parents('.js_item').remove();
+        });
     });
 
     //ENABLE CONTRACT RATE ADJUSTMENT
@@ -555,7 +563,7 @@ $(document).ready(function () {
         }
     });
 
-    //ADD DISCOUNTS TO CONTRACT
+    //ADD/REMOVE DISCOUNTS TO CONTRACT
     $('.js_addDiscount').on('click' ,function () {
         var value = $(this).parents('.discount-type-add').find('option:selected').attr('value');
         var overall = '<div class="col-12 mt-4 d-flex justify-content-between align-items-center discount js_overall"> <div class="d-flex align-items-center"> <input type="text" class="d-inline-block small-input" /> <p class="mx-1">% overall discount</p> </div> <button class="d-inline-block btn btn-secondary ml-2 js_removeDiscount">remove</button> </div>';
@@ -579,8 +587,10 @@ $(document).ready(function () {
         else {
             $(this).parents('.contract-section').find('.badge-secondary').text(discNo + " " + multiple);
         }
+        $('.js_removeDiscount').on('click', function(){
+            $(this).parent('.discount').remove();
+        });
     });
-
 
     //ADD PERMISSION FIELD
     $('.js_addGranted').on('click', function(){
@@ -621,19 +631,37 @@ $(document).ready(function () {
         $(this).parents('.contract-section').find('.badge-secondary').html(content);
     });
 
-    //LOAD MORE
+    //LOAD MORE CONTRACT
+    $(function(){
     var contHist = $('.contract-history').find('.contract-section');
     contHist.hide();
         $(function () {
             contHist.slice(0, 10).show();
-            $('#load-more').on('click', function (e) {
+            $('.load-more').on('click', function (e) {
                 e.preventDefault();
-                $('.contract-history').find('.contract-section:hidden').slice(0, 10).show();
+                $('.contract-history').find('.contract-section:hidden').slice(0, 5).show();
                 if ($('.contract-history').find('.contract-section:hidden').length == 0) {
-                    $('#load-more').hide();
+                    $('.load-more').hide();
                 }
             });
         });
+    });
+
+    //LOAD MORE CONTRACT
+    $(function(){
+    var contHist = $('.rate-history').find('.contract-section');
+    contHist.hide();
+        $(function () {
+            contHist.slice(0, 5).show();
+            $('.load-more-rate').on('click', function (e) {
+                e.preventDefault();
+                $('.rate-history').find('.contract-section:hidden').slice(0, 5).show();
+                if ($('.rate-history').find('.contract-section:hidden').length == 0) {
+                    $('.load-more-rate').hide();
+                }
+            });
+        });
+    });
 
     //TODAYS DATE
     var d = new Date();
