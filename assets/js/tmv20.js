@@ -497,9 +497,9 @@ $(document).ready(function () {
 
     //ADD/REMOVE RATE ITEM
     $('.js_clone-1').on('click', function () {
-        var item = $(this).parents().find('#js_item-1');
-        var form = '<div class="col-12 js_item" id="js_item-1"> <div class="border-bottom pb-3"> <div class="row"> <div class="col-8 col-sm-6"> <label for="contract-position">commercial position *</label> <input type="text" name="contract-partner-person-name"> </div><div class="col-4 col-sm-6 d-flex justify-content-end align-items-end"> <span class="btn btn-secondary js_delete-1">remove</span> </div><div class="col-12 col-sm-6"> <label for="my-company-name">internal position *</label> <div class="select-height-fix d-flex align-items-center"> <select name="my-company-name" class="w-100"> <option selected>Select Internal position</option> <option>Team Lead</option> <option>Senior N1</option> <option>Senior N2</option> <option>Professional N1</option> <option>Professional N2</option> <option>Engineer N1</option> <option>Engineer N2</option> </select> </div></div><div class="col-12 col-sm-6"> <div class="row"> <div class="col-6"> <label for="rate">rate (CHF)</label> <input type="text" name="rate"/> </div><div class="col-6"> <label for="rate-on-site">rate on-site (CHF)</label> <input type="text" name="rate-on-site"/> </div></div></div><div class="col-12 col-sm-6"> <label for="rate-valid-from">rate valid from</label> <input type="text" name="rate-valid-from"/> </div></div></div></div>';
-        $(form).appendTo($('.js_items-1'));
+        var form = '<div class="col-12 js_item" id="js_item-1"> <div class="border-bottom pb-3"> <div class="row"> <div class="col-8 col-sm-9"> <label for="contract-position">commercial position *</label> <input type="text" name="contract-position"> </div><div class="col-4 col-sm-3 d-flex justify-content-end align-items-end"> <span class="btn btn-secondary js_delete-1">remove</span> </div><div class="col-12 col-sm-6"> <label for="my-company-name">internal position *</label> <div class="select-height-fix d-flex align-items-center"> <select name="my-company-name" class="w-100"> <option selected>Select Internal position</option> <option>Team Lead</option> <option>Senior N1</option> <option>Senior N2</option> <option>Professional N1</option> <option>Professional N2</option> <option>Engineer N1</option> <option>Engineer N2</option> </select> </div></div><div class="col-12 col-sm-6"> <div class="row"> <div class="col-6"> <label for="rate">rate (CHF)</label> <input type="text" name="rate"/> </div><div class="col-6"> <label for="rate-on-site">rate on-site (CHF)</label> <input type="text" name="rate-on-site"/> </div></div></div><div class="col-12 col-sm-6"> <label for="rate-valid-from">rate valid from</label> <input type="text" name="rate-valid-from"/> </div></div></div></div>';
+        var container = $('.js_items-1');
+        $(form).appendTo($(container));
         $('.js_delete-1').on('click', function () {
             $(this).parents('.js_item').remove();
         });
@@ -639,7 +639,7 @@ $(document).ready(function () {
             contHist.slice(0, 10).show();
             $('.load-more').on('click', function (e) {
                 e.preventDefault();
-                $('.contract-history').find('.contract-section:hidden').slice(0, 5).show();
+                $('.contract-history').find('.contract-section:hidden').slice(0, 5).slideDown(150);
                 if ($('.contract-history').find('.contract-section:hidden').length == 0) {
                     $('.load-more').hide();
                 }
@@ -652,10 +652,10 @@ $(document).ready(function () {
     var contHist = $('.rate-history').find('.contract-section');
     contHist.hide();
         $(function () {
-            contHist.slice(0, 5).show();
+            contHist.slice(0, 3).show();
             $('.load-more-rate').on('click', function (e) {
                 e.preventDefault();
-                $('.rate-history').find('.contract-section:hidden').slice(0, 5).show();
+                $('.rate-history').find('.contract-section:hidden').slice(0, 5).slideDown(150);
                 if ($('.rate-history').find('.contract-section:hidden').length == 0) {
                     $('.load-more-rate').hide();
                 }

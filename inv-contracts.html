@@ -48,8 +48,7 @@
     </div>
 
     <!--add Contract Modal Start -->
-    <div class="modal fade" id="addContract" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="addContract" aria-hidden="true">
+    <div class="modal fade" id="addContract" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="addContract" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
@@ -59,18 +58,19 @@
                             <div class="team-member-name">Add New Contract</div>
                         </div>
                         <div class="p-4 text-left">
+                            
                             <!-- MY COMPANY -->
-                            <div class="contract-section">
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <small class="d-block text-right">* Mandatory field</small>
-                                        <div class="d-flex justify-content-between align-items-end">
+                                        <div class="d-flex justify-content-between align-items-start">
                                             <div class="form-title">my contract company</div>
+                                            <small class="d-block text-right">* Mandatory field</small>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="my-company-name">Select Company</label>
-                                        <div class="select-height-fix d-flex align-items-center d-flex align-items-center">
+                                        <div class="select-height-fix d-flex align-items-center">
                                             <select name="my-company-name" class="w-100">
                                                 <option selected>NSM Engineering AG</option>
                                                 <option>youngculture AG</option>
@@ -79,15 +79,41 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- CONTRACT GENERAL DATA -->
+
+                            <!-- CONTRACT STATUS -->
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up arrow"></span>contract status</div>
+                                            <span class="badge badge-secondary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-status">contract status</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="contract-status" class="w-100">
+                                                <option selected value="active">active</option>
+                                                <option value="inactive">inactive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 inactive-from" style="display: none;">
+                                        <label for="contract-status-from">from date *</label>
+                                        <input type="text" name="contract-status-from" />
+                                    </div>
+                                </div>
+                            </div>
 
                             <!-- CONTRACT ID -->
                             <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title"><span class="fas fa-chevron-up"></span>contract id
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up arrow"></span>
+                                                contract id
                                             </div>
                                             <span class="badge badge-secondary"></span>
                                         </div>
@@ -106,13 +132,11 @@
                             </div>
 
                             <!-- CONTRACT VALIDITY -->
-                            <div class="w-100 contract-section border-bottom pb-3">
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title"><span class="fas fa-chevron-up"></span>contract
-                                                validity</div>
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up arrow"></span>contract validity</div>
                                             <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
@@ -120,23 +144,21 @@
                                 <div class="row more-data">
                                     <div class="col-12 col-sm-6">
                                         <label for="contract-validity-start">contract validity start date *</label>
-                                        <input type="text" name="contract-validity-start" class="pronounced-data" />
+                                        <input type="text" name="contract-validity-start" />
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="contract-validity-end">contract validity end date *</label>
-                                        <input type="text" name="contract-validity-end" />
+                                        <input type="text" name="contract-validity-end" class="pronounced-data" />
                                     </div>
                                 </div>
                             </div>
 
                             <!-- CONTRACT PARTNER -->
-                            <div class="w-100 contract-section border-bottom pb-3">
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title"><span class="fas fa-chevron-up"></span>contract
-                                                partner</div>
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up arrow"></span>contract partner</div>
                                             <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
@@ -148,7 +170,7 @@
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="contract-partner-country">contract partner country *</label>
-                                        <div class="select-height-fix d-flex align-items-center d-flex align-items-center">
+                                        <div class="select-height-fix d-flex align-items-center">
                                             <select name="contract-partner-country" class="w-100">
                                                 <option selected>Select country</option>
                                                 <option value="ch">Switzerland</option>
@@ -159,7 +181,7 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label for="contract-partner-address">address *</label>
+                                        <label for="contract-partner-address">contract partner address *</label>
                                         <input type="text" name="contract-partner-address" />
                                     </div>
                                     <div class="col-12 col-sm-6">
@@ -169,16 +191,15 @@
                                     <div class="col-12">
                                         <div class="row">
                                             <div class="col-12 col-sm-6">
-                                                <label for="contract-partner-person-name">contact person name</label>
+                                                <label for="contract-partner-person-name">contact person name (contract related)</label>
                                                 <input type="text" name="contract-partner-person-name" />
                                             </div>
                                             <div class="col-12 col-sm-6">
-                                                <label for="contract-partner-person-phone">contact person phone
-                                                    no.</label>
+                                                <label for="contract-partner-person-phone">contact person phone no. (contract related)</label>
                                                 <input type="text" name="contract-partner-person-phone" />
                                             </div>
                                             <div class="col-12 col-sm-6">
-                                                <label for="contract-partner-person-email">contact person email</label>
+                                                <label for="contract-partner-person-email">contact person email (contract related)</label>
                                                 <input type="text" name="contract-partner-person-email" />
                                             </div>
                                         </div>
@@ -187,13 +208,11 @@
                             </div>
 
                             <!-- DEFAULT COST CENTER -->
-                            <div class="w-100 contract-section border-bottom pb-3">
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title"><span class="fas fa-chevron-up"></span>default cost
-                                                center</div>
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up arrow"></span>default cost center</div>
                                             <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
@@ -201,11 +220,11 @@
                                 <div class="row more-data">
                                     <div class="col-12 col-sm-6">
                                         <label for="cost-center-name">cost center partner name *</label>
-                                        <input type="text" name="cost-center-name" class="pronounced-data" />
+                                        <input type="text" name="cost-center-name" class="pronounced-data"/>
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="contract-partner-country">cost center country *</label>
-                                        <div class="select-height-fix d-flex align-items-center d-flex align-items-center">
+                                        <div class="select-height-fix d-flex align-items-center">
                                             <select name="contract-partner-country" class="w-100">
                                                 <option selected>Select country</option>
                                                 <option value="ch">Switzerland</option>
@@ -216,20 +235,20 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label for="cost-center-address">address *</label>
+                                        <label for="cost-center-address">cost center address *</label>
                                         <input type="text" name="cost-center-address" />
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label for="cost-center-city">city *</label>
+                                        <label for="cost-center-city">cost center city *</label>
                                         <input type="text" name="cost-center-city" />
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label for="cost-center-vat">VAT (%) *</label>
-                                        <input type="text" name="contract-partner-address" />
+                                        <label for="cost-center-vat">cost center VAT (%) *</label>
+                                        <input type="text" name="cost-center-vat" />
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label for="cost-center-currency">currency *</label>
-                                        <div class="select-height-fix d-flex align-items-center d-flex align-items-center">
+                                        <label for="cost-center-currency">cost center currency *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
                                             <select name="cost-center-currency" class="w-100">
                                                 <option selected>Select currency</option>
                                                 <option value="ch">CHF</option>
@@ -243,23 +262,19 @@
                                         <div class="row js_items">
                                             <div class="col-12 mt-4" id="js_item">
                                                 <div class="row">
-                                                    <div class="col-9 col-lg-10">
-                                                        <label for="contract-partner-person-name">contact person
-                                                            name</label>
+                                                    <div class="col-8 col-lg-9">
+                                                        <label for="contract-partner-person-name">cost center contact person name</label>
                                                         <input type="text" name="contract-partner-person-name" />
                                                     </div>
-                                                    <div
-                                                        class="col-3 col-lg-2 d-flex justify-content-end align-items-end">
+                                                    <div class="col-4 col-lg-3 d-flex justify-content-end align-items-end">
                                                         <span class="btn btn-secondary js_delete">remove</span>
                                                     </div>
                                                     <div class="col-12 col-sm-6">
-                                                        <label for="contract-partner-person-phone">contact person phone
-                                                            no.</label>
+                                                        <label for="contract-partner-person-phone">cost center contact person phone no.</label>
                                                         <input type="text" name="contract-partner-person-phone" />
                                                     </div>
                                                     <div class="col-12 col-sm-6">
-                                                        <label for="contract-partner-person-email">contact person
-                                                            email</label>
+                                                        <label for="contract-partner-person-email">cost center contact person email</label>
                                                         <input type="text" name="contract-partner-person-email" />
                                                     </div>
                                                 </div>
@@ -275,14 +290,12 @@
                             </div>
 
                             <!-- RATE ADJUSTMENS -->
-                            <div class="w-100 contract-section border-bottom pb-3">
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title"><span class="fas fa-chevron-up"></span>rate
-                                                adjustments</div>
-                                            <span class="badge badge-secondary">not possible</span>
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up arrow"></span>rate adjustments</div>
+                                            <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -290,8 +303,7 @@
                                     <div class="col-12">
                                         <div class="my-3">
                                             <label class="switch">
-                                                <input type="checkbox" id="rate-adjustment-possible"
-                                                    class="pronounced-data">
+                                                <input type="checkbox" id="rate-adjustment-possible" class="pronounced-data">
                                                 <span class="slider"></span>
                                             </label>
                                             <span class="switch-label ml-1">rate adjustments possible</span>
@@ -303,7 +315,7 @@
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="rate-adjustment-next-date">next possible adjustment date</label>
-                                        <input type="text" name="rate-adjustment-next-date" disabled />
+                                        <input type="text" name="rate-adjustment-next-date"disabled />
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="rate-adjustment-extent-max">max. extent of adjustment (%)</label>
@@ -317,57 +329,50 @@
                             </div>
 
                             <!-- RATE SURCHARGE -->
-                            <div class="w-100 contract-section border-bottom pb-3">
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title"><span class="fas fa-chevron-up"></span>rate
-                                                surcharge</div>
-                                            <span class="badge badge-secondary">not possible</span>
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up arrow"></span>rate surcharge</div>
+                                            <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row more-data">
                                     <div class="col-12 mt-1">
                                         <label for="rate-surcharge-choice">rate surcharge possible *</label>
-                                        <div class="select-height-fix d-flex align-items-center d-flex align-items-center">
+                                        <div class="select-height-fix d-flex align-items-center">
                                             <select name="rate-surcharge-choice" class="w-auto pronounced-data">
-
                                                 <option value="not possible">Not possible</option>
-                                                <option value="only after written approval">Only after prior written
-                                                    approval</option>
+                                                <option selected value="only after written approval">Only after prior written approval</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="rate-surcharge-overtime">overtime increase (%) *</label>
-                                        <input type="text" name="rate-surcharge-overtime" disabled />
+                                        <input type="text" name="rate-surcharge-overtime" />
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="rate-surcharge-weekend">weekend days increase (%) *</label>
-                                        <input type="text" name="rate-surcharge-weekend" disabled />
+                                        <input type="text" name="rate-surcharge-weekend" />
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label for="rate-surcharge-weekday19">weekday increase after 19:00h (%)
-                                            *</label>
-                                        <input type="text" name="rate-surcharge-weekday19" disabled />
+                                        <label for="rate-surcharge-weekday19">weekday increase after 19:00h (%) *</label>
+                                        <input type="text" name="rate-surcharge-weekday19"  />
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="rate-surcharge-pub-holiday">public holiday increase (%) *</label>
-                                        <input type="text" name="rate-surcharge-pub-holiday" disabled />
+                                        <input type="text" name="rate-surcharge-pub-holiday" />
                                     </div>
                                 </div>
                             </div>
 
                             <!-- DISCOUNT -->
-                            <div class="w-100 contract-section border-bottom pb-3">
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title"><span class="fas fa-chevron-up"></span>Recurring
-                                                Discount</div>
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up arrow"></span>Recurring Discount</div>
                                             <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
@@ -377,11 +382,12 @@
                                         <div class="row js_discounts">
                                         </div>
                                         <div class="row discount-type-add">
-                                            <div class="col-12 mt-5 d-flex justify-content-start align-items-center">
+                                            <div class="col-12 mt-4 d-flex justify-content-start align-items-center">
                                                 <select name="discount-type" class="m-0">
                                                     <option value="none">select discount type</option>
                                                     <option value="overall">overall discount</option>
-                                                    <option value="team size">discount per team size</option>
+                                                    <option value="team size">discount per team size
+                                                    </option>
                                                 </select>
                                                 <button class="d-inline-block btn btn-secondary btn-short ml-3 js_addDiscount">add</button>
                                             </div>
@@ -391,12 +397,11 @@
                             </div>
 
                             <!-- ANCILLIARY COSTS -->
-                            <div class="w-100 contract-section">
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title"><span class="fas fa-chevron-up"></span>ancilliary costs</div>
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title"><span class="fas fa-chevron-up arrow"></span>ancilliary costs</div>
                                             <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
@@ -447,13 +452,13 @@
                             </div>
 
                             <div class="row">
-                            <div class="col-12">
-                                <div class="py-4">
-                                    <button class="btn btn-highlight">Save Contract</button>
-                                    <button class="btn btn-cancel ml-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                <div class="col-12">
+                                    <div class="py-4">
+                                        <button class="btn btn-highlight">Save Contract</button>
+                                        <button class="btn btn-cancel ml-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                         </div>
 
@@ -490,8 +495,7 @@
                         <li><a href="finance-management20.html">Finance</a></li>
                     </ul>
                 </li>
-                <li><a class="has-level1" href="javascript:void(0)"><i
-                            class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
                     <ul class="vct-nav-level1">
                         <li><a href="mapping20.html">Mappings</a></li>
                         <li><a href="app-management20.html">app settings</a></li>
@@ -509,10 +513,8 @@
     <!--top-nav-->
     <div class="vct-top-nav">
         <div class="vct-user-menu float-right">
-            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i
-                    class="far fa-moon pointer js_darkMode"></i></div>
-            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
-                    class="fas fa-expand full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i class="far fa-moon pointer js_darkMode"></i></div>
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="fas fa-expand full-view"></i></div>
             <div class="d-inline-block vct-user-profile-image position-relative mx-3">
                 <img src="assets/images/user.jpg" alt="user name">
             </div>
