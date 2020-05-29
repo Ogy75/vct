@@ -1369,3 +1369,10 @@ table.overview td {
   color: #dadad6;
   margin-right: 4px;
 }
+.contract-suffix:after {
+  content: " contract";
+  text-transform: uppercase;
+}
+.cost-center-name:after {
+  content: " cost center";
+}

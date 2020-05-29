@@ -663,6 +663,22 @@ $(document).ready(function () {
         });
     });
 
+    //REMOVE COST CENTER
+    $('.js_addCostCenter').on('click', function () {
+        var costCenter = '<div class="contract-section border-bottom" id="costCenter"> <div class="row"> <div class="col-12"> <div class="contract-section-header d-flex justify-content-between align-items-end pointer py-3"> <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span><span class="cost-center-name"></span></div><span class="badge badge-secondary js_removeCostCenter">remove cost center</span> </div></div></div><div class="row more-data"> <div class="col-12 col-sm-6 cost-center"> <label for="cost-center-name">cost center name *</label> <input type="text" name="cost-center-name" id="cost-center-val"> </div><div class="col-12 col-sm-6"> <label for="contract-partner-country">cost center country *</label> <div class="select-height-fix d-flex align-items-center"> <select name="contract-partner-country" class="w-100"> <option selected="">Select country</option> <option value="ch">Switzerland</option> <option value="de">Germany</option> <option value="lie">Lichtenstein</option> <option value="uk">UK</option> </select> </div></div><div class="col-12 col-sm-6"> <label for="cost-center-address">cost center address *</label> <input type="text" name="cost-center-address"> </div><div class="col-12 col-sm-6"> <label for="cost-center-city">cost center city *</label> <input type="text" name="cost-center-city"> </div><div class="col-12 col-sm-6"> <label for="cost-center-vat">cost center VAT (%) *</label> <input type="text" name="cost-center-vat"> </div><div class="col-12 col-sm-6"> <label for="cost-center-currency">cost center currency *</label> <div class="select-height-fix d-flex align-items-center"> <select name="cost-center-currency" class="w-100"> <option selected="">Select currency</option> <option value="ch">CHF</option> <option value="de">EUR</option> <option value="lie">RSD</option> <option value="uk">RON</option> </select> </div></div><div class="col-12"> <div class="row js_items"> <div class="col-12" id="js_item"> <div class="row"> <div class="col-12 col-lg-6 order-2 order-lg-1"> <label for="cost-center-person-name">cost center contact person name</label> <input type="text" name="cost-center-person-name"> </div><div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2"> <div class="w-100 mr-3"> <label for="cost-center-person-job">cost center contact person job</label> <input class="w-100" type="text" name="cost-center-person-job"> </div><span class="btn btn-symbol btn-secondary js_delete">×</span> </div><div class="col-12 col-sm-6 order-3"> <label for="cost-center-person-phone">cost center contact person phone no.</label> <input type="text" name="contract-partner-person-phone"> </div><div class="col-12 col-sm-6 order-4"> <label for="cost-center-person-email">cost center contact person email</label> <input type="text" name="cost-center-person-email"> </div></div></div></div><div class="row"> <div class="col-12"> <span class="btn btn-secondary my-3 js_clone">add contact person</span> </div></div></div></div></div>'
+        $('.js_costCenters').append(costCenter);
+
+        $('.js_removeCostCenter').on('click', function () {
+            $(this).parents('.contract-section').remove();
+        });
+    });
+
+    $('#cost-center-val').on('change',function() {
+        var nameVal = $(this).val();
+        $('.cost-center-name').text(nameVal);
+    });
+    
+
     //TODAYS DATE
     var d = new Date();
     var month = d.getMonth()+1;

@@ -47,202 +47,265 @@
         <div class="lds-dual-ring"></div>
     </div>
 
-    <!--add Company Modal Start -->
-    <div class="modal fade" id="addCompany" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="addCompany" aria-hidden="true">
+    <!--add Client Modal Start -->
+    <div class="modal fade" id="addClient" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="addClient" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
                     <div class="col-12">
                         <div class="p-5 image-background">
-                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
-                            <div class="row mb-4">
+                            <div class="row">
                                 <div class="col-12">
-                                    <img id="logo-img" src="assets/images/logo-placeholder-01.png" alt="company logo">
+                                    <div class="team-member-name">Add Client</div>
+                                    <div class="table-title contract-suffix text-white">NSM - CREALOGIX</div>
                                 </div>
                             </div>
-                            <div class="file btn btn-highlight position-relative upload-logo">
-                                Select Company Logo
-                                <input type="file" class="file-input" />
-                            </div>
-                            <!-- <div class="team-member-name"></div> -->
                         </div>
                         <div class="p-4 text-left">
-                            <!-- COMPANY TREE STATUS -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company tree status</div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-tree">Status</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-tree" class="w-100">
-                                            <option selected>parent company</option>
-                                            <option>child company</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- GENERAL COMPANY DATA -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">general data</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-name">Company Name *</label>
-                                    <input type="text" name="company-name" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-status">Status</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-status" class="w-100">
-                                            <option>Active</option>
-                                            <option selected>Inactive</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-country">Country</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-country" class="w-100">
-                                            <option selected>Switzerland</option>
-                                            <option>Serbia</option>
-                                            <option>Romania</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-type">Company type</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-type" class="w-100">
-                                            <option>Limited Liability Company (GmbH)</option>
-                                            <option selected>Joint Stock Company (AG)</option>
-                                            <option>Branch of a foreign entity</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-vat-no">Company VAT No. *</label>
-                                    <input type="text" name="company-vat-no" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-reg-no">Commercial Register No.</label>
-                                    <input type="text" name="company-reg-no" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-currency">Currency</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-currency" class="w-100">
-                                            <option>CHF</option>
-                                            <option selected>EUR</option>
-                                            <option>RSD</option>
-                                            <option>RON</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-vat-amount">VAT amount (%) *</label>
-                                    <input type="text" name="company-vat-amount" />
-                                </div>
-                            </div>
-                            <!-- COMPANY ADDRESS -->
-                            <div class="row company-address-form">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company address</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-street">Street *</label>
-                                    <input type="text" name="company-address-street" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-street-no">Street no. *</label>
-                                    <input type="text" name="company-address-street-no" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-city">City *</label>
-                                    <input type="text" name="company-address-city" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-post-code">Post Code</label>
-                                    <input type="text" name="company-address-post-code" />
-                                </div>
-                            </div>
-                            <!-- COMPANY CONTACT DETAILS -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company contact details</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-tel1">Phone no.</label>
-                                    <input type="text" name="company-address-tel1" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-tel2">Phone no. 2</label>
-                                    <input type="text" name="company-address-tel2" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-email">E-mail *</label>
-                                    <input type="text" name="company-email" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-web">Web</label>
-                                    <input type="text" name="company-web" />
-                                </div>
-                            </div>
-                            <!-- bamk ACCOUNTS -->
-                            <div class="all-bamk-accounts">
+                            <small class="d-flex justify-content-end p-0">* Mandatory field</small>
+
+                            <!-- GENERAL CLIENT DATA -->
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="d-flex justify-content-between align-items-end mt-5">
-                                            <div class="form-title">bank accounts</div>
-                                            <small>* Mandatory field</small>
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span>client data</div>
+                                            <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bamk-accounts">
-                                    <div class="border-bottom pb-3" id="bamk-account-1">
-                                        <div class="row pt-3">
-                                            <div class="col-8 col-sm-6">
-                                                <label for="company-bamk-account-name">Account name *</label>
-                                                <input type="text" class="font-weight-bold"
-                                                    name="company-bamk-account-name" />
-                                            </div>
-                                            <div class="col-4 col-sm-6 align-self-start text-right">
-                                                <span
-                                                    class="badge badge-secondary pointer mt-2 js_removeBamkAccount">remove
-                                                    account</span>
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-bamk">bank *</label>
-                                                <input type="text" name="company-bamk-account-bamk" />
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-iban">IBAN *</label>
-                                                <input type="text" name="company-bamk-account-iban" />
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-no">Account no. *</label>
-                                                <input type="text" name="company-bamk-account-no" />
-                                            </div>
+                                <div class="row more-data">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="client-name">Client Name *</label>
+                                        <input type="text" name="client-name" class="pronounced-data" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-status">Status *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="company-status" class="w-100">
+                                                <option selected value="">Select status</option>
+                                                <option value="active">Active</option>
+                                                <option value="inactive">Inactive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="client-validity-from">Client Validity from *</label>
+                                        <input type="text" name="client-validity-from" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="client-validity-to">Client Validity to *</label>
+                                        <input type="text" name="client-validity-to" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="client-country">Country *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="client-country" class="w-100">
+                                                <option selected value="">Select country</option>
+                                                <option value="switzerland">Switzerland</option>
+                                                <option value="gernamy">Germany</option>
+                                                <option value="austria">Austria</option>
+                                                <option value="lichtenstein">Lichtenstein</option>
+                                                <option value="nederlands">Nederlands</option>
+                                                <option value="uk">UK</option>
+                                                <option value="sweden">Sweden</option>
+                                                <option value="norway">Norway</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-12 col-sm-6">
+                                        <label for="client-currency">Client currency *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="client-currency" class="w-100">
+                                                <option selected value="">Select currency</option>
+                                                <option value="chf">CHF</option>
+                                                <option value="eur">EUR</option>
+                                                <option value="gbp">GBP</option>
+                                                <option value="sweden">SEK</option>
+                                                <option value="norway">NOK</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="client-vat-amount">VAT amount *</label>
+                                        <input type="text" name="client-vat-amount" />
+                                    </div> -->
+                                </div>
+                            </div>
+                            <!-- CLIENT ADDRESS -->
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span>Client address</div>
+                                            <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row more-data">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-street">Street *</label>
+                                        <input type="text" name="company-address-street" class="pronounced-data" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-street-no">Street no. *</label>
+                                        <input type="text" name="company-address-street-no" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-city">City *</label>
+                                        <input type="text" name="company-address-city" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-post-code">Post Code</label>
+                                        <input type="text" name="company-address-post-code" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CLIENT PROJECT MAPPING -->
+                            <div class="contract-section border-bottom pb-3">
                                 <div class="row">
                                     <div class="col-12">
-                                        <span class="badge badge-secondary pointer mt-3 js_addBamkAccount">add
-                                            account</span>
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span>Client projects</div>
+                                            <span class="badge badge-secondary">1 project</span>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12">
+                                        <div class="row js_items">
+                                            <div class="col-12" id="js_item">
+                                                <div class="row">
+                                                    <div class="col-12 col-lg-6 order-2 order-lg-1">
+                                                        <label for="client-project-name">project name *</label>
+                                                        <input type="text" name="client-project-name">
+                                                    </div>
+                                                    <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2">
+                                                        <div class="w-100">
+                                                            <label for="project-status">Status *</label>
+                                                            <div class="select-height-fix d-flex align-items-center">
+                                                                <select name="project-status" class="w-100">
+                                                                    <option selected="" value="">Select status</option>
+                                                                    <option value="active">Active</option>
+                                                                    <option value="inactive">Inactive</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <span class="btn btn-symbol btn-secondary ml-3 js_delete">&times;</span>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 order-3">
+                                                        <label for="project-valid-from">project valid from *</label>
+                                                        <input type="text" name="project-valid-from">
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 order-4">
+                                                        <label for="project-valid-to">project valid to *</label>
+                                                        <input type="text" name="project-valid-to">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <span class="btn btn-secondary my-3 js_clone">add project</span>
+                                            </div>
+                                        </div>
+                                </div>
+                                </div>
+                            </div>
+
+                            <!-- CLIENT COST CENTERS -->
+                            <div class="contract-section border-bottom" id="costCenter">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer py-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span><span class="cost-center-name"></span></div>
+                                            <span class="badge badge-secondary js_removeCostCenter">remove cost center</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data">
+                                    <div class="col-12 col-sm-6 cost-center">
+                                        <label for="cost-center-name">cost center name *</label>
+                                        <input type="text" name="cost-center-name" id="cost-center-val">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-partner-country">cost center country *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="contract-partner-country" class="w-100">
+                                                <option selected="">Select country</option>
+                                                <option value="ch">Switzerland</option>
+                                                <option value="de">Germany</option>
+                                                <option value="lie">Lichtenstein</option>
+                                                <option value="uk">UK</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-address">cost center address *</label>
+                                        <input type="text" name="cost-center-address">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-city">cost center city *</label>
+                                        <input type="text" name="cost-center-city">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-vat">cost center VAT (%) *</label>
+                                        <input type="text" name="cost-center-vat">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-currency">cost center currency *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="cost-center-currency" class="w-100">
+                                                <option selected="">Select currency</option>
+                                                <option value="ch">CHF</option>
+                                                <option value="de">EUR</option>
+                                                <option value="lie">RSD</option>
+                                                <option value="uk">RON</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                            <div class="row js_items">
+                                                <div class="col-12" id="js_item">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6 order-2 order-lg-1">
+                                                            <label for="cost-center-person-name">cost center contact person name</label>
+                                                            <input type="text" name="cost-center-person-name">
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2">
+                                                            <div class="w-100 mr-3">
+                                                                <label for="cost-center-person-job">cost center contact person job</label>
+                                                                <input class="w-100" type="text" name="cost-center-person-job"/>
+                                                            </div>
+                                                            <span class="btn btn-symbol btn-secondary js_delete">×</span>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 order-3">
+                                                            <label for="cost-center-person-phone">cost center contact person phone no.</label>
+                                                            <input type="text" name="contract-partner-person-phone"/>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 order-4">
+                                                            <label for="cost-center-person-email">cost center contact person email</label>
+                                                            <input type="text" name="cost-center-person-email" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <span class="btn btn-secondary my-3 js_clone">add contact person</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 js_costCenters">
+                                    
+                                </div>
+                                <div class="col-12">
+                                    <span class="btn btn-secondary my-3 js_addCostCenter">add cost center</span>
                                 </div>
                             </div>
 
@@ -250,8 +313,7 @@
                                 <div class="col-12">
                                     <div class="mt-5 mb-3">
                                         <button class="btn btn-highlight">Save</button>
-                                        <button class="btn btn-cancel" data-dismiss="modal"
-                                            aria-label="Close">cancel</button>
+                                        <button class="btn btn-cancel" data-dismiss="modal" aria-label="Close">cancel</button>
                                     </div>
                                 </div>
                             </div>
@@ -263,11 +325,10 @@
             </div>
         </div>
     </div>
-    <!-- add Company Modal End -->
+    <!-- add Client Modal End -->
 
     <!--edit Company Modal Start -->
-    <div class="modal fade" id="editCompany" tabindex="-1" role="dialog" data-backdrop="static"
-        aria-labelledby="editCompany" aria-hidden="true">
+    <div class="modal fade" id="editCompany" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="editCompany" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
@@ -433,28 +494,23 @@
                                         <div class="row pt-3">
                                             <div class="col-8 col-sm-6">
                                                 <label for="company-bamk-account-name">Account name *</label>
-                                                <input type="text" class="font-weight-bold"
-                                                    name="company-bamk-account-name" value="NSM ZKB 001" />
+                                                <input type="text" class="font-weight-bold" name="company-bamk-account-name" value="NSM ZKB 001" />
                                             </div>
                                             <div class="col-4 col-sm-6 align-self-start text-right">
-                                                <span
-                                                    class="badge badge-secondary pointer mt-2 js_removeBamkAccount">remove
+                                                <span class="badge badge-secondary pointer mt-2 js_removeBamkAccount">remove
                                                     account</span>
                                             </div>
                                             <div class="col-12 col-sm-6">
                                                 <label for="company-bamk-account-bamk">bank *</label>
-                                                <input type="text" name="company-bamk-account-bamk"
-                                                    value="Zürcher Kantonalbamk" />
+                                                <input type="text" name="company-bamk-account-bamk" value="Zürcher Kantonalbamk" />
                                             </div>
                                             <div class="col-12 col-sm-6">
                                                 <label for="company-bamk-account-iban">IBAN *</label>
-                                                <input type="text" name="company-bamk-account-iban"
-                                                    value="CH1800700110005701947" />
+                                                <input type="text" name="company-bamk-account-iban" value="CH1800700110005701947" />
                                             </div>
                                             <div class="col-12 col-sm-6">
                                                 <label for="company-bamk-account-no">Account no. *</label>
-                                                <input type="text" name="company-bamk-account-no"
-                                                    value="1100-5701.947" />
+                                                <input type="text" name="company-bamk-account-no" value="1100-5701.947" />
                                             </div>
                                         </div>
                                     </div>
@@ -471,8 +527,7 @@
                                 <div class="col-12">
                                     <div class="mt-5 mb-3">
                                         <button class="btn btn-highlight">Save</button>
-                                        <button class="btn btn-cancel" data-dismiss="modal"
-                                            aria-label="Close">cancel</button>
+                                        <button class="btn btn-cancel" data-dismiss="modal" aria-label="Close">cancel</button>
                                     </div>
                                 </div>
                             </div>
@@ -512,8 +567,7 @@
                         <li><a href="finance-management20.html">Finance</a></li>
                     </ul>
                 </li>
-                <li><a class="has-level1" href="javascript:void(0)"><i
-                            class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
                     <ul class="vct-nav-level1">
                         <li><a href="mapping20.html">Mappings</a></li>
                         <li><a href="app-management20.html">app settings</a></li>
@@ -530,10 +584,8 @@
     <!--top-nav-->
     <div class="vct-top-nav">
         <div class="vct-user-menu float-right">
-            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i
-                    class="far fa-moon pointer js_darkMode"></i></div>
-            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
-                    class="fas fa-expand full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i class="far fa-moon pointer js_darkMode"></i></div>
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="fas fa-expand full-view"></i></div>
             <div class="d-inline-block vct-user-profile-image position-relative mx-3">
                 <img src="assets/images/user.jpg" alt="user name">
             </div>
@@ -556,81 +608,84 @@
                     <span class="primary-title my-3"><a href="javascript:history.back()">My Contracts</a> | NSM - Crealogix Contract clients</span>
                 </div>
             </div>
-                
-                    <!--add company-->
-                    <div class="row">
-                        <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                            <div class="vct-team-wrapper d-flex align-items-center justify-content-center w-100 h-100">
-                                <span class="vct-project-link" data-toggle="modal" data-target="#addContract"> </span>
-                                <div class="text-center p-4">
-                                    <h1 class="ti-plus"></h1>
-                                    <p>add new client</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--client block-->
-                        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                            <div class="inv-block-wrapper no-hover p-3 position-relative">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <div>
-                                        <span class="badge badge-secondary">client</span>
-                                        <span class="badge badge-success">Active</span>
-                                    </div>
-                                    <div class="item-menu front d-block fas fa-ellipsis-v">
-                                        <div class="item-menu-wrapper">
-                                            <div class="arrow"></div>
-                                            <ul>
-                                                <span class="item-menu-title">Client options</span>
-                                                <li><a href="javascript:void(0)" data-toggle="modal"data-target="#editContract">Edit Client</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="contract-name">Crealogix</span>
-                                <p class="client-no">120</p>
-                                <div class="client mt-3">
-                                    <p class="small mt-1 mb-0">projects</p>
-                                    <span class="project-name">Crealogix EB</span>
-                                    <span class="project-name">Crealogix E-Payment</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!--client block-->
-                        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
-                            <div class="inv-block-wrapper no-hover p-3 position-relative">
-                                <div class="d-flex justify-content-between mb-3">
-                                    <div>
-                                        <span class="badge badge-secondary">client</span>
-                                        <span class="badge badge-success">Active</span>
-                                    </div>
-                                    <div class="item-menu front d-block fas fa-ellipsis-v">
-                                        <div class="item-menu-wrapper">
-                                            <div class="arrow"></div>
-                                            <ul>
-                                                <span class="item-menu-title">Client options</span>
-                                                <li><a href="javascript:void(0)" data-toggle="modal"data-target="#editContract">Edit Client</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="contract-name">Crealogix Germany</span>
-                                <p class="client-no">121</p>
-                                <div class="client mt-3">
-                                    <p class="small mt-1 mb-0">projects</p>
-                                    <span class="project-name">Crealogix Germany (Abaxx)</span>
-                                </div>
-                            </div>
+            <!--add company-->
+            <div class="row">
+                <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="vct-team-wrapper d-flex align-items-center justify-content-center w-100 h-100">
+                        <span class="vct-project-link" data-toggle="modal" data-target="#addClient"> </span>
+                        <div class="text-center p-4">
+                            <h1 class="ti-plus"></h1>
+                            <p>add new client</p>
                         </div>
-
                     </div>
                 </div>
-                <script src="assets/vendor/jquery341/jquery.min.js"></script>
-                <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
-                <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
-                <script src="assets/js/custom.js"></script>
-                <script src="assets/js/tmv20.js"></script>
+                <!--client block-->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="inv-block-wrapper no-hover p-3 position-relative">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div>
+                                <span class="badge badge-secondary">client</span>
+                                <span class="badge badge-success">Active</span>
+                            </div>
+                            <div class="item-menu front d-block fas fa-ellipsis-v">
+                                <div class="item-menu-wrapper">
+                                    <div class="arrow"></div>
+                                    <ul>
+                                        <span class="item-menu-title">Client options</span>
+                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#editContract">Edit Client</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="contract-name">Crealogix</span>
+                        <p class="client-no">120</p>
+                        <div class="client mt-3">
+                            <p class="small mt-1 mb-0">projects</p>
+                            <span class="project-name">Crealogix EB</span>
+                            <span class="project-name">Crealogix E-Payment</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!--client block-->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
+                    <div class="inv-block-wrapper no-hover p-3 position-relative">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div>
+                                <span class="badge badge-secondary">client</span>
+                                <span class="badge badge-success">Active</span>
+                            </div>
+                            <div class="item-menu front d-block fas fa-ellipsis-v">
+                                <div class="item-menu-wrapper">
+                                    <div class="arrow"></div>
+                                    <ul>
+                                        <span class="item-menu-title">Client options</span>
+                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#editContract">Edit Client</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="contract-name">Crealogix Germany</span>
+                        <p class="client-no">121</p>
+                        <div class="client mt-3">
+                            <p class="small mt-1 mb-0">projects</p>
+                            <span class="project-name">Crealogix Germany (Abaxx)</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="assets/vendor/jquery341/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/tmv20.js"></script>
+
+        <script>
+            $('#addClient').modal().show();
+        </script>
 </body>
 
 </html>
