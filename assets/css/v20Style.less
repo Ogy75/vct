@@ -42,11 +42,12 @@ body {
   padding: 5px 20px;
   white-space: nowrap;
   border:1px solid transparent;
-  &.btn-short{
-    padding: 1px 20px;
-    line-height: 20px;
+  &.btn-symbol{
+    max-width:33px;
+    min-width: 33px;
+    padding:5px 5px;
+    font-size: 18px;
   }
-
   &.btn-cancel {
     background: transparent;
     &:hover {
@@ -1193,7 +1194,7 @@ ul.vct-nav-menu {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   color: fade(@basetextColor, 70%);
   a{
     text-decoration: none;

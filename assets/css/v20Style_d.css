@@ -52,9 +52,11 @@ body.modal-open .vct-content {
   padding: 5px 20px;
   white-space: nowrap;
 }
-.btn.btn-short {
-  padding: 1px 20px;
-  line-height: 20px;
+.btn.btn-symbol {
+  max-width: 33px;
+  min-width: 33px;
+  padding: 5px 5px;
+  font-size: 18px;
 }
 .btn.btn-cancel {
   background: transparent;
@@ -1186,7 +1188,7 @@ ul.vct-nav-menu ul.vct-nav-level1 li a.selected:hover {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   color: rgba(255, 255, 255, 0.7);
 }
 .primary-title a {
@@ -1410,4 +1412,7 @@ table.overview td {
   content: "\f04d";
   color: #919186;
   margin-right: 4px;
+}
+.rate-history canvas {
+  background: #c2c2bb !important;
 }
