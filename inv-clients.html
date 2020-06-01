@@ -69,7 +69,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span>client data</div>
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span>client data</div>
                                             <span class="badge badge-secondary"></span>
                                         </div>
                                     </div>
@@ -133,18 +133,19 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up rotate"></span>Client projects</div>
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span>Client projects</div>
                                             <span class="badge badge-secondary">1 project</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row more-data" style="display: none;">
+                                <div class="row more-data">
                                     <div class="col-12">
                                         <div class="row js_items">
                                             <div class="col-12" id="js_item">
                                                 <div class="row">
                                                     <div class="col-12 col-lg-6 order-2 order-lg-1">
                                                         <label for="client-project-name">project name *</label>
+                                                        <!-- AUTOCOMPLETE OVDE -->
                                                         <input type="text" name="client-project-name">
                                                     </div>
                                                     <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2">
@@ -185,7 +186,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="contract-section-header d-flex justify-content-between align-items-end pointer py-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span><span class="cost-center-name"></span></div>
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span><span class="cost-center-name"></span></div>
                                             <span class="badge badge-secondary js_removeCostCenter">remove cost center</span>
                                         </div>
                                     </div>
@@ -292,6 +293,253 @@
         </div>
     </div>
     <!-- add Client Modal End -->
+
+    <!--edit Client Modal Start -->
+    <div class="modal fade" id="editClient" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="editClient" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="team-member-name">Add Client</div>
+                                    <div class="table-title contract-suffix text-white">NSM - CREALOGIX</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 text-left">
+                            <small class="d-flex justify-content-end p-0">* Mandatory field</small>
+
+                            <!-- GENERAL CLIENT DATA -->
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span>client data</div>
+                                            <span class="badge badge-secondary">Crealogix</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data" style="display: none;">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="client-name">Client Name *</label>
+                                        <input type="text" name="client-name" class="pronounced-data" value="Crealogix" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-status">Status *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="company-status" class="w-100">
+                                                <option value="">Select status</option>
+                                                <option selected value="active">Active</option>
+                                                <option value="inactive">Inactive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="client-validity-from">Client Validity from *</label>
+                                        <input type="text" name="client-validity-from" value="11.05.2014" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="client-validity-to">Client Validity to *</label>
+                                        <input type="text" name="client-validity-to" value="11.05.2034" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="client-country">Country *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="client-country" class="w-100">
+                                                <option value="">Select country</option>
+                                                <option selected value="switzerland">Switzerland</option>
+                                                <option value="gernamy">Germany</option>
+                                                <option value="austria">Austria</option>
+                                                <option value="lichtenstein">Lichtenstein</option>
+                                                <option value="nederlands">Nederlands</option>
+                                                <option value="uk">UK</option>
+                                                <option value="sweden">Sweden</option>
+                                                <option value="norway">Norway</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-city">City *</label>
+                                        <input type="text" name="company-address-city" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-post-code">Post Code</label>
+                                        <input type="text" name="company-address-post-code" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-street">Address *</label>
+                                        <input type="text" name="company-address-street" class="pronounced-data" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CLIENT PROJECT MAPPING -->
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span>Client projects</div>
+                                            <span class="badge badge-secondary">1 project</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data" style="display: none;">
+                                    <div class="col-12">
+                                        <div class="row js_items">
+                                            <div class="col-12" id="js_item">
+                                                <div class="row">
+                                                    <div class="col-12 col-lg-6 order-2 order-lg-1">
+                                                        <label for="client-project-name">project name *</label>
+                                                        <!-- Autocomplete ovde -->
+                                                        <input type="text" name="client-project-name" >
+                                                    </div>
+                                                    <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2">
+                                                        <div class="w-100">
+                                                            <label for="project-status">Status *</label>
+                                                            <div class="select-height-fix d-flex align-items-center">
+                                                                <select name="project-status" class="w-100">
+                                                                    <option selected="" value="">Select status</option>
+                                                                    <option value="active">Active</option>
+                                                                    <option value="inactive">Inactive</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <span class="btn btn-symbol btn-secondary ml-3 js_delete">&times;</span>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 order-3">
+                                                        <label for="project-valid-from">project valid from *</label>
+                                                        <input type="text" name="project-valid-from">
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 order-4">
+                                                        <label for="project-valid-to">project valid to *</label>
+                                                        <input type="text" name="project-valid-to">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <span class="btn btn-secondary my-3 js_clone">add project</span>
+                                            </div>
+                                        </div>
+                                </div>
+                                </div>
+                            </div>
+
+                            <!-- CLIENT COST CENTERS -->
+                            <div class="contract-section border-bottom" id="costCenter">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer py-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span><span class="cost-center-name"></span></div>
+                                            <span class="badge badge-secondary js_removeCostCenter">remove cost center</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data" style="display: none;">
+                                    <div class="col-12 col-sm-6 cost-center">
+                                        <label for="cost-center-name">cost center name *</label>
+                                        <input type="text" name="cost-center-name" id="cost-center-val">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-partner-country">cost center country *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="contract-partner-country" class="w-100">
+                                                <option selected="">Select country</option>
+                                                <option value="ch">Switzerland</option>
+                                                <option value="de">Germany</option>
+                                                <option value="lie">Lichtenstein</option>
+                                                <option value="uk">UK</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-address">cost center address *</label>
+                                        <input type="text" name="cost-center-address">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-city">cost center city *</label>
+                                        <input type="text" name="cost-center-city">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-vat">cost center VAT (%) *</label>
+                                        <input type="text" name="cost-center-vat">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="cost-center-currency">cost center currency *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="cost-center-currency" class="w-100">
+                                                <option selected="">Select currency</option>
+                                                <option value="ch">CHF</option>
+                                                <option value="de">EUR</option>
+                                                <option value="lie">RSD</option>
+                                                <option value="uk">RON</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                            <div class="row js_items">
+                                                <div class="col-12" id="js_item">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6 order-2 order-lg-1">
+                                                            <label for="cost-center-person-name">cost center contact person name</label>
+                                                            <input type="text" name="cost-center-person-name">
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2">
+                                                            <div class="w-100 mr-3">
+                                                                <label for="cost-center-person-job">cost center contact person job</label>
+                                                                <input class="w-100" type="text" name="cost-center-person-job"/>
+                                                            </div>
+                                                            <span class="btn btn-symbol btn-secondary js_delete">×</span>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 order-3">
+                                                            <label for="cost-center-person-phone">cost center contact person phone no.</label>
+                                                            <input type="text" name="contract-partner-person-phone"/>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 order-4">
+                                                            <label for="cost-center-person-email">cost center contact person email</label>
+                                                            <input type="text" name="cost-center-person-email" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <span class="btn btn-secondary my-3 js_clone">add contact person</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12 js_costCenters">
+                                    
+                                </div>
+                                <div class="col-12">
+                                    <span class="btn btn-secondary my-3 js_addCostCenter">add cost center</span>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mt-5 mb-3">
+                                        <button class="btn btn-highlight">Save</button>
+                                        <button class="btn btn-cancel" data-dismiss="modal" aria-label="Close">cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- edit Client Modal End -->
 
     <!--edit Company Modal Start -->
     <div class="modal fade" id="editCompany" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="editCompany" aria-hidden="true">
@@ -599,7 +847,7 @@
                                     <div class="arrow"></div>
                                     <ul>
                                         <span class="item-menu-title">Client options</span>
-                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#editContract">Edit Client</a></li>
+                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#editClient">Edit Client</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -649,9 +897,6 @@
         <script src="assets/js/custom.js"></script>
         <script src="assets/js/tmv20.js"></script>
 
-        <script>
-            $('#addClient').modal().show();
-        </script>
 </body>
 
 </html>
