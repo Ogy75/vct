@@ -384,6 +384,7 @@ input:disabled {
 .vct-team .vct-team-wrapper {
   text-align: center;
   position: relative;
+  z-index: 0;
 }
 .vct-team .vct-team-wrapper img.vct-client-logo {
   height: 42px;
