@@ -812,10 +812,8 @@
     <!--top-nav-->
     <div class="vct-top-nav">
         <div class="vct-user-menu float-right">
-            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i
-                    class="far fa-moon pointer js_darkMode"></i></div>
-            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i
-                    class="fas fa-expand full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i class="far fa-moon pointer js_darkMode"></i></div>
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="fas fa-expand full-view"></i></div>
             <div class="d-inline-block vct-user-profile-image position-relative mx-3">
                 <img src="assets/images/user.jpg" alt="user name">
             </div>
@@ -835,12 +833,187 @@
         <div class="container position-relative">
             <div class="row">
                 <div class="col-12 d-flex align-items-center justify-content-start">
-                    <span class="primary-title my-3">Invoicing</span>
+                    <span class="primary-title my-3">Invoicing mangement</span>
                 </div>
             </div>
 
             <!--add company-->
-            <div class="row">
+            <div class="vct-teams mt-3 contract-section">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <a href="javascript:void(0)" class="team-name h-100 m-0 visible">Select Invoice</a>
+                            <span class="badge badge-secondary">NSM Engineering AG</span>
+
+                            <!-- <div class="d-flex justify-content-end align-items-center">
+                                <select>
+                                    <option>January</option>
+                                    <option>February</option>
+                                    <option selected="">March</option>
+                                </select>
+                                <i class="fas fa-thumbtack ml-3 pin"></i>
+                                <div class="d-flex justify-content-end align-items-center ml-3 h-100">
+                                    <div class="item-menu fas fa-ellipsis-v">
+                                        <div class="item-menu-wrapper" style="display: none;">
+                                            <div class="arrow"></div>
+                                            <ul>
+                                                <span class="item-menu-title">Project options</span>
+                                                <li><a href="javascript:void(0)">Sve opcije koje su bile i
+                                                        pre 2.0</a></li>
+                                                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#vacationCalendar">Team Vacation
+                                                        Calendar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEAM LIST -->
+                <div class="row team-list" style="display:none">
+                    <div class="col-12">
+                        <div class=" team-item no-hover my-3 p-3">
+                            <label class="m-0" for="company">select company</label>
+                            <div class="select-height-fix d-flex align-items-center">
+                                <select name="company" class="pronounced-data">
+                                    <option value="NSM Engineering AG" selected>NSM Engineering AG</option>
+                                    <option value="youngculture AG">youngculture AG</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Edelweiss cloud solution</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Edelweiss booking engine</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Ex Libris</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">ch aviation</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">PAS media</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not approved</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Comparis</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Crealogix Germany</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Crealogix EB</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center selected">
+                            <div class="team-item-name">Crealogix E-Payment</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Info Minds</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">guidle</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Real Garant</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Pearson</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Pritlead</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">ifolor</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Swiss - Swiss Staff Travel</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Swiss - Swiss SOA Project</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Swiss - Swiss SOA Project</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Swiss - Swiss Basel</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">approved</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="row">
                 <div class="vct-team col-12 col-sm-6 col-lg-4 col-xl-3 mt-4">
                     <div class="inv-block-wrapper p-3 position-relative text-left">
                         <div class="form-title text-nowrap text-truncate">my company</div>
@@ -895,68 +1068,203 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- CLIENT PROJECT TITLE -->
-            <div class="row">
-                <div class="col-12 d-flex align-items-center justify-content-start">
-                    <span class="primary-title mt-5 mb-3">CLIENT - PROJECT</span>
-                </div>
-            </div>
+            </div> -->
 
 
-            <div class="row">
+            <div class="row mt-4">
                 <!-- INVOICE CONFIG -->
                 <div class="col-12 col-lg-6">
                     <div class="p-4 text-left panel-container">
-                        <span class="primary-title d-block mb-3">configure invoice</span>
                         <div class="row">
-                            <div class="col-12 col-sm-6">
-                                <label for="contract-status">select cost center</label>
-                                <div class="select-height-fix d-flex align-items-center">
-                                    <select class="w-100">
-                                        <option selected>Crealogix AG main</option>
-                                        <option>Crealogix AG xyz</option>
-                                        <option>Crealogix AG qwerty</option>
-                                    </select>
-                                </div>
-                                <div id="cc-contact">
-                                    <label class="mt-0">contact</label>
-                                    Ada Lovelace</br>
-                                    <a class="d-block" href="tel:+4930901820">+49 30 901820</a>
-                                    <a class="d-block" href="mailto:zzz.zzz@zzz.zzz">ada.lovelace@conparis.ch</a>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <label for="contract-status">payment account</label>
-                                <div class="select-height-fix d-flex align-items-center">
-                                    <select class="w-100">
-                                        <option selected>ZKB</option>
-                                        <option>Credit Suisse</option>
-                                    </select>
-                                </div>
-                                <div id="payment-account">
-                                    <label class="mt-0">bank</label>
-                                    <span class="d-block">Zürcher Kantonalbank</span>
-                                    <label class="mt-0">IBAN</label>
-                                    <span class="d-block">CH1800700110005701947</span>
-                                    <label class="mt-0">account no.</label>
-                                    <span class="d-block">1100-5701.947</span>
+                            <div class="col-12">
+                                <div class="vct-project-person-switch d-flex justify-content-center mb-4">
+                                    <button class="tab-button selected" id="tab-projects">INVOICE CONFIG</button>
+                                    <button class="tab-button" id="tab-employees">INVOICE HISTORY</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="vct-project-tab">
+
                             <div class="col-12">
-                                <span class="primary-title d-block my-3">invoice items</span>
+                                <span class="primary-title my-3 d-block">crealogix e-payment</span>
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-status">select cost center</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select class="w-100">
+                                                <option selected>Crealogix AG main</option>
+                                                <option>Crealogix AG xyz</option>
+                                                <option>Crealogix AG qwerty</option>
+                                            </select>
+                                        </div>
+                                        <div id="cc-contact">
+                                            <label class="mt-0">contact</label>
+                                            Ada Lovelace</br>
+                                            <a class="d-block" href="tel:+4930901820">+49 30 901820</a>
+                                            <a class="d-block" href="mailto:zzz.zzz@zzz.zzz">ada.lovelace@conparis.ch</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="contract-status">payment account</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select class="w-100">
+                                                <option selected>ZKB</option>
+                                                <option>Credit Suisse</option>
+                                            </select>
+                                        </div>
+                                        <div id="payment-account">
+                                            <label class="mt-0">bank</label>
+                                            <span class="d-block">Zürcher Kantonalbank</span>
+                                            <label class="mt-0">IBAN</label>
+                                            <span class="d-block">CH1800700110005701947</span>
+                                            <label class="mt-0">account no.</label>
+                                            <span class="d-block">1100-5701.947</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="primary-title d-block my-3">invoice items</span>
+                                    </div>
+                                </div>
                             </div>
+
+                        </div>
+                        <div class="vct-employees-tab d-none">
+
+                            <div class="col-12">
+                                INVOICE HISTORY
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
                 <!-- INVOICE PREVIEW -->
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                     <div class="p-4 text-left panel-container">
                         <span class="primary-title d-block mb-3">invoice preview</span>
+                        <small class="d-block w-100 text-right">Last export date: <span>04.06.2020</span></small>
+                        <div class="invoice-preview-wrapper border">
+                            <div class="invoice-preview p-5">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <small id="vat-no">CHE-141.994.256 MWST</small>
+                                    </div>
+                                    <div class="col-8">
+                                        <div id="company-logo">
+                                            <img src="assets/images/logo-nsmeng.svg" alt="nsm engineering ag" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-6">
+                                        <small>For:</small>
+                                        <div id="client-name" class="font-weight-bold">Crealogix (Deutschland) AG</div>
+                                        <div id="cost-center-address">Breitscheidstraße 10</div>
+                                        <span id="cost-center-post-no mr-2">70174</span>
+                                        <span id="cost-center-city">Stuttgart</span>
+                                        <div id="cost-center-country">Deutschland</div>
+                                    </div>
+                                    <div class="col-3">
+                                        <small>Date:</small>
+                                        <div id="todays-date"></div>
+                                    </div>
+                                    <div class="col-3">
+                                        <small>Client number:</small>
+                                        <div id="client-no">127</div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <h5 id="invoice-title" class="py-2">Invoice no.<span id="invoice-no" class="ml-2">2646</span></h5>
+                                    </div>
+                                </div>
+
+                                <div class="row invoice-item">
+                                    <div class="col-12">
+                                        <div class="font-weight-bold pt-3"><span class="invoice-item-no pr-1">01.</span><span class="invoice-item-name">Nearshoring Fee</span></div>
+                                        <div class="row">
+                                            <div class="col-12 additional-fee">
+                                                <div class="border-bottom py-2">
+                                                    <div class="row">
+                                                        <div class="col-9">
+                                                            <span class="invoice-item-description">Crelogix (Abaxx) Projekt - Abrechnung Juli 2020</span>
+                                                        </div>
+
+                                                        <div class="col-3 text-right">
+                                                            <span class="invoice-item-amount text-right">12.250.000,00<span class="eur"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row invoice-item">
+                                    <div class="col-12">
+                                        <div class="font-weight-bold pt-3"><span class="invoice-item-no pr-1">02.</span><span class="invoice-item-name">Additional Fees</span></div>
+                                        <div class="row">
+                                            <div class="col-12 additional-fee">
+                                                <div class="border-bottom py-2">
+                                                    <div class="row">
+                                                        <div class="col-9">
+                                                            <span class="additional-fee-item-description">Flight tickets</span>
+                                                        </div>
+
+                                                        <div class="col-3 text-right">
+                                                            <span class="additional-fee-item-amount">1.250,00<span class="eur"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 additional-fee">
+                                                <div class="border-bottom py-2">
+                                                    <div class="row">
+                                                        <div class="col-9">
+                                                            <span class="additional-fee-item-description">Hotel stays</span>
+                                                        </div>
+                                                        <div class="col-3 text-right">
+                                                            <span class="additional-fee-item-amount">890,50<span class="eur"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 additional-fee">
+                                                <div class="border-bottom py-2">
+                                                    <div class="row">
+                                                        <div class="col-9">
+                                                            <span class="additional-fee-item-description">Local transportation</span>
+                                                        </div>
+                                                        <div class="col-3 text-right">
+                                                            <span class="additional-fee-item-amount">90,00<span class="eur"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 additional-fee">
+                                                <div class="border-bottom py-2">
+                                                    <div class="row">
+                                                        <div class="col-9">
+                                                            <span class="additional-fee-item-description">Education costs</span>
+                                                        </div>
+                                                        <div class="col-3 text-right">
+                                                            <span class="additional-fee-item-amount">750,50<span class="eur"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
 
             </div>

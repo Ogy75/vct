@@ -570,6 +570,9 @@ input:disabled {
   background: #177397;
   color: white;
 }
+.vct-content .team-list .team-item.no-hover {
+  background: rgba(66, 66, 60, 0.5);
+}
 .vct-content .team-list .team-item .team-item-name {
   font-size: 14px;
   font-weight: 600;
