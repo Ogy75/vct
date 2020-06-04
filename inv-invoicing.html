@@ -47,246 +47,46 @@
         <div class="lds-dual-ring"></div>
     </div>
 
-    <!--add Client Modal Start -->
-    <div class="modal fade" id="addClient" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="addClient" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+    <!--export Invoice Modal Start -->
+    <div class="modal fade" id="exportInvoice" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exportInvoice" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
                     <div class="col-12">
                         <div class="p-5 image-background">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="team-member-name">Add Client</div>
-                                    <div class="table-title contract-suffix text-white">NSM - CREALOGIX</div>
+                                    <div class="team-member-name">Export Invoice & Reports</div>
                                 </div>
                             </div>
                         </div>
                         <div class="p-4 text-left">
-                            <small class="d-flex justify-content-end p-0">* Mandatory field</small>
-
                             <!-- GENERAL CLIENT DATA -->
-                            <div class="contract-section border-bottom pb-3">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span>client data</div>
-                                            <span class="badge badge-secondary"></span>
-                                        </div>
+                                <div class="row py-3">
+                                    <div class="col-12 col-md-6">
+                                        <label for="export-document-size">Select document format</label>
+                                        <select name="export-document-size" class="w-100">
+                                            <option selected>A4 DIN</option>
+                                            <option disabled>US Letter</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="export-document-size">Export reports as</label>
+                                        <select name="export-document-size" class="w-100">
+                                            <option selected>PDF</option>
+                                            <option disabled>Excel</option>
+                                        </select>   
+                                    </div>
+                                    <div class="col-12 py-3">
+                                        <p id="invoice-file-name">nsm_nsh_inv_may-2020_05.06.2020.11.15.09.pdf</p>
+                                        <p id="invoice-file-name">nsm_nsh_rpt_may-2020_05.06.2020.11.15.09.xls</p>
                                     </div>
                                 </div>
-                                <div class="row more-data">
-                                    <div class="col-12 col-sm-6">
-                                        <label for="client-name">Client Name *</label>
-                                        <input type="text" name="client-name" class="pronounced-data" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="company-status">Status *</label>
-                                        <div class="select-height-fix d-flex align-items-center">
-                                            <select name="company-status" class="w-100">
-                                                <option selected value="">Select status</option>
-                                                <option value="active">Active</option>
-                                                <option value="inactive">Inactive</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="client-validity-from">Client Validity from *</label>
-                                        <input type="text" name="client-validity-from" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="client-validity-to">Client Validity to *</label>
-                                        <input type="text" name="client-validity-to" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="client-country">Country *</label>
-                                        <div class="select-height-fix d-flex align-items-center">
-                                            <select name="client-country" class="w-100">
-                                                <option selected value="">Select country</option>
-                                                <option value="switzerland">Switzerland</option>
-                                                <option value="gernamy">Germany</option>
-                                                <option value="austria">Austria</option>
-                                                <option value="lichtenstein">Lichtenstein</option>
-                                                <option value="nederlands">Nederlands</option>
-                                                <option value="uk">UK</option>
-                                                <option value="sweden">Sweden</option>
-                                                <option value="norway">Norway</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="company-address-city">City *</label>
-                                        <input type="text" name="company-address-city" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="company-address-post-code">Post Code</label>
-                                        <input type="text" name="company-address-post-code" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="company-address-street">Address *</label>
-                                        <input type="text" name="company-address-street" class="pronounced-data" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CLIENT PROJECT MAPPING -->
-                            <div class="contract-section border-bottom pb-3">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span>Client projects</div>
-                                            <span class="badge badge-secondary">1 project</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row more-data">
-                                    <div class="col-12 my-3">
-                                        <label class="switch">
-                                            <input type="checkbox" checked id="invoice-per-project">
-                                            <span class="slider"></span>
-                                        </label>
-                                        <span class="switch-label ml-1">Invoice per project</span>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="row js_items">
-                                            <div class="col-12" id="js_item">
-                                                <div class="row">
-                                                    <div class="col-12 col-lg-6 order-2 order-lg-1">
-                                                        <label for="client-project-name">project name *</label>
-                                                        <!-- AUTOCOMPLETE OVDE -->
-                                                        <input type="text" name="client-project-name">
-                                                    </div>
-                                                    <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2">
-                                                        <div class="w-100">
-                                                            <label for="project-status">Status *</label>
-                                                            <div class="select-height-fix d-flex align-items-center">
-                                                                <select name="project-status" class="w-100">
-                                                                    <option selected="" value="">Select status</option>
-                                                                    <option value="active">Active</option>
-                                                                    <option value="inactive">Inactive</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <span class="btn btn-symbol btn-secondary ml-3 js_delete">&times;</span>
-                                                    </div>
-                                                    <div class="col-12 col-sm-6 order-3">
-                                                        <label for="project-valid-from">project valid from *</label>
-                                                        <input type="text" name="project-valid-from">
-                                                    </div>
-                                                    <div class="col-12 col-sm-6 order-4">
-                                                        <label for="project-valid-to">project valid to *</label>
-                                                        <input type="text" name="project-valid-to">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="btn btn-secondary my-3 js_clone">add project</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CLIENT COST CENTERS -->
-                            <div class="contract-section border-bottom" id="costCenter">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer py-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span><span class="cost-center-name"></span></div>
-                                            <span class="badge badge-secondary js_removeCostCenter">remove cost center</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row more-data">
-                                    <div class="col-12 col-sm-6 cost-center">
-                                        <label for="cost-center-name">cost center name *</label>
-                                        <input type="text" name="cost-center-name" id="cost-center-val">
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="contract-partner-country">cost center country *</label>
-                                        <div class="select-height-fix d-flex align-items-center">
-                                            <select name="contract-partner-country" class="w-100">
-                                                <option selected="">Select country</option>
-                                                <option value="ch">Switzerland</option>
-                                                <option value="de">Germany</option>
-                                                <option value="lie">Lichtenstein</option>
-                                                <option value="uk">UK</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="cost-center-address">cost center address *</label>
-                                        <input type="text" name="cost-center-address">
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="cost-center-city">cost center city *</label>
-                                        <input type="text" name="cost-center-city">
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="cost-center-vat">cost center VAT (%) *</label>
-                                        <input type="text" name="cost-center-vat">
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="cost-center-currency">cost center currency *</label>
-                                        <div class="select-height-fix d-flex align-items-center">
-                                            <select name="cost-center-currency" class="w-100">
-                                                <option selected="">Select currency</option>
-                                                <option value="ch">CHF</option>
-                                                <option value="de">EUR</option>
-                                                <option value="lie">RSD</option>
-                                                <option value="uk">RON</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="row js_items">
-                                            <div class="col-12" id="js_item">
-                                                <div class="row">
-                                                    <div class="col-12 col-lg-6 order-2 order-lg-1">
-                                                        <label for="cost-center-person-name">cost center contact person name</label>
-                                                        <input type="text" name="cost-center-person-name">
-                                                    </div>
-                                                    <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2">
-                                                        <div class="w-100 mr-3">
-                                                            <label for="cost-center-person-job">cost center contact person job</label>
-                                                            <input class="w-100" type="text" name="cost-center-person-job" />
-                                                        </div>
-                                                        <span class="btn btn-symbol btn-secondary js_delete">×</span>
-                                                    </div>
-                                                    <div class="col-12 col-sm-6 order-3">
-                                                        <label for="cost-center-person-phone">cost center contact person phone no.</label>
-                                                        <input type="text" name="contract-partner-person-phone" />
-                                                    </div>
-                                                    <div class="col-12 col-sm-6 order-4">
-                                                        <label for="cost-center-person-email">cost center contact person email</label>
-                                                        <input type="text" name="cost-center-person-email" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="btn btn-secondary my-3 js_clone">add contact person</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 js_costCenters">
-
-                                </div>
-                                <div class="col-12">
-                                    <span class="btn btn-secondary my-3 js_addCostCenter">add cost center</span>
-                                </div>
-                            </div>
 
                             <div class="row">
                                 <div class="col-12">
                                     <div class="mt-5 mb-3">
-                                        <button class="btn btn-highlight">Save</button>
+                                        <button class="btn btn-highlight">Export</button>
                                         <button class="btn btn-cancel" data-dismiss="modal" aria-label="Close">cancel</button>
                                     </div>
                                 </div>
@@ -299,475 +99,7 @@
             </div>
         </div>
     </div>
-    <!-- add Client Modal End -->
-
-    <!--edit Client Modal Start -->
-    <div class="modal fade" id="editClient" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="editClient" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content modal-style">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="p-5 image-background">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="team-member-name">Add Client</div>
-                                    <div class="table-title contract-suffix text-white">NSM - CREALOGIX</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-4 text-left">
-                            <small class="d-flex justify-content-end p-0">* Mandatory field</small>
-
-                            <!-- GENERAL CLIENT DATA -->
-                            <div class="contract-section border-bottom pb-3">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span>client data</div>
-                                            <span class="badge badge-secondary">Crealogix</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row more-data" style="display: none;">
-                                    <div class="col-12 col-sm-6">
-                                        <label for="client-name">Client Name *</label>
-                                        <input type="text" name="client-name" class="pronounced-data" value="Crealogix" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="company-status">Status *</label>
-                                        <div class="select-height-fix d-flex align-items-center">
-                                            <select name="company-status" class="w-100">
-                                                <option value="">Select status</option>
-                                                <option selected value="active">Active</option>
-                                                <option value="inactive">Inactive</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="client-validity-from">Client Validity from *</label>
-                                        <input type="text" name="client-validity-from" value="11.05.2014" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="client-validity-to">Client Validity to *</label>
-                                        <input type="text" name="client-validity-to" value="11.05.2034" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="client-country">Country *</label>
-                                        <div class="select-height-fix d-flex align-items-center">
-                                            <select name="client-country" class="w-100">
-                                                <option value="">Select country</option>
-                                                <option selected value="switzerland">Switzerland</option>
-                                                <option value="gernamy">Germany</option>
-                                                <option value="austria">Austria</option>
-                                                <option value="lichtenstein">Lichtenstein</option>
-                                                <option value="nederlands">Nederlands</option>
-                                                <option value="uk">UK</option>
-                                                <option value="sweden">Sweden</option>
-                                                <option value="norway">Norway</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="company-address-city">City *</label>
-                                        <input type="text" name="company-address-city" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="company-address-post-code">Post Code</label>
-                                        <input type="text" name="company-address-post-code" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="company-address-street">Address *</label>
-                                        <input type="text" name="company-address-street" class="pronounced-data" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CLIENT PROJECT MAPPING -->
-                            <div class="contract-section border-bottom pb-3">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span>Client projects</div>
-                                            <span class="badge badge-secondary">1 project</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row more-data" style="display: none;">
-                                    <div class="col-12 my-3">
-                                        <label class="switch">
-                                            <input type="checkbox" checked id="invoice-per-project">
-                                            <span class="slider"></span>
-                                        </label>
-                                        <span class="switch-label ml-1">Invoice per project</span>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="row js_items">
-                                            <div class="col-12" id="js_item">
-                                                <div class="row">
-                                                    <div class="col-12 col-lg-6 order-2 order-lg-1">
-                                                        <label for="client-project-name">project name *</label>
-                                                        <!-- Autocomplete ovde -->
-                                                        <input type="text" name="client-project-name">
-                                                    </div>
-                                                    <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2">
-                                                        <div class="w-100">
-                                                            <label for="project-status">Status *</label>
-                                                            <div class="select-height-fix d-flex align-items-center">
-                                                                <select name="project-status" class="w-100">
-                                                                    <option selected="" value="">Select status</option>
-                                                                    <option value="active">Active</option>
-                                                                    <option value="inactive">Inactive</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <span class="btn btn-symbol btn-secondary ml-3 js_delete">&times;</span>
-                                                    </div>
-                                                    <div class="col-12 col-sm-6 order-3">
-                                                        <label for="project-valid-from">project valid from *</label>
-                                                        <input type="text" name="project-valid-from">
-                                                    </div>
-                                                    <div class="col-12 col-sm-6 order-4">
-                                                        <label for="project-valid-to">project valid to *</label>
-                                                        <input type="text" name="project-valid-to">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="btn btn-secondary my-3 js_clone">add project</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CLIENT COST CENTERS -->
-                            <div class="contract-section border-bottom" id="costCenter">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer py-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow rotate"></span><span class="cost-center-name"></span></div>
-                                            <span class="badge badge-secondary js_removeCostCenter">remove cost center</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row more-data" style="display: none;">
-                                    <div class="col-12 col-sm-6 cost-center">
-                                        <label for="cost-center-name">cost center name *</label>
-                                        <input type="text" name="cost-center-name" id="cost-center-val">
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="contract-partner-country">cost center country *</label>
-                                        <div class="select-height-fix d-flex align-items-center">
-                                            <select name="contract-partner-country" class="w-100">
-                                                <option selected="">Select country</option>
-                                                <option value="ch">Switzerland</option>
-                                                <option value="de">Germany</option>
-                                                <option value="lie">Lichtenstein</option>
-                                                <option value="uk">UK</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="cost-center-address">cost center address *</label>
-                                        <input type="text" name="cost-center-address">
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="cost-center-city">cost center city *</label>
-                                        <input type="text" name="cost-center-city">
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="cost-center-vat">cost center VAT (%) *</label>
-                                        <input type="text" name="cost-center-vat">
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="cost-center-currency">cost center currency *</label>
-                                        <div class="select-height-fix d-flex align-items-center">
-                                            <select name="cost-center-currency" class="w-100">
-                                                <option selected="">Select currency</option>
-                                                <option value="ch">CHF</option>
-                                                <option value="de">EUR</option>
-                                                <option value="lie">RSD</option>
-                                                <option value="uk">RON</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="row js_items">
-                                            <div class="col-12" id="js_item">
-                                                <div class="row">
-                                                    <div class="col-12 col-lg-6 order-2 order-lg-1">
-                                                        <label for="cost-center-person-name">cost center contact person name</label>
-                                                        <input type="text" name="cost-center-person-name">
-                                                    </div>
-                                                    <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end order-1 order-lg-2">
-                                                        <div class="w-100 mr-3">
-                                                            <label for="cost-center-person-job">cost center contact person job</label>
-                                                            <input class="w-100" type="text" name="cost-center-person-job" />
-                                                        </div>
-                                                        <span class="btn btn-symbol btn-secondary js_delete">×</span>
-                                                    </div>
-                                                    <div class="col-12 col-sm-6 order-3">
-                                                        <label for="cost-center-person-phone">cost center contact person phone no.</label>
-                                                        <input type="text" name="contract-partner-person-phone" />
-                                                    </div>
-                                                    <div class="col-12 col-sm-6 order-4">
-                                                        <label for="cost-center-person-email">cost center contact person email</label>
-                                                        <input type="text" name="cost-center-person-email" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <span class="btn btn-secondary my-3 js_clone">add contact person</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12 js_costCenters">
-
-                                </div>
-                                <div class="col-12">
-                                    <span class="btn btn-secondary my-3 js_addCostCenter">add cost center</span>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="mt-5 mb-3">
-                                        <button class="btn btn-highlight">Save</button>
-                                        <button class="btn btn-cancel" data-dismiss="modal" aria-label="Close">cancel</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- edit Client Modal End -->
-
-    <!--edit Company Modal Start -->
-    <div class="modal fade" id="editCompany" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="editCompany" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content modal-style">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="p-5 image-background">
-                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <img id="logo-img" src="assets/images/logo-nsmeng.svg" alt="company logo">
-                                </div>
-                            </div>
-                            <div class="file btn btn-highlight position-relative upload-logo">
-                                Change Logo
-                                <input type="file" class="file-input" />
-                            </div>
-                            <!-- <div class="team-member-name"></div> -->
-                        </div>
-                        <div class="p-4 text-left">
-                            <!-- COMPANY TREE STATUS -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company tree status</div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-tree">Status</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-tree" class="w-100">
-                                            <option selected>parent company</option>
-                                            <option>child company</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- GENERAL COMPANY DATA -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">general data</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-name">Company Name *</label>
-                                    <input type="text" name="company-name" value="NSM engineering" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-status">Status</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-status" class="w-100">
-                                            <option selected>Active</option>
-                                            <option>Inactive</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-country">Country</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-country" class="w-100">
-                                            <option selected>Switzerland</option>
-                                            <option>Serbia</option>
-                                            <option>Romania</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-type">Company type</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-type" class="w-100">
-                                            <option>Limited Liability Company (GmbH)</option>
-                                            <option selected>Joint Stock Company (AG)</option>
-                                            <option>Branch of a foreign entity</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-vat-no">Company VAT No. *</label>
-                                    <input type="text" name="company-vat-no" value="CHE-141.994.256" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-reg-no">Commercial Register No.</label>
-                                    <input type="text" name="company-reg-no" value="CH-170.3.039.828-3" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-currency">Currency</label>
-                                    <div class="select-height-fix">
-                                        <select name="company-currency" class="w-100">
-                                            <option selected>CHF</option>
-                                            <option>EUR</option>
-                                            <option>RSD</option>
-                                            <option>RON</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-vat-amount">VAT amount (%) *</label>
-                                    <input type="text" name="company-vat-amount" value="7,7" />
-                                </div>
-                            </div>
-                            <!-- COMPANY ADDRESS -->
-                            <div class="row company-address-form">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company address</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-street">Street *</label>
-                                    <input type="text" name="company-address-street" value="Blegistrasse" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-street-no">Street no. *</label>
-                                    <input type="text" name="company-address-street-no" value="17a" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-city">City *</label>
-                                    <input type="text" name="company-address-city" value="Baar" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-address-post-code">Post Code</label>
-                                    <input type="text" name="company-address-post-code" value="6340" />
-                                </div>
-                            </div>
-                            <!-- COMPANY CONTACT DETAILS -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-end mt-5">
-                                        <div class="form-title">company contact details</div>
-                                        <small>* Mandatory field</small>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-tel1">Phone no.</label>
-                                    <input type="text" name="company-tel1" value="+41 41 541 78 66" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-tel2">Phone no. 2</label>
-                                    <input type="text" name="company-tel2" value="+41 41 541 78 66" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-email">E-mail *</label>
-                                    <input type="text" name="company-email" value="office@nsm-engineering.com" />
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for="company-web">Web</label>
-                                    <input type="text" name="company-web" value="nsm-engineering.com" />
-                                </div>
-                            </div>
-                            <!-- bamk ACCOUNTS -->
-                            <div class="all-bamk-accounts">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="d-flex justify-content-between align-items-end mt-5">
-                                            <div class="form-title">bank accounts</div>
-                                            <small>* Mandatory field</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bamk-accounts">
-                                    <div class="border-bottom pb-3" id="bamk-account-1">
-                                        <div class="row pt-3">
-                                            <div class="col-8 col-sm-6">
-                                                <label for="company-bamk-account-name">Account name *</label>
-                                                <input type="text" class="font-weight-bold" name="company-bamk-account-name" value="NSM ZKB 001" />
-                                            </div>
-                                            <div class="col-4 col-sm-6 align-self-start text-right">
-                                                <span class="badge badge-secondary pointer mt-2 js_removeBamkAccount">remove
-                                                    account</span>
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-bamk">bank *</label>
-                                                <input type="text" name="company-bamk-account-bamk" value="Zürcher Kantonalbamk" />
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-iban">IBAN *</label>
-                                                <input type="text" name="company-bamk-account-iban" value="CH1800700110005701947" />
-                                            </div>
-                                            <div class="col-12 col-sm-6">
-                                                <label for="company-bamk-account-no">Account no. *</label>
-                                                <input type="text" name="company-bamk-account-no" value="1100-5701.947" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <span class="badge badge-secondary pointer mt-3 js_addBamkAccount">add
-                                            account</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="mt-5 mb-3">
-                                        <button class="btn btn-highlight">Save</button>
-                                        <button class="btn btn-cancel" data-dismiss="modal" aria-label="Close">cancel</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- edit Company Modal End -->
+    <!-- export Invoice Modal End -->
 
     <!--left nav-->
     <div class="vct-left-nav">
@@ -1030,31 +362,32 @@
 
                             <div class="col-12">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="primary-title d-block my-3">crealogix germany</span>
+                                    <span class="form-title d-block my-3">crealogix germany</span>
                                     <span class="badge badge-success font-weight-bold">ready</span>
                                 </div>
                                 <div class="row">
                                     <div class="col-12 col-sm-6">
                                         <label for="contract-status">select cost center</label>
                                         <div class="select-height-fix d-flex align-items-center">
-                                            <select class="w-100">
-                                                <option selected>Crealogix Germany main</option>
-                                                <option>Crealogix Germany secondary</option>
+                                            <select id="cost-center-select" class="w-100">
+                                                <option val="cc1" selected>Crealogix Germany main</option>
+                                                <option val="cc2">Crealogix Germany secondary</option>
                                             </select>
                                         </div>
                                         <div id="cc-contact">
                                             <label class="mt-0">contact</label>
-                                            Ada Lovelace</br>
-                                            <a class="d-block" href="tel:+4930901820">+49 30 901820</a>
-                                            <a class="d-block" href="mailto:zzz.zzz@zzz.zzz">ada.lovelace@conparis.ch</a>
+                                            <span id="cc-name">Ada Lovelace</span>
+                                            <small id="cc-job" class="d-block">finance director</small>
+                                            <a id="cc-phone" class="d-block" href="tel:+4930901820">+49 30 901820</a>
+                                            <a id="cc-email" class="d-block" href="mailto:ada.lovelace@comparis.de">ada.lovelace@comparis.de</a>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="contract-status">payment account</label>
                                         <div class="select-height-fix d-flex align-items-center">
-                                            <select class="w-100">
-                                                <option selected>ZKB</option>
-                                                <option>Credit Suisse</option>
+                                            <select id="account-select" class="w-100">
+                                                <option val="zkb" selected>ZKB</option>
+                                                <option val="credit suisse">Credit Suisse</option>
                                             </select>
                                         </div>
                                         <div id="payment-account">
@@ -1079,7 +412,7 @@
 
                             <div class="col-12">
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <span class="primary-title my-3 d-block">crealogix germany</span>
+                                    <span class="form-title my-3 d-block">crealogix germany</span>
                                     <select>
                                         <option>2020</option>
                                         <option>2019</option>
@@ -1141,10 +474,10 @@
                 <!-- INVOICE PREVIEW -->
                 <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                     <div class="p-4 text-left panel-container">
-                        <div class="d-flex justify-content-between align-items-start mb-4">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
                             <span class="primary-title d-block">invoice preview</span>
-                            <button id="export-invoice-btn" class="btn btn-highlight py-1 px-2">export invoice</button>
-                            <button id="export-copy-btn" class="btn btn-highlight py-1 px-2" style="display: none;">export invoice copy</button>
+                            <button id="export-invoice-btn" class="btn btn-highlight py-1 px-2" data-toggle="modal" data-target="#exportInvoice">export invoice</button>
+                            <button id="export-copy-btn" class="btn btn-highlight py-1 px-2" style="display: none;" data-toggle="modal" data-target="#exportInvoiceCopy">export invoice copy</button>
                         </div>
                         <small class="d-block w-100 text-right">Last export: <span id="last-invoice-export-date">04.06.2020, 12:33</span></small>
                         <div class="invoice-preview-wrapper border">
@@ -1178,7 +511,7 @@
                                         <small>For:</small>
                                         <div id="client-name" class="font-weight-bold">Crealogix (Deutschland) AG</div>
                                         <div id="cost-center-address">Breitscheidstraße 10</div>
-                                        <span id="cost-center-post-no mr-2">70174</span>
+                                        <span id="cost-center-post-no">70174</span>
                                         <span id="cost-center-city">Stuttgart</span>
                                         <div id="cost-center-country">Deutschland</div>
                                     </div>
@@ -1325,9 +658,10 @@
                                             </div>
                                             <div class="col-6">
                                                 <small>Payment account:</small>
-                                                <div>Bank:<span id="company-account-bank" class="ml-2">Zürcher Kantonalbank</span></div>
-                                                <div>IBAN:<span id="company-account-iban" class="ml-2">CH18 0070 0110 0057 01947</span></div>
-                                                <div>Account No.:<span id="company-account-no" class="ml-2">1100-5701.947</span></div>
+                                                <div>Bank:<span id="payment-account-bank-print" class="ml-2">Zürcher Kantonalbank</span></div>
+                                                <div>IBAN:<span id="payment-account-iban-print" class="ml-2">CH18 0070 0110 0057 01947</span></div>
+                                                <div>Account No.:<span id="payment-account-no-print" class="ml-2">1100-5701.947</span></div>
+                                                <div>Country:<span id="payment-account-country-print" class="ml-2">Switzwerland</span></div>
                                             </div>
                                             <div class="col-12 my-4">
                                                 Thank you for your order and best regards.

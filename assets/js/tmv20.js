@@ -499,7 +499,7 @@ $(document).ready(function () {
         $('.js_delete').on('click', function () {
             $(this).parents('#js_item').remove();
         });
-    });    
+    });
 
     //ADD/REMOVE RATE ITEM
     $('.js_clone-1').on('click', function () {
@@ -512,13 +512,13 @@ $(document).ready(function () {
     });
 
     //ENABLE CONTRACT RATE ADJUSTMENT
-    $('#rate-adjustment-possible').on('change', function(){
-        if ($(this).prop('checked')){
+    $('#rate-adjustment-possible').on('change', function () {
+        if ($(this).prop('checked')) {
             $(this).parents('.more-data').find('input').prop('disabled', false);
             $(this).val('possible');
             $(this).parents('.more-data').find('textarea').prop('disabled', false);
         }
-        else{
+        else {
             $(this).parents('.more-data').find('input[type=text]').prop('disabled', true);
             $(this).val('not possible');
             $(this).parents('.more-data').find('textarea').prop('disabled', true);
@@ -526,13 +526,13 @@ $(document).ready(function () {
     });
 
     //SETUP FEE POSSIBLE
-    $('#ancilliary-setup-fee').on('change', function(){
-        if ($(this).prop('checked')){
+    $('#ancilliary-setup-fee').on('change', function () {
+        if ($(this).prop('checked')) {
             $(this).parents('.more-data').find('textarea[name="ancilliary-setup-fee"]').prop('disabled', false);
             $(this).parents('.more-data').find('.mandatory').show();
             $(this).val('Setup fee exists');
         }
-        else{
+        else {
             $(this).parents('.more-data').find('textarea[name="ancilliary-setup-fee"]').prop('disabled', true);
             $(this).parents('.more-data').find('.mandatory').hide();
             $(this).val('No Setup fee');
@@ -570,7 +570,7 @@ $(document).ready(function () {
     });
 
     //ADD/REMOVE DISCOUNTS TO CONTRACT
-    $('.js_addDiscount').on('click' ,function () {
+    $('.js_addDiscount').on('click', function () {
         var value = $(this).parents('.discount-type-add').find('option:selected').attr('value');
         var overall = '<div class="col-12 mt-4 d-flex justify-content-between align-items-center discount js_overall"> <div class="d-flex align-items-center"> <input type="text" class="d-inline-block small-input" /> <p class="mx-1">% overall discount</p> </div> <button class="d-inline-block btn btn-symbol btn-secondary ml-2 js_removeDiscount">&times;</button> </div>';
         var teamSize = '<div class="col-12 mt-4 d-flex justify-content-between align-items-center discount"> <div class="d-flex align-items-center"> <input type="text" class="d-inline-block small-input" /> <p class="mx-1">% discount on team count over</p> <input type="text" class="d-inline-block small-input" /> </div> <button class="d-inline-block btn btn-symbol btn-secondary ml-2 js_removeDiscount">&times;</button> </div>';
@@ -578,8 +578,8 @@ $(document).ready(function () {
             case "overall":
                 $('.js_discounts').append(overall);
                 break;
-                case "team size":
-                    $('.js_discounts').append(teamSize);
+            case "team size":
+                $('.js_discounts').append(teamSize);
                 break;
             default:
                 break;
@@ -587,36 +587,36 @@ $(document).ready(function () {
         var discNo = $('.js_discounts').find('.discount').length;
         var single = 'discount';
         var multiple = single + "s";
-        if (discNo == 1){
+        if (discNo == 1) {
             $(this).parents('.contract-section').find('.badge-secondary').text(discNo + " " + single);
         }
         else {
             $(this).parents('.contract-section').find('.badge-secondary').text(discNo + " " + multiple);
         }
-        $('.js_removeDiscount').on('click', function(){
+        $('.js_removeDiscount').on('click', function () {
             $(this).parent('.discount').remove();
         });
     });
 
     //ADD PERMISSION FIELD
-    $('.js_addGranted').on('click', function(){
+    $('.js_addGranted').on('click', function () {
         $('#js_granted').clone().insertBefore('#js_addPermission');
     });
     //REMOVE PERMISSION FIELD
-    $('.js_removeGranted').on('click',function(){
+    $('.js_removeGranted').on('click', function () {
         $(this).parents('#js_granted').remove();
     });
 
-     //Add Project Permission
-     $('.js_addPermission').on('click', function () {
-         if ($('#grant').val() != '') {
-             $(this).parents().find('.granted-list').append('<span class="badge badge-technology mr-2 mt-2">' + $('#grant').val() + '<i class="close-badge fas fa-window-close"></i></span>');
-             $('#grant').val('').focus();
-         }
-     });
+    //Add Project Permission
+    $('.js_addPermission').on('click', function () {
+        if ($('#grant').val() != '') {
+            $(this).parents().find('.granted-list').append('<span class="badge badge-technology mr-2 mt-2">' + $('#grant').val() + '<i class="close-badge fas fa-window-close"></i></span>');
+            $('#grant').val('').focus();
+        }
+    });
 
-     //Add Contract Permission
-     $('.js_addContractPermission').on('click', function () {
+    //Add Contract Permission
+    $('.js_addContractPermission').on('click', function () {
         if ($('#grant').val() != '') {
             var personRole = $('#person-role');
             $(this).parents().find('.granted-list').append('<span class="badge badge-technology mr-2 mt-2">' + $('#grant').val() + " - " + personRole.val() + '<i class="close-badge fas fa-window-close"></i></span>');
@@ -625,22 +625,22 @@ $(document).ready(function () {
     });
 
     //CONTRACT SECTION TOGGLE
-    $('.contract-section-header').on('click', function(){
+    $('.contract-section-header').on('click', function () {
         $(this).find('.arrow').toggleClass('rotate');
         $(this).parents().next('.more-data').slideToggle(200);
         $(this).parents('.history-item').toggleClass('border-highlight');
     });
 
     //POPULATE SECTION TAGS
-    $('.pronounced-data').on('change',function () {
+    $('.pronounced-data').on('change', function () {
         var content = $(this).val();
         $(this).parents('.contract-section').find('.badge-secondary').html(content);
     });
 
     //LOAD MORE CONTRACT
-    $(function(){
-    var contHist = $('.contract-history').find('.contract-section');
-    contHist.hide();
+    $(function () {
+        var contHist = $('.contract-history').find('.contract-section');
+        contHist.hide();
         $(function () {
             contHist.slice(0, 10).show();
             $('.load-more').on('click', function (e) {
@@ -654,9 +654,9 @@ $(document).ready(function () {
     });
 
     //LOAD MORE CONTRACT
-    $(function(){
-    var contHist = $('.rate-history').find('.contract-section');
-    contHist.hide();
+    $(function () {
+        var contHist = $('.rate-history').find('.contract-section');
+        contHist.hide();
         $(function () {
             contHist.slice(0, 3).show();
             $('.load-more-rate').on('click', function (e) {
@@ -679,18 +679,113 @@ $(document).ready(function () {
         });
     });
 
-    $('#cost-center-val').on('change',function() {
+    $('#cost-center-val').on('change', function () {
         var nameVal = $(this).val();
         $('.cost-center-name').text(nameVal);
     });
-    
+
 
     //TODAYS DATE
     var d = new Date();
-    var month = d.getMonth()+1;
+    var month = d.getMonth() + 1;
     var day = d.getDate();
-    var output = (day<10 ? '0' : '') + day + '.' + (month<10 ? '0' : '') + month + '.' + d.getFullYear();
+    var output = (day < 10 ? '0' : '') + day + '.' + (month < 10 ? '0' : '') + month + '.' + d.getFullYear();
     $('input[name="contract-status-from"]').val(output);
     $('#todays-date').text(output);
+
+
+    //CC select
+    $('#cost-center-select').on('change', function () {
+        var cc1 = {
+            client: 'Crealogix Germany AG',
+            address: 'Breitscheidstraße 10',
+            postNo: '70174',
+            city: 'Stuttgart',
+            country: 'Germany',
+            contactPerson: 'Ada Lovelace',
+            job:'finance director',
+            phone:'+49 30 901820',
+            email:'ada.lovelace@comparis.de'
+        }
+        var cc2 = {
+            client: 'Crealogix Germany GmbH',
+            address: 'Talstraße 4',
+            postNo: '04103',
+            city: 'Leipzig',
+            country: 'Germany',
+            contactPerson: 'Gurt Meier',
+            job:'finance manager',
+            phone:'+49 30 901821',
+            email:'gurt.meier@comparis.de'
+        }
+        var id = $(this).find("option:selected").attr("val");
+
+        switch (id) {
+            case "cc1":
+                $('#client-name').text(cc1.client);
+                $('#cost-center-address').text(cc1.address);
+                $('#cost-center-post-no').text(cc1.postNo);
+                $('#cost-center-city').text(cc1.city);
+                $('#cost-center-country').text(cc1.country);
+                $('#cc-name').text(cc1.contactPerson);
+                $('#cc-job').text(cc1.job);
+                $('#cc-phone').text(cc1.phone);
+                $('#cc-phone').attr('href',cc1.phone);
+                $('#cc-email').text(cc1.email);
+                $('#cc-email').attr('href','mailto:' + cc1.email);
+                break;
+            case "cc2":
+                $('#client-name').text(cc2.client);
+                $('#cost-center-address').text(cc2.address);
+                $('#cost-center-post-no').text(cc2.postNo);
+                $('#cost-center-city').text(cc2.city);
+                $('#cost-center-country').text(cc2.country);
+                $('#cc-name').text(cc2.contactPerson);
+                $('#cc-job').text(cc2.job);
+                $('#cc-phone').text(cc2.phone);
+                $('#cc-phone').attr('href',cc2.phone);
+                $('#cc-email').text(cc2.email);
+                $('#cc-email').attr('href', 'mailto:' + cc2.email);
+                break;
+        }
+    });
+
+    //bank account select
+    $('#account-select').on('change', function () {
+        var acc1 = {
+            bank: 'Zürcher Kantonalbank',
+            iban: 'CH1800700110005701947',
+            accountNo: '1100-5701.947',
+            country:'Switzerland'
+        }
+        var acc2 = {
+            bank: 'Credit Suisse',
+            iban: 'CH1800700110002132352',
+            accountNo: '1300-4040.101',
+            country:'Switzerland'
+        }
+        var val = $(this).find("option:selected").attr("val");
+
+        switch (val) {
+            case "zkb":
+                $('#payment-account-bank-select').text(acc1.bank);
+                $('#payment-account-iban-select').text(acc1.iban);
+                $('#payment-account-no-select').text(acc1.accountNo);
+                $('#payment-account-bank-print').text(acc1.bank);
+                $('#payment-account-iban-print').text(acc1.iban);
+                $('#payment-account-no-print').text(acc1.accountNo);
+                $('#payment-account-country-print').text(acc1.country);
+                break;
+            case "credit suisse":
+                $('#payment-account-bank-select').text(acc2.bank);
+                $('#payment-account-iban-select').text(acc2.iban);
+                $('#payment-account-no-select').text(acc2.accountNo);
+                $('#payment-account-bank-print').text(acc2.bank);
+                $('#payment-account-iban-print').text(acc2.iban);
+                $('#payment-account-no-print').text(acc2.accountNo);
+                $('#payment-account-country-print').text(acc2.country);
+                break;
+        }
+    });
 
 });
