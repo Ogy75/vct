@@ -704,7 +704,7 @@ $(document).ready(function () {
             country: 'Germany',
             contactPerson: 'Ada Lovelace',
             job:'finance director',
-            phone:'+49 30 901820',
+            phone:'tel:+4930901820',
             email:'ada.lovelace@comparis.de'
         }
         var cc2 = {
@@ -715,7 +715,7 @@ $(document).ready(function () {
             country: 'Germany',
             contactPerson: 'Gurt Meier',
             job:'finance manager',
-            phone:'+49 30 901821',
+            phone:'tel:+4930901821',
             email:'gurt.meier@comparis.de'
         }
         var id = $(this).find("option:selected").attr("val");
@@ -730,6 +730,7 @@ $(document).ready(function () {
                 $('#cc-name').text(cc1.contactPerson);
                 $('#cc-job').text(cc1.job);
                 $('#cc-phone').text(cc1.phone);
+                $('#cc-phone').prop('href', cc1.phone);
                 $('#cc-phone').attr('href',cc1.phone);
                 $('#cc-email').text(cc1.email);
                 $('#cc-email').attr('href','mailto:' + cc1.email);
@@ -743,6 +744,7 @@ $(document).ready(function () {
                 $('#cc-name').text(cc2.contactPerson);
                 $('#cc-job').text(cc2.job);
                 $('#cc-phone').text(cc2.phone);
+                $('#cc-phone').prop('href', cc2.phone);
                 $('#cc-phone').attr('href',cc2.phone);
                 $('#cc-email').text(cc2.email);
                 $('#cc-email').attr('href', 'mailto:' + cc2.email);
