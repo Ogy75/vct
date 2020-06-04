@@ -279,6 +279,7 @@ $(document).ready(function () {
             $('#tab-employees').toggleClass('selected');
             $('.invoice-preview').removeClass('copy');
             $('#export-invoice-btn').show();
+            $('#export-copy-btn').hide();
         }
     });
     $('#tab-employees').on('click', function () {
@@ -290,6 +291,7 @@ $(document).ready(function () {
             $('.add-member').hide();
             $('.invoice-preview').addClass('copy');
             $('#export-invoice-btn').hide();
+            $('#export-copy-btn').show();
         }
     });
 
