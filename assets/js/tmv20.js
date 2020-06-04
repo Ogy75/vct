@@ -277,6 +277,8 @@ $(document).ready(function () {
             $('.vct-employees-tab').addClass('d-none');
             $(this).toggleClass('selected');
             $('#tab-employees').toggleClass('selected');
+            $('.invoice-preview').removeClass('copy');
+            $('#export-invoice-btn').show();
         }
     });
     $('#tab-employees').on('click', function () {
@@ -286,6 +288,8 @@ $(document).ready(function () {
             $(this).toggleClass('selected');
             $('#tab-projects').toggleClass('selected');
             $('.add-member').hide();
+            $('.invoice-preview').addClass('copy');
+            $('#export-invoice-btn').hide();
         }
     });
 

@@ -261,6 +261,10 @@ input {
                     &:hover{
                         background: darken(@basetextColor, 25%);
                     }
+                    &.selected{
+                      background-color: @highlightColor;
+                      color:white !important;
+                    }
                     td{
                         padding: 8px 5px;
                         white-space: nowrap;
@@ -1468,21 +1472,28 @@ background-color: @basecolorDarkest !important;
 
   //INVOICE PREVIEW
 
-.invoice-preview-wrapper{
+  .invoice-preview-wrapper{
     width:100%;
-    max-height:840px;
+    min-height:840px;
+    height: 100%;
     overflow: auto;
     .invoice-preview{
       width:100%;
-      min-width: 560px;
+      min-width: 570px;
       max-width: 100%;
       height:100%;
       min-height: 840px;
       overflow: hidden;
+      &.copy{
+        background-image: url("/assets/images/copy-stamp-01.png");
+        background-repeat: repeat;
+        background-position: center center;
+        background-size: initial;
+      }
     }
     #company-logo{
       img{
-        height:30px;
+        height:26px;
         float: right;
       }
     }

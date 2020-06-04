@@ -210,6 +210,17 @@ input {
     overflow: auto;
     table.panel-table {
       width: 100%;
+      &.inv-history{
+        tbody{
+          tr{
+            cursor: pointer;
+          }
+          .selected{
+            background-color: lighten(@highlightColor, 30%);
+            cursor: default;
+          }
+        }
+      }
       thead {
         tr {
           border-bottom: 1px solid lighten(@basetextColor, 30%);
@@ -1458,15 +1469,22 @@ table.overview {
 
 .invoice-preview-wrapper{
   width:100%;
-  max-height:840px;
+  min-height:840px;
+  height: 100%;
   overflow: auto;
   .invoice-preview{
     width:100%;
-    min-width: 595px;
+    min-width: 570px;
     max-width: 100%;
     height:100%;
     min-height: 840px;
     overflow: hidden;
+    &.copy{
+      background-image: url("/assets/images/copy-stamp-01.png");
+      background-repeat: repeat;
+      background-position: center center;
+      background-size: initial;
+    }
   }
   #company-logo{
     img{
@@ -1476,11 +1494,6 @@ table.overview {
   }
   #invoice-title{
     border-bottom: 1px solid @basetextColor;
-  }
-  .sep{
-    &:after{
-      content:" | ";
-    }
   }
 }
 
