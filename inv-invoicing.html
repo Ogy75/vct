@@ -843,7 +843,7 @@
                     <div class="col-12">
                         <div class="d-flex justify-content-between align-items-center">
 
-                            <a href="javascript:void(0)" class="team-name h-100 m-0 visible">Select Invoice</a>
+                            <a href="javascript:void(0)" class="team-name w-100 m-0 visible">Select Invoice</a>
                             <span class="badge badge-secondary">NSM Engineering AG</span>
 
                             <!-- <div class="d-flex justify-content-end align-items-center">
@@ -1079,7 +1079,7 @@
                             <div class="col-12">
                                 <div class="vct-project-person-switch d-flex justify-content-center mb-4">
                                     <button class="tab-button selected" id="tab-projects">INVOICE CONFIG</button>
-                                    <button class="tab-button" id="tab-employees">INVOICE HISTORY</button>
+                                    <button class="tab-button" id="tab-employees">INVOICING HISTORY</button>
                                 </div>
                             </div>
                         </div>
@@ -1093,8 +1093,7 @@
                                         <div class="select-height-fix d-flex align-items-center">
                                             <select class="w-100">
                                                 <option selected>Crealogix AG main</option>
-                                                <option>Crealogix AG xyz</option>
-                                                <option>Crealogix AG qwerty</option>
+                                                <option>Crealogix AG secondary</option>
                                             </select>
                                         </div>
                                         <div id="cc-contact">
@@ -1114,11 +1113,11 @@
                                         </div>
                                         <div id="payment-account">
                                             <label class="mt-0">bank</label>
-                                            <span class="d-block">Zürcher Kantonalbank</span>
+                                            <span class="d-block" id="payment-account-bank-select">Zürcher Kantonalbank</span>
                                             <label class="mt-0">IBAN</label>
-                                            <span class="d-block">CH1800700110005701947</span>
+                                            <span class="d-block" id="payment-account-iban-select">CH1800700110005701947</span>
                                             <label class="mt-0">account no.</label>
-                                            <span class="d-block">1100-5701.947</span>
+                                            <span class="d-block" id="payment-account-no-select">1100-5701.947</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1143,7 +1142,7 @@
                 <!-- INVOICE PREVIEW -->
                 <div class="col-12 col-lg-6 mt-4 mt-lg-0">
                     <div class="p-4 text-left panel-container">
-                        <span class="primary-title d-block mb-3">invoice preview</span>
+                        <span class="primary-title d-block">invoice preview</span>
                         <small class="d-block w-100 text-right">Last export date: <span>04.06.2020</span></small>
                         <div class="invoice-preview-wrapper border">
                             <div class="invoice-preview p-5">
@@ -1152,9 +1151,21 @@
                                         <small id="vat-no">CHE-141.994.256 MWST</small>
                                     </div>
                                     <div class="col-8">
-                                        <div id="company-logo">
+                                        <div class="row">
+                                        <div id="company-logo" class="col-12">
                                             <img src="assets/images/logo-nsmeng.svg" alt="nsm engineering ag" />
                                         </div>
+                                        <div id="company-data" class="col-12 mt-2 text-right text-break">
+                                            <small>
+                                                <div id="company-name" class="font-weight-bold">NSM Engineering AG</div>
+                                                <span id="company-address" class="sep">Blegistrasse 17a</span>
+                                                <span id="company-post-city">CH-6340 Baar</span>
+                                                <div id="company-post-phone">+41 541 78 66</div>
+                                                <div id="company-post-email">office@nsm-engineering.com</div>
+                                                <div id="company-post-web">www.nsm-engineering.com</div>
+                                            </small>
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
 
@@ -1185,16 +1196,16 @@
 
                                 <div class="row invoice-item">
                                     <div class="col-12">
-                                        <div class="font-weight-bold pt-3"><span class="invoice-item-no pr-1">01.</span><span class="invoice-item-name">Nearshoring Fee</span></div>
+                                        <div class="font-weight-bold pt-2"><span class="invoice-item-no pr-1">01.</span><span class="invoice-item-name">Nearshoring Fee</span></div>
                                         <div class="row">
                                             <div class="col-12 additional-fee">
-                                                <div class="border-bottom py-2">
+                                                <div class="border-bottom py-1">
                                                     <div class="row">
-                                                        <div class="col-9">
+                                                        <div class="col-8">
                                                             <span class="invoice-item-description">Crelogix (Abaxx) Projekt - Abrechnung Juli 2020</span>
                                                         </div>
 
-                                                        <div class="col-3 text-right">
+                                                        <div class="col-4 text-right">
                                                             <span class="invoice-item-amount text-right">12.250.000,00<span class="eur"></span></span>
                                                         </div>
                                                     </div>
@@ -1206,58 +1217,119 @@
 
                                 <div class="row invoice-item">
                                     <div class="col-12">
-                                        <div class="font-weight-bold pt-3"><span class="invoice-item-no pr-1">02.</span><span class="invoice-item-name">Additional Fees</span></div>
+                                        <div class="font-weight-bold pt-2"><span class="invoice-item-no pr-1">02.</span><span class="invoice-item-name">Additional Fees</span></div>
                                         <div class="row">
                                             <div class="col-12 additional-fee">
-                                                <div class="border-bottom py-2">
+                                                <div class="border-bottom py-1">
                                                     <div class="row">
-                                                        <div class="col-9">
+                                                        <div class="col-8">
                                                             <span class="additional-fee-item-description">Flight tickets</span>
                                                         </div>
 
-                                                        <div class="col-3 text-right">
+                                                        <div class="col-4 text-right">
                                                             <span class="additional-fee-item-amount">1.250,00<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 additional-fee">
-                                                <div class="border-bottom py-2">
+                                                <div class="border-bottom py-1">
                                                     <div class="row">
-                                                        <div class="col-9">
+                                                        <div class="col-8">
                                                             <span class="additional-fee-item-description">Hotel stays</span>
                                                         </div>
-                                                        <div class="col-3 text-right">
+                                                        <div class="col-4 text-right">
                                                             <span class="additional-fee-item-amount">890,50<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 additional-fee">
-                                                <div class="border-bottom py-2">
+                                                <div class="border-bottom py-1">
                                                     <div class="row">
-                                                        <div class="col-9">
+                                                        <div class="col-8">
                                                             <span class="additional-fee-item-description">Local transportation</span>
                                                         </div>
-                                                        <div class="col-3 text-right">
+                                                        <div class="col-4 text-right">
                                                             <span class="additional-fee-item-amount">90,00<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 additional-fee">
-                                                <div class="border-bottom py-2">
+                                                <div class="border-bottom py-1">
                                                     <div class="row">
-                                                        <div class="col-9">
+                                                        <div class="col-8">
                                                             <span class="additional-fee-item-description">Education costs</span>
                                                         </div>
-                                                        <div class="col-3 text-right">
+                                                        <div class="col-4 text-right">
                                                             <span class="additional-fee-item-amount">750,50<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- TOTALS -->
+                                        <div class="row mt-3">
+                                            <div class="col-9 offset-3">
+                                                <div class="border-bottom py-1">
+                                                    <div class="row text-right">
+                                                        <div class="col-5">
+                                                            <span class="additional-fee-item-description">Total before VAT:</span>
+                                                        </div>
+                                                        <div class="col-5 offset-2">
+                                                            <span class="additional-fee-item-amount">12.252.981,00<span class="eur"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-9 offset-3">
+                                                <div class="border-bottom py-1">
+                                                    <div class="row text-right">
+                                                        <div class="col-5">
+                                                            <span class="additional-fee-item-description">VAT:</span>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <span class="additional-fee-item-description">20%</span>
+                                                        </div>
+                                                        <div class="col-5 text-right">
+                                                            <span class="additional-fee-item-amount">2.450.596,20<span class="eur"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-9 offset-3">
+                                                <div class="border-bottom py-1">
+                                                    <div class="row text-right">
+                                                        <div class="col-5">
+                                                            <span class="additional-fee-item-description">Total for payment:</span>
+                                                        </div>
+                                                        <div class="col-5 offset-2 text-right">
+                                                            <span class="additional-fee-item-amount font-weight-bold">2.450.596,20<span class="eur"></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- TERMS, ACCOUNT, Sign off -->
+                                        <div class="row mt-5">
+                                            <div class="col-6">
+                                                <small>Payment Terms:</small>
+                                                <p>14 days netto</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <small>Payment account:</small>
+                                                <div>Bank:<span id="company-account-bank" class="ml-2">Zürcher Kantonalbank</span></div>
+                                                <div>IBAN:<span id="company-account-iban" class="ml-2">CH18 0070 0110 0057 01947</span></div>
+                                                <div>Account No.:<span id="company-account-no" class="ml-2">1100-5701.947</span></div>
+                                            </div>
+                                            <div class="col-12 my-4">
+                                                Thank you for your order and best regards.
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>

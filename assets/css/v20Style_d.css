@@ -572,6 +572,7 @@ input:disabled {
 }
 .vct-content .team-list .team-item.no-hover {
   background: rgba(66, 66, 60, 0.5);
+  cursor: auto;
 }
 .vct-content .team-list .team-item .team-item-name {
   font-size: 14px;
