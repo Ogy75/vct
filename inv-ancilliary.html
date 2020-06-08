@@ -1,0 +1,698 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My Companies</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
+    <link rel="stylesheet" id="colorMode" href="assets/css/v20Style.css">
+    <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fav-icn//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fav-icn//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fav-icn//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
+    <link rel="manifest" href="assets/fav-icn//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+</head>
+
+<body>
+
+    <!--Spinner-->
+    <div class="lds-dual-ring-bg">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <!-- SCROLL TOP -->
+    <a href="javascript:void(0)" id="go-top"><i class="fas fa-chevron-up"></i></a>
+
+    <!--Spinner-->
+    <div class="lds-dual-ring-bg">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <!--export Invoice Modal Start -->
+    <div class="modal fade" id="exportInvoice" tabindex="-1" role="dialog" aria-labelledby="exportInvoice" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-name">Export Invoice & Report</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="px-5 py-5 text-left">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label class="mt-3">select document size</label>
+                                    <select class="w-100">
+                                        <option selected>A4 DIN</option>
+                                        <option disabled>US Letter</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label class="mt-3">Export Reports as</label>
+                                    <select class="w-100">
+                                        <option selected="">PDF</option>
+                                        <option>Excel</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Export</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- export Invoice Modal End -->
+
+    <!--export Invoice Copy Modal Start -->
+    <div class="modal fade" id="exportInvoiceCopy" tabindex="-1" role="dialog" aria-labelledby="exportInvoice" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-name">Export Invoice & Report Copy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="px-5 py-5 text-left">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label class="mt-3">select document size</label>
+                                    <select class="w-100">
+                                        <option selected>A4 DIN</option>
+                                        <option disabled>US Letter</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label class="mt-3">Export Reports as</label>
+                                    <select class="w-100">
+                                        <option selected="">PDF</option>
+                                        <option>Excel</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Export</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- export Invoice Copy Modal End -->
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+            <div class="vct-logo w-100 text-left text-white">
+                <img src="assets/images/app-v2-logo.svg" alt="enjoy.ing">
+            </div>
+            <ul class="vct-nav-menu">
+                <li><a href="index.html"><i class="nav-icon far fa-calendar-alt mr-3"></i>My Days</a></li>
+                <li><a class="" href="myCompetence20.html"><i class="nav-icon fas fa-book-open mr-3"></i>My Competences</a></li>
+                <li><a href="teams20-b.html"><i class="nav-icon fas fa-user-friends mr-3"></i>Project management</a></li>
+                <li><a href="overtime20.html"><i class="nav-icon fas fa-dollar-sign mr-3"></i>Finance management</a>
+                </li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-tags mr-3"></i>Manage Roles</a>
+                    <ul class="vct-nav-level1" style="display: none;">
+                        <li><a href="operations-management20.html">Operation</a></li>
+                        <li><a href="finance-management20.html">Finance</a></li>
+                    </ul>
+                </li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
+                    <ul class="vct-nav-level1" style="display: none;">
+                        <li><a href="mapping20.html">Mappings</a></li>
+                        <li><a href="app-management20.html">app settings</a></li>
+                        <li><a href="service-data20.html">Service Data</a></li>
+                    </ul>
+                </li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-chart-pie mr-3"></i>Overviews</a>
+                    <ul class="vct-nav-level1" style="display: none;">
+                        <li><a href="absences20.html">Absences</a></li>
+                    </ul>
+                </li>
+                <li><a href="inv-companies.html"><i class="nav-icon fas fa-building mr-3"></i>My Companies</a></li>
+                <li><a href="inv-contracts.html"><i class="nav-icon fas fa-signature mr-3"></i>Contracts</a></li>
+                <li><a href="inv-invoicing.html"><i class="nav-icon fas fa-receipt mr-3"></i>Invoicing</a></li>
+                <li><a class="selected" href="inv-ancilliary.html"><i class="nav-icon fas fa-paperclip mr-3"></i>Ancilliary costs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav">
+        <div class="vct-user-menu float-right">
+            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i class="far fa-moon pointer js_darkMode"></i></div>
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="fas fa-expand full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mx-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Djordjevic Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-start">
+                    <span class="primary-title my-3">Ancilliary Cost management</span>
+                </div>
+            </div>
+
+            <!--add company-->
+            <!-- <div class="vct-teams mt-3 contract-section">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <a href="javascript:void(0)" class="team-name w-100 m-0 visible">Select Invoice</a>
+                            <span class="badge badge-secondary">NSM Engineering AG</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row team-list" style="display:none">
+                    <div class="col-12">
+                        <div class=" team-item no-hover my-3 p-3">
+                            <label class="m-0" for="company">select company</label>
+                            <div class="select-height-fix d-flex align-items-center">
+                                <select name="company" class="pronounced-data">
+                                    <option value="NSM Engineering AG" selected>NSM Engineering AG</option>
+                                    <option value="youngculture AG">youngculture AG</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Edelweiss cloud solution</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Edelweiss booking engine</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Ex Libris</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">ch aviation</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">PAS media</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not ready</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Comparis</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center selected">
+                            <div class="team-item-name">Crealogix Germany</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Crealogix EB</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Crealogix E-Payment</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Info Minds</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">guidle</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Real Garant</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Pearson</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-warning ml-2">not ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Pritlead</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">ifolor</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-xl-3">
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Swiss - Swiss Staff Travel</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Swiss - Swiss SOA Project</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Swiss - Swiss SOA Project</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                        <div class="team-item d-flex justify-content-between align-items-center">
+                            <div class="team-item-name">Swiss - Swiss Basel</div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <div class="badge badge-success ml-2">ready</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> -->
+
+            <div class="row mt-4">
+                <!-- INVOICE CONFIG -->
+                <div class="col-12 col-lg-6">
+                    <div class="p-4 text-left panel-container contract-section">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="primary-title d-block">cost type</span>
+                            <span class="badge badge-secondary">travel</span>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 col-sm-6">
+                                <label for="cost-type">select cost type</label>
+                                <div class="select-height-fix d-flex align-items-center">
+                                    <select name="cost-type" id="cost-center-select" class="w-100 pronounced-data">
+                                        <option val="travel" selected>Travel</option>
+                                        <option val="stay">Hotel</option>
+                                        <option val="local transportation">Local transportation</option>
+                                        <option val="education">Education</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-12" id="travel-cost">
+                                <div class="border-top py-3">
+                                    <p class="m-0 font-weight-bold">PLEASE NOTE:</p>
+                                    <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="passenger-name">passenger name *</label>
+                                            <!-- autocomplete / suggestion ovde -->
+                                            <input type="text" name="passenger-name" />
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label for="travel-by">travel by *</label>
+                                            <div class="select-height-fix d-flex align-items-center">
+                                                <select name="travel-by" class="w-100">
+                                                    <option val="plane" selected>Plane</option>
+                                                    <option val="train">Train</option>
+                                                    <option val="car">Car</option>
+                                                    <option val="vessle">Vessle</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label for="travel-direction">travel direction</label>
+                                            <div class="select-height-fix d-flex align-items-center">
+                                                <select id="travel-direction" name="travel-direction" class="w-100">
+                                                    <option val="round trip" selected>Round Trip</option>
+                                                    <option val="one way">One Way</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <!-- ovde treba autocomplete sa listom aerodroma i kodom aerodroma. Probacu da nabavim JSON negde, mada ga mozda ti vec imas? -->
+                                            <label for="travel-from">departure location *</label>
+                                            <input type="text" name="travel-from" />
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <!-- ovde isto treba autocomplete sa listom aerodroma i kodom aerodroma -->
+                                            <label for="travel-to">destination *</label>
+                                            <input type="text" name="travel-to" />
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label for="travel-departure-date">departure date *</label>
+                                            <input type="text" name="travel-departure-date" />
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label for="travel-return-date">return date *</label>
+                                            <input type="text" name="travel-return-date" />
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label for="travel-cost">travel cost *</label>
+                                            <input type="text" name="travel-cost" />
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label for="travel-cost-currency">currrency *</label>
+                                            <div class="select-height-fix d-flex align-items-center">
+                                                <select name="travel-cost-currency" class="w-100">
+                                                    <option selected>Select currency</option>
+                                                    <option val="EUR">EUR</option>
+                                                    <option val="CHF">CHF</option>
+                                                    <option val="RSD">RSD</option>
+                                                    <option val="RSD">RON</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- INVOICE PREVIEW -->
+                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                    <div class="p-4 text-left panel-container">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="primary-title d-block">Cost list</span>
+                            <div>
+                                <select class="mr-1">
+                                    <option>August</option>
+                                    <option>July</option>
+                                    <option selected>June</option>
+                                    <option>May</option>
+                                    <option>April</option>
+                                    <option>March</option>
+                                    <option>February</option>
+                                    <option>January</option>
+                                </select>
+                                <select>
+                                    <option selected>2020</option>
+                                    <option>2019</option>
+                                    <option>2018</option>
+                                    <option>2017</option>
+                                    <option>2016</option>
+                                    <option>2015</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <!-- COST ENTRY -->
+                                <div class="contract-section history-item mt-2 px-3 border">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row contract-section-header py-2 pointer d-flex align-items-center">
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <div class="history-entry d-flex justify-content-start align-items-center">
+                                                        <span class="fas fa-chevron-down arrow"></span>
+                                                        <div>
+                                                            <label class="m-0">name</label>
+                                                            <span>Milan Milanovic</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <label class="m-0">cost type</label>
+                                                    <span class="travel-plane"><span class="fas fa-plane mr-1"></span>travel</span>
+                                                    <!-- <span class="travel-train"><span class="fas fa-train mr-1"></span>travel</span> -->
+                                                    <!-- <span class="travel-car"><span class="fas fa-car mr-1"></span>travel</span> -->
+                                                    <!-- <span class="travel-ship"><span class="fas fa-ship mr-1"></span>travel</span> -->
+                                                </div>
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <label class="m-0">itinerary</label>
+                                                    <span>BEG - ZRH - BEG</span>
+                                                </div>
+                                                <div class="col-6 col-xl-2 mb-2 mb-xl-0">
+                                                    <label class="m-0">cost</label>
+                                                    <span>34.350,00<span class="rsd"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row more-data pb-3" style="display: none;">
+                                        <div class="col-12">
+                                            <div class="table-wrapper mt-3">
+                                                <!-- RATE AVERAGES -->
+                                                <div class="form-title text-nowrap text-truncate">details</div>
+                                                <table class="panel-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>departure date</th>   
+                                                            <th>return date</th>                                                         
+                                                            <th>travel direction</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><span>15.06.2020</span></td>
+                                                            <td>17.06.2020</td>
+                                                            <td>round trip</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contract-section history-item mt-2 px-3 border">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row contract-section-header py-2 pointer d-flex align-items-center">
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <div class="history-entry d-flex justify-content-start align-items-center">
+                                                        <span class="fas fa-chevron-down arrow"></span>
+                                                        <div>
+                                                            <label class="m-0">name</label>
+                                                            <span>Milan Milanovic</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <label class="m-0">cost type</label>
+                                                    <span class="travel-plane"><span class="fas fa-concierge-bell mr-1"></span>hotel</span>
+                                                </div>
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <label class="m-0">stays</label>
+                                                    <span>2 nights</span>
+                                                </div>
+                                                <div class="col-6 col-xl-2 mb-2 mb-xl-0">
+                                                    <label class="m-0">cost</label>
+                                                    <span>180,00<span class="chf"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row more-data pb-3" style="display: none;">
+                                        <div class="col-12">
+                                            <div class="table-wrapper mt-3">
+                                                <!-- RATE AVERAGES -->
+                                                <div class="form-title text-nowrap text-truncate">details</div>
+                                                <table class="panel-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>check in</th>   
+                                                            <th>check out</th>                                                         
+                                                            <th>accomodation name</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><span>15.06.2020</span></td>
+                                                            <td>17.06.2020</td>
+                                                            <td>IBIS budget - Zurich airport</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contract-section history-item mt-2 px-3 border">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row contract-section-header py-2 pointer d-flex align-items-center">
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <div class="history-entry d-flex justify-content-start align-items-center">
+                                                        <span class="fas fa-chevron-down arrow"></span>
+                                                        <div>
+                                                            <label class="m-0">name</label>
+                                                            <span>Milan Milanovic</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <label class="m-0">cost type</label>
+                                                    <span class="travel-plane"><span class="fas fa-route mr-1"></span>local&nbsp;trans.</span>
+                                                </div>
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <label class="m-0">ticket qty.</label>
+                                                    <span>1</span>
+                                                </div>
+                                                <div class="col-6 col-xl-2 mb-2 mb-xl-0">
+                                                    <label class="m-0">cost</label>
+                                                    <span>24,00<span class="chf"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row more-data pb-3" style="display: none;">
+                                        <div class="col-12">
+                                            <div class="table-wrapper mt-3">
+                                                <!-- RATE AVERAGES -->
+                                                <label>Description</label>
+                                                <p>Ticket was used for 4 rides.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contract-section history-item mt-2 px-3 border">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row contract-section-header py-2 pointer d-flex align-items-center">
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <div class="history-entry d-flex justify-content-start align-items-center">
+                                                        <span class="fas fa-chevron-down arrow"></span>
+                                                        <div>
+                                                            <label class="m-0">name</label>
+                                                            <span>Milan Milanovic</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <label class="m-0">cost type</label>
+                                                    <span class="travel-plane"><span class="fas fa-comment-dollar mr-1"></span>additional&nbsp;cost</span>
+                                                </div>
+                                                <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                    <label class="m-0">type</label>
+                                                    <span>taxi</span>
+                                                </div>
+                                                <div class="col-6 col-xl-2 mb-2 mb-xl-0">
+                                                    <label class="m-0">cost</label>
+                                                    <span>85,50<span class="chf"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row more-data pb-3" style="display: none;">
+                                        <div class="col-12">
+                                            <div class="table-wrapper mt-3">
+                                                <!-- RATE AVERAGES -->
+                                                <label>Description</label>
+                                                <p rows="2">Was required to appear propmtly in Zug by the client.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <script src="assets/vendor/jquery341/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <script src="assets/js/tmv20.js"></script>
+
+</body>
+
+</html>

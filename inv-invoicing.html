@@ -48,58 +48,100 @@
     </div>
 
     <!--export Invoice Modal Start -->
-    <div class="modal fade" id="exportInvoice" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="exportInvoice" aria-hidden="true">
+    <div class="modal fade" id="exportInvoice" tabindex="-1" role="dialog" aria-labelledby="exportInvoice" aria-hidden="true">
         <div class="modal-dialog modal-md" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
                     <div class="col-12">
                         <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-name">Export Invoice & Report</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="px-5 py-5 text-left">
                             <div class="row">
-                                <div class="col-12">
-                                    <div class="team-member-name">Export Invoice & Reports</div>
-                                </div>
+                            <div class="col-6">
+                                <label class="mt-3">select document size</label>
+                                <select class="w-100">
+                                    <option selected>A4 DIN</option>
+                                    <option disabled>US Letter</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="mt-3">Export Reports as</label>
+                                <select class="w-100">
+                                    <option selected="">PDF</option>
+                                    <option>Excel</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="p-4 text-left">
-                            <!-- GENERAL CLIENT DATA -->
-                                <div class="row py-3">
-                                    <div class="col-12 col-md-6">
-                                        <label for="export-document-size">Select document format</label>
-                                        <select name="export-document-size" class="w-100">
-                                            <option selected>A4 DIN</option>
-                                            <option disabled>US Letter</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <label for="export-document-size">Export reports as</label>
-                                        <select name="export-document-size" class="w-100">
-                                            <option selected>PDF</option>
-                                            <option disabled>Excel</option>
-                                        </select>   
-                                    </div>
-                                    <div class="col-12 py-3">
-                                        <p id="invoice-file-name">nsm_nsh_inv_may-2020_05.06.2020.11.15.09.pdf</p>
-                                        <p id="invoice-file-name">nsm_nsh_rpt_may-2020_05.06.2020.11.15.09.xls</p>
-                                    </div>
-                                </div>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="mt-5 mb-3">
-                                        <button class="btn btn-highlight">Export</button>
-                                        <button class="btn btn-cancel" data-dismiss="modal" aria-label="Close">cancel</button>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Export</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- export Invoice Modal End -->
+
+    <!--export Invoice Copy Modal Start -->
+    <div class="modal fade" id="exportInvoiceCopy" tabindex="-1" role="dialog" aria-labelledby="exportInvoice" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-name">Export Invoice & Report Copy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="px-5 py-5 text-left">
+                            <div class="row">
+                            <div class="col-6">
+                                <label class="mt-3">select document size</label>
+                                <select class="w-100">
+                                    <option selected>A4 DIN</option>
+                                    <option disabled>US Letter</option>
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <label class="mt-3">Export Reports as</label>
+                                <select class="w-100">
+                                    <option selected="">PDF</option>
+                                    <option>Excel</option>
+                                </select>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Export</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- export Invoice Copy Modal End -->
 
     <!--left nav-->
     <div class="vct-left-nav">
@@ -137,6 +179,7 @@
                 <li><a href="inv-companies.html"><i class="nav-icon fas fa-building mr-3"></i>My Companies</a></li>
                 <li><a href="inv-contracts.html"><i class="nav-icon fas fa-signature mr-3"></i>Contracts</a></li>
                 <li><a class="selected" href="inv-invoicing.html"><i class="nav-icon fas fa-receipt mr-3"></i>Invoicing</a></li>
+                <li><a href="inv-ancilliary.html"><i class="nav-icon fas fa-paperclip mr-3"></i>Ancilliary costs</a></li>
             </ul>
         </div>
     </div>
@@ -165,7 +208,7 @@
         <div class="container position-relative">
             <div class="row">
                 <div class="col-12 d-flex align-items-center justify-content-start">
-                    <span class="primary-title my-3">Invoicing mangement</span>
+                    <span class="primary-title my-3">Invoicing management</span>
                 </div>
             </div>
 
@@ -403,6 +446,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <span class="primary-title d-block my-3">invoice items</span>
+                                        <h2>TBD</h2>
                                     </div>
                                 </div>
                             </div>
@@ -539,7 +583,7 @@
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="invoice-item-description">Crelogix (Abaxx) Projekt - Abrechnung Juli 2020</span>
+                                                            <span class="invoice-item-description pl-4">Crelogix (Abaxx) Project - July 2020</span>
                                                         </div>
 
                                                         <div class="col-4 text-right">
@@ -560,7 +604,7 @@
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="additional-fee-item-description">Flight tickets</span>
+                                                            <span class="additional-fee-item-description pl-4">Flight tickets</span>
                                                         </div>
 
                                                         <div class="col-4 text-right">
@@ -573,7 +617,7 @@
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="additional-fee-item-description">Hotel stays</span>
+                                                            <span class="additional-fee-item-description pl-4">Hotel stays</span>
                                                         </div>
                                                         <div class="col-4 text-right">
                                                             <span class="additional-fee-item-amount">890,50<span class="eur"></span></span>
@@ -585,7 +629,7 @@
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="additional-fee-item-description">Local transportation</span>
+                                                            <span class="additional-fee-item-description pl-4">Local transportation</span>
                                                         </div>
                                                         <div class="col-4 text-right">
                                                             <span class="additional-fee-item-amount">90,00<span class="eur"></span></span>
@@ -597,7 +641,7 @@
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="additional-fee-item-description">Education costs</span>
+                                                            <span class="additional-fee-item-description pl-4">Education costs</span>
                                                         </div>
                                                         <div class="col-4 text-right">
                                                             <span class="additional-fee-item-amount">750,50<span class="eur"></span></span>

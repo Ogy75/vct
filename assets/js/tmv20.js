@@ -703,9 +703,9 @@ $(document).ready(function () {
             city: 'Stuttgart',
             country: 'Germany',
             contactPerson: 'Ada Lovelace',
-            job:'finance director',
-            phone:'tel:+4930901820',
-            email:'ada.lovelace@comparis.de'
+            job: 'finance director',
+            phone: 'tel:+4930901820',
+            email: 'ada.lovelace@comparis.de'
         }
         var cc2 = {
             client: 'Crealogix Germany GmbH',
@@ -714,9 +714,9 @@ $(document).ready(function () {
             city: 'Leipzig',
             country: 'Germany',
             contactPerson: 'Gurt Meier',
-            job:'finance manager',
-            phone:'tel:+4930901821',
-            email:'gurt.meier@comparis.de'
+            job: 'finance manager',
+            phone: 'tel:+4930901821',
+            email: 'gurt.meier@comparis.de'
         }
         var id = $(this).find("option:selected").attr("val");
 
@@ -731,9 +731,9 @@ $(document).ready(function () {
                 $('#cc-job').text(cc1.job);
                 $('#cc-phone').text(cc1.phone);
                 $('#cc-phone').prop('href', cc1.phone);
-                $('#cc-phone').attr('href',cc1.phone);
+                $('#cc-phone').attr('href', cc1.phone);
                 $('#cc-email').text(cc1.email);
-                $('#cc-email').attr('href','mailto:' + cc1.email);
+                $('#cc-email').attr('href', 'mailto:' + cc1.email);
                 break;
             case "cc2":
                 $('#client-name').text(cc2.client);
@@ -745,7 +745,7 @@ $(document).ready(function () {
                 $('#cc-job').text(cc2.job);
                 $('#cc-phone').text(cc2.phone);
                 $('#cc-phone').prop('href', cc2.phone);
-                $('#cc-phone').attr('href',cc2.phone);
+                $('#cc-phone').attr('href', cc2.phone);
                 $('#cc-email').text(cc2.email);
                 $('#cc-email').attr('href', 'mailto:' + cc2.email);
                 break;
@@ -758,13 +758,13 @@ $(document).ready(function () {
             bank: 'Zürcher Kantonalbank',
             iban: 'CH1800700110005701947',
             accountNo: '1100-5701.947',
-            country:'Switzerland'
+            country: 'Switzerland'
         }
         var acc2 = {
             bank: 'Credit Suisse',
             iban: 'CH1800700110002132352',
             accountNo: '1300-4040.101',
-            country:'Switzerland'
+            country: 'Switzerland'
         }
         var val = $(this).find("option:selected").attr("val");
 
@@ -786,6 +786,20 @@ $(document).ready(function () {
                 $('#payment-account-iban-print').text(acc2.iban);
                 $('#payment-account-no-print').text(acc2.accountNo);
                 $('#payment-account-country-print').text(acc2.country);
+                break;
+        }
+    });
+
+    //travel direction
+    $('#travel-direction').on('change', function () {
+        var val = $(this).find("option:selected").attr("val");
+        switch (val) {
+            case "round trip":
+                $('input[name="travel-return-date"]').attr('disabled', false);
+                break;
+            case "one way":
+                $('input[name="travel-return-date"]').attr('disabled', true);
+                $('input[name="travel-return-date"]').val('');
                 break;
         }
     });
