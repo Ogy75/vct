@@ -165,9 +165,27 @@ $(document).ready(function () {
             $('.vct-actions').hide();
         }
     });
-
-
-
+    
+    // Cost filter
+    $('.find-member').keyup(function () {
+        var filter = $(this).val(),
+            count = 0;
+        $('.history-item').each(function () {
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).hide();
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+        if (count > 0) {
+            $('.no-results-message').hide();
+            $('.vct-actions').hide();
+        } else {
+            $('.no-results-message').show();
+            $('.vct-actions').hide();
+        }
+    });
 
     //toggle clear btn to search
     $('.find-project').keyup(function () {
@@ -185,6 +203,14 @@ $(document).ready(function () {
         $('.reset-input').hide();
         $('.vct-team').show();
         $('.no-results-message').hide();
+    });
+
+    //COST Clear&focus btn fn.
+    $('.reset-input').on('click', function () {
+        $('.find-project').val('').focus();
+        $('.reset-input').hide();
+        $('.history-item').show();
+        $('.no-results-message').show();
     });
 
     //Project search
