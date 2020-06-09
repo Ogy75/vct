@@ -870,10 +870,27 @@ $(document).ready(function () {
                 $('input[name="travel-return-date"]').val('');
                 break;
             default:
-                $('input[name="travel-return-date"]').attr('disabled', true);
-                $('input[name="travel-departure-date"]').attr('disabled', true);
-                $('input[name="travel-return-date"]').val('');
-                $('input[name="travel-departure-date"]').val('')
+                $('input[name="travel-return-date"]').attr('disabled', false);
+                $('input[name="travel-departure-date"]').attr('disabled', false);
+                break;
+        }
+    });
+
+    //ancilliary total currency
+    $('select#ancilliary-total-currency').on('change', function () {
+        var val = $(this).find("option:selected").attr('val');
+        switch (val) {
+            case "EUR":
+                $('span#ancilliary-total-amount').text('3.238,76');
+                break;
+            case "CHF":
+                $('span#ancilliary-total-amount').text('3.482,05');
+                break;
+            case "RSD":
+                $('span#ancilliary-total-amount').text('380.653,47');
+                break;
+            case "RON":
+                $('span#ancilliary-total-amount').text('15.667,64');
                 break;
         }
     });

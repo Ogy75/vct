@@ -1438,3 +1438,6 @@ table.overview td {
   content: "GBP";
   margin-left: 6px;
 }
+.cost-entries-sum {
+  background: #efefef;
+}
