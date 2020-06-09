@@ -895,6 +895,27 @@ $(document).ready(function () {
         }
     });
 
+    //invoicing company switch
+    $('#invoice-company').on('change', function () {
+        var val = $(this).find("option:selected").attr('val');
+        var yc = '';
+        var nsm = '';
+        switch (val) {
+            case "NSM AG":
+                $('#invoice-company-logo').attr('src', 'assets/images/logo-nsmeng.svg');
+                $('.company-data').hide();
+                $('#company-nsm').show();
+                $('#vat-no').text('CHE-141.994.256 MWST');
+                break;
+            case "YC AG":
+                $('#invoice-company-logo').attr('src', 'assets/images/logo-youngculture.svg');
+                $('.company-data').hide();
+                $('#company-yc').show();
+                $('#vat-no').text('CHE-108.543.612 MWST');
+                break;
+        }
+    });
+
 
     //ADD TRAVEL COST DEMO
     $('#add-cost').on('click', function () {
@@ -927,4 +948,75 @@ $(document).ready(function () {
         $('.cost-entries').prepend(travel);
     });
 
+    //TOGGLE NEARSHORING
+    $('#nearshoring').click(function () {
+        if ($(this).prop('checked') == true) {
+            $('#nearshoring-fee').show();
+        }
+        else {
+            $('#nearshoring-fee').hide();
+        }
+    });
+    $('#travel').click(function () {
+        if ($(this).prop('checked') == true) {
+            $('#travel-fee').show();
+        }
+        else {
+            $('#travel-fee').hide();
+        }
+    });
+
+    $('#additional').click(function () {
+        if ($(this).prop('checked') == true) {
+            $('#additional-fees').show();
+            $('.cost-config').show();
+        }
+        else {
+            $('#additional-fees').hide();
+            $('.cost-config').hide();
+        }
+    });
+
+    $('#hotel').click(function () {
+        if ($(this).prop('checked') == true) {
+            $('#hotel-fee').show();
+        }
+        else {
+            $('#hotel-fee').hide();
+        }
+    });
+
+    $('#local-trans').click(function () {
+        if ($(this).prop('checked') == true) {
+            $('#local-trans-fee').show();
+        }
+        else {
+            $('#local-trans-fee').hide();
+        }
+    });
+
+    $('#education').click(function () {
+        if ($(this).prop('checked') == true) {
+            $('#education-fee').show();
+        }
+        else {
+            $('#education-fee').hide();
+        }
+    });
+
+
+    //INVOICE CALC koji ne radi :(
+    $('input[type="checkbox"]').on('change', function () {
+        var nearshor = parseFloat($('#nearshoring-amount:visible').text()) * 1000000;
+        var travel = parseFloat($('#travel-amount:visible').text()) * 1000;
+        var hotel = parseFloat($('#hotel-amount:visible').text());
+        var local = parseFloat($('#local-trans-amount:visible').text());
+        var edu = parseFloat($('#education-amount:visible').text());
+        var totalbeforeTax = (nearshor + travel + hotel + local + edu);
+        $('#total-before-vat').text(totalbeforeTax).append('<span class="eur"></span>');
+        var vatPercent = parseFloat($('#vat-percent:visible').text());
+        var vatAmount = (totalbeforeTax / 100) * vatPercent;
+        $('#total-vat-amount').text(vatAmount).append('<span class="eur"></span>');
+        $('#payment-amount').text(vatAmount + totalbeforeTax).append('<span class="eur"></span>');
+    });
 });

@@ -63,21 +63,21 @@
                     <div class="col-12">
                         <div class="px-5 py-5 text-left">
                             <div class="row">
-                            <div class="col-6">
-                                <label class="mt-3">select document size</label>
-                                <select class="w-100">
-                                    <option selected>A4 DIN</option>
-                                    <option disabled>US Letter</option>
-                                </select>
+                                <div class="col-6">
+                                    <label class="mt-3">select document size</label>
+                                    <select class="w-100">
+                                        <option selected>A4 DIN</option>
+                                        <option disabled>US Letter</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label class="mt-3">Export Reports as</label>
+                                    <select class="w-100">
+                                        <option selected="">PDF</option>
+                                        <option>Excel</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <label class="mt-3">Export Reports as</label>
-                                <select class="w-100">
-                                    <option selected="">PDF</option>
-                                    <option>Excel</option>
-                                </select>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -111,21 +111,21 @@
                     <div class="col-12">
                         <div class="px-5 py-5 text-left">
                             <div class="row">
-                            <div class="col-6">
-                                <label class="mt-3">select document size</label>
-                                <select class="w-100">
-                                    <option selected>A4 DIN</option>
-                                    <option disabled>US Letter</option>
-                                </select>
+                                <div class="col-6">
+                                    <label class="mt-3">select document size</label>
+                                    <select class="w-100">
+                                        <option selected>A4 DIN</option>
+                                        <option disabled>US Letter</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <label class="mt-3">Export Reports as</label>
+                                    <select class="w-100">
+                                        <option selected="">PDF</option>
+                                        <option>Excel</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="col-6">
-                                <label class="mt-3">Export Reports as</label>
-                                <select class="w-100">
-                                    <option selected="">PDF</option>
-                                    <option>Excel</option>
-                                </select>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -253,9 +253,9 @@
                         <div class=" team-item no-hover my-3 p-3">
                             <label class="m-0" for="company">select company</label>
                             <div class="select-height-fix d-flex align-items-center">
-                                <select name="company" class="pronounced-data">
-                                    <option value="NSM Engineering AG" selected>NSM Engineering AG</option>
-                                    <option value="youngculture AG">youngculture AG</option>
+                                <select name="company" id="invoice-company" class="pronounced-data">
+                                    <option val="NSM AG" selected>NSM Engineering AG</option>
+                                    <option val="YC AG">youngculture AG</option>
                                 </select>
                             </div>
                         </div>
@@ -446,7 +446,147 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <span class="primary-title d-block my-3">invoice items</span>
-                                        <h2>TBD</h2>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="border p-3">
+                                                    <div class="row">
+                                                        <div class="col-12 d-flex pb-3 mb-3 border-bottom justify-content-between align-items-center">
+                                                            <span class="form-title">nearshoring fee</span>
+                                                            <div class="text-left text-md-right">
+                                                                <label class="switch">
+                                                                    <input type="checkbox" id="nearshoring" checked>
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">period</label>
+                                                            <span>May 2020</span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">fee amount</label>
+                                                            <span>12.250.000,00<span class="eur"></span></span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3 text-center">
+                                                            <label class="m-0">report</label>
+                                                            <a href="javascript:void(0)" class="fas fa-file-excel"></a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- ADDITIONAL FEES -->
+                                            <div class="col-12 mt-4">
+                                                <div class="border p-3">
+                                                    <div class="row">
+                                                        <div class="col-12 d-flex pb-3 mb-3 border-bottom justify-content-between align-items-center">
+                                                            <span class="form-title">additional fees</span>
+                                                            <div class="text-left text-md-right">
+                                                                <label class="switch">
+                                                                    <input type="checkbox" id="additional" checked>
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row cost-config py-3">
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">type</label>
+                                                            <span>Travel</span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">fee amount</label>
+                                                            <span>1.250,00<span class="eur"></span></span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3 text-center">
+                                                            <label class="m-0">report</label>
+                                                            <a href="javascript:void(0)" class="fas fa-file-excel"></a>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3 d-flex align-items-center justify-content-end">
+                                                            <div class="text-left text-md-right">
+                                                                <label class="switch">
+                                                                    <input type="checkbox" id="travel" checked>
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+            
+                                                    <div class="row cost-config py-3">
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">type</label>
+                                                            <span>Hotel</span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">fee amount</label>
+                                                            <span>890,00<span class="eur"></span></span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3 text-center">
+                                                            <label class="m-0">report</label>
+                                                            <a href="javascript:void(0)" class="fas fa-file-excel"></a>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3 d-flex align-items-center justify-content-end">
+                                                            <div class="text-left text-md-right">
+                                                                <label class="switch">
+                                                                    <input type="checkbox" id="hotel" checked>
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row cost-config py-3">
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">type</label>
+                                                            <span>Local Transportation</span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">fee amount</label>
+                                                            <span>90,00<span class="eur"></span></span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3 text-center">
+                                                            <label class="m-0">report</label>
+                                                            <a href="javascript:void(0)" class="fas fa-file-excel"></a>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3 d-flex align-items-center justify-content-end">
+                                                            <div class="text-left text-md-right">
+                                                                <label class="switch">
+                                                                    <input type="checkbox" id="local-trans" checked>
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row cost-config py-3">
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">type</label>
+                                                            <span>Education</span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3">
+                                                            <label class="m-0">fee amount</label>
+                                                            <span>750,00<span class="eur"></span></span>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3 text-center">
+                                                            <label class="m-0">report</label>
+                                                            <a href="javascript:void(0)" class="fas fa-file-excel"></a>
+                                                        </div>
+                                                        <div class="col-6 col-sm-3 d-flex align-items-center justify-content-end">
+                                                            <div class="text-left text-md-right">
+                                                                <label class="switch">
+                                                                    <input type="checkbox" id="education" checked>
+                                                                    <span class="slider"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -534,9 +674,9 @@
                                     <div class="col-8">
                                         <div class="row">
                                             <div id="company-logo" class="col-12">
-                                                <img src="assets/images/logo-nsmeng.svg" alt="nsm engineering ag" />
+                                                <img id="invoice-company-logo" src="assets/images/logo-nsmeng.svg" alt="nsm engineering ag" />
                                             </div>
-                                            <div id="company-data" class="col-12 mt-2 text-right text-break">
+                                            <div id="company-nsm" class="company-data col-12 mt-2 text-right text-break">
                                                 <small>
                                                     <div id="company-name" class="font-weight-bold">NSM Engineering AG</div>
                                                     <span id="company-address" class="sep">Blegistrasse 17a</span>
@@ -544,6 +684,16 @@
                                                     <div id="company-post-phone">+41 541 78 66</div>
                                                     <div id="company-post-email">office@nsm-engineering.com</div>
                                                     <div id="company-post-web">www.nsm-engineering.com</div>
+                                                </small>
+                                            </div>
+                                            <div id="company-yc" class="company-data col-12 mt-2 text-right text-break" style="display: none;">
+                                                <small>
+                                                    <div id="company-name" class="font-weight-bold">youngculture AG</div>
+                                                    <span id="company-address" class="sep">Neptunstrasse 96</span>
+                                                    <span id="company-post-city">8032 Zürich</span>
+                                                    <div id="company-post-phone">+41 44 262 00 82</div>
+                                                    <div id="company-post-email">office@youngculture.com</div>
+                                                    <div id="company-post-web">youngculture.com</div>
                                                 </small>
                                             </div>
                                         </div>
@@ -576,18 +726,18 @@
                                 </div>
 
                                 <div class="row invoice-item">
-                                    <div class="col-12">
+                                    <div class="col-12" id="nearshoring-fee">
                                         <div class="font-weight-bold pt-2"><span class="invoice-item-no pr-1">01.</span><span class="invoice-item-name">Nearshoring Fee</span></div>
                                         <div class="row">
                                             <div class="col-12 additional-fee">
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="invoice-item-description pl-4">Crelogix (Abaxx) Project - July 2020</span>
+                                                            <span class="invoice-item-description pl-4">Crelogix (Abaxx) Project - May 2020</span>
                                                         </div>
 
                                                         <div class="col-4 text-right">
-                                                            <span class="invoice-item-amount text-right">12.250.000,00<span class="eur"></span></span>
+                                                            <span id="nearshoring-amount" class="invoice-item-amount text-right">12.250.000,00<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -597,61 +747,63 @@
                                 </div>
 
                                 <div class="row invoice-item">
-                                    <div class="col-12">
+                                    <div class="col-12" id="additional-fees">
                                         <div class="font-weight-bold pt-2"><span class="invoice-item-no pr-1">02.</span><span class="invoice-item-name">Additional Fees</span></div>
                                         <div class="row">
-                                            <div class="col-12 additional-fee">
+                                            <div id="travel-fee" class="col-12 additional-fee">
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="additional-fee-item-description pl-4">Flight tickets</span>
+                                                            <span class="additional-fee-item-description pl-4">Travel cost</span>
                                                         </div>
 
                                                         <div class="col-4 text-right">
-                                                            <span class="additional-fee-item-amount">1.250,00<span class="eur"></span></span>
+                                                            <span id="travel-amount" class="additional-fee-item-amount">1.250,00<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 additional-fee">
+                                            <div id="hotel-fee" class="col-12 additional-fee">
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="additional-fee-item-description pl-4">Hotel stays</span>
+                                                            <span class="additional-fee-item-description pl-4">Hotel cost</span>
                                                         </div>
                                                         <div class="col-4 text-right">
-                                                            <span class="additional-fee-item-amount">890,50<span class="eur"></span></span>
+                                                            <span id="hotel-amount" class="additional-fee-item-amount">890,00<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 additional-fee">
+                                            <div id="local-trans-fee" class="col-12 additional-fee">
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="additional-fee-item-description pl-4">Local transportation</span>
+                                                            <span class="additional-fee-item-description pl-4">Local transportation cost</span>
                                                         </div>
                                                         <div class="col-4 text-right">
-                                                            <span class="additional-fee-item-amount">90,00<span class="eur"></span></span>
+                                                            <span id="local-trans-amount" class="additional-fee-item-amount">90,00<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 additional-fee">
+                                            <div id="education-fee" class="col-12 additional-fee">
                                                 <div class="border-bottom py-1">
                                                     <div class="row">
                                                         <div class="col-8">
-                                                            <span class="additional-fee-item-description pl-4">Education costs</span>
+                                                            <span class="additional-fee-item-description pl-4">Education cost</span>
                                                         </div>
                                                         <div class="col-4 text-right">
-                                                            <span class="additional-fee-item-amount">750,50<span class="eur"></span></span>
+                                                            <span id="education-amount" class="additional-fee-item-amount">750,00<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
 
                                         <!-- TOTALS -->
+                                    <div class="col-12">
                                         <div class="row mt-3">
                                             <div class="col-9 offset-3">
                                                 <div class="border-bottom py-1">
@@ -660,7 +812,7 @@
                                                             <span class="additional-fee-item-description">Total before VAT:</span>
                                                         </div>
                                                         <div class="col-5 offset-2">
-                                                            <span class="additional-fee-item-amount">12.252.981,00<span class="eur"></span></span>
+                                                            <span id="total-before-vat" class="additional-fee-item-amount">12.252.981,00<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -672,10 +824,10 @@
                                                             <span class="additional-fee-item-description">VAT:</span>
                                                         </div>
                                                         <div class="col-2">
-                                                            <span class="additional-fee-item-description">20%</span>
+                                                            <span id="vat-percent" class="additional-fee-item-description">20%</span>
                                                         </div>
                                                         <div class="col-5 text-right">
-                                                            <span class="additional-fee-item-amount">2.450.596,20<span class="eur"></span></span>
+                                                            <span id="total-vat-amount" class="additional-fee-item-amount">2.450.596,20<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -687,7 +839,7 @@
                                                             <span class="additional-fee-item-description">Total for payment:</span>
                                                         </div>
                                                         <div class="col-5 offset-2 text-right">
-                                                            <span class="additional-fee-item-amount font-weight-bold">14.703.577,20<span class="eur"></span></span>
+                                                            <span id="payment-amount" class="additional-fee-item-amount font-weight-bold">14.703.577,20<span class="eur"></span></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -711,8 +863,8 @@
                                                 Thank you for your order and best regards.
                                             </div>
                                         </div>
-
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>

@@ -1420,23 +1420,23 @@ table.overview td {
 }
 .eur:after {
   content: "EUR";
-  margin-left: 6px;
+  margin-left: 4px;
 }
 .chf:after {
   content: "CHF";
-  margin-left: 6px;
+  margin-left: 4px;
 }
 .rsd:after {
   content: "RSD";
-  margin-left: 6px;
+  margin-left: 4px;
 }
 .ron:after {
   content: "RON";
-  margin-left: 6px;
+  margin-left: 4px;
 }
 .gbp:after {
   content: "GBP";
-  margin-left: 6px;
+  margin-left: 4px;
 }
 .cost-entries-sum {
   background: #efefef;
