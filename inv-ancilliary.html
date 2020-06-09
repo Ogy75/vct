@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>My Companies</title>
+    <title>Ancilliary costs</title>
     <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/ti.css">
     <link rel="stylesheet" href="assets/css/mainEls.css">
@@ -168,7 +168,7 @@
     </div>
     <!-- Delete Cost End -->
 
-    <!-- Edit Cost Start -->
+    <!-- Edit Cost Travel Start -->
     <div class="modal fade" id="editCost" tabindex="-1" role="dialog" aria-labelledby="editCost" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content modal-style">
@@ -184,9 +184,9 @@
                             <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <label for="passenger-name-edit">passenger name *</label>
+                                    <label for="passenger-name-edit">name *</label>
                                     <!-- autocomplete / suggestion ovde -->
-                                    <input type="text" name="passenger-name-edit" value="Milan Milanovic">
+                                    <input type="text" name="passenger-name-edit" value="Milana Bogdanovic">
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <label for="travel-by-edit">travel by *</label>
@@ -202,7 +202,7 @@
                                 <div class="col-12 col-sm-6">
                                     <label for="travel-direction-edit">travel direction</label>
                                     <div class="select-height-fix d-flex align-items-center">
-                                        <select id="travel-direction" name="travel-direction-edit" class="w-100">
+                                        <select id="travel-direction-edit" name="travel-direction-edit" class="w-100">
                                             <option val="round trip" selected="">Round Trip</option>
                                             <option val="one way">One Way</option>
                                         </select>
@@ -227,7 +227,7 @@
                                     <input type="text" name="travel-return-date-edit" value="17.06.2020">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <label for="travel-cost-edit">travel cost *</label>
+                                    <label for="travel-cost-edit">cost *</label>
                                     <input type="text" name="travel-cost-edit" value="34.350,00">
                                 </div>
                                 <div class="col-12 col-sm-6">
@@ -257,7 +257,277 @@
             </div>
         </div>
     </div>
-    <!-- Edit Cost End -->
+    <!-- Edit Cost Travel End -->
+
+    <!-- Edit Cost Hotel Start -->
+    <div class="modal fade" id="editCostHotel" tabindex="-1" role="dialog" aria-labelledby="editCostHotel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="team-member-name">Edit Hotel Cost</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="text-left p-4">
+                            <p class="m-0 font-weight-bold">PLEASE NOTE:</p>
+                            <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="guest-name">name *</label>
+                                    <!-- autocomplete / suggestion ovde -->
+                                    <input type="text" name="guest-name" value="Milana Bogdanovic">
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <label for="hotel-check-in">check in *</label>
+                                    <input type="text" name="hotel-check-in" value="15.06.2020">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="hotel-check-out">check out *</label>
+                                    <input type="text" name="hotel-check-out" value="17.06.2020">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="hotel-name">hotel name *</label>
+                                    <input type="text" name="hotel-name" value="IBIS budget - Zurich Airport">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="hotel-city">city *</label>
+                                    <input type="text" name="hotel-city" value="Zurich">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="hotel-cost">cost *</label>
+                                    <input type="text" name="hotel-cost" value="180">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="hotel-cost-currency">currrency *</label>
+                                    <div class="select-height-fix d-flex align-items-center">
+                                        <select name="hotel-cost-currency" class="w-100">
+                                            <option>Select currency</option>
+                                            <option val="EUR">EUR</option>
+                                            <option selected val="CHF">CHF</option>
+                                            <option val="RSD">RSD</option>
+                                            <option val="RSD">RON</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Save</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Cost Hotel End -->
+
+    <!-- Edit Cost Local Trans Start -->
+    <div class="modal fade" id="editCostLocalTrans" tabindex="-1" role="dialog" aria-labelledby="editCostLocalTrans" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="team-member-name">Edit Local Transportation Cost</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="text-left p-4">
+                            <p class="m-0 font-weight-bold">PLEASE NOTE:</p>
+                            <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                            <div class="row">
+                                <div class="col-12 col-sm-6">
+                                    <label for="local-transport-cost-name">name *</label>
+                                    <input type="text" name="local-transports-name" value="Bojan Grozdanovic" />
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="local-transport-cost-ticket-qty">ticket qty *</label>
+                                    <div class="select-height-fix d-flex align-items-center">
+                                        <select name="local-transport-cost-ticket-qty" class="w-100">
+                                            <option>Select qty</option>
+                                            <option val="1">1</option>
+                                            <option selected val="2">2</option>
+                                            <option val="3">3</option>
+                                            <option val="4">4</option>
+                                            <option val="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="local-transport-cost">ticket cost (single) *</label>
+                                    <input type="text" name="local-transport-cost" value="24">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="local-transport-cost-currency">currrency *</label>
+                                    <div class="select-height-fix d-flex align-items-center">
+                                        <select name="local-transport-cost-currency" class="w-100">
+                                            <option>Select currency</option>
+                                            <option val="EUR">EUR</option>
+                                            <option selected val="CHF">CHF</option>
+                                            <option val="RSD">RSD</option>
+                                            <option val="RSD">RON</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="transportation-cost-description">description *</label>
+                                    <textarea name="transportation-cost-description" rows="4">ZVV Multi-journey ticket purchased.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Save</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Cost Local Trans End -->
+
+    <!-- Edit Cost Education Start -->
+    <div class="modal fade" id="editCostEducation" tabindex="-1" role="dialog" aria-labelledby="editCostEducation" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="team-member-name">Edit Education Cost</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="text-left p-4">
+                            <p class="m-0 font-weight-bold">PLEASE NOTE:</p>
+                            <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="education-cost-name">name *</label>
+                                    <input type="text" name="education-cost-name" value="Bogdan Mazic">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="education-cost">cost *</label>
+                                    <input type="text" name="education-cost" value="2.655,00">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="education-cost-currency">currrency *</label>
+                                    <div class="select-height-fix d-flex align-items-center">
+                                        <select name="education-cost-currency" class="w-100">
+                                            <option>Select currency</option>
+                                            <option selected val="EUR">EUR</option>
+                                            <option val="CHF">CHF</option>
+                                            <option val="RSD">RSD</option>
+                                            <option val="RSD">RON</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="education-cost-location">location *</label>
+                                    <div class="select-height-fix d-flex align-items-center">
+                                        <select name="education-cost-location" class="w-100">
+                                            <option>Select location</option>
+                                            <option val="abroad">Abroad</option>
+                                            <option val="local">Local</option>
+                                            <option selected val="online">Online</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="education-cost-description">description *</label>
+                                    <textarea name="education-cost-description" rows="4">C# Programming: Hands-On. Learning tree International.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Save</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Cost Education End -->
+
+    <!-- Edit Cost Additional Start -->
+    <div class="modal fade" id="editCostAdditional" tabindex="-1" role="dialog" aria-labelledby="editCostAdditional" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="team-member-name">Edit Additional Cost</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="text-left p-4">
+                            <p class="m-0 font-weight-bold">PLEASE NOTE:</p>
+                            <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="additional-cost-name">name *</label>
+                                    <input type="text" name="additional-cost-name" value="Dragan Pesic">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="additional-cost">cost *</label>
+                                    <input type="text" name="additional-cost" value="85,50">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="additional-cost-currency">currrency *</label>
+                                    <div class="select-height-fix d-flex align-items-center">
+                                        <select name="additional-cost-currency" class="w-100">
+                                            <option>Select currency</option>
+                                            <option val="EUR">EUR</option>
+                                            <option selected val="CHF">CHF</option>
+                                            <option val="RSD">RSD</option>
+                                            <option val="RSD">RON</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="additional-cost-description">description *</label>
+                                    <textarea name="additional-cost-description" rows="4">Was required to appear propmtly in Zug by the client.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Save</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit Cost Additional End -->
 
     <!--left nav-->
     <div class="vct-left-nav">
@@ -345,6 +615,7 @@
                                     <option val="hotel">Hotel</option>
                                     <option val="local transportation">Local transportation</option>
                                     <option val="education">Education</option>
+                                    <option val="additional">Additional</option>
                                 </select>
                             </div>
                         </div>
@@ -358,7 +629,7 @@
                                 <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
                                 <div class="row">
                                     <div class="col-12">
-                                        <label for="passenger-name">passenger name *</label>
+                                        <label for="passenger-name">name *</label>
                                         <!-- autocomplete / suggestion ovde -->
                                         <input type="text" name="passenger-name" />
                                     </div>
@@ -374,10 +645,11 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label id="travel-direction" for="travel-direction">travel direction</label>
+                                        <label for="travel-direction">travel direction *</label>
                                         <div class="select-height-fix d-flex align-items-center">
                                             <select id="travel-direction" name="travel-direction" class="w-100">
-                                                <option val="round trip" selected>Round Trip</option>
+                                                <option selected>Select direction</option>
+                                                <option val="round trip" >Round Trip</option>
                                                 <option val="one way">One Way</option>
                                             </select>
                                         </div>
@@ -394,14 +666,14 @@
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="travel-departure-date">departure date *</label>
-                                        <input type="text" name="travel-departure-date" />
+                                        <input type="text" name="travel-departure-date" disabled />
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="travel-return-date">return date *</label>
-                                        <input type="text" name="travel-return-date" />
+                                        <input type="text" name="travel-return-date" disabled />
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label for="travel-cost">travel cost *</label>
+                                        <label for="travel-cost">cost *</label>
                                         <input type="text" name="travel-cost" />
                                     </div>
                                     <div class="col-12 col-sm-6">
@@ -425,7 +697,7 @@
                                 <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
                                 <div class="row">
                                     <div class="col-12">
-                                        <label for="guest-name">guest name *</label>
+                                        <label for="guest-name">name *</label>
                                         <!-- autocomplete / suggestion ovde -->
                                         <input type="text" name="guest-name" />
                                     </div>
@@ -447,7 +719,7 @@
                                         <input type="text" name="hotel-city" />
                                     </div>
                                     <div class="col-12 col-sm-6">
-                                        <label for="travel-cost">travel cost *</label>
+                                        <label for="travel-cost">cost *</label>
                                         <input type="text" name="travel-cost" />
                                     </div>
                                     <div class="col-12 col-sm-6">
@@ -472,8 +744,25 @@
                                 <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
                                 <div class="row">
                                     <div class="col-12 col-sm-6">
-                                        <label for="travel-cost">ticket cost *</label>
-                                        <input type="text" name="travel-cost" />
+                                        <label for="local-transport-cost-name">name *</label>
+                                        <input type="text" name="local-transports-name" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="local-transport-cost-ticket-qty">ticket qty *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="local-transport-cost-ticket-qty" class="w-100">
+                                                <option selected>Select qty</option>
+                                                <option val="1">1</option>
+                                                <option val="2">2</option>
+                                                <option val="3">3</option>
+                                                <option val="4">4</option>
+                                                <option val="5">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                            <label for="local-transport-cost">ticket cost (single) *</label>
+                                            <input type="text" name="local-transports-cost" />
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="local-transport-cost-currency">currrency *</label>
@@ -494,15 +783,18 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- LOCAL TRANSPORT -->
+                        <!-- EDUCATION -->
                         <div class="col-12 cost-type" id="education-cost" style="display:none">
                             <div class="border-top py-3">
                                 <p class="m-0 font-weight-bold">PLEASE NOTE:</p>
                                 <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
                                 <div class="row">
+                                    <div class="col-12">
+                                        <label for="education-cost-name">name *</label>
+                                        <input type="text" name="education-cost-name">
+                                    </div>
                                     <div class="col-12 col-sm-6">
-                                        <label for="travel-cost">education cost *</label>
+                                        <label for="travel-cost">cost *</label>
                                         <input type="text" name="travel-cost" />
                                     </div>
                                     <div class="col-12 col-sm-6">
@@ -517,9 +809,59 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="education-cost-location">location *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="education-cost-location" class="w-100">
+                                                <option selected="">Select location</option>
+                                                <option val="abroad">Abroad</option>
+                                                <option val="local">Local</option>
+                                                <option val="online">Online</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="col-12">
                                         <label for="education-cost-description">description *</label>
                                         <textarea name="education-cost-description" rows="4"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ADDITIONAL -->
+                        <div class="col-12 cost-type" id="additional-cost" style="display:none">
+                            <div class="border-top py-3">
+                                <p class="m-0 font-weight-bold">PLEASE NOTE:</p>
+                                <p id="contract-term">This is a copy print defined by the contract regarding particular cost type. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="additional-cost-name">name *</label>
+                                        <input type="text" name="additional-cost-name">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="additional-cost">cost *</label>
+                                        <input type="text" name="additional-cost" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="additional-cost-currency">currrency *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="additional-cost-currency" class="w-100">
+                                                <option selected>Select currency</option>
+                                                <option val="EUR">EUR</option>
+                                                <option val="CHF">CHF</option>
+                                                <option val="RSD">RSD</option>
+                                                <option val="RSD">RON</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="additional-cost-type">additional cost type *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <input type="text" name="additional-cost-type" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="additional-cost-reason">describe reason *</label>
+                                        <textarea name="additional-cost-reason" rows="4"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -580,7 +922,7 @@
                                                     <span class="fas fa-chevron-down arrow"></span>
                                                     <div>
                                                         <label class="m-0">name</label>
-                                                        <span class="cost-data">Milan Milanovic</span>
+                                                        <span class="cost-data">Milana Bogdanovic</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -639,7 +981,7 @@
                                                     <span class="fas fa-chevron-down arrow"></span>
                                                     <div>
                                                         <label class="m-0">name</label>
-                                                        <span class="cost-data">Milan Milanovic</span>
+                                                        <span class="cost-data">Milana Bogdanovic</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -698,7 +1040,7 @@
                                                     <span class="fas fa-chevron-down arrow"></span>
                                                     <div>
                                                         <label class="m-0">name</label>
-                                                        <span class="cost-data">Bojana Grozdanovic</span>
+                                                        <span class="cost-data">Bojan Grozdanovic</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -708,11 +1050,11 @@
                                             </div>
                                             <div class="col-6 col-xl-3 mb-2 mb-xl-0">
                                                 <label class="m-0">ticket qty.</label>
-                                                <span class="cost-data">1</span>
+                                                <span class="cost-data">2</span>
                                             </div>
                                             <div class="col-6 col-xl-2 mb-2 mb-xl-0">
                                                 <label class="m-0">cost</label>
-                                                <span class="cost-data">24,00<span class="chf"></span></span>
+                                                <span class="cost-data">48,00<span class="chf"></span></span>
                                             </div>
                                         </div>
                                     </div>
@@ -721,7 +1063,7 @@
                                     <div class="col-12">
                                         <div class="table-wrapper mt-3">
                                             <label>Description</label>
-                                            <p>Ticket was used for 4 rides.</p>
+                                            <p>ZVV Multi-journey ticket purchase.</p>
                                         </div>
                                         <div class="mt-3">
                                             <button class="btn btn-highlight mr-2" data-toggle="modal" data-target="#editCostLocalTrans">edit cost</button>
@@ -767,6 +1109,48 @@
                                         </div>
                                         <div class="mt-3">
                                             <button class="btn btn-highlight mr-2" data-toggle="modal" data-target="#editCostAdditional">edit cost</button>
+                                            <button class="btn btn-danger" data-toggle="modal" data-target="#deleteCost">delete cost</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cost-item mt-2 px-3 border">
+                                <div class="row">
+                                    <div class="col-12 js_accordion pointer">
+                                        <div class="row py-2 d-flex align-items-center">
+                                            <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                <div class="history-entry d-flex justify-content-start align-items-center">
+                                                    <span class="fas fa-chevron-down arrow"></span>
+                                                    <div>
+                                                        <label class="m-0">name</label>
+                                                        <span class="cost-data">Bogdan Mazic</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                <label class="m-0">cost type</label>
+                                                <span class="education"><span class="fas fa-book-open mr-1"></span class="cost-data">education</span>
+                                            </div>
+                                            <div class="col-6 col-xl-3 mb-2 mb-xl-0">
+                                                <label class="m-0">location</label>
+                                                <span class="cost-data">online</span>
+                                            </div>
+                                            <div class="col-6 col-xl-2 mb-2 mb-xl-0">
+                                                <label class="m-0">cost</label>
+                                                <span class="cost-data">2.655,00<span class="eur"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data pb-3" style="display: none;">
+                                    <div class="col-12">
+                                        <div class="table-wrapper mt-3">
+                                            <label>Description</label>
+                                            <p rows="2">C# Programming: Hands-On. Learning tree International.</p>
+                                        </div>
+                                        <div class="mt-3">
+                                            <button class="btn btn-highlight mr-2" data-toggle="modal" data-target="#editCostEducation">edit cost</button>
                                             <button class="btn btn-danger" data-toggle="modal" data-target="#deleteCost">delete cost</button>
                                         </div>
                                     </div>
