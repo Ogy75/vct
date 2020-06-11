@@ -582,17 +582,24 @@ input[type=checkbox]{
 }
 
 // unstyled vacation Calendar overrides
-.fc-button-primary{
-    background-color: @highlightColor;
-    border-color:@highlightColor;
-    &:hover{
-        background-color: darken(@highlightColor, 10%);
-        border-color:darken(@highlightColor, 10%);
-    }
-    &:disabled{
-        background-color: lighten(@basetextColor, 60%);
-        border-color: lighten(@basetextColor, 60%);
-        color:darken(white, 50%);
+.fc-button{
+    padding: 1px 4px;
+    &.fc-button-primary{
+        background-color: @highlightColor;
+        border-color:@highlightColor;
+        .fc-icon{
+            font-size: 16px;
+            line-height: 12px;
+        }
+        &:hover{
+            background-color: darken(@highlightColor, 10%);
+            border-color:darken(@highlightColor, 10%);
+        }
+        &:disabled{
+            background-color: lighten(@basetextColor, 60%);
+            border-color: lighten(@basetextColor, 60%);
+            color:darken(white, 50%);
+        }
     }
 }
 .fc-toolbar {
@@ -642,6 +649,12 @@ label.for-files{
     }
     &.legend-sickleave{
         background: #FFF694;
+    }
+    &.legend-maternity{
+        background: #E8C7FF;
+    }
+    &.legend-sickleave30{
+        background: #E5FF94;
     }
     &.legend-vacation{
         background: #FAD0E2;
