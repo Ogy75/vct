@@ -228,7 +228,12 @@
                         <div class="d-flex justify-content-between align-items-center mb-4">
                             <div class="table-title">Employee Absences log</div>
                         </div>
-                        <div class="table-wrapper">
+                        <div class="position-relative">
+                            <input class="filter-members find-member" placeholder="Find Employee, date, type" type="text">
+                            <span class="fas fa-search search-icon"></span>
+                            <span class="reset-input far fa-times-circle" style="display:none"></span>
+                        </div>
+                        <div class="table-wrapper mt-3">
                             <table class="panel-table">
                                 <thead>
                                     <tr>
@@ -274,6 +279,12 @@
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="no-results-message justify-content-center align-items-center w-100">
+                            <div class="no-results h-100 p-5 text-center">
+                                <h4>No Results Match your Search Criteria</h4>
+                                <p>Please modify your query</p>
+                            </div>
                         </div>
                     </div>
                 </div>

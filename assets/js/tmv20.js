@@ -213,6 +213,35 @@ $(document).ready(function () {
         $('.no-results-message').show();
     });
 
+    // absences filter
+    $('.find-member').keyup(function () {
+        var filter = $(this).val(),
+            count = 0;
+        $('.panel-table tbody tr').each(function () {
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).hide();
+            } else {
+                $(this).show();
+                count++;
+            }
+        });
+        if (count > 0) {
+            $('.no-results-message').hide();
+            $('.panel-table thead').show();
+        } else {
+            $('.no-results-message').show();
+            $('.panel-table thead').hide();
+        }
+    });
+
+    //absence Clear&focus btn fn.
+    $('.reset-input').on('click', function () {
+        $('.find-project').val('').focus();
+        $('.reset-input').hide();
+        $('.panel-table tbody tr').show();
+        $('.panel-table thead').show();
+    });
+
     //Project search
     $('.find-project').keyup(function () {
         var filter = $(this).val(),
