@@ -86,6 +86,52 @@ body.modal-open .vct-content {
 .btn.btn-project-edit:hover {
   background: #a82b22;
 }
+.btn.btn-invoice {
+  display: inline-block;
+  background: #42423c;
+  color: white;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 14px;
+  padding: 4px;
+  text-align: left;
+  min-width: auto;
+  border: none;
+  border-radius: 4px;
+  padding-left: 8px !important;
+}
+.btn.btn-invoice.fixed {
+  padding: 4px 8px;
+}
+.btn.btn-invoice.selected {
+  background-color: #177397;
+}
+.btn.btn-invoice.selected:hover {
+  background-color: #177397;
+  color: white;
+}
+.btn.btn-invoice:hover {
+  background-color: #9d9d93;
+  color: white;
+}
+.btn.btn-invoice i {
+  color: white;
+  border-radius: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 2px;
+  margin-left: 6px;
+}
+.btn.btn-invoice i:hover {
+  color: #d8483e;
+}
+.btn.btn-invoice i.add {
+  color: white;
+}
+.btn.btn-invoice i.add:hover {
+  color: white;
+}
 .vct-top-nav {
   background: rgba(0, 0, 0, 0.7);
   border-bottom: none !important;
