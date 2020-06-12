@@ -51,13 +51,13 @@
                 month: 'numeric',
                 year: 'numeric'
             },
-            plugins: [ 'interaction', 'dayGrid' ],
+            plugins: ['interaction', 'dayGrid'],
             timeZone: 'local',
             locale: 'int',
             defaultView: 'dayGridWeek',
             header: {
-            left: 'title',
-            right: 'prev,next, today'
+                left: 'title',
+                right: 'prev,next, today'
             },
             editable: false,
             events: [
@@ -87,23 +87,23 @@
                 {
                     title: 'Milena Karajlic',
                     start: '2020-06-04',
-                    end:'2020-07-20',
+                    end: '2020-07-20',
                     color: '#E5FF94',
                 },
                 {
                     title: 'Dragana Hadzispasic',
                     start: '2020-06-01',
-                    end:'2020-12-01',
+                    end: '2020-12-01',
                     color: '#E8C7FF',
                 },
                 {
                     title: 'Predrag Brkic',
                     start: '2020-06-11',
-                    end:'2020-12-20',
+                    end: '2020-12-20',
                     color: '#F68D91',
                 },
             ],
-            weekends:false
+            weekends: false,
         });
 
         calendar.render();
@@ -121,6 +121,270 @@
     <div class="lds-dual-ring-bg">
         <div class="lds-dual-ring"></div>
     </div>
+
+    <!--PaidLeave modal start -->
+    <div class="modal fade" id="paidLeave" tabindex="-1" role="dialog" aria-labelledby="paidLeave" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg">
+                            </div>
+                            <div class="team-member-name">Marija Trsic</div>
+                        </div>
+                        <div class="p-4 text-left">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="primary-title">Edit Paid Leave</div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="sickleave-from">from</label>
+                                    <input type="text" name="sickleave-from" value="06.02.2019"/>
+                                </div>
+                                <div class="col-12 col-sm-6 mb-4">
+                                    <label for="sickleave-to">to</label>
+                                    <input type="text" name="sickleave-to" value="05.08.2020"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="py-4">
+                                        <button class="btn btn-highlight">Save</button>
+                                        <button class="btn btn-cancel ml-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PaidLeave modal End -->
+
+    <!--SickLeave modal start -->
+    <div class="modal fade" id="sickLeave" tabindex="-1" role="dialog" aria-labelledby="sickLeave" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg">
+                            </div>
+                            <div class="team-member-name">Milos Trpkovic</div>
+                        </div>
+                        <div class="p-4 text-left">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="primary-title">Edit Sickleave</div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="sickleave-from">from</label>
+                                    <input type="text" name="sickleave-from" value="01.05.2020"/>
+                                </div>
+                                <div class="col-12 col-sm-6 mb-4">
+                                    <label for="sickleave-to">to</label>
+                                    <input type="text" name="sickleave-to" value="03.06.2020"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="py-4">
+                                        <button class="btn btn-highlight">Save</button>
+                                        <button class="btn btn-cancel ml-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SickLeave modal End -->
+
+    <!--SickLeave 30+ modal start -->
+    <div class="modal fade" id="sickLeave-30" tabindex="-1" role="dialog" aria-labelledby="sickLeave-30" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg">
+                            </div>
+                            <div class="team-member-name">Dragana Bozic</div>
+                        </div>
+                        <div class="p-4 text-left">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="primary-title">Edit Sickleave 30+ days</div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="sickleave-from">from</label>
+                                    <input type="text" name="sickleave-from" value="01.05.2020"/>
+                                </div>
+                                <div class="col-12 col-sm-6 mb-4">
+                                    <label for="sickleave-to">to</label>
+                                    <input type="text" name="sickleave-to" value="01.06.2020"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="py-4">
+                                        <button class="btn btn-highlight">Save</button>
+                                        <button class="btn btn-cancel ml-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SickLeave30+ modal End -->
+
+    <!--daysOff modal start -->
+    <div class="modal fade" id="daysOff" tabindex="-1" role="dialog" aria-labelledby="daysOff" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg">
+                            </div>
+                            <div class="team-member-name">Mitar Miric</div>
+                        </div>
+                        <div class="p-4 text-left">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="primary-title">Edit Days Off</div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="daysOff-type">from</label>
+                                    <div class="select-height-fix d-flex align-items-center">
+                                        <select id="daysOff-type" class="w-100">
+                                            <option value="slava">Slava - 1 day</option>
+                                            <option value="wedding">Wedding - 1 day</option>
+                                            <option value="moving-city">Moving (same city) - 1 day</option>
+                                            <option value="moving-changing">Moving (changing city) - 2 days</option>
+                                            <option value="birth">Child Birth - 2 days</option>
+                                            <option value="illness">Family member illness - 5 days</option>
+                                            <option value="death">Family member death case - 5 days</option>
+                                            <option value="other" id="other">Other - flexible period</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="sickleave-from">from</label>
+                                    <input type="text" name="sickleave-from" value="01.05.2020"/>
+                                </div>
+                                <div class="col-12 col-sm-6 mb-4">
+                                    <label for="sickleave-to">to</label>
+                                    <input type="text" name="sickleave-to" value="03.06.2020"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="py-4">
+                                        <button class="btn btn-highlight">Save</button>
+                                        <button class="btn btn-cancel ml-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- daysOff 30+ modal End -->
+
+    <!--vacation modal start -->
+    <div class="modal fade" id="vacation" tabindex="-1" role="dialog" aria-labelledby="vacation" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg">
+                            </div>
+                            <div class="team-member-name">Petar Petrovic</div>
+                        </div>
+                        <div class="p-4 text-left">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="primary-title">Edit Vacation</div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="sickleave-from">from</label>
+                                    <input type="text" name="sickleave-from" value="02.06.2020"/>
+                                </div>
+                                <div class="col-12 col-sm-6 mb-4">
+                                    <label for="sickleave-to">to</label>
+                                    <input type="text" name="sickleave-to" value="04.06.2020"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="py-4">
+                                        <button class="btn btn-highlight">Save</button>
+                                        <button class="btn btn-cancel ml-2" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- vacation modal End -->
+
+    <!-- Delete Absence Dialog Start -->
+    <div class="modal fade" id="deleteAbsence" tabindex="-1" role="dialog" aria-labelledby="deleteAbsence" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <div class="team-member-name">Are you sure you want to delete Employee Absence log entry?</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-cancel m-1">yes</button>
+                            <button class="btn btn-highlight m-1" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Delete Absence Dialog End -->
 
     <!--left nav-->
     <div class="vct-left-nav">
@@ -150,11 +414,7 @@
                         <li><a href="service-data20.html">Service Data</a></li>
                     </ul>
                 </li>
-                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-chart-pie mr-3"></i>Overviews</a>
-                    <ul class="vct-nav-level1">
-                        <li><a class="selected" href="absences20.html">Absences</a></li>
-                    </ul>
-                </li>
+                <li><a href="absences20.html" class="selected"><i class="nav-icon far fa-calendar-minus mr-3"></i>Absences</a></li>
                 <li><a href="inv-companies.html"><i class="nav-icon fas fa-building mr-3"></i>My Companies</a></li>
                 <li><a href="inv-contracts.html"><i class="nav-icon fas fa-signature mr-3"></i>Contracts</a></li>
                 <li><a href="inv-invoicing.html"><i class="nav-icon fas fa-receipt mr-3"></i>Invoicing</a></li>
@@ -186,12 +446,642 @@
     <div class="vct-content">
         <div class="container position-relative">
             <div class="row">
-                <div class="col-12 d-flex align-items-center justify-content-start">
-                    <span class="primary-title my-3">Employee Absences</span>
+                <div class="col-12">
+                    <div class="vct-project-person-switch d-flex justify-content-center mb-4">
+                        <button class="tab-button selected" id="tab-projects">MANAGE ABSENCES</button>
+                        <button class="tab-button" id="tab-employees">ABSENCES OVERVIEW</button>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-xl-6 mt-3">
+
+
+
+                <div class="col-12 vct-project-tab mt-4">
+                    <div class="row">
+                        <div class="col-12 col-xl-6">
+                            <div class="panel-container">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="table-title">Add absence</div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <label for="absence-type" class="m-0">absence type *</label>
+                                                <div class="select-height-fix d-flex align-items-center">
+                                                    <select id="absence-type-option" name="absence-type" class="w-100">
+                                                        <option val="Sickleave" selected>Sickleave</option>
+                                                        <option val="Sickleave 30+ days">Sickleave 30+ days</option>
+                                                        <option val="Travel">Travel</option>
+                                                        <option val="Slava">Slava day</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2 absence-type" id="sickleave">
+                                            <div class="col-12">
+                                                <!-- AD autocomplete ovde -->
+                                                <label for="absent-employee">Employee *</label>
+                                                <input type="text" name="absent-employee" id="absent-employee" />
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label for="sickleave-from">from *</label>
+                                                <input type="text" name="sickleave-from" id="absent-from" />
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label for="sickleave-to">to</label>
+                                                <input type="text" name="sickleave-to" id="absent-to" />
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2 absence-type" id="sickleave30" style="display: none;">
+                                            <div class="col-12">
+                                                <!-- AD autocomplete ovde -->
+                                                <label for="absent-employee">Employee *</label>
+                                                <input type="text" name="absent-employee" />
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label for="sickleave30-from">from *</label>
+                                                <input type="text" name="sickleave-from" />
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label for="sickleave30-to">to</label>
+                                                <input type="text" name="sickleave30-to" />
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2 absence-type" id="travel" style="display: none;">
+                                            <div class="col-12">
+                                                <!-- AD autocomplete ovde -->
+                                                <label for="absent-employee">Employee *</label>
+                                                <input type="text" name="absent-employee" />
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label for="travel-from">departure travel period *</label>
+                                                <input type="text" name="sickleave-from" />
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <label for="travel-to">return travel period *</label>
+                                                <input type="text" name="sickleave30-to" />
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2 absence-type" id="slava" style="display: none;">
+                                            <div class="col-12">
+                                                <!-- AD autocomplete ovde -->
+                                                <label for="absent-employee">Employee *</label>
+                                                <input type="text" name="absent-employee" />
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="slava">Select Slava day *</label>
+                                                <div class="select-height-fix d-flex align-items-center">
+                                                    <select class="w-100">
+                                                        <option value="0">Not selected</option>
+                                                        <option value="1">Spasovdan (28.05.2020)</option>
+                                                        <option value="2">Lazareva subota (11.04.2020)</option>
+                                                        <option value="3">Sveti Ignjatije Bogonosac - Ignjatijevdan (02.01.2020)</option>
+                                                        <option value="4">Sveti Arsenije Sremac (10.11.2020)</option>
+                                                        <option value="5">Sveti Dimitrije - Mitrovdan (08.11.2020)</option>
+                                                        <option value="6">Sveti apostol Jakov (04.11.2020)</option>
+                                                        <option value="7">Sveti Luka - Lučindan (31.10.2020)</option>
+                                                        <option value="8">Prepodobna Paraskeva - Sveta Petka (Petkovača) (27.10.2020)</option>
+                                                        <option value="9">Sveti Sergije i Vakho - Srđevdan (20.10.2020)</option>
+                                                        <option value="10">Sveti apostol Toma - Tomindan (19.10.2020)</option>
+                                                        <option value="11">Avramije Zatvornik (11.11.2020)</option>
+                                                        <option value="12">Pokrov presvete Bogorodice - Pokrovica (14.10.2020)</option>
+                                                        <option value="13">Sveti Jovan Bogoslov (09.10.2020)</option>
+                                                        <option value="14">Sveti Jevstatije (03.10.2020)</option>
+                                                        <option value="15">Sveta mučenica Sofija i njene tri kćeri - Vera (30.09.2020)</option>
+                                                        <option value="16">Krstovdan (27.09.2020)</option>
+                                                        <option value="17">Sveti Joakim i Ana (22.09.2020)</option>
+                                                        <option value="18">Rođenje Presvete Bogorodice - Mala Gospojina (21.09.2020)</option>
+                                                        <option value="19">Prepodobni Simeon Stolpnik (14.09.2020)</option>
+                                                        <option value="20">Kirijak Otselnik - Miholjdan (12.10.2020)</option>
+                                                        <option value="21">Sveti Kozma i Damjan - Vračevi (14.11.2020)</option>
+                                                        <option value="22">Sveti Georgije - Đurđic (16.11.2020)</option>
+                                                        <option value="23">Sabor Svetog arhangela Mihaila - Aranđelovdan (21.11.2020)</option>
+                                                        <option value="24">Prepodobni Teodor Sikeot (05.05.2020)</option>
+                                                        <option value="25">Sveti Evtihije Carigradski (19.04.2020)</option>
+                                                        <option value="26">Nema Slavu</option>
+                                                        <option value="27">Sveti Spiridon Čudotvorac (25.12.2020)</option>
+                                                        <option value="28">Sveti Nikolaj Čudotvorac - Nikoljdan (19.12.2020)</option>
+                                                        <option value="29">Sveti Sava Osvećeni (18.12.2020)</option>
+                                                        <option value="30">Sveta Varvara (17.12.2020)</option>
+                                                        <option value="31">Sveti apostol Andrej Prvozvani - Andrijevdan (13.12.2020)</option>
+                                                        <option value="32">Sveti Alimpije Stolpnik - Alempijevdan (09.12.2020)</option>
+                                                        <option value="33">Sveti Kliment (08.12.2020)</option>
+                                                        <option value="34">Sveta Katarina (07.12.2020)</option>
+                                                        <option value="35">Vavedenje presvete Bogorodice (Uvođenje Presvete Bogorodice u hram) - Vavedenje (04.12.2020)</option>
+                                                        <option value="36">Sveti apostol Matej (29.11.2020)</option>
+                                                        <option value="37">Sveti apostol Filip (27.11.2020)</option>
+                                                        <option value="38">Sveti Jovan Zlatousti (26.11.2020)</option>
+                                                        <option value="39">Sveti Jovan Milostivi (25.11.2020)</option>
+                                                        <option value="40">Sveti Stefan Dečanski - Mratindan (24.11.2020)</option>
+                                                        <option value="41">Prenos mostiju svetog Aleksandra Nevskog - Sveti Aleksandar Nevski (12.09.2020)</option>
+                                                        <option value="42">Usekovanje glave Sv. (11.09.2020)</option>
+                                                        <option value="43">Sveti mučenici Adrijan i Natalija (08.09.2020)</option>
+                                                        <option value="44">Sveti Agatonik - Arlijevdan (04.09.2020)</option>
+                                                        <option value="45">Sveti Vasilije Ostroski (12.05.2020)</option>
+                                                        <option value="46">Sveti Marko - Markovdan (08.05.2020)</option>
+                                                        <option value="47">Sveti Georgije - Đurđevdan (06.05.2020)</option>
+                                                        <option value="48">Blagovesti (07.04.2020)</option>
+                                                        <option value="49">Sveti Aleksije Čovek Bozji (30.03.2020)</option>
+                                                        <option value="50">Svetih četrdeset mučenika - Mladenci (22.03.2020)</option>
+                                                        <option value="51">Sveti Teodor Tiron (02.03.2020)</option>
+                                                        <option value="52">Prepodobni Avksentije - Ćirilovdan (27.02.2020)</option>
+                                                        <option value="53">Sveti Haralampije (23.02.2020)</option>
+                                                        <option value="54">Sveti Simeon Bogoprimac (16.02.2020)</option>
+                                                        <option value="55">Sveti mučenik Trifun - Trifundan (14.02.2020)</option>
+                                                        <option value="56">Sveta tri jerarha (12.02.2020)</option>
+                                                        <option value="57">Sveti Apostol Petar - Časne verige (29.01.2020)</option>
+                                                        <option value="58">Sveti Sava - Savindan (27.01.2020)</option>
+                                                        <option value="59">Sveti Jovan Krstitelj - Jovanjdan (20.01.2020)</option>
+                                                        <option value="60">Sveti Vasilije Veliki - Vasiljevdan (14.01.2020)</option>
+                                                        <option value="61">Sveti Arhiđakon Stefan - Stevanjdan (09.01.2020)</option>
+                                                        <option value="62">Sveti Jeremija - Jeremijin dan (14.05.2020)</option>
+                                                        <option value="63">Sveti Vrači Kozma i Damjan (14.07.2020)</option>
+                                                        <option value="64">Sveti Nikolaj Mirlikijski (22.05.2020)</option>
+                                                        <option value="65">Sveti car Konstantin i carica Jelena (03.06.2020)</option>
+                                                        <option value="66">Uspenije Presvete Bogorodice - Velika Gospojina (28.08.2020)</option>
+                                                        <option value="67">Preobrazenje Gospodnje (19.08.2020)</option>
+                                                        <option value="68">Prenos mostiju svetog Stefana - Sveti Stefan Letnji (15.08.2020)</option>
+                                                        <option value="69">Sveti mučenici Makaveji (14.08.2020)</option>
+                                                        <option value="70">Prepodobna mati Angelina Srpska (12.08.2020)</option>
+                                                        <option value="71">Sveti Pantelejmon - Sveti Pantelija (09.08.2020)</option>
+                                                        <option value="72">Prepodobnomučenica Paraskeva - Trnova Petka (08.08.2020)</option>
+                                                        <option value="73">Sveta Marija Magdalina - Blaga Marija (04.08.2020)</option>
+                                                        <option value="74">Sveti prorok Ilija - Ilindan (02.08.2020)</option>
+                                                        <option value="75">Sveta velikomučenica Marina - Ognjena Marija (30.07.2020)</option>
+                                                        <option value="76">Sveti Arhanđel Gavrilo (26.07.2020)</option>
+                                                        <option value="77">Sveti Prokopije (21.07.2020)</option>
+                                                        <option value="78">Sveti Apostoli Petar i Pavle - Petrovdan (12.07.2020)</option>
+                                                        <option value="79">Rođenje Svetog Jovana - Ivanjdan (07.07.2020)</option>
+                                                        <option value="80">Sveti knez Lazar - Vidovdan (28.06.2020)</option>
+                                                        <option value="81">Sveti Jelisej (27.06.2020)</option>
+                                                        <option value="82">Sveti apostoli Vartolomej i Varnava - Sveti apostol Vartolomej (24.06.2020)</option>
+                                                        <option value="83">Sveti Ćirilo i Metodije (24.05.2020)</option>
+                                                        <option value="84">Sveti Kralj Milutin (12.11.2020)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                            <div>
+                                                <h6><span class="fas fa-info-circle text-info"></span> Absence type: <span id="absence-type">Sickleave</span></h6>
+                                                <p id="absence-description">When adding sickleave bla bla bla, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
+                                        <button class="btn btn-highlight mt-4" id="add-absence">ADD</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-6 mt-3 mt-xl-0">
+                            <div class="panel-container">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="table-title">Employee Absences log</div>
+                                    <select>
+                                        <option>last week</option>
+                                        <option>last 2 weeks</option>
+                                        <option>last month</option>
+                                        <option>last 3 months</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative">
+                                    <input class="filter-members find-member" placeholder="Filter list by name, date, type" type="text">
+                                    <span class="fas fa-search search-icon"></span>
+                                    <span class="reset-input far fa-times-circle" style="display:none"></span>
+                                </div>
+                                <div class="table-wrapper mt-3">
+                                    <table class="panel-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Employee</th>
+                                                <th>Employee location</th>
+                                                <th>Absent from</th>
+                                                <th>Absent until</th>
+                                                <th colspan="2">Absence type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="absences-log">
+                                            <tr>
+                                                <td>Marija Trsic</td>
+                                                <td>Nis</td>
+                                                <td>06.02.2019</td>
+                                                <td>05.08.2020</td>
+                                                <td>paid leave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer" data-toggle="modal" data-target="#paidLeave">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Milos Trpkovic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>03.06.2020</td>
+                                                <td>sickleave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer" data-toggle="modal" data-target="#sickLeave">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dragana Bozic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>sickleave 30+</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer" data-toggle="modal" data-target="#sickLeave-30">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mitar Miric</td>
+                                                <td>Nis</td>
+                                                <td>01.06.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>days off</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer" data-toggle="modal" data-target="#daysOff">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Petar Petrovic</td>
+                                                <td>Kragujevac</td>
+                                                <td>02.06.2020</td>
+                                                <td>04.06.2020</td>
+                                                <td>vacation</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer" data-toggle="modal" data-target="#vacation">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marija Trsic</td>
+                                                <td>Nis</td>
+                                                <td>06.02.2019</td>
+                                                <td>05.08.2020</td>
+                                                <td>paid leave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Milos Trpkovic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>03.06.2020</td>
+                                                <td>sickleave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mitar Miric</td>
+                                                <td>Nis</td>
+                                                <td>01.06.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>days off</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Petar Petrovic</td>
+                                                <td>Kragujevac</td>
+                                                <td>02.06.2020</td>
+                                                <td>04.06.2020</td>
+                                                <td>vacation</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marija Trsic</td>
+                                                <td>Nis</td>
+                                                <td>06.02.2019</td>
+                                                <td>05.08.2020</td>
+                                                <td>paid leave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Milos Trpkovic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>03.06.2020</td>
+                                                <td>sickleave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mitar Miric</td>
+                                                <td>Nis</td>
+                                                <td>01.06.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>days off</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Petar Petrovic</td>
+                                                <td>Kragujevac</td>
+                                                <td>02.06.2020</td>
+                                                <td>04.06.2020</td>
+                                                <td>vacation</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marija Trsic</td>
+                                                <td>Nis</td>
+                                                <td>06.02.2019</td>
+                                                <td>05.08.2020</td>
+                                                <td>paid leave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Milos Trpkovic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>03.06.2020</td>
+                                                <td>sickleave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mitar Miric</td>
+                                                <td>Nis</td>
+                                                <td>01.06.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>days off</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Petar Petrovic</td>
+                                                <td>Kragujevac</td>
+                                                <td>02.06.2020</td>
+                                                <td>04.06.2020</td>
+                                                <td>vacation</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marija Trsic</td>
+                                                <td>Nis</td>
+                                                <td>06.02.2019</td>
+                                                <td>05.08.2020</td>
+                                                <td>paid leave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Milos Trpkovic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>03.06.2020</td>
+                                                <td>sickleave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mitar Miric</td>
+                                                <td>Nis</td>
+                                                <td>01.06.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>days off</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Petar Petrovic</td>
+                                                <td>Kragujevac</td>
+                                                <td>02.06.2020</td>
+                                                <td>04.06.2020</td>
+                                                <td>vacation</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marija Trsic</td>
+                                                <td>Nis</td>
+                                                <td>06.02.2019</td>
+                                                <td>05.08.2020</td>
+                                                <td>paid leave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Milos Trpkovic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>03.06.2020</td>
+                                                <td>sickleave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mitar Miric</td>
+                                                <td>Nis</td>
+                                                <td>01.06.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>days off</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Petar Petrovic</td>
+                                                <td>Kragujevac</td>
+                                                <td>02.06.2020</td>
+                                                <td>04.06.2020</td>
+                                                <td>vacation</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marija Trsic</td>
+                                                <td>Nis</td>
+                                                <td>06.02.2019</td>
+                                                <td>05.08.2020</td>
+                                                <td>paid leave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Milos Trpkovic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>03.06.2020</td>
+                                                <td>sickleave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mitar Miric</td>
+                                                <td>Nis</td>
+                                                <td>01.06.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>days off</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Petar Petrovic</td>
+                                                <td>Kragujevac</td>
+                                                <td>02.06.2020</td>
+                                                <td>04.06.2020</td>
+                                                <td>vacation</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marija Trsic</td>
+                                                <td>Nis</td>
+                                                <td>06.02.2019</td>
+                                                <td>05.08.2020</td>
+                                                <td>paid leave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Milos Trpkovic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>03.06.2020</td>
+                                                <td>sickleave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mitar Miric</td>
+                                                <td>Nis</td>
+                                                <td>01.06.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>days off</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Petar Petrovic</td>
+                                                <td>Kragujevac</td>
+                                                <td>02.06.2020</td>
+                                                <td>04.06.2020</td>
+                                                <td>vacation</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marija Trsic</td>
+                                                <td>Nis</td>
+                                                <td>06.02.2019</td>
+                                                <td>05.08.2020</td>
+                                                <td>paid leave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Milos Trpkovic</td>
+                                                <td>Belgrade</td>
+                                                <td>01.05.2020</td>
+                                                <td>03.06.2020</td>
+                                                <td>sickleave</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mitar Miric</td>
+                                                <td>Nis</td>
+                                                <td>01.06.2020</td>
+                                                <td>01.06.2020</td>
+                                                <td>days off</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Petar Petrovic</td>
+                                                <td>Kragujevac</td>
+                                                <td>02.06.2020</td>
+                                                <td>04.06.2020</td>
+                                                <td>vacation</td>
+                                                <td>
+                                                    <span class="badge badge-success pointer">edit</span>
+                                                    <span class="badge badge-danger pointer ml-1" data-toggle="modal" data-target="#deleteAbsence">delete</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="no-results-message justify-content-center align-items-center w-100">
+                                    <div class="no-results h-100 p-5 text-center">
+                                        <h4>No Results Match your Search Criteria</h4>
+                                        <p>Please modify your query</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="col-12 vct-employees-tab mt-4 d-none">
                     <div class="panel-container">
                         <div class="row">
                             <div class="col-12 d-flex justify-content-between align-items-center mb-4">
@@ -219,79 +1109,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
-                <div class="col-12 col-xl-6 mt-3">
-                    <div class="panel-container">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <div class="table-title">Employee Absences log</div>
-                        </div>
-                        <div class="position-relative">
-                            <input class="filter-members find-member" placeholder="Find Employee, date, type" type="text">
-                            <span class="fas fa-search search-icon"></span>
-                            <span class="reset-input far fa-times-circle" style="display:none"></span>
-                        </div>
-                        <div class="table-wrapper mt-3">
-                            <table class="panel-table">
-                                <thead>
-                                    <tr>
-                                        <th>Employee</th>
-                                        <th>Employee location</th>
-                                        <th>Absent from</th>
-                                        <th>Absent until</th>
-                                        <th colspan="2">Absence type</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Marija Trsic</td>
-                                        <td>Nis</td>
-                                        <td>06.02.2019</td>
-                                        <td>05.08.2020</td>
-                                        <td>paid leave</td>
-                                        <td>
-                                            <span class="badge badge-success">edit</span>
-                                            <span class="badge badge-danger">delete</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Milos Trpkovic</td>
-                                        <td>Belgrade</td>
-                                        <td>31.05.2020</td>
-                                        <td>03.06.2020</td>
-                                        <td>sickleave</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mitar Miric</td>
-                                        <td>Nis</td>
-                                        <td>01.06.2020</td>
-                                        <td>01.06.2020</td>
-                                        <td>days off</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Petar Petrovic</td>
-                                        <td>Kragujevac</td>
-                                        <td>02.06.2020</td>
-                                        <td>04.06.2020</td>
-                                        <td>vacation</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="no-results-message justify-content-center align-items-center w-100">
-                            <div class="no-results h-100 p-5 text-center">
-                                <h4>No Results Match your Search Criteria</h4>
-                                <p>Please modify your query</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-
     </div>
 
 

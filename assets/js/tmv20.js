@@ -761,6 +761,7 @@ $(document).ready(function () {
     var output = (day < 10 ? '0' : '') + day + '.' + (month < 10 ? '0' : '') + month + '.' + d.getFullYear();
     $('input[name="contract-status-from"]').val(output);
     $('#todays-date').text(output);
+    $('#absent-from').attr('value', output);
 
 
     //CC select
@@ -1048,4 +1049,48 @@ $(document).ready(function () {
         $('#total-vat-amount').text(vatAmount).append('<span class="eur"></span>');
         $('#payment-amount').text(vatAmount + totalbeforeTax).append('<span class="eur"></span>');
     });
+
+
+    //ABSENCE TYPE SELECT
+
+    $('#absence-type-option').on('change', function () {
+        var val = $(this).find("option:selected").attr('val');
+        switch (val) {
+            case "Sickleave":
+                $('.absence-type').hide();
+                $('#sickleave').show();
+                $('#absence-type').text(val);
+                $('#absence-description').text('When adding sickleave bla bla bla, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+                break;
+            case "Sickleave 30+ days":
+                $('.absence-type').hide();
+                $('#sickleave30').show();
+                $('#absence-type').text(val);
+                $('#absence-description').text('When adding sickleave 30+ days bla bla bla, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Officia deserunt mollit anim id est laborum.');
+                break;
+            case "Travel":
+                $('.absence-type').hide();
+                $('#travel').show();
+                $('#absence-type').text(val);
+                $('#absence-description').text('When adding travel period bla bla bla, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Officia deserunt mollit anim id est laborum. , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.');
+                break;
+            case "Slava":
+                $('.absence-type').hide();
+                $('#slava').show();
+                $('#absence-type').text(val);
+                $('#absence-description').text('When adding Slava day bla bla bla, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Officia deserunt mollit anim id est laborum. , quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.');
+                break;
+        }
+    });
+
+    //ADD ABSENCE
+    $('#add-absence').on('click', function(){
+        var employee = $('#absent-employee').val();
+        var from = $('#absent-from').val();
+        var to = $('#absent-to').val();
+        var type = $('#absence-type-option').find("option:selected").attr('val');
+        console.log('HA HA');
+        $('#absences-log').prepend('<tr><td>' + employee + '</td>' + '<td>' + 'Belgrade' + '</td>' + '<td>' + from + '</td>' + '<td>' + to + '</td>' + '<td>' + type + '</td>' + '<td><span class="badge badge-success">edit</span><span class="badge badge-danger ml-1">delete</span></td>' + '</tr>');
+    });
+    
 });
