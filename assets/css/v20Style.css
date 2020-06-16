@@ -585,7 +585,7 @@ input:disabled {
 }
 .vct-content .team-name-add:before {
   content: "\f067";
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   margin-right: 6px;
 }
 .vct-content .no-team {
@@ -1409,21 +1409,21 @@ table.overview td {
   border-radius: 2px;
 }
 .up:before {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: bold;
   content: "\f062";
   color: #1f9c26;
   margin-right: 4px;
 }
 .down:before {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: bold;
   content: "\f063";
   color: #d8483e;
   margin-right: 4px;
 }
 .no-change:before {
-  font-family: 'Font Awesome 5 Free';
+  font-family: "Font Awesome 5 Free";
   font-weight: bold;
   content: "\f04d";
   color: #dadad6;
@@ -1463,6 +1463,14 @@ table.overview td {
 }
 .invoice-preview-wrapper #invoice-title {
   border-bottom: 1px solid #42423c;
+}
+.invoice-preview-wrapper .invoice-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+.invoice-preview-wrapper .panel-table th,
+.invoice-preview-wrapper .panel-table td {
+  padding: 0 !important;
 }
 .eur:after {
   content: "EUR";

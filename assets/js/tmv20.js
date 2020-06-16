@@ -760,7 +760,7 @@ $(document).ready(function () {
     var day = d.getDate();
     var output = (day < 10 ? '0' : '') + day + '.' + (month < 10 ? '0' : '') + month + '.' + d.getFullYear();
     $('input[name="contract-status-from"]').val(output);
-    $('#todays-date').text(output);
+    //$('#todays-date').text(output);
     $('#absent-from').attr('value', output);
 
 

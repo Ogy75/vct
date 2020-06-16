@@ -1501,6 +1501,10 @@ table.overview td {
 .invoice-preview-wrapper #invoice-title {
   border-bottom: 1px solid #42423c;
 }
+.invoice-preview-wrapper .invoice-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+}
 .eur:after {
   content: "EUR";
   margin-left: 4px;
