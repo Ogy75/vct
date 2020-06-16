@@ -1479,6 +1479,7 @@ table.overview td {
   min-height: 840px;
   height: 100%;
   overflow: auto;
+  font-size: 98% !important;
 }
 .invoice-preview-wrapper .invoice-preview {
   width: 100%;
@@ -1504,6 +1505,10 @@ table.overview td {
 .invoice-preview-wrapper .invoice-subtitle {
   font-size: 14px;
   font-weight: 600;
+}
+.invoice-preview-wrapper .panel-table th,
+.invoice-preview-wrapper .panel-table td {
+  padding: 0 !important;
 }
 .eur:after {
   content: "EUR";
