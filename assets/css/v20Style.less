@@ -76,7 +76,7 @@ body {
   }
   &.btn-invoice {
     display: inline-block;
-    background: @basetextColor;
+    background: lighten(@basetextColor, 10%);
     color: white;
     font-size: 12px;
     text-transform: none;
@@ -119,6 +119,12 @@ body {
         }
       }
     }
+  }
+  &.btn-secondary{
+      background: lighten(@basetextColor, 25%) !important;
+      &:hover{
+        background: lighten(@basetextColor, 15%) !important;
+      }
   }
 }
 .vct-top-nav {
@@ -971,7 +977,7 @@ input:checked + .slider:before {
     background: @warningColor;
   }
   &.badge-secondary {
-    background: @basecolorLighter;
+    background: lighten(@basetextColor, 10%);
   }
   &.badge-warning {
     background: @progressColor;

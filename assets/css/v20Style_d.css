@@ -88,7 +88,7 @@ body.modal-open .vct-content {
 }
 .btn.btn-invoice {
   display: inline-block;
-  background: #42423c;
+  background: #5d5d54;
   color: white;
   font-size: 12px;
   text-transform: none;
@@ -131,6 +131,13 @@ body.modal-open .vct-content {
 }
 .btn.btn-invoice i.add:hover {
   color: white;
+}
+.btn.btn-secondary {
+  background: #5d5d54 !important;
+  border: #5d5d54;
+}
+.btn.btn-secondary:hover {
+  background: #6a6a60 !important;
 }
 .vct-top-nav {
   background: rgba(0, 0, 0, 0.7);
@@ -958,7 +965,7 @@ input:checked + .slider:before {
   color: white;
 }
 .badge.badge-secondary {
-  background: #696964;
+  background: #5d5d54;
 }
 .badge.badge-warning {
   background: #ffc400;

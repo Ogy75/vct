@@ -92,7 +92,7 @@ body{
     }
     &.btn-invoice{ 
       display:inline-block;
-      background: @basetextColor;
+      background: lighten(@basetextColor, 10%);
       color: white;
       font-size: 12px;
       text-transform: none;
@@ -136,6 +136,13 @@ body{
         }
       }
     }
+    &.btn-secondary{
+      background: lighten(@basetextColor, 10%) !important;
+      border:lighten(@basetextColor, 10%);
+      &:hover{
+        background: lighten(@basetextColor, 15%) !important;
+      }
+  }
 }
 .vct-top-nav{
     background: fade(black,70%);
@@ -982,8 +989,8 @@ transform: translateX(12px);
         background: @warningColor;
         color:white;
     }
-    &.badge-secondary{
-        background: @basecolorLighter;
+    &.badge-secondary {
+      background: lighten(@basetextColor, 10%);
     }
     &.badge-warning{
         background:@progressColor;
