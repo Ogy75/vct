@@ -220,17 +220,21 @@ $(document).ready(function () {
         $('.panel-table tbody tr').each(function () {
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
                 $(this).hide();
+                $('.panel-table tfoot').hide();
             } else {
                 $(this).show();
                 count++;
+                $('.panel-table tfoot').show();
             }
         });
         if (count > 0) {
             $('.no-results-message').hide();
             $('.panel-table thead').show();
+            //$('.panel-table tfoot').show();
         } else {
             $('.no-results-message').show();
             $('.panel-table thead').hide();
+            //$('.panel-table tfoot').hide();
         }
     });
 

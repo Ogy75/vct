@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Team Time Log</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap431/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/ti.css">
+    <link rel="stylesheet" href="assets/css/mainEls.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/fonts/solid.css">
+    <link rel="stylesheet" id="colorMode" href="assets/css/v20Style.css">
+    <!-- <link rel="stylesheet" href="assets/vendor/autocomplete/css/easy-autocomplete.css"> -->
+    <!-- <link rel="stylesheet" href="assets/vendor/niceselect/css/nice-select.css"> -->
+    <!-- <link rel="stylesheet" href="assets/vendor/datepicker/css/datepicker.css"> -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fav-icn//apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fav-icn//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fav-icn//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fav-icn//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fav-icn//apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fav-icn//apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fav-icn//apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fav-icn//apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav-icn//apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/fav-icn//android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav-icn//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fav-icn//favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav-icn//favicon-16x16.png">
+    <link rel="manifest" href="assets/fav-icn//manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fav-icn//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+</head>
+
+<body>
+
+    <!-- MODALS START -->
+
+    <!--EARNED HOURS BREAKDOWN START -->
+    <div class="modal fade" id="hoursBreakdown" tabindex="-1" role="dialog" aria-labelledby="hoursBreakdown" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal pointer" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg" />
+                            </div>
+                            <div class="team-member-name">Milan Milanovic</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <span class="d-block modal-title mb-4">Earned Hours Breakdown</span>
+                                </div>
+                                <div class="col-12">
+                                    <span class="d-block data-title">total earned hours</span>
+                                    <span class="d-block data-value">64</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="panel-container bg-transparent border-0 p-0">
+                                <!-- <span class="d-block modal-title mb-4">Time Manager work hours log</span> -->
+
+                                <div class="table-wrapper">
+                                    <div class="text-left mb-3">
+                                        <select>
+                                            <option>2020.</option>
+                                        </select>
+                                    </div>
+                                    <table class="panel-table text-left mb-4">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Month</th>
+                                                <th><i class="fas fa-plane-departure"></i> Travel (h)</th>
+                                                <th><i class="fas fa-arrow-up"></i> Overtime (h)</th>
+                                                <th><i class="fas fa-arrow-circle-up"></i> Special overtime (h)
+                                                </th>
+                                                <th>spent / reserved</th>
+                                                <th class="text-right"><i class="fas fa-align-justify"></i> Total (h)
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Previous balance</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td class="text-right">50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>March</td>
+                                                <td>8</td>
+                                                <td>4</td>
+                                                <td>10</td>
+                                                <td>-</td>
+                                                <td class="text-right">22</td>
+                                            </tr>
+                                            <tr>
+                                                <td>April</td>
+                                                <td>8</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td class="text-right">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>May</td>
+                                                <td>-</td>
+                                                <td>8</td>
+                                                <td>-</td>
+                                                <td><span class="badge badge-danger mr-1">8</span>spent</td>
+                                                <td class="text-right">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>August</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td><span class="badge badge-warning mr-1">8</span>booked</td>
+                                                <td class="text-right">- 8</td>
+                                            </tr>
+
+                                        </tbody>
+                                        <tfoot>
+                                            <td>Available (h)</td>
+                                            <td>16</td>
+                                            <td>12</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td class="text-right">64</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EARNED HOURS BREAKDOWN END -->
+
+    <!--EARNED HOURS BREAKDOWN START -->
+    <div class="modal fade" id="hoursBreakdownPayout" tabindex="-1" role="dialog" aria-labelledby="hoursBreakdownPayout" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal pointer" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg" />
+                            </div>
+                            <div class="team-member-name">Milan Milanovic</div>
+                        </div>
+                        <div class="p-4">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <span class="d-block modal-title mb-4">Earned Hours Breakdown</span>
+                                </div>
+                                <div class="col-12">
+                                    <span class="d-block data-title">total earned hours</span>
+                                    <span class="d-block data-value js_total">64</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="panel-container bg-transparent border-0 p-0">
+                                <!-- <span class="d-block modal-title mb-4">Time Manager work hours log</span> -->
+
+                                <div class="table-wrapper">
+                                    <div class="text-left mb-3">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <select>
+                                                <option>2020.</option>
+                                            </select>
+                                            <span class="badge badge-secondary pointer js_cancelBookings">cancel all booked hours</span>
+                                        </div>
+                                    </div>
+                                    <table class="panel-table text-left mb-4">
+                                        <thead>
+                                            <tr>
+                                                <th><i class="far fa-calendar-alt"></i> Month</th>
+                                                <th><i class="fas fa-plane-departure"></i> Travel (h)</th>
+                                                <th><i class="fas fa-arrow-up"></i> Overtime (h)</th>
+                                                <th><i class="fas fa-arrow-circle-up"></i> Special overtime (h)
+                                                </th>
+                                                <th>spent / reserved</th>
+                                                <th class="text-right"><i class="fas fa-align-justify"></i> Total (h)
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Previous balance</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td class="text-right">50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>March</td>
+                                                <td>8</td>
+                                                <td>4</td>
+                                                <td>10</td>
+                                                <td>-</td>
+                                                <td class="text-right">22</td>
+                                            </tr>
+                                            <tr>
+                                                <td>April</td>
+                                                <td>8</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td class="text-right">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>May</td>
+                                                <td>-</td>
+                                                <td>8</td>
+                                                <td>-</td>
+                                                <td><span class="badge badge-danger mr-1">8</span>spent</td>
+                                                <td class="text-right">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>August</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td><span class="badge badge-warning js_booking mr-1">8</span>booked</td>
+                                                <td class="text-right">- 8</td>
+                                            </tr>
+
+                                        </tbody>
+                                        <tfoot>
+                                            <td>Available (h)</td>
+                                            <td>16</td>
+                                            <td>12</td>
+                                            <td>10</td>
+                                            <td></td>
+                                            <td class="text-right js_total">64</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EARNED HOURS BREAKDOWN END -->
+
+    <!-- MODALS END -->
+
+
+    <!-- SCROLL TOP -->
+    <a href="javascript:void(0)" id="go-top"><i class="fas fa-chevron-up"></i></a>
+
+    <!--Spinner-->
+    <div class="lds-dual-ring-bg">
+        <div class="lds-dual-ring"></div>
+    </div>
+
+    <!--left nav-->
+    <div class="vct-left-nav">
+        <div class="vct-left-nav-wrapper">
+            <div class="vct-left-nav-toggle text-center">
+                <i class="menu-icon ti-more-alt ti-arrow-left"></i>
+            </div>
+            <div class="vct-logo w-100 text-left text-white">
+                <img src="assets/images/app-v2-logo.svg" alt="enjoy.ing">
+            </div>
+            <ul class="vct-nav-menu">
+                <li><a href="index.html"><i class="nav-icon far fa-calendar-alt mr-3"></i>My Days</a></li>
+                <li><a href="myCompetence20.html"><i class="nav-icon fas fa-book-open mr-3"></i>My Competences</a></li>
+                <li><a href="teams20-b.html"><i class="nav-icon fas fa-user-friends mr-3"></i>Project management</a></li>
+                <li><a href="overtime20.html"><i class="nav-icon fas fa-dollar-sign mr-3"></i>Finance management</a>
+                </li>
+                <li><a class="selected" href="earned-hours20.html"><i class="nav-icon fas fa-clock mr-3"></i>Earned Hours</a></li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-tags mr-3"></i>Manage Roles</a>
+                    <ul class="vct-nav-level1" style="display: none;">
+                        <li><a href="operations-management20.html">Operation</a></li>
+                        <li><a href="finance-management20.html">Finance</a></li>
+                    </ul>
+                </li>
+                <li><a class="has-level1" href="javascript:void(0)"><i class="nav-icon fas fa-sliders-h mr-3"></i>Administration</a>
+                    <ul class="vct-nav-level1" style="display: none;">
+                        <li><a href="mapping20.html">Mappings</a></li>
+                        <li><a href="app-management20.html">app settings</a></li>
+                        <li><a href="service-data20.html">Service Data</a></li>
+                    </ul>
+                </li>
+                <li><a href="absences20.html"><i class="nav-icon far fa-calendar-minus mr-3"></i>Absences</a></li>
+                <li><a href="inv-companies.html"><i class="nav-icon fas fa-building mr-3"></i>My Companies</a></li>
+                <li><a href="inv-contracts.html"><i class="nav-icon fas fa-signature mr-3"></i>Contracts</a></li>
+                <li><a href="inv-invoicing.html"><i class="nav-icon fas fa-receipt mr-3"></i>Invoicing</a></li>
+                <li><a href="inv-ancilliary.html"><i class="nav-icon fas fa-paperclip mr-3"></i>Ancilliary costs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--top-nav-->
+    <div class="vct-top-nav">
+        <div class="vct-user-menu float-right">
+            <div class="d-inline-block vct-user-profile-image bg-transparent text-center"><i class="far fa-moon pointer js_darkMode"></i></div>
+            <div class="d-none d-sm-inline-block vct-user-profile-image bg-transparent text-center"><i class="fas fa-expand full-view"></i></div>
+            <div class="d-inline-block vct-user-profile-image position-relative mx-3">
+                <img src="assets/images/user.jpg" alt="user name">
+            </div>
+            <div class="vct-user-menu-block position-absolute">
+                <div class="vct-user-menu-block-arrow"></div>
+                <ul>
+                    <li class="user-profile-name">Gina Djordjevic Lollobrigida</li>
+                    <li class="user-profile-position">Operations Manager</li>
+                    <li><a href="login.html">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Panel Content-->
+    <div class="vct-content">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-start">
+                    <span class="primary-title my-3">Earned hours overview</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-xl-6 mt-3">
+                    <div class="panel-container">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <div class="table-title w-100 mb-3">Employees earned hours list</div>
+                                <p>Earned hours conversion Campaign is currently in progress until 10.07.2020</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="position-relative mb-4">
+                                    <input class="filter-members find-member" placeholder="Filter list by name, no. of hours, status" type="text">
+                                    <span class="fas fa-search search-icon"></span>
+                                    <span class="reset-input far fa-times-circle" style="display:none"></span>
+                                </div>
+                            <div class="table-wrapper">
+                                <table class="panel-table">
+                                    <thead>
+                                        <tr>
+                                            <th><i class="fas fa-user"></i> employee</th>
+                                            <th><i class="fas fa-clock"></i> earned hours</th>
+                                            <th><i class="fas fa-check"></i> current status</th>
+                                            <th class="text-right"><span class="badge btn-success pointer">export to Excel</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Milan Milanovic</td>
+                                            <td>64</td>
+                                            <td><span class="badge badge-warning">in campaign</span></td>
+                                            <td class="text-right"><span class="badge badge-secondary pointer" data-toggle="modal" data-target="#hoursBreakdown">details</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dejan Dejanovic</td>
+                                            <td>19</td>
+                                            <td><span class="badge badge-secondary">idle</span></td>
+                                            <td class="text-right"><span class="badge badge-secondary pointer" data-toggle="modal" data-target="#hoursBreakdown">details</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bogdan Bogdanovic</td>
+                                            <td>92</td>
+                                            <td><span class="badge badge-danger">in payout</span></td>
+                                            <td class="text-right"><span class="badge badge-secondary pointer">details</span>
+                                        </tr>
+                                        <tr>
+                                            <td>Marko Markovic</td>
+                                            <td>38</td>
+                                            <td><span class="badge badge-secondary">idle</span></td>
+                                            <td class="text-right"><span class="badge badge-secondary pointer">details</span>
+                                        </tr>
+                                        <tr>
+                                            <td>Branko Brankovic</td>
+                                            <td>18</td>
+                                            <td><span class="badge badge-secondary">idle</span></td>
+                                            <td class="text-right"><span class="badge badge-secondary pointer">details</span>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td colspan="3">231</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="no-results-message justify-content-center align-items-center w-100" style="display: none;">
+                                <div class="no-results h-100 p-5 text-center">
+                                    <h4>No Results Match your Search Criteria</h4>
+                                    <p>Please modify your query</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="assets/vendor/jquery341/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap431/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/datepicker/js/datepicker.min.js"></script>
+    <script src="assets/vendor/autocomplete/js/jquery.easy-autocomplete.min.js"></script>
+    <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/tmv20.js"></script>
+
+</body>
+
+</html>
