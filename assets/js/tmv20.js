@@ -1088,7 +1088,7 @@ $(document).ready(function () {
     });
 
     //ADD ABSENCE
-    $('#add-absence').on('click', function(){
+    $('#add-absence').on('click', function () {
         var employee = $('#absent-employee').val();
         var from = $('#absent-from').val();
         var to = $('#absent-to').val();
@@ -1124,5 +1124,27 @@ $(document).ready(function () {
         $(this).addClass('selected');
         $("#" + tab_id).show();
     });
-    
+
+    //NOTIFICATIONS
+    $(function () {
+        $('.js_notificationCount').text($('.my-notification').length);
+        $('.close-item').on('click', function () {
+            $(this).parents('.my-notification').remove();
+            $('.js_notificationCount').text($('.my-notification').length);
+            if($('.my-notification').length < 1){
+                $('.js_notificationCount').hide();
+                $('.no-notifications-message').show();
+            }
+            else{
+                $('.js_notificationCount').show();
+                $('.no-notifications-message').hide();
+            }
+        });
+    });
+
+    //RELOAD
+    $('#refresh').on('click', function(){
+        location.reload();
+    });
+
 });
