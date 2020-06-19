@@ -400,15 +400,15 @@
                         </div>
                         <div class="row period-invoices">
                             <div class="col-12 mt-3 mb-4">
-                                <a href="#" class="btn btn-invoice fixed mr-1 mb-1 selected">2240 nearshore technical services</a>
-                                <a href="#" class="btn btn-invoice mr-1 mb-1">2242 invoice<i class="js_removeInvoice fas fa-window-close"></i></a>
-                                <a href="#" class="btn btn-invoice mr-1 mb-1">add invoice<i class="js_addInvoice fas fa-plus-square add"></i></a>
+                                <a href="javascript:void(0)" data-tab="inv-1" class="btn btn-invoice fixed mr-1 mb-1 selected">2240 nearshore technical services</a>
+                                <a href="javascript:void(0)" data-tab="inv-2" class="btn btn-invoice mr-1 mb-1">2242 invoice<i class="delete fas fa-window-close"></i></a>
+                                <a href="javascript:void(0)" class="btn btn-invoice mr-1 mb-1">add invoice<i class="js_addInvoice fas fa-plus-square add"></i></a>
                             </div>
                         </div>
                         <div class="row vct-project-tab">
 
                             <!-- NEARSHORING FORM -->
-                            <div id="nearshoring-form" class="col-12">
+                            <div id="inv-1" class="col-12 tab-content">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <span class="form-title d-block">crealogix germany</span>
                                     <div>
@@ -552,68 +552,44 @@
                                     </div>
                                 </div>
 
-                                <div class="row mt-4" id="js_cost-discount">
-                                    <div class="col-12">
+                                <div class="row mt-4">
+                                    <div class="col-12 more-data">
                                         <div class="border p-3">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <span class="form-title">discount</span>
-                                                <span class="btn btn-symbol btn-secondary js_delete">×</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" id="invoice-discount" class="pronounced-data">
+                                                    <span class="slider"></span>
+                                                </label>
                                             </div>
                                             <div class="row">
                                                 <div class="col-12">
                                                     <label>discount desc. *</label>
-                                                    <input type="text" />
+                                                    <input type="text" disabled />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <div>
                                                         <label>discount *</label>
                                                         <div class="select-height-fix d-flex align-items-center">
-                                                            <select class="w-100">
+                                                            <select class="w-100" disabled>
+                                                                <option selected>amount</option>
                                                                 <option>%</option>
-                                                                <option>amount</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label>value *</label>
-                                                    <input type="text" />
+                                                    <input type="text" disabled />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="row mt-4" id="js_cost-setup">
-                                    <div class="col-12">
-                                        <div class="border p-3">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <span class="form-title">setup fee</span>
-                                                <span class="btn btn-symbol btn-secondary js_delete">×</span>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <label>employee name *</label>
-                                                    <input type="text" />
-                                                </div>
-                                                <div class="col-12 col-sm-6">
-                                                    <div>
-                                                        <label>description</label>
-                                                        <input type="text" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6">
-                                                    <div>
-                                                        <label>amount *</label>
-                                                        <input type="text" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
-                                <div class="row mt-4">
+                                <!-- <div class="row mt-4">
                                     <div class="col-12">
                                         <div class="border p-3">
                                             <span class="form-title mb-3">Add cost</span>
@@ -629,7 +605,206 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div> -->
+
+                            </div>
+
+                            <div id="inv-2" class="col-12 tab-content" style="display: none;">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="form-title d-block">crealogix germany</span>
+                                    <div>
+                                        <!-- <span class="badge badge-secondary font-weight-bold">exported</span> -->
+                                    </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span class="primary-title d-block mt-3 mb-2">invoice setup</span>
+                                        <div class="border p-3">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6">
+                                                    <label>invoice no. *</label>
+                                                    <input type="text" value="2242" />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label>invoice currency</label>
+                                                    <div class="select-height-fix d-flex align-items-center">
+                                                        <select class="w-100">
+                                                            <option selected>EUR</option>
+                                                            <option>CHF</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-status">for</label>
+                                                    <div class="select-height-fix d-flex align-items-center">
+                                                        <select id="cost-center-select" class="w-100">
+                                                            <option val="cc1" selected>Crealogix Germany main</option>
+                                                            <option val="cc2">Crealogix Germany secondary</option>
+                                                        </select>
+                                                    </div>
+                                                    <div id="cc-contact">
+                                                        <label class="mt-0">contact</label>
+                                                        <span id="cc-name">Ada Lovelace</span>
+                                                        <small id="cc-job" class="d-block">finance director</small>
+                                                        <a id="cc-phone" class="d-block" href="tel:+4930901820">+49 30 901820</a>
+                                                        <a id="cc-email" class="d-block" href="mailto:ada.lovelace@comparis.de">ada.lovelace@comparis.de</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label for="contract-status">bank details</label>
+                                                    <div class="select-height-fix d-flex align-items-center">
+                                                        <select id="account-select" class="w-100">
+                                                            <option val="zkb" selected>ZKB</option>
+                                                            <option val="credit suisse">Credit Suisse</option>
+                                                        </select>
+                                                    </div>
+                                                    <div id="payment-account">
+                                                        <label class="mt-0">bank</label>
+                                                        <span class="d-block" id="payment-account-bank-select">Zürcher Kantonalbank</span>
+                                                        <label class="mt-0">IBAN</label>
+                                                        <span class="d-block" id="payment-account-iban-select">CH1800700110005701947</span>
+                                                        <label class="mt-0">account no.</label>
+                                                        <span class="d-block" id="payment-account-no-select">1100-5701.947</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <span class="primary-title d-block mt-3 mb-2">invoice items</span>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="border p-3">
+                                                    <div class="row">
+                                                        <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+                                                            <span class="form-title">ancilliary costs</span>
+                                                        </div>
+                                                        <div class="col-12 table-wrapper">
+                                                            <table class="panel-table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>project cost center</th>
+                                                                        <th>period</th>
+                                                                        <th>hours</th>
+                                                                        <th>amount</th>
+                                                                        <th class="text-right">include</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1110 Lea Kosti</td>
+                                                                        <td>work June 2020</td>
+                                                                        <td>2846,50</td>
+                                                                        <td>48.791,73</td>
+                                                                        <td class="text-right">
+                                                                            <label class="switch">
+                                                                                <input type="checkbox" checked="" id="rate-adjustment-possible" class="pronounced-data">
+                                                                                <span class="slider"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3011 Andrè Steiner</td>
+                                                                        <td>work June 2020</td>
+                                                                        <td>160,00</td>
+                                                                        <td>3.243,68</td>
+                                                                        <td class="text-right">
+                                                                            <label class="switch">
+                                                                                <input type="checkbox" checked="" id="rate-adjustment-possible" class="pronounced-data">
+                                                                                <span class="slider"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>1410 Markus Klinkner</td>
+                                                                        <td>work June 2020</td>
+                                                                        <td>3188,00</td>
+                                                                        <td>57.465,66</td>
+                                                                        <td class="text-right">
+                                                                            <label class="switch">
+                                                                                <input type="checkbox" checked="" id="rate-adjustment-possible" class="pronounced-data">
+                                                                                <span class="slider"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3010 Benedikt Unold</td>
+                                                                        <td>work June 2020</td>
+                                                                        <td>2710,50</td>
+                                                                        <td>49.625,02</td>
+                                                                        <td class="text-right">
+                                                                            <label class="switch">
+                                                                                <input type="checkbox" checked="" id="rate-adjustment-possible" class="pronounced-data">
+                                                                                <span class="slider"></span>
+                                                                            </label>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="row mt-4">
+                                    <div class="col-12 more-data">
+                                        <div class="border p-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="form-title">discount</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" id="invoice-discount" class="pronounced-data">
+                                                    <span class="slider"></span>
+                                                </label>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label>discount desc. *</label>
+                                                    <input type="text" disabled />
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <div>
+                                                        <label>discount *</label>
+                                                        <div class="select-height-fix d-flex align-items-center">
+                                                            <select class="w-100" disabled>
+                                                                <option selected>amount</option>
+                                                                <option>%</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-sm-6">
+                                                    <label>value *</label>
+                                                    <input type="text" disabled />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                
+
+                                <!-- <div class="row mt-4">
+                                    <div class="col-12">
+                                        <div class="border p-3">
+                                            <span class="form-title mb-3">Add cost</span>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6">
+                                                    <label>cost type</label>
+                                                    <select class="w-100">
+                                                        <option>discount</option>
+                                                        <option>setup fee</option>
+                                                    </select>
+                                                    <button class="btn btn-highlight mt-3">Add Cost</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
 
                             </div>
 
@@ -770,7 +945,8 @@
                                 </div>
                                 <div class="row mt-3 invoice-item">
                                     <div class="col-12" id="nearshoring-fee">
-                                        <span class="invoice-subtitle">Nearshore Technical services</span>
+                                        <div class="invoice-subtitle">Nearshore Technical services</div>
+                                        <p>[01.04.2020] to [30.04.2020], according to timesheet</p>
                                         <div class="row">
                                             <div class="col-12 additional-fee">
                                                 <!-- INVOICE ITEMS -->
@@ -837,28 +1013,7 @@
                                                         </table>
                                                     </div>
                                                 </div>
-                                                <!-- SETUP FEE -->
-                                                <div class="row mt-3" id="discount">
-                                                    <div class="col-12 table-wrapper">
-                                                        <span class="invoice-subtitle">Setup fee</span>
-                                                        <table class="panel-table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>employee</th>
-                                                                    <th>description</th>
-                                                                    <th class="text-right">fee amount</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>Name, Last Name</td>
-                                                                    <td>Lorem ipsum dolor sit amet consecteur</td>
-                                                                    <td class="text-right"><span class="eur">1.800,00</span></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
+                                                
                                                 <!-- AKONTO -->
                                                 <div class="row mt-3" id="akonto">
                                                     <div class="col-12 table-wrapper">

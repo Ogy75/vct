@@ -1092,5 +1092,33 @@ $(document).ready(function () {
         console.log('HA HA');
         $('#absences-log').prepend('<tr><td>' + employee + '</td>' + '<td>' + 'Belgrade' + '</td>' + '<td>' + from + '</td>' + '<td>' + to + '</td>' + '<td>' + type + '</td>' + '<td><span class="badge badge-success">edit</span><span class="badge badge-danger ml-1">delete</span></td>' + '</tr>');
     });
+
+    //INVOICE DISCOUNT
+    //ENABLE CONTRACT RATE ADJUSTMENT
+    $('#invoice-discount').on('change', function () {
+        if ($(this).prop('checked')) {
+            $(this).parents('.more-data').find('input').prop('disabled', false);
+            $(this).parents('.more-data').find('select').prop('disabled', false);
+            $(this).val('possible');
+            $(this).parents('.more-data').find('textarea').prop('disabled', false);
+        }
+        else {
+            $(this).parents('.more-data').find('input[type=text]').prop('disabled', true);
+            $(this).parents('.more-data').find('select').prop('disabled', true);
+            $(this).val('not possible');
+            $(this).parents('.more-data').find('textarea').prop('disabled', true);
+        }
+    });
+
+    //INVOICE SWITCH
+    $('.btn-invoice').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('.btn-invoice').removeClass('selected');
+        $('.tab-content').hide();
+
+        $(this).addClass('selected');
+        $("#" + tab_id).show();
+    });
     
 });

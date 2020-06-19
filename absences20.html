@@ -142,11 +142,15 @@
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <label for="sickleave-from">from</label>
-                                    <input type="text" name="sickleave-from" value="06.02.2019"/>
+                                    <input type="text" name="sickleave-from" value="06.02.2019" />
                                 </div>
-                                <div class="col-12 col-sm-6 mb-4">
+                                <div class="col-12 col-sm-6">
                                     <label for="sickleave-to">to</label>
-                                    <input type="text" name="sickleave-to" value="05.08.2020"/>
+                                    <input type="text" name="sickleave-to" value="05.08.2020" />
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label>description (visible by employee) *</label>
+                                    <textarea rows="6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
                                 </div>
                             </div>
                             <div class="row">
@@ -187,11 +191,11 @@
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <label for="sickleave-from">from</label>
-                                    <input type="text" name="sickleave-from" value="01.05.2020"/>
+                                    <input type="text" name="sickleave-from" value="01.05.2020" />
                                 </div>
                                 <div class="col-12 col-sm-6 mb-4">
                                     <label for="sickleave-to">to</label>
-                                    <input type="text" name="sickleave-to" value="03.06.2020"/>
+                                    <input type="text" name="sickleave-to" value="03.06.2020" />
                                 </div>
                             </div>
                             <div class="row">
@@ -232,11 +236,11 @@
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <label for="sickleave-from">from</label>
-                                    <input type="text" name="sickleave-from" value="01.05.2020"/>
+                                    <input type="text" name="sickleave-from" value="01.05.2020" />
                                 </div>
                                 <div class="col-12 col-sm-6 mb-4">
                                     <label for="sickleave-to">to</label>
-                                    <input type="text" name="sickleave-to" value="01.06.2020"/>
+                                    <input type="text" name="sickleave-to" value="01.06.2020" />
                                 </div>
                             </div>
                             <div class="row">
@@ -283,7 +287,7 @@
                                             <option value="wedding">Wedding - 1 day</option>
                                             <option value="moving-city">Moving (same city) - 1 day</option>
                                             <option value="moving-changing">Moving (changing city) - 2 days</option>
-                                            <option value="birth">Child Birth - 2 days</option>
+                                            <option selected value="birth">Child Birth - 2 days</option>
                                             <option value="illness">Family member illness - 5 days</option>
                                             <option value="death">Family member death case - 5 days</option>
                                             <option value="other" id="other">Other - flexible period</option>
@@ -292,11 +296,16 @@
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <label for="sickleave-from">from</label>
-                                    <input type="text" name="sickleave-from" value="01.05.2020"/>
+                                    <input type="text" name="sickleave-from" value="01.05.2020" />
                                 </div>
-                                <div class="col-12 col-sm-6 mb-4">
+                                <div class="col-12 col-sm-6">
                                     <label for="sickleave-to">to</label>
-                                    <input type="text" name="sickleave-to" value="03.06.2020"/>
+                                    <input type="text" name="sickleave-to" value="03.05.2020" />
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label>description(visible by employee) *</label>
+                                    <textarea rows="6">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+
                                 </div>
                             </div>
                             <div class="row">
@@ -337,11 +346,11 @@
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <label for="sickleave-from">from</label>
-                                    <input type="text" name="sickleave-from" value="02.06.2020"/>
+                                    <input type="text" name="sickleave-from" value="02.06.2020" />
                                 </div>
                                 <div class="col-12 col-sm-6 mb-4">
                                     <label for="sickleave-to">to</label>
-                                    <input type="text" name="sickleave-to" value="04.06.2020"/>
+                                    <input type="text" name="sickleave-to" value="04.06.2020" />
                                 </div>
                             </div>
                             <div class="row">
@@ -506,6 +515,14 @@
                                                 <label for="sickleave-to">to</label>
                                                 <input type="text" name="sickleave-to" id="absent-to" />
                                             </div>
+                                            <div class="col-12">
+                                                <label>description (visble by employee)</label>
+                                                <textarea rows="3"></textarea>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <h6><span class="fas fa-info-circle text-info"></span> Absence type: <span id="absence-type">Sickleave</span></h6>
+                                                <p id="absence-description">When adding sickleave bla bla bla, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
                                         </div>
                                         <div class="row mt-2 absence-type" id="sickleave30" style="display: none;">
                                             <div class="col-12">
@@ -536,6 +553,14 @@
                                                 <label for="sickleave30-to">to</label>
                                                 <input type="text" name="sickleave30-to" />
                                             </div>
+                                            <div class="col-12">
+                                                <label>description (visble by employee)</label>
+                                                <textarea rows="3"></textarea>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <h6><span class="fas fa-info-circle text-info"></span> Absence type: <span id="absence-type">Sickleave 30+ days</span></h6>
+                                                <p id="absence-description">When adding sickleave bla bla bla, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div>
                                         </div>
                                         <div class="row mt-2 absence-type" id="travel" style="display: none;">
                                             <div class="col-12">
@@ -550,6 +575,14 @@
                                             <div class="col-12 col-sm-6">
                                                 <label for="travel-to">return travel period *</label>
                                                 <input type="text" name="sickleave30-to" />
+                                            </div>
+                                            <div class="col-12">
+                                                <label>description (visble by employee)</label>
+                                                <textarea rows="3"></textarea>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <h6><span class="fas fa-info-circle text-info"></span> Absence type: <span id="absence-type">Travel</span></h6>
+                                                <p id="absence-description">When adding sickleave bla bla bla, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                             </div>
                                         </div>
                                         <div class="row mt-2 absence-type" id="slava" style="display: none;">
@@ -652,14 +685,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 mt-4">
-                                            <div>
-                                                <h6><span class="fas fa-info-circle text-info"></span> Absence type: <span id="absence-type">Sickleave</span></h6>
-                                                <p id="absence-description">When adding sickleave bla bla bla, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                            </div>
-                                        <button class="btn btn-highlight mt-4" id="add-absence">ADD</button>
-                                    </div>
                                 </div>
+                                <button class="btn btn-highlight mt-4" id="add-absence">ADD</button>
                             </div>
                         </div>
                         <div class="col-12 col-xl-6 mt-3 mt-xl-0">
@@ -683,7 +710,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Employee</th>
-                                                <th>Employee location</th>
+                                                <th>Description</th>
                                                 <th>Absent from</th>
                                                 <th>Absent until</th>
                                                 <th colspan="2">Absence type</th>
@@ -692,7 +719,8 @@
                                         <tbody id="absences-log">
                                             <tr>
                                                 <td>Marija Trsic</td>
-                                                <td>Nis</td>
+                                                <td class="tooltip-width text-truncate" data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                                    laborum</td>
                                                 <td>06.02.2019</td>
                                                 <td>05.08.2020</td>
                                                 <td>paid leave</td>
@@ -703,7 +731,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Milos Trpkovic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>03.06.2020</td>
                                                 <td>sickleave</td>
@@ -714,7 +742,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Dragana Bozic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>sickleave 30+</td>
@@ -725,7 +753,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Mitar Miric</td>
-                                                <td>Nis</td>
+                                                <td class="tooltip-width text-truncate" data-toggle="tooltip" data-placement="right" title="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
                                                 <td>01.06.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>days off</td>
@@ -736,7 +764,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Petar Petrovic</td>
-                                                <td>Kragujevac</td>
+                                                <td></td>
                                                 <td>02.06.2020</td>
                                                 <td>04.06.2020</td>
                                                 <td>vacation</td>
@@ -747,7 +775,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Marija Trsic</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>06.02.2019</td>
                                                 <td>05.08.2020</td>
                                                 <td>paid leave</td>
@@ -758,7 +786,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Milos Trpkovic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>03.06.2020</td>
                                                 <td>sickleave</td>
@@ -769,7 +797,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Mitar Miric</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>01.06.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>days off</td>
@@ -780,7 +808,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Petar Petrovic</td>
-                                                <td>Kragujevac</td>
+                                                <td></td>
                                                 <td>02.06.2020</td>
                                                 <td>04.06.2020</td>
                                                 <td>vacation</td>
@@ -791,7 +819,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Marija Trsic</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>06.02.2019</td>
                                                 <td>05.08.2020</td>
                                                 <td>paid leave</td>
@@ -802,7 +830,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Milos Trpkovic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>03.06.2020</td>
                                                 <td>sickleave</td>
@@ -813,7 +841,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Mitar Miric</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>01.06.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>days off</td>
@@ -824,7 +852,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Petar Petrovic</td>
-                                                <td>Kragujevac</td>
+                                                <td></td>
                                                 <td>02.06.2020</td>
                                                 <td>04.06.2020</td>
                                                 <td>vacation</td>
@@ -835,7 +863,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Marija Trsic</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>06.02.2019</td>
                                                 <td>05.08.2020</td>
                                                 <td>paid leave</td>
@@ -846,7 +874,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Milos Trpkovic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>03.06.2020</td>
                                                 <td>sickleave</td>
@@ -857,7 +885,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Mitar Miric</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>01.06.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>days off</td>
@@ -868,7 +896,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Petar Petrovic</td>
-                                                <td>Kragujevac</td>
+                                                <td></td>
                                                 <td>02.06.2020</td>
                                                 <td>04.06.2020</td>
                                                 <td>vacation</td>
@@ -879,7 +907,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Marija Trsic</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>06.02.2019</td>
                                                 <td>05.08.2020</td>
                                                 <td>paid leave</td>
@@ -890,7 +918,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Milos Trpkovic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>03.06.2020</td>
                                                 <td>sickleave</td>
@@ -901,7 +929,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Mitar Miric</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>01.06.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>days off</td>
@@ -912,7 +940,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Petar Petrovic</td>
-                                                <td>Kragujevac</td>
+                                                <td></td>
                                                 <td>02.06.2020</td>
                                                 <td>04.06.2020</td>
                                                 <td>vacation</td>
@@ -923,7 +951,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Marija Trsic</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>06.02.2019</td>
                                                 <td>05.08.2020</td>
                                                 <td>paid leave</td>
@@ -934,7 +962,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Milos Trpkovic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>03.06.2020</td>
                                                 <td>sickleave</td>
@@ -945,7 +973,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Mitar Miric</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>01.06.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>days off</td>
@@ -956,7 +984,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Petar Petrovic</td>
-                                                <td>Kragujevac</td>
+                                                <td></td>
                                                 <td>02.06.2020</td>
                                                 <td>04.06.2020</td>
                                                 <td>vacation</td>
@@ -967,7 +995,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Marija Trsic</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>06.02.2019</td>
                                                 <td>05.08.2020</td>
                                                 <td>paid leave</td>
@@ -978,7 +1006,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Milos Trpkovic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>03.06.2020</td>
                                                 <td>sickleave</td>
@@ -989,7 +1017,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Mitar Miric</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>01.06.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>days off</td>
@@ -1000,7 +1028,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Petar Petrovic</td>
-                                                <td>Kragujevac</td>
+                                                <td></td>
                                                 <td>02.06.2020</td>
                                                 <td>04.06.2020</td>
                                                 <td>vacation</td>
@@ -1011,7 +1039,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Marija Trsic</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>06.02.2019</td>
                                                 <td>05.08.2020</td>
                                                 <td>paid leave</td>
@@ -1022,7 +1050,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Milos Trpkovic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>03.06.2020</td>
                                                 <td>sickleave</td>
@@ -1033,7 +1061,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Mitar Miric</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>01.06.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>days off</td>
@@ -1044,7 +1072,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Petar Petrovic</td>
-                                                <td>Kragujevac</td>
+                                                <td></td>
                                                 <td>02.06.2020</td>
                                                 <td>04.06.2020</td>
                                                 <td>vacation</td>
@@ -1055,7 +1083,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Marija Trsic</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>06.02.2019</td>
                                                 <td>05.08.2020</td>
                                                 <td>paid leave</td>
@@ -1066,7 +1094,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Milos Trpkovic</td>
-                                                <td>Belgrade</td>
+                                                <td></td>
                                                 <td>01.05.2020</td>
                                                 <td>03.06.2020</td>
                                                 <td>sickleave</td>
@@ -1077,7 +1105,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Mitar Miric</td>
-                                                <td>Nis</td>
+                                                <td></td>
                                                 <td>01.06.2020</td>
                                                 <td>01.06.2020</td>
                                                 <td>days off</td>
@@ -1088,7 +1116,7 @@
                                             </tr>
                                             <tr>
                                                 <td>Petar Petrovic</td>
-                                                <td>Kragujevac</td>
+                                                <td></td>
                                                 <td>02.06.2020</td>
                                                 <td>04.06.2020</td>
                                                 <td>vacation</td>
@@ -1107,7 +1135,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
 
@@ -1154,6 +1182,12 @@
     <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/tmv20.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 
 </body>
 

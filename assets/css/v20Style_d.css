@@ -326,6 +326,11 @@ input:disabled {
 .widget-container .table-wrapper table.panel-table tbody tr td.log-comment {
   white-space: initial !important;
 }
+.panel-container .table-wrapper table.panel-table tbody tr td.tooltip-width,
+.widget-container .table-wrapper table.panel-table tbody tr td.tooltip-width {
+  max-width: 150px;
+  cursor: pointer;
+}
 .panel-container .table-wrapper table.panel-table tfoot tr,
 .widget-container .table-wrapper table.panel-table tfoot tr {
   background: #262626;
