@@ -937,10 +937,11 @@ input:checked + .slider:before {
   color: #d5d5d5;
 }
 .vct-team {
+  text-decoration: none !important;
   background: transparent !important;
 }
 .vct-team:hover {
-  color: #177397;
+  color: #177397 !important;
 }
 .vct-team .vct-team-wrapper {
   text-align: center;
@@ -961,6 +962,9 @@ input:checked + .slider:before {
   top: 0;
   padding: 8px;
   line-height: 12px;
+}
+.vct-team .vct-team-wrapper:hover {
+  color: #177397;
 }
 .vct-project-link {
   position: absolute;

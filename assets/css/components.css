@@ -290,7 +290,7 @@ a.uploaded-file:hover {
   color: #1E9BCC;
 }
 .vct-team {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #42423c;
 }
 .vct-team .vct-team-wrapper {

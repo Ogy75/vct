@@ -966,8 +966,51 @@
             </div>
         </div>
     </div>
-
     <!-- Vacation Calendar Modal End -->
+
+    <!--Internal Cost Center Modal Start -->
+    <div class="modal fade" id="internalCostCenter" tabindex="-1" role="dialog" aria-labelledby="internalCostCenter" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg" />
+                            </div>
+                            <div class="team-member-name">Petar Petrovic</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="px-5 py-5 text-left">
+                            <label for="removeDate">Select Internal Cost Center</label>
+                            <div class="select-height-fix d-flex align-items-center">
+                                <select class="w-100">
+                                    <option selected>Select Internal Cost Center</option>
+                                    <option><span class="pr-1">1110</span><span>Lea Kosti</span></option>
+                                    <option><span class="pr-1">3011</span><span>Andrè Steiner</span></option>
+                                    <option><span class="pr-1">1410</span><span>Markus Klinkner</span></option>
+                                    <option><span class="pr-1">3010</span><span>Benedikt Unold</span></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <button class="btn btn-highlight m-1">Save</button>
+                            <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Internal Cost center Modal End -->
 
     <!-- Save Dialog Start -->
     <div class="modal fade" id="saveDialog" tabindex="-1" role="dialog" aria-labelledby="saveDialog" aria-hidden="true">
@@ -2190,7 +2233,7 @@
                             <!-- EMPLOYEE NEW -->
                             <div class="team-member col-12 col-lg-6 col-xl-4 mt-4">
                                 <div class="team-data h-100">
-                                    <span class="no-frm-data">No FRM Data</span>
+                                    <span class="no-frm-data">Internal Cost center not assigned</span>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="d-flex justify-content-start align-items-center overflow-hidden">
                                             <div class="team-member-image">
@@ -2208,6 +2251,7 @@
                                                         <li><a href="javascript:void(0)" data-toggle="modal" data-target="#deleteMember">Remove Team Member</a></li>
                                                         <li><a data-toggle="modal" data-target="#dailyTime" href="javascript:void(0)">Daily Time Tracking</a></li>
                                                         <li><a href="javascript:void(0)" data-toggle="modal" data-target="#memberDetails">Team Member Details</a>
+                                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#internalCostCenter">Internal Cost Center</a>
                                                         </li>
                                                     </ul>
                                                 </div>

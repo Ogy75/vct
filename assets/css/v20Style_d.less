@@ -951,9 +951,10 @@ transform: translateX(12px);
 }
 
 .vct-team{
+    text-decoration: none !important;
     background: transparent !important;
     &:hover{
-        color:@highlightColor;
+        color:@highlightColor !important;
     }
     .vct-team-wrapper{
         text-align: center;
@@ -973,6 +974,9 @@ transform: translateX(12px);
             top:0;
             padding: 8px;
             line-height: 12px;
+        }
+        &:hover{
+          color: @highlightColor;
         }
     }
 }

@@ -482,6 +482,7 @@ input:disabled {
 }
 .vct-team {
   background: transparent !important;
+  text-decoration: none !important;
 }
 .vct-team:hover {
   color: #1E9BCC;
@@ -502,6 +503,9 @@ input:disabled {
   top: 0;
   padding: 8px;
   line-height: 12px;
+}
+.vct-team .vct-team-wrapper:hover {
+  color: #1E9BCC;
 }
 .vct-project-link {
   position: absolute;

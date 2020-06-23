@@ -1173,4 +1173,26 @@ $(document).ready(function () {
         $('#price-per-item').val('');
     });
 
+    //ADD INTERNAL COST CENTER
+    $('#add-int-cc').on('click', function(){
+        var ccNo = $('#int-cc-no').val();
+        var ccName = $('#int-cc-name').val();
+        var cc = '<span class="badge badge-technology mr-2 mt-2"><span class="pr-1" id="icc-no">' + ccNo + '</span> <span id="icc-name">' + ccName + '</span><i class="close-badge fas fa-window-close"></i></span>';
+        $('#internal-cost-centers-list').append(cc);
+        $('#int-cc-no').val('');
+        $('#int-cc-name').val('');
+    });
+
+    //HAS INT CCs Switch
+    $('#internal-cost-center').on('change', function () {
+        if ($(this).prop('checked')) {
+            $('.int-cc').show();
+            $(this).parents('.contract-section').find('.badge-secondary').text('has internal cost centers');
+        }
+        else {
+            $('.int-cc').hide();
+            $(this).parents('.contract-section').find('.badge-secondary').text('no internal cost centers');
+        }
+    });
+
 });
