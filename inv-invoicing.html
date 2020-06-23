@@ -143,6 +143,98 @@
     </div>
     <!-- export Invoice Copy Modal End -->
 
+    <!-- Cost details start -->
+    <div class="modal fade" id="costDetails" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="costDetails" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="team-member-image">
+                                <img src="assets/images/profile-3.jpg">
+                            </div>
+                            <div class="team-member-name">Milana Bogdanovic</div>
+                            <p class="text-white">cost details</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-4">
+                            <div class="panel-container bg-transparent border-0 p-0">
+                                <div class="table-wrapper">
+                                    <table class="panel-table text-left">
+                                        <thead>
+                                            <tr>
+                                                <th>cost type</th>
+                                                <th>itinerary</th>
+                                                <th>travel direction</th>
+                                                <th>departure date</th>
+                                                <th>return date</th>
+                                                <th class="text-right">cost amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="fas fa-plane mr-1"></span>travel</td>
+                                                <td>BEG - ZRH - BEG</td>
+                                                <td>round trip</td>
+                                                <td>15.06.2020</td>
+                                                <td>17.06.2020</td>
+                                                <td class="text-right"><span class="eur">292,06</span></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                    <table class="panel-table text-left mt-3">
+                                        <thead>
+                                            <tr>
+                                                <th>cost type</th>
+                                                <th>hotel name</th>
+                                                <th>hotel city</th>
+                                                <th>overnight stays</th>
+                                                <th>check in</th>
+                                                <th>check out</th>
+                                                <th class="text-right">cost amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="fas fa-concierge-bell mr-1"></span>hotel</td>
+                                                <td>IBIS budget - Zurich airport</td>
+                                                <td>Zurich</td>
+                                                <td>2</td>
+                                                <td>15.06.2020</td>
+                                                <td>17.06.2020</td>
+                                                <td class="text-right"><span class="eur">168,71</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="panel-table text-left mt-3">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-right">total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-right"><span class="eur">461,10</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- cost details end -->
+
     <!--left nav-->
     <div class="vct-left-nav">
         <div class="vct-left-nav-wrapper">
@@ -402,7 +494,7 @@
                         <div class="row period-invoices">
                             <div class="col-12 mt-3 mb-4">
                                 <a href="javascript:void(0)" data-tab="inv-1" class="btn btn-invoice fixed mr-1 mb-1 selected">2240 nearshore technical services</a>
-                                <a href="javascript:void(0)" data-tab="inv-2" class="btn btn-invoice mr-1 mb-1">2242 invoice<i class="delete fas fa-window-close"></i></a>
+                                <a href="javascript:void(0)" data-tab="inv-2" class="btn btn-invoice mr-1 mb-1"><span id="inv-02-no" class="mr-1">2231</span>invoice<i class="delete fas fa-window-close"></i></a>
                                 <a href="javascript:void(0)" class="btn btn-invoice mr-1 mb-1">add invoice<i class="js_addInvoice fas fa-plus-square add"></i></a>
                             </div>
                         </div>
@@ -588,7 +680,7 @@
                                     </div>
                                 </div>
 
-                                
+
 
                                 <!-- <div class="row mt-4">
                                     <div class="col-12">
@@ -617,6 +709,8 @@
                                         <!-- <span class="badge badge-secondary font-weight-bold">exported</span> -->
                                     </div>
                                 </div>
+
+                                <!-- ANCILLIARY COSTS -->
                                 <div class="row">
                                     <div class="col-12">
                                         <span class="primary-title d-block mt-3 mb-2">invoice setup</span>
@@ -624,7 +718,7 @@
                                             <div class="row">
                                                 <div class="col-12 col-sm-6">
                                                     <label>invoice no. *</label>
-                                                    <input type="text" value="2242" />
+                                                    <input type="text" id="inv-02-no-val" value="2231" />
                                                 </div>
                                                 <div class="col-12 col-sm-6">
                                                     <label>invoice currency</label>
@@ -634,6 +728,12 @@
                                                             <option>CHF</option>
                                                         </select>
                                                     </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <label>payment terms</label>
+                                                    <input type="text" value="Payable within 30 days"/>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -680,70 +780,51 @@
                                                 <div class="border p-3">
                                                     <div class="row">
                                                         <div class="col-12 d-flex justify-content-between align-items-center mb-3">
-                                                            <span class="form-title">ancilliary costs</span>
+                                                            <div>
+                                                                <select class="mr-2">
+                                                                    <option>May 2020</option>
+                                                                    <option>June 2020</option>
+                                                                </select>
+                                                                <span class="form-title">ancilliary costs</span>
+                                                            </div>
+                                                            <span class="btn btn-symbol btn-secondary mt-n2 mr-n2">×</span>
                                                         </div>
                                                         <div class="col-12 table-wrapper">
                                                             <table class="panel-table">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>project cost center</th>
-                                                                        <th>period</th>
-                                                                        <th>hours</th>
-                                                                        <th>amount</th>
-                                                                        <th class="text-right">include</th>
+                                                                        <th>employee</th>
+                                                                        <th>cost types</th>
+                                                                        <th colspan="2">total before VAT</th>
+
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td>1110 Lea Kosti</td>
-                                                                        <td>work June 2020</td>
-                                                                        <td>2846,50</td>
-                                                                        <td>48.791,73</td>
+                                                                        <td>Milana Bogdanovic</td>
+                                                                        <td><a href="javascript:void(0)" data-toggle="modal" data-target="#costDetails" class="badge badge-secondary text-white mr-1">details</a></td>
+                                                                        <td>461,10<span class="eur"></span></td>
                                                                         <td class="text-right">
-                                                                            <label class="switch">
-                                                                                <input type="checkbox" checked="" id="rate-adjustment-possible" class="pronounced-data">
-                                                                                <span class="slider"></span>
-                                                                            </label>
+                                                                            <a href="javascript:void(0)" class="badge badge-secondary">remove</a>
                                                                         </td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>3011 Andrè Steiner</td>
-                                                                        <td>work June 2020</td>
-                                                                        <td>160,00</td>
-                                                                        <td>3.243,68</td>
+                                                                        <td>Bojan Grozdanovic</td>
+                                                                        <td><a href="javascript:void(0)" class="badge badge-secondary text-white mr-1">details</a></td>
+                                                                        <td>45,04<span class="eur"></span></td>
                                                                         <td class="text-right">
-                                                                            <label class="switch">
-                                                                                <input type="checkbox" checked="" id="rate-adjustment-possible" class="pronounced-data">
-                                                                                <span class="slider"></span>
-                                                                            </label>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>1410 Markus Klinkner</td>
-                                                                        <td>work June 2020</td>
-                                                                        <td>3188,00</td>
-                                                                        <td>57.465,66</td>
-                                                                        <td class="text-right">
-                                                                            <label class="switch">
-                                                                                <input type="checkbox" checked="" id="rate-adjustment-possible" class="pronounced-data">
-                                                                                <span class="slider"></span>
-                                                                            </label>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>3010 Benedikt Unold</td>
-                                                                        <td>work June 2020</td>
-                                                                        <td>2710,50</td>
-                                                                        <td>49.625,02</td>
-                                                                        <td class="text-right">
-                                                                            <label class="switch">
-                                                                                <input type="checkbox" checked="" id="rate-adjustment-possible" class="pronounced-data">
-                                                                                <span class="slider"></span>
-                                                                            </label>
+                                                                            <a href="javascript:void(0)" class="badge badge-secondary">remove</a>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
+                                                            <div class="row mt-3">
+                                                                <div class="col-12 col-sm-6">
+                                                                    <label>employee</label>
+                                                                    <input type="text" />
+                                                                    <button class="btn btn-highlight mt-2">Add</button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -752,65 +833,194 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="row mt-4">
-                                    <div class="col-12 more-data">
+                                <!-- SETUP FEE -->
+                                <div class="row">
+                                    <div class="col-12 mt-3">
                                         <div class="border p-3">
-                                            <div class="d-flex justify-content-between align-items-center">
-                                                <span class="form-title">discount</span>
-                                                <label class="switch">
-                                                    <input type="checkbox" id="invoice-discount" class="pronounced-data">
-                                                    <span class="slider"></span>
-                                                </label>
-                                            </div>
                                             <div class="row">
-                                                <div class="col-12">
-                                                    <label>discount desc. *</label>
-                                                    <input type="text" disabled />
-                                                </div>
-                                                <div class="col-12 col-sm-6">
+                                                <div class="col-12 d-flex justify-content-between align-items-center mb-3">
                                                     <div>
-                                                        <label>discount *</label>
-                                                        <div class="select-height-fix d-flex align-items-center">
-                                                            <select class="w-100" disabled>
-                                                                <option selected>amount</option>
-                                                                <option>%</option>
-                                                            </select>
+                                                        <select class="mr-2">
+                                                            <option>May 2020</option>
+                                                            <option>June 2020</option>
+                                                        </select>
+                                                        <span class="form-title">setup fee costs</span>
+                                                    </div>
+                                                    <span class="btn btn-symbol btn-secondary mt-n2 mr-n2">×</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <p>New team member setup fee 1,200.00 CHF (as stated in the contract)</p>
+                                                </div>
+                                                <div class="col-12 table-wrapper">
+                                                    <table class="panel-table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>employee</th>
+                                                                <th colspan="2">total before VAT</th>
+
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Nemanja Krstic</td>
+                                                                <td>1.125,00<span class="eur"></span></td>
+                                                                <td class="text-right">
+                                                                    <a href="javascript:void(0)" class="badge badge-secondary">remove</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Aleksandra Mijuskovic</td>
+                                                                <td>1.125,00<span class="eur"></span></td>
+                                                                <td class="text-right">
+                                                                    <a href="javascript:void(0)" class="badge badge-secondary">remove</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="row mt-3">
+                                                        <div class="col-12 col-sm-6">
+                                                            <label>employee *</label>
+                                                            <input type="text">
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <label>amount *</label>
+                                                            <input type="text">
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button class="btn btn-highlight mt-2">Add</button>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col-12 col-sm-6">
-                                                    <label>value *</label>
-                                                    <input type="text" disabled />
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
 
-                                
+                                <!-- FREE FORM -->
+                                <div class="row">
+                                    <div class="col-12 mt-3">
+                                        <div class="border p-3">
+                                            <div class="row">
+                                                <div class="col-12 d-flex justify-content-between align-items-center mb-3">
+                                                    <div>
+                                                        <select class="mr-2">
+                                                            <option>May 2020</option>
+                                                            <option>June 2020</option>
+                                                        </select>
+                                                        <span class="form-title">other costs</span>
+                                                    </div>
+                                                    <span class="btn btn-symbol btn-secondary mt-n2 mr-n2">×</span>
+                                                </div>
+                                                <div class="col-12 table-wrapper">
+                                                    <table class="panel-table" id="other-costs">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>internal cost center</th>
+                                                                <th>item</th>
+                                                                <th>qty.</th>
+                                                                <th colspan="2">total before VAT</th>
 
-                                <!-- <div class="row mt-4">
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1110 Lea Kosti</td>
+                                                                <td>Additional displays 27" Acer</td>
+                                                                <td>2</td>
+                                                                <td>925,00<span class="eur"></span></td>
+                                                                <td class="text-right">
+                                                                    <a href="javascript:void(0)" class="badge badge-secondary">remove</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>1410 Markus Klinkner</td>
+                                                                <td>Udemy account - monthly</td>
+                                                                <td>1</td>
+                                                                <td>140,00<span class="eur"></span></td>
+                                                                <td class="text-right">
+                                                                    <a href="javascript:void(0)" class="badge badge-secondary">remove</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="row mt-3">
+                                                        <div class="col-12 col-sm-6">
+                                                            <label>item</label>
+                                                            <input type="text" id="other-cost-desc">
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <label>internal cost center</label>
+                                                            <div class="select-height-fix d-flex align-items-center">
+                                                                <select class="w-100" id="int-cost-center">
+                                                                    <option>1110 Lea Kosti</option>
+                                                                    <option>3011 Andrè Steiner</option>
+                                                                    <option>1410 Markus Klinkner</option>
+                                                                    <option>3010 Benedikt Unold</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <label>qty.</label>
+                                                            <div class="select-height-fix d-flex align-items-center">
+                                                                <select class="w-100" id="qty">
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                    <option>4</option>
+                                                                    <option>5</option>
+                                                                    <option>6</option>
+                                                                    <option>7</option>
+                                                                    <option>8</option>
+                                                                    <option>9</option>
+                                                                    <option>10</option>
+                                                                    <option>11</option>
+                                                                    <option>12</option>
+                                                                    <option>13</option>
+                                                                    <option>14</option>
+                                                                    <option>15</option>
+                                                                    <option>16</option>
+                                                                    <option>17</option>
+                                                                    <option>18</option>
+                                                                    <option>19</option>
+                                                                    <option>20</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <label>price per item</label>
+                                                            <input type="text" id="price-per-item">
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button class="btn btn-highlight mt-2" id="add-other-cost">Add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row mt-4">
                                     <div class="col-12">
                                         <div class="border p-3">
-                                            <span class="form-title mb-3">Add cost</span>
+                                            <span class="form-title mb-3">Add cost type</span>
                                             <div class="row">
                                                 <div class="col-12 col-sm-6">
                                                     <label>cost type</label>
                                                     <select class="w-100">
                                                         <option>discount</option>
                                                         <option>setup fee</option>
+                                                        <option>other costs</option>
                                                     </select>
                                                     <button class="btn btn-highlight mt-3">Add Cost</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
-
+                                </div>
                             </div>
-
-
-
                         </div>
 
                         <div class="row vct-employees-tab d-none">
@@ -886,7 +1096,7 @@
                         <small class="d-block w-100 text-right">Last export: <span id="last-invoice-export-date">04.06.2020, 12:33</span></small>
                         <div class="invoice-preview-wrapper border">
                             <!-- INVOICE CONTENT -->
-                            <div class="invoice-preview p-4">
+                            <div class="invoice-preview p-4" id="inv-1preview">
                                 <div class="row">
                                     <div class="col-4">
                                         <small id="vat-no">CHE-141.994.256 MWST</small>
@@ -993,7 +1203,7 @@
                                                     </div>
                                                 </div>
                                                 <!-- DISCOUNT -->
-                                                <div class="row mt-3" id="discount">
+                                                <div class="row mt-3" id="discount" style="display: none;">
                                                     <div class="col-12 table-wrapper">
                                                         <span class="invoice-subtitle">Discount</span>
                                                         <table class="panel-table">
@@ -1014,7 +1224,7 @@
                                                         </table>
                                                     </div>
                                                 </div>
-                                                
+
                                                 <!-- AKONTO -->
                                                 <div class="row mt-3" id="akonto">
                                                     <div class="col-12 table-wrapper">
@@ -1059,6 +1269,210 @@
                                                 <tr>
                                                     <td>Total for payment:</td>
                                                     <td colspan="2" class="text-right"><span class="eur font-weight-bold">171.583,19</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <!-- TERMS, ACCOUNT, Sign off -->
+                                    <div class="col-12 mt-4">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <small>Payment Terms:</small>
+                                                <p>Payable within 30 days</p>
+                                            </div>
+                                            <div class="col-6">
+                                                <small>Bank details:</small>
+                                                <div>Bank:<span id="payment-account-bank-print" class="ml-2">Zürcher Kantonalbank</span></div>
+                                                <div>IBAN:<span id="payment-account-iban-print" class="ml-2">CH18 0070 0110 0057 01947</span></div>
+                                                <div>Account No.:<span id="payment-account-no-print" class="ml-2">1100-5701.947</span></div>
+                                            </div>
+                                            <div class="col-12 my-3">
+                                                Thank you for your order and best regards.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- INV-2 -->
+                            <div class="invoice-preview p-4" id="inv-2preview" style="display: none;">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <small id="vat-no">CHE-141.994.256 MWST</small>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div id="company-logo" class="col-12">
+                                                <img id="invoice-company-logo" src="assets/images/logo-nsmeng.svg" alt="nsm engineering ag" />
+                                            </div>
+                                            <div id="company-nsm" class="company-data col-12 mt-2 text-right text-break">
+                                                <small>
+                                                    <div id="company-name" class="font-weight-bold">NSM Engineering AG</div>
+                                                    <span id="company-address" class="sep">Blegistrasse 17a</span>
+                                                    <span id="company-post-city">CH-6340 Baar</span>
+                                                    <div id="company-post-phone">+41 541 78 66</div>
+                                                    <div id="company-post-email">office@nsm-engineering.com</div>
+                                                    <div id="company-post-web">www.nsm-engineering.com</div>
+                                                </small>
+                                            </div>
+                                            <div id="company-yc" class="company-data col-12 mt-2 text-right text-break" style="display: none;">
+                                                <small>
+                                                    <div id="company-name" class="font-weight-bold">youngculture AG</div>
+                                                    <span id="company-address" class="sep">Neptunstrasse 96</span>
+                                                    <span id="company-post-city">8032 Zürich</span>
+                                                    <div id="company-post-phone">+41 44 262 00 82</div>
+                                                    <div id="company-post-email">office@youngculture.com</div>
+                                                    <div id="company-post-web">youngculture.com</div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4">
+                                    <div class="col-6">
+                                        <small>For:</small>
+                                        <div id="client-name" class="font-weight-bold">Crealogix (Deutschland) AG</div>
+                                        <div id="cost-center-address">Breitscheidstraße 10</div>
+                                        <span id="cost-center-post-no">70174</span>
+                                        <span id="cost-center-city">Stuttgart</span>
+                                        <div id="cost-center-country">Deutschland</div>
+                                    </div>
+                                    <div class="col-3">
+                                        <small>Date:</small>
+                                        <div id="todays-date">04.06.2020</div>
+                                    </div>
+                                    <div class="col-3">
+                                        <small>Client number:</small>
+                                        <div id="client-no">127</div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <h5 id="invoice-title">Invoice no.<span id="invoice-no" class="ml-2">2231</span></h5>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 invoice-item">
+                                    <div class="col-12" id="nearshoring-fee">
+                                        <div class="invoice-subtitle">Ancilliary Costs</div>
+                                        <p>According to cost report</p>
+                                        <div class="row">
+                                            <div class="col-12 additional-fee">
+                                                <!-- ANCILLIARY CISTS -->
+                                                <div class="row">
+                                                    <div class="col-12 table-wrapper">
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>project cost center</th>
+                                                                    <th>employee</th>
+                                                                    <th>cost type</th>
+                                                                    <th class="text-right">amount</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1110 Lea Kosti</td>
+                                                                    <td>Milana Bogdanovic</td>
+                                                                    <td>Travel, Hotel</td>
+                                                                    <td class="text-right"><span class="eur">461,10</span></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3011 Andrè Steiner</td>
+                                                                    <td>Bojan Grozdanovic</td>
+                                                                    <td>Local transportation</td>
+                                                                    <td class="text-right"><span class="eur">45,04</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <!-- SETUP FEE -->
+                                                <div class="row mt-3">
+                                                    <div class="col-12 table-wrapper">
+                                                        <span class="invoice-subtitle">Setup fee</span>
+                                                        <p>According to cost report</p>
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>project cost center</th>
+                                                                    <th>employee</th>
+                                                                    <th class="text-right">amount</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>3010 Benedikt Unold</td>
+                                                                    <td>Nemanja Krstic</td>
+                                                                    <td class="text-right"><span class="eur">1.125,00</span></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3011 Andrè Steiner</td>
+                                                                    <td>Aleksandra Mijuskovic</td>
+                                                                    <td class="text-right"><span class="eur">1.125,00</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                                <!-- OTHER COSTS -->
+                                                <div class="row mt-3">
+                                                    <div class="col-12 table-wrapper">
+                                                        <span class="invoice-subtitle">Other Costs</span>
+                                                        <p>According to cost report</p>
+                                                        <table class="panel-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>project cost center</th>
+                                                                    <th>item</th>
+                                                                    <th class="text-right">amount</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>1110 Lea Kosti</td>
+                                                                    <td>Additional displays 27" Acer</td>
+                                                                    <td class="text-right"><span class="eur">925,00</span></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>1410 Markus Klinkner</td>
+                                                                    <td>Udemy account - monthly</td>
+                                                                    <td class="text-right"><span class="eur">140,00</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3 invoice-item">
+                                    <!-- TOTALS -->
+                                    <div class="col-8 offset-4 table-wrapper">
+                                        <table class="panel-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Total before VAT:</td>
+                                                    <td colspan="2" class="text-right"><span class="eur">3.821,14</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>VAT:</td>
+                                                    <td>7,7%</td>
+                                                    <td class="text-right"><span class="eur">294,22</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total for payment:</td>
+                                                    <td colspan="2" class="text-right"><span class="eur font-weight-bold">4.115,36</span></td>
                                                 </tr>
                                             </tbody>
                                         </table>

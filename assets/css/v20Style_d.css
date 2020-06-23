@@ -133,11 +133,14 @@ body.modal-open .vct-content {
   color: white;
 }
 .btn.btn-secondary {
-  background: #5d5d54 !important;
+  background: #42423c !important;
   border: #5d5d54;
 }
 .btn.btn-secondary:hover {
   background: #6a6a60 !important;
+}
+.border {
+  border: 1px solid rgba(213, 213, 213, 0.7) !important;
 }
 .vct-top-nav {
   background: rgba(0, 0, 0, 0.7);
@@ -1553,9 +1556,13 @@ table.overview td {
   font-size: 14px;
   font-weight: 600;
 }
+.invoice-preview-wrapper .panel-table {
+  background: transparent;
+}
 .invoice-preview-wrapper .panel-table th,
 .invoice-preview-wrapper .panel-table td {
-  padding: 0 !important;
+  padding: 2px !important;
+  border-bottom: 1px solid rgba(213, 213, 213, 0.3);
 }
 .eur:after {
   content: "EUR";

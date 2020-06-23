@@ -121,11 +121,14 @@ body {
     }
   }
   &.btn-secondary {
-    background: lighten(@basetextColor, 25%) !important;
+    background: @basetextColor !important;
     &:hover {
-      background: lighten(@basetextColor, 15%) !important;
+      background: lighten(@basetextColor, 20%) !important;
     }
   }
+}
+.border {
+  border: 1px solid fade(@basetextColor, 40%) !important;
 }
 .vct-top-nav {
   background: white;
@@ -1597,9 +1600,10 @@ table.overview {
     font-weight: 600;
   }
   .panel-table {
+    background: transparent;
     th,
     td {
-      padding: 0 !important;
+      padding: 2px !important;
     }
   }
 }

@@ -335,6 +335,7 @@ $(document).ready(function () {
             $('.vct-project-tab').removeClass('d-none');
             $('.vct-employees-tab').addClass('d-none');
             $(this).toggleClass('selected');
+            $('.period-invoices').show();
             $('#tab-employees').toggleClass('selected');
             $('.invoice-preview').removeClass('copy');
             $('#export-invoice-btn').show();
@@ -346,6 +347,7 @@ $(document).ready(function () {
             $('.vct-project-tab').addClass('d-none');
             $('.vct-employees-tab').removeClass('d-none');
             $(this).toggleClass('selected');
+            $('.period-invoices').hide();
             $('#tab-projects').toggleClass('selected');
             $('.add-member').hide();
             $('.invoice-preview').addClass('copy');
@@ -1101,6 +1103,7 @@ $(document).ready(function () {
     //ENABLE CONTRACT RATE ADJUSTMENT
     $('#invoice-discount').on('change', function () {
         if ($(this).prop('checked')) {
+            $('#discount').show();
             $(this).parents('.more-data').find('input').prop('disabled', false);
             $(this).parents('.more-data').find('select').prop('disabled', false);
             $(this).val('possible');
@@ -1108,6 +1111,7 @@ $(document).ready(function () {
         }
         else {
             $(this).parents('.more-data').find('input[type=text]').prop('disabled', true);
+            $('#discount').hide();
             $(this).parents('.more-data').find('select').prop('disabled', true);
             $(this).val('not possible');
             $(this).parents('.more-data').find('textarea').prop('disabled', true);
@@ -1120,9 +1124,11 @@ $(document).ready(function () {
 
         $('.btn-invoice').removeClass('selected');
         $('.tab-content').hide();
+        $('.invoice-preview').hide();
 
         $(this).addClass('selected');
         $("#" + tab_id).show();
+        $("#" + tab_id + 'preview').show();
     });
 
     //NOTIFICATIONS
@@ -1145,6 +1151,26 @@ $(document).ready(function () {
     //RELOAD
     $('#refresh').on('click', function(){
         location.reload();
+    });
+
+    //INV NO
+    $('#inv-02-no-val').on('keyup', function(){
+        var no = $(this).val();
+        $('#inv-02-no').text(no);
+    });
+
+    //APPEND TO OTHER COSTS
+    $('#add-other-cost').on('click', function(){
+        var otherCostDesc = $('#other-cost-desc').val();
+        var qty = $('#qty').val();
+        var icc = $('#int-cost-center').val();
+        var pricePerItem = $('#price-per-item').val();
+        var total = pricePerItem*qty;
+        var row = '<tr><td>'+ icc + '</td><td>' + otherCostDesc + '</td><td>' + qty + '</td><td>' + total + '<span class="eur"></span></td><td class="text-right"> <a href="javascript:void(0)" class="badge badge-secondary">remove</a> </td></tr>';
+        $('#other-costs').find('tbody').append(row);
+        $('#other-cost-desc').val('');
+        $('#qty').val('');
+        $('#price-per-item').val('');
     });
 
 });
