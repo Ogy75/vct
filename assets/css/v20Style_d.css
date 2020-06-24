@@ -93,16 +93,13 @@ body.modal-open .vct-content {
   font-size: 12px;
   text-transform: none;
   letter-spacing: 0;
-  line-height: 14px;
+  line-height: 12px;
   padding: 4px;
   text-align: left;
   min-width: auto;
   border: none;
-  border-radius: 4px;
-  padding-left: 8px !important;
-}
-.btn.btn-invoice.fixed {
-  padding: 4px 8px;
+  border-radius: 12px;
+  padding: 6px 10px !important;
 }
 .btn.btn-invoice.selected {
   background-color: #177397;
@@ -116,20 +113,10 @@ body.modal-open .vct-content {
   color: white;
 }
 .btn.btn-invoice i {
-  color: white;
-  border-radius: 2px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-right: 2px;
-  margin-left: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
 }
 .btn.btn-invoice i:hover {
-  color: #d8483e;
-}
-.btn.btn-invoice i.add {
-  color: white;
-}
-.btn.btn-invoice i.add:hover {
   color: white;
 }
 .btn.btn-secondary {

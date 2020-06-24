@@ -563,14 +563,21 @@ $(document).ready(function () {
     });
 
     //ADD/REMOVE RATE ITEM
-    $('.js_clone-1').on('click', function () {
-        var form = '<div class="col-12 js_item" id="js_item-1"> <div class="border-bottom pb-3"> <div class="row"> <div class="col-12 col-sm-6 order-2 order-sm-1"> <label for="contract-position">commercial position *</label> <input type="text" name="contract-position"> </div><div class="col-12 col-sm-6 d-flex justify-content-between align-items-end order-1 order-sm-3"> <div class="w-100 mr-3"> <label for="my-company-name">internal position *</label> <div class="select-height-fix d-flex align-items-center"> <select name="my-company-name" class="w-100"> <option selected>Select Internal position</option> <option>Team Lead</option> <option>Senior N1</option> <option>Senior N2</option> <option>Professional N1</option> <option>Professional N2</option> <option>Engineer N1</option> <option>Engineer N2</option> </select> </div></div><span class="btn btn-symbol btn-secondary js_delete-1">&times;</span> </div><div class="col-12 col-sm-6 order-3"> <div class="row"> <div class="col-6"> <label for="rate">rate (CHF)</label> <input type="text" name="rate"/> </div><div class="col-6"> <label for="rate-on-site">rate on-site (CHF)</label> <input type="text" name="rate-on-site"/> </div></div></div><div class="col-12 col-sm-6 order-4"> <label for="rate-valid-from">rate valid from</label> <input type="text" name="rate-valid-from"/> </div></div></div></div>';
-        var container = $('.js_items-1');
-        $(form).appendTo($(container));
-        $('.js_delete-1').on('click', function () {
-            $(this).parents('.js_item').remove();
+        $('.js_clone-1').on('click', function () {
+            var form = '<div class="col-12 js_item" id="js_item-1"> <div class="border p-3 mb-3"> <div class="row"> <div class="col-12 d-flex justify-content-end"> <span class="btn btn-symbol btn-secondary mt-n2 mr-n2 js_delete-1">×</span> </div><div class="col-12 d-flex justify-content-between align-items-end"> <div class="w-100"> <label for="my-company-name">internal position *</label> <div class="select-height-fix d-flex align-items-center"> <select name="my-company-name" class="w-100"> <option selected="">Select Internal position</option> <option>Team Lead</option> <option>Senior N1</option> <option>Senior N2</option> <option>Professional N1</option> <option>Professional N2</option> <option>Engineer N1</option> <option>Engineer N2</option> </select> </div></div></div><div class="col-12"> <label for="contract-position">commercial position *</label> <input type="text" name="contract-position"> </div><div class="col-12 col-sm-6"> <div class="row"> <div class="col-6"> <label for="rate">rate (CHF)</label> <input type="text" name="rate"> </div><div class="col-6"> <label for="rate-on-site">rate on-site (CHF)</label> <input type="text" name="rate-on-site"> </div></div></div><div class="col-12 col-sm-6"> <label for="rate-valid-from">rate valid from</label> <input type="text" name="rate-valid-from"> </div></div></div></div>';
+            var container = $('.js_items-1');
+            $(form).appendTo($(container));
+            $('.js_delete-1').on('click', function () {
+                $(this).parents('.js_item').remove();
+            });
         });
+
+    //commercial rate display
+    $('input[name="contract-position"]').on('keyup', function () {
+        var comPosition = $(this).val();
+        $(this).parents('.js_item').find('.form-title').text(comPosition);
     });
+        
 
     //ENABLE CONTRACT RATE ADJUSTMENT
     $('#rate-adjustment-possible').on('change', function () {
@@ -1137,11 +1144,11 @@ $(document).ready(function () {
         $('.close-item').on('click', function () {
             $(this).parents('.my-notification').remove();
             $('.js_notificationCount').text($('.my-notification').length);
-            if($('.my-notification').length < 1){
+            if ($('.my-notification').length < 1) {
                 $('.js_notificationCount').hide();
                 $('.no-notifications-message').show();
             }
-            else{
+            else {
                 $('.js_notificationCount').show();
                 $('.no-notifications-message').hide();
             }
@@ -1149,24 +1156,24 @@ $(document).ready(function () {
     });
 
     //RELOAD
-    $('#refresh').on('click', function(){
+    $('#refresh').on('click', function () {
         location.reload();
     });
 
     //INV NO
-    $('#inv-02-no-val').on('keyup', function(){
+    $('#inv-02-no-val').on('keyup', function () {
         var no = $(this).val();
         $('#inv-02-no').text(no);
     });
 
     //APPEND TO OTHER COSTS
-    $('#add-other-cost').on('click', function(){
+    $('#add-other-cost').on('click', function () {
         var otherCostDesc = $('#other-cost-desc').val();
         var qty = $('#qty').val();
         var icc = $('#int-cost-center').val();
         var pricePerItem = $('#price-per-item').val();
-        var total = pricePerItem*qty;
-        var row = '<tr><td>'+ icc + '</td><td>' + otherCostDesc + '</td><td>' + qty + '</td><td>' + total + '<span class="eur"></span></td><td class="text-right"> <a href="javascript:void(0)" class="badge badge-secondary">remove</a> </td></tr>';
+        var total = pricePerItem * qty;
+        var row = '<tr><td>' + icc + '</td><td>' + otherCostDesc + '</td><td>' + qty + '</td><td>' + total + '<span class="eur"></span></td><td class="text-right"> <a href="javascript:void(0)" class="badge badge-secondary">remove</a> </td></tr>';
         $('#other-costs').find('tbody').append(row);
         $('#other-cost-desc').val('');
         $('#qty').val('');
@@ -1174,7 +1181,7 @@ $(document).ready(function () {
     });
 
     //ADD INTERNAL COST CENTER
-    $('#add-int-cc').on('click', function(){
+    $('#add-int-cc').on('click', function () {
         var ccNo = $('#int-cc-no').val();
         var ccName = $('#int-cc-name').val();
         var cc = '<span class="badge badge-technology mr-2 mt-2"><span class="pr-1" id="icc-no">' + ccNo + '</span> <span id="icc-name">' + ccName + '</span><i class="close-badge fas fa-window-close"></i></span>';
@@ -1193,6 +1200,11 @@ $(document).ready(function () {
             $('.int-cc').hide();
             $(this).parents('.contract-section').find('.badge-secondary').text('no internal cost centers');
         }
+    });
+
+    //COST HANDLING
+    $('.js_removeCost').on('click', function () {
+        $(this).parents('.invoice-items-group').remove();
     });
 
 });

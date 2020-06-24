@@ -90,49 +90,36 @@ body{
             background:darken(@warningColor, 15%) ;
         }
     }
-    &.btn-invoice{ 
-      display:inline-block;
+    &.btn-invoice {
+      display: inline-block;
       background: lighten(@basetextColor, 10%);
       color: white;
       font-size: 12px;
       text-transform: none;
       letter-spacing: 0;
-      line-height: 14px;
-      padding:4px;
+      line-height: 12px;
+      padding: 4px;
       text-align: left;
       min-width: auto;
       border: none;
-      border-radius: 4px;
-      padding-left:8px !important;
-      &.fixed{
-        padding:4px 8px;
-      }
-      &.selected{
+      border-radius: 12px;
+      padding: 6px 10px !important;
+      &.selected {
         background-color: @highlightColor;
-        &:hover{
+        &:hover {
           background-color: @highlightColor;
-          color:white;
+          color: white;
         }
       }
-      &:hover{
-        background-color:lighten(@basetextColor,35%);
-        color:white;
+      &:hover {
+        background-color: lighten(@basetextColor, 35%);
+        color: white;
       }
-      i{
-        color:white;
-        border-radius: 2px;
-        margin-top:0px;
-        margin-bottom:0px;
-        margin-right: 2px;
-        margin-left:6px;
-        &:hover{
-          color:@warningColor;
-        }
-        &.add{
-          color:white;
-          &:hover{
-            color:white;
-          }
+      i {
+        color: fade(white,70%);  
+        display: inline-block;
+        &:hover {
+          color: white;
         }
       }
     }

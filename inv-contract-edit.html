@@ -1418,99 +1418,15 @@
                 <!-- RATES PANEL -->
                 <div class="col-12 vct-employees-tab d-none">
                     <div class="row">
-                        <!-- RATES FORM -->
-                        <div class="col-12 col-lg-6">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="p-4 text-left panel-container">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="d-flex mb-4 justify-content-between align-items-start">
-                                                    <div class="form-title text-nowrap text-truncate">Position Mapping and Rates</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="contract-section">
-                                            <div class="row">
-                                                <div class="col-12">
-
-                                                    <div class="row js_items-1">
-                                                        <!-- POSITION/RATES -->
-                                                        <div class="col-12 js_item" id="js_item-1">
-                                                            <div class="border-bottom pb-3">
-                                                                <div class="row">
-                                                                    <div class="col-12 col-sm-6 order-2 order-sm-1">
-                                                                        <label for="contract-position">commercial position *</label>
-                                                                        <input type="text" name="contract-position">
-                                                                    </div>
-                                                                    <div class="col-12 col-sm-6 d-flex justify-content-between align-items-end order-1 order-sm-3">
-                                                                        <div class="w-100 mr-3">
-                                                                            <label for="my-company-name">internal position *</label>
-                                                                            <div class="select-height-fix d-flex align-items-center">
-                                                                                <select name="my-company-name" class="w-100">
-                                                                                    <option selected>Select Internal position</option>
-                                                                                    <option>Team Lead</option>
-                                                                                    <option>Senior N1</option>
-                                                                                    <option>Senior N2</option>
-                                                                                    <option>Professional N1</option>
-                                                                                    <option>Professional N2</option>
-                                                                                    <option>Engineer N1</option>
-                                                                                    <option>Engineer N2</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </div>
-                                                                        <span class="btn btn-symbol btn-secondary js_delete-1">&times;</span>
-                                                                    </div>
-                                                                    <div class="col-12 col-sm-6 order-3">
-                                                                        <div class="row">
-                                                                            <div class="col-6">
-                                                                                <label for="rate">rate (CHF)</label>
-                                                                                <input type="text" name="rate" />
-                                                                            </div>
-                                                                            <div class="col-6">
-                                                                                <label for="rate-on-site">rate on-site (CHF)</label>
-                                                                                <input type="text" name="rate-on-site" />
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 col-sm-6 order-4">
-                                                                        <label for="rate-valid-from">rate valid from</label>
-                                                                        <input type="text" name="rate-valid-from" />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <div class="border-bottom py-3">
-                                                                <span class="btn btn-secondary js_clone-1">add position</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="pt-4">
-                                                    <button class="btn btn-highlight">Save Contract Rates</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <!-- RATES HISTORY -->
-                        <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+                        <div class="col-12 col-lg-7">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="p-4 text-left panel-container rate-history">
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="d-flex mb-4 justify-content-between align-items-start">
-                                                    <div class="form-title text-nowrap text-truncate">Rate History</div>
+                                                    <div class="form-title text-nowrap text-truncate">Rate Overview</div>
                                                     <div>
                                                         <select>
                                                             <option>all time</option>
@@ -1533,7 +1449,7 @@
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <div class="d-flex mt-4 mb-2 justify-content-between align-items-start">
-                                                            <div class="form-title text-nowrap text-truncate">Rate History Logs</div>
+                                                            <div class="form-title text-nowrap text-truncate">Rates change Log</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3325,6 +3241,93 @@
                                             </div>
                                         </div>
                                         <button class="btn btn-secondary mt-3 load-more-rate">load more</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- RATES FORM -->
+                        <div class="col-12 col-lg-5 mt-5 mt-lg-0">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="p-4 text-left panel-container">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-flex mb-4 justify-content-between align-items-start">
+                                                    <div class="form-title text-nowrap text-truncate">Rates and Position Mapping</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contract-section">
+                                            <div class="row">
+                                                <div class="col-12">
+
+                                                    <div class="row js_items-1">
+                                                        <!-- POSITION/RATES -->
+                                                        <div class="col-12 js_item" id="js_item-1">
+                                                            <div class="border p-3 mb-3">
+                                                                <div class="row">
+                                                                    <div class="col-12 d-flex justify-content-between">
+                                                                        <span class="form-title d-block"></span>
+                                                                        <span class="btn btn-symbol btn-secondary mt-n2 mr-n2 js_delete-1">&times;</span>
+                                                                    </div>
+                                                                    <div class="col-12  d-flex justify-content-between align-items-end">
+                                                                        <div class="w-100">
+                                                                            <label for="my-company-name">internal position *</label>
+                                                                            <div class="select-height-fix d-flex align-items-center">
+                                                                                <select name="my-company-name" class="w-100">
+                                                                                    <option selected>Select Internal position</option>
+                                                                                    <option>Team Lead</option>
+                                                                                    <option>Senior N1</option>
+                                                                                    <option>Senior N2</option>
+                                                                                    <option>Professional N1</option>
+                                                                                    <option>Professional N2</option>
+                                                                                    <option>Engineer N1</option>
+                                                                                    <option>Engineer N2</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <label for="contract-position">commercial position *</label>
+                                                                        <input type="text" name="contract-position">
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-6">
+                                                                        <div class="row">
+                                                                            <div class="col-6">
+                                                                                <label for="rate">rate (CHF)</label>
+                                                                                <input type="text" name="rate" />
+                                                                            </div>
+                                                                            <div class="col-6">
+                                                                                <label for="rate-on-site">rate on-site (CHF)</label>
+                                                                                <input type="text" name="rate-on-site" />
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 col-sm-6">
+                                                                        <label for="rate-valid-from">rate valid from</label>
+                                                                        <input type="text" name="rate-valid-from" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="border-bottom pb-3">
+                                                                <span class="btn btn-secondary js_clone-1">add position</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="pt-4">
+                                                    <button class="btn btn-highlight">Save Contract Rates</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
