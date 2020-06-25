@@ -533,8 +533,17 @@
                                 <div class="d-flex justify-content-between align-items-center mb-3">
                                     <span class="form-title d-block">crealogix germany</span>
                                     <div>
-                                        <span class="badge badge-success font-weight-bold">ready</span>
+                                        <span class="badge badge-success font-weight-bold" id="lock-status">ready</span>
                                         <span class="badge badge-secondary font-weight-bold">exported</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <label class="switch">
+                                            <input type="checkbox" id="invoice-lock" checked>
+                                            <span class="slider"></span>
+                                        </label>
+                                        <span class="switch-label ml-1">invoice data locked</span>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -1019,9 +1028,10 @@
                                                 <div class="col-12 col-sm-6">
                                                     <label>cost type</label>
                                                     <select class="w-100">
-                                                        <option>discount</option>
-                                                        <option>setup fee</option>
-                                                        <option>other costs</option>
+                                                        <option disabled>ancilliary costs</option>
+                                                        <option disabled>setup fee</option>
+                                                        <option disabled>other costs</option>
+                                                        <option selected>neka opcija 4 ako je ima...</option>
                                                     </select>
                                                     <button class="btn btn-highlight mt-3">Add Cost</button>
                                                 </div>

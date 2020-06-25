@@ -1207,4 +1207,16 @@ $(document).ready(function () {
         $(this).parents('.invoice-items-group').remove();
     });
 
+    //INVOICE LOCK
+    $('#invoice-lock').on('change', function () {
+        if ($(this).prop('checked')) {
+            $('#lock-status').removeClass('badge-warning');
+            $('#lock-status').addClass('badge-success').text('ready');
+        }
+        else {
+            $('#lock-status').removeClass('badge-success');
+            $('#lock-status').addClass('badge-warning').text('not ready');
+        }
+    });
+
 });
