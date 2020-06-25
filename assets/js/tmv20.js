@@ -1220,9 +1220,9 @@ $(document).ready(function () {
     });
 
     //REPORT SWITCH
-    $('.tab-button').click(function () {
-        var tab_id = $(this).attr('data-tab');
-        $('.tab-button').removeClass('selected');
+    $('.js_reportBtn').click(function () {
+        var tab_id = $(this).attr('data-type');
+        $('.js_reportBtn').removeClass('selected');
         $(this).addClass('selected');
         $('.report-table').hide();
         $("#" + tab_id).show();
