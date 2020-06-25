@@ -1219,4 +1219,13 @@ $(document).ready(function () {
         }
     });
 
+    //REPORT SWITCH
+    $('.tab-button').click(function () {
+        var tab_id = $(this).attr('data-tab');
+        $('.tab-button').removeClass('selected');
+        $(this).addClass('selected');
+        $('.report-table').hide();
+        $("#" + tab_id).show();
+    });
+
 });

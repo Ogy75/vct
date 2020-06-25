@@ -313,6 +313,14 @@ input:disabled {
 .widget-container .table-wrapper table.panel-table tfoot tr td {
   padding: 8px 5px;
 }
+.panel-container .table-wrapper div.report-table table,
+.widget-container .table-wrapper div.report-table table {
+  font-size: 13px;
+}
+.panel-container .table-wrapper div.report-table table tr td,
+.widget-container .table-wrapper div.report-table table tr td {
+  padding: 4px;
+}
 .panel-container .table-toggle,
 .widget-container .table-toggle {
   background: #1E9BCC;
