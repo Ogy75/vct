@@ -1214,6 +1214,9 @@ ul.vct-nav-menu ul.vct-nav-level1 {
   list-style: none;
   padding: 0;
 }
+ul.vct-nav-menu ul.vct-nav-level1 li:last-child {
+  margin-bottom: 0;
+}
 ul.vct-nav-menu ul.vct-nav-level1 li a {
   background: transparent !important;
   padding-left: 20px;
