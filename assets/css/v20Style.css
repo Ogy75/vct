@@ -1525,7 +1525,7 @@ table.overview td {
   padding: 2px !important;
 }
 .eur:after {
-  content: "EUR";
+  content: "€";
   margin-left: 4px;
 }
 .chf:after {
