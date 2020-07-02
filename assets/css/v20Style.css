@@ -1122,6 +1122,9 @@ ul.vct-nav-menu {
 ul.vct-nav-menu li {
   display: block;
 }
+ul.vct-nav-menu li:last-child {
+  margin-bottom: 60px;
+}
 ul.vct-nav-menu li a {
   font-weight: 500;
   letter-spacing: 0.4px;
