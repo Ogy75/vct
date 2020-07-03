@@ -312,19 +312,19 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span>company level</div>
-                                            <span class="badge badge-secondary"></span>
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>company level</div>
+                                            <span class="badge badge-secondary">parent</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row more-data">
+                                <div class="row more-data" style="display: none;">
                                     <div class="col-12 col-sm-6">
                                         <label for="company-tree">Status</label>
                                         <div class="select-height-fix d-flex align-items-center">
                                             <select name="company-tree" class="w-100 pronounced-data">
-                                                <option selected value="">select company status</option>
-                                                <option selected value="parent co.">parent company</option>
-                                                <option value="child co.">child company</option>
+                                                <option value="">select company status</option>
+                                                <option selected value="parent">parent company</option>
+                                                <option value="child">child company</option>
                                             </select>
                                         </div>
                                     </div>
@@ -336,20 +336,20 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span>general company data</div>
-                                            <span class="badge badge-secondary"></span>
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>general company data</div>
+                                            <span class="badge badge-secondary">active</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row more-data">
+                                <div class="row more-data" style="display: none;">
                                     <div class="col-12 col-sm-6">
                                         <label for="company-name">Company Name *</label>
-                                        <input type="text" name="company-name" class="pronounced-data" />
+                                        <input type="text" name="company-name" />
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="company-status">Status</label>
                                         <div class="select-height-fix d-flex align-items-center">
-                                            <select name="company-status" class="w-100">
+                                            <select name="company-status" class="w-100 pronounced-data">
                                                 <option value="">Select status</option>
                                                 <option selected value="active">Active</option>
                                                 <option value="inactive">Inactive</option>
@@ -406,19 +406,15 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span>company address</div>
-                                            <span class="badge badge-secondary"></span>
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>company address</div>
+                                            <span class="badge badge-secondary">Blegistrasse 17a</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row more-data">
+                                <div class="row more-data" style="display: none;">
                                     <div class="col-12 col-sm-6">
                                         <label for="company-address-street">Street *</label>
-                                        <input type="text" name="company-address-street" class="pronounced-data" />
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label for="company-address-street-no">Street no. *</label>
-                                        <input type="text" name="company-address-street-no" />
+                                        <input type="text" name="company-address-street" value="Blegistrasse 17a" class="pronounced-data" />
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="company-address-city">City *</label>
@@ -436,12 +432,12 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span>company contact details</div>
-                                            <span class="badge badge-secondary"></span>
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>company contact details</div>
+                                            <span class="badge badge-secondary">office@nsm-engineering.com</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row more-data">
+                                <div class="row more-data" style="display: none;">
                                     <div class="col-12 col-sm-6">
                                         <label for="company-address-tel1">Phone no.</label>
                                         <input type="text" name="company-address-tel1" />
@@ -452,7 +448,7 @@
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="company-email">E-mail *</label>
-                                        <input type="text" name="company-email" class="pronounced-data" />
+                                        <input type="text" name="company-email" value="office@nsm-engineering.com" class="pronounced-data" />
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <label for="company-web">Web</label>
@@ -466,12 +462,12 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
-                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-up arrow"></span>company bank accounts</div>
-                                            <span class="badge badge-secondary"></span>
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>company bank accounts</div>
+                                            <span class="badge badge-secondary">1</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row more-data">
+                                <div class="row more-data" style="display: none;">
                                     <div class="col-12">
                                         <div class="py-3" id="bamk-account-1">
                                             <div class="row js_items">
