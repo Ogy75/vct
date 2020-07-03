@@ -593,6 +593,18 @@ $(document).ready(function () {
         }
     });
 
+    //ENABLE AKONTO
+    $('#akonto-payment').on('change', function () {
+        if ($(this).prop('checked')) {
+            $(this).parents('.more-data').find('input').prop('disabled', false);
+            $(this).val('akonto payment');
+        }
+        else {
+            $(this).parents('.more-data').find('input[type=text]').prop('disabled', true);
+            $(this).val('recurring payment');
+        }
+    });
+
     //SETUP FEE POSSIBLE
     $('#ancilliary-setup-fee').on('change', function () {
         if ($(this).prop('checked')) {
