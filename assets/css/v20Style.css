@@ -41,6 +41,12 @@ body.modal-open .vct-content {
   min-width: 33px;
   padding: 5px 5px;
   font-size: 18px;
+  border: 1px solid #919186;
+}
+.btn.btn-symbol:hover {
+  background-color: #42423c;
+  border: 1px solid #42423c;
+  color: white;
 }
 .btn.btn-cancel {
   background: transparent;
@@ -109,7 +115,7 @@ body.modal-open .vct-content {
   background: #77776d !important;
 }
 .border {
-  border: 1px solid rgba(66, 66, 60, 0.4) !important;
+  border: 1px solid rgba(66, 66, 60, 0.5) !important;
 }
 .vct-top-nav {
   background: white;

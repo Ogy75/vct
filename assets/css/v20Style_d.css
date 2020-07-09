@@ -57,6 +57,12 @@ body.modal-open .vct-content {
   min-width: 33px;
   padding: 5px 5px;
   font-size: 18px;
+  border: 1px solid #d5d5d5;
+  color: #d5d5d5;
+}
+.btn.btn-symbol:hover {
+  background-color: #d5d5d5;
+  color: #42423c;
 }
 .btn.btn-cancel {
   background: transparent;
