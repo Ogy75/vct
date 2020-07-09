@@ -1240,4 +1240,20 @@ $(document).ready(function () {
         $("#" + tab_id).show();
     });
 
+    //ANCILLARY COSTS EXCLUDE INCLUDE
+    $('.js_exclude').on('click', function () { 
+            if (($(this).text())==='exclude'){
+                $(this).removeClass('badge-danger');
+                $(this).addClass('badge-success');
+                $(this).text('include');
+                $(this).parents('tr').addClass('bg-warning');
+            }
+            else if (($(this).text())==='include'){
+                $(this).addClass('badge-danger');
+                $(this).removeClass('badge-success');
+                $(this).text('exclude');
+                $(this).parents('tr').removeClass('bg-warning');
+            }
+    });
+
 });
