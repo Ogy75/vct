@@ -301,7 +301,7 @@ input:disabled {
 }
 .panel-container .table-wrapper table.panel-table tbody tr td.tooltip-width,
 .widget-container .table-wrapper table.panel-table tbody tr td.tooltip-width {
-  max-width: 120px;
+  max-width: 70px;
   cursor: pointer;
 }
 .panel-container .table-wrapper table.panel-table tfoot tr,
