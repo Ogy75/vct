@@ -201,7 +201,7 @@
                                     <label for="travel-by-edit">invoice to *</label>
                                     <div class="select-height-fix d-flex align-items-center">
                                         <select name="travel-by-edit" class="w-100">
-                                            <option selected>NSM Engineering</option>
+                                            <option selected>Youngculture AG</option>
                                             <option>Internal cost</option>
                                         </select>
                                     </div>
@@ -509,7 +509,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
+                                <!-- <div class="col-12 col-sm-6">
                                     <label for="education-cost-location">location *</label>
                                     <div class="select-height-fix d-flex align-items-center">
                                         <select name="education-cost-location" class="w-100">
@@ -519,10 +519,10 @@
                                             <option selected val="online">Online</option>
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-12">
                                     <label for="education-cost-description">description *</label>
-                                    <textarea name="education-cost-description" rows="4">C# Programming: Hands-On. Learning tree International.</textarea>
+                                    <textarea name="education-cost-description" rows="4">C# Programming: Hands-On. Learning tree International seminar in Brussels.</textarea>
                                 </div>
                             </div>
                         </div>
@@ -1133,6 +1133,7 @@
                                                         <div>
                                                             <label class="m-0">employee</label>
                                                             <span class="cost-data">Milana Bogdanovic</span>
+                                                            <div class="small">Edelweiss Cloud Solution</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1144,8 +1145,8 @@
                                                     <!-- <span class="travel-ship"><span class="fas fa-ship mr-1"></span>travel</span> -->
                                                 </div>
                                                 <div class="col-6 col-xl-3 mb-2 mb-xl-0">
-                                                    <label class="m-0">itinerary</label>
-                                                    <span class="cost-data">BEG - ZRH - BEG</span>
+                                                    <label class="m-0">for</label>
+                                                    <div class="cost-data text-nowrap text-truncate">Youngculture AG</div>
                                                 </div>
                                                 <div class="col-6 col-xl-2 mb-2 mb-xl-0">
                                                     <label class="m-0">cost amount</label>
@@ -1161,6 +1162,7 @@
                                                 <table class="panel-table">
                                                     <thead>
                                                         <tr>
+                                                            <th>Iterinary</th>
                                                             <th>departure date</th>
                                                             <th>return date</th>
                                                             <th>travel direction</th>
@@ -1168,7 +1170,8 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr>
-                                                            <td><span>15.06.2020</span></td>
+                                                            <td>Belgrade - Zurich - Belgrade</td>
+                                                            <td>15.06.2020</td>
                                                             <td>17.06.2020</td>
                                                             <td>round trip</td>
                                                         </tr>
@@ -1200,12 +1203,12 @@
                                                     <span class="travel-plane"><span class="fas fa-concierge-bell mr-1"></span class="cost-data">hotel</span>
                                                 </div>
                                                 <div class="col-6 col-xl-3 mb-2 mb-xl-0">
-                                                    <label class="m-0">stays</label>
-                                                    <span class="cost-data">2 nights</span>
+                                                    <label class="m-0">for</label>
+                                                    <div class="cost-data text-nowrap text-truncate">NSM engineering</div>
                                                 </div>
                                                 <div class="col-6 col-xl-2 mb-2 mb-xl-0">
                                                     <label class="m-0">cost amount</label>
-                                                    <span class="cost-data">180,00<span class="chf"></span></span>
+                                                    <span class="cost-data">180,00<span class="eur"></span></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -1227,8 +1230,8 @@
                                                         <tr>
                                                             <td><span>15.06.2020</span></td>
                                                             <td>17.06.2020</td>
-                                                            <td>IBIS budget - Zurich airport</td>
-                                                            <td>Zurich</td>
+                                                            <td>Element hotel</td>
+                                                            <td>Stuttgart</td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -1259,8 +1262,8 @@
                                                     <span class="travel-plane"><span class="fas fa-route mr-1"></span class="cost-data">local&nbsp;trans.</span>
                                                 </div>
                                                 <div class="col-6 col-xl-3 mb-2 mb-xl-0">
-                                                    <label class="m-0">ticket qty.</label>
-                                                    <span class="cost-data">2</span>
+                                                    <label class="m-0">for</label>
+                                                    <div class="cost-data text-nowrap text-truncate">NSM Engineering</div>
                                                 </div>
                                                 <div class="col-6 col-xl-2 mb-2 mb-xl-0">
                                                     <label class="m-0">cost amount</label>
@@ -1272,8 +1275,24 @@
                                     <div class="row more-data pb-3" style="display: none;">
                                         <div class="col-12">
                                             <div class="table-wrapper mt-3">
-                                                <label>Description</label>
-                                                <p>ZVV Multi-journey ticket purchase.</p>
+                                                <table class="panel-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>qty.</th>
+                                                            <th>price per item</th>
+                                                            <th>cost description</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td><span class="chf">24,00</span></td>
+                                                            <td>ZVV Multi-journey ticket purchase.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!-- <label>Description</label>
+                                                <p>ZVV Multi-journey ticket purchase.</p> -->
                                             </div>
                                             <div class="mt-3">
                                                 <button class="btn btn-highlight mr-2" data-toggle="modal" data-target="#editCostLocalTrans">edit cost</button>
@@ -1301,8 +1320,8 @@
                                                     <span class="travel-plane"><span class="fas fa-comment-dollar mr-1"></span class="cost-data">additional&nbsp;cost</span>
                                                 </div>
                                                 <div class="col-6 col-xl-3 mb-2 mb-xl-0">
-                                                    <label class="m-0">cost kind</label>
-                                                    <span class="cost-data">taxi</span>
+                                                    <label class="m-0">for</label>
+                                                    <div class="cost-data text-nowrap text-truncate">Internal</div>
                                                 </div>
                                                 <div class="col-6 col-xl-2 mb-2 mb-xl-0">
                                                     <label class="m-0">cost amount</label>
@@ -1315,7 +1334,7 @@
                                         <div class="col-12">
                                             <div class="table-wrapper mt-3">
                                                 <label>Description</label>
-                                                <p rows="2">Was required to appear propmtly in Zug by the client.</p>
+                                                <p rows="2">Took a Taxi. Was required to appear propmtly in Zug by the client.</p>
                                             </div>
                                             <div class="mt-3">
                                                 <button class="btn btn-highlight mr-2" data-toggle="modal" data-target="#editCostAdditional">edit cost</button>
@@ -1343,8 +1362,8 @@
                                                     <span class="education"><span class="fas fa-book-open mr-1"></span class="cost-data">education</span>
                                                 </div>
                                                 <div class="col-6 col-xl-3 mb-2 mb-xl-0">
-                                                    <label class="m-0">location</label>
-                                                    <span class="cost-data">online</span>
+                                                    <label class="m-0">for</label>
+                                                    <div class="cost-data text-nowrap text-truncate">NSM Engineering</div>
                                                 </div>
                                                 <div class="col-6 col-xl-2 mb-2 mb-xl-0">
                                                     <label class="m-0">cost amount</label>
@@ -1357,7 +1376,7 @@
                                         <div class="col-12">
                                             <div class="table-wrapper mt-3">
                                                 <label>Description</label>
-                                                <p rows="2">C# Programming: Hands-On. Learning tree International.</p>
+                                                <p rows="2">C# Programming: Hands-On. Learning tree International seminar in Brussels.</p>
                                             </div>
                                             <div class="mt-3">
                                                 <button class="btn btn-highlight mr-2" data-toggle="modal" data-target="#editCostEducation">edit cost</button>
