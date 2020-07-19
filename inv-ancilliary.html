@@ -433,6 +433,10 @@
                                         </select>
                                     </div>
                                 </div>
+                                <div class="col-12 col-sm-6">
+                                    <label for="local-transport-cost">purchase date *</label>
+                                    <input type="text" name="local-transport-cost" value="23.4.2020">
+                                </div>
                                 <div class="col-12">
                                     <label for="transportation-cost-description">description *</label>
                                     <textarea name="transportation-cost-description" rows="4">ZVV Multi-journey ticket purchased.</textarea>
@@ -692,7 +696,7 @@
 
             <div class="row mt-4">
                 <!-- INVOICE CONFIG -->
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-5">
                     <div class="p-4 text-left panel-container contract-section">
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="primary-title d-block">add cost</span>
@@ -921,6 +925,10 @@
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="col-12 col-sm-6">
+                                            <label for="local-transport-cost">purchase date *</label>
+                                            <input type="text" name="local-transport-cost">
+                                        </div>
                                         <div class="col-12">
                                             <label for="transportation-cost-description">description *</label>
                                             <textarea name="transportation-cost-description" rows="4"></textarea>
@@ -1058,15 +1066,15 @@
                 </div>
 
                 <!-- INVOICE PREVIEW -->
-                <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                <div class="col-12 col-lg-7 mt-4 mt-lg-0">
                     <div class="p-4 text-left panel-container">
                         <div class="d-flex justify-content-between align-items-start mb-2">
                             <span class="primary-title d-block">Cost list</span>
                             <div>
                                 <select class="mr-1">
-                                    <option>July</option>
+                                    <option selected>July</option>
                                     <option>June</option>
-                                    <option selected>May</option>
+                                    <option>May</option>
                                     <option>April</option>
                                     <option>March</option>
                                     <option>February</option>
@@ -1113,7 +1121,7 @@
                                     </div>
                                 </div>
                                 <div class="position-relative">
-                                    <input class="filter-members find-member" placeholder="Find Name, Cost type, Date" type="text">
+                                    <input id="find-cost" class="filter-members find-member" placeholder="Find Name, Cost type, Date" type="text">
                                     <span class="fas fa-search search-icon"></span>
                                     <span class="reset-input far fa-times-circle" style="display:none"></span>
                                 </div>
@@ -1195,6 +1203,7 @@
                                                         <div>
                                                             <label class="m-0">employee</label>
                                                             <span class="cost-data">Milana Bogdanovic</span>
+                                                            <div class="small">Edelweiss Cloud Solution</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1254,6 +1263,7 @@
                                                         <div>
                                                             <label class="m-0">employee</label>
                                                             <span class="cost-data">Bojan Grozdanovic</span>
+                                                            <div class="small">Crealogix Digital banking</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1280,6 +1290,7 @@
                                                         <tr>
                                                             <th>qty.</th>
                                                             <th>price per item</th>
+                                                            <th>purcahse date</th>
                                                             <th>cost description</th>
                                                         </tr>
                                                     </thead>
@@ -1287,6 +1298,7 @@
                                                         <tr>
                                                             <td>2</td>
                                                             <td><span class="chf">24,00</span></td>
+                                                            <td>23.4.2020</td>
                                                             <td>ZVV Multi-journey ticket purchase.</td>
                                                         </tr>
                                                     </tbody>
@@ -1312,6 +1324,7 @@
                                                         <div>
                                                             <label class="m-0">employee</label>
                                                             <span class="cost-data">Dragan Pesic</span>
+                                                            <div class="small">iFolor</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1354,6 +1367,7 @@
                                                         <div>
                                                             <label class="m-0">employee</label>
                                                             <span class="cost-data">Bogdan Mazic</span>
+                                                            <div class="small">Pritlead</div>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -167,7 +167,7 @@ $(document).ready(function () {
     });
 
     // Cost filter
-    $('.find-member').keyup(function () {
+    $('#find-cost').keyup(function () {
         var filter = $(this).val(),
             count = 0;
         $('.cost-item').each(function () {
@@ -180,15 +180,16 @@ $(document).ready(function () {
         });
         if (count > 0) {
             $('.no-results-message').hide();
-            // $('.vct-actions').hide();
-        } else {
+            $('.vct-actions').hide();
+        }
+        else {
             $('.no-results-message').show();
-            // $('.vct-actions').hide();
+            $('.vct-actions').hide();
         }
     });
 
     //toggle clear btn to search
-    $('.find-project').keyup(function () {
+    $('#find-cost').keyup(function () {
         var s = $(this).val();
         if (s.length > 0) {
             $('.reset-input').show();
