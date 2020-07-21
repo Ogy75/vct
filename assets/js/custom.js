@@ -303,6 +303,8 @@ $(function () {
         $(this).removeClass('btn-highlight');
         $(this).addClass('badge-success');
         $(this).html('Done');
+        $('.overlap').hide();
+        $('.table-wrapper').css('overflow','auto');
         $(this).closest('.blink-warning').removeClass('blink-warning');
         $('.js_payout').attr('disabled', false);
         $('.na-status').addClass('d-none');

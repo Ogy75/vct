@@ -490,15 +490,17 @@
                             <div class="w-100 d-flex justify-content-start">
                                 <button class="btn btn-highlight mb-5 js_payout">Start Payout</button>
                             </div>
-                            <div class="table-wrapper">
-                                <table class="panel-table">
+                            <div class="table-wrapper position-relative">
+                                <div class="overlap"></div>
+                                <table class="panel-table" id="payout-table">
                                     <thead>
                                         <tr>
                                             <th><span class="badge btn-success pointer">Select All</span></th>
                                             <th><i class="fas fa-user"></i> Employee</th>
-                                            <th><i class="far fa-clock"></i> Earned (h)</th>
                                             <th><i class="fas fa-clock"></i> Weekday (h)</th>
                                             <th><i class="fas fa-clock"></i> Weekend (h)</th>
+                                            <th><i class="far fa-clock"></i> Earned (h)</th>
+                                            <th><i class="fas fa-euro-sign"></i> Earned for payout (h)</th>
                                             <th class="text-right pointer"><span class="badge btn-success">export to Excel</span></th>
                                         </tr>
                                     </thead>
@@ -506,27 +508,30 @@
                                         <tr>
                                             <td><input type="checkbox" checked /></td>
                                             <td>Milan Milanovic</td>
-                                            <td><input class="d-inline-block mr-2" type="checkbox"/>64</td>
                                             <td>8</td>
                                             <td>2</td>
+                                            <td>64</td>
+                                            <td><input type="text" value="0"/></td>
                                             <td class="text-right"><span class="badge badge-secondary pointer" data-toggle="modal" data-target="#hoursBreakdownPayout">details</span></td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox" /></td>
                                             <td>Dejan Dejanovic</td>
-                                            <td><input class="d-inline-block mr-2" type="checkbox"/>19</td>
                                             <td>-</td>
                                             <td>4</td>
+                                            <td>19</td>
+                                            <td><input type="text" value="0"/></td>
                                             <td class="text-right"><span
                                                     class="badge badge-secondary pointer">details</span>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox" checked /></td>
-                                            <td>Bogden Bogdanovic</td>
-                                            <td><input class="d-inline-block mr-2" type="checkbox"/>92</td>
+                                            <td>Bogdan Bogdanovic</td>
                                             <td>-</td>
                                             <td>3</td>
+                                            <td>92</td>
+                                            <td><input type="text" value="0"/></td>
                                             <td class="text-right"><span
                                                     class="badge badge-secondary pointer">details</span>
                                             </td>
@@ -534,9 +539,10 @@
                                         <tr>
                                             <td><input type="checkbox" /></td>
                                             <td>Marko Markovic</td>
-                                            <td><input class="d-inline-block mr-2" type="checkbox"/>38</td>
                                             <td>-</td>
                                             <td>-</td>
+                                            <td>38</td>
+                                            <td><input type="text" value="0"/></td>
                                             <td class="text-right"><span
                                                     class="badge badge-secondary pointer">details</span>
                                             </td>
@@ -544,29 +550,28 @@
                                         <tr>
                                             <td><input type="checkbox" checked /></td>
                                             <td>Branko Brankovic</td>
-                                            <td><input class="d-inline-block mr-2" type="checkbox"/>0</td>
                                             <td>-</td>
                                             <td>-</td>
-                                            <td class="text-right"><span
-                                                    class="badge badge-secondary pointer">details</span>
-                                            </td>
+                                            <td>2</td>
+                                            <td><input type="text" value="0"/></td>
+                                            <td class="text-right"><span class="badge badge-secondary pointer">details</span></td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr class="border-bottom">
                                             <td>Selected</td>
                                             <td>3</td>
-                                            <td>0</td>
                                             <td>8</td>
                                             <td colspan="2">5</td>
+                                            <td colspan="2">0</td>
                                         </tr>
-                                        <tr>
+                                        <!-- <tr>
                                             <td>Total</td>
                                             <td>5</td>
-                                            <td>0</td>
                                             <td>8</td>
-                                            <td colspan="2">9</td>
-                                        </tr>
+                                            <td>9</td>
+                                            <td colspan="3">215</td>
+                                        </tr> -->
                                     </tfoot>
                                 </table>
                                 
@@ -594,7 +599,7 @@
                                         <th>End Date</th>
                                         <th>
                                             </i>Report</th>
-                                        <th>
+                                        <th class="text-right">
                                             </i>Status</th>
                                     </tr>
                                 </thead>
@@ -608,7 +613,7 @@
                                                 class="far fa-file-excel text-success excel-doc"></a>
                                             <div class="small-loader fas fa-spinner"></div>
                                         </td>
-                                        <td><span class="badge btn-danger finish-payoff js_finish">Payment Done?</span>
+                                        <td class="text-right"><span class="badge btn-danger finish-payoff js_finish">Payment Done?</span>
                                         </td>
                                     </tr>
                                     <!-- <tr>
@@ -650,7 +655,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>
@@ -670,7 +675,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>
@@ -690,7 +695,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>
@@ -710,7 +715,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>
@@ -730,7 +735,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>
@@ -750,7 +755,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>
@@ -770,7 +775,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>
@@ -790,7 +795,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>
@@ -810,7 +815,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>
@@ -830,7 +835,7 @@
                                             <a href="javascript:void(0)" target="_new"
                                                 class="far fa-file-excel text-success"></a>
                                         </td>
-                                        <td><span class="badge badge-success">done</span></td>
+                                        <td class="text-right"><span class="badge badge-success">done</span></td>
                                     </tr>
                                     <!-- <tr>
                                         <td>Campaign</td>

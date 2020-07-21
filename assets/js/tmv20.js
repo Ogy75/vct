@@ -388,6 +388,8 @@ $(document).ready(function () {
             $('.small-loader').hide();
             $('.excel-doc').show();
         }, 4000);
+        $('.overlap').show();
+        $('.table-wrapper').css('overflow','hidden');
         $('.js_payout-data').removeClass('d-none');
         $('.js_payout-data').addClass('blink-warning');
         $(this).attr('disabled', true).html('Payout started');
