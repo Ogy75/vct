@@ -694,24 +694,78 @@
                     <div class="p-4 text-left panel-container contract-section">
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="primary-title d-block">add cost</span>
-                            <span class="badge badge-secondary">travel</span>
                         </div>
                         <div class="row mt-3">
+                            <div class="col-12">
+                                <label for="passenger-name">employee *</label>
+                                <!-- autocomplete / suggestion ovde -->
+                                <input type="text" name="passenger-name">
+                            </div>
                             <div class="col-12 col-sm-6">
-                                <label for="cost-type">select cost type</label>
+                                <label for="travel-by-edit">employee project *</label>
                                 <div class="select-height-fix d-flex align-items-center">
-                                    <select name="cost-type" id="cost-center-select" class="w-100 pronounced-data">
-                                        <option val="travel" selected>Travel</option>
-                                        <option val="hotel">Hotel</option>
-                                        <option val="local transportation">Local transportation</option>
-                                        <option val="education">Education</option>
-                                        <option val="additional">Additional</option>
+                                    <select name="travel-by-edit" class="w-100">
+                                        <option selected="">Edelweiss cloud solution</option>
+                                        <option>Crealogix Digital Banking</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 mb-4">
+                                <label for="travel-by-edit">invoice to *</label>
+                                <div class="select-height-fix d-flex align-items-center">
+                                    <select name="travel-by-edit" class="w-100">
+                                        <option selected="">NSM Engineering</option>
+                                        <option>Internal cost</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row mt-3">
+                        <!--COST SWITCH -->
+                        <div class="subcost border-bottom border-top">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="my-3">
+                                            <label class="switch">
+                                                <input type="checkbox" class="js_expandMore">
+                                                <span class="slider"></span>
+                                            </label>
+                                            <span class="primary-title switch-label ml-1">plane tickets</span>
+                                        </div>
+                                        <span class="badge badge-secondary rsd">amount</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row more-data" style="display: none;">
+                                <div class="col-12 pb-3">
+                                    data1
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--COST SWITCH -->
+                        <div class="subcost border-bottom">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="my-3">
+                                            <label class="switch">
+                                                <input type="checkbox" class="js_expandMore">
+                                                <span class="slider"></span>
+                                            </label>
+                                            <span class="primary-title switch-label ml-1">local transportation cost</span>
+                                        </div>
+                                        <span class="badge badge-secondary chf">amount</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row more-data" style="display: none;">
+                                <div class="col-12 pb-3">data2</div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
                             <!-- TRAVEL -->
                             <div class="col-12 cost-type" id="travel-cost">
                                 <div class="border-top py-3">
@@ -1117,7 +1171,7 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col-12 cost-entries">
-                                
+
                                 <!-- COST ENTRY -->
                                 <div class="cost-item mt-2 px-3 border">
                                     <div class="row">

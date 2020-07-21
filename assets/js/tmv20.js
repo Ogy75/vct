@@ -939,16 +939,20 @@ $(document).ready(function () {
         var val = $(this).find("option:selected").attr('val');
         switch (val) {
             case "EUR":
-                $('span#ancilliary-total-amount').text('3.238,76');
+                $('span#ancilliary-total-amount').prop('class','');
+                $('span#ancilliary-total-amount').text('3.238,76').addClass('eur');
                 break;
             case "CHF":
-                $('span#ancilliary-total-amount').text('3.482,05');
+                $('span#ancilliary-total-amount').prop('class','');
+                $('span#ancilliary-total-amount').text('3.482,05').addClass('chf');
                 break;
             case "RSD":
-                $('span#ancilliary-total-amount').text('380.653,47');
+                $('span#ancilliary-total-amount').prop('class','');
+                $('span#ancilliary-total-amount').text('380.653,47').addClass('rsd');;
                 break;
             case "RON":
-                $('span#ancilliary-total-amount').text('15.667,64');
+                $('span#ancilliary-total-amount').prop('class','');
+                $('span#ancilliary-total-amount').text('15.667,64').addClass('ron');;
                 break;
         }
     });
@@ -1257,6 +1261,16 @@ $(document).ready(function () {
                 $(this).text('exclude');
                 $(this).parents('tr').removeClass('bg-warning');
             }
+    });
+
+    //INCLUDE COST
+    $('.js_expandMore').on('change', function () {
+        if ($(this).prop('checked')) {
+            $(this).parents('.subcost').find('.more-data').slideDown(50);
+        }
+        else if (!($(this).prop('checked'))) {
+            $(this).parents('.subcost').find('.more-data').slideUp(50);
+        }
     });
 
 });

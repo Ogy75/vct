@@ -1568,7 +1568,7 @@ table.overview td {
   border-bottom: 1px solid rgba(213, 213, 213, 0.3);
 }
 .eur:after {
-  content: "€";
+  content: "EUR";
   margin-left: 4px;
 }
 .chf:after {
