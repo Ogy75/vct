@@ -972,35 +972,35 @@ $(document).ready(function () {
 
 
     //ADD TRAVEL COST DEMO
-    $('#add-cost').on('click', function () {
-        var passengerName = $('input[name="passenger-name"]').val();
-        var travelBy = $('#travel-by option:selected').val();
-        var travelDirection = $('#travel-direction option:selected').val();
-        var departureLocation = $('input[name="travel-from"]').val();
-        var destination = $('input[name="travel-to"]').val();
-        var departureDate = $('input[name="travel-departure-date"]').val();
-        var returnDate = $('input[name="travel-return-date"]').val();
-        var travelCost = $('input[name="travel-cost"]').val();
-        var currency = $('#travel-currency option:selected').val();
-        var travel = '<div class="cost-item mt-2 px-3 border"> <div class="row"> <div class="col-12 js_accordion pointer"> <div class="row py-2 d-flex align-items-center"> <div class="col-6 col-xl-3 mb-2 mb-xl-0"> <div class="history-entry d-flex justify-content-start align-items-center"> <span class="fas fa-chevron-down arrow"></span> <div> <label class="m-0">name</label> <span class="cost-data">'
-            + passengerName +
-            '</span> </div></div></div><div class="col-6 col-xl-3 mb-2 mb-xl-0"> <label class="m-0">cost type</label> <span class="travel-plane"><span class="fas fa-plane mr-1"></span class="cost-data">travel</span> </div><div class="col-6 col-xl-3 mb-2 mb-xl-0"> <label class="m-0">itinerary</label> <span class="cost-data">'
-            + departureLocation +
-            " - "
-            + destination
-            + " - "
-            + departureLocation +
-            '</span> </div><div class="col-6 col-xl-2 mb-2 mb-xl-0"> <label class="m-0">cost</label> <span class="cost-data">'
-            + travelCost +
-            '<span class="rsd"></span></span> </div></div></div></div><div class="row more-data pb-3" style="display: none;"> <div class="col-12"> <div class="table-wrapper mt-3"> <div class="form-title text-nowrap text-truncate">details</div><table class="panel-table"> <thead> <tr> <th>departure date</th> <th>return date</th> <th>travel direction</th> </tr></thead> <tbody> <tr> <td><span>'
-            + departureDate +
-            '</span></td><td>'
-            + returnDate +
-            '</td><td>'
-            + travelDirection +
-            '</td></tr></tbody> </table> <div class="mt-3"> <button class="btn btn-highlight mr-2" data-toggle="modal" data-target="#editCost">edit cost</button> <button class="btn btn-danger" data-toggle="modal" data-target="#deleteCost">delete cost</button> </div></div></div></div></div>';
-        $('.cost-entries').prepend(travel);
-    });
+    // $('#add-cost').on('click', function () {
+    //     var passengerName = $('input[name="passenger-name"]').val();
+    //     var travelBy = $('#travel-by option:selected').val();
+    //     var travelDirection = $('#travel-direction option:selected').val();
+    //     var departureLocation = $('input[name="travel-from"]').val();
+    //     var destination = $('input[name="travel-to"]').val();
+    //     var departureDate = $('input[name="travel-departure-date"]').val();
+    //     var returnDate = $('input[name="travel-return-date"]').val();
+    //     var travelCost = $('input[name="travel-cost"]').val();
+    //     var currency = $('#travel-currency option:selected').val();
+    //     var travel = '<div class="cost-item mt-2 px-3 border"> <div class="row"> <div class="col-12 js_accordion pointer"> <div class="row py-2 d-flex align-items-center"> <div class="col-6 col-xl-3 mb-2 mb-xl-0"> <div class="history-entry d-flex justify-content-start align-items-center"> <span class="fas fa-chevron-down arrow"></span> <div> <label class="m-0">name</label> <span class="cost-data">'
+    //         + passengerName +
+    //         '</span> </div></div></div><div class="col-6 col-xl-3 mb-2 mb-xl-0"> <label class="m-0">cost type</label> <span class="travel-plane"><span class="fas fa-plane mr-1"></span class="cost-data">travel</span> </div><div class="col-6 col-xl-3 mb-2 mb-xl-0"> <label class="m-0">itinerary</label> <span class="cost-data">'
+    //         + departureLocation +
+    //         " - "
+    //         + destination
+    //         + " - "
+    //         + departureLocation +
+    //         '</span> </div><div class="col-6 col-xl-2 mb-2 mb-xl-0"> <label class="m-0">cost</label> <span class="cost-data">'
+    //         + travelCost +
+    //         '<span class="rsd"></span></span> </div></div></div></div><div class="row more-data pb-3" style="display: none;"> <div class="col-12"> <div class="table-wrapper mt-3"> <div class="form-title text-nowrap text-truncate">details</div><table class="panel-table"> <thead> <tr> <th>departure date</th> <th>return date</th> <th>travel direction</th> </tr></thead> <tbody> <tr> <td><span>'
+    //         + departureDate +
+    //         '</span></td><td>'
+    //         + returnDate +
+    //         '</td><td>'
+    //         + travelDirection +
+    //         '</td></tr></tbody> </table> <div class="mt-3"> <button class="btn btn-highlight mr-2" data-toggle="modal" data-target="#editCost">edit cost</button> <button class="btn btn-danger" data-toggle="modal" data-target="#deleteCost">delete cost</button> </div></div></div></div></div>';
+    //     $('.cost-entries').prepend(travel);
+    // });
 
     //TOGGLE NEARSHORING
     $('#nearshoring').click(function () {
