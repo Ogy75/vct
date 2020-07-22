@@ -931,19 +931,19 @@ $(document).ready(function () {
         var val = $(this).find("option:selected").attr('val');
         switch (val) {
             case "EUR":
-                $('span#ancilliary-total-amount').prop('class','font-weight-bold');
+                $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
                 $('span#ancilliary-total-amount').text('1.000,10').addClass('eur');
                 break;
             case "CHF":
-                $('span#ancilliary-total-amount').prop('class','font-weight-bold');
+                $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
                 $('span#ancilliary-total-amount').text('1.077,82').addClass('chf');
                 break;
             case "RSD":
-                $('span#ancilliary-total-amount').prop('class','font-weight-bold');
+                $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
                 $('span#ancilliary-total-amount').text('117.632,32').addClass('rsd');;
                 break;
             case "RON":
-                $('span#ancilliary-total-amount').prop('class','font-weight-bold');
+                $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
                 $('span#ancilliary-total-amount').text('4.840,80').addClass('ron');;
                 break;
         }
