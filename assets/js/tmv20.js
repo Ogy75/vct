@@ -180,11 +180,11 @@ $(document).ready(function () {
         });
         if (count > 0) {
             $('.no-results-message').hide();
-            $('.vct-actions').hide();
+            //$('.vct-actions').hide();
         }
         else {
             $('.no-results-message').show();
-            $('.vct-actions').hide();
+            //$('.vct-actions').hide();
         }
     });
 
@@ -200,18 +200,10 @@ $(document).ready(function () {
 
     //Clear&focus btn fn.
     $('.reset-input').on('click', function () {
-        $('.find-project').val('').focus();
-        $('.reset-input').hide();
-        $('.vct-team').show();
-        $('.no-results-message').hide();
-    });
-
-    //COST Clear&focus btn fn.
-    $('.reset-input').on('click', function () {
-        $('.find-project').val('').focus();
+        $('#find-cost').val('').focus();
         $('.reset-input').hide();
         $('.cost-item').show();
-        $('.no-results-message').show();
+        $('.no-results-message').hide();
     });
 
     // absences filter
@@ -939,20 +931,20 @@ $(document).ready(function () {
         var val = $(this).find("option:selected").attr('val');
         switch (val) {
             case "EUR":
-                $('span#ancilliary-total-amount').prop('class','');
-                $('span#ancilliary-total-amount').text('3.238,76').addClass('eur');
+                $('span#ancilliary-total-amount').prop('class','font-weight-bold');
+                $('span#ancilliary-total-amount').text('1.000,10').addClass('eur');
                 break;
             case "CHF":
-                $('span#ancilliary-total-amount').prop('class','');
-                $('span#ancilliary-total-amount').text('3.482,05').addClass('chf');
+                $('span#ancilliary-total-amount').prop('class','font-weight-bold');
+                $('span#ancilliary-total-amount').text('1.077,82').addClass('chf');
                 break;
             case "RSD":
-                $('span#ancilliary-total-amount').prop('class','');
-                $('span#ancilliary-total-amount').text('380.653,47').addClass('rsd');;
+                $('span#ancilliary-total-amount').prop('class','font-weight-bold');
+                $('span#ancilliary-total-amount').text('117.632,32').addClass('rsd');;
                 break;
             case "RON":
-                $('span#ancilliary-total-amount').prop('class','');
-                $('span#ancilliary-total-amount').text('15.667,64').addClass('ron');;
+                $('span#ancilliary-total-amount').prop('class','font-weight-bold');
+                $('span#ancilliary-total-amount').text('4.840,80').addClass('ron');;
                 break;
         }
     });

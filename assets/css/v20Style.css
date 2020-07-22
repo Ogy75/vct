@@ -988,6 +988,9 @@ input:checked + .slider:before {
 .badge.badge-secondary {
   background: #5d5d54;
 }
+.badge.badge-primary {
+  background: #1E9BCC;
+}
 .badge.badge-warning {
   background: #ffc400;
 }
@@ -1056,6 +1059,9 @@ input:checked + .slider:before {
 }
 .bg-light {
   background: #e6e6e4;
+}
+.bg-background {
+  background: #ebf0f5;
 }
 .campaign-input {
   height: 57px;
