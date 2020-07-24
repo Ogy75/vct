@@ -605,14 +605,14 @@ $(document).ready(function () {
     });
 
     //SETUP FEE POSSIBLE
-    $('#ancilliary-setup-fee').on('change', function () {
+    $('#ancillary-setup-fee').on('change', function () {
         if ($(this).prop('checked')) {
-            $(this).parents('.more-data').find('textarea[name="ancilliary-setup-fee"]').prop('disabled', false);
+            $(this).parents('.more-data').find('textarea[name="ancillary-setup-fee"]').prop('disabled', false);
             $(this).parents('.more-data').find('.mandatory').show();
             $(this).val('Setup fee exists');
         }
         else {
-            $(this).parents('.more-data').find('textarea[name="ancilliary-setup-fee"]').prop('disabled', true);
+            $(this).parents('.more-data').find('textarea[name="ancillary-setup-fee"]').prop('disabled', true);
             $(this).parents('.more-data').find('.mandatory').hide();
             $(this).val('No Setup fee');
         }
@@ -930,25 +930,25 @@ $(document).ready(function () {
         }
     });
 
-    //ancilliary total currency
-    $('select#ancilliary-total-currency').on('change', function () {
+    //ancillary total currency
+    $('select#ancillary-total-currency').on('change', function () {
         var val = $(this).find("option:selected").attr('val');
         switch (val) {
             case "EUR":
-                $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
-                $('span#ancilliary-total-amount').text('681,74').addClass('eur');
+                $('span#ancillary-total-amount').prop('class','font-weight-bold badge badge-primary');
+                $('span#ancillary-total-amount').text('681,74').addClass('eur');
                 break;
             case "CHF":
-                $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
-                $('span#ancilliary-total-amount').text('731,22').addClass('chf');
+                $('span#ancillary-total-amount').prop('class','font-weight-bold badge badge-primary');
+                $('span#ancillary-total-amount').text('731,22').addClass('chf');
                 break;
             case "RSD":
-                $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
-                $('span#ancilliary-total-amount').text('80.169,62').addClass('rsd');;
+                $('span#ancillary-total-amount').prop('class','font-weight-bold badge badge-primary');
+                $('span#ancillary-total-amount').text('80.169,62').addClass('rsd');;
                 break;
             case "RON":
-                $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
-                $('span#ancilliary-total-amount').text('3.294,53').addClass('ron');;
+                $('span#ancillary-total-amount').prop('class','font-weight-bold badge badge-primary');
+                $('span#ancillary-total-amount').text('3.294,53').addClass('ron');;
                 break;
         }
     });
