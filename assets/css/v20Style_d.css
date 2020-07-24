@@ -1600,3 +1600,13 @@ table.overview td {
   height: 100%;
   background: rgba(26, 26, 24, 0.6);
 }
+.show-more-arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
+}

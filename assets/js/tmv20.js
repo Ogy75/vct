@@ -465,8 +465,12 @@ $(document).ready(function () {
         $('.js_entryInput').focus();
     });
 
+    
     $('.js_removeEntry').on('click', function () {
         $(this).parents('tr').remove();
+    });
+    $('.js_addCostItem').on('click',function(){
+        $(this).parents('.js_cost-table-parent').find('.js_cost-table').append('<tr> <td><input type="text" placeholder="cost description"/></td><td class="text-center"> <select> <option selected>RSD</option> <option>EUR</option> <option>CHF</option> <option>RON</option> </select> </td><td><input type="text" placeholder="cost amount"/></td><td class="text-right"><span class="badge badge-danger pointer js_removeEntry">remove</span></td></tr>');
     });
 
     //No teams
@@ -932,19 +936,19 @@ $(document).ready(function () {
         switch (val) {
             case "EUR":
                 $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
-                $('span#ancilliary-total-amount').text('1.000,10').addClass('eur');
+                $('span#ancilliary-total-amount').text('681,74').addClass('eur');
                 break;
             case "CHF":
                 $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
-                $('span#ancilliary-total-amount').text('1.077,82').addClass('chf');
+                $('span#ancilliary-total-amount').text('731,22').addClass('chf');
                 break;
             case "RSD":
                 $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
-                $('span#ancilliary-total-amount').text('117.632,32').addClass('rsd');;
+                $('span#ancilliary-total-amount').text('80.169,62').addClass('rsd');;
                 break;
             case "RON":
                 $('span#ancilliary-total-amount').prop('class','font-weight-bold badge badge-primary');
-                $('span#ancilliary-total-amount').text('4.840,80').addClass('ron');;
+                $('span#ancilliary-total-amount').text('3.294,53').addClass('ron');;
                 break;
         }
     });
@@ -1256,13 +1260,17 @@ $(document).ready(function () {
     });
 
     //INCLUDE COST
-    $('.js_expandMore').on('change', function () {
-        if ($(this).prop('checked')) {
-            $(this).parents('.subcost').find('.more-data').slideDown(50);
-        }
-        else if (!($(this).prop('checked'))) {
-            $(this).parents('.subcost').find('.more-data').slideUp(50);
-        }
-    });
+    // $('.js_expandMore').on('change', function () {
+    //     if ($(this).prop('checked')) {
+    //         $(this).parents('.subcost').find('.more-data').slideDown(50);
+    //     }
+    //     else if (!($(this).prop('checked'))) {
+    //         $(this).parents('.subcost').find('.more-data').slideUp(50);
+    //     }
+    // });
+
+    // $('#js_addCostItem').on('click',function(){
+    //     $(this).parents().find('#cost-table').append('<tr> <td><input type="text" placeholder="cost description"/></td><td class="text-center"> <select> <option selected>RSD</option> <option>EUR</option> <option>CHF</option> <option>RON</option> </select> </td><td><input type="text" placeholder="cost amount"/></td><td class="text-right"><span class="badge badge-danger pointer js_removeEntry">remove</span></td></tr>');
+    // });
 
 });
