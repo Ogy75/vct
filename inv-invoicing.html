@@ -143,9 +143,9 @@
     </div>
     <!-- export Invoice Copy Modal End -->
 
-    <!-- Cost details start -->
-    <div class="modal fade" id="costDetails" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="costDetails" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+    <!-- Edit Cost Travel Start -->
+    <div class="modal fade" id="costDetails" tabindex="-1" role="dialog" aria-labelledby="costDetails" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content modal-style">
                 <div class="row">
                     <div class="col-12">
@@ -154,145 +154,133 @@
                             <div class="team-member-image">
                                 <img src="assets/images/profile-3.jpg">
                             </div>
-                            <div class="team-member-name">Milana Bogdanovic</div>
+                            <div class="team-member-name">
+                                Aleksandar Papic
+                                </br>
+                                Edelweiss Cloud Solution
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 text-left">
-                        <div class="p-4">
-                            <div class="row">
-                                <div class="col-12 mb-3">
-                                    <div class="row">
-                                        <div class="col-6 col-xl-4 mb-2 mb-xl-0">
-                                            <label class="m-0">employee project</label>
-                                            <span></span>Edelweiss Cloud Solution
-                                        </div>
-                                        <div class="col-6 col-xl-4 mb-2 mb-xl-0">
-                                            <label class="m-0">invoice to</label>
-                                            <div class="cost-data">Youngculture AG</div>
-                                        </div>
-                                        <div class="col-6 col-xl-4 mb-2 mb-xl-0">
-                                            <label class="m-0">total cost amount</label>
-                                            <span class="cost-data">489,11<span class="eur"></span></span>
-                                        </div>
-                                    </div>
+                    <div class="col-12">
+                        <div class="text-left p-4">
+                            <div class="row pb-3">
+                                <div class="col-12 text-center">
+                                    <span class="d-block form-title">edit cost list</span>
                                 </div>
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="form-title my-3">cost list</div>
-                                        <div>
-                                            <small>last change:</small>
-                                            <span class="small">22.06.2020</span>
-                                        </div>
+                            </div>
+                            <div class="panel-container bg-transparent border-0 p-0">
+                                <div class="row mt-3 js_cost-table-parent">
+                                    <div class="col-12 table-wrapper">
+                                        <table class="panel-table mb-2 js_cost-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>cost type</th>
+                                                    <th class="text-center">currency</th>
+                                                    <th colspan="2">amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>flight ticket</td>
+                                                    <td class="text-center">
+                                                        <select>
+                                                            <option selected="">RSD</option>
+                                                            <option>EUR</option>
+                                                            <option>CHF</option>
+                                                            <option>RON</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><input type="text" value="34.450,00" /></td>
+                                                    <td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>accomodation</td>
+                                                    <td class="text-center">
+                                                        <select>
+                                                            <option>RSD</option>
+                                                            <option>EUR</option>
+                                                            <option selected="">CHF</option>
+                                                            <option>RON</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><input type="text" value="240,00" /></td>
+                                                    <td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>daily allowances</td>
+                                                    <td class="text-center">
+                                                        <select>
+                                                            <option>RSD</option>
+                                                            <option>EUR</option>
+                                                            <option selected="">CHF</option>
+                                                            <option>RON</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><input type="text" value="180,00" /></td>
+                                                    <td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>local transport</td>
+                                                    <td class="text-center">
+                                                        <select>
+                                                            <option>RSD</option>
+                                                            <option>EUR</option>
+                                                            <option selected="">CHF</option>
+                                                            <option>RON</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><input type="text" value="24,00" /></td>
+                                                    <td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>taxi to airport</td>
+                                                    <td class="text-center">
+                                                        <select>
+                                                            <option>RSD</option>
+                                                            <option>EUR</option>
+                                                            <option selected="">CHF</option>
+                                                            <option>RON</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><input type="text" value="62,00" /></td>
+                                                    <td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>health insurance</td>
+                                                    <td class="text-center">
+                                                        <select>
+                                                            <option selected="">RSD</option>
+                                                            <option>EUR</option>
+                                                            <option>CHF</option>
+                                                            <option>RON</option>
+                                                        </select>
+                                                    </td>
+                                                    <td><input type="text" value="1.240,00" /></td>
+                                                    <td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-
-                                    <div class="row border-bottom border-top py-2">
-                                        <div class="col-6 col-xl-2">
-                                            <label class="m-0">cost type</label>
-                                            <span class="fas fa-plane mr-1"></span>
-                                            travel
-                                        </div>
-                                        <div class="col-6 col-xl-2">
-                                            <label class="m-0">Iterinary</label>
-                                            Belgrade - Zurich - Belgrade
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">departure date</label>
-                                            15.06.2020
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">return date</label>
-                                            17.06.2020
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">cost amount</label>
-                                            <span class="rsd">34.350,00</span>
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">discount (%)</label>
-                                            <input type="text" value="0"/>
-                                        </div>
+                                    <div class="col-12">
+                                        <span class="badge badge-success pointer ml-1 js_addCostItem">add new cost</span>
                                     </div>
-
-                                    <div class="row border-bottom py-2">
-                                        <div class="col-6 col-xl-2">
-                                            <label class="m-0">cost type</label>
-                                            <span class="fas fa-concierge-bell mr-1"></span>
-                                            hotel
-                                        </div>
-                                        <div class="col-6 col-xl-2">
-                                            <label class="m-0">hotel - city</label>
-                                            Trip Inn - Zurich
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">check in</label>
-                                            15.06.2020
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">check out</label>
-                                            17.06.2020
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">cost amount</label>
-                                            <span class="chf">180,00</span>
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">discount (%)</label>
-                                            <input type="text" value="0"/>
-                                        </div>
-                                    </div>
-
-                                    <div class="row py-2 border-bottom">
-                                        <div class="col-6 col-xl-2">
-                                            <label class="m-0">cost type</label>
-                                            <span class="fas fa-route mr-1"></span>
-                                            local trans.
-                                        </div>
-                                        <div class="col-6 col-xl-2">
-                                            <label class="m-0">ticket qty.</label>
-                                            2
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">ticket cost</label>
-                                            <span class="chf">16</span>
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">purchase date</label>
-                                            15.06.2020
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">cost amount</label>
-                                            <span class="chf">32,00</span>
-                                        </div>
-                                        <div class="col-6 col-xl-2 mt-2 mt-xl-0">
-                                            <label class="m-0">discount (%)</label>
-                                            <input type="text" value="0"/>
-                                        </div>
-                                        <div class="col-12 mt-2">
-                                            <label class="m-0">description</label>
-                                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.</p>
-                                        </div>
-                                    </div>
-                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 text-center">
+                    <div class="col-12">
                         <div class="p-4">
                             <button class="btn btn-highlight m-1">Save</button>
                             <button class="btn btn-cancel m-1" data-dismiss="modal" aria-label="Close">Cancel</button>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-    <!-- cost details end -->
+    <!-- Edit Cost Travel End -->
 
     <!-- Report details start -->
     <div class="modal fade" id="reportDetails" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="reportDetails" aria-hidden="true">
@@ -1943,25 +1931,25 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>employee</th>
-                                                                <th>cost types</th>
+                                                                <th>edit costs</th>
                                                                 <th colspan="2">total before VAT</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
                                                                 <td>Milana Bogdanovic</td>
-                                                                <td><a href="javascript:void(0)" data-toggle="modal" data-target="#costDetails" class="badge badge-secondary text-white mr-1">details</a></td>
+                                                                <td><span data-toggle="modal" data-target="#costDetails" class="badge badge-secondary pointer text-white mr-1">edit</span></td>
                                                                 <td>461,10<span class="eur"></span></td>
                                                                 <td class="text-right">
-                                                                    <a href="javascript:void(0)" class="badge badge-danger js_exclude">exclude</a>
+                                                                    <span class="badge badge-warning pointer js_exclude">exclude</span>
                                                                 </td>
                                                             </tr>
                                                             <tr>
                                                                 <td>Bojan Grozdanovic</td>
-                                                                <td><a href="javascript:void(0)" class="badge badge-secondary text-white mr-1">details</a></td>
+                                                                <td><span class="badge badge-secondary pointer text-white mr-1">edit</span></td>
                                                                 <td>45,04<span class="eur"></span></td>
                                                                 <td class="text-right">
-                                                                    <a href="javascript:void(0)" class="badge badge-danger js_exclude">exclude</a>
+                                                                    <span class="badge badge-warning pointer js_exclude">exclude</span>
                                                                 </td>
                                                             </tr>
                                                         </tbody>

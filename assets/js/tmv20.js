@@ -470,7 +470,7 @@ $(document).ready(function () {
         $(this).parents('tr').remove();
     });
     $('.js_addCostItem').on('click',function(){
-        $(this).parents('.js_cost-table-parent').find('.js_cost-table').append('<tr> <td><input type="text" placeholder="cost description"/></td><td class="text-center"> <select> <option selected>RSD</option> <option>EUR</option> <option>CHF</option> <option>RON</option> </select> </td><td><input type="text" placeholder="cost amount"/></td><td class="text-right"><span class="badge badge-danger pointer js_removeEntry">remove</span></td></tr>');
+        $(this).parents('.js_cost-table-parent').find('.js_cost-table').append('<tr> <td><input type="text" placeholder="cost description"/></td><td class="text-center"> <select> <option selected>RSD</option> <option>EUR</option> <option>CHF</option> <option>RON</option> </select> </td><td><input type="text" placeholder="cost amount"/></td><td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td></tr>');
     });
 
     //No teams
@@ -1246,13 +1246,13 @@ $(document).ready(function () {
     //ANCILLARY COSTS EXCLUDE INCLUDE
     $('.js_exclude').on('click', function () { 
             if (($(this).text())==='exclude'){
-                $(this).removeClass('badge-danger');
+                $(this).removeClass('badge-warning');
                 $(this).addClass('badge-success');
                 $(this).text('include');
                 $(this).parents('tr').addClass('bg-warning');
             }
             else if (($(this).text())==='include'){
-                $(this).addClass('badge-danger');
+                $(this).addClass('badge-warning');
                 $(this).removeClass('badge-success');
                 $(this).text('exclude');
                 $(this).parents('tr').removeClass('bg-warning');
