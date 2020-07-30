@@ -470,7 +470,7 @@ $(document).ready(function () {
         $(this).parents('tr').remove();
     });
     $('.js_addCostItem').on('click',function(){
-        $(this).parents('.js_cost-table-parent').find('.js_cost-table').append('<tr> <td><input type="text" placeholder="cost description"/></td><td class="text-center"> <select> <option selected>RSD</option> <option>EUR</option> <option>CHF</option> <option>RON</option> </select> </td><td><input type="text" placeholder="cost amount"/></td><td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td></tr>');
+        $(this).parents('.js_cost-table-parent').find('.js_cost-table').append('<tr> <td><textarea rows="2" placeholder="cost description"></textarea></td><td class="text-center"> <select> <option selected>RSD</option> <option>EUR</option> <option>CHF</option> <option>RON</option> </select> </td><td><input type="text" placeholder="cost amount"/></td><td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td></tr>');
     });
 
     //No teams
