@@ -1398,9 +1398,8 @@ table.overview td {
   text-align: center;
 }
 .inv-block-wrapper .contract-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 20px;
 }
 .inv-block-wrapper .contract-no:before {
   content: "Contract No. ";
