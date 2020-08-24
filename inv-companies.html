@@ -81,9 +81,19 @@
                                         <label for="company-tree">Status</label>
                                         <div class="select-height-fix d-flex align-items-center">
                                             <select name="company-tree" class="w-100 pronounced-data">
-                                                <option selected value="">select company status</option>
-                                                <option value="parent co.">parent company</option>
-                                                <option value="child co.">child company</option>
+                                                <option selected>select company status</option>
+                                                <option value="parent-co">parent company</option>
+                                                <option value="child-co">child company</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6" id="select-parent" style="display:none">
+                                        <label for="select-parent">Parent Company</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="select-parent" class="w-100">
+                                                <option>select parent company</option>
+                                                <option>NSM Engineering AG</option>
+                                                <option>young culture AG</option>
                                             </select>
                                         </div>
                                     </div>
@@ -523,6 +533,251 @@
     </div>
     <!-- edit Company Modal End -->
 
+    <!--edit Child Company Modal Start -->
+    <div class="modal fade" id="editChildCompany" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="editChildCompany" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content modal-style">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="p-5 image-background">
+                            <i class="ti-close close-modal" class="close" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <img id="logo-img" src="assets/images/logo-enjoying.svg" alt="company logo">
+                                </div>
+                            </div>
+                            <div class="file btn btn-highlight position-relative upload-logo">
+                                Change Logo
+                                <input type="file" class="file-input" />
+                            </div>
+                        </div>
+                        <div class="p-4 text-left">
+                            <!-- COMPANY TREE STATUS -->
+                            <small class="d-flex justify-content-end p-0">* Mandatory field</small>
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>company level</div>
+                                            <span class="badge badge-secondary">child</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data" style="display: none;">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-tree">Status</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="company-tree" class="w-100 pronounced-data js_parentChild">
+                                                <option value="parent" disabled>parent company</option>
+                                                <option selected value="child">child company</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="select-parent">Parent Company</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="select-parent" class="w-100">
+                                                <option>select parent company</option>
+                                                <option>NSM Engineering AG</option>
+                                                <option>young culture AG</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- GENERAL COMPANY DATA -->
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>general company data</div>
+                                            <span class="badge badge-secondary">active</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data" style="display: none;">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-name">Company Name *</label>
+                                        <input type="text" name="company-name" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-status">Status</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="company-status" class="w-100 pronounced-data">
+                                                <option value="">Select status</option>
+                                                <option selected value="active">Active</option>
+                                                <option value="inactive">Inactive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-country">Country</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="company-country" class="w-100">
+                                                <option selected value="">Select country</option>
+                                                <option value="switzerland">Switzerland</option>
+                                                <option value="serbia">Serbia</option>
+                                                <option value="romania">Romania</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-type">Company type *</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="company-type" class="w-100">
+                                                <option selected>Select company type</option>
+                                                <option value="GmbH">Limited Liability Company (GmbH)</option>
+                                                <option value="AG">Joint Stock Company (AG)</option>
+                                                <option value="branch">Branch of a foreign entity</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-vat-no">Company VAT No. *</label>
+                                        <input type="text" name="company-vat-no" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-reg-no">Commercial Register No. *</label>
+                                        <input type="text" name="company-reg-no" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-currency">Currency</label>
+                                        <div class="select-height-fix d-flex align-items-center">
+                                            <select name="company-currency" class="w-100">
+                                                <option selected>Select currency</option>
+                                                <option value="chf">CHF</option>
+                                                <option value="eur">EUR</option>
+                                                <option value="rsd">RSD</option>
+                                                <option value="ron">RON</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- COMPANY ADDRESS -->
+
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>company address</div>
+                                            <span class="badge badge-secondary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data" style="display: none;">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-street">Street *</label>
+                                        <input type="text" name="company-address-street" value="" class="pronounced-data" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-city">City *</label>
+                                        <input type="text" name="company-address-city" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-post-code">Post Code</label>
+                                        <input type="text" name="company-address-post-code" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- COMPANY CONTACT DETAILS -->
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>company contact details</div>
+                                            <span class="badge badge-secondary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data" style="display: none;">
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-tel1">Phone no.</label>
+                                        <input type="text" name="company-address-tel1" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-address-tel2">Phone no. 2</label>
+                                        <input type="text" name="company-address-tel2" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-email">E-mail *</label>
+                                        <input type="text" name="company-email" value="" class="pronounced-data" />
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label for="company-web">Web</label>
+                                        <input type="text" name="company-web" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- bamk ACCOUNTS -->
+                            <div class="contract-section border-bottom pb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="contract-section-header d-flex justify-content-between align-items-end pointer pt-3">
+                                            <div class="form-title text-nowrap text-truncate"><span class="fas fa-chevron-down arrow"></span>company bank accounts</div>
+                                            <span class="badge badge-secondary">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row more-data" style="display: none;">
+                                    <div class="col-12">
+                                        <div class="py-3" id="bamk-account-1">
+                                            <div class="row js_items">
+                                                <div class="col-12 mb-3" id="js_item">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6">
+                                                            <label for="company-bamk-account-name">Account name *</label>
+                                                            <input type="text" class="font-weight-bold" name="company-bamk-account-name" />
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 d-flex justify-content-between align-items-end">
+                                                            <div class="w-100">
+                                                                <label for="company-bamk-account-bamk">bank *</label>
+                                                                <input type="text" name="company-bamk-account-bamk" />
+                                                            </div>
+                                                            <span class="btn btn-symbol pointer ml-3 js_delete">&times;</span>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <label for="company-bamk-account-iban">IBAN *</label>
+                                                            <input type="text" name="company-bamk-account-iban" />
+                                                        </div>
+                                                        <div class="col-12 col-sm-6">
+                                                            <label for="company-bamk-account-no">Account no. *</label>
+                                                            <input type="text" name="company-bamk-account-no" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <span class="btn btn-secondary pointer js_clone">add account</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="mt-5 mb-3">
+                                        <button class="btn btn-highlight">Save</button>
+                                        <button class="btn btn-cancel" data-dismiss="modal" aria-label="Close">cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- edit Child Company Modal End -->
+
     <!-- Contract permissions start -->
     <div class="modal fade" id="permissions" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="permissions" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -667,7 +922,7 @@
                                     <ul>
                                         <span class="item-menu-title">Company options</span>
                                         <li><a href="javascript:void(0)" data-toggle="modal" data-target="#editCompany">Edit Company</a></li>
-                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li>
+                                        <!-- <li><a href="javascript:void(0)" data-toggle="modal" data-target="#permissions">Permissions</a></li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -725,7 +980,7 @@
                                     <div class="arrow"></div>
                                     <ul>
                                         <span class="item-menu-title">Company options</span>
-                                        <li><a href="javascript:void(0)">Edit Company</a></li>
+                                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#editChildCompany">Edit Company</a></li>
                                     </ul>
                                 </div>
                             </div>

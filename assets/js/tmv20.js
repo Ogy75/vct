@@ -1259,6 +1259,21 @@ $(document).ready(function () {
             }
     });
 
+    //Parent Child Co select
+    $('select[name="company-tree"]').change(function () {
+        var value = $(this).find('option:selected').attr('value');
+
+        switch (value) {
+            case "child-co":
+                $(this).parents('.more-data').find('#select-parent').show();
+                break;
+                case "parent-co":
+                $(this).parents('.more-data').find('#select-parent').hide();
+                break;
+
+        }
+    });
+
     //INCLUDE COST
     // $('.js_expandMore').on('change', function () {
     //     if ($(this).prop('checked')) {
