@@ -381,7 +381,7 @@ $(document).ready(function () {
             $('.excel-doc').show();
         }, 4000);
         $('.overlap').show();
-        $('.table-wrapper').css('overflow','hidden');
+        $('.table-wrapper').css('overflow', 'hidden');
         $('.js_payout-data').removeClass('d-none');
         $('.js_payout-data').addClass('blink-warning');
         $(this).attr('disabled', true).html('Payout started');
@@ -465,11 +465,11 @@ $(document).ready(function () {
         $('.js_entryInput').focus();
     });
 
-    
+
     $('.js_removeEntry').on('click', function () {
         $(this).parents('tr').remove();
     });
-    $('.js_addCostItem').on('click',function(){
+    $('.js_addCostItem').on('click', function () {
         $(this).parents('.js_cost-table-parent').find('.js_cost-table').append('<tr> <td><textarea rows="2" placeholder="cost description"></textarea></td><td class="text-center"> <select> <option selected>RSD</option> <option>EUR</option> <option>CHF</option> <option>RON</option> </select> </td><td><input type="text" placeholder="cost amount"/></td><td class="text-right"><span class="badge badge-danger pointer js_removeEntry">delete</span></td></tr>');
     });
 
@@ -562,21 +562,21 @@ $(document).ready(function () {
     });
 
     //ADD/REMOVE RATE ITEM
-        $('.js_clone-1').on('click', function () {
-            var form = '<div class="col-12 js_item" id="js_item-1"> <div class="border p-3 mb-3"> <div class="row"> <div class="col-12 d-flex justify-content-end"> <span class="btn btn-symbol mt-n2 mr-n2 js_delete-1">×</span> </div><div class="col-12 d-flex justify-content-between align-items-end"> <div class="w-100"> <label for="my-company-name">internal position *</label> <div class="select-height-fix d-flex align-items-center"> <select name="my-company-name" class="w-100"> <option selected="">Select Internal position</option> <option>Team Lead</option> <option>Senior N1</option> <option>Senior N2</option> <option>Professional N1</option> <option>Professional N2</option> <option>Engineer N1</option> <option>Engineer N2</option> </select> </div></div></div><div class="col-12"> <label for="contract-position">commercial position *</label> <input type="text" name="contract-position"> </div><div class="col-12 col-sm-6"> <div class="row"> <div class="col-6"> <label for="rate">rate (CHF)</label> <input type="text" name="rate"> </div><div class="col-6"> <label for="rate-on-site">rate on-site (CHF)</label> <input type="text" name="rate-on-site"> </div></div></div><div class="col-12 col-sm-6"> <label for="rate-valid-from">rate valid from</label> <input type="text" name="rate-valid-from"> </div></div></div></div>';
-            var container = $('.js_items-1');
-            $(form).appendTo($(container));
-            $('.js_delete-1').on('click', function () {
-                $(this).parents('.js_item').remove();
-            });
+    $('.js_clone-1').on('click', function () {
+        var form = '<div class="col-12 js_item" id="js_item-1"> <div class="border p-3 mb-3"> <div class="row"> <div class="col-12 d-flex justify-content-end"> <span class="btn btn-symbol mt-n2 mr-n2 js_delete-1">×</span> </div><div class="col-12 d-flex justify-content-between align-items-end"> <div class="w-100"> <label for="my-company-name">internal position *</label> <div class="select-height-fix d-flex align-items-center"> <select name="my-company-name" class="w-100"> <option selected="">Select Internal position</option> <option>Team Lead</option> <option>Senior N1</option> <option>Senior N2</option> <option>Professional N1</option> <option>Professional N2</option> <option>Engineer N1</option> <option>Engineer N2</option> </select> </div></div></div><div class="col-12"> <label for="contract-position">commercial position *</label> <input type="text" name="contract-position"> </div><div class="col-12 col-sm-6"> <div class="row"> <div class="col-6"> <label for="rate">rate (CHF)</label> <input type="text" name="rate"> </div><div class="col-6"> <label for="rate-on-site">rate on-site (CHF)</label> <input type="text" name="rate-on-site"> </div></div></div><div class="col-12 col-sm-6"> <label for="rate-valid-from">rate valid from</label> <input type="text" name="rate-valid-from"> </div></div></div></div>';
+        var container = $('.js_items-1');
+        $(form).appendTo($(container));
+        $('.js_delete-1').on('click', function () {
+            $(this).parents('.js_item').remove();
         });
+    });
 
     //commercial rate display
     $('input[name="contract-position"]').on('keyup', function () {
         var comPosition = $(this).val();
         $(this).parents('.js_item').find('.form-title').text(comPosition);
     });
-        
+
 
     //ENABLE CONTRACT RATE ADJUSTMENT
     $('#rate-adjustment-possible').on('change', function () {
@@ -935,19 +935,19 @@ $(document).ready(function () {
         var val = $(this).find("option:selected").attr('val');
         switch (val) {
             case "EUR":
-                $('span#ancillary-total-amount').prop('class','font-weight-bold badge badge-primary');
+                $('span#ancillary-total-amount').prop('class', 'font-weight-bold badge badge-primary');
                 $('span#ancillary-total-amount').text('681,74').addClass('eur');
                 break;
             case "CHF":
-                $('span#ancillary-total-amount').prop('class','font-weight-bold badge badge-primary');
+                $('span#ancillary-total-amount').prop('class', 'font-weight-bold badge badge-primary');
                 $('span#ancillary-total-amount').text('731,22').addClass('chf');
                 break;
             case "RSD":
-                $('span#ancillary-total-amount').prop('class','font-weight-bold badge badge-primary');
+                $('span#ancillary-total-amount').prop('class', 'font-weight-bold badge badge-primary');
                 $('span#ancillary-total-amount').text('80.169,62').addClass('rsd');;
                 break;
             case "RON":
-                $('span#ancillary-total-amount').prop('class','font-weight-bold badge badge-primary');
+                $('span#ancillary-total-amount').prop('class', 'font-weight-bold badge badge-primary');
                 $('span#ancillary-total-amount').text('3.294,53').addClass('ron');;
                 break;
         }
@@ -1244,19 +1244,19 @@ $(document).ready(function () {
     });
 
     //ANCILLARY COSTS EXCLUDE INCLUDE
-    $('.js_exclude').on('click', function () { 
-            if (($(this).text())==='exclude'){
-                $(this).removeClass('badge-warning');
-                $(this).addClass('badge-success');
-                $(this).text('include');
-                $(this).parents('tr').addClass('bg-warning');
-            }
-            else if (($(this).text())==='include'){
-                $(this).addClass('badge-warning');
-                $(this).removeClass('badge-success');
-                $(this).text('exclude');
-                $(this).parents('tr').removeClass('bg-warning');
-            }
+    $('.js_exclude').on('click', function () {
+        if (($(this).text()) === 'exclude') {
+            $(this).removeClass('badge-warning');
+            $(this).addClass('badge-success');
+            $(this).text('include');
+            $(this).parents('tr').addClass('bg-warning');
+        }
+        else if (($(this).text()) === 'include') {
+            $(this).addClass('badge-warning');
+            $(this).removeClass('badge-success');
+            $(this).text('exclude');
+            $(this).parents('tr').removeClass('bg-warning');
+        }
     });
 
     //Parent Child Co select
@@ -1267,25 +1267,35 @@ $(document).ready(function () {
             case "child-co":
                 $(this).parents('.more-data').find('#select-parent').show();
                 break;
-                case "parent-co":
+            case "parent-co":
                 $(this).parents('.more-data').find('#select-parent').hide();
                 break;
 
         }
     });
 
-    //INCLUDE COST
-    // $('.js_expandMore').on('change', function () {
-    //     if ($(this).prop('checked')) {
-    //         $(this).parents('.subcost').find('.more-data').slideDown(50);
-    //     }
-    //     else if (!($(this).prop('checked'))) {
-    //         $(this).parents('.subcost').find('.more-data').slideUp(50);
-    //     }
-    // });
+    //RATES
 
-    // $('#js_addCostItem').on('click',function(){
-    //     $(this).parents().find('#cost-table').append('<tr> <td><input type="text" placeholder="cost description"/></td><td class="text-center"> <select> <option selected>RSD</option> <option>EUR</option> <option>CHF</option> <option>RON</option> </select> </td><td><input type="text" placeholder="cost amount"/></td><td class="text-right"><span class="badge badge-danger pointer js_removeEntry">remove</span></td></tr>');
-    // });
+    $('#jsRates').on('change', function () {
+        var id = $(this).find("option:selected").attr("id");
+        switch (id) {
+            case "1":
+                $('.rate').hide();
+                $('#ratesChartChf').show();
+                break;
+            case "2":
+                $('.rate').hide();
+                $('#ratesChartRsd').show();
+                break;
+            case "3":
+                $('.rate').hide();
+                $('#ratesChartRon').show();
+                break;
+            case "4":
+                $('.rate').hide();
+                $('#ratesChartGbp').show();
+                break;
+        }
+    });
 
 });

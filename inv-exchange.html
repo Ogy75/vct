@@ -391,7 +391,7 @@
                             </div>
                             <div class="col-6">
                                 <label>since</label>
-                                <input type="text" value="20.12.2020" />
+                                <input type="text" value="03.11.2020" />
                             </div>
                         </div>
                         <div class="row mt-2">
@@ -403,7 +403,7 @@
                             </div>
                             <div class="col-6">
                                 <label>since</label>
-                                <input type="text" value="10.10.2020" />
+                                <input type="text" value="02.10.2020" />
                             </div>
                         </div>
                         <div class="row mt-2">
@@ -415,7 +415,7 @@
                             </div>
                             <div class="col-6">
                                 <label>since</label>
-                                <input type="text" value="04.01.2020" />
+                                <input type="text" value="04.05.2020" />
                             </div>
                         </div>
 
@@ -443,6 +443,32 @@
                     </div>
                 </div>
 
+                <!-- RATES HITORY -->
+                <div class="col-12 col-lg-6">
+                    <div class="p-4 text-left panel-container">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span>
+                                <select id="jsRates" class="float-left mr-2">
+                                    <option id="1" selected>CHF</option>
+                                    <option id="2">RSD</option>
+                                    <option id="3">RON</option>
+                                    <option id="4">GBP</option>
+                                </select>
+                                <div class="table-title">Rate History</div>
+                            </span>
+                            <select>
+                                <option selected>Current year</option>
+                                <option>Past 3 years</option>
+                                <option>All Time</option>
+                            </select>
+                        </div>
+                        <canvas id="ratesChartChf" class="rate" width="auto" height="auto"></canvas>
+                        <canvas id="ratesChartRsd" class="rate" width="auto" height="auto" style="display: none;"></canvas>
+                        <canvas id="ratesChartRon" class="rate" width="auto" height="auto" style="display: none;"></canvas>
+                        <canvas id="ratesChartGbp" class="rate" width="auto" height="auto" style="display: none;"></canvas>
+                    </div>
+                </div>
+
 
 
             </div>
@@ -453,6 +479,96 @@
         <script src="assets/vendor/niceselect/js/jquery.nice-select.min.js"></script>
         <script src="assets/js/custom.js"></script>
         <script src="assets/js/tmv20.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <script>
+            var ctx = document.getElementById('ratesChartChf').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'CHF Value',
+                        data: [0.92145, 0.92212, 0.92432, 0.91113, 0.93221, 0.92021, 0.91789, 0.93001, 0.93005, 0.92965, 0.9267],
+                        backgroundColor: [
+                            '#1E9BCC'
+                        ],
+                        pointBackgroundColor:'#999999',
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: false
+                    }
+                }
+            });
+
+            var ctx = document.getElementById('ratesChartRsd').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'RSD Value',
+                        data: [117.2345, 117.6544, 117.3432, 117.2932, 117.4675, 117.4685, 117.4877, 117.590, 117.5870, 117.591, 117.590],
+                        backgroundColor: [
+                            '#1E9BCC'
+                        ],
+                        pointBackgroundColor:'#999999',
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: false
+                    }
+                }
+            });
+
+            var ctx = document.getElementById('ratesChartRon').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'RON Value',
+                        data: [4.8679,4.8688, 4.8691, 4.8699, 4.8702, 4.8702, 4.8702, 4.8702, 4.8702, 4.8702, 4.8702],
+                        backgroundColor: [
+                            '#1E9BCC'
+                        ],
+                        pointBackgroundColor:'#999999',
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: false
+                    }
+                }
+            });
+
+            var ctx = document.getElementById('ratesChartGbp').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'GBP Value',
+                        data: [0.9129,0.9121, 0.9124, 0.9124, 0.9124, 0.9124, 0.9124, 0.9124, 0.9124, 0.9124],
+                        backgroundColor: [
+                            '#1E9BCC'
+                        ],
+                        pointBackgroundColor:'#999999',
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    legend: {
+                        display: false
+                    }
+                }
+            });
+        </script>
 
 </body>
 
